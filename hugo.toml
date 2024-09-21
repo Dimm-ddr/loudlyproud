@@ -1,4 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://loudlyproud.netlify.app/'
 languageCode = 'en-us'
 title = 'Loudly Proud'
 theme = 'ananke'
+[taxonomies]
+  tag = "tags"
+  author = "authors"
