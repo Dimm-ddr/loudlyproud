@@ -5,3 +5,10 @@ theme = 'ananke'
 [taxonomies]
   tag = "tags"
   author = "authors"
+[params]
+  heroTitle = "Литературный каталог Loudly Proud"
+  heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность?"
+  heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
+  heroTelegram = "Следите за новостями о сайте в нашем Телеграм-канале"
+
+
