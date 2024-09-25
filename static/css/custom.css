@@ -1,82 +1,38 @@
-:root {
-    --primary-color: #000000; /* Black */
-    --secondary-color: #F5F5DC; /* Beige */
-    --accent-red: #E74C3C; /* Red */
-    --accent-green: #2ECC71; /* Green */
-    --accent-blue: #3498DB; /* Blue */
-    --background-color: #F5F5F5; /* Light Grey */
-    --text-color: #333333; /* Dark Grey */
-  }
+/* Custom Hover Effects */
+.book-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Arial', sans-serif;
-  }
+.book-item img:hover {
+  opacity: 0.9;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
-  }
+/* Button Styles */
+button {
+  background-color: var(--accent2-color);
+  border: none;
+  padding: 10px 20px;
+  color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  a {
-    color: var(--accent-blue);
-  }
+button:hover {
+  background-color: var(--accent1-color);
+}
 
-  a:hover {
-    color: var(--accent-red);
+/* Custom Animations (Example for Pop-up or Loading Animation) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
-  button, .button {
-    background-color: var(--accent-green);
-    color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  button:hover, .button:hover {
-    background-color: var(--accent-red);
-  }
-
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--background-color);
-    padding: 50px 20px;
-  }
-
-  .hero-content {
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .hero-image {
-    max-width: 300px;
-    margin-right: 40px;
-  }
-
-  .hero-text {
-    max-width: 60%;
-  }
-
-  .hero-text h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-  }
-
-  .hero-text p {
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-
-  .hero-text a {
-    color: var(--accent-blue);
-    text-decoration: underline;
-  }
-
-  .hero-text a:hover {
-    color: var(--accent-red);
-  }
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}

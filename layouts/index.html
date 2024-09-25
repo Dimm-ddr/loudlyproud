@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <section class="book-gallery">
+    <h1>Explore Queer-Related Books</h1>
+    <div class="gallery-grid">
+      {{ range .Site.Data.books }}
+        <div class="book-item">
+          <a href="{{ .fields.slug }}">
+            <img src="{{ .fields.cover | absURL }}" alt="Cover of {{ .fields.title }}">
+            <h2>{{ .fields.title }}</h2>
+            <p>Author: {{ .fields.author }}</p>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+  <!-- Pagination (if you need it) -->
+    {{ if .IsHome }}
+        {{ $paginator := .Paginate (where .Data.books "Type" "book") }}
+        {{ if $paginator.HasPages }}
+        <nav class="pagination">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}">Previous</a>
+            {{ end }}
+            {{ range $paginator.Pages }}
+            <a href="{{ .URL }}">{{ .PageNumber }}</a>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}">Next</a>
+            {{ end }}
+        </nav>
+        {{ end }}
+    {{ end }}
+
+{{ end }}

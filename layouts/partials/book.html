@@ -1,0 +1,66 @@
+<div class="book-item">
+    <!-- Cover Image -->
+    {{ if .cover }}
+      <img src="{{ .cover }}" alt="Cover of {{ .title }}">
+    {{ end }}
+
+    <!-- Book Title -->
+    <h2>{{ .title }}</h2>
+
+    <!-- Tags (we'll make these clickable later) -->
+    {{ if .tags }}
+      <div class="tags">
+        {{ range .tags }}
+          <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <!-- Authors -->
+    {{ if .authors }}
+      <p><strong>Authors:</strong> {{ delimit .authors ", " }}</p>
+    {{ end }}
+
+    <!-- Translators -->
+    {{ if .translators }}
+      <p><strong>Translators:</strong> {{ delimit .translators ", " }}</p>
+    {{ end }}
+
+    <!-- Short Description -->
+    {{ if .description }}
+      <p class="description">{{ slice .description 0 200 }}{{ if gt (len .description) 200 }}...{{ end }}</p>
+    {{ end }}
+
+    <!-- Languages -->
+    {{ if .languages }}
+      <p><strong>Languages:</strong> {{ delimit .languages ", " }}</p>
+    {{ end }}
+
+    <!-- Page Count and Year of Publication -->
+    <p>
+      {{ if .page_count }}<strong>Pages:</strong> {{ .page_count }}{{ end }}
+      {{ if .publication_year }}<strong> | Year:</strong> {{ .publication_year }}{{ end }}
+    </p>
+
+    <!-- Russian Edition -->
+    {{ if .russian_edition }}
+      <p><strong>Russian Edition Available</strong></p>
+    {{ else }}
+      <p><strong>Russian Edition Not Available</strong></p>
+    {{ end }}
+
+    <!-- Links -->
+    <div class="links">
+      {{ if .goodreads_link }}
+        <a href="{{ .goodreads_link }}" target="_blank">Goodreads</a>
+      {{ end }}
+      {{ if .buy_link }}
+        <a href="{{ .buy_link }}" target="_blank">Buy Russian Edition</a>
+      {{ end }}
+    </div>
+
+    <!-- Series -->
+    {{ if .series }}
+      <p><strong>Series:</strong> {{ .series }}</p>
+    {{ end }}
+</div>

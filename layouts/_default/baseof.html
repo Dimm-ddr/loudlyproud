@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    <title>{{ .Title }} - Loudly Proud</title>
+
+    <!-- Include SEO meta tags -->
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="keywords" content="Queer books, Russian queer literature, LGBTQ+ literature, Loudly Proud">
+
+    <!-- Link to favicon (optional) -->
+    <link rel="icon" href="{{ "images/favicon.ico" | relURL }}">
+
+    <!-- Include head additions -->
+    {{ partial "head-additions.html" . }}
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Include site header partial (if available) -->
+        {{ partial "site-header.html" . }}
+    </header>
+
+    <!-- Main Hero Section -->
+    {{ block "hero" . }}
+    {{ partial "hero.html" . }}
+    {{ end }}
+
+    <!-- Main Content Section -->
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        {{ partial "site-footer.html" . }}
+    </footer>
+
+    <!-- Optional: Site Scripts -->
+    {{ partial "site-scripts.html" . }}
+</body>
+</html>
