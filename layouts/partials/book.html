@@ -1,7 +1,9 @@
-<div class="book-item">
+<!DOCTYPE html>
+<html lang="en">
+<article class="book-item">
     <!-- Cover Image -->
-    {{ if .cover }}
-      <img src="{{ .cover }}" alt="Cover of {{ .title }}">
+    {{ with .cover }}
+      <img src="{{ . }}" alt="Cover of {{ $.title }}">
     {{ end }}
 
     <!-- Book Title -->
@@ -63,4 +65,5 @@
     {{ if .series }}
       <p><strong>Series:</strong> {{ .series }}</p>
     {{ end }}
-</div>
+</article>
+</html>

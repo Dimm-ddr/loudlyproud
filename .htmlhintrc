@@ -1,0 +1,11 @@
+{
+  "doctype-first": true,         // Ensure DOCTYPE is declared first
+  "tag-pair": true,              // Ensure HTML tags are paired
+  "attr-lowercase": true,        // Ensure attributes are lowercase
+  "attr-value-double-quotes": true,  // Ensure attributes are wrapped in double quotes
+  "id-unique": true,             // Ensure IDs are unique
+  "src-not-empty": true,         // Ensure src attributes are not empty
+  "alt-require": true,           // Ensure alt attributes are provided for images
+  "template-engine": true,       // Allow template engine syntax like {{ }}
+  "attr-no-duplication": true   // No duplicate attributes allowed
+}
