@@ -1,0 +1,21 @@
+{
+    "type": "books",
+    "title": "Dummy Book 2",
+    "cover": "https://via.placeholder.com/200x300",
+    "tags": [
+        "non-fiction",
+        "history"
+    ],
+    "authors": [
+        "Author 3"
+    ],
+    "description": "This is a short description of Dummy Book 2.",
+    "languages": [
+        "English"
+    ],
+    "page_count": 250,
+    "publication_year": 2015,
+    "russian_edition": false,
+    "goodreads_link": "https://www.goodreads.com/dummybook2",
+    "buy_link": ""
+}

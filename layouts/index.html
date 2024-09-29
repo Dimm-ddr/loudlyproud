@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    {{ define "main" }}
-    <section class="book-gallery">
-        <h1>Explore Our Queer-Related Books</h1>
-
-        <div class="gallery-grid">
-        {{ range .Site.Data.books }}
-            {{ partial "book.html" . }}
-        {{ end }}
-        </div>
-    </section>
+{{ define "main" }}
+<section class="book-gallery container mx-auto px-6 py-8">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 justify-center"
+  >
+    {{ range $.Site.Data.books.dummy }} {{ partial "book-attributes.html" . }}
     {{ end }}
-</html>
+  </div>
+</section>
+{{ end }}

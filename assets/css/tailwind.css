@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles go here */
+a {
+  color: blue; /* Traditional blue for links */
+  text-decoration: underline; /* Underline links */
+}
+
+a:visited {
+  color: purple; /* Purple for visited links */
+}
+
+a:hover {
+  color: darkblue; /* Darker blue when hovering */
+  text-decoration: underline; /* Underline remains on hover */
+}
+
+a:active {
+  color: red; /* Red when the link is clicked */
+}

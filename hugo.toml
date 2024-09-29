@@ -1,14 +1,41 @@
-baseURL = 'https://loudlyproud.netlify.app/'
+baseURL = "/"
 languageCode = 'en-us'
 title = 'Loudly Proud'
 theme = 'ananke'
+
 [taxonomies]
-  tag = "tags"
-  author = "authors"
+tag = "tags"
+author = "authors"
+
 [params]
-  heroTitle = "Литературный каталог Loudly Proud"
-  heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность?"
-  heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
-  heroTelegram = "Следите за новостями о сайте в нашем Телеграм-канале"
+heroTitle = "Литературный каталог Loudly Proud"
+heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность? <a href='https://forms.gle/YHhojq3Ts2LsDF6G8'>Дайте мне знать</a> – вместе мы сделаем этот каталог лучше."
+heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
+heroTelegram = "Телеграм канал для анонсов о сайте: <a href='https://t.me/loudlyProud'>t.me/loudlyProud</a>"
 
+[params.bookDisplay]
+visibleAttributes = [
+  "cover",
+  "title",
+  "authors",
+  "tags",
+  "translators",
+  "description",
+  "languages",
+  "page_count",
+  "publication_year",
+  "russian_edition",
+  "goodreads_link",
+  "buy_link",
+]
 
+[build]
+writeStats = true
+
+[outputs]
+home = ["HTML"]
+
+[markup]
+[markup.postCSS]
+enable = true
+config = "postcss.config.js"

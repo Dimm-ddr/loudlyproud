@@ -1,0 +1,15 @@
+{
+    "type": "books",
+    "title": "Dummy Book 1",
+    "cover": "https://via.placeholder.com/200x300",
+    "tags": ["fiction", "gay", "queer"],
+    "authors": ["Author 1", "Author 2"],
+    "description": "This is a short description of Dummy Book 1.",
+    "languages": ["English", "Russian"],
+    "page_count": 350,
+    "publication_year": 2020,
+    "russian_edition": true,
+    "goodreads_link": "https://www.goodreads.com/dummybook1",
+    "buy_link": "https://example.com/buy-russian-edition",
+    "series": "Dummy Series"
+  }

@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <section class="hero">
-    <div class="hero-content">
-      <img src="{{ "images/loudly_proud_header.jpg" | relURL }}" alt="Loudly Proud Logo" class="hero-image">
-      <div class="hero-text">
-        <h1>{{ .Site.Params.heroTitle | default "Литературный каталог Loudly Proud" }}</h1>
-        <p>{{ .Site.Params.heroDescription | default "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность?" }} <a href="{{ .Site.Params.heroFeedbackLink }}">Дайте мне знать</a> – вместе мы сделаем этот каталог лучше.</p>
-        <p>{{ .Site.Params.heroTelegram | default "Телеграм канал для анонсов о сайте: " }} <a href="https://t.me/loudlyProud">t.me/loudlyProud</a></p>
-      </div>
+<section class="hero bg-primary text-secondary py-16">
+  <div class="container mx-auto text-center">
+    <img src="{{ "images/loudly_proud_header.jpg" | relURL }}" alt="Loudly Proud
+    Logo" class="mx-auto w-32 h-auto">
+    <div class="hero-text mt-6">
+      <h1 class="text-4xl font-bold">{{ .Site.Params.heroTitle }}</h1>
+      <p class="text-lg mt-4">{{ .Site.Params.heroDescription | safeHTML }}</p>
+      <p class="text-lg mt-4">{{ .Site.Params.heroTelegram | safeHTML }}</p>
     </div>
-  </section>
-</html>
+  </div>
+</section>

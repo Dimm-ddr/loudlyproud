@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ .Title }} - Loudly Proud</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }} - Loudly Proud</title>
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}"> <link
+    rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
 
-        <!-- Include SEO meta tags -->
-        <meta name="description" content="{{ .Site.Params.description }}">
-        <meta name="keywords" content="Queer books, Russian queer literature, LGBTQ+ literature, Loudly Proud">
+    <!-- Include SEO meta tags -->
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <meta
+      name="keywords"
+      content="Queer books, Russian queer literature, LGBTQ+ literature, Loudly Proud"
+    />
 
-        <!-- Include head additions -->
-        {{ partial "head-additions.html" . }}
+    <!-- Pass books data from Hugo to JavaScript -->
+    <script>
+      const books = {{ .Site.Data.books | jsonify }};
+      console.log("Loaded books:", books);
+    </script>
+  </head>
+  <body>
+    <!-- Main Hero Section -->
+    {{ block "hero" . }} {{ partial "hero.html" . }} {{ end }}
 
-        <!-- Main CSS -->
-        <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-    </head>
-    <body>
-        <!-- Header Section -->
-        <header>
-            <!-- Include site header partial (if available) -->
-            {{ partial "site-header.html" . }}
-        </header>
+    <!-- Main Content Section -->
+    <main>{{ block "main" . }}{{ end }}</main>
 
-        <!-- Navigation (if any) -->
-        <nav>
-            <!-- Navigation could go here if needed -->
-        </nav>
+    <!-- Footer Section -->
+    <footer>{{ partial "site-footer.html" . }}</footer>
 
-        <!-- Main Hero Section -->
-        {{ block "hero" . }}
-        {{ partial "hero.html" . }}
-        {{ end }}
-
-        <!-- Main Content Section -->
-        <main>
-            {{ block "main" . }}{{ end }}
-        </main>
-
-        <!-- Footer Section -->
-        <footer>
-            {{ partial "site-footer.html" . }}
-        </footer>
-
-        <!-- Optional: Site Scripts -->
-        {{ partial "site-scripts.html" . }}
-    </body>
+    <!-- Site Scripts -->
+    {{ partial "site-scripts.html" . }}
+  </body>
 </html>

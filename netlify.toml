@@ -2,6 +2,6 @@
   publish = "public"
   command = "git submodule update --init --recursive && hugo --gc --minify"
 
-
 [context.production.environment]
   HUGO_VERSION = "0.134.3"
+  HUGO_BASEURL = "https://loudlyproud.netlify.app/"

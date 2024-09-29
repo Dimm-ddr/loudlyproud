@@ -1,30 +1,28 @@
 <article class="book-item">
   <!-- Cover Image -->
-  {{ with .cover }}
-  <img src="{{ . }}" alt="Cover of {{ $.title }}" />
-  {{ end }}
+  <img src="{{ .cover | default "https://via.placeholder.com/200x300" }}"
+  alt="Cover of {{ .title }}" class="book-cover">
 
   <!-- Book Title -->
   <h2>{{ .title }}</h2>
 
-  <!-- Tags (we'll make these clickable later) -->
+  <!-- Authors -->
+  <p>
+    <strong>Authors:</strong>
+    {{ delimit .authors ", " }}
+  </p>
+
+  <!-- Tags -->
   {{ if .tags }}
-  <div class="tags">
+  <div>
+    <strong>Tags:</strong>
     {{ range .tags }}
     <span class="tag">{{ . }}</span>
     {{ end }}
   </div>
   {{ end }}
 
-  <!-- Authors -->
-  {{ if .authors }}
-  <p>
-    <strong>Authors:</strong>
-    {{ delimit .authors ", " }}
-  </p>
-  {{ end }}
-
-  <!-- Translators -->
+  <!-- Translators (if available) -->
   {{ if .translators }}
   <p>
     <strong>Translators:</strong>
@@ -33,38 +31,31 @@
   {{ end }}
 
   <!-- Short Description -->
-  {{ if .description }}
-  <p class="description">
-    {{ slice .description 0 200 }}{{ if gt (len .description) 200 }}...{{ end }}
-  </p>
-  {{ end }}
+  <p class="description">{{ .description }}</p>
 
   <!-- Languages -->
-  {{ if .languages }}
   <p>
     <strong>Languages:</strong>
     {{ delimit .languages ", " }}
   </p>
-  {{ end }}
 
   <!-- Page Count and Year of Publication -->
   <p>
-    {{ if .page_count }}
     <strong>Pages:</strong>
-    {{ .page_count }}{{ end }} {{ if .publication_year }}
-    <strong>| Year:</strong>
-    {{ .publication_year }}{{ end }}
+    {{ .page_count }} |
+    <strong>Year:</strong>
+    {{ .publication_year }}
   </p>
 
-  <!-- Russian Edition -->
+  <!-- Russian Edition Availability -->
   {{ if .russian_edition }}
   <p><strong>Russian Edition Available</strong></p>
   {{ else }}
   <p><strong>Russian Edition Not Available</strong></p>
   {{ end }}
 
-  <!-- Links -->
-  <div class="links">
+  <!-- Links (Goodreads and Buy Link if available) -->
+  <div class="book-links">
     {{ if .goodreads_link }}
     <a href="{{ .goodreads_link }}" target="_blank">Goodreads</a>
     {{ end }} {{ if .buy_link }}
@@ -72,7 +63,7 @@
     {{ end }}
   </div>
 
-  <!-- Series -->
+  <!-- Series (if available) -->
   {{ if .series }}
   <p>
     <strong>Series:</strong>
