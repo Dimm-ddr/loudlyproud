@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "npm install && npm run build && git submodule update --init --recursive && hugo --gc --minify"
+command = "npm install && npm run build && git submodule update --init --recursive && hugo --gc --minify --config hugo.toml"
 
 [context.production]
 HUGO_VERSION = "0.134.3"
