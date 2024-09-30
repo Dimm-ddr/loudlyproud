@@ -4,6 +4,7 @@ command = "npm install && npm run build && git submodule update --init --recursi
 
 [context.production]
 HUGO_VERSION = "0.134.3"
+HUGO_EXTENDED = true
 HUGO_BASEURL = "https://loudlyproud.netlify.app/"
 environment = { HUGO_ENV = "production" }
 
