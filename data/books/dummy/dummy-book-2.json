@@ -1,7 +1,6 @@
 {
     "type": "books",
     "title": "Dummy Book 2",
-    "cover": "https://via.placeholder.com/200x300",
     "tags": [
         "non-fiction",
         "history"
