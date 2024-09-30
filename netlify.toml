@@ -1,7 +1,11 @@
 [build]
-  publish = "public"
-  command = "git submodule update --init --recursive && hugo --gc --minify"
+publish = "public"
+command = "npm install && npm run build && git submodule update --init --recursive && hugo --gc --minify"
 
-[context.production.environment]
-  HUGO_VERSION = "0.134.3"
-  HUGO_BASEURL = "https://loudlyproud.netlify.app/"
+[context.production]
+HUGO_VERSION = "0.134.3"
+HUGO_BASEURL = "https://loudlyproud.netlify.app/"
+environment = { HUGO_ENV = "production" }
+
+[build.environment]
+NODE_VERSION = "20" # Ensure that the correct Node.js version is used
