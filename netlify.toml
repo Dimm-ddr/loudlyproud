@@ -3,7 +3,9 @@ publish = "public"
 command = "npm install && npm run build && git submodule update --init --recursive && hugo --gc --minify"
 
 [context.production.environment]
-HUGO_VERSION = "0.134.3-extended"
+HUGO_VERSION = "0.134.3"                          # No need to add -extended, Netlify uses extended automatically
 HUGO_BASEURL = "https://loudlyproud.netlify.app/"
 HUGO_ENV = "production"
-HUGO_EXTENDED = "true"
+
+[build.environment]
+NODE_VERSION = "20" # Ensure correct Node.js version is used
