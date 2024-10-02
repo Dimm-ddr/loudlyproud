@@ -1,0 +1,199 @@
+/* tags-coloration.css */
+
+/* LGBTQ+ themes */
+.tag-LGBTQ {
+  @apply bg-blue-500 text-white;
+} /* blue with white text */
+.tag-queer {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-gay {
+  @apply bg-green-500 text-white;
+} /* green with white text */
+.tag-lesbian {
+  @apply bg-purple-500 text-white;
+} /* purple with white text */
+.tag-genderqueer {
+  @apply bg-yellow-500 text-black;
+} /* yellow with black text */
+.tag-transgender {
+  @apply bg-teal-500 text-white;
+} /* teal with white text */
+.tag-LGBTQ_activists {
+  @apply bg-orange-500 text-black;
+} /* orange with black text */
+.tag-LGBTQ_novels_before_Stonewall {
+  @apply bg-orange-400 text-black;
+} /* light orange with black text */
+
+/* Fiction Genres */
+.tag-fiction {
+  @apply bg-indigo-500 text-white;
+} /* indigo with white text */
+.tag-literary_fiction {
+  @apply bg-blue-400 text-black;
+} /* light blue with black text */
+.tag-historical_fiction {
+  @apply bg-purple-600 text-white;
+} /* dark purple with white text */
+.tag-speculative_fiction {
+  @apply bg-orange-600 text-black;
+} /* dark orange with black text */
+.tag-science_fiction {
+  @apply bg-green-400 text-black;
+} /* light green with black text */
+.tag-fantasy {
+  @apply bg-cyan-500 text-white;
+} /* cyan with white text */
+.tag-urban_fantasy {
+  @apply bg-purple-600 text-white;
+} /* dark purple with white text */
+.tag-high_fantasy {
+  @apply bg-purple-500 text-white;
+} /* purple with white text */
+.tag-epic_fantasy {
+  @apply bg-yellow-500 text-black;
+} /* yellow with black text */
+.tag-dark_fantasy {
+  @apply bg-gray-600 text-white;
+} /* dark gray with white text */
+.tag-realistic_fiction {
+  @apply bg-indigo-800 text-white;
+} /* dark indigo with white text */
+.tag-coming_of_age {
+  @apply bg-green-500 text-white;
+} /* green with white text */
+
+/* Romance Genres */
+.tag-romance {
+  @apply bg-red-400 text-black;
+} /* light red with black text */
+.tag-male-male_romance {
+  @apply bg-red-300 text-black;
+} /* pale red with black text */
+.tag-female-female_romance {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-new_adult_NA {
+  @apply bg-purple-700 text-white;
+} /* dark violet with white text */
+.tag-young_adult_YA {
+  @apply bg-blue-500 text-white;
+} /* blue with white text */
+.tag-adult_fiction {
+  @apply bg-purple-700 text-white;
+} /* dark purple with white text */
+
+/* Paranormal/Supernatural */
+.tag-supernatural {
+  @apply bg-purple-700 text-white;
+} /* dark violet with white text */
+.tag-vampires {
+  @apply bg-purple-600 text-white;
+} /* purple with white text */
+.tag-witches {
+  @apply bg-purple-500 text-white;
+} /* purple with white text */
+.tag-ghosts {
+  @apply bg-gray-700 text-white;
+} /* muted gray with white text */
+.tag-dragons {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+
+/* Mystery, Thriller, Crime */
+.tag-mystery {
+  @apply bg-gray-900 text-white;
+} /* dark gray with white text */
+.tag-suspense {
+  @apply bg-yellow-400 text-black;
+} /* light yellow with black text */
+.tag-crime {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-thrillers {
+  @apply bg-red-300 text-black;
+} /* pale red with black text */
+.tag-detective {
+  @apply bg-gray-700 text-white;
+} /* dark gray with white text */
+
+/* Nonfiction */
+.tag-nonfiction {
+  @apply bg-orange-500 text-black;
+} /* orange with black text */
+.tag-memoir {
+  @apply bg-yellow-500 text-black;
+} /* yellow with black text */
+.tag-biography {
+  @apply bg-orange-400 text-black;
+} /* light orange with black text */
+.tag-autobiography {
+  @apply bg-yellow-400 text-black;
+} /* light yellow with black text */
+
+/* Additional Tags */
+.tag-adventure {
+  @apply bg-green-400 text-black;
+} /* light green with black text */
+.tag-history {
+  @apply bg-indigo-600 text-white;
+} /* dark blue with white text */
+.tag-sports {
+  @apply bg-green-500 text-white;
+} /* green with white text */
+.tag-war {
+  @apply bg-purple-700 text-white;
+} /* dark purple with white text */
+.tag-friendship {
+  @apply bg-blue-500 text-white;
+} /* blue with white text */
+.tag-family {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-school {
+  @apply bg-purple-600 text-white;
+} /* purple with white text */
+.tag-college_students {
+  @apply bg-blue-400 text-black;
+} /* light blue with black text */
+.tag-mental_health {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-mental_illness {
+  @apply bg-gray-900 text-white;
+} /* dark gray with white text */
+.tag-identity {
+  @apply bg-purple-500 text-white;
+} /* purple with white text */
+.tag-isolation {
+  @apply bg-yellow-400 text-black;
+} /* light yellow with black text */
+.tag-gender_studies {
+  @apply bg-red-300 text-black;
+} /* pale red with black text */
+
+/* Art & Culture */
+.tag-art {
+  @apply bg-red-500 text-white;
+} /* red with white text */
+.tag-performing_arts {
+  @apply bg-blue-500 text-white;
+} /* blue with white text */
+.tag-renaissance_art {
+  @apply bg-yellow-400 text-black;
+} /* light yellow with black text */
+
+/* Other Themes */
+.tag-politics {
+  @apply bg-orange-500 text-black;
+} /* orange with black text */
+.tag-social_commentary {
+  @apply bg-yellow-600 text-black;
+} /* gold with black text */
+.tag-alien_cultures {
+  @apply bg-teal-500 text-white;
+} /* teal with white text */
+.tag-space_opera {
+  @apply bg-green-500 text-white;
+} /* green with white text */

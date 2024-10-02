@@ -1,0 +1,96 @@
+<article class="book-details w-full p-8 bg-white shadow-lg rounded-lg my-8">
+  <!-- Book Cover -->
+  <figure class="book-cover w-64 h-96 bg-gray-200 mx-auto mb-8">
+    <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{ .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}" alt="{{ .title }}">
+  </figure>
+
+  <!-- Title -->
+  <h1 class="text-3xl font-bold text-center">{{ .title }}</h1>
+
+  <!-- Tags -->
+  <div class="book-tags text-sm text-gray-600 text-left w-full mb-4">
+    <strong>{{ i18n "tags" }}:</strong>
+    {{ range .tags }}
+    <span class="tag {{ "tag-" | append (lower .) | safeCSS }}">{{ . }}</span>
+    {{ end }}
+  </div>
+
+  <!-- Authors -->
+  <p class="text-sm text-gray-700 text-left w-full mb-2">
+    <strong>{{ i18n "authors" }}:</strong>
+    {{ range $i, $author := .authors }}{{ $author }}{{ if ne $i (sub (len .authors) 1) }}, {{ end }}{{ end }}
+  </p>
+
+  <!-- Translators (if any) -->
+  {{ if .translators }}
+  <p class="text-sm text-gray-700 text-left w-full mb-2">
+    <strong>{{ i18n "translators" }}:</strong>
+    {{ range $i, $translator := .translators }}{{ $translator }}{{ if ne $i (sub (len .translators) 1) }}, {{ end }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Page Count -->
+  {{ if .page_count }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "page_count" }}:</strong> {{ .page_count }}
+  </p>
+  {{ end }}
+
+  <!-- ISBN -->
+  {{ if .isbn }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "isbn" }}:</strong> {{ .isbn }}
+  </p>
+  {{ end }}
+
+  <!-- Additional ISBNs (if any) -->
+  {{ if .additional_isbns }}
+  <details class="text-left">
+    <summary class="text-sm text-blue-600">{{ i18n "additional_isbns" }}</summary>
+    <p>{{ range .additional_isbns }}{{ . }}<br>{{ end }}</p>
+  </details>
+  {{ end }}
+
+  <!-- Languages -->
+  {{ if .languages }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "languages" }}:</strong>
+    {{ range $i, $lang := .languages }}{{ $lang }}{{ if ne $i (sub (len .languages) 1) }}, {{ end }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Russian Translation Status -->
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "russian_translation" }}:</strong> {{ .russian_translation_status }}
+  </p>
+
+  <!-- Audio Version Status -->
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "audio_version" }}:</strong> {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
+  </p>
+
+  <!-- Series -->
+  {{ if .series }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "series" }}:</strong> {{ .series }}
+  </p>
+  {{ end }}
+
+  <!-- Links (Goodreads, Buy link, etc.) -->
+  {{ if .goodreads_link }}
+  <p class="text-sm text-blue-600 text-left w-full mb-2">
+    <a href="{{ .goodreads_link }}" target="_blank">{{ i18n "goodreads" }}</a>
+  </p>
+  {{ end }}
+
+  {{ if .buy_link }}
+  <p class="text-sm text-blue-600 text-left w-full mb-2">
+    <a href="{{ .buy_link }}" target="_blank">{{ i18n "buy_link" }}</a>
+  </p>
+  {{ end }}
+
+  <!-- Full Description -->
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    {{ .description }}
+  </p>
+</article>

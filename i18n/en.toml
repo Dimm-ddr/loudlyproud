@@ -1,0 +1,44 @@
+[title]
+other = "Title"
+
+[authors]
+other = "Authors"
+
+[translators]
+other = "Translators"
+
+[cover]
+other = "Cover"
+
+[description]
+other = "Description"
+
+[tags]
+other = "Tags"
+
+[page_count]
+other = "Page Count"
+
+[isbn]
+other = "ISBN"
+
+[additional_isbns]
+other = "Additional ISBNs"
+
+[languages]
+other = "Languages"
+
+[russian_translation]
+other = "Russian Translation Status"
+
+[audio_version]
+other = "Audio Version"
+
+[series]
+other = "Series"
+
+[goodreads]
+other = "Goodreads Link"
+
+[buy_link]
+other = "Where to Buy"

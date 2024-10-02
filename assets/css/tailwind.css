@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tag-colors.css";
 
 /* Custom styles go here */
 a {

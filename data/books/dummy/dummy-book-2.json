@@ -9,6 +9,7 @@
         "Author 3"
     ],
     "description": "This is a short description of Dummy Book 2.",
+    "short_description": "This is a short description of Dummy Book 2.",
     "languages": [
         "English"
     ],

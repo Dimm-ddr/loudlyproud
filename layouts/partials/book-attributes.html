@@ -1,140 +1,118 @@
-<!-- Book Item Container -->
-<div
-  class="book-item w-60 p-4 bg-white shadow-lg rounded-lg flex flex-col items-center"
->
-  <!-- Cover -->
-  <figure
-    class="book-cover w-48 h-72 bg-gray-200 flex items-center justify-center mb-4"
-  >
-    <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{
-    .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}" alt="{{
-    .title }}">
-  </figure>
+<article class="book-item w-full p-4 bg-white shadow-lg rounded-lg">
+  <!-- Book Cover -->
+  <a href="/books/{{ .title | urlize }}">
+    <figure class="book-cover w-32 h-48 bg-gray-200 mx-auto mb-4">
+      <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{
+      .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
+      alt="{{ .title }}">
+    </figure>
+  </a>
+
+  <!-- Divider -->
+  <hr class="border-t border-gray-300 my-4" />
 
   <!-- Title -->
-  <h2 class="text-xl font-bold text-center mb-2">{{ .title }}</h2>
+  <a href="/books/{{ .title | urlize }}" class="book-title">
+    <h2 class="text-2xl font-bold text-center">{{ .title }}</h2>
+  </a>
+
+  <!-- Tags -->
+    <p class="text-left text-sm">
+        <strong>{{ i18n "tags" }}:</strong>
+        <span class="flex flex-wrap gap-2 mt-2">
+        {{ range .tags }}
+        <span class="tag inline-block px-2 py-1 rounded-full tag-{{ replace . " " "_" | lower }}">
+            {{ . }}
+        </span>
+        {{ end }}
+        </span>
+    </p>
+
+
 
   <!-- Authors -->
-  <p class="book-authors text-sm text-gray-700 text-center mb-2">
-    By: {{ $length := len .authors }} {{ range $index, $author := .authors }}{{
+  <p class="text-sm text-gray-700 text-left w-full mb-2">
+    <strong>{{ i18n "authors" }}:</strong>
+    {{ $length := len .authors }} {{ range $index, $author := .authors }}{{
     $author }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
   </p>
 
-  <!-- Translators (if available) -->
+  <!-- Translators -->
   {{ if .translators }}
-  <p class="book-translators text-sm text-gray-700 text-center mb-2">
-    Translators: {{ $length := len .translators }} {{ range $index, $translator
-    := .translators }}{{ $translator }}{{ if lt $index (sub $length 1) }}, {{
-    end }}{{ end }}
+  <p class="text-sm text-gray-700 text-left w-full mb-2">
+    <strong>{{ i18n "translators" }}:</strong>
+    {{ $length := len .translators }} {{ range $index, $translator :=
+    .translators }}{{ $translator }}{{ if lt $index (sub $length 1) }}, {{ end
+    }}{{ end }}
   </p>
   {{ end }}
 
-  <!-- Description (shortened) -->
-  <p class="book-description text-sm text-gray-600 mb-2">
-    {{ if gt (len .description) 100 }}{{ slice .description 0 100 }}...
-    <a href="#" class="text-blue-600">Read more</a>
-    {{ else }}{{ .description }}{{ end }}
-  </p>
-
-  <!-- Tags -->
-  <div class="book-tags text-sm text-gray-600 mb-2">
-    <strong>Tags:</strong>
-    {{ range .tags }}
-    <span class="tag">{{ . }}</span>
-    {{ end }}
-  </div>
-
-  <!-- Page count -->
+  <!-- Page Count -->
   {{ if .page_count }}
-  <p class="book-page-count text-sm text-gray-600 mb-2">
-    <strong>Pages:</strong>
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "page_count" }}:</strong>
     {{ .page_count }}
   </p>
   {{ end }}
 
-  <!-- ISBN (if available) -->
+  <!-- ISBN -->
   {{ if .isbn }}
-  <p class="book-isbn text-sm text-gray-600 mb-2">
-    <strong>ISBN:</strong>
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "isbn" }}:</strong>
     {{ .isbn }}
   </p>
   {{ end }}
 
-  <!-- Additional ISBNs (if available) -->
+  <!-- Additional ISBNs (if any) -->
   {{ if .additional_isbns }}
-  <div class="book-additional-isbns text-sm text-gray-600 mb-2">
-    <strong>Additional ISBNs:</strong>
-    <ul>
-      {{ range .additional_isbns }}
-      <li>{{ . }}</li>
+  <details class="text-left">
+    <summary class="text-sm text-blue-600 cursor-pointer">
+      {{ i18n "additional_isbns" }}
+    </summary>
+    <p>
+      {{ range .additional_isbns }}{{ . }}
+      <br />
       {{ end }}
-    </ul>
-  </div>
+    </p>
+  </details>
   {{ end }}
 
-  <!-- Russian Edition Status -->
-  <p class="book-russian-edition text-sm text-gray-600 mb-2">
-    <strong>Russian edition:</strong>
-    {{ if .russian_edition }}Yes{{ else }}No{{ end }}
-  </p>
-
-  <!-- Status of Russian Translation -->
-  <p class="book-translation-status text-sm text-gray-600 mb-2">
-    <strong>Status of Russian translation:</strong>
-    {{ if .translation_status }}{{ .translation_status }}{{ else }}Неизвестно{{
-    end }}
-  </p>
-
-  <!-- Status of Audioversion (if available) -->
-  {{ if .audio_status }}
-  <p class="book-audio-status text-sm text-gray-600 mb-2">
-    <strong>Audioversion Status:</strong>
-    {{ .audio_status }}
+  <!-- Languages -->
+  {{ if .languages }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "languages" }}:</strong>
+    {{ $length := len .languages }} {{ range $index, $lang := .languages }}{{
+    $lang }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
   </p>
   {{ end }}
 
-  <!-- Publish Year -->
-  {{ if .publication_year }}
-  <p class="book-publication-year text-sm text-gray-600 mb-2">
-    <strong>Published:</strong>
-    {{ .publication_year }}
+  <!-- Russian Translation Status (with default value) -->
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "russian_translation" }}:</strong>
+    {{ if .russian_translation_status }}{{ .russian_translation_status }}{{ else
+    }}{{ i18n "unknown" }}{{ end }}
+  </p>
+
+  <!-- Audio Version Status -->
+  {{ if .audio_version }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "audio_version" }}:</strong>
+    {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
   </p>
   {{ end }}
 
   <!-- Series -->
   {{ if .series }}
-  <p class="book-series text-sm text-gray-600 mb-2">
-    <strong>Series:</strong>
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    <strong>{{ i18n "series" }}:</strong>
     {{ .series }}
   </p>
   {{ end }}
 
-  <!-- Languages -->
-  {{ if .languages }}
-  <p class="book-languages text-sm text-gray-600 mb-2">
-    <strong>Languages:</strong>
-    {{ $length := len .languages }} {{ range $index, $language := .languages
-    }}{{ $language }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
+  <!-- Short Description -->
+  {{ if .short_description }}
+  <p class="text-sm text-gray-600 text-left w-full mb-2">
+    {{ .short_description }}
   </p>
   {{ end }}
-
-  <!-- Publishers -->
-  {{ if .publishers }}
-  <p class="book-publishers text-sm text-gray-600 mb-2">
-    <strong>Publishers:</strong>
-    {{ $length := len .publishers }} {{ range $index, $publisher := .publishers
-    }}{{ $publisher }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
-  </p>
-  {{ end }}
-
-  <!-- Links (Goodreads, Store) -->
-  <div class="book-links mt-4">
-    {{ if .goodreads_link }}
-    <a href="{{ .goodreads_link }}" class="text-blue-600 hover:underline">
-      Goodreads
-    </a>
-    {{ end }} {{ if .buy_link }}
-    <a href="{{ .buy_link }}" class="text-blue-600 hover:underline ml-4">Buy</a>
-    {{ end }}
-  </div>
-</div>
+</article>
