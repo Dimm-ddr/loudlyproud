@@ -12,22 +12,6 @@ heroDescription = "Друзья, это наша общая библиотека
 heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
 heroTelegram = "<a href='https://t.me/loudlyProud'>Телеграм канал для анонсов о сайте</a>"
 
-[params.bookDisplay]
-visibleAttributes = [
-  "cover",
-  "title",
-  "authors",
-  "tags",
-  "translators",
-  "description",
-  "languages",
-  "page_count",
-  "publication_year",
-  "russian_edition",
-  "goodreads_link",
-  "buy_link",
-]
-
 [build]
 writeStats = true
 
@@ -38,3 +22,6 @@ home = ["HTML"]
 [markup.postCSS]
 enable = true
 config = "postcss.config.js"
+
+[permalinks]
+books = "/books/:slug/"

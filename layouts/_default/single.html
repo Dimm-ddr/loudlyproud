@@ -1,0 +1,125 @@
+<article class="book-details w-full p-8 bg-white shadow-lg rounded-lg my-8">
+  <!-- Book Cover -->
+  <figure class="book-cover w-80 h-120 bg-gray-200 mx-auto mb-8">
+    <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{ .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}" alt="{{ .title }}" loading="lazy">
+  </figure>
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-center mb-6">{{ .title }}</h1>
+
+  <!-- Series Field -->
+  {{ if .series }}
+  <p class="series text-center text-lg italic text-gray-500 mb-2">
+      {{ .series }}
+  </p>
+  {{ end }}
+
+  <!-- Full Description -->
+  <p class="description text-base text-gray-800 w-full text-justify mb-6">
+      {{ .description }}
+  </p>
+
+  <!-- Conditional Divider: Only show if there is a description -->
+  {{ if .description }}
+  <hr class="border-t border-gray-300 my-4" />
+  {{ end }}
+
+  <!-- Tags -->
+  <p class="text-center text-sm w-full mb-4">
+    <span class="flex flex-wrap gap-2 mt-2">
+      {{ range .tags }}
+      <span class="tag {{ printf "tag-%s" (replace (replace (replace (replace (replace (replace (replace (lower .) " " "_") "+" "_") "&" "and") "'" "") "." "") "\\(" "") "\\)" "") | safeCSS }}">{{ . }}</span>
+      {{ end }}
+    </span>
+  </p>
+
+  <!-- Divider after Tags -->
+  <hr class="border-t border-gray-300 my-4" />
+
+  <!-- Authors -->
+  {{ with .authors }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "authors" }}:</strong>
+      {{ range $i, $author := . }}{{ $author }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Translators (if any) -->
+  {{ with .translators }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "translators" }}:</strong>
+      {{ range $i, $translator := . }}{{ $translator }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Page Count -->
+  {{ if .page_count }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "page_count" }}:</strong> {{ .page_count }}
+  </p>
+  {{ end }}
+
+  <!-- ISBN -->
+  {{ if .isbn }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "isbn" }}:</strong> {{ .isbn }}
+  </p>
+  {{ end }}
+
+  <!-- Additional ISBNs (if any) -->
+  {{ with .additional_isbns }}
+  <details class="text-left mb-4">
+      <summary class="text-sm text-blue-600 cursor-pointer">
+      {{ i18n "additional_isbns" }}
+      </summary>
+      <p class="mt-2">
+      {{ range . }}{{ . }}
+      <br />
+      {{ end }}
+      </p>
+  </details>
+  {{ end }}
+
+  <!-- Divider after ISBN and Page Count -->
+  {{ if or .isbn .page_count }}
+  <hr class="border-t border-gray-300 my-4" />
+  {{ end }}
+
+  <!-- Languages -->
+  {{ with .languages }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "languages" }}:</strong>
+      {{ range $i, $lang := . }}{{ $lang }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Russian Translation Status -->
+  {{ if .russian_translation_status }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "russian_translation" }}:</strong> {{ .russian_translation_status }}
+  </p>
+  {{ end }}
+
+  <!-- Audio Version Status -->
+  {{ if .audio_version }}
+  <p class="text-sm text-gray-800 text-left w-full mb-4">
+      <strong>{{ i18n "audio_version" }}:</strong> {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
+  </p>
+  {{ end }}
+
+  <!-- Divider after Metadata -->
+  <hr class="border-t border-gray-300 my-4" />
+
+  <!-- Links (Goodreads, Buy link, etc.) -->
+  {{ if .goodreads_link }}
+  <p class="text-sm text-blue-600 text-left w-full mb-4">
+      <a href="{{ .goodreads_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "goodreads" }}</a>
+  </p>
+  {{ end }}
+
+  {{ if .buy_link }}
+  <p class="text-sm text-blue-600 text-left w-full mb-4">
+      <a href="{{ .buy_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "buy_link" }}</a>
+  </p>
+  {{ end }}
+</article>

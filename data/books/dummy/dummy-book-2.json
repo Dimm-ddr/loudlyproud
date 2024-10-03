@@ -1,8 +1,9 @@
 {
     "type": "books",
+    "slug": "dummy-book-2",
     "title": "Dummy Book 2",
     "tags": [
-        "non-fiction",
+        "nonfiction",
         "history"
     ],
     "authors": [

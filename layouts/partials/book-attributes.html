@@ -1,118 +1,135 @@
-<article class="book-item w-full p-4 bg-white shadow-lg rounded-lg">
-  <!-- Book Cover -->
-  <a href="/books/{{ .title | urlize }}">
-    <figure class="book-cover w-32 h-48 bg-gray-200 mx-auto mb-4">
-      <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{
-      .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
-      alt="{{ .title }}">
-    </figure>
-  </a>
+<article class="book-details w-full p-8 bg-white shadow-lg rounded-lg my-8">
+    <!-- Book Cover -->
+    <a href="/books/{{ .slug | urlize }}">
+        <figure class="book-cover w-32 h-48 bg-gray-200 mx-auto mb-8">
+        <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{ .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}" alt="{{ .title }}" loading="lazy">
+        </figure>
+    </a>
 
-  <!-- Divider -->
-  <hr class="border-t border-gray-300 my-4" />
+    <!-- Title -->
+    <a href="/books/{{ .slug | urlize }}">
+        <h1 class="text-3xl font-bold text-center mb-6">{{ .title }}</h1>
+    </a>
 
-  <!-- Title -->
-  <a href="/books/{{ .title | urlize }}" class="book-title">
-    <h2 class="text-2xl font-bold text-center">{{ .title }}</h2>
-  </a>
+    <!-- Series Field -->
+    {{ if .series }}
+    <p class="series text-center text-base italic text-gray-500 mb-2">
+        {{ .series }}
+    </p>
+    {{ end }}
 
-  <!-- Tags -->
-    <p class="text-left text-sm">
-        <strong>{{ i18n "tags" }}:</strong>
-        <span class="flex flex-wrap gap-2 mt-2">
+    <!-- Short Description -->
+    {{ if .short_description }}
+    <p class="text-sm text-gray-600 text-left w-full mb-4">
+      {{ .short_description }}
+    </p>
+    {{ end }}
+
+    <!-- Conditional Divider: Only show if there is a short description -->
+    {{ if .short_description }}
+    <hr class="border-t border-gray-300 my-4" />
+    {{ end }}
+
+    <!-- Tags -->
+    <p class="text-center text-sm w-full mb-4">
+      <span class="flex flex-wrap gap-2 mt-2">
         {{ range .tags }}
-        <span class="tag inline-block px-2 py-1 rounded-full tag-{{ replace . " " "_" | lower }}">
-            {{ . }}
-        </span>
+        <span class="tag {{ printf "tag-%s" (replace (replace (replace (replace (replace (replace (replace (lower .) " " "_") "+" "_") "&" "and") "'" "") "." "") "\\(" "") "\\)" "") | safeCSS }}">{{ . }}</span>
         {{ end }}
-        </span>
+      </span>
     </p>
 
+    <!-- Conditional Divider: Only show if there are tags -->
+    {{ if .tags }}
+    <hr class="border-t border-gray-300 my-4" />
+    {{ end }}
 
-
-  <!-- Authors -->
-  <p class="text-sm text-gray-700 text-left w-full mb-2">
-    <strong>{{ i18n "authors" }}:</strong>
-    {{ $length := len .authors }} {{ range $index, $author := .authors }}{{
-    $author }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
-  </p>
-
-  <!-- Translators -->
-  {{ if .translators }}
-  <p class="text-sm text-gray-700 text-left w-full mb-2">
-    <strong>{{ i18n "translators" }}:</strong>
-    {{ $length := len .translators }} {{ range $index, $translator :=
-    .translators }}{{ $translator }}{{ if lt $index (sub $length 1) }}, {{ end
-    }}{{ end }}
-  </p>
-  {{ end }}
-
-  <!-- Page Count -->
-  {{ if .page_count }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "page_count" }}:</strong>
-    {{ .page_count }}
-  </p>
-  {{ end }}
-
-  <!-- ISBN -->
-  {{ if .isbn }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "isbn" }}:</strong>
-    {{ .isbn }}
-  </p>
-  {{ end }}
-
-  <!-- Additional ISBNs (if any) -->
-  {{ if .additional_isbns }}
-  <details class="text-left">
-    <summary class="text-sm text-blue-600 cursor-pointer">
-      {{ i18n "additional_isbns" }}
-    </summary>
-    <p>
-      {{ range .additional_isbns }}{{ . }}
-      <br />
-      {{ end }}
+    <!-- Authors -->
+    {{ with .authors }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "authors" }}:</strong>
+        {{ range $i, $author := . }}{{ $author }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
     </p>
-  </details>
-  {{ end }}
+    {{ end }}
 
-  <!-- Languages -->
-  {{ if .languages }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "languages" }}:</strong>
-    {{ $length := len .languages }} {{ range $index, $lang := .languages }}{{
-    $lang }}{{ if lt $index (sub $length 1) }}, {{ end }}{{ end }}
-  </p>
-  {{ end }}
+    <!-- Translators (if any) -->
+    {{ with .translators }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "translators" }}:</strong>
+        {{ range $i, $translator := . }}{{ $translator }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
+    </p>
+    {{ end }}
 
-  <!-- Russian Translation Status (with default value) -->
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "russian_translation" }}:</strong>
-    {{ if .russian_translation_status }}{{ .russian_translation_status }}{{ else
-    }}{{ i18n "unknown" }}{{ end }}
-  </p>
+    <!-- Page Count -->
+    {{ if .page_count }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "page_count" }}:</strong> {{ .page_count }}
+    </p>
+    {{ end }}
 
-  <!-- Audio Version Status -->
-  {{ if .audio_version }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "audio_version" }}:</strong>
-    {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
-  </p>
-  {{ end }}
+    <!-- ISBN -->
+    {{ if .isbn }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "isbn" }}:</strong> {{ .isbn }}
+    </p>
+    {{ end }}
 
-  <!-- Series -->
-  {{ if .series }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    <strong>{{ i18n "series" }}:</strong>
-    {{ .series }}
-  </p>
-  {{ end }}
+    <!-- Conditional Divider: Only show if there is author/translator/isbn info -->
+    {{ if or .authors .translators .isbn .page_count }}
+    <hr class="border-t border-gray-300 my-4" />
+    {{ end }}
 
-  <!-- Short Description -->
-  {{ if .short_description }}
-  <p class="text-sm text-gray-600 text-left w-full mb-2">
-    {{ .short_description }}
-  </p>
-  {{ end }}
+    <!-- Additional ISBNs (if any) -->
+    {{ with .additional_isbns }}
+    <details class="text-left mb-4">
+        <summary class="text-sm text-blue-600 cursor-pointer">
+        {{ i18n "additional_isbns" }}
+        </summary>
+        <p class="mt-2">
+        {{ range . }}{{ . }}
+        <br />
+        {{ end }}
+        </p>
+    </details>
+    {{ end }}
+
+    <!-- Languages -->
+    {{ with .languages }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "languages" }}:</strong>
+        {{ range $i, $lang := . }}{{ $lang }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
+    </p>
+    {{ end }}
+
+    <!-- Russian Translation Status -->
+    {{ if .russian_translation_status }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "russian_translation" }}:</strong> {{ .russian_translation_status }}
+    </p>
+    {{ end }}
+
+    <!-- Audio Version Status -->
+    {{ if .audio_version }}
+    <p class="text-sm text-gray-800 text-left w-full mb-4">
+        <strong>{{ i18n "audio_version" }}:</strong> {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
+    </p>
+    {{ end }}
+
+    <!-- Conditional Divider: Only show if there is metadata (languages, audio, etc.) -->
+    {{ if or .languages .russian_translation_status .audio_version }}
+    <hr class="border-t border-gray-300 my-4" />
+    {{ end }}
+
+    <!-- Links (Goodreads, Buy link, etc.) -->
+    {{ if .goodreads_link }}
+    <p class="text-sm text-blue-600 text-left w-full mb-4">
+        <a href="{{ .goodreads_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "goodreads" }}</a>
+    </p>
+    {{ end }}
+
+    {{ if .buy_link }}
+    <p class="text-sm text-blue-600 text-left w-full mb-4">
+        <a href="{{ .buy_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "buy_link" }}</a>
+    </p>
+    {{ end }}
 </article>

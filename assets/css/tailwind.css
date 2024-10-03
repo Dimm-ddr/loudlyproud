@@ -1,23 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import "tag-colors.css";
 
 /* Custom styles go here */
-a {
-  color: blue; /* Traditional blue for links */
-  text-decoration: underline; /* Underline links */
-}
 
-a:visited {
-  color: purple; /* Purple for visited links */
+a {
+  @apply text-blue-600 underline;
 }
 
 a:hover {
-  color: darkblue; /* Darker blue when hovering */
-  text-decoration: underline; /* Underline remains on hover */
+  @apply text-blue-800;
+}
+
+a:visited {
+  @apply text-purple-600;
 }
 
 a:active {
-  color: red; /* Red when the link is clicked */
+  @apply text-red-500;
 }
+
+/* Tag Styles */
+/* Ellipse style */
+.tag {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Rounded rectangle style */
+/* .tag {
+  @apply inline-block px-3 py-1 rounded-lg text-sm font-medium;
+} */

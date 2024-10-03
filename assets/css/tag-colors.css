@@ -1,199 +1,512 @@
-/* tags-coloration.css */
+@layer utilities {
+  .tag {
+    @apply bg-gray-400 text-black;
+  }
+  .tag-american_fiction {
+    @apply bg-blue-500 text-white;
+  }
 
-/* LGBTQ+ themes */
-.tag-LGBTQ {
-  @apply bg-blue-500 text-white;
-} /* blue with white text */
-.tag-queer {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-gay {
-  @apply bg-green-500 text-white;
-} /* green with white text */
-.tag-lesbian {
-  @apply bg-purple-500 text-white;
-} /* purple with white text */
-.tag-genderqueer {
-  @apply bg-yellow-500 text-black;
-} /* yellow with black text */
-.tag-transgender {
-  @apply bg-teal-500 text-white;
-} /* teal with white text */
-.tag-LGBTQ_activists {
-  @apply bg-orange-500 text-black;
-} /* orange with black text */
-.tag-LGBTQ_novels_before_Stonewall {
-  @apply bg-orange-400 text-black;
-} /* light orange with black text */
+  .tag-americans {
+    @apply bg-red-500 text-white;
+  }
 
-/* Fiction Genres */
-.tag-fiction {
-  @apply bg-indigo-500 text-white;
-} /* indigo with white text */
-.tag-literary_fiction {
-  @apply bg-blue-400 text-black;
-} /* light blue with black text */
-.tag-historical_fiction {
-  @apply bg-purple-600 text-white;
-} /* dark purple with white text */
-.tag-speculative_fiction {
-  @apply bg-orange-600 text-black;
-} /* dark orange with black text */
-.tag-science_fiction {
-  @apply bg-green-400 text-black;
-} /* light green with black text */
-.tag-fantasy {
-  @apply bg-cyan-500 text-white;
-} /* cyan with white text */
-.tag-urban_fantasy {
-  @apply bg-purple-600 text-white;
-} /* dark purple with white text */
-.tag-high_fantasy {
-  @apply bg-purple-500 text-white;
-} /* purple with white text */
-.tag-epic_fantasy {
-  @apply bg-yellow-500 text-black;
-} /* yellow with black text */
-.tag-dark_fantasy {
-  @apply bg-gray-600 text-white;
-} /* dark gray with white text */
-.tag-realistic_fiction {
-  @apply bg-indigo-800 text-white;
-} /* dark indigo with white text */
-.tag-coming_of_age {
-  @apply bg-green-500 text-white;
-} /* green with white text */
+  .tag-asian_americans {
+    @apply bg-green-500 text-white;
+  }
 
-/* Romance Genres */
-.tag-romance {
-  @apply bg-red-400 text-black;
-} /* light red with black text */
-.tag-male-male_romance {
-  @apply bg-red-300 text-black;
-} /* pale red with black text */
-.tag-female-female_romance {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-new_adult_NA {
-  @apply bg-purple-700 text-white;
-} /* dark violet with white text */
-.tag-young_adult_YA {
-  @apply bg-blue-500 text-white;
-} /* blue with white text */
-.tag-adult_fiction {
-  @apply bg-purple-700 text-white;
-} /* dark purple with white text */
+  .tag-british_literature {
+    @apply bg-yellow-500 text-black;
+  }
 
-/* Paranormal/Supernatural */
-.tag-supernatural {
-  @apply bg-purple-700 text-white;
-} /* dark violet with white text */
-.tag-vampires {
-  @apply bg-purple-600 text-white;
-} /* purple with white text */
-.tag-witches {
-  @apply bg-purple-500 text-white;
-} /* purple with white text */
-.tag-ghosts {
-  @apply bg-gray-700 text-white;
-} /* muted gray with white text */
-.tag-dragons {
-  @apply bg-red-500 text-white;
-} /* red with white text */
+  .tag-china {
+    @apply bg-purple-500 text-white;
+  }
 
-/* Mystery, Thriller, Crime */
-.tag-mystery {
-  @apply bg-gray-900 text-white;
-} /* dark gray with white text */
-.tag-suspense {
-  @apply bg-yellow-400 text-black;
-} /* light yellow with black text */
-.tag-crime {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-thrillers {
-  @apply bg-red-300 text-black;
-} /* pale red with black text */
-.tag-detective {
-  @apply bg-gray-700 text-white;
-} /* dark gray with white text */
+  .tag-detroit {
+    @apply bg-orange-500 text-black;
+  }
 
-/* Nonfiction */
-.tag-nonfiction {
-  @apply bg-orange-500 text-black;
-} /* orange with black text */
-.tag-memoir {
-  @apply bg-yellow-500 text-black;
-} /* yellow with black text */
-.tag-biography {
-  @apply bg-orange-400 text-black;
-} /* light orange with black text */
-.tag-autobiography {
-  @apply bg-yellow-400 text-black;
-} /* light yellow with black text */
+  .tag-german_literature {
+    @apply bg-teal-500 text-white;
+  }
 
-/* Additional Tags */
-.tag-adventure {
-  @apply bg-green-400 text-black;
-} /* light green with black text */
-.tag-history {
-  @apply bg-indigo-600 text-white;
-} /* dark blue with white text */
-.tag-sports {
-  @apply bg-green-500 text-white;
-} /* green with white text */
-.tag-war {
-  @apply bg-purple-700 text-white;
-} /* dark purple with white text */
-.tag-friendship {
-  @apply bg-blue-500 text-white;
-} /* blue with white text */
-.tag-family {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-school {
-  @apply bg-purple-600 text-white;
-} /* purple with white text */
-.tag-college_students {
-  @apply bg-blue-400 text-black;
-} /* light blue with black text */
-.tag-mental_health {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-mental_illness {
-  @apply bg-gray-900 text-white;
-} /* dark gray with white text */
-.tag-identity {
-  @apply bg-purple-500 text-white;
-} /* purple with white text */
-.tag-isolation {
-  @apply bg-yellow-400 text-black;
-} /* light yellow with black text */
-.tag-gender_studies {
-  @apply bg-red-300 text-black;
-} /* pale red with black text */
+  .tag-germany {
+    @apply bg-gray-700 text-white;
+  }
 
-/* Art & Culture */
-.tag-art {
-  @apply bg-red-500 text-white;
-} /* red with white text */
-.tag-performing_arts {
-  @apply bg-blue-500 text-white;
-} /* blue with white text */
-.tag-renaissance_art {
-  @apply bg-yellow-400 text-black;
-} /* light yellow with black text */
+  .tag-iran {
+    @apply bg-indigo-600 text-white;
+  }
 
-/* Other Themes */
-.tag-politics {
-  @apply bg-orange-500 text-black;
-} /* orange with black text */
-.tag-social_commentary {
-  @apply bg-yellow-600 text-black;
-} /* gold with black text */
-.tag-alien_cultures {
-  @apply bg-teal-500 text-white;
-} /* teal with white text */
-.tag-space_opera {
-  @apply bg-green-500 text-white;
-} /* green with white text */
+  .tag-iranian_americans {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-lgbtq_ {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-lgbtq__activists {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-lgbtq__novels_before_stonewall {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-russia {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-russian_literature {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-san_francisco {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-scotland {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-stonewall_book_awards {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-united_states {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-adult_fiction {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-adventure {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-alien_cultures {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-anthologies {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-art {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-audiobook {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-autobiography {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-biography {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-boarding_school {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-book_club {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-boys {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-boys_love_bl {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-campus {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-childrens_fiction {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-christmas {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-classics {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-college_students {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-coming_of_age {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-contemporary {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-crime {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-dark_fantasy {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-desire {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-detective {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-domestic_fiction {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-dragons {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-epic_fantasy {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-essays {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-extortion {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-fae {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-fairies {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-family {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-fantasy {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-female-female_romance {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-feminism {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-fiction {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-friendship {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-gay {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-gay_teenagers {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-gays_writings {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-gay-parent_families {
+    @apply bg-indigo-500 text-white;
+  }
+
+  .tag-gender_studies {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-genderqueer {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-ghosts {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-good_and_evil {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-graphic_novels_and_comics {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-high_fantasy {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-high_school {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-historical {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-historical_fiction {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-history {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-horror {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-identity {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-isolation {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-juvenile_fiction {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-lesbian {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-literary_collections {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-literary_fiction {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-love {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-love_in_adolescence {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-magic {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-magical_realism {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-male-female_romance {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-male-male_romance {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-marriage {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-memoir {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-mental_health {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-mental_illness {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-monsters {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-murder {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-mystery {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-new_adult_na {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-new_york_times_bestseller {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-nonfiction {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-novels {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-paranormal {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-performing_arts {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-plague {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-political_intrigue {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-prep_school {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-queer {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-realistic_fiction {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-recreation {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-renaissance_art {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-retellings {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-romance {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-sagas {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-school {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-science_fiction {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-short_stories {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-social_commentary {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-space_opera {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-speculative_fiction {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-sports {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-spy_stories {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-supernatural {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-suspense {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-technology {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-teenage {
+    @apply bg-teal-500 text-white;
+  }
+
+  .tag-thrillers {
+    @apply bg-gray-700 text-white;
+  }
+
+  .tag-transgender {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .tag-travel {
+    @apply bg-pink-500 text-white;
+  }
+
+  .tag-urban_fantasy {
+    @apply bg-blue-500 text-white;
+  }
+
+  .tag-vampires {
+    @apply bg-red-500 text-white;
+  }
+
+  .tag-war {
+    @apply bg-green-500 text-white;
+  }
+
+  .tag-witches {
+    @apply bg-yellow-500 text-black;
+  }
+
+  .tag-wizards {
+    @apply bg-purple-500 text-white;
+  }
+
+  .tag-world_war_ii {
+    @apply bg-orange-500 text-black;
+  }
+
+  .tag-young_adult_ya {
+    @apply bg-teal-500 text-white;
+  }
+}
