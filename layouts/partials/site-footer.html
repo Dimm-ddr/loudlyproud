@@ -1,5 +1,8 @@
-<footer class="bg-primary text-secondary py-6">
-  <div class="container mx-auto text-center">
-    <p>&copy; {{ now.Format "2006" }} Loudly Proud. All rights reserved.</p>
+<footer class="bg-gray-100 text-gray-700 py-4">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-sm">
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n
+      "all_rights_reserved" }}
+    </p>
   </div>
 </footer>

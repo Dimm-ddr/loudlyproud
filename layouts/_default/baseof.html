@@ -1,36 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ .Title }} - Loudly Proud</title>
-    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}"> <link
-    rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" />
+    <title>
+      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title
+      }}{{ end }}
+    </title>
 
-    <!-- Include SEO meta tags -->
-    <meta name="description" content="{{ .Site.Params.description }}" />
     <meta
-      name="keywords"
-      content="Queer books, Russian queer literature, LGBTQ+ literature, Loudly Proud"
+      name="description"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
     />
 
-    <!-- Pass books data from Hugo to JavaScript -->
-    <script>
-      const books = {{ .Site.Data.books | jsonify }};
-      console.log("Loaded books:", books);
-    </script>
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}"> <link
+    rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon"> {{
+    partial "head-additions.html" . }}
   </head>
-  <body>
-    <!-- Main Hero Section -->
-    {{ block "hero" . }} {{ partial "hero.html" . }} {{ end }}
+  <body class="flex flex-col min-h-screen">
+    {{ partial "custom-functions.html" . }}
+    <header class="bg-secondary py-4">
+      <div class="container mx-auto flex justify-end">
+        <nav>
+          {{ range .Site.Languages }} {{ if eq . $.Site.Language }}
+          <span class="font-bold">{{ .LanguageName }}</span>
+          {{ else }}
+          <a href="{{ . | absLangURL }}" class="text-blue-600 hover:underline">
+            {{ .LanguageName }}
+          </a>
+          {{ end }} {{ if ne . (last 1 $.Site.Languages) }} | {{ end }} {{ end
+          }}
+        </nav>
+      </div>
+    </header>
 
-    <!-- Main Content Section -->
-    <main>{{ block "main" . }}{{ end }}</main>
+    {{ block "hero" . }}{{ partial "hero.html" . }}{{ end }}
 
-    <!-- Footer Section -->
-    <footer>{{ partial "site-footer.html" . }}</footer>
+    <main class="flex-grow">{{ block "main" . }}{{ end }}</main>
 
-    <!-- Site Scripts -->
+    <footer>
+      {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+    </footer>
+
     {{ partial "site-scripts.html" . }}
   </body>
 </html>

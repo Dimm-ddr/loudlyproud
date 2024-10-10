@@ -5,10 +5,13 @@ other = "Title"
 other = "Authors"
 
 [translators]
-other = "Translators"
+other = "Translated by"
 
 [cover]
 other = "Cover"
+
+[short_description]
+other = "Short Description"
 
 [description]
 other = "Description"
@@ -42,3 +45,18 @@ other = "Goodreads Link"
 
 [buy_link]
 other = "Where to Buy"
+
+[translation_status_exists]
+other = "Russian translation exists"
+
+[translation_status_unknown]
+other = "Russian translation status unknown"
+
+[translation_status_unlikely_to_exist]
+other = "Russian translation unlikely to exist"
+
+[translation_status_does_not_exist]
+other = "No Russian translation"
+
+[russian_audio_available]
+other = "Russian audio version available"

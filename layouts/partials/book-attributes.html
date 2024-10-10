@@ -1,135 +1,82 @@
-<article class="book-details w-full p-8 bg-white shadow-lg rounded-lg my-8">
-    <!-- Book Cover -->
-    <a href="/books/{{ .slug | urlize }}">
-        <figure class="book-cover w-32 h-48 bg-gray-200 mx-auto mb-8">
-        <img class="max-w-full max-h-full object-contain" src="{{ if .cover }}{{ .cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}" alt="{{ .title }}" loading="lazy">
-        </figure>
-    </a>
+<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col">
+    <div class="h-64 overflow-hidden">
+        <a href="books/{{ .Params.slug }}" class="block w-full h-full">
+            <img class="w-full h-full object-contain"
+                 src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
+                 alt="{{ .Title }}" loading="lazy">
+        </a>
+    </div>
 
-    <!-- Title -->
-    <a href="/books/{{ .slug | urlize }}">
-        <h1 class="text-3xl font-bold text-center mb-6">{{ .title }}</h1>
-    </a>
+    <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-bold mb-2 text-primary">
+            <a href="books/{{ .Params.slug }}" class="hover:underline">{{ .Params.title }}</a>
+        </h2>
 
-    <!-- Series Field -->
-    {{ if .series }}
-    <p class="series text-center text-base italic text-gray-500 mb-2">
-        {{ .series }}
-    </p>
-    {{ end }}
-
-    <!-- Short Description -->
-    {{ if .short_description }}
-    <p class="text-sm text-gray-600 text-left w-full mb-4">
-      {{ .short_description }}
-    </p>
-    {{ end }}
-
-    <!-- Conditional Divider: Only show if there is a short description -->
-    {{ if .short_description }}
-    <hr class="border-t border-gray-300 my-4" />
-    {{ end }}
-
-    <!-- Tags -->
-    <p class="text-center text-sm w-full mb-4">
-      <span class="flex flex-wrap gap-2 mt-2">
-        {{ range .tags }}
-        <span class="tag {{ printf "tag-%s" (replace (replace (replace (replace (replace (replace (replace (lower .) " " "_") "+" "_") "&" "and") "'" "") "." "") "\\(" "") "\\)" "") | safeCSS }}">{{ . }}</span>
-        {{ end }}
-      </span>
-    </p>
-
-    <!-- Conditional Divider: Only show if there are tags -->
-    {{ if .tags }}
-    <hr class="border-t border-gray-300 my-4" />
-    {{ end }}
-
-    <!-- Authors -->
-    {{ with .authors }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "authors" }}:</strong>
-        {{ range $i, $author := . }}{{ $author }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
-    </p>
-    {{ end }}
-
-    <!-- Translators (if any) -->
-    {{ with .translators }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "translators" }}:</strong>
-        {{ range $i, $translator := . }}{{ $translator }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
-    </p>
-    {{ end }}
-
-    <!-- Page Count -->
-    {{ if .page_count }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "page_count" }}:</strong> {{ .page_count }}
-    </p>
-    {{ end }}
-
-    <!-- ISBN -->
-    {{ if .isbn }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "isbn" }}:</strong> {{ .isbn }}
-    </p>
-    {{ end }}
-
-    <!-- Conditional Divider: Only show if there is author/translator/isbn info -->
-    {{ if or .authors .translators .isbn .page_count }}
-    <hr class="border-t border-gray-300 my-4" />
-    {{ end }}
-
-    <!-- Additional ISBNs (if any) -->
-    {{ with .additional_isbns }}
-    <details class="text-left mb-4">
-        <summary class="text-sm text-blue-600 cursor-pointer">
-        {{ i18n "additional_isbns" }}
-        </summary>
-        <p class="mt-2">
-        {{ range . }}{{ . }}
-        <br />
-        {{ end }}
+        <p class="text-sm text-primary mb-2">
+            {{ with .Params.authors }}{{ delimit . ", " }}{{ end }}
         </p>
-    </details>
-    {{ end }}
 
-    <!-- Languages -->
-    {{ with .languages }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "languages" }}:</strong>
-        {{ range $i, $lang := . }}{{ $lang }}{{ if ne $i (sub (len .) 1) }}, {{ end }}{{ end }}
-    </p>
-    {{ end }}
+        {{ with .Params.translators }}
+        <p class="text-sm text-primary mb-2">
+            <span class="italic">{{ i18n "translators" }}: {{ delimit . ", " }}</span>
+        </p>
+        {{ end }}
 
-    <!-- Russian Translation Status -->
-    {{ if .russian_translation_status }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "russian_translation" }}:</strong> {{ .russian_translation_status }}
-    </p>
-    {{ end }}
+        <!-- Series Field -->
+        {{ if .Params.series }}
+        <p class="series text-center text-base italic text-gray-500 mb-2">
+            {{ .Params.series }}
+        </p>
+        {{ end }}
 
-    <!-- Audio Version Status -->
-    {{ if .audio_version }}
-    <p class="text-sm text-gray-800 text-left w-full mb-4">
-        <strong>{{ i18n "audio_version" }}:</strong> {{ if .audio_version }}{{ i18n "yes" }}{{ else }}{{ i18n "no" }}{{ end }}
-    </p>
-    {{ end }}
+        <!-- Short Description -->
+        {{ with .Params.short_description }}
+        <div class="mb-2">
+            <h3 class="text-sm font-semibold text-primary mb-1">{{ i18n "short_description" }}</h3>
+            <p class="text-sm text-primary">{{ . }}</p>
+        </div>
+        {{ end }}
 
-    <!-- Conditional Divider: Only show if there is metadata (languages, audio, etc.) -->
-    {{ if or .languages .russian_translation_status .audio_version }}
-    <hr class="border-t border-gray-300 my-4" />
-    {{ end }}
+        <!-- Conditional Divider: Only show if there is a short description -->
+        {{ if .Params.short_description }}
+        <hr class="border-t border-gray-300 my-4" />
+        {{ end }}
 
-    <!-- Links (Goodreads, Buy link, etc.) -->
-    {{ if .goodreads_link }}
-    <p class="text-sm text-blue-600 text-left w-full mb-4">
-        <a href="{{ .goodreads_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "goodreads" }}</a>
-    </p>
-    {{ end }}
+        {{ with .Params.tags }}
+        <div class="flex flex-wrap gap-1 mb-2">
+            {{ range . }}
+            {{ $tagClass := replace (lower .) "+" "-" }}
+            {{ $tagClass := replace $tagClass " " "-" }}
+            {{ $tagClass := replace $tagClass "(" "" }}
+            {{ $tagClass := replace $tagClass ")" "" }}
+            {{ $tagClass := replace $tagClass "'" "" }}
+            {{ $tagClass := replace $tagClass "&" "and" }}
+            <span class="text-xs px-2 py-1 rounded-full tag tag-{{ $tagClass }}">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
 
-    {{ if .buy_link }}
-    <p class="text-sm text-blue-600 text-left w-full mb-4">
-        <a href="{{ .buy_link }}" target="_blank" class="hover:underline hover:text-blue-800">{{ i18n "buy_link" }}</a>
-    </p>
-    {{ end }}
+        <div class="mb-2 relative group">
+            {{ with .Params.russian_translation_status }}
+            <span class="text-sm font-semibold {{ partial "getTranslationStatusColor" . }}">
+                {{ i18n (printf "translation_status_%s" .) }}
+            </span>
+            {{ end }}
+
+            {{ if eq .Params.russian_audioversion "yes" }}
+            <span class="ml-2 text-sm cursor-help">
+                🎧
+                <span class="hidden group-hover:block absolute z-10 bg-primary text-secondary text-xs rounded py-1 px-2 left-0 bottom-full mb-1">
+                    {{ i18n "audio_version" }}
+                </span>
+            </span>
+            {{ end }}
+        </div>
+
+        {{ with .Params.buy_link }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent3 hover:underline mt-2">
+            {{ i18n "buy_link" }}
+        </a>
+        {{ end }}
+    </div>
 </article>

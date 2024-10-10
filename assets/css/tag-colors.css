@@ -2,7 +2,7 @@
   .tag {
     @apply bg-gray-400 text-black;
   }
-  .tag-american_fiction {
+  .tag-american-fiction {
     @apply bg-blue-500 text-white;
   }
 
@@ -10,11 +10,11 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-asian_americans {
+  .tag-asian-americans {
     @apply bg-green-500 text-white;
   }
 
-  .tag-british_literature {
+  .tag-british-literature {
     @apply bg-yellow-500 text-black;
   }
 
@@ -26,7 +26,7 @@
     @apply bg-orange-500 text-black;
   }
 
-  .tag-german_literature {
+  .tag-german-literature {
     @apply bg-teal-500 text-white;
   }
 
@@ -38,19 +38,19 @@
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-iranian_americans {
+  .tag-iranian-americans {
     @apply bg-pink-500 text-white;
   }
 
-  .tag-lgbtq_ {
+  .tag-lgbtq- {
     @apply bg-blue-500 text-white;
   }
 
-  .tag-lgbtq__activists {
+  .tag-lgbtq--activists {
     @apply bg-red-500 text-white;
   }
 
-  .tag-lgbtq__novels_before_stonewall {
+  .tag-lgbtq--novels-before-stonewall {
     @apply bg-green-500 text-white;
   }
 
@@ -58,11 +58,11 @@
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-russian_literature {
+  .tag-russian-literature {
     @apply bg-purple-500 text-white;
   }
 
-  .tag-san_francisco {
+  .tag-san-francisco {
     @apply bg-orange-500 text-black;
   }
 
@@ -70,15 +70,15 @@
     @apply bg-teal-500 text-white;
   }
 
-  .tag-stonewall_book_awards {
+  .tag-stonewall-book-awards {
     @apply bg-gray-700 text-white;
   }
 
-  .tag-united_states {
+  .tag-united-states {
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-adult_fiction {
+  .tag-adult-fiction {
     @apply bg-pink-500 text-white;
   }
 
@@ -86,7 +86,7 @@
     @apply bg-blue-500 text-white;
   }
 
-  .tag-alien_cultures {
+  .tag-alien-cultures {
     @apply bg-red-500 text-white;
   }
 
@@ -110,11 +110,11 @@
     @apply bg-teal-500 text-white;
   }
 
-  .tag-boarding_school {
+  .tag-boarding-school {
     @apply bg-gray-700 text-white;
   }
 
-  .tag-book_club {
+  .tag-book-club {
     @apply bg-indigo-600 text-white;
   }
 
@@ -122,7 +122,7 @@
     @apply bg-pink-500 text-white;
   }
 
-  .tag-boys_love_bl {
+  .tag-boys-love-bl {
     @apply bg-blue-500 text-white;
   }
 
@@ -130,7 +130,7 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-childrens_fiction {
+  .tag-childrens-fiction {
     @apply bg-green-500 text-white;
   }
 
@@ -142,11 +142,11 @@
     @apply bg-purple-500 text-white;
   }
 
-  .tag-college_students {
+  .tag-college-students {
     @apply bg-orange-500 text-black;
   }
 
-  .tag-coming_of_age {
+  .tag-coming-of-age {
     @apply bg-teal-500 text-white;
   }
 
@@ -158,7 +158,7 @@
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-dark_fantasy {
+  .tag-dark-fantasy {
     @apply bg-pink-500 text-white;
   }
 
@@ -170,7 +170,7 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-domestic_fiction {
+  .tag-domestic-fiction {
     @apply bg-green-500 text-white;
   }
 
@@ -178,7 +178,7 @@
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-epic_fantasy {
+  .tag-epic-fantasy {
     @apply bg-purple-500 text-white;
   }
 
@@ -206,7 +206,7 @@
     @apply bg-blue-500 text-white;
   }
 
-  .tag-female-female_romance {
+  .tag-female-female-romance {
     @apply bg-red-500 text-white;
   }
 
@@ -226,19 +226,19 @@
     @apply bg-orange-500 text-black;
   }
 
-  .tag-gay_teenagers {
+  .tag-gay-teenagers {
     @apply bg-teal-500 text-white;
   }
 
-  .tag-gays_writings {
+  .tag-gays-writings {
     @apply bg-gray-700 text-white;
   }
 
-  .tag-gay-parent_families {
+  .tag-gay-parent-families {
     @apply bg-indigo-500 text-white;
   }
 
-  .tag-gender_studies {
+  .tag-gender-studies {
     @apply bg-pink-500 text-white;
   }
 
@@ -250,19 +250,19 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-good_and_evil {
+  .tag-good-and-evil {
     @apply bg-green-500 text-white;
   }
 
-  .tag-graphic_novels_and_comics {
+  .tag-graphic-novels-and-comics {
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-high_fantasy {
+  .tag-high-fantasy {
     @apply bg-purple-500 text-white;
   }
 
-  .tag-high_school {
+  .tag-high-school {
     @apply bg-orange-500 text-black;
   }
 
@@ -270,7 +270,7 @@
     @apply bg-teal-500 text-white;
   }
 
-  .tag-historical_fiction {
+  .tag-historical-fiction {
     @apply bg-gray-700 text-white;
   }
 
@@ -290,7 +290,7 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-juvenile_fiction {
+  .tag-juvenile-fiction {
     @apply bg-green-500 text-white;
   }
 
@@ -298,11 +298,11 @@
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-literary_collections {
+  .tag-literary-collections {
     @apply bg-purple-500 text-white;
   }
 
-  .tag-literary_fiction {
+  .tag-literary-fiction {
     @apply bg-orange-500 text-black;
   }
 
@@ -310,7 +310,7 @@
     @apply bg-teal-500 text-white;
   }
 
-  .tag-love_in_adolescence {
+  .tag-love-in-adolescence {
     @apply bg-gray-700 text-white;
   }
 
@@ -318,15 +318,15 @@
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-magical_realism {
+  .tag-magical-realism {
     @apply bg-pink-500 text-white;
   }
 
-  .tag-male-female_romance {
+  .tag-male-female-romance {
     @apply bg-blue-500 text-white;
   }
 
-  .tag-male-male_romance {
+  .tag-male-male-romance {
     @apply bg-red-500 text-white;
   }
 
@@ -338,11 +338,11 @@
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-mental_health {
+  .tag-mental-health {
     @apply bg-purple-500 text-white;
   }
 
-  .tag-mental_illness {
+  .tag-mental-illness {
     @apply bg-orange-500 text-black;
   }
 
@@ -358,11 +358,11 @@
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-new_adult_na {
+  .tag-new-adult-na {
     @apply bg-pink-500 text-white;
   }
 
-  .tag-new_york_times_bestseller {
+  .tag-new-york-times-bestseller {
     @apply bg-blue-500 text-white;
   }
 
@@ -378,7 +378,7 @@
     @apply bg-yellow-500 text-black;
   }
 
-  .tag-performing_arts {
+  .tag-performing-arts {
     @apply bg-purple-500 text-white;
   }
 
@@ -386,11 +386,11 @@
     @apply bg-orange-500 text-black;
   }
 
-  .tag-political_intrigue {
+  .tag-political-intrigue {
     @apply bg-teal-500 text-white;
   }
 
-  .tag-prep_school {
+  .tag-prep-school {
     @apply bg-gray-700 text-white;
   }
 
@@ -398,7 +398,7 @@
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-realistic_fiction {
+  .tag-realistic-fiction {
     @apply bg-pink-500 text-white;
   }
 
@@ -406,7 +406,7 @@
     @apply bg-blue-500 text-white;
   }
 
-  .tag-renaissance_art {
+  .tag-renaissance-art {
     @apply bg-red-500 text-white;
   }
 
@@ -426,23 +426,23 @@
     @apply bg-orange-500 text-black;
   }
 
-  .tag-science_fiction {
+  .tag-science-fiction {
     @apply bg-teal-500 text-white;
   }
 
-  .tag-short_stories {
+  .tag-short-stories {
     @apply bg-gray-700 text-white;
   }
 
-  .tag-social_commentary {
+  .tag-social-commentary {
     @apply bg-indigo-600 text-white;
   }
 
-  .tag-space_opera {
+  .tag-space-opera {
     @apply bg-pink-500 text-white;
   }
 
-  .tag-speculative_fiction {
+  .tag-speculative-fiction {
     @apply bg-blue-500 text-white;
   }
 
@@ -450,7 +450,7 @@
     @apply bg-red-500 text-white;
   }
 
-  .tag-spy_stories {
+  .tag-spy-stories {
     @apply bg-green-500 text-white;
   }
 
@@ -482,7 +482,7 @@
     @apply bg-pink-500 text-white;
   }
 
-  .tag-urban_fantasy {
+  .tag-urban-fantasy {
     @apply bg-blue-500 text-white;
   }
 
@@ -502,11 +502,11 @@
     @apply bg-purple-500 text-white;
   }
 
-  .tag-world_war_ii {
+  .tag-world-war-ii {
     @apply bg-orange-500 text-black;
   }
 
-  .tag-young_adult_ya {
+  .tag-young-adult-ya {
     @apply bg-teal-500 text-white;
   }
 }

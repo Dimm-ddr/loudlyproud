@@ -31,3 +31,11 @@ a:active {
 /* .tag {
   @apply inline-block px-3 py-1 rounded-lg text-sm font-medium;
 } */
+.book-card {
+  overflow: visible !important;
+}
+
+.book-card > a {
+  overflow: hidden;
+  border-radius: 0.5rem; /* This matches the rounded-lg class */
+}

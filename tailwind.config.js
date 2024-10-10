@@ -13,11 +13,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#000000", // Primary text color
-        secondary: "#F5F5DC", // Secondary (background) color
+        secondary: "#eee7dc", // Secondary (background) color
         accent1: "#E74C3C", // Accent color (red)
         accent2: "#2ECC71", // Accent color (green)
         accent3: "#3498DB", // Accent color (blue)
-        background: "#F5F5F5", // General background color
+        background: "#b7b0a7", // General background color
         text: "#333333", // Text color
         "light-gray": "#eaeaea", // Light gray for borders, etc.
       },

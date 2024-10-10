@@ -37,3 +37,6 @@ yarn.lock
 *.snk
 *.nupkg
 *.log
+files_concat.py
+merged_files_output.txt
+package-lock.json

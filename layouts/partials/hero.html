@@ -1,11 +1,13 @@
-<section class="hero bg-primary text-secondary py-16">
-  <div class="container mx-auto text-center">
-    <img src="{{ "images/loudly_proud_header.jpg" | relURL }}" alt="Loudly Proud
-    Logo" class="mx-auto w-32 h-auto">
-    <div class="hero-text mt-6">
-      <h1 class="text-4xl font-bold">{{ .Site.Params.heroTitle }}</h1>
-      <p class="text-lg mt-4">{{ .Site.Params.heroDescription | safeHTML }}</p>
-      <p class="text-lg mt-4">{{ .Site.Params.heroTelegram | safeHTML }}</p>
+<section class="hero relative bg-cover bg-center py-12 lg:py-16" style="background-image: url('{{ "images/loudly_proud_header.jpg" | relURL }}');">
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-2xl mx-auto text-center">
+      <h1 class="text-4xl font-bold text-secondary mb-4">{{ .Site.Params.heroTitle }}</h1>
+      <p class="text-xl text-secondary mb-6">{{ .Site.Params.heroDescription | safeHTML }}</p>
+      <a href="{{ .Site.Params.heroFeedbackLink }}" class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition duration-300">
+        {{ i18n "give_feedback" }}
+      </a>
+      <p class="text-white mt-4">{{ .Site.Params.heroTelegram | safeHTML }}</p>
     </div>
   </div>
 </section>

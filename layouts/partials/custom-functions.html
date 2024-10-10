@@ -1,0 +1,16 @@
+{{ define "partials/getTranslationStatusColor" }}
+  {{ $status := . }}
+  {{ $color := "text-gray-600" }}
+  {{ if eq $status "exist" }}
+    {{ $color = "text-green-600" }}
+  {{ else if eq $status "likely_to_exist" }}
+    {{ $color = "text-yellow-600" }}
+  {{ else if eq $status "unknown" }}
+    {{ $color = "text-gray-600" }}
+  {{ else if eq $status "unlikely_to_exist" }}
+    {{ $color = "text-orange-600" }}
+  {{ else if eq $status "does_not_exist" }}
+    {{ $color = "text-red-600" }}
+  {{ end }}
+  {{ return $color }}
+{{ end }}

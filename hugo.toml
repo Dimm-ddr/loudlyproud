@@ -2,10 +2,6 @@ baseURL = "/"
 languageCode = 'en-us'
 title = 'Loudly Proud'
 
-[taxonomies]
-tag = "tags"
-author = "authors"
-
 [params]
 heroTitle = "Литературный каталог Loudly Proud"
 heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность? <a href='https://forms.gle/YHhojq3Ts2LsDF6G8'>Дайте мне знать</a> – вместе мы сделаем этот каталог лучше."
@@ -17,6 +13,7 @@ writeStats = true
 
 [outputs]
 home = ["HTML"]
+section = ["HTML"]
 
 [markup]
 [markup.postCSS]
@@ -24,4 +21,11 @@ enable = true
 config = "postcss.config.js"
 
 [permalinks]
-books = "/books/:slug/"
+books = "/books/:section/:slug/"
+[languages]
+[languages.en]
+languageName = "English"
+weight = 2
+[languages.ru]
+languageName = "Русский"
+weight = 1
