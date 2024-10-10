@@ -18,22 +18,7 @@
     partial "head-additions.html" . }}
   </head>
   <body class="flex flex-col min-h-screen">
-    {{ partial "custom-functions.html" . }}
-    <header class="bg-secondary py-4">
-      <div class="container mx-auto flex justify-end">
-        <nav>
-          {{ range .Site.Languages }} {{ if eq . $.Site.Language }}
-          <span class="font-bold">{{ .LanguageName }}</span>
-          {{ else }}
-          <a href="{{ . | absLangURL }}" class="text-blue-600 hover:underline">
-            {{ .LanguageName }}
-          </a>
-          {{ end }} {{ if ne . (last 1 $.Site.Languages) }} | {{ end }} {{ end
-          }}
-        </nav>
-      </div>
-    </header>
-
+    {{ partial "custom-functions.html" . }} {{ partial "site-header.html" . }}
     {{ block "hero" . }}{{ partial "hero.html" . }}{{ end }}
 
     <main class="flex-grow">{{ block "main" . }}{{ end }}</main>

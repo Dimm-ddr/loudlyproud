@@ -1,4 +1,7 @@
 ---
+title: "Dummy Book 2"  # Hugo page title
+date: 2023-01-01
+draft: false
 type: "books"
 params:
     slug: "dummy-book-2"
@@ -16,8 +19,6 @@ params:
     goodreads_link: "<https://www.goodreads.com/dummybook2>"
     buy_link: ""
     russian_translation_status: "does_not_exist"
-    short_description:
-        - "This is a short description of Dummy Book 2."
-    description:
-        - "This is a short description of Dummy Book 2."
+    short_description: "This is a short description of Dummy Book 2."
+    description: "This is a short description of Dummy Book 2."
 ---

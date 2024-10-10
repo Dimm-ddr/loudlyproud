@@ -1,6 +1,8 @@
 baseURL = "/"
 languageCode = 'en-us'
 title = 'Loudly Proud'
+contentDir = "content"
+defaultContentLanguage = "ru"
 
 [params]
 heroTitle = "Литературный каталог Loudly Proud"
@@ -21,11 +23,25 @@ enable = true
 config = "postcss.config.js"
 
 [permalinks]
-books = "/books/:section/:slug/"
+books = "/books/:slug/"
+
+[section]
+[section.books]
+title = "Books"
+type = "books"
+
+[module]
+[[module.mounts]]
+source = "content/books"
+target = "content"
+includeDirs = ["*"]
+
 [languages]
 [languages.en]
 languageName = "English"
 weight = 2
+contentDir = "content"
 [languages.ru]
 languageName = "Русский"
 weight = 1
+contentDir = "content"

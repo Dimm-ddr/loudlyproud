@@ -1,19 +1,17 @@
 {{ define "main" }}
-<article
-  class="book-details container mx-auto p-8 bg-background shadow-lg rounded-lg my-8"
->
+<article class="book-details container mx-auto p-8 bg-white shadow-lg rounded-lg my-8">
   <div class="flex flex-col md:flex-row">
     <!-- Book Cover -->
     <figure class="book-cover w-full md:w-1/3 mb-8 md:mb-0 md:mr-8">
-      <img class="w-full h-auto object-contain rounded-lg shadow-md" src="{{ if
-      .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" |
-      relURL }}{{ end }}" alt="Cover of {{ .Title }}" loading="lazy">
+      <img class="w-full h-auto object-contain rounded-lg shadow-md"
+           src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
+           alt="Cover of {{ .Params.title }}" loading="lazy">
     </figure>
 
     <div class="w-full md:w-2/3">
       <!-- Title and Series -->
       <header>
-        <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
+        <h1 class="text-4xl font-bold mb-2">{{ .Params.title }}</h1>
         {{ with .Params.series }}
         <p class="text-xl italic text-gray-600 mb-4">{{ . }}</p>
         {{ end }}
@@ -26,7 +24,8 @@
           <strong>{{ i18n "authors" }}:</strong>
           {{ delimit . ", " }}
         </p>
-        {{ end }} {{ with .Params.translators }}
+        {{ end }}
+        {{ with .Params.translators }}
         <p class="text-lg">
           <strong>{{ i18n "translators" }}:</strong>
           {{ delimit . ", " }}
@@ -43,9 +42,7 @@
       {{ with .Params.tags }}
       <div class="mb-4">
         {{ range . }}
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-        >
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
           {{ . }}
         </span>
         {{ end }}
@@ -57,7 +54,7 @@
   <!-- Full Description -->
   <section class="mt-8">
     <h2 class="text-2xl font-bold mb-4">{{ i18n "description" }}</h2>
-    <div class="prose max-w-none">{{ .Params.description}}</div>
+    <div class="prose max-w-none">{{ .Params.description | markdownify }}</div>
   </section>
 
   <!-- Book Metadata -->
@@ -69,32 +66,38 @@
         <dt class="font-semibold">{{ i18n "page_count" }}:</dt>
         <dd>{{ . }}</dd>
       </div>
-      {{ end }} {{ with .Params.isbn }}
+      {{ end }}
+      {{ with .Params.isbn }}
       <div class="flex justify-between md:col-span-1 py-2 border-b">
         <dt class="font-semibold">ISBN:</dt>
         <dd>{{ . }}</dd>
       </div>
-      {{ end }} {{ with .Params.languages }}
+      {{ end }}
+      {{ with .Params.languages }}
       <div class="flex justify-between md:col-span-1 py-2 border-b">
         <dt class="font-semibold">{{ i18n "languages" }}:</dt>
         <dd>{{ delimit . ", " }}</dd>
       </div>
-      {{ end }} {{ with .Params.publication_year }}
+      {{ end }}
+      {{ with .Params.publication_year }}
       <div class="flex justify-between md:col-span-1 py-2 border-b">
         <dt class="font-semibold">{{ i18n "publication_year" }}:</dt>
         <dd>{{ . }}</dd>
       </div>
-      {{ end }} {{ with .Params.russian_translation_status }}
+      {{ end }}
+      {{ with .Params.russian_translation_status }}
       <div class="flex justify-between md:col-span-1 py-2 border-b">
         <dt class="font-semibold">{{ i18n "russian_translation" }}:</dt>
         <dd>{{ . }}</dd>
       </div>
-      {{ end }} {{ with .Params.russian_audioversion }}
+      {{ end }}
+      {{ with .Params.russian_audioversion }}
       <div class="flex justify-between md:col-span-1 py-2 border-b">
         <dt class="font-semibold">{{ i18n "audio_version" }}:</dt>
         <dd>{{ . }}</dd>
       </div>
-      {{ end }} {{ with .Params.publishers }}
+      {{ end }}
+      {{ with .Params.publishers }}
       <div class="flex justify-between md:col-span-2 py-2 border-b">
         <dt class="font-semibold">{{ i18n "publishers" }}:</dt>
         <dd>{{ delimit . ", " }}</dd>
@@ -110,12 +113,7 @@
     <ul class="space-y-2">
       {{ range . }}
       <li class="flex items-center justify-between border-b py-2">
-        <a
-          href="{{ .link }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
-        >
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
           {{ .store }}
         </a>
         <span class="text-sm text-gray-600">
@@ -130,21 +128,12 @@
   <!-- Links -->
   <section class="mt-8 flex space-x-4">
     {{ with .Params.goodreads_link }}
-    <a
-      href="{{ . }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
-    >
+    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">
       {{ i18n "goodreads_link" }}
     </a>
-    {{ end }} {{ with .Params.buy_link }}
-    <a
-      href="{{ . }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300"
-    >
+    {{ end }}
+    {{ with .Params.buy_link }}
+    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300">
       {{ i18n "buy_link" }}
     </a>
     {{ end }}

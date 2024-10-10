@@ -1,4 +1,7 @@
 ---
+title: "Dummy Book 1"  # Hugo page title
+date: 2023-01-01
+draft: false
 type: "books"
 params:
   slug: "dummy-book-1"
@@ -162,8 +165,6 @@ params:
   publishers:
     - "Publisher 1"
     - "Publisher 2"
-  short_description:
-    - "I must have been drunker than I realized because all I remember is how well he tied his cravat and how perfectly his coat fit him… London, 1815: where magic can be purchased at convenience, and the fashionable and wealthy descend for the start of the social Season..."
-  description:
-    - "I must have been drunker than I realized because all I remember is how well he tied his cravat and how perfectly his coat fit him… London, 1815: where magic can be purchased at convenience, and the fashionable and wealthy descend for the start of the social Season. But 25-year-old Gavin Hartford finds the city intimidating when he arrives, alone, to his family's townhouse. The only company he seeks is in his beloved books and weekly letters to his sister, Gerry. Then dashing man-about-town Charles Kentworthy gallantly rescues Gavin from a foolish drunken mishap and turns his life upside-down. With Mr. Kentworthy, Gavin finds himself discussing poetry and magic, confessing his fears about marriage, expanding his social circle to shocking proportions — and far outside his comfort zone. When family responsibility comes knocking, Gavin's future looms over him, filled with uncertainty. As he grapples with growing feelings for his new friend, Gavin will need to be honest with Mr. Kentworthy — but he'll need the courage to be honest with himself first. This epistolary Regency romance is the first in a historical fantasy series, Meddle & Mend."
+  short_description: "I must have been drunker than I realized because all I remember is how well he tied his cravat and how perfectly his coat fit him… London, 1815: where magic can be purchased at convenience, and the fashionable and wealthy descend for the start of the social Season..."
+  description: "I must have been drunker than I realized because all I remember is how well he tied his cravat and how perfectly his coat fit him… London, 1815: where magic can be purchased at convenience, and the fashionable and wealthy descend for the start of the social Season. But 25-year-old Gavin Hartford finds the city intimidating when he arrives, alone, to his family's townhouse. The only company he seeks is in his beloved books and weekly letters to his sister, Gerry. Then dashing man-about-town Charles Kentworthy gallantly rescues Gavin from a foolish drunken mishap and turns his life upside-down. With Mr. Kentworthy, Gavin finds himself discussing poetry and magic, confessing his fears about marriage, expanding his social circle to shocking proportions — and far outside his comfort zone. When family responsibility comes knocking, Gavin's future looms over him, filled with uncertainty. As he grapples with growing feelings for his new friend, Gavin will need to be honest with Mr. Kentworthy — but he'll need the courage to be honest with himself first. This epistolary Regency romance is the first in a historical fantasy series, Meddle & Mend."
 ---
