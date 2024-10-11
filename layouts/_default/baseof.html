@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title
-      }}{{ end }}
+      {{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }} - {{ .Site.Title }}
+      {{ end }}
     </title>
 
     <meta
       name="description"
       content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
-    />
+    >
 
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}"> <link
     rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon"> {{
     partial "head-additions.html" . }}
   </head>
   <body class="flex flex-col min-h-screen">
-    {{ partial "custom-functions.html" . }} {{ partial "site-header.html" . }}
-    {{ block "hero" . }}{{ partial "hero.html" . }}{{ end }}
+    {{ partial "custom-functions.html" . }}
+    {{ partial "site-header.html" . }}
+    {{ block "hero" . }}
+      {{ partial "hero.html" . }}
+    {{ end }}
 
     <main class="flex-grow">{{ block "main" . }}{{ end }}</main>
 

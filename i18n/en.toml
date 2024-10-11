@@ -49,6 +49,9 @@ other = "Where to Buy"
 [translation_status_exists]
 other = "Russian translation exists"
 
+[translation_status_might_exist]
+other = "Russian translation might exist"
+
 [translation_status_unknown]
 other = "Russian translation status unknown"
 

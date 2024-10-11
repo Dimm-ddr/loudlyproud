@@ -1,8 +1,8 @@
 baseURL = "/"
-languageCode = 'en-us'
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "ru"
+ignoreFiles = ['content/books/temp/.*']
 
 [params]
 heroTitle = "Литературный каталог Loudly Proud"
@@ -34,7 +34,6 @@ type = "books"
 [[module.mounts]]
 source = "content/books"
 target = "content"
-includeDirs = ["*"]
 
 [languages]
 [languages.en]

@@ -146,8 +146,8 @@ params:
   page_count: 350
   publication_year: 2020
   russian_edition: true
-  goodreads_link: "<https://www.goodreads.com/dummybook1>"
-  buy_link: "<https://example.com/buy-russian-edition>"
+  goodreads_link: "https://www.goodreads.com/dummybook1"
+  buy_link: "https://example.com/buy-russian-edition"
   series: "Dummy Series"
   isbn: "978-3-16-148410-0"
   additional_isbns:
@@ -155,10 +155,10 @@ params:
     - "978-3-16-148410-2"
   where_to_get:
     - store: "Store 1"
-      link: "<https://example.com/store1>"
+      link: "https://example.com/store1"
       date: "2024-09-01"
     - store: "Store 2"
-      link: "<https://example.com/store2>"
+      link: "https://example.com/store2"
       date: "2024-09-15"
   russian_translation_status: "exist"
   russian_audioversion: "no"
