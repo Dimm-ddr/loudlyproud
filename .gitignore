@@ -40,3 +40,4 @@ yarn.lock
 files_concat.py
 merged_files_output.txt
 package-lock.json
+content/books/temp/*
