@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: Dimm-ddr/loudlyproud
+  branch: preview
+
+media_folder: "static/img/uploads" # Media files will be stored in the repo under static/img/uploads
+public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
+
+collections:
+
+  - name: "books" # Used in routes, e.g., /admin/collections/books
+    label: "Books"
+    label_singular: "Book"
+    folder: "content/books"
+    create: true
+    slug: "{{fields.slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Slug", name: "params.slug", widget: "string", required: true}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Cover", name: "params.cover", widget: "image"}
+      - {label: "Cover Alt text", name: "params.coverAlt", widget: "string"}
+      - {label: "Tags", name: "params.tags", widget: "list"}
+      - {label: "Authors", name: "params.authors", widget: "list", required: true}
+      - {label: "Translators", name: "params.translators", widget: "list"}
+      - {label: "Languages", name: "params.languages", widget: "list"}
+      - {label: "Page count", name: "params.page_count", widget: "number"}
+      - {label: "Publication Year", name: "params.publication_year", widget: "datetime"}
+      - {label: "Goodreads Link", name: "params.link", widget: "string"}
+      - {label: "Buy Link", name: "params.buy_link", widget: "list"}
+      - {label: "Series", name: "params.series", widget: "string"}
+      - {label: "ISBN", name: "params.isbn", widget: "string"}
+      - {label: "Additional ISBNs", name: "params.additional_isbns", widget: "list"}
+      - {label: "Where to get", name: "params.where_to_get", widget: "list"}
+      - {label: "Russian Edition", name: "params.russian_translation_status", widget: "select", default: "unknown", options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]}
+      - {label: "Russian Audioversion", name: "params.russian_audioversion", widget: "boolean", default: false}
+      - {label: "Publishers", name: "params.publishers", widget: "list"}
+      - {label: "Description", name: "params.description", widget: "markdown"}
+      - {label: "Short Description", name: "params.short_description", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+
+site_url: https://loudlyproud.netlify.app/
+display_url: https://loudlyproud.netlify.app/

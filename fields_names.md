@@ -13,7 +13,6 @@ params:
   languages:
   page_count:
   publication_year:
-  russian_edition:
   goodreads_link:
   buy_link:
   series:
