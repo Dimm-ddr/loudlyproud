@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Dimm-ddr/loudlyproud
   branch: preview
 
@@ -15,30 +15,49 @@ collections:
     create: true
     slug: "{{fields.slug}}"
     fields:
+    - label: "Page Title"
+      name: "title"
+      widget: "string"
+      hint: "This will be displayed in the browser tab"
+    - {label: "Draft", name: "draft", widget: "boolean", default: false}
     - label: "Params"
       name: "params"
       widget: "object"
       fields:
         - {label: "Slug", name: "slug", widget: "string", required: true}
-        - {label: "Cover", name: "cover", widget: "image"}
-        - {label: "Cover Alt text", name: "coverAlt", widget: "string"}
-        - {label: "Tags", name: "tags", widget: "list"}
+        - {label: "Cover", name: "cover", widget: "image", required: false}
+        - {label: "Cover Alt text", name: "coverAlt", widget: "string", required: false}
+        - {label: "Tags", name: "tags", widget: "list", required: false}
         - {label: "Authors", name: "authors", widget: "list", required: true}
-        - {label: "Translators", name: "translators", widget: "list"}
-        - {label: "Languages", name: "languages", widget: "list"}
-        - {label: "Page count", name: "page_count", widget: "number"}
-        - {label: "Publication Year", name: "publication_year", widget: "datetime"}
-        - {label: "Goodreads Link", name: "link", widget: "string"}
-        - {label: "Buy Link", name: "buy_link", widget: "list"}
-        - {label: "Series", name: "series", widget: "string"}
-        - {label: "ISBN", name: "isbn", widget: "string"}
-        - {label: "Additional ISBNs", name: "additional_isbns", widget: "list"}
-        - {label: "Where to get", name: "where_to_get", widget: "list"}
-        - {label: "Russian Edition", name: "russian_translation_status", widget: "select", default: "unknown", options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]}
-        - {label: "Russian Audioversion", name: "russian_audioversion", widget: "boolean", default: false}
-        - {label: "Publishers", name: "publishers", widget: "list"}
-        - {label: "Description", name: "description", widget: "markdown"}
-        - {label: "Short Description", name: "short_description", widget: "markdown"}
+        - {label: "Translators", name: "translators", widget: "list", required: false}
+        - {label: "Languages", name: "languages", widget: "list", required: false}
+        - {label: "Page count", name: "page_count", widget: "number", required: false}
+        - label: "First Publication Year"
+          name: "publication_year"
+          widget: "string"
+          pattern: ['^[0-9]{4}$', "Please enter a valid year in YYYY format"]
+          hint: "Please enter a valid year in YYYY format"
+          required: false
+        - {label: "Goodreads Link", name: "link", widget: "string", required: false}
+        - {label: "Buy Link", name: "buy_link", widget: "list", required: false}
+        - {label: "Series", name: "series", widget: "string", required: false}
+        - {label: "ISBN", name: "isbn", widget: "string", required: false}
+        - {label: "Additional ISBNs", name: "additional_isbns", widget: "list", required: false}
+        - {label: "Where to get", name: "where_to_get", widget: "list", required: false}
+        - label: "Russian Edition"
+          name: "russian_translation_status"
+          widget: "select"
+          default: "unknown"
+          options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]
+          required: false
+        - label: "Russian Audioversion"
+          name: "russian_audioversion"
+          widget: "boolean"
+          default: false
+          required: false
+        - {label: "Publishers", name: "publishers", widget: "list", required: false}
+        - {label: "Description", name: "description", widget: "markdown", required: false}
+        - {label: "Short Description", name: "short_description", widget: "markdown", required: false}
 
 site_url: https://loudlyproud.netlify.app/
 display_url: https://loudlyproud.netlify.app/

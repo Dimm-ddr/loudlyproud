@@ -33,11 +33,6 @@
         {{ end }}
       </div>
 
-      <!-- Short Description -->
-      {{ with .Params.short_description }}
-      <p class="text-lg mb-4 italic">{{ . }}</p>
-      {{ end }}
-
       <!-- Tags -->
       {{ with .Params.tags }}
       <div class="mb-4">
@@ -52,10 +47,12 @@
   </div>
 
   <!-- Full Description -->
-  <section class="mt-8">
-    <h2 class="text-2xl font-bold mb-4">{{ i18n "description" }}</h2>
-    <div class="prose max-w-none">{{ .Params.description | markdownify }}</div>
-  </section>
+  {{ with .Params.description }}
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold mb-4">{{ i18n "description" }}</h2>
+      <div class="prose max-w-none">{{ . | markdownify }}</div>
+    </section>
+  {{ end }}
 
   <!-- Book Metadata -->
   <section class="mt-8">
