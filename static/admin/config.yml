@@ -15,6 +15,11 @@ collections:
     create: true
     slug: "{{fields.slug}}"
     fields:
+    - label: "Page Title"
+      name: "title"
+      widget: "string"
+      hint: "This will be displayed in the browser tab"
+    - {label: "Draft", name: "draft", widget: "boolean", default: false}
     - label: "Params"
       name: "params"
       widget: "object"
