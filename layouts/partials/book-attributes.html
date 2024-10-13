@@ -31,10 +31,10 @@
 
         <!-- Short Description -->
         {{ with .Params.short_description }}
-        <div class="mb-2">
-            <h3 class="text-sm font-semibold text-primary mb-1">{{ i18n "short_description" }}</h3>
-            <p class="text-sm text-primary">{{ . }}</p>
-        </div>
+            <div class="mb-2">
+                <h3 class="text-sm font-semibold text-primary mb-1">{{ i18n "short_description" }}</h3>
+                <div class="prose max-w-none">{{ . | markdownify }}</div>
+            </div>
         {{ end }}
 
         <!-- Conditional Divider: Only show if there is a short description -->
