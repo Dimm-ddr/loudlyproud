@@ -14,29 +14,31 @@ collections:
     folder: "content/books"
     create: true
     slug: "{{fields.slug}}"
-    fields: # The fields for each document, usually in front matter
-      - {label: "Slug", name: "params.slug", widget: "string", required: true}
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Cover", name: "params.cover", widget: "image"}
-      - {label: "Cover Alt text", name: "params.coverAlt", widget: "string"}
-      - {label: "Tags", name: "params.tags", widget: "list"}
-      - {label: "Authors", name: "params.authors", widget: "list", required: true}
-      - {label: "Translators", name: "params.translators", widget: "list"}
-      - {label: "Languages", name: "params.languages", widget: "list"}
-      - {label: "Page count", name: "params.page_count", widget: "number"}
-      - {label: "Publication Year", name: "params.publication_year", widget: "datetime"}
-      - {label: "Goodreads Link", name: "params.link", widget: "string"}
-      - {label: "Buy Link", name: "params.buy_link", widget: "list"}
-      - {label: "Series", name: "params.series", widget: "string"}
-      - {label: "ISBN", name: "params.isbn", widget: "string"}
-      - {label: "Additional ISBNs", name: "params.additional_isbns", widget: "list"}
-      - {label: "Where to get", name: "params.where_to_get", widget: "list"}
-      - {label: "Russian Edition", name: "params.russian_translation_status", widget: "select", default: "unknown", options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]}
-      - {label: "Russian Audioversion", name: "params.russian_audioversion", widget: "boolean", default: false}
-      - {label: "Publishers", name: "params.publishers", widget: "list"}
-      - {label: "Description", name: "params.description", widget: "markdown"}
-      - {label: "Short Description", name: "params.short_description", widget: "markdown"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+    fields:
+    - label: "Params"
+      name: "params"
+      widget: "object"
+      fields:
+        - {label: "Slug", name: "slug", widget: "string", required: true}
+        - {label: "Cover", name: "cover", widget: "image"}
+        - {label: "Cover Alt text", name: "coverAlt", widget: "string"}
+        - {label: "Tags", name: "tags", widget: "list"}
+        - {label: "Authors", name: "authors", widget: "list", required: true}
+        - {label: "Translators", name: "translators", widget: "list"}
+        - {label: "Languages", name: "languages", widget: "list"}
+        - {label: "Page count", name: "page_count", widget: "number"}
+        - {label: "Publication Year", name: "publication_year", widget: "datetime"}
+        - {label: "Goodreads Link", name: "link", widget: "string"}
+        - {label: "Buy Link", name: "buy_link", widget: "list"}
+        - {label: "Series", name: "series", widget: "string"}
+        - {label: "ISBN", name: "isbn", widget: "string"}
+        - {label: "Additional ISBNs", name: "additional_isbns", widget: "list"}
+        - {label: "Where to get", name: "where_to_get", widget: "list"}
+        - {label: "Russian Edition", name: "russian_translation_status", widget: "select", default: "unknown", options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]}
+        - {label: "Russian Audioversion", name: "russian_audioversion", widget: "boolean", default: false}
+        - {label: "Publishers", name: "publishers", widget: "list"}
+        - {label: "Description", name: "description", widget: "markdown"}
+        - {label: "Short Description", name: "short_description", widget: "markdown"}
 
 site_url: https://loudlyproud.netlify.app/
 display_url: https://loudlyproud.netlify.app/
