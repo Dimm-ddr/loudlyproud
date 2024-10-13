@@ -14,7 +14,7 @@ collections:
     folder: "content/books"
     create: true
     slug: "{{fields.slug}}"
-    fields:
+    types:
     - label: "Params"
       name: "params"
       widget: "object"
