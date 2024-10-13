@@ -1,5 +1,5 @@
 ---
-title: "Annie On My Mind Page Title"
+title: "Annie On My Mind"
 draft: false
 type: "books"
 params:
