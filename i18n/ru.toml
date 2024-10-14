@@ -48,3 +48,39 @@ other = "Год публикации"
 
 [publishers]
 other = "Издатели"
+
+[available_from]
+other = "Доступно с"
+
+[no_books_found]
+other = "Книги не найдены"
+
+[audio_version]
+other = "Аудиоверсия"
+
+[goodreads_link]
+other = "Ссылка на Goodreads"
+
+[book_catalogue]
+other = "Каталог книг"
+
+[all_rights_reserved]
+other = "Все права защищены"
+
+[where_to_get]
+other = "Где найти"
+
+[load_more]
+other = "Загрузить ещё"
+
+[give_feedback]
+other = "Оставить отзыв"
+
+[translation_status_exist]
+other = "Русская версия существует"
+
+[catalogue_description]
+other = "Описание каталога"
+
+[book_details]
+other = "Детали"
