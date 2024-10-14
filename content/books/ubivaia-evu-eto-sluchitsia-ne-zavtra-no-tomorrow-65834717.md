@@ -15,7 +15,7 @@ params:
     - "fiction"
     - "LGBTQ+"
     - "queer"
-  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622908429i/58266040.jpg, https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1544034354i/39321542.jpg"
+  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622908429i/58266040.jpg"
   editions count: "23"
   isbn: "9785171186258"
   link: "https://www.goodreads.com/book/show/58266040"

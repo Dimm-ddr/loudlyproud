@@ -13,7 +13,7 @@ params:
     - "fiction"
     - "LGBTQ+"
     - "queer"
-  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630322494i/58889837.jpg, https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1558746771i/46008420.jpg"
+  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630322494i/58889837.jpg"
   editions count: "18"
   isbn: "9785171271633"
   link: "https://www.goodreads.com/book/show/58889837-3"

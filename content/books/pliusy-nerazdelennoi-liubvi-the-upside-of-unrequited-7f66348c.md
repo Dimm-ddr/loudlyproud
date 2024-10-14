@@ -25,7 +25,7 @@ params:
     - "queer"
     - "romance"
     - "young adult (YA)"
-  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg, https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1548422197i/43702718.jpg"
+  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg"
   isbn: "9785604219638"
   link: "https://www.goodreads.com/book/show/43702718"
   authors:
