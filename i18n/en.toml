@@ -63,3 +63,42 @@ other = "No Russian translation"
 
 [russian_audio_available]
 other = "Russian audio version available"
+
+[where_to_get]
+other = "Where to get"
+
+[give_feedback]
+other = "Give Feedback"
+
+[book_catalogue]
+other = "Book Catalog"
+
+[available_from]
+other = "Available From"
+
+[all_rights_reserved]
+other = "All Rights Reserved"
+
+[translation_status_exist]
+other = "Russian Edition exists"
+
+[load_more]
+other = "Load More"
+
+[book_details]
+other = "Book Details"
+
+[no_books_found]
+other = "No books found"
+
+[publication_year]
+other = "Publication Year"
+
+[goodreads_link]
+other = "Goodreads Link"
+
+[catalogue_description]
+other = "Catalog Description"
+
+[publishers]
+other = "Publishers"
