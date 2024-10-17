@@ -16,16 +16,16 @@
       content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
     >
 
-    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}"> <link
-    rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon"> {{
-    partial "head-additions.html" . }}
+    {{ partial "site-scripts.html" . }}
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+    <link href="/search/pagefind-ui.css" rel="stylesheet">
+    <script src="/search/pagefind-ui.js"></script>
+    {{ partial "head-additions.html" . }}
   </head>
   <body class="flex flex-col min-h-screen">
     {{ partial "custom-functions.html" . }}
     {{ partial "site-header.html" . }}
-    {{ block "hero" . }}
-      {{ partial "hero.html" . }}
-    {{ end }}
 
     <main class="flex-grow">{{ block "main" . }}{{ end }}</main>
 
@@ -33,6 +33,5 @@
       {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
     </footer>
 
-    {{ partial "site-scripts.html" . }}
   </body>
 </html>

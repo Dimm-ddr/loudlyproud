@@ -1,12 +1,39 @@
-<!-- Main application script -->
-<!-- <script src="{{ "js/app.js" | relURL }}"></script> -->
-
-<!-- Any additional scripts -->
-<!-- <script src="{{ "js/search.js" | relURL }}"></script> -->
-<!-- <script src="{{ "js/filter.js" | relURL }}"></script> -->
-
-<!-- Inline script for immediate execution -->
+<script src="/search/pagefind-ui.js"></script>
 <script>
-  // Any immediate JavaScript can go here
-  console.log('Site scripts loaded');
+document.addEventListener('DOMContentLoaded', function() {
+    const bookGallery = document.getElementById('book-gallery');
+    const noResults = document.getElementById('no-results');
+    const bookCards = bookGallery.querySelectorAll('.book-card');
+
+    new PagefindUI({
+        element: "#search",
+        showImages: false,
+        showEmptyFilters: false,
+        resetStyles: false,
+        autofocus: true,
+        onSearch: function(results) {
+            const resultSlugs = results.map(result => result.id.split('/').pop());
+            let visibleCount = 0;
+
+            bookCards.forEach(card => {
+                if (resultSlugs.includes(card.dataset.slug)) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            noResults.classList.toggle('hidden', visibleCount > 0);
+            bookGallery.classList.toggle('hidden', visibleCount === 0);
+        },
+        onSearchEnd: function(results) {
+            if (results.length === 0) {
+                bookCards.forEach(card => card.classList.remove('hidden'));
+                noResults.classList.add('hidden');
+                bookGallery.classList.remove('hidden');
+            }
+        }
+    });
+});
 </script>
