@@ -84,3 +84,15 @@ other = "Описание каталога"
 
 [book_details]
 other = "Детали"
+
+[page_info]
+other = "Страница %d из %d"
+
+[previous]
+other = "Предыдущая"
+
+[next]
+other = "Следующая"
+
+[items_per_page]
+other = "Книг на странице"

@@ -102,3 +102,15 @@ other = "Catalog Description"
 
 [publishers]
 other = "Publishers"
+
+[page_info]
+other = "Page %d of %d"
+
+[previous]
+other = "Previous"
+
+[next]
+other = "Next"
+
+[items_per_page]
+other = "Items per page"

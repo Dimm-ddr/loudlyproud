@@ -6,9 +6,9 @@ ignoreFiles = ['content/books/temp/.*']
 
 [params]
 heroTitle = "Литературный каталог Loudly Proud"
-heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность? <a href='https://forms.gle/YHhojq3Ts2LsDF6G8'>Дайте мне знать</a> – вместе мы сделаем этот каталог лучше."
+heroDescription = "Друзья, это наша общая библиотека квир-литературы. Знаете книгу, которой здесь не хватает? Заметили неточность? <a href='https://forms.gle/YHhojq3Ts2LsDF6G8' class=styled-link>Дайте мне знать</a> – вместе мы сделаем этот каталог лучше."
 heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
-heroTelegram = "<a href='https://t.me/loudlyProud'>Телеграм канал для анонсов о сайте</a>"
+heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телеграм канал для анонсов о сайте</a>"
 
 [build]
 writeStats = true
