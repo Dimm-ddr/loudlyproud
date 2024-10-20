@@ -1,3 +1,5 @@
+/* assets/tailwind.css */
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -5,19 +7,20 @@
 
 /* Custom styles go here */
 
-a {
+/* Style regular links with the 'styled-link' class */
+.styled-link {
   @apply text-blue-600 underline;
 }
 
-a:hover {
+.styled-link:hover {
   @apply text-blue-800;
 }
 
-a:visited {
+.styled-link:visited {
   @apply text-purple-600;
 }
 
-a:active {
+.styled-link:active {
   @apply text-red-500;
 }
 
@@ -28,9 +31,12 @@ a:active {
 }
 
 /* Rounded rectangle style */
-/* .tag {
+/*
+.tag {
   @apply inline-block px-3 py-1 rounded-lg text-sm font-medium;
-} */
+}
+*/
+
 .book-card {
   overflow: visible !important;
 }
@@ -62,4 +68,18 @@ a:active {
   .header-logo {
     height: 20px !important; /* Slightly larger on desktop if desired */
   }
+}
+
+/* Button Styles */
+.button[aria-disabled="true"] {
+  @apply cursor-not-allowed opacity-50;
+}
+
+.button[aria-disabled="true"]:hover {
+  @apply bg-gray-600;
+}
+
+/* Reusable Button Styles */
+.btn {
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
 }
