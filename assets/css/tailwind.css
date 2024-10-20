@@ -39,3 +39,27 @@ a:active {
   overflow: hidden;
   border-radius: 0.5rem; /* This matches the rounded-lg class */
 }
+
+.pagefind-ui__results-container {
+  /* Style the results container */
+  margin-bottom: 2rem;
+}
+
+.pagefind-ui__result {
+  /* Style individual results */
+  margin-bottom: 1rem;
+}
+
+.header-logo {
+  height: 20px !important; /* Adjust this value as needed */
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@media (min-width: 768px) {
+  .header-logo {
+    height: 20px !important; /* Slightly larger on desktop if desired */
+  }
+}

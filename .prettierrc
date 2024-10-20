@@ -1,4 +1,18 @@
 {
     "htmlWhitespaceSensitivity": "ignore",
-    "embeddedLanguageFormatting": "off"
+    "embeddedLanguageFormatting": "off",
+    "goTemplateBracketSpacing": true,
+    "plugins": [
+        "prettier-plugin-go-template"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.html"
+            ],
+            "options": {
+                "parser": "go-template"
+            }
+        }
+    ]
 }

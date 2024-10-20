@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Lato", "sans-serif"],
+      },
       colors: {
         primary: "#000000", // Primary text color
         secondary: "#eee7dc", // Secondary (background) color
