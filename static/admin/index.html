@@ -5,11 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Content Manager</title>
+
+    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <style>
+      /* Add some basic styling for loading state */
+      .cms-loading-indicator {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      body.cms-loading .cms-loading-indicator {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
+    <!-- Loading indicator -->
+    <div class="cms-loading-indicator">
+      Loading Content Manager...
+    </div>
+
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- Custom Auth Handler - Load this before other CMS customizations -->
+    <script src="/admin/auth-handler.js"></script>
+
+    <!-- Book Widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
+
+    <script>
+      // Add loading state management
+      document.body.classList.add('cms-loading');
+      window.addEventListener('load', function() {
+        // Remove loading state once everything is loaded
+        window.setTimeout(function() {
+          document.body.classList.remove('cms-loading');
+        }, 500);
+
+        // Handle Netlify Identity redirects
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
