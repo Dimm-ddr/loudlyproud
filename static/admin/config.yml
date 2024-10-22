@@ -7,7 +7,6 @@ media_folder: "static/img/uploads" # Media files will be stored in the repo unde
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
 
 collections:
-
   - name: "books" # Used in routes, e.g., /admin/collections/books
     label: "Books"
     label_singular: "Book"
@@ -15,49 +14,129 @@ collections:
     create: true
     slug: "{{fields.slug}}"
     fields:
-    - label: "Page Title"
-      name: "title"
-      widget: "string"
-      hint: "This will be displayed in the browser tab"
-    - {label: "Draft", name: "draft", widget: "boolean", default: false}
-    - label: "Params"
-      name: "params"
-      widget: "object"
-      fields:
-        - {label: "Slug", name: "slug", widget: "string", required: true}
-        - {label: "Cover", name: "cover", widget: "image", required: false}
-        - {label: "Cover Alt text", name: "coverAlt", widget: "string", required: false}
-        - {label: "Tags", name: "tags", widget: "list", required: false}
-        - {label: "Authors", name: "authors", widget: "list", required: true}
-        - {label: "Translators", name: "translators", widget: "list", required: false}
-        - {label: "Languages", name: "languages", widget: "list", required: false}
-        - {label: "Page count", name: "page_count", widget: "number", required: false}
-        - label: "First Publication Year"
-          name: "publication_year"
-          widget: "string"
-          pattern: ['^[0-9]{4}$', "Please enter a valid year in YYYY format"]
-          hint: "Please enter a valid year in YYYY format"
-          required: false
-        - {label: "Goodreads Link", name: "link", widget: "string", required: false}
-        - {label: "Buy Link", name: "buy_link", widget: "list", required: false}
-        - {label: "Series", name: "series", widget: "string", required: false}
-        - {label: "ISBN", name: "isbn", widget: "string", required: false}
-        - {label: "Additional ISBNs", name: "additional_isbns", widget: "list", required: false}
-        - {label: "Where to get", name: "where_to_get", widget: "list", required: false}
-        - label: "Russian Edition"
-          name: "russian_translation_status"
-          widget: "select"
-          default: "unknown"
-          options: ["unknown","might_exist","unlikely_to_exist","does_not_exist","exists"]
-          required: false
-        - label: "Russian Audioversion"
-          name: "russian_audioversion"
-          widget: "boolean"
-          default: false
-          required: false
-        - {label: "Publishers", name: "publishers", widget: "list", required: false}
-        - {label: "Description", name: "description", widget: "markdown", required: false}
-        - {label: "Short Description", name: "short_description", widget: "markdown", required: false}
+      - label: "Page Title"
+        name: "title"
+        widget: "string"
+        hint: "This will be displayed in the browser tab"
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - label: "Params"
+        name: "params"
+        widget: "object"
+        fields:
+          - label: "Slug"
+            name: "slug"
+            widget: "slug-generator"
+            pattern:
+              [
+                "^[a-z0-9-]+$",
+                "Slug must contain only lowercase letters, numbers, and hyphens",
+              ]
+            hint: "This field is automatically generated from the title"
+          - { label: "Cover", name: "cover", widget: "image", required: false }
+          - {
+              label: "Cover Alt text",
+              name: "coverAlt",
+              widget: "string",
+              required: false,
+            }
+          - { label: "Tags", name: "tags", widget: "list", required: false }
+          - {
+              label: "Authors",
+              name: "authors",
+              widget: "list",
+              required: true,
+            }
+          - {
+              label: "Translators",
+              name: "translators",
+              widget: "list",
+              required: false,
+            }
+          - {
+              label: "Languages",
+              name: "languages",
+              widget: "list",
+              required: false,
+            }
+          - {
+              label: "Page count",
+              name: "page_count",
+              widget: "number",
+              required: false,
+            }
+          - label: "First Publication Year"
+            name: "publication_year"
+            widget: "string"
+            pattern: ["^[0-9]{4}$", "Please enter a valid year in YYYY format"]
+            hint: "Please enter a valid year in YYYY format"
+            required: false
+          - {
+              label: "Goodreads Link",
+              name: "link",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Buy Link",
+              name: "buy_link",
+              widget: "list",
+              required: false,
+            }
+          - {
+              label: "Series",
+              name: "series",
+              widget: "string",
+              required: false,
+            }
+          - { label: "ISBN", name: "isbn", widget: "string", required: false }
+          - {
+              label: "Additional ISBNs",
+              name: "additional_isbns",
+              widget: "list",
+              required: false,
+            }
+          - {
+              label: "Where to get",
+              name: "where_to_get",
+              widget: "list",
+              required: false,
+            }
+          - label: "Russian Edition"
+            name: "russian_translation_status"
+            widget: "select"
+            default: "unknown"
+            options:
+              [
+                "unknown",
+                "might_exist",
+                "unlikely_to_exist",
+                "does_not_exist",
+                "exists",
+              ]
+            required: false
+          - label: "Russian Audioversion"
+            name: "russian_audioversion"
+            widget: "boolean"
+            default: false
+            required: false
+          - {
+              label: "Publishers",
+              name: "publishers",
+              widget: "list",
+              required: false,
+            }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Short Description",
+              name: "short_description",
+              widget: "markdown",
+              required: false,
+            }
 
 site_url: https://loudlyproud.netlify.app/
 display_url: https://loudlyproud.netlify.app/
