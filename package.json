@@ -7,7 +7,8 @@
     "dev:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch",
     "dev:hugo": "hugo server --disableFastRender",
     "dev:pagefind": "nodemon --watch public --exec \"npm run build:pagefind\" --ext html",
-    "dev": "npm-run-all --parallel dev:css dev:hugo dev:pagefind"
+    "dev:cms": "npx decap-server",
+    "dev": "npm-run-all --parallel dev:css dev:hugo dev:pagefind dev:cms"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
