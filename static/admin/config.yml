@@ -29,10 +29,18 @@ collections:
         name: "title"
         widget: "string"
         hint: "This will be displayed in the browser tab"
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+        i18n: true
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          default: false,
+          i18n: true,
+        }
       - label: "Params"
         name: "params"
         widget: "object"
+        i18n: true
         fields:
           - label: "Slug"
             name: "slug"
