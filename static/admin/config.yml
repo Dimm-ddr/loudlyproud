@@ -5,12 +5,15 @@ backend:
   auth_scope: repo,user
   auth_type: implicit
 
+local_backend:
+  url: http://localhost:8082/api/v1
+
 # Add publish mode to prevent conflicts
 publish_mode: editorial_workflow
 
 # Add automatic logout after inactivity
 auto_logout: true
-timeout: 3600  # 1 hour in seconds
+timeout: 3600 # 1 hour in seconds
 
 media_folder: "static/img/uploads" # Media files will be stored in the repo under static/img/uploads
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
@@ -54,6 +57,8 @@ collections:
               name: "authors",
               widget: "list",
               required: true,
+              allow_add: true,
+              field: { label: "Author", name: "author", widget: "string" },
             }
           - {
               label: "Translators",
