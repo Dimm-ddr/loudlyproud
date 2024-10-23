@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  api_root: "https://api.github.com"
   branch: ${BRANCH}
 
 local_backend:
