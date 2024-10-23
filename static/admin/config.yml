@@ -1,9 +1,5 @@
 backend:
   name: git-gateway
-  repo: Dimm-ddr/loudlyproud
-  branch: preview
-  auth_scope: repo,user
-  auth_type: implicit
 
 local_backend:
   url: http://localhost:8082/api/v1
