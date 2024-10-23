@@ -11,8 +11,14 @@ timeout: 3600 # 1 hour in seconds
 media_folder: "static/img/uploads" # Media files will be stored in the repo under static/img/uploads
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /img/uploads
 
+i18n:
+  structure: multiple_files
+  locales: [en, ru]
+  default_locale: ru
+
 collections:
   - name: "books" # Used in routes, e.g., /admin/collections/books
+    i18n: true
     label: "Books"
     label_singular: "Book"
     folder: "content/books"
