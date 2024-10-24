@@ -9,45 +9,31 @@
     <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <style>
-      /* Add some basic styling for loading state */
-      .cms-loading-indicator {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      }
-      body.cms-loading .cms-loading-indicator {
-        display: block;
-      }
-    </style>
+    <!-- Admin Styles -->
+    <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <!-- Loading indicator -->
     <div class="cms-loading-indicator">
       Loading Content Manager...
     </div>
 
+    <div id="nc-root"></div>
+
     <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- Custom Auth Handler - Load this before other CMS customizations -->
+    <!-- Auth handler -->
     <script src="/admin/auth-handler.js"></script>
 
-    <!-- Book Widgets -->
+    <!-- Custom widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
 
     <script>
-      // Add loading state management
-      document.body.classList.add('cms-loading');
       window.addEventListener('load', function() {
-        // Remove loading state once everything is loaded
-        window.setTimeout(function() {
-          document.body.classList.remove('cms-loading');
-        }, 500);
+        // Register event handlers after CMS initialization
+        if (window.CMSEventHandlers && typeof window.CMSEventHandlers.init === 'function') {
+          window.CMSEventHandlers.init();
+        }
 
         // Handle Netlify Identity redirects
         if (window.netlifyIdentity) {
