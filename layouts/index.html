@@ -1,7 +1,6 @@
 {{ define "main" }}
 <div class="bg-background min-h-screen">
   <div class="container mx-auto px-4 py-8">
-
     {{ block "hero" . }}
       {{ partial "hero.html" . }}
     {{ end }}
@@ -15,8 +14,11 @@
 
       <!-- Items Per Page Dropdown -->
       <div class="flex items-center space-x-2">
-        <label for="items-per-page" class="text-text whitespace-nowrap">{{ i18n "items_per_page" }}</label>
-        <select id="items-per-page" class="border border-light-gray rounded px-2 py-1">
+        <label for="items-per-page" class="text-text font-normal whitespace-nowrap">
+          {{ i18n "items_per_page" }}
+        </label>
+        <select id="items-per-page"
+                class="border border-light-gray rounded px-2 py-1 font-normal text-text">
           <option value="12" selected>12</option>
           <option value="24">24</option>
           <option value="36">36</option>
@@ -24,6 +26,7 @@
       </div>
     </div>
 
+    <!-- Book Gallery -->
     <section
       id="book-gallery"
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -33,18 +36,20 @@
       {{ end }}
     </section>
 
-    <div id="no-results" class="hidden text-center py-8 flex flex-col items-center">
+    <!-- No Results Message -->
+    <div id="no-results" class="hidden text-center py-8 flex-col items-center">
       <svg class="w-12 h-12 text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
       </svg>
-      <p class="text-xl text-gray-600">{{ i18n "no_books_found" }}</p>
+      <p class="text-xl font-bold text-gray-600">{{ i18n "no_books_found" }}</p>
     </div>
 
     <!-- Pagination Controls -->
     <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
       {{ partial "button.html" (dict "url" "#" "text" (i18n "previous") "id" "prev-page" "disabled" true) }}
 
-      <span id="page-info" class="text-text">
+      <span id="page-info" class="text-text font-normal">
         {{ printf (i18n "page_info") 1 1 }}
       </span>
 
@@ -68,22 +73,16 @@
     let totalPages = Math.ceil(books.length / itemsPerPage);
 
     function renderPage() {
-      console.log(`Rendering page ${currentPage} of ${totalPages}`);
-
-      // Hide all books
       books.forEach(book => book.style.display = 'none');
 
-      // Calculate start and end indices
       const start = (currentPage - 1) * itemsPerPage;
       const end = start + itemsPerPage;
 
-      // Show books for the current page
       books.slice(start, end).forEach(book => book.style.display = 'block');
 
-      // Update pagination info
       pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
 
-      // Enable/disable buttons
+      // Update button states
       if (currentPage === 1) {
         prevButton.classList.add('cursor-not-allowed', 'opacity-50');
         prevButton.setAttribute('aria-disabled', 'true');
@@ -100,21 +99,23 @@
         nextButton.removeAttribute('aria-disabled');
       }
 
-      // Handle no results
+      // Toggle no results message
+      const noResults = document.getElementById('no-results');
+      const pagination = document.getElementById('pagination');
+
       if (totalPages === 0) {
-        document.getElementById('no-results').classList.remove('hidden');
-        document.getElementById('pagination').classList.add('hidden');
+        noResults.classList.remove('hidden');
+        pagination.classList.add('hidden');
       } else {
-        document.getElementById('no-results').classList.add('hidden');
-        document.getElementById('pagination').classList.remove('hidden');
+        noResults.classList.add('hidden');
+        pagination.classList.remove('hidden');
       }
     }
 
     function updatePagination() {
       itemsPerPage = parseInt(itemsPerPageSelect.value);
       totalPages = Math.ceil(books.length / itemsPerPage);
-      currentPage = 1; // Reset to first page
-      console.log(`Items per page set to ${itemsPerPage}, total pages: ${totalPages}`);
+      currentPage = 1;
       renderPage();
     }
 

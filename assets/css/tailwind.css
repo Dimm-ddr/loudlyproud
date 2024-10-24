@@ -5,11 +5,40 @@
 @import "tailwindcss/utilities";
 @import "tag-colors.css";
 
-/* Custom styles go here */
+/* Base font settings */
+@layer base {
+  html {
+    font-family:
+      "Lato",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+}
 
-/* Style regular links with the 'styled-link' class */
+/* Font utility classes */
+@layer utilities {
+  .font-thin {
+    font-weight: 100;
+  }
+  .font-light {
+    font-weight: 300;
+  }
+  .font-normal {
+    font-weight: 400;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-black {
+    font-weight: 900;
+  }
+}
+
+/* Custom styles */
 .styled-link {
-  @apply text-blue-600 underline;
+  @apply text-blue-600 underline font-normal;
 }
 
 .styled-link:hover {
@@ -25,17 +54,9 @@
 }
 
 /* Tag Styles */
-/* Ellipse style */
 .tag {
-  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+  @apply inline-block px-3 py-1 rounded-full text-sm font-bold;
 }
-
-/* Rounded rectangle style */
-/*
-.tag {
-  @apply inline-block px-3 py-1 rounded-lg text-sm font-medium;
-}
-*/
 
 .book-card {
   overflow: visible !important;
@@ -43,21 +64,21 @@
 
 .book-card > a {
   overflow: hidden;
-  border-radius: 0.5rem; /* This matches the rounded-lg class */
+  border-radius: 0.5rem;
 }
 
+/* Search Results Styling */
 .pagefind-ui__results-container {
-  /* Style the results container */
-  margin-bottom: 2rem;
+  @apply mb-8 font-normal;
 }
 
 .pagefind-ui__result {
-  /* Style individual results */
-  margin-bottom: 1rem;
+  @apply mb-4;
 }
 
+/* Logo Styling */
 .header-logo {
-  height: 20px !important; /* Adjust this value as needed */
+  height: 20px !important;
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
@@ -66,7 +87,7 @@
 
 @media (min-width: 768px) {
   .header-logo {
-    height: 20px !important; /* Slightly larger on desktop if desired */
+    height: 20px !important;
   }
 }
 
@@ -81,5 +102,22 @@
 
 /* Reusable Button Styles */
 .btn {
-  @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
+}
+
+/* Typography utility classes */
+.text-heading {
+  @apply font-black text-gray-900;
+}
+
+.text-subheading {
+  @apply font-bold text-gray-700;
+}
+
+.text-body {
+  @apply font-normal text-gray-600;
+}
+
+.text-caption {
+  @apply font-light text-gray-500;
 }

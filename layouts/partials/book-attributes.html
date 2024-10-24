@@ -1,4 +1,5 @@
 <article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col" data-slug="{{ .File.ContentBaseName }}">
+    <!-- Image Container -->
     <div class="h-64 overflow-hidden">
         <a href="{{ .RelPermalink }}" class="block w-full h-full">
             <img class="w-full h-full object-contain"
@@ -7,24 +8,28 @@
         </a>
     </div>
 
+    <!-- Content Container -->
     <div class="p-4 flex flex-col flex-grow">
-        <h2 class="text-xl font-bold mb-2 text-primary">
+        <!-- Title - Using black for strongest emphasis -->
+        <h2 class="text-xl font-black mb-2 text-primary">
             <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Params.title }}</a>
         </h2>
 
-        <p class="text-sm text-primary mb-2">
+        <!-- Authors - Normal weight for readability -->
+        <p class="text-sm font-normal text-primary mb-2">
             {{ with .Params.authors }}{{ delimit . ", " }}{{ end }}
         </p>
 
+        <!-- Translators - Light weight for secondary info -->
         {{ with .Params.translators }}
-        <p class="text-sm text-primary mb-2">
+        <p class="text-sm font-light text-primary mb-2">
             <span class="italic">{{ i18n "translators" }}: {{ delimit . ", " }}</span>
         </p>
         {{ end }}
 
-        <!-- Series Field -->
+        <!-- Series - Light weight + italic for tertiary info -->
         {{ if .Params.series }}
-        <p class="series text-center text-base italic text-gray-500 mb-2">
+        <p class="series text-center text-base font-light italic text-gray-500 mb-2">
             {{ .Params.series }}
         </p>
         {{ end }}
@@ -32,16 +37,17 @@
         <!-- Short Description -->
         {{ with .Params.short_description }}
             <div class="mb-2">
-                <h3 class="text-sm font-semibold text-primary mb-1">{{ i18n "short_description" }}</h3>
-                <div class="prose max-w-none">{{ . | markdownify }}</div>
+                <h3 class="text-sm font-bold text-primary mb-1">{{ i18n "short_description" }}</h3>
+                <div class="prose max-w-none font-normal">{{ . | markdownify }}</div>
             </div>
         {{ end }}
 
-        <!-- Conditional Divider: Only show if there is a short description -->
+        <!-- Conditional Divider -->
         {{ if .Params.short_description }}
         <hr class="border-t border-gray-300 my-4" />
         {{ end }}
 
+        <!-- Tags - Bold for better visibility at small size -->
         {{ with .Params.tags }}
         <div class="flex flex-wrap gap-1 mb-2">
             {{ range . }}
@@ -51,30 +57,31 @@
             {{ $tagClass := replace $tagClass ")" "" }}
             {{ $tagClass := replace $tagClass "'" "" }}
             {{ $tagClass := replace $tagClass "&" "and" }}
-            <span class="text-xs px-2 py-1 rounded-full tag tag-{{ $tagClass }}">{{ . }}</span>
+            <span class="text-xs px-2 py-1 rounded-full tag tag-{{ $tagClass }} font-bold">{{ . }}</span>
             {{ end }}
         </div>
         {{ end }}
 
+        <!-- Translation Status -->
         <div class="mb-2 relative group">
             {{ with .Params.russian_translation_status }}
-            <span class="text-sm font-semibold {{ partial "getTranslationStatusColor" . }}">
+            <span class="text-sm font-bold {{ partial "getTranslationStatusColor" . }}">
                 {{ i18n (printf "translation_status_%s" .) }}
             </span>
             {{ end }}
-
             {{ if eq .Params.russian_audioversion "yes" }}
             <span class="ml-2 text-sm cursor-help">
                 🎧
-                <span class="hidden group-hover:block absolute z-10 bg-primary text-secondary text-xs rounded py-1 px-2 left-0 bottom-full mb-1">
+                <span class="hidden group-hover:block absolute z-10 bg-primary text-secondary text-xs font-normal rounded py-1 px-2 left-0 bottom-full mb-1">
                     {{ i18n "audio_version" }}
                 </span>
             </span>
             {{ end }}
         </div>
 
+        <!-- Buy Link - Normal weight for clickable elements -->
         {{ with .Params.buy_link }}
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent3 hover:underline mt-2">
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-sm font-normal text-accent3 hover:underline mt-2">
             {{ i18n "buy_link" }}
         </a>
         {{ end }}

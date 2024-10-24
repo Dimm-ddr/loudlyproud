@@ -3,41 +3,39 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: main # Will be overridden for preview deployments
+  branch: main
 
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 
 i18n:
   structure: multiple_folders
-  locales:
-    - ru
-    - en
+  locales: [ru, en]
   default_locale: ru
 
 collections:
   - name: books
-    i18n: true
+    i18n:
+      locales: [ru, en]
     label: Books
     label_singular: Book
     folder: "content/books"
     create: true
     slug: "{{fields.slug}}"
-    path: "{{i18n.locale}}/{{fields.slug}}"
+    path: "{{i18n.locale}}/{{slug}}"
     nested:
-      depth: 2
+      depth: 1
       summary: "{{title}}"
     fields:
       - label: Page Title
         name: title
         widget: string
         i18n: true
-        hint: "This is the title displayed on the website"
       - label: Draft
         name: draft
         widget: boolean
         default: false
-        i18n: duplicate
+        i18n: true
       - label: Params
         name: params
         widget: object
@@ -46,71 +44,92 @@ collections:
           - label: Book Title
             name: title
             widget: string
-            hint: "This is the title of the book"
             required: true
+            i18n: true
           - label: Cover
             name: cover
             widget: image
             required: false
+            i18n: true
           - label: Cover Alt text
             name: coverAlt
             widget: string
             required: false
+            i18n: true
           - label: Tags
             name: tags
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Authors
             name: authors
             widget: list
             required: true
             allow_add: true
-            field:
-              label: Author
-              name: author
-              widget: string
+            collapsed: false
+            i18n: true
           - label: Translators
             name: translators
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Languages
             name: languages
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Page count
             name: page_count
             widget: number
             required: false
+            i18n: true
           - label: First Publication Year
             name: publication_year
             widget: string
-            pattern: ["^[0-9]{4}$", "Please enter a valid year in YYYY format"]
-            hint: "Please enter a valid year in YYYY format"
             required: false
+            i18n: true
           - label: Goodreads Link
             name: link
             widget: string
             required: false
+            i18n: true
           - label: Buy Link
             name: buy_link
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Series
             name: series
             widget: string
             required: false
+            i18n: true
           - label: ISBN
             name: isbn
             widget: string
             required: false
+            i18n: true
           - label: Additional ISBNs
             name: additional_isbns
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Where to get
             name: where_to_get
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Russian Edition
             name: russian_translation_status
             widget: select
@@ -122,20 +141,27 @@ collections:
               - does_not_exist
               - exists
             required: false
+            i18n: true
           - label: Russian Audioversion
             name: russian_audioversion
             widget: boolean
             default: false
             required: false
+            i18n: true
           - label: Publishers
             name: publishers
             widget: list
             required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
           - label: Description
             name: description
             widget: markdown
             required: false
+            i18n: true
           - label: Short Description
             name: short_description
             widget: markdown
             required: false
+            i18n: true
