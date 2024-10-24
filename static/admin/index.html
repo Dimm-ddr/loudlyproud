@@ -13,29 +13,15 @@
     <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <div class="cms-loading-indicator">
-      Loading Content Manager...
-    </div>
-
-    <div id="nc-root"></div>
-
     <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <!-- Auth handler -->
-    <script src="/admin/auth-handler.js"></script>
 
     <!-- Custom widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
 
     <script>
+      // Wait for CMS to be ready
       window.addEventListener('load', function() {
-        // Register event handlers after CMS initialization
-        if (window.CMSEventHandlers && typeof window.CMSEventHandlers.init === 'function') {
-          window.CMSEventHandlers.init();
-        }
-
-        // Handle Netlify Identity redirects
         if (window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
             if (!user) {
@@ -44,6 +30,11 @@
               });
             }
           });
+        }
+
+        // Initialize preview styles if needed
+        if (window.CMSPreviewStyles && typeof window.CMSPreviewStyles.init === 'function') {
+          window.CMSPreviewStyles.init();
         }
       });
     </script>
