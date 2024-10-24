@@ -1,0 +1,89 @@
+<!-- layouts/partials/book-content.html -->
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
+
+    <div class="book-details grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="book-info">
+        {{ with .Params.authors }}
+        <div class="mb-4">
+          <h2 class="font-semibold">{{ i18n "authors" }}</h2>
+          <p>{{ delimit . ", " }}</p>
+        </div>
+        {{ end }}
+
+        {{ with .Params.translators }}
+        <div class="mb-4">
+          <h2 class="font-semibold">{{ i18n "translators" }}</h2>
+          <p>{{ delimit . ", " }}</p>
+        </div>
+        {{ end }}
+
+        {{ with .Params.description }}
+        <div class="mb-4">
+          <h2 class="font-semibold">{{ i18n "description" }}</h2>
+          <div class="prose">{{ . | markdownify }}</div>
+        </div>
+        {{ end }}
+
+        {{ with .Params.tags }}
+        <div class="mb-4">
+          <h2 class="font-semibold">{{ i18n "tags" }}</h2>
+          <div class="flex flex-wrap gap-2">
+            {{ range . }}
+            <span class="px-2 py-1 bg-secondary rounded-full text-sm">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="book-metadata">
+        {{ with .Params.page_count }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "page_count" }}:</span> {{ . }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.publication_year }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "publication_year" }}:</span> {{ . }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.isbn }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "isbn" }}:</span> {{ . }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.russian_translation_status }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "russian_translation" }}:</span>
+          {{ i18n (printf "translation_status_%s" .) }}
+        </div>
+        {{ end }}
+
+        {{ if eq .Params.russian_audioversion "yes" }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "audio_version" }}:</span>
+          {{ i18n "russian_audio_available" }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.languages }}
+        <div class="mb-2">
+          <span class="font-semibold">{{ i18n "languages" }}:</span>
+          {{ delimit . ", " }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.buy_link }}
+        <div class="mt-4">
+          <a href="{{ . }}" class="text-accent3 hover:underline" target="_blank" rel="noopener noreferrer">
+            {{ i18n "where_to_get" }}
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>

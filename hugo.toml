@@ -2,6 +2,7 @@ baseURL = "/"
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = true
 ignoreFiles = ['content/books/temp/.*']
 
 [params]
@@ -13,7 +14,14 @@ heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телег�
 [build]
 writeStats = true
 
+[outputFormats.SinglePartial]
+mediaType = "text/html"
+isPlainText = true
+notAlternative = true
+path = "books/single.partial"
+
 [outputs]
+books = ["HTML", "SinglePartial"]
 home = ["HTML"]
 section = ["HTML"]
 
