@@ -1,41 +1,41 @@
 ---
-title: "Grief Is The Thing With Feathers"
+title: Grief Is The Thing With Feathers
 draft: false
-type: "books"
+type: books
 params:
-  title: "Grief Is The Thing With Feathers"
+  title: Grief Is The Thing With Feathers
   tags:
-    - "Bereavement"
-    - "Death"
-    - "Fathers and sons"
-    - "Fiction family life"
-    - "Fiction family life general"
-    - "Fiction psychological"
-    - "Grief"
-    - "Literary Fiction"
-    - "London (England)"
-    - "Magical Realism"
-    - "Motherless families"
-    - "Mothers"
-    - "New York Times reviewed"
-    - "Novella"
-    - "Poetry"
-    - "Widowers"
-    - "contemporary"
-    - "fantasy"
-    - "fiction"
-  cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1491367213i/25334576.jpg"
-  isbn: "9780571323760"
-  link: "https://www.goodreads.com/book/show/25334576-grief-is-the-thing-with-feathers"
+  - Bereavement
+  - Death
+  - Fathers and sons
+  - Fiction family life
+  - Fiction family life general
+  - Fiction psychological
+  - Grief
+  - Literary Fiction
+  - London (England)
+  - Magical Realism
+  - Motherless families
+  - Mothers
+  - New York Times reviewed
+  - Novella
+  - Poetry
+  - Widowers
+  - contemporary
+  - fantasy
+  - fiction
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1491367213i/25334576.jpg
+  isbn: '9780571323760'
+  link: https://www.goodreads.com/book/show/25334576-grief-is-the-thing-with-feathers
   authors:
-    - "Max Porter"
-  publication_year: "2015"
-  page_count: "128"
-  short_description: "In a London flat, two young boys face the unbearable sadness of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic, imagines a future of well-meaning visitors and..."
-  russian_translation_status: "unknown"
+  - Max Porter
+  publication_year: '2015'
+  page_count: '128'
+  short_description: In a London flat, two young boys face the unbearable sadness of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic, imagines a future of well-meaning visitors and...
+  russian_translation_status: unknown
   languages:
-    - "Английский"
-  description: "In a London flat, two young boys face the unbearable sadness of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic, imagines a future of well-meaning visitors and emptiness.In this moment of despair they are visited by Crow - antagonist, trickster, healer, babysitter. This self-described sentimental bird is attracted to the grieving family and threatens to stay until they no longer need him. As weeks turn to months and physical pain of loss gives way to memories, this little unit of three begin to heal.In this extraordinary debut - part novella, part polyphonic fable, part essay on grief, Max Porter's compassion and bravura style combine to dazzling effect. Full of unexpected humour and profound emotional truth,Grief is the Thing with Feathersmarks the arrival of a thrilling new talent."
-  russian_audioversion: "no"
-  slug: "grief-is-the-thing-with-feathers-dd3bbad5"
+  - Английский
+  description: In a London flat, two young boys face the unbearable sadness of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic, imagines a future of well-meaning visitors and emptiness.In this moment of despair they are visited by Crow - antagonist, trickster, healer, babysitter. This self-described sentimental bird is attracted to the grieving family and threatens to stay until they no longer need him. As weeks turn to months and physical pain of loss gives way to memories, this little unit of three begin to heal.In this extraordinary debut - part novella, part polyphonic fable, part essay on grief, Max Porter's compassion and bravura style combine to dazzling effect. Full of unexpected humour and profound emotional truth,Grief is the Thing with Feathersmarks the arrival of a thrilling new talent.
+  russian_audioversion: 'no'
+  slug: grief-is-the-thing-with-feathers-dd3bbad5
 ---

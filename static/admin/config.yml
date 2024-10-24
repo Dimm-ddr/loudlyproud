@@ -20,12 +20,12 @@ collections:
     i18n: true
     label: Books
     label_singular: Book
-    folder: "content/books/{{i18n.locale}}"
+    folder: "content/books"
     create: true
-    slug: "{{params.slug}}"
-    path: "{{i18n.locale}}/{{slug}}"
+    slug: "{{fields.slug}}"
+    path: "{{i18n.locale}}/{{fields.slug}}"
     nested:
-      depth: 1
+      depth: 2
       summary: "{{title}}"
     fields:
       - label: Page Title
@@ -37,7 +37,7 @@ collections:
         name: draft
         widget: boolean
         default: false
-        i18n: true
+        i18n: duplicate
       - label: Params
         name: params
         widget: object
