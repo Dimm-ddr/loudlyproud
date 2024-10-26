@@ -3,7 +3,7 @@ title: Моя интимная жизнь с одиночеством. Том 1 
 draft: false
 type: books
 params:
-  title: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With Loneliness)
+  bookTitle: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With Loneliness)
   tags:
   - Adolescence
   - Artists
@@ -51,11 +51,11 @@ params:
   publishers:
   - Фабрика комиксов
   page_count: '144'
-  short_description: Как покончить с бессмысленным существованием, начавшимся после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых десять лет? Мой ответ – обратиться к услугам девушки по вызову. Вы держите в руках мой откровенный отчет о том, как я заглянула в самые потаенные уголки своей души.
+  short_book_description: Как покончить с бессмысленным существованием, начавшимся после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых десять лет? Мой ответ – обратиться к услугам девушки по вызову. Вы держите в руках мой откровенный отчет о том, как я заглянула в самые потаенные уголки своей души.
   russian_translation_status: exists
   languages:
   - Английский, Испанский, Итальянский, Русский, Японский
-  description: ''
+  book_description: ''
   russian_audioversion: 'no'
   slug: moia-intimnaia-zhizn-s-odinochestvom-tom-1-my-lesbian-experience-with-loneliness-5cecf5e8
 ---

@@ -3,7 +3,7 @@ title: The Knockout Queen
 draft: false
 type: books
 params:
-  title: The Knockout Queen
+  bookTitle: The Knockout Queen
   tags:
   - Closeted gays
   - Electronic books
@@ -25,11 +25,11 @@ params:
   - Rufi Thorpe
   publication_year: '2020'
   page_count: '288'
-  short_description: A dazzling and darkly comic novel of love, violence, and friendship in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful, tall, blond, with a rich...
+  short_book_description: A dazzling and darkly comic novel of love, violence, and friendship in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful, tall, blond, with a rich...
   russian_translation_status: unknown
   languages:
   - Английский
-  description: A dazzling and darkly comic novel of love, violence, and friendship in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful, tall, blond, with a rich real-estate-developer father and a swimming pool in her backyard. Michael⁠⁠--with a ponytail down his back and a septum piercing⁠--lives with his aunt in the cramped stucco cottage next door. When Bunny catches Michael smoking in her yard, he discovers that her life is not as perfect as it seems. At six foot three, Bunny towers over their classmates. Even as she dreams of standing out and competing in the Olympics, she is desperate to fit in, to seem normal, and to get a boyfriend, all while hiding her father's escalating alcoholism.Michael has secrets of his own. At home and at school Michael pretends to be straight, but at night he tries to understand himself by meeting men online for anonymous encounters that both thrill and scare him. When Michael falls in love for the first time, a vicious strain
+  book_description: A dazzling and darkly comic novel of love, violence, and friendship in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful, tall, blond, with a rich real-estate-developer father and a swimming pool in her backyard. Michael⁠⁠--with a ponytail down his back and a septum piercing⁠--lives with his aunt in the cramped stucco cottage next door. When Bunny catches Michael smoking in her yard, he discovers that her life is not as perfect as it seems. At six foot three, Bunny towers over their classmates. Even as she dreams of standing out and competing in the Olympics, she is desperate to fit in, to seem normal, and to get a boyfriend, all while hiding her father's escalating alcoholism.Michael has secrets of his own. At home and at school Michael pretends to be straight, but at night he tries to understand himself by meeting men online for anonymous encounters that both thrill and scare him. When Michael falls in love for the first time, a vicious strain
     of gossip circulates and a terrible, brutal act becomes the defining feature of both his and Bunny's futures⁠⁠--and of their friendship. With storytelling as intoxicating as it is intelligent, Rufi Thorpe has created a tragic and unflinching portrait of identity, a fascinating examination of our struggles to exist in our bodies, and an excruciatingly beautiful story of two humans aching for connection.
   russian_audioversion: 'no'
   slug: the-knockout-queen-a58c2da0

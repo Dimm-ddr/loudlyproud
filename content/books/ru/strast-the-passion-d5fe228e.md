@@ -3,7 +3,7 @@ title: Страсть (The Passion)
 draft: false
 type: books
 params:
-  title: Страсть (The Passion)
+  bookTitle: Страсть (The Passion)
   tags:
   - 19th century
   - English literature
@@ -49,11 +49,11 @@ params:
   publishers:
   - Эксмо
   page_count: '176'
-  short_description: '"Страсть: страданье, муки, маета, мученье, телесная боль, душевная скорбь, тоска; подвиг, сознательно принятые на себя тяготы, мученичество". Так нам говорит словарь Даля. Но роман Дженет Уинтерсон - бесспорной звезды британской литературы конца XX века - не только об этом...'
+  short_book_description: '"Страсть: страданье, муки, маета, мученье, телесная боль, душевная скорбь, тоска; подвиг, сознательно принятые на себя тяготы, мученичество". Так нам говорит словарь Даля. Но роман Дженет Уинтерсон - бесспорной звезды британской литературы конца XX века - не только об этом...'
   russian_translation_status: exists
   languages:
   - Английский, Испанский, Каталанский, Немецкий, Нидерландский, Русский, Турецкий, Французский
-  description: "\"Страсть: страданье, муки, маета, мученье, \nтелесная боль, душевная скорбь, тоска; подвиг, сознательно принятые на \nсебя тяготы, мученичество\". Так нам говорит словарь Даля. Но роман \nДженет Уинтерсон - бесспорной звезды британской литературы конца XX века\n - не только об этом. Страстны влечения пола, азартная игра, война, \nлюбовь к матери и своей стране.\n\nОдин из маленьких шедевров современной европейской литературы, роман `Страсть` - впервые на русском языке.\n\n\"Winterson is a master of her material, a writer in whom great talent deeply abides.\" — Vanity Fair First published to great acclaim in 1987, this arresting, elegant novel from Jeanette Winterson uses Napolean’s Europe as the setting for a tantalizing surrealistic romance between an observer of history and a creature of fantasy. Jeanette Winterson’s novels have established her as one of the most important young writers in world literature. The Passion  is perhaps her most highly acclaimed work, a modern\
+  book_description: "\"Страсть: страданье, муки, маета, мученье, \nтелесная боль, душевная скорбь, тоска; подвиг, сознательно принятые на \nсебя тяготы, мученичество\". Так нам говорит словарь Даля. Но роман \nДженет Уинтерсон - бесспорной звезды британской литературы конца XX века\n - не только об этом. Страстны влечения пола, азартная игра, война, \nлюбовь к матери и своей стране.\n\nОдин из маленьких шедевров современной европейской литературы, роман `Страсть` - впервые на русском языке.\n\n\"Winterson is a master of her material, a writer in whom great talent deeply abides.\" — Vanity Fair First published to great acclaim in 1987, this arresting, elegant novel from Jeanette Winterson uses Napolean’s Europe as the setting for a tantalizing surrealistic romance between an observer of history and a creature of fantasy. Jeanette Winterson’s novels have established her as one of the most important young writers in world literature. The Passion  is perhaps her most highly acclaimed work, a modern\
     \ classic that confirms her special claim on the novel. Set during the tumultuous years of the Napoleonic Wars,  The Passion  intertwines the destinies of two remarkable people: Henri, a simple French soldier, who follows Napoleon from glory to Russian ruin; and Villanelle, the red-haired, web-footed daughter of a Venetian boatman, whose husband has gambled away her heart. In Venice’s compound of carnival, chance, and darkness, the pair meet their singular destiny.In her unique and mesmerizing voice, Winterson blends reality with fantasy, dream, and imagination to weave a hypnotic tale with stunning effects."
   russian_audioversion: 'no'
   slug: strast-the-passion-d5fe228e

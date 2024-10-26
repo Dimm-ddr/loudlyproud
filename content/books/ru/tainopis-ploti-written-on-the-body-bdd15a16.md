@@ -3,7 +3,7 @@ title: Тайнопись плоти. (Written On The Body)
 draft: false
 type: books
 params:
-  title: Тайнопись плоти. (Written On The Body)
+  bookTitle: Тайнопись плоти. (Written On The Body)
   tags:
   - Belletristische Darstellung
   - Ehefrau
@@ -36,11 +36,11 @@ params:
   publishers:
   - Эксмо
   page_count: '288'
-  short_description: Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине…
+  short_book_description: Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине…
   russian_translation_status: exists
   languages:
   - Английский, Испанский, Итальянский, Немецкий, Нидерландский, Русский, Турецкий
-  description: 'Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине. «Тайнопись плоти» — один из самых оригинальных романов XX века — впервые публикуется на русском языке.
+  book_description: 'Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине. «Тайнопись плоти» — один из самых оригинальных романов XX века — впервые публикуется на русском языке.
 
 
     Written on the Body is a secret code only visible in certain lights: the accumulation of a lifetime gather there. In places the palimpsest is so heavily worked that the letters feel like braille. I like to keep my body rolled away from prying eyes, never unfold too much, tell the whole story. I didn''t know that Louise would have reading hands. She has translated me into her own book.'

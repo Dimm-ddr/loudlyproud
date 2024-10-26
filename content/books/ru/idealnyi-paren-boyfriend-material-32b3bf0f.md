@@ -3,7 +3,7 @@ title: Идеальный парень (Boyfriend Material)
 draft: false
 type: books
 params:
-  title: Идеальный парень (Boyfriend Material)
+  bookTitle: Идеальный парень (Boyfriend Material)
   tags:
   - English literature
   - Lgbtq novels
@@ -26,13 +26,13 @@ params:
   publishers:
   - АСТ
   page_count: '480'
-  short_description: 'ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный.Люк'
+  short_book_description: 'ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный.Люк'
   russian_translation_status: exists
   series: London Calling
   languages:
   - Английский, Русский
   требуется: ''
-  description: "ТРЕБУЕТСЯ:\n\nОдин (фальшивый) парень. Желательно идеальный.\n\nЛюк О’Доннелл никогда не хотел быть знаменитым. Но когда имя его отца, скандальной рок-звезды, снова появляется в газетах, Люк оказывается под прицелом камер. И всего одна фотография может все разрушить.\n\nЧтобы восстановить испорченную репутацию, Люку нужно вступить в нормальные отношения… а Оливер Блэквуд настолько нормальный, насколько это возможно. Он адвокат, веган и ни разу не был замечен в скандале. Другими словами, он и есть идеальный парень. Люк и Оливер одиноки и нуждаются в спутнике для мероприятий, но это все, что их объединяет. Так что ничего не помешает им потом пойти каждому своей дорогой, будто бы ничего не случилось. Но вот проблема фальшивых отношений — порой нет ничего более \nреального. Главное — только не привязаться. И не влюбиться. И не захотеть остаться рядом навсегда.\n\nWhen tangentially ― and reluctantly ― famous Luc O'Donnell is forced back into the spotlight in the worst possible\
+  book_description: "ТРЕБУЕТСЯ:\n\nОдин (фальшивый) парень. Желательно идеальный.\n\nЛюк О’Доннелл никогда не хотел быть знаменитым. Но когда имя его отца, скандальной рок-звезды, снова появляется в газетах, Люк оказывается под прицелом камер. И всего одна фотография может все разрушить.\n\nЧтобы восстановить испорченную репутацию, Люку нужно вступить в нормальные отношения… а Оливер Блэквуд настолько нормальный, насколько это возможно. Он адвокат, веган и ни разу не был замечен в скандале. Другими словами, он и есть идеальный парень. Люк и Оливер одиноки и нуждаются в спутнике для мероприятий, но это все, что их объединяет. Так что ничего не помешает им потом пойти каждому своей дорогой, будто бы ничего не случилось. Но вот проблема фальшивых отношений — порой нет ничего более \nреального. Главное — только не привязаться. И не влюбиться. И не захотеть остаться рядом навсегда.\n\nWhen tangentially ― and reluctantly ― famous Luc O'Donnell is forced back into the spotlight in the worst possible\
     \ way, he has to think fast if he wants to save his floundering reputation. Enter Oliver Blackwood. Stunningly handsome and effortlessly put together, Oliver is successful, an ethical vegetarian, and has never appeared in a scandal mag evenonce. In other words, he's perfect boyfriend material and exactly what Luc needs to appear respectable again. But when their fake relationship starts to feel like real romance, Luc and Oliver might have to consider whether they're willing to fight for the truth of their new relationship…scandal, and consequences, be damned."
   russian_audioversion: 'no'
   slug: idealnyi-paren-boyfriend-material-32b3bf0f

@@ -3,7 +3,7 @@ title: Skin
 draft: false
 type: books
 params:
-  title: Skin
+  bookTitle: Skin
   tags:
   - Dark
   - Fiction general
@@ -20,11 +20,11 @@ params:
   - Kathe Koja
   publication_year: '1993'
   page_count: '310'
-  short_description: Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
+  short_book_description: Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
   russian_translation_status: unknown
   languages:
   - Английский
-  description: Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
+  book_description: Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
   russian_audioversion: 'no'
   slug: skin-aabaef33
 ---

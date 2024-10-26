@@ -3,7 +3,7 @@ title: Annie On My Mind
 draft: false
 type: books
 params:
-  title: Annie On My Mind
+  bookTitle: Annie On My Mind
   tags:
   - Children's fiction
   - Coming out (Sexual orientation)
@@ -36,11 +36,11 @@ params:
   - Nancy Garden
   publication_year: '1982'
   page_count: '233'
-  short_description: This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be...
+  short_book_description: This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be...
   russian_translation_status: might_exist
   languages:
   - Английский
-  description: This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be true to each other and their feelings. The book has been banned from many school libraries and publicly burned in Kansas City.Of the author and the book, the Margaret A. Edwards Award committee said, “Using a fluid, readable style, Garden opens a window through which readers can find courage to be true to themselves.”
+  book_description: This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be true to each other and their feelings. The book has been banned from many school libraries and publicly burned in Kansas City.Of the author and the book, the Margaret A. Edwards Award committee said, “Using a fluid, readable style, Garden opens a window through which readers can find courage to be true to themselves.”
   russian_audioversion: 'no'
   slug: annie-on-my-mind-41e49526
 ---

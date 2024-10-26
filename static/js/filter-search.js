@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Fuse.js
   const fuse = new Fuse(books, {
-    keys: ["title", "authors", "tags", "description"],
+    keys: ["title", "authors", "tags", "book_description"],
     threshold: 0.4,
   });
 
@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (selectedTags.length) {
       filteredBooks = filteredBooks.filter((book) =>
-        book.tags.some((tag) => selectedTags.includes(tag))
+        book.tags.some((tag) => selectedTags.includes(tag)),
       );
     }
 
     if (selectedAuthors.length) {
       filteredBooks = filteredBooks.filter((book) =>
-        book.authors.some((author) => selectedAuthors.includes(author))
+        book.authors.some((author) => selectedAuthors.includes(author)),
       );
     }
 
@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Attach filter event listeners
   tagFilters.forEach((checkbox) =>
-    checkbox.addEventListener("change", applyFilters)
+    checkbox.addEventListener("change", applyFilters),
   );
   authorFilters.forEach((checkbox) =>
-    checkbox.addEventListener("change", applyFilters)
+    checkbox.addEventListener("change", applyFilters),
   );
 
   // Initial render
