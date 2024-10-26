@@ -3,7 +3,7 @@ title: Часы (The Hours)
 draft: false
 type: books
 params:
-  title: Часы (The Hours)
+  bookTitle: Часы (The Hours)
   tags:
   - Authors fiction
   - Belletristische Darstellung
@@ -59,11 +59,11 @@ params:
   publishers:
   - Иностранка
   page_count: '230'
-  short_description: Главная героиня романа - вдохновительница и мистический "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века…
+  short_book_description: Главная героиня романа - вдохновительница и мистический "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века…
   russian_translation_status: exists
   languages:
   - Английский, Испанский, Китайский, Немецкий, Польский, Русский, Французский, Хорватский
-  description: 'Главная героиня романа - вдохновительница и мистический "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века, в "Часах" рассказывается о миссис Браун, читающей эту книгу в середине века, и миссис Дэллоуэй, живущей в конце XX века в Нью-Йорке, чья судьба так схожа с судьбой Клариссы из книги Вулф. Англия 20-х и Америка 90-х. Патриархальный Ричмонд, послевоенный Лос-Анджелес и сверхсовременный Нью-Йорк. Как устроено время? Как рождаются книги? Обо всем этом - "Часы".
+  book_description: 'Главная героиня романа - вдохновительница и мистический "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века, в "Часах" рассказывается о миссис Браун, читающей эту книгу в середине века, и миссис Дэллоуэй, живущей в конце XX века в Нью-Йорке, чья судьба так схожа с судьбой Клариссы из книги Вулф. Англия 20-х и Америка 90-х. Патриархальный Ричмонд, послевоенный Лос-Анджелес и сверхсовременный Нью-Йорк. Как устроено время? Как рождаются книги? Обо всем этом - "Часы".
 
 
     The Pulitzer Prize-winning novel that became a motion picture starring Meryl Streep, Julianne Moore, and Nicole Kidman, directed by Stephen Daldry from a screenplay by David Hare.InThe Hours, Michael Cunningham, widely praised as one of the most gifted writers of his generation, draws inventively on the life and work of Virginia Woolf to tell the story of a group of contemporary characters struggling with the conflicting claims of love and inheritance, hope and despair. The narrative of Woolf''s last days before her suicide early in World War II counterpoints the fictional stories of Samuel, a famous poet whose life has been shadowed by his talented and troubled mother, and his lifelong friend Clarissa, who strives to forge a balanced and rewarding life in spite of the demands of friends, lovers, and family.Passionate, profound, and deeply moving, this is Cunningham''s most remarkable achievement to date.'

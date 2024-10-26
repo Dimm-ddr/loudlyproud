@@ -18,9 +18,9 @@
         </div>
         {{ end }}
 
-        {{ with .Params.description }}
+        {{ with .Params.book_description }}
         <div class="mb-4">
-          <h2 class="font-black">{{ i18n "description" }}</h2>
+          <h2 class="font-black">{{ i18n "book_description" }}</h2>
           <div class="prose">{{ . | markdownify }}</div>
         </div>
         {{ end }}

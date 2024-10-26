@@ -3,7 +3,7 @@ title: 'Lore & Lust: Date Night In Milan'
 draft: false
 type: books
 params:
-  title: 'Lore & Lust: Date Night In Milan'
+  bookTitle: 'Lore & Lust: Date Night In Milan'
   tags:
   - Queer Lit
   - adult fiction
@@ -24,12 +24,12 @@ params:
   publishers:
   - Karla Nikole Publishing
   page_count: '282'
-  short_description: This story takes place between Chapters 31 and 32 of Lore and Lust Book One
+  short_book_description: This story takes place between Chapters 31 and 32 of Lore and Lust Book One
   russian_translation_status: unknown
   series: Lore & Lust
   languages:
   - Английский
-  description: This story takes place between Chapters 31 and 32 of Lore and Lust Book One
+  book_description: This story takes place between Chapters 31 and 32 of Lore and Lust Book One
   russian_audioversion: 'no'
   slug: lore-lust-date-night-in-milan-e254b5c7
 ---

@@ -155,13 +155,13 @@ collections:
             allow_add: true
             collapsed: false
             i18n: true
-          - label: Description
-            name: description
+          - label: Book Description
+            name: book_description
             widget: markdown
             required: false
             i18n: true
           - label: Short Description
-            name: short_description
+            name: short_book_description
             widget: markdown
             required: false
             i18n: true

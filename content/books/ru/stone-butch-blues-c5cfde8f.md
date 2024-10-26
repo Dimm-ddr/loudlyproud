@@ -3,7 +3,7 @@ title: Stone Butch Blues
 draft: false
 type: books
 params:
-  title: Stone Butch Blues
+  bookTitle: Stone Butch Blues
   tags:
   - Butch and femme (Lesbianism)
   - Classics
@@ -34,11 +34,11 @@ params:
   - Leslie Feinberg
   publication_year: '1993'
   page_count: '446'
-  short_description: Woman or man? This internationally acclaimed novel looks at the world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie and Harriet" McCarthy era and coming out as a...
+  short_book_description: Woman or man? This internationally acclaimed novel looks at the world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie and Harriet" McCarthy era and coming out as a...
   russian_translation_status: exists
   languages:
   - Английский, Баскский, Иврит, Испанский, Итальянский, Китайский, Немецкий, Словенский, Французский, Русский
-  description: Woman or man? This internationally acclaimed novel looks at the world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie and Harriet" McCarthy era and coming out as a young butch lesbian in the pre-Stonewall gay drag bars of a blue-collar town.Stone Butch Bluestraces a propulsive journey, powerfully evoking history and politics while portraying an extraordinary protagonist full of longing, vulnerability, and working-class grit. This once-underground classic takes the reader on a roller-coaster ride of gender transformation and exploration and ultimately speaks to the heart of anyone who has ever suffered or gloried in being different.
+  book_description: Woman or man? This internationally acclaimed novel looks at the world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie and Harriet" McCarthy era and coming out as a young butch lesbian in the pre-Stonewall gay drag bars of a blue-collar town.Stone Butch Bluestraces a propulsive journey, powerfully evoking history and politics while portraying an extraordinary protagonist full of longing, vulnerability, and working-class grit. This once-underground classic takes the reader on a roller-coaster ride of gender transformation and exploration and ultimately speaks to the heart of anyone who has ever suffered or gloried in being different.
   russian_audioversion: 'no'
   slug: stone-butch-blues-c5cfde8f
 ---

@@ -12,7 +12,7 @@
     <div class="p-4 flex flex-col flex-grow">
         <!-- Title - Using black for strongest emphasis -->
         <h2 class="text-xl font-black mb-2 text-primary">
-            <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Params.title }}</a>
+            <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Params.bookTitle  }}</a>
         </h2>
 
         <!-- Authors - Normal weight for readability -->
@@ -37,7 +37,7 @@
         <!-- Short Description -->
         {{ with .Params.short_description }}
             <div class="mb-2">
-                <h3 class="text-sm font-bold text-primary mb-1">{{ i18n "short_description" }}</h3>
+                <h3 class="text-sm font-bold text-primary mb-1">{{ i18n "short_book_description" }}</h3>
                 <div class="prose max-w-none font-normal">{{ . | markdownify }}</div>
             </div>
         {{ end }}

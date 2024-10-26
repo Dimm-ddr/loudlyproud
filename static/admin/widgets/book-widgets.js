@@ -10,7 +10,7 @@ const SlugGeneratorWidget = createClass({
   componentDidMount() {
     if (!this.props.value) {
       const bookTitle = document.querySelector(
-        '[data-field-name="params.title"]',
+        '[data-field-name="Params.bookTitle "]',
       )?.value;
       if (bookTitle) {
         const newSlug = this.generateSlug(bookTitle);
@@ -103,7 +103,7 @@ const SlugGeneratorWidget = createClass({
             className: "regenerate-button",
             onClick: () => {
               const bookTitle = document.querySelector(
-                '[data-field-name="params.title"]',
+                '[data-field-name="Params.bookTitle "]',
               )?.value;
               const newSlug = this.generateSlug(bookTitle);
               this.setState({ value: newSlug });

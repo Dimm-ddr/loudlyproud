@@ -5,13 +5,13 @@
     <figure class="book-cover w-full md:w-1/3 mb-8 md:mb-0 md:mr-8">
       <img class="w-full h-auto object-contain rounded-lg shadow-md"
            src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
-           alt="Cover of {{ .Params.title }}" loading="lazy">
+           alt="Cover of {{ .Params.bookTitle  }}" loading="lazy">
     </figure>
 
     <div class="w-full md:w-2/3">
       <!-- Title and Series -->
       <header>
-        <h1 class="text-4xl font-black mb-2">{{ .Params.title }}</h1>
+        <h1 class="text-4xl font-black mb-2">{{ .Params.bookTitle  }}</h1>
         {{ with .Params.series }}
         <p class="text-xl font-light italic text-gray-600 mb-4">{{ . }}</p>
         {{ end }}
@@ -47,9 +47,9 @@
   </div>
 
   <!-- Full Description -->
-  {{ with .Params.description }}
+  {{ with .Params.book_description }}
     <section class="mt-8">
-      <h2 class="text-2xl font-bold mb-4">{{ i18n "description" }}</h2>
+      <h2 class="text-2xl font-bold mb-4">{{ i18n "book_description" }}</h2>
       <div class="prose max-w-none font-normal">{{ . | markdownify }}</div>
     </section>
   {{ end }}

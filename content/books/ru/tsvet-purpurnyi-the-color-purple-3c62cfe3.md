@@ -3,7 +3,7 @@ title: Цвет пурпурный (The Color Purple)
 draft: false
 type: books
 params:
-  title: Цвет пурпурный (The Color Purple)
+  bookTitle: Цвет пурпурный (The Color Purple)
   tags:
   - 1930s
   - Abused wives
@@ -86,11 +86,11 @@ params:
   publishers:
   - Российская политическая энциклопедия
   page_count: '227'
-  short_description: Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины…
+  short_book_description: Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины…
   russian_translation_status: exists
   languages:
   - Английский, Вьетнамский, Испанский, Немецкий, Нидерландский, Португальский, Русский, Французский, Японский
-  description: 'Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины. Жизнь то и дело подтверждает эту незыблемую истину. Элис Уокер без обиняков говорит о насилии, глумлении, о том, о чём стараются молчать.
+  book_description: 'Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины. Жизнь то и дело подтверждает эту незыблемую истину. Элис Уокер без обиняков говорит о насилии, глумлении, о том, о чём стараются молчать.
 
 
     Life wasn''t easy for Celie. But she knew how to survive, needing little to get by.Then her husband''s lover, a flamboyant blues singer, barreled into her world and gave Celie the courage to ask for more - to laugh, to play, and finally - to love.'

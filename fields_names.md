@@ -28,6 +28,6 @@ params:
   russian_translation_status: "unknown","might_exist","unlikely_to_exist","does_not_exist","exist"
   russian_audioversion:
   publishers:
-  short_description:
-  description:
+  short_book_description:
+  book_description:
 ---

@@ -3,7 +3,7 @@ title: Цена соли (The Price Of Salt)
 draft: false
 type: books
 params:
-  title: Цена соли (The Price Of Salt)
+  bookTitle: Цена соли (The Price Of Salt)
   tags:
   - 1950s
   - 20th century
@@ -53,11 +53,11 @@ params:
   publishers:
   - АСТ
   page_count: '336'
-  short_description: '"Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне…'
+  short_book_description: '"Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне…'
   russian_translation_status: exists
   languages:
   - Английский, Испанский, Итальянский, Китайский, Корейский, Немецкий, Русский
-  description: 'Патриция Хайсмит - известная американская писательница, работавшая с жанром рассказа, психологического нуарного детектива и романа. Ее произведения экранизировали Альфред Хичкок, Лилиана Кавани, Вим Вендерс, Рене Клеман и другие. "Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне. Он рассказывает о нелегком пути, который пришлось преодолеть двум сильным и страстным женщинам - юной и бедной Терезе, работающей продавщицей в универмаге, и домохозяйке Кэрол, вымотанной бракоразводным процессом.
+  book_description: 'Патриция Хайсмит - известная американская писательница, работавшая с жанром рассказа, психологического нуарного детектива и романа. Ее произведения экранизировали Альфред Хичкок, Лилиана Кавани, Вим Вендерс, Рене Клеман и другие. "Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне. Он рассказывает о нелегком пути, который пришлось преодолеть двум сильным и страстным женщинам - юной и бедной Терезе, работающей продавщицей в универмаге, и домохозяйке Кэрол, вымотанной бракоразводным процессом.
 
 
     Patricia Highsmith''s story of romantic obsession may be one of the most important, but still largely unrecognized, novels of the twentieth century. First published in 1952 and touted as "the novel of a love that society forbids," the book soon became a cult classic.Based on a true story plucked from Highsmith''s own life,Caroltells the riveting drama of Therese Belivet, a stage designer trapped in a department-store day job, whose routine is forever shattered by a gorgeous epiphany—the appearance of Carol Aird, a customer who comes in to buy her daughter a Christmas toy. Therese begins to gravitate toward the alluring suburban housewife, who is trapped in a marriage as stultifying as Therese''s job. They fall in love and set out across the United States, ensnared by society''s confines and the imminent disapproval of others, yet propelled by their infatuation. Carol is a brilliantly written story that may surprise Highsmith fans and will delight those discovering her work.This authorized

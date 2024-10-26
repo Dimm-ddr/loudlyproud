@@ -13,7 +13,7 @@
 
     <meta
       name="description"
-      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.book_description }}{{ end }}"
     >
 
     {{ partial "site-scripts.html" . }}

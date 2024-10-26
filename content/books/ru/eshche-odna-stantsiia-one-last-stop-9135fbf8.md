@@ -3,7 +3,7 @@ title: Еще одна станция (One Last Stop)
 draft: false
 type: books
 params:
-  title: Еще одна станция (One Last Stop)
+  bookTitle: Еще одна станция (One Last Stop)
   tags:
   - Brooklyn (New York N.Y.)
   - Fiction lesbian
@@ -28,7 +28,7 @@ params:
   publishers:
   - АСТ
   page_count: '512'
-  short_description: Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину...
+  short_book_description: Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину...
   russian_translation_status: exists
   languages:
   - Английский, Русский
@@ -36,7 +36,7 @@ params:
   : девушка из метро родом из прошлого.
   for cynical twenty-three-year-old august, moving to new york city is supposed to prove her right: 'that things like magic and cinematic love stories don’t exist, and the only smart way to go through life is alone. She can’t imagine how waiting tables at a 24-hour pancake diner and moving in with too many weird roommates could possibly change that. And there’s certainly no chance of her subway commute being anything more than a daily trudge through boredom and electrical failures.But then, there’s this gorgeous girl on the train.Jane. Dazzling, charming, mysterious, impossible Jane. Jane with her rough edges and swoopy hair and soft smile, showing up in a leather jacket to save August’s day when she needed it most. August’s subway crush becomes the best part of her day, but pretty soon, she discovers there’s one big problem: Jane doesn’t just look like an old school punk rocker. She’s literally displaced in time from the 1970s, and August is going to have to use everything she tried to
     leave in her own past to help her. Maybe it’s time to start believing in some things, after all.Casey McQuiston’sOne Last Stopis a magical, sexy, big-hearted romance where the impossible becomes possible as August does everything in her power to save the girl lost in time.'
-  description: 'Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной  закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину.
+  book_description: 'Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной  закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину.
 
     Правда, в поезде она встречает ее…
 
