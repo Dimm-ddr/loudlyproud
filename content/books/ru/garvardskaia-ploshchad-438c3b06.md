@@ -1,33 +1,38 @@
 ---
-title: Гарвардская Площадь
 draft: false
-type: books
 params:
+  authors:
+  - André Aciman, Александра Глебовская, Андре Асиман
   bookTitle: Гарвардская Площадь
+  book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта
+    — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста
+    и испытывает новую дружбу на прочность, переосмысливая свою жизнь в Америке. Андре
+    Асиман создал в высшей степени удивительный роман о самосознании и цене ассимиляции.
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638035447i/59710325.jpg
+  isbn: '9785604629'
+  languages:
+  - Русский
+  link: https://www.goodreads.com/book/show/59710325
+  page_count: '288'
+  publishers:
+  - Popcorn books
+  russian_audioversion: 'no'
+  russian_translation_status: exists
+  short_book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта
+    — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста
+    и испытывает новую дружбу на...
+  slug: garvardskaia-ploshchad-438c3b06
   tags:
-  - Literary Fiction
+  - LGBTQ+
+  - None
+  - United States
   - adult fiction
   - campus
   - contemporary
   - fiction
   - historical fiction
-  - LGBTQ+
-  - None
+  - literary fiction
   - novels
-  - United States
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638035447i/59710325.jpg
-  isbn: '9785604629'
-  link: https://www.goodreads.com/book/show/59710325
-  authors:
-  - André Aciman, Александра Глебовская, Андре Асиман
-  publishers:
-  - Popcorn books
-  page_count: '288'
-  short_book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста и испытывает новую дружбу на...
-  russian_translation_status: exists
-  languages:
-  - Русский
-  book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста и испытывает новую дружбу на прочность, переосмысливая свою жизнь в Америке. Андре Асиман создал в высшей степени удивительный роман о самосознании и цене ассимиляции.
-  russian_audioversion: 'no'
-  slug: garvardskaia-ploshchad-438c3b06
----
+title: Гарвардская Площадь
+type: books
+------

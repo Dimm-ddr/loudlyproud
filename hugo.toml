@@ -13,7 +13,20 @@ heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
 heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телеграм канал для анонсов о сайте</a>"
 
 [build]
-writeStats = true
+  writeStats = true
+  [[build.cachebusters]]
+    source = "assets/watching/hugo_stats\\.json"
+    target = "styles\\.css"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js|ts|jsx|tsx)"
+    target = "js"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
+
 
 # [outputFormats.SinglePartial]
 # mediaType = "text/html"

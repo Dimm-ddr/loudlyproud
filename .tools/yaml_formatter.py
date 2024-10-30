@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
-import os
 import sys
 from pathlib import Path
 import re
 import yaml
-from typing import Optional, Tuple, Dict, List
 from dataclasses import dataclass
 from collections import defaultdict
 
@@ -17,7 +15,12 @@ class ProcessingStats:
     skipped: int = 0
 
 
-def split_frontmatter(content: str) -> Optional[Tuple[dict, str]]:
+def get_project_root() -> Path:
+    """Get the project root directory."""
+    return Path(__file__).parent.parent
+
+
+def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
     pattern = r"^---\s*\n(.*?)\n---\s*\n(.*)$"
     match = re.match(pattern, content, re.DOTALL)
@@ -34,7 +37,7 @@ def split_frontmatter(content: str) -> Optional[Tuple[dict, str]]:
         return None
 
 
-def validate_frontmatter(frontmatter: dict, locale: str) -> List[str]:
+def validate_frontmatter(frontmatter: dict, locale: str) -> list[str]:
     """Validate frontmatter structure and required fields."""
     errors = []
 
@@ -77,7 +80,7 @@ def validate_frontmatter(frontmatter: dict, locale: str) -> List[str]:
     return errors
 
 
-def format_frontmatter(directory: Path) -> Dict[str, ProcessingStats]:
+def format_frontmatter(directory: Path) -> dict[str, ProcessingStats]:
     """Process all markdown files in the given directory structure."""
     stats = defaultdict(ProcessingStats)
 
@@ -142,9 +145,9 @@ def format_frontmatter(directory: Path) -> Dict[str, ProcessingStats]:
 
 
 def main():
-    # Get the books directory from the current working directory
-    current_dir = Path.cwd()
-    books_dir = current_dir / "content" / "books"
+    # Get the books directory from the project root
+    project_root = get_project_root()
+    books_dir = project_root / "content" / "books"
 
     if not books_dir.exists():
         print(f"Error: Books directory not found at {books_dir}")
@@ -154,6 +157,22 @@ def main():
     print(f"Processing books in: {books_dir}")
     stats = format_frontmatter(books_dir)
 
+    # Save stats to .data directory
+    stats_file = project_root / ".data" / "yaml-formatter-stats.json"
+    stats_file.parent.mkdir(exist_ok=True)
+
+    stats_dict = {
+        locale: {
+            "processed": stat.processed,
+            "errors": stat.errors,
+            "skipped": stat.skipped,
+        }
+        for locale, stat in stats.items()
+    }
+
+    with stats_file.open("w", encoding="utf-8") as f:
+        yaml.dump(stats_dict, f, allow_unicode=True, default_flow_style=False)
+
     # Print summary
     print("\nProcessing Summary:")
     print("-" * 40)
@@ -162,6 +181,8 @@ def main():
         print(f"  Processed: {stat.processed}")
         print(f"  Errors: {stat.errors}")
         print(f"  Skipped: {stat.skipped}")
+
+    print(f"\nDetailed statistics saved to {stats_file}")
 
 
 if __name__ == "__main__":
