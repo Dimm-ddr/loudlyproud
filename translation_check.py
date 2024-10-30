@@ -3,8 +3,8 @@ import re
 import sys
 
 
-def find_missing_translations(language_code):
-    i18n_file = f"i18n/{language_code}.toml"
+def find_missing_translations(language_code) -> None:
+    i18n_file: str = f"i18n/{language_code}.toml"
 
     # Check if the specified i18n file exists
     if not os.path.exists(i18n_file):
@@ -20,14 +20,14 @@ def find_missing_translations(language_code):
     missing_keys = set()
 
     # Regex to find {{ i18n "key" }} in templates
-    key_pattern = re.compile(r'{{\s*i18n\s+"(.*?)"\s*}}')
+    key_pattern: re.Pattern[str] = re.compile(r'{{\s*i18n\s+"(.*?)"\s*}}')
 
-    for root, dirs, files in os.walk(template_dir):
+    for root, _, files in os.walk(template_dir):
         for file_name in files:
             if file_name.endswith(".html"):
-                file_path = os.path.join(root, file_name)
+                file_path: str = os.path.join(root, file_name)
                 with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
+                    content: str = f.read()
                     template_keys = key_pattern.findall(content)
                     for key in template_keys:
                         if key not in i18n_keys:
@@ -46,5 +46,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python find_missing_translations.py <language_code>")
     else:
-        language_code = sys.argv[1]
+        language_code: str = sys.argv[1]
         find_missing_translations(language_code)
