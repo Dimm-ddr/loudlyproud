@@ -2,7 +2,9 @@ baseURL = "/"
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = true
 ignoreFiles = ['content/books/temp/.*']
+i18nDir = "i18n"
 
 [params]
 heroTitle = "Литературный каталог Loudly Proud"
@@ -11,11 +13,31 @@ heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
 heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телеграм канал для анонсов о сайте</a>"
 
 [build]
-writeStats = true
+  writeStats = true
+  [[build.cachebusters]]
+    source = "assets/watching/hugo_stats\\.json"
+    target = "styles\\.css"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js|ts|jsx|tsx)"
+    target = "js"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
 
-[outputs]
-home = ["HTML"]
-section = ["HTML"]
+
+# [outputFormats.SinglePartial]
+# mediaType = "text/html"
+# isPlainText = true
+# notAlternative = true
+# path = "books/single.partial"
+
+# [outputs]
+# books = ["HTML", "SinglePartial"]
+# home = ["HTML"]
+# section = ["HTML"]
 
 [markup]
 [markup.postCSS]
@@ -23,7 +45,7 @@ enable = true
 config = "postcss.config.js"
 
 [permalinks]
-books = "/books/:slug/"
+books = "/:slug/"
 
 [section]
 [section.books]
@@ -39,8 +61,10 @@ target = "content"
 [languages.en]
 languageName = "English"
 weight = 2
-contentDir = "content"
+contentDir = "content/books/en"
+languageCode = "en"
 [languages.ru]
 languageName = "Русский"
 weight = 1
-contentDir = "content"
+contentDir = "content/books/ru"
+languageCode = "ru"

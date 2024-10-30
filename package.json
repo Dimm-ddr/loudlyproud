@@ -1,13 +1,16 @@
 {
   "scripts": {
     "build:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css",
-    "build:pagefind": "pagefind --site public --output-subdir search",
     "build:hugo": "hugo --gc --minify",
+    "build:pagefind": "pagefind --site public --output-subdir search",
     "build": "npm run build:css && npm run build:hugo && npm run build:pagefind",
     "dev:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch",
     "dev:hugo": "hugo server --disableFastRender",
     "dev:pagefind": "nodemon --watch public --exec \"npm run build:pagefind\" --ext html",
-    "dev": "npm-run-all --parallel dev:css dev:hugo dev:pagefind"
+    "dev:cms": "npx decap-server",
+    "predev:hugo": "npm run build:css",
+    "dev:watch": "npm-run-all --parallel dev:css dev:hugo",
+    "dev": "npm-run-all --parallel dev:watch dev:pagefind"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",

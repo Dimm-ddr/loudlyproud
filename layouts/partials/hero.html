@@ -2,9 +2,20 @@
   <div class="absolute inset-0 bg-black opacity-60"></div>
   <div class="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
     <div class="max-w-xl mx-auto text-center">
-      <h1 class="text-3xl font-bold text-secondary mb-2">{{ .Site.Params.heroTitle }}</h1>
-      <p class="text-lg text-gray-200 mb-4">{{ .Site.Params.heroDescription | safeHTML }}</p>
-      <p class="text-white mt-4">{{ .Site.Params.heroTelegram | safeHTML }}</p>
+      <!-- Title: Using black weight for maximum impact on dark background -->
+      <h1 class="text-3xl font-black text-secondary mb-2">
+        {{ .Site.Params.heroTitle }}
+      </h1>
+
+      <!-- book_description: Using normal weight for readability -->
+      <p class="text-lg font-normal text-gray-200 mb-4 prose prose-invert max-w-none">
+        {{ .Site.Params.heroDescription | safeHTML }}
+      </p>
+
+      <!-- Telegram link: Using bold to stand out but not compete with title -->
+      <p class="text-white mt-4 font-bold">
+        {{ .Site.Params.heroTelegram | safeHTML }}
+      </p>
     </div>
   </div>
 </section>

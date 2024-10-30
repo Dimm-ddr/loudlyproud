@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Preview</title>
+  <link rel="stylesheet" href="/css/tailwind.css">
+</head>
+<body>
+  <div id="preview-target"></div>
+
+  <script>
+    // Get data from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const data = JSON.parse(decodeURIComponent(urlParams.get('data')));
+
+    // Fetch the single template
+    fetch('/books/single.partial.html')
+      .then(response => response.text())
+      .then(template => {
+        document.getElementById('preview-target').innerHTML = template;
+        // After template is loaded, populate it with data
+        window.postMessage({
+          type: 'preview-template-loaded',
+          data: data
+        }, '*');
+      })
+      .catch(console.error);
+  </script>
+</body>
+</html>
