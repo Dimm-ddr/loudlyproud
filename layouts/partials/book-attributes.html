@@ -1,10 +1,10 @@
-<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col" data-slug="{{ .File.ContentBaseName }}">
+<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col" data-slug="{{ .Params.slug }}">
     <!-- Image Container -->
     <div class="h-64 overflow-hidden">
         <a href="{{ .RelPermalink }}" class="block w-full h-full">
             <img class="w-full h-full object-contain"
                  src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
-                 alt="{{ .Title }}" loading="lazy">
+                 alt="{{ .Params.Title }}" loading="lazy">
         </a>
     </div>
 
@@ -35,7 +35,7 @@
         {{ end }}
 
         <!-- Short Description -->
-        {{ with .Params.short_description }}
+        {{ with .Params.short_book_description }}
             <div class="mb-2">
                 <h3 class="text-sm font-bold text-primary mb-1">{{ i18n "short_book_description" }}</h3>
                 <div class="prose max-w-none font-normal">{{ . | markdownify }}</div>
@@ -43,23 +43,13 @@
         {{ end }}
 
         <!-- Conditional Divider -->
-        {{ if .Params.short_description }}
+        {{ if .Params.short_book_description }}
         <hr class="border-t border-gray-300 my-4" />
         {{ end }}
 
         <!-- Tags - Bold for better visibility at small size -->
         {{ with .Params.tags }}
-        <div class="flex flex-wrap gap-1 mb-2">
-            {{ range . }}
-            {{ $tagClass := replace (lower .) "+" "-" }}
-            {{ $tagClass := replace $tagClass " " "-" }}
-            {{ $tagClass := replace $tagClass "(" "" }}
-            {{ $tagClass := replace $tagClass ")" "" }}
-            {{ $tagClass := replace $tagClass "'" "" }}
-            {{ $tagClass := replace $tagClass "&" "and" }}
-            <span class="text-xs px-2 py-1 rounded-full tag tag-{{ $tagClass }} font-bold">{{ . }}</span>
-            {{ end }}
-        </div>
+            {{ partial "book-tags.html" (dict "tags" . "extraClasses" "mb-2") }}
         {{ end }}
 
         <!-- Translation Status -->
@@ -67,14 +57,6 @@
             {{ with .Params.russian_translation_status }}
             <span class="text-sm font-bold {{ partial "getTranslationStatusColor" . }}">
                 {{ i18n (printf "translation_status_%s" .) }}
-            </span>
-            {{ end }}
-            {{ if eq .Params.russian_audioversion "yes" }}
-            <span class="ml-2 text-sm cursor-help">
-                🎧
-                <span class="hidden group-hover:block absolute z-10 bg-primary text-secondary text-xs font-normal rounded py-1 px-2 left-0 bottom-full mb-1">
-                    {{ i18n "audio_version" }}
-                </span>
             </span>
             {{ end }}
         </div>
