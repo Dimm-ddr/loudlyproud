@@ -14,57 +14,32 @@ heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телег�
 
 [build]
   writeStats = true
-  [[build.cachebusters]]
-    source = "assets/watching/hugo_stats\\.json"
-    target = "styles\\.css"
-  [[build.cachebusters]]
-    source = "(postcss|tailwind)\\.config\\.js"
-    target = "css"
-  [[build.cachebusters]]
-    source = "assets/.*\\.(js|ts|jsx|tsx)"
-    target = "js"
-  [[build.cachebusters]]
-    source = "assets/.*\\.(.*)$"
-    target = "$1"
-
-
-# [outputFormats.SinglePartial]
-# mediaType = "text/html"
-# isPlainText = true
-# notAlternative = true
-# path = "books/single.partial"
-
-# [outputs]
-# books = ["HTML", "SinglePartial"]
-# home = ["HTML"]
-# section = ["HTML"]
 
 [markup]
 [markup.postCSS]
 enable = true
 config = "postcss.config.js"
 
-[permalinks]
-books = "/:slug/"
 
 [section]
 [section.books]
 title = "Books"
 type = "books"
 
-[module]
-[[module.mounts]]
-source = "content/books"
-target = "content"
+
+[permalinks]
+books = "/books/:slugorfilename/"
 
 [languages]
 [languages.en]
 languageName = "English"
 weight = 2
-contentDir = "content/books/en"
 languageCode = "en"
+contentDir = "content/en"
+disabled = false
 [languages.ru]
 languageName = "Русский"
 weight = 1
-contentDir = "content/books/ru"
 languageCode = "ru"
+contentDir = "content/ru"
+disabled = false

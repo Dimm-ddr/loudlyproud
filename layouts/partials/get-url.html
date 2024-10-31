@@ -1,0 +1,9 @@
+{{/* layouts/partials/get-url.html */}}
+{{ $url := "" }}
+{{ with .Params.slug }}
+  {{ $url = . }}
+{{ else }}
+  {{ $url = .File.ContentBaseName }}
+{{ end }}
+
+{{ return $url }}

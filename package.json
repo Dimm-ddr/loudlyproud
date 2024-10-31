@@ -5,12 +5,11 @@
     "build:pagefind": "pagefind --site public --output-subdir search",
     "build": "npm run build:css && npm run build:hugo && npm run build:pagefind",
     "dev:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch",
-    "dev:hugo": "hugo server --disableFastRender",
-    "dev:pagefind": "nodemon --watch public --exec \"npm run build:pagefind\" --ext html",
+    "dev:hugo": "hugo server --disableFastRender --cleanDestinationDir",
+    "dev:pagefind": "wait-on http://localhost:1313 && nodemon --watch public --exec \"npm run build:pagefind\" --ext html",
     "dev:cms": "npx decap-server",
     "predev:hugo": "npm run build:css",
-    "dev:watch": "npm-run-all --parallel dev:css dev:hugo",
-    "dev": "npm-run-all --parallel dev:watch dev:pagefind"
+    "dev": "npm-run-all -p dev:hugo \"dev:css\" \"dev:pagefind\""
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -22,6 +21,7 @@
     "npm-run-all": "^4.1.5",
     "pagefind": "^1.1.1",
     "prettier": "^3.3.3",
-    "prettier-plugin-go-template": "^0.0.15"
+    "prettier-plugin-go-template": "^0.0.15",
+    "wait-on": "^8.0.1"
   }
 }
