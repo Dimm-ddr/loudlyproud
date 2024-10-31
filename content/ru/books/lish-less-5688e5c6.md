@@ -35,7 +35,7 @@ params:
   isbn: '9785604360552'
   languages:
   - Английский, Немецкий, Польский, Русский, Французский
-  link: https://www.goodreads.com/book/show/49049215
+  goodreads_link: https://www.goodreads.com/book/show/49049215
   page_count: '328'
   problem: 'You are a failed novelist about to turn fifty. A wedding invitation arrives
     in the mail: your boyfriend of the past nine years now engaged to someone else.

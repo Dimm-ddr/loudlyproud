@@ -16,7 +16,7 @@ params:
   isbn: '9785604474921'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/56213339
+  goodreads_link: https://www.goodreads.com/book/show/56213339
   page_count: '172'
   publication_year: '2021'
   russian_audioversion: 'no'

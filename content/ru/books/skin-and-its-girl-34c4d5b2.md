@@ -28,7 +28,7 @@ params:
   isbn: '9780593499559'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/61827532-the-skin-and-its-girl
+  goodreads_link: https://www.goodreads.com/book/show/61827532-the-skin-and-its-girl
   page_count: '352'
   publication_year: '2023'
   russian_audioversion: 'no'

@@ -15,7 +15,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640457315i/59931036.jpg
   editions count: '52'
   isbn: '9785041573485'
-  link: https://www.goodreads.com/book/show/59931036
+  goodreads_link: https://www.goodreads.com/book/show/59931036
   authors:
   - Aiden Thomas, Эйден Томас
   publication_year: '2008'

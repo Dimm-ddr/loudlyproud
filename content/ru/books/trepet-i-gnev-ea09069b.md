@@ -17,7 +17,7 @@ params:
   - vampires
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662383558i/62298056.jpg
   isbn: '9785041695859'
-  link: https://www.goodreads.com/book/show/62298056
+  goodreads_link: https://www.goodreads.com/book/show/62298056
   authors:
   - Karla Nikole, Карла Николь
   publishers:

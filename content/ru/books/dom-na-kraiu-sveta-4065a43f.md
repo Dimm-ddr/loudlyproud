@@ -19,7 +19,7 @@ params:
   isbn: '9785941453207'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/11720400
+  goodreads_link: https://www.goodreads.com/book/show/11720400
   page_count: '494'
   publication_year: '2005'
   russian_audioversion: 'no'

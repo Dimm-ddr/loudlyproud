@@ -23,7 +23,7 @@ params:
   isbn: '9781250146076'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/44017627-wayward-son
+  goodreads_link: https://www.goodreads.com/book/show/44017627-wayward-son
   page_count: '356'
   publication_year: '2019'
   publishers:

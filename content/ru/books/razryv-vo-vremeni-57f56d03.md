@@ -29,7 +29,7 @@ params:
   isbn: '9785699951413'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/36134429
+  goodreads_link: https://www.goodreads.com/book/show/36134429
   note: '**оригинальное название**: "The Gap Of Time: William Shakespeare'' The Winter''s
     Tale Retold: A Novel (hogarth Shakespeare)"'
   page_count: '320'

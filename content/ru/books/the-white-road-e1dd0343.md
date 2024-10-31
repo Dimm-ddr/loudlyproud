@@ -9,7 +9,6 @@ params:
   - epic fantasy
   - fantasy
   - fiction
-  - None
   - good and evil
   - high fantasy
   - LGBTQ+
@@ -19,7 +18,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1437305130i/6290240.jpg
   editions count: '1'
-  link: https://www.goodreads.com/book/show/6290240-the-white-road
+  goodreads_link: https://www.goodreads.com/book/show/6290240-the-white-road
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2010'

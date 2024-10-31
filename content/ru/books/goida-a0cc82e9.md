@@ -12,7 +12,7 @@ params:
     в столь жутком мире царской воли?'
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672870305i/75579659.jpg
   isbn: '9785041685454'
-  link: https://www.goodreads.com/book/show/75579659
+  goodreads_link: https://www.goodreads.com/book/show/75579659
   page_count: '864'
   russian_audioversion: 'no'
   russian_translation_status: exists

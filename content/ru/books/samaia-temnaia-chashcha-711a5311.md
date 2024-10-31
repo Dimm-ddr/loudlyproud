@@ -17,7 +17,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453485838i/28674947.jpg
   isbn: '9785170941889'
-  link: https://www.goodreads.com/book/show/28674947
+  goodreads_link: https://www.goodreads.com/book/show/28674947
   authors:
   - Holly Black, Холли Блэк
   publication_year: '2016'

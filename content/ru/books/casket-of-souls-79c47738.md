@@ -9,7 +9,6 @@ params:
   - fantasy
   - fiction
   - gay
-  - None
   - high fantasy
   - LGBTQ+
   - male-male romance
@@ -19,7 +18,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388342261i/10184855.jpg
   editions count: '1'
-  link: https://www.goodreads.com/book/show/10184855-casket-of-souls
+  goodreads_link: https://www.goodreads.com/book/show/10184855-casket-of-souls
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2012'

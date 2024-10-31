@@ -30,7 +30,7 @@ params:
   isbn: 0008637571
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/123033397-day
+  goodreads_link: https://www.goodreads.com/book/show/123033397-day
   page_count: '289'
   publication_year: '2023'
   russian_audioversion: 'no'

@@ -17,7 +17,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486137639i/34108203.jpg
   isbn: '9785699290345'
-  link: https://www.goodreads.com/book/show/34108203
+  goodreads_link: https://www.goodreads.com/book/show/34108203
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   translators:

@@ -20,7 +20,7 @@ params:
   isbn: '9798323194506'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/212253549-the-sunshine-court
+  goodreads_link: https://www.goodreads.com/book/show/212253549-the-sunshine-court
   page_count: '330'
   publication_year: '2024'
   publishers:

@@ -22,7 +22,7 @@ params:
   isbn: '1638931607'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/62888191-monstrilio
+  goodreads_link: https://www.goodreads.com/book/show/62888191-monstrilio
   page_count: '336'
   publication_year: '2023'
   russian_audioversion: 'no'

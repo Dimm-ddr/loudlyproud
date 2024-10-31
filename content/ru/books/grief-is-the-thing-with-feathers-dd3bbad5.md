@@ -19,7 +19,7 @@ params:
   isbn: '9780571323760'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/25334576-grief-is-the-thing-with-feathers
+  goodreads_link: https://www.goodreads.com/book/show/25334576-grief-is-the-thing-with-feathers
   page_count: '128'
   publication_year: '2015'
   russian_audioversion: 'no'

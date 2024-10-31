@@ -18,7 +18,7 @@ params:
   languages:
   - Английский, Баскский, Иврит, Испанский, Итальянский, Китайский, Немецкий, Словенский,
     Французский, Русский
-  link: https://www.goodreads.com/book/show/139569.Stone_Butch_Blues
+  goodreads_link: https://www.goodreads.com/book/show/139569.Stone_Butch_Blues
   page_count: '446'
   publication_year: '1993'
   russian_audioversion: 'no'

@@ -36,7 +36,7 @@ params:
   isbn: '9785604360583'
   languages:
   - Английский, Русский
-  link: https://www.goodreads.com/book/show/56468783
+  goodreads_link: https://www.goodreads.com/book/show/56468783
   page_count: '336'
   publication_year: '2016'
   publishers:

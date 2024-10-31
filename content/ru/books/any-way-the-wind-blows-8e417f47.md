@@ -21,7 +21,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610744543i/52190991.jpg
   isbn: '9781250254337'
-  link: https://www.goodreads.com/book/show/52190991-any-way-the-wind-blows
+  goodreads_link: https://www.goodreads.com/book/show/52190991-any-way-the-wind-blows
   authors:
   - Rainbow Rowell
   publication_year: '2021'

@@ -12,7 +12,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1645450275i/59664428.jpg
   isbn: '9785041605759'
-  link: https://www.goodreads.com/book/show/59664428
+  goodreads_link: https://www.goodreads.com/book/show/59664428
   authors:
   - Дмитрий Калинский, Фрэнсис Кель
   publication_year: '2018'

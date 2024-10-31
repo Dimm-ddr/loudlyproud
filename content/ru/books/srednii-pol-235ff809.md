@@ -12,7 +12,7 @@ params:
   isbn: '9785942784089'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/842304._
+  goodreads_link: https://www.goodreads.com/book/show/842304._
   page_count: '750'
   publication_year: '2003'
   russian_audioversion: 'no'

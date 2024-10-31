@@ -13,7 +13,7 @@ params:
     просто нужно кое-чему научиться.
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663968492i/62698387.jpg
   isbn: '9785001957102'
-  link: https://www.goodreads.com/book/show/62698387
+  goodreads_link: https://www.goodreads.com/book/show/62698387
   russian_audioversion: 'no'
   russian_translation_status: exists
   short_book_description: Светская львица Джордан Бейкер выросла в изысканных кругах

@@ -17,7 +17,7 @@ params:
   isbn: 0965072290
   languages:
   - Английский, Иврит
-  link: https://www.goodreads.com/book/show/129223.The_Well_of_Loneliness
+  goodreads_link: https://www.goodreads.com/book/show/129223.The_Well_of_Loneliness
   page_count: '467'
   publication_year: '1928'
   russian_audioversion: 'no'
@@ -38,7 +38,6 @@ params:
   - LGBTQ+
   - LGBTQ+ novels before Stonewall
   - Lesbiennes
-  - None
   - Romans nouvelles
   - Savants
   - Scholars

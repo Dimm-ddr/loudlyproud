@@ -15,7 +15,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551444831i/44165654.jpg
   isbn: '9785604072134'
-  link: https://www.goodreads.com/book/show/44165654
+  goodreads_link: https://www.goodreads.com/book/show/44165654
   authors:
   - Benjamin Alire Sáenz, Бенджамин Алире Саэнс
   publication_year: '2019'

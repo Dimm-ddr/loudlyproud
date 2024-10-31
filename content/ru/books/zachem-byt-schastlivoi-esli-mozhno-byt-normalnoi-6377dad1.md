@@ -20,7 +20,7 @@ params:
     и других. Награждена званием офицера ордена Британской империи в 2006 году.
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680031403i/123890941.jpg
   isbn: '9785604861103'
-  link: https://www.goodreads.com/book/show/123890941
+  goodreads_link: https://www.goodreads.com/book/show/123890941
   page_count: '223'
   russian_audioversion: 'no'
   russian_translation_status: exists

@@ -22,7 +22,7 @@ params:
   isbn: '9785699012848'
   languages:
   - Английский, Испанский, Итальянский, Немецкий, Нидерландский, Русский, Турецкий
-  link: https://www.goodreads.com/book/show/2524211
+  goodreads_link: https://www.goodreads.com/book/show/2524211
   page_count: '288'
   publication_year: '1992'
   publishers:
@@ -46,7 +46,6 @@ params:
   - Liebesbeziehung
   - Married people fiction
   - Married women
-  - None
   - Stonewall book awards
   - contemporary
   - fiction

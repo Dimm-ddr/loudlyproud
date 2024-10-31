@@ -17,7 +17,7 @@ params:
   isbn: '9785604458174'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55813701
+  goodreads_link: https://www.goodreads.com/book/show/55813701
   page_count: '222'
   publication_year: '2021'
   russian_audioversion: 'no'

@@ -26,7 +26,7 @@ params:
   isbn: '9781419769146'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/98653925-idlewild
+  goodreads_link: https://www.goodreads.com/book/show/98653925-idlewild
   page_count: '389'
   publication_year: '2023'
   russian_audioversion: 'no'

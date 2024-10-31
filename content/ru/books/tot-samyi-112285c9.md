@@ -13,7 +13,7 @@ params:
   isbn: '9785604458044'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/54000729
+  goodreads_link: https://www.goodreads.com/book/show/54000729
   page_count: '352'
   publication_year: '2020'
   russian_audioversion: 'no'

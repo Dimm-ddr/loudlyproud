@@ -25,7 +25,7 @@ params:
   isbn: 0525536183
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/51846014-under-the-rainbow
+  goodreads_link: https://www.goodreads.com/book/show/51846014-under-the-rainbow
   page_count: '288'
   publication_year: '2020'
   russian_audioversion: 'no'

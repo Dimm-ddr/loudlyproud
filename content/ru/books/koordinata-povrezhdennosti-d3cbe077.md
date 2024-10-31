@@ -6,7 +6,7 @@ params:
   bookTitle: Координата Поврежденности
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1619971294i/57919873.jpg
   isbn: '9785005354099'
-  link: https://www.goodreads.com/book/show/57919873
+  goodreads_link: https://www.goodreads.com/book/show/57919873
   authors:
   - Влади Лена, Владлена Дан
   page_count: '680'

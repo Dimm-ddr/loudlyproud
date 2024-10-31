@@ -24,7 +24,7 @@ params:
   isbn: '9781529153668'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/101673225-land-of-milk-and-honey
+  goodreads_link: https://www.goodreads.com/book/show/101673225-land-of-milk-and-honey
   page_count: '240'
   publication_year: '2023'
   russian_audioversion: 'no'

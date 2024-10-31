@@ -17,7 +17,7 @@ params:
   languages:
   - Английский, Испанский, Итальянский, Корейский, Немецкий, Нидерландский, Польский,
     Португальский, Русский, Финский
-  link: https://www.goodreads.com/book/show/32944167
+  goodreads_link: https://www.goodreads.com/book/show/32944167
   page_count: '760'
   publication_year: '2015'
   russian_audioversion: 'no'

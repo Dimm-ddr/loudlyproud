@@ -30,7 +30,7 @@ params:
   languages:
   - Английский, Испанский, Итальянский, Немецкий, Польский, Португальский, Русский,
     Турецкий
-  link: https://www.goodreads.com/book/show/52732634
+  goodreads_link: https://www.goodreads.com/book/show/52732634
   page_count: '384'
   publication_year: '2011'
   publishers:

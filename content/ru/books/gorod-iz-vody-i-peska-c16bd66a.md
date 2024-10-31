@@ -7,7 +7,7 @@ params:
   cover: Melina_Divajn__Gorod_iz_vody_i_peska.jpeg
   editions count: '1'
   isbn: '5171512167'
-  link: https://www.goodreads.com/book/show/68756880
+  goodreads_link: https://www.goodreads.com/book/show/68756880
   authors:
   - Мелина Дивайн
   publication_year: '2022'

@@ -16,7 +16,7 @@ params:
   isbn: '9785604588970'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/58260738
+  goodreads_link: https://www.goodreads.com/book/show/58260738
   page_count: '560'
   publishers:
   - Popcorn books

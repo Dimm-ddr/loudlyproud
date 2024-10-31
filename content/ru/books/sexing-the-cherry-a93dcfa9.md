@@ -15,7 +15,7 @@ params:
   isbn: 0099778602
   languages:
   - Английский, Испанский, Немецкий, Нидерландский, Турецкий
-  link: https://www.goodreads.com/book/show/15050.Sexing_the_Cherry
+  goodreads_link: https://www.goodreads.com/book/show/15050.Sexing_the_Cherry
   page_count: '167'
   publication_year: '1989'
   russian_audioversion: 'no'

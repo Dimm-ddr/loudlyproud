@@ -17,7 +17,7 @@ params:
   isbn: '9785041220372'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/60015692
+  goodreads_link: https://www.goodreads.com/book/show/60015692
   page_count: '544'
   publishers:
   - Inspiria, Эксмо

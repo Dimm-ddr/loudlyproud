@@ -24,7 +24,7 @@ params:
   isbn: '1472156498'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/56160395-with-teeth
+  goodreads_link: https://www.goodreads.com/book/show/56160395-with-teeth
   page_count: '304'
   publication_year: '2021'
   russian_audioversion: 'no'

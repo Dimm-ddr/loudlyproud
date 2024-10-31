@@ -16,7 +16,7 @@ params:
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1599810921i/48579405.jpg
   editions count: '28'
   isbn: '9785604785904'
-  link: https://www.goodreads.com/book/show/62246618
+  goodreads_link: https://www.goodreads.com/book/show/62246618
   authors:
   - Becky Albertalli, Бекки Алберталли
   publication_year: '2021'

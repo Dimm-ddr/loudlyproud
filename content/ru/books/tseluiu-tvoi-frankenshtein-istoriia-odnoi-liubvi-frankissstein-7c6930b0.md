@@ -44,7 +44,7 @@ params:
   isbn: '9785171216412'
   languages:
   - Английский, Испанский, Русский
-  link: https://www.goodreads.com/book/show/42123790-frankissstein
+  goodreads_link: https://www.goodreads.com/book/show/42123790-frankissstein
   page_count: '260'
   publication_year: '2019'
   publishers:

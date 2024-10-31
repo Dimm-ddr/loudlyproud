@@ -33,7 +33,7 @@ params:
   - Английский
   - Испанский
   - Нидерландский
-  link: https://www.goodreads.com/book/show/15049.The_World_and_Other_Places
+  goodreads_link: https://www.goodreads.com/book/show/15049.The_World_and_Other_Places
   note: 'существует перевод, но только одного из рассказов сборника: "Весь мир и другие
     страны" от Джанет Уинтерсон из журнала "Англия" от 1992 года.'
   page_count: '240'
@@ -49,7 +49,6 @@ params:
   slug: the-world-and-other-places-stories-0519a228
   tags:
   - LGBTQ+
-  - None
   - adult fiction
   - contemporary
   - fantasy

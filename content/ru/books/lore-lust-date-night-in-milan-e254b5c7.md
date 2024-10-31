@@ -10,7 +10,7 @@ params:
   isbn: '9781735589800'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/58410375-lore-lust
+  goodreads_link: https://www.goodreads.com/book/show/58410375-lore-lust
   page_count: '282'
   publication_year: '2020'
   publishers:

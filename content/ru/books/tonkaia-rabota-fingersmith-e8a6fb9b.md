@@ -31,7 +31,7 @@ params:
   isbn: '9785353017509'
   languages:
   - Английский, Испанский, Русский
-  link: https://www.goodreads.com/book/show/2138520._
+  goodreads_link: https://www.goodreads.com/book/show/2138520._
   page_count: '845'
   publication_year: '2002'
   publishers:

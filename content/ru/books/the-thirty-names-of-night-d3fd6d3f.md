@@ -33,7 +33,7 @@ params:
   isbn: '1982121491'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/52764801-the-thirty-names-of-night
+  goodreads_link: https://www.goodreads.com/book/show/52764801-the-thirty-names-of-night
   page_count: '304'
   publication_year: '2020'
   russian_audioversion: 'no'

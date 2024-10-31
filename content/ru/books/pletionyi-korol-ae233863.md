@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654705474i/61251131.jpg
   isbn: '9785604718193'
-  link: https://www.goodreads.com/book/show/61251131
+  goodreads_link: https://www.goodreads.com/book/show/61251131
   authors:
   - K. Ancrum, Кайла Анкрум
   page_count: '240'

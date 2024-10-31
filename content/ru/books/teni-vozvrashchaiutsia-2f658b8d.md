@@ -9,7 +9,6 @@ params:
   - fantasy
   - fiction
   - gay
-  - None
   - high fantasy
   - LGBTQ+
   - male-male romance
@@ -18,7 +17,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320504721i/2065091.jpg
   editions count: '2'
-  link: https://www.goodreads.com/book/show/2065091.Shadows_Return
+  goodreads_link: https://www.goodreads.com/book/show/2065091.Shadows_Return
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2008'

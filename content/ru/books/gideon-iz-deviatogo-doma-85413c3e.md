@@ -19,7 +19,7 @@ params:
   isbn: '9785041118440'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55544043
+  goodreads_link: https://www.goodreads.com/book/show/55544043
   page_count: '512'
   publication_year: '2020'
   russian_audioversion: 'no'

@@ -15,7 +15,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1643405670i/60232655.jpg
   isbn: '9781526619945'
-  link: https://www.goodreads.com/book/show/60232655
+  goodreads_link: https://www.goodreads.com/book/show/60232655
   authors:
   - Phil Stamper, Андрей Баннов, Фил Стэмпер
   publication_year: '2019'

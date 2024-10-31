@@ -15,7 +15,7 @@ params:
   isbn: '9785040931941'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/43217706
+  goodreads_link: https://www.goodreads.com/book/show/43217706
   page_count: '448'
   publishers:
   - Эксмо

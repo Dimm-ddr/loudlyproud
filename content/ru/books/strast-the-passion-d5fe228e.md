@@ -32,7 +32,7 @@ params:
   languages:
   - Английский, Испанский, Каталанский, Немецкий, Нидерландский, Русский, Турецкий,
     Французский
-  link: https://www.goodreads.com/book/show/15047.The_Passion
+  goodreads_link: https://www.goodreads.com/book/show/15047.The_Passion
   page_count: '176'
   publication_year: '1987'
   publishers:

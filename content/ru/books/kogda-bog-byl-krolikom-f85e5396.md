@@ -20,7 +20,7 @@ params:
   isbn: '9785389034747'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/16089119
+  goodreads_link: https://www.goodreads.com/book/show/16089119
   page_count: '352'
   publication_year: '2012'
   publishers:

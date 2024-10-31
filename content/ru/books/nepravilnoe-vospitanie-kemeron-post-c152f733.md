@@ -14,7 +14,7 @@ params:
     на кинофестивале Sundance в 2018 году.
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644399105i/60378754.jpg
   isbn: '9785604611982'
-  link: https://www.goodreads.com/book/show/60378754
+  goodreads_link: https://www.goodreads.com/book/show/60378754
   page_count: '512'
   russian_audioversion: 'no'
   russian_translation_status: exists

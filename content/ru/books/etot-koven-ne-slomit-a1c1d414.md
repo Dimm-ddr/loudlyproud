@@ -17,7 +17,7 @@ params:
   isbn: '9785171453510'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/61179885
+  goodreads_link: https://www.goodreads.com/book/show/61179885
   page_count: '352'
   publishers:
   - АСТ

@@ -21,7 +21,7 @@ params:
   isbn: '9781613724699'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/13563087-frog
+  goodreads_link: https://www.goodreads.com/book/show/13563087-frog
   page_count: '178'
   publication_year: '2012'
   russian_audioversion: 'no'

@@ -20,7 +20,7 @@ params:
   isbn: '9781662601040'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/58802411-the-town-of-babylon
+  goodreads_link: https://www.goodreads.com/book/show/58802411-the-town-of-babylon
   page_count: '322'
   publication_year: '2022'
   russian_audioversion: 'no'

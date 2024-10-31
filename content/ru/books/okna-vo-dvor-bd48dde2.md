@@ -14,7 +14,7 @@ params:
   isbn: '9785604785966'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/63370040
+  goodreads_link: https://www.goodreads.com/book/show/63370040
   page_count: '688'
   russian_audioversion: 'no'
   russian_translation_status: exists

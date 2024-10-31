@@ -33,7 +33,7 @@ params:
   isbn: '9785171216429'
   languages:
   - Английский, Испанский, Итальянский, Китайский, Корейский, Немецкий, Русский
-  link: https://www.goodreads.com/book/show/53341254
+  goodreads_link: https://www.goodreads.com/book/show/53341254
   page_count: '336'
   publication_year: '1952'
   publishers:

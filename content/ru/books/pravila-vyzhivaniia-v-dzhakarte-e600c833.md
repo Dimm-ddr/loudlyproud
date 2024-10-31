@@ -11,7 +11,7 @@ params:
   - Russia
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642798893i/60176962.jpg
   isbn: '9785001699842'
-  link: https://www.goodreads.com/book/show/60176962
+  goodreads_link: https://www.goodreads.com/book/show/60176962
   authors:
   - Arina T︠S︡imering, Oksana Bagriĭ, Арина Цимеринг, Оксана Багрий
   publication_year: '2022'

@@ -16,7 +16,7 @@ params:
   - Английский
   - Испанский
   - Русский
-  link: https://www.goodreads.com/book/show/60020842-heartstopper-2
+  goodreads_link: https://www.goodreads.com/book/show/60020842-heartstopper-2
   page_count: '320'
   publication_year: '2021'
   publishers:
@@ -31,7 +31,6 @@ params:
   slug: heartstopper-s-zamiraniem-serdtsa-tom-2-fb4175db
   tags:
   - LGBTQ+
-  - None
   - boys
   - coming of age
   - contemporary

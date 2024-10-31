@@ -31,7 +31,7 @@ params:
   isbn: '9785974300127'
   languages:
   - Английский, Испанский, Русский, Турецкий
-  link: https://www.goodreads.com/book/show/15046.Weight
+  goodreads_link: https://www.goodreads.com/book/show/15046.Weight
   page_count: '162'
   publication_year: '2005'
   publishers:
@@ -53,7 +53,6 @@ params:
   - Greek Mythology
   - Heracles (Greek mythology)
   - Mythology
-  - None
   - fantasy
   - fiction
   - literary fiction

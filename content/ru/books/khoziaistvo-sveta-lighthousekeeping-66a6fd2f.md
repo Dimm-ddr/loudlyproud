@@ -31,7 +31,7 @@ params:
   - Нидерландский
   - Русский
   - Турецкий
-  link: https://www.goodreads.com/book/show/2524212
+  goodreads_link: https://www.goodreads.com/book/show/2524212
   page_count: '320'
   publication_year: '2004'
   publishers:

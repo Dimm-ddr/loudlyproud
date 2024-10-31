@@ -6,7 +6,7 @@ params:
   bookTitle: Цветы В Пустоте
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660550972i/61224340.jpg
   isbn: '9785041226398'
-  link: https://www.goodreads.com/book/show/61224340
+  goodreads_link: https://www.goodreads.com/book/show/61224340
   authors:
   - Леа Рэд
   page_count: '496'

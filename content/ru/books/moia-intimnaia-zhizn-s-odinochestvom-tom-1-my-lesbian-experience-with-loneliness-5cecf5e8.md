@@ -19,7 +19,7 @@ params:
   - Итальянский
   - Русский
   - Японский
-  link: https://www.goodreads.com/book/show/54766327-1
+  goodreads_link: https://www.goodreads.com/book/show/54766327-1
   page_count: '144'
   publication_year: '2016'
   publishers:

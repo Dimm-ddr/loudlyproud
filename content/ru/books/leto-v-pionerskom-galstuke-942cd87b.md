@@ -17,7 +17,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630593788i/58870322.jpg
   isbn: '9785604653005'
-  link: https://www.goodreads.com/book/show/58870322
+  goodreads_link: https://www.goodreads.com/book/show/58870322
   authors:
   - Elena Malisova, Katerina Silvanova, Елена Малисова, Катерина Сильванова
   publication_year: '2021'

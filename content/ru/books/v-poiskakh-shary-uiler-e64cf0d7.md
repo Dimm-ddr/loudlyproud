@@ -29,7 +29,7 @@ params:
   isbn: '9785171474423'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/63121406
+  goodreads_link: https://www.goodreads.com/book/show/63121406
   page_count: '416'
   publishers:
   - АСТ

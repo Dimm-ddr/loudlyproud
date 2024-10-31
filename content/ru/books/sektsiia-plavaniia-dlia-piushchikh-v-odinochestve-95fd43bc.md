@@ -15,7 +15,7 @@ params:
   isbn: '9785604458150'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/52151042
+  goodreads_link: https://www.goodreads.com/book/show/52151042
   page_count: '302'
   publication_year: '2021'
   russian_audioversion: 'no'

@@ -27,7 +27,7 @@ params:
   isbn: '9781788167222'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/48890225-detransition-baby
+  goodreads_link: https://www.goodreads.com/book/show/48890225-detransition-baby
   page_count: '352'
   publication_year: '2021'
   russian_audioversion: 'no'

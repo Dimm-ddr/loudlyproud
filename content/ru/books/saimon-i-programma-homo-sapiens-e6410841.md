@@ -12,7 +12,7 @@ params:
   isbn: '9785990886162'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/40694429-homo-sapiens
+  goodreads_link: https://www.goodreads.com/book/show/40694429-homo-sapiens
   page_count: '366'
   publication_year: '2018'
   russian_audioversion: 'no'

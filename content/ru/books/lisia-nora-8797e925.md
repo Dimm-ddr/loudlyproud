@@ -16,7 +16,7 @@ params:
   isbn: '9785604360613'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/50731490
+  goodreads_link: https://www.goodreads.com/book/show/50731490
   page_count: '336'
   publication_year: '2020'
   publishers:

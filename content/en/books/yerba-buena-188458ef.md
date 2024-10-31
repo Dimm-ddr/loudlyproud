@@ -29,7 +29,7 @@ params:
   isbn: '9781250837820'
   languages:
   - English
-  link: https://www.goodreads.com/book/show/57693648-yerba-buena
+  goodreads_link: https://www.goodreads.com/book/show/57693648-yerba-buena
   page_count: '304'
   publication_year: '2022'
   russian_audioversion: 'no'

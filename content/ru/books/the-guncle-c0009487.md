@@ -15,7 +15,7 @@ params:
   - queer
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1594848421i/54508798.jpg
   isbn: '9781432887582'
-  link: https://www.goodreads.com/book/show/54508798-the-guncle
+  goodreads_link: https://www.goodreads.com/book/show/54508798-the-guncle
   authors:
   - Steven  Rowley, Steven Rowley
   publication_year: '2021'

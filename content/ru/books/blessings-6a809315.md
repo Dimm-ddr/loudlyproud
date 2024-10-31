@@ -25,7 +25,7 @@ params:
   isbn: 0385550642
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/198563681-blessings
+  goodreads_link: https://www.goodreads.com/book/show/198563681-blessings
   page_count: '288'
   publication_year: '2024'
   russian_audioversion: 'no'

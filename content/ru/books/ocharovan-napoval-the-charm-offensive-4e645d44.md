@@ -14,7 +14,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663969139i/62698467.jpg
   isbn: '9785001957126'
-  link: https://www.goodreads.com/book/show/62698467
+  goodreads_link: https://www.goodreads.com/book/show/62698467
   authors:
   - Alison Cochrun, Элисон Кокран
   publication_year: '2021'

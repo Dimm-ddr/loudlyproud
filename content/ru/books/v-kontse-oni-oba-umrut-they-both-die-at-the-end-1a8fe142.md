@@ -22,7 +22,7 @@ params:
   - Испанский
   - Португальский
   - Русский
-  link: https://www.goodreads.com/book/show/53937364
+  goodreads_link: https://www.goodreads.com/book/show/53937364
   page_count: '400'
   publication_year: '2017'
   publishers:

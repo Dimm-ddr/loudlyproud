@@ -18,7 +18,7 @@ params:
   isbn: '9785699038220'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/2885253
+  goodreads_link: https://www.goodreads.com/book/show/2885253
   page_count: '336'
   publication_year: '2003'
   publishers:
@@ -32,7 +32,6 @@ params:
   tags:
   - British literature
   - LGBTQ+
-  - None
   - art
   - contemporary
   - fiction

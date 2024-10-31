@@ -18,7 +18,7 @@ params:
   isbn: '9780765389510'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/31372178-passing-strange
+  goodreads_link: https://www.goodreads.com/book/show/31372178-passing-strange
   page_count: '222'
   publication_year: '2017'
   russian_audioversion: 'no'

@@ -17,7 +17,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486139033i/34108291.jpg
   isbn: '9785699351282'
-  link: https://www.goodreads.com/book/show/34108291
+  goodreads_link: https://www.goodreads.com/book/show/34108291
   authors:
   - Lynn Flewelling, А. Александрова, Линн Флевелинг, Линн Флевеллинг
   publication_year: '2009'

@@ -8,7 +8,7 @@ params:
   - fiction
   cover: 7128e3fe4e35dca2c08c9e213d32dc11cd2eba93684ef0636580f665aebf91e2.jpg
   isbn: '9785171273835'
-  link: https://openlibrary.org/books/OL46543156M/Pyataya_sestra
+  openlibrary_link: https://openlibrary.org/books/OL46543156M/Pyataya_sestra
   authors:
   - Медина Мирай, Мирай Медина
   publication_year: '2022'

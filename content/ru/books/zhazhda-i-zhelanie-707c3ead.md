@@ -17,7 +17,7 @@ params:
   isbn: '9785041679194'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/61182048
+  goodreads_link: https://www.goodreads.com/book/show/61182048
   page_count: '416'
   publishers:
   - Эксмо

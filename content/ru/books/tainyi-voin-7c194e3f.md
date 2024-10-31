@@ -10,7 +10,6 @@ params:
   - fantasy
   - fiction
   - genderqueer
-  - None
   - high fantasy
   - LGBTQ+
   - magic
@@ -18,7 +17,7 @@ params:
   - science fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347866367i/74274.jpg
   editions count: '3'
-  link: https://www.goodreads.com/book/show/74274.Hidden_Warrior
+  goodreads_link: https://www.goodreads.com/book/show/74274.Hidden_Warrior
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2003'

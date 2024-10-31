@@ -21,7 +21,7 @@ params:
   isbn: '9785389140301'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/42957757
+  goodreads_link: https://www.goodreads.com/book/show/42957757
   page_count: '240'
   publication_year: '2018'
   publishers:

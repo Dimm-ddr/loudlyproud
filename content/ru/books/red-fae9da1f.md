@@ -15,7 +15,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1671472804i/61387980.jpg
   isbn: 0593498240
-  link: https://www.goodreads.com/book/show/61387980-lucky-red
+  goodreads_link: https://www.goodreads.com/book/show/61387980-lucky-red
   authors:
   - Claudia Cravens
   publication_year: '2023'

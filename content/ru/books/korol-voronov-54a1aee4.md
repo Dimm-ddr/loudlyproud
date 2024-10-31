@@ -17,7 +17,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477103790i/17378527.jpg,
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680395146i/124937664.jpg
   isbn: '9785041737771'
-  link: https://www.goodreads.com/book/show/124937664
+  goodreads_link: https://www.goodreads.com/book/show/124937664
   authors:
   - Maggie Stiefvater, Мэгги Стивотер
   translators:

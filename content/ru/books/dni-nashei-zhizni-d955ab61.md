@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1578398401i/50347526.jpg
   isbn: '9785449668981'
-  link: https://www.goodreads.com/book/show/50347526
+  goodreads_link: https://www.goodreads.com/book/show/50347526
   authors:
   - Mikita Franko, Микита Франко
   page_count: '290'

@@ -6,7 +6,7 @@ params:
   bookTitle: Встретимся В Новом Мире
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668715859i/63128074.jpg
   isbn: '9785171528768'
-  link: https://www.goodreads.com/book/show/63128074
+  goodreads_link: https://www.goodreads.com/book/show/63128074
   authors:
   - Ли Томоко
   page_count: '320'

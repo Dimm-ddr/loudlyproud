@@ -10,7 +10,6 @@ params:
   - fantasy
   - fiction
   - gay
-  - None
   - high fantasy
   - LGBTQ+
   - male-male romance
@@ -24,7 +23,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377657570i/18006456.jpg
   editions count: '3'
   isbn: '9780345522313'
-  link: https://www.goodreads.com/book/show/18006456-shards-of-time
+  goodreads_link: https://www.goodreads.com/book/show/18006456-shards-of-time
   authors:
   - Lynn Flewelling
   publication_year: '2014'

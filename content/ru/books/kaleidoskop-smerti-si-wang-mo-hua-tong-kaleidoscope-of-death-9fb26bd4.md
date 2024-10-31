@@ -14,7 +14,7 @@ params:
   languages:
   - Китайский
   - Русский
-  link: https://www.goodreads.com/book/show/44089423-kaleidoscope-of-death
+  goodreads_link: https://www.goodreads.com/book/show/44089423-kaleidoscope-of-death
   page_count: '1900'
   russian_audioversion: 'no'
   russian_translation_status: exists

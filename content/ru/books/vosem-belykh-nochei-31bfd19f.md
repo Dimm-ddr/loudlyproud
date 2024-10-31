@@ -14,7 +14,7 @@ params:
   isbn: '9785604458020'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55114378
+  goodreads_link: https://www.goodreads.com/book/show/55114378
   page_count: '2020'
   publication_year: '2020'
   publishers:
@@ -27,7 +27,6 @@ params:
   slug: vosem-belykh-nochei-31bfd19f
   tags:
   - LGBTQ+
-  - None
   - adult fiction
   - christmas
   - contemporary

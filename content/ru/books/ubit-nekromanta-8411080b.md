@@ -12,7 +12,7 @@ params:
     молва, обвиняя его во всех смертных грехах?
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1263149924i/7537556.jpg
   isbn: '9785971703020'
-  link: https://www.goodreads.com/book/show/7537556
+  goodreads_link: https://www.goodreads.com/book/show/7537556
   page_count: '352'
   russian_audioversion: 'no'
   russian_translation_status: exists

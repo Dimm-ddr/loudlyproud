@@ -16,7 +16,7 @@ params:
   languages:
   - Английский
   - Русский
-  link: <https://www.goodreads.com/book/show/49531567>
+  goodreads_link: <https://www.goodreads.com/book/show/49531567>
   page_count: '432'
   publication_year: '2019'
   publishers:
@@ -37,7 +37,6 @@ params:
   - Iran
   - Iranian Americans
   - LGBTQ+
-  - None
   - audiobook
   - children's fiction
   - coming of age

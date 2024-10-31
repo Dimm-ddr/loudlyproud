@@ -24,7 +24,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   editions count: '61'
   isbn: '9785045041126'
-  link: https://www.goodreads.com/book/show/36341204-what-if-it-s-us
+  goodreads_link: https://www.goodreads.com/book/show/36341204-what-if-it-s-us
   authors:
   - Adam Silvera, Адам Сильвера
   - Becky Albertalli, Бекки Алберталли

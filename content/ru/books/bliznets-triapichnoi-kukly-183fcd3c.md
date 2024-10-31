@@ -17,7 +17,7 @@ params:
   - science fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1429512994i/25393096.jpg
   isbn: '9785699364848'
-  link: https://www.goodreads.com/book/show/25393096
+  goodreads_link: https://www.goodreads.com/book/show/25393096
   authors:
   - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2009'

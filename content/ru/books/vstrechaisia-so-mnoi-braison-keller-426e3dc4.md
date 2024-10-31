@@ -15,7 +15,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650137817i/60824456.jpg
   isbn: 0593126033
-  link: https://www.goodreads.com/book/show/60824456
+  goodreads_link: https://www.goodreads.com/book/show/60824456
   authors:
   - Кевин Ван Уай (Kevin van Whye)
   publication_year: '2020'

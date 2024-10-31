@@ -18,7 +18,7 @@ params:
   isbn: '1615813810'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/7641360-the-guardian
+  goodreads_link: https://www.goodreads.com/book/show/7641360-the-guardian
   page_count: '220'
   publication_year: '2010'
   russian_audioversion: 'no'

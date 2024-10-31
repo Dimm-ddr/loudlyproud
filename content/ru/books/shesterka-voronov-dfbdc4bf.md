@@ -16,7 +16,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1501657018i/35898314.jpg
   isbn: '9785171033903'
-  link: https://www.goodreads.com/book/show/35898314
+  goodreads_link: https://www.goodreads.com/book/show/35898314
   authors:
   - Leigh Bardugo
   publishers:

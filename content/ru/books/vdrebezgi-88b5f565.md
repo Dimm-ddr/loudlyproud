@@ -10,7 +10,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631313710i/52293127.jpg
   isbn: '9785041593926'
-  link: https://www.goodreads.com/book/show/52293127
+  goodreads_link: https://www.goodreads.com/book/show/52293127
   authors:
   - Макс Фальк
   publication_year: '2022'

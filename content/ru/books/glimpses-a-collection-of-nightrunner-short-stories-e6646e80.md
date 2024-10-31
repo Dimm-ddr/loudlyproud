@@ -18,7 +18,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387173663i/9368252.jpg
   editions count: '1'
   isbn: '9781453624913'
-  link: https://www.goodreads.com/book/show/9368252-glimpses
+  goodreads_link: https://www.goodreads.com/book/show/9368252-glimpses
   authors:
   - Lynn Flewelling
   publication_year: '2010'

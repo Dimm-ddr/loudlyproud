@@ -30,7 +30,7 @@ params:
   languages:
   - Английский
   - Русский
-  link: https://www.goodreads.com/book/show/58188308
+  goodreads_link: https://www.goodreads.com/book/show/58188308
   page_count: '480'
   publication_year: '2020'
   publishers:

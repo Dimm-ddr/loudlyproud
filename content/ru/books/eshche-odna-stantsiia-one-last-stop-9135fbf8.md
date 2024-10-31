@@ -41,7 +41,7 @@ params:
   isbn: '9785171375386'
   languages:
   - Английский, Русский
-  link: https://www.goodreads.com/book/show/58904780
+  goodreads_link: https://www.goodreads.com/book/show/58904780
   page_count: '512'
   publication_year: '2021'
   publishers:

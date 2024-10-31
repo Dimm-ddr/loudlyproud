@@ -23,7 +23,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
   editions count: '42'
   isbn: '9785171354374'
-  link: https://www.goodreads.com/book/show/60416703
+  goodreads_link: https://www.goodreads.com/book/show/60416703
   authors:
   - Amal El-Mohtar, Амаль Эль-Мохтар
   - Max Gladstone, Макс Гладстон

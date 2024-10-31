@@ -21,7 +21,7 @@ params:
   languages:
   - Английский, Вьетнамский, Испанский, Немецкий, Нидерландский, Португальский, Русский,
     Французский, Японский
-  link: https://www.goodreads.com/book/show/22023345
+  goodreads_link: https://www.goodreads.com/book/show/22023345
   page_count: '227'
   publication_year: '1976'
   publishers:

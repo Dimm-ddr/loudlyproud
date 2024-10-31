@@ -17,7 +17,7 @@ params:
   isbn: '9785389161740'
   languages:
   - Английский, Испанский, Китайский, Русский
-  link: https://www.goodreads.com/book/show/44171782
+  goodreads_link: https://www.goodreads.com/book/show/44171782
   page_count: '576'
   publication_year: '1999'
   publishers:

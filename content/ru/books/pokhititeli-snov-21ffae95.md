@@ -16,7 +16,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1540659639i/42476572.jpg
   isbn: '9785040931798'
-  link: https://www.goodreads.com/book/show/42476572
+  goodreads_link: https://www.goodreads.com/book/show/42476572
   authors:
   - Maggie Stiefvater, Мэгги Стивотер
   publishers:

@@ -19,7 +19,7 @@ params:
   isbn: '9785041556969'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59124751
+  goodreads_link: https://www.goodreads.com/book/show/59124751
   page_count: '576'
   publication_year: '2019'
   publishers:

@@ -18,7 +18,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615970260i/57439304.jpg
   editions count: '19'
   isbn: '9785699383672'
-  link: https://www.goodreads.com/book/show/57439304
+  goodreads_link: https://www.goodreads.com/book/show/57439304
   authors:
   - Линн Флевеллинг (Lynn Flewelling)
   publication_year: '2006'

@@ -18,7 +18,7 @@ params:
   isbn: '9785699479320'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/30326167
+  goodreads_link: https://www.goodreads.com/book/show/30326167
   page_count: '475'
   publication_year: '2011'
   russian_audioversion: 'no'

@@ -14,7 +14,7 @@ params:
   isbn: '9785699445103'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/61141029
+  goodreads_link: https://www.goodreads.com/book/show/61141029
   page_count: '537'
   publication_year: '2010'
   russian_audioversion: 'no'

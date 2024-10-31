@@ -20,7 +20,7 @@ params:
   isbn: 0571294197
   languages:
   - Английский, Испанский, Китайский
-  link: https://www.goodreads.com/book/show/13503109-this-is-how-you-lose-her
+  goodreads_link: https://www.goodreads.com/book/show/13503109-this-is-how-you-lose-her
   page_count: '240'
   publication_year: '2012'
   russian_audioversion: 'no'

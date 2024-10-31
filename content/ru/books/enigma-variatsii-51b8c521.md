@@ -17,7 +17,7 @@ params:
   isbn: '9785604262856'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/49564515--
+  goodreads_link: https://www.goodreads.com/book/show/49564515--
   page_count: '360'
   publication_year: '2020'
   publishers:

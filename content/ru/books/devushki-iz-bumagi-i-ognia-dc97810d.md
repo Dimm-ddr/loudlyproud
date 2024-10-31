@@ -22,7 +22,7 @@ params:
   isbn: '9785171145477'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/52906109
+  goodreads_link: https://www.goodreads.com/book/show/52906109
   page_count: '384'
   russian_audioversion: 'no'
   russian_translation_status: exists

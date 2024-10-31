@@ -28,7 +28,7 @@ params:
   isbn: 0349701776
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/41720140-you-exist-too-much
+  goodreads_link: https://www.goodreads.com/book/show/41720140-you-exist-too-much
   page_count: '268'
   publication_year: '2020'
   russian_audioversion: 'no'

@@ -13,7 +13,7 @@ params:
   isbn: '9785604072196'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/42929289
+  goodreads_link: https://www.goodreads.com/book/show/42929289
   page_count: '244'
   publication_year: '2018'
   russian_audioversion: 'no'

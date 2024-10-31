@@ -21,7 +21,7 @@ params:
   isbn: '9780358623410'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/58312003-the-unfortunates
+  goodreads_link: https://www.goodreads.com/book/show/58312003-the-unfortunates
   page_count: '256'
   publication_year: '2022'
   russian_audioversion: 'no'

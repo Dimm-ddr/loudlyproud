@@ -15,7 +15,7 @@ params:
   - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1670274962i/63956243.jpg
   isbn: '5041715610'
-  link: https://www.goodreads.com/book/show/63956243
+  goodreads_link: https://www.goodreads.com/book/show/63956243
   authors:
   - T.J. Klune, Альфериан Маклир, Ти Джей Клун
   publication_year: '2022'

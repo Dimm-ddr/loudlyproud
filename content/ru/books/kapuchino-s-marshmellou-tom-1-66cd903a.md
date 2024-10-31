@@ -13,13 +13,17 @@ params:
   cover: https://covers.openlibrary.org/b/id/14587297-L.jpg
   editions count: '2'
   isbn: '9786010925809'
-  link: https://openlibrary.org/works/OL37892845W
+  openlibrary_link: https://openlibrary.org/works/OL37892845W
   authors:
   - Woorie
-  где купить?: http://steklo.press/3
+  where_to_get:
+  - store: "Steklo Press"
+    link: http://steklo.press/3
+    date: "2024-10-31"
   publication_year: '2022'
   publishers:
-  - Popcorn books, Steklo Press
+  - Popcorn books
+  - Steklo Press
   page_count: '264'
   short_book_description: «Капучино с маршмэллоу» рассказывает историю Рэя и его лучших
     друзей — Таро, Бена, Тори, Яны и Лили. Это графический роман про дружбу, уютные

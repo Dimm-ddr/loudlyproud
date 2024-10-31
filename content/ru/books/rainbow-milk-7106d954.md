@@ -23,7 +23,7 @@ params:
   isbn: '9780349700588'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/55573130-rainbow-milk
+  goodreads_link: https://www.goodreads.com/book/show/55573130-rainbow-milk
   page_count: '368'
   publication_year: '2020'
   russian_audioversion: 'no'

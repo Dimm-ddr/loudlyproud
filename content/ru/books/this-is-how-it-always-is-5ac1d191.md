@@ -22,7 +22,7 @@ params:
   isbn: '1472241614'
   languages:
   - Английский, Русский
-  link: https://www.goodreads.com/book/show/40409102-this-is-how-it-always-is
+  goodreads_link: https://www.goodreads.com/book/show/40409102-this-is-how-it-always-is
   page_count: '336'
   publication_year: '2017'
   russian_audioversion: 'no'

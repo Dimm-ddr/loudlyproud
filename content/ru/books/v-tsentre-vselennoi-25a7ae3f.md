@@ -21,7 +21,7 @@ params:
   isbn: '9785000834886'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/44740441
+  goodreads_link: https://www.goodreads.com/book/show/44740441
   page_count: '432'
   publication_year: '2018'
   publishers:

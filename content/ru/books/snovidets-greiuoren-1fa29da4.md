@@ -16,7 +16,7 @@ params:
   isbn: '9785041755003'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/124937355
+  goodreads_link: https://www.goodreads.com/book/show/124937355
   page_count: '416'
   publication_year: '2020'
   publishers:

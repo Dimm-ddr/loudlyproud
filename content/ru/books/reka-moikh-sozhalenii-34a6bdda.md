@@ -6,7 +6,7 @@ params:
   bookTitle: Река Моих Сожалений
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1584271264i/52394893.jpg
   isbn: '9785171213800'
-  link: https://www.goodreads.com/book/show/52394893
+  goodreads_link: https://www.goodreads.com/book/show/52394893
   authors:
   - Медина Мирай
   page_count: '304'

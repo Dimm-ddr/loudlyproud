@@ -14,7 +14,7 @@ params:
   - science fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682956296i/61190770.jpg
   isbn: '9780375715402'
-  link: https://www.goodreads.com/book/show/61190770-chain-gang-all-stars
+  goodreads_link: https://www.goodreads.com/book/show/61190770-chain-gang-all-stars
   authors:
   - Nana Kwame Adjei-Brenyah
   publication_year: '2022'

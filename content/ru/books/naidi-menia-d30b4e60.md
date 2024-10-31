@@ -16,7 +16,7 @@ params:
   isbn: '9785604262894'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/49023667
+  goodreads_link: https://www.goodreads.com/book/show/49023667
   page_count: '320'
   publication_year: '2020'
   publishers:

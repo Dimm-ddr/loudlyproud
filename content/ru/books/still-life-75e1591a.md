@@ -23,7 +23,7 @@ params:
   isbn: 0008283354
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/57001545-still-life
+  goodreads_link: https://www.goodreads.com/book/show/57001545-still-life
   page_count: '580'
   publication_year: '2021'
   russian_audioversion: 'no'

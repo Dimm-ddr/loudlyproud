@@ -27,7 +27,7 @@ params:
   isbn: '9780374609870'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/62039259-open-throat
+  goodreads_link: https://www.goodreads.com/book/show/62039259-open-throat
   page_count: '176'
   publication_year: '2023'
   russian_audioversion: 'no'

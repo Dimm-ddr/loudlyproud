@@ -12,7 +12,7 @@ params:
   isbn: '9785604629'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59710325
+  goodreads_link: https://www.goodreads.com/book/show/59710325
   page_count: '288'
   publishers:
   - Popcorn books
@@ -24,7 +24,6 @@ params:
   slug: garvardskaia-ploshchad-438c3b06
   tags:
   - LGBTQ+
-  - None
   - United States
   - adult fiction
   - campus

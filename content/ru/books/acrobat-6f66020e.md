@@ -21,7 +21,7 @@ params:
   isbn: '9781613725009'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/13594866-acrobat
+  goodreads_link: https://www.goodreads.com/book/show/13594866-acrobat
   page_count: '250'
   publication_year: '2012'
   russian_audioversion: 'no'

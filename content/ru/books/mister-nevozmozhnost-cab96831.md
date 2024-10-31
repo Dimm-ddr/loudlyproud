@@ -18,7 +18,7 @@ params:
   isbn: '9785041126674'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/60699534
+  goodreads_link: https://www.goodreads.com/book/show/60699534
   page_count: '416'
   publication_year: '2022'
   publishers:

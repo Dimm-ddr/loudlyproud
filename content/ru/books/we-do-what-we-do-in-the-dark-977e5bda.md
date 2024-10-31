@@ -24,7 +24,7 @@ params:
   isbn: '9780593329672'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/58735038-we-do-what-we-do-in-the-dark
+  goodreads_link: https://www.goodreads.com/book/show/58735038-we-do-what-we-do-in-the-dark
   page_count: '224'
   publication_year: '2022'
   russian_audioversion: 'no'

@@ -13,7 +13,7 @@ params:
   isbn: '9785604262740'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/46144132
+  goodreads_link: https://www.goodreads.com/book/show/46144132
   page_count: '384'
   publication_year: '2019'
   publishers:

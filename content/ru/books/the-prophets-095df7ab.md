@@ -27,7 +27,7 @@ params:
   isbn: 0593295501
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/52576333-the-prophets
+  goodreads_link: https://www.goodreads.com/book/show/52576333-the-prophets
   page_count: '472'
   publication_year: '2021'
   russian_audioversion: 'no'
@@ -49,7 +49,6 @@ params:
   - LGBTQ+
   - Literary
   - New York Times reviewed
-  - None
   - Slaves
   - Slaves fiction
   - fiction

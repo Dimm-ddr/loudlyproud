@@ -27,7 +27,7 @@ params:
   isbn: '8433981188'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/48902303-memorial
+  goodreads_link: https://www.goodreads.com/book/show/48902303-memorial
   page_count: '344'
   publication_year: '2020'
   russian_audioversion: 'no'

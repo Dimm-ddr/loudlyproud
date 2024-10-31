@@ -20,7 +20,7 @@ params:
   isbn: '9785041054151'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/52895800
+  goodreads_link: https://www.goodreads.com/book/show/52895800
   page_count: '544'
   publication_year: '2018'
   publishers:

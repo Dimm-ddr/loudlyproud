@@ -17,7 +17,7 @@ params:
   - vampires
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651335853i/60908297.jpg
   isbn: '9781735589886'
-  link: https://www.goodreads.com/book/show/60908297-the-arrival
+  goodreads_link: https://www.goodreads.com/book/show/60908297-the-arrival
   authors:
   - Karla Nikole
   publishers:

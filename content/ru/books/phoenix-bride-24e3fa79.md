@@ -29,7 +29,7 @@ params:
   isbn: '9780593597873'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/177185888-the-phoenix-bride
+  goodreads_link: https://www.goodreads.com/book/show/177185888-the-phoenix-bride
   page_count: '337'
   publication_year: '2024'
   russian_audioversion: 'no'

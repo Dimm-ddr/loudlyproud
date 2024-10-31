@@ -37,7 +37,7 @@ params:
   - Русский
   - Французский
   - Хорватский
-  link: https://www.goodreads.com/book/show/13180707
+  goodreads_link: https://www.goodreads.com/book/show/13180707
   page_count: '230'
   publication_year: '1998'
   publishers:

@@ -20,7 +20,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1562781746i/34510711.jpg
   editions count: '37'
   isbn: '9785604687765'
-  link: https://www.goodreads.com/book/show/59901706
+  goodreads_link: https://www.goodreads.com/book/show/59901706
   authors:
   - Adam Silvera, Адам Сильвера
   publication_year: '2019'

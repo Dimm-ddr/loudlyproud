@@ -19,7 +19,7 @@ params:
   isbn: '9785041627126'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/59827974
+  goodreads_link: https://www.goodreads.com/book/show/59827974
   page_count: '385'
   publication_year: '2021'
   russian_audioversion: 'no'

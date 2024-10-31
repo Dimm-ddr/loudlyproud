@@ -39,7 +39,7 @@ params:
   isbn: '9785041594565'
   languages:
   - Английский, Испанский, Немецкий, Русский
-  link: https://www.goodreads.com/book/show/61177447
+  goodreads_link: https://www.goodreads.com/book/show/61177447
   page_count: '448'
   publication_year: '2017'
   publishers:

@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1608197941i/56317968.jpg
   isbn: '9785271485947'
-  link: https://www.goodreads.com/book/show/56317968
+  goodreads_link: https://www.goodreads.com/book/show/56317968
   authors:
   - Софи Гонзалес (Sophie Gonzales)
   page_count: '320'

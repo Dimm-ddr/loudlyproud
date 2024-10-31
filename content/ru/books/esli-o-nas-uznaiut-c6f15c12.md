@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653252011i/61147862.jpg
   isbn: '9785171394493'
-  link: https://www.goodreads.com/book/show/61147862
+  goodreads_link: https://www.goodreads.com/book/show/61147862
   authors:
   - Cale Dietrich
   - Sophie Gonzales, Софи Гонзалес

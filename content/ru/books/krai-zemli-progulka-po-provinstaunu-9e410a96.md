@@ -17,7 +17,7 @@ params:
   isbn: '9785171207229'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55236655
+  goodreads_link: https://www.goodreads.com/book/show/55236655
   page_count: '224'
   publication_year: '2021'
   publishers:

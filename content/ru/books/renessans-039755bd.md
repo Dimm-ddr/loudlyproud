@@ -6,7 +6,7 @@ params:
   bookTitle: Ренессанс
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653727911i/61179959.jpg
   isbn: '9785041645816'
-  link: https://www.goodreads.com/book/show/61179959
+  goodreads_link: https://www.goodreads.com/book/show/61179959
   authors:
   - Фрэнсис Кель
   publishers:

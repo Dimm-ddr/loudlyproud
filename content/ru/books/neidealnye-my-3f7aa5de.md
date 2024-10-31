@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1681151527i/105753180.jpg
   isbn: '9785001955375'
-  link: https://www.goodreads.com/book/show/105753180
+  goodreads_link: https://www.goodreads.com/book/show/105753180
   authors:
   - Vitor Martins
   publication_year: '2022'

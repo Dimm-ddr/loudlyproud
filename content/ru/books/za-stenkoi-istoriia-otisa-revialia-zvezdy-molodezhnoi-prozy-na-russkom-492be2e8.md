@@ -8,7 +8,7 @@ params:
   - fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1710480243i/209972881.jpg
   isbn: '9785043228932'
-  link: https://www.goodreads.com/book/show/209972881
+  goodreads_link: https://www.goodreads.com/book/show/209972881
   authors:
   - Габриэль Коста
   publication_year: '2021'

@@ -19,7 +19,7 @@ params:
   isbn: '9785389112674'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/41540351
+  goodreads_link: https://www.goodreads.com/book/show/41540351
   page_count: '576'
   publication_year: '2018'
   publishers:

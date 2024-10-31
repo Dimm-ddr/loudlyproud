@@ -30,7 +30,7 @@ params:
   isbn: '9781526604989'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/45169231-swimming-in-the-dark
+  goodreads_link: https://www.goodreads.com/book/show/45169231-swimming-in-the-dark
   page_count: '176'
   publication_year: '2020'
   russian_audioversion: 'no'

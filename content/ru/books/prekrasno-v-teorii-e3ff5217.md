@@ -22,7 +22,7 @@ params:
   isbn: '9785171392383'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59776151
+  goodreads_link: https://www.goodreads.com/book/show/59776151
   page_count: '384'
   publication_year: '2022'
   russian_audioversion: 'no'

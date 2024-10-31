@@ -18,7 +18,7 @@ params:
   isbn: '9785604458051'
   languages:
   - Английский, Русский
-  link: https://www.goodreads.com/book/show/53937273
+  goodreads_link: https://www.goodreads.com/book/show/53937273
   page_count: '400'
   publication_year: '2015'
   publishers:

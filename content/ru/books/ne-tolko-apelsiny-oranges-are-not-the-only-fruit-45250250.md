@@ -25,7 +25,7 @@ params:
   - Немецкий
   - Нидерландский
   - Русский
-  link: https://www.goodreads.com/book/show/51073243
+  goodreads_link: https://www.goodreads.com/book/show/51073243
   page_count: '224'
   publication_year: '1985'
   publishers:

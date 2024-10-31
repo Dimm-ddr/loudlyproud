@@ -21,7 +21,7 @@ params:
   isbn: '9785171379896'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59463974
+  goodreads_link: https://www.goodreads.com/book/show/59463974
   page_count: '352'
   publication_year: '2022'
   publishers:

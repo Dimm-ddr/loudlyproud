@@ -17,7 +17,7 @@ params:
   isbn: '9785604653050'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59951415
+  goodreads_link: https://www.goodreads.com/book/show/59951415
   page_count: '224'
   publication_year: '2022'
   publishers:

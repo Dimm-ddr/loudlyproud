@@ -18,7 +18,7 @@ params:
     человечества – Священного Грааля.
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1646588774i/60560990.jpg
   isbn: '9785171188023'
-  link: https://www.goodreads.com/book/show/60560990
+  goodreads_link: https://www.goodreads.com/book/show/60560990
   page_count: '832'
   russian_audioversion: 'no'
   russian_translation_status: exists

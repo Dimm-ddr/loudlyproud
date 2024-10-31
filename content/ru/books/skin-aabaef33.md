@@ -11,7 +11,7 @@ params:
   isbn: 038530899
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/219588.Skin
+  goodreads_link: https://www.goodreads.com/book/show/219588.Skin
   page_count: '310'
   publication_year: '1993'
   russian_audioversion: 'no'

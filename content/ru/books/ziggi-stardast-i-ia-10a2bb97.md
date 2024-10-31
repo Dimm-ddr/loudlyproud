@@ -17,7 +17,7 @@ params:
   isbn: '9785041155568'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55342910
+  goodreads_link: https://www.goodreads.com/book/show/55342910
   page_count: '416'
   publication_year: '2019'
   publishers:

@@ -6,7 +6,7 @@ params:
   bookTitle: Жизнь На Repeat. За Тобой
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675674857i/102189973.jpg
   isbn: '9785171351793'
-  link: https://www.goodreads.com/book/show/102189973-repeat
+  goodreads_link: https://www.goodreads.com/book/show/102189973-repeat
   authors:
   - Эли Фрей (Frej Eli)
   publication_year: '2021'

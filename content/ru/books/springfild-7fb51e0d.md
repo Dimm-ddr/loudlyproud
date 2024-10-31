@@ -18,7 +18,7 @@ params:
   isbn: '9780993820236'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/134160403
+  goodreads_link: https://www.goodreads.com/book/show/134160403
   page_count: '134'
   publication_year: '2023'
   publishers:

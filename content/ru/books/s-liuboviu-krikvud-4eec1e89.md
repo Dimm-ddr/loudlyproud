@@ -13,7 +13,7 @@ params:
   isbn: '9785604611913'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/58706203
+  goodreads_link: https://www.goodreads.com/book/show/58706203
   page_count: '112'
   publishers:
   - Popcorn books

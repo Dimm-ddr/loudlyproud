@@ -16,7 +16,7 @@ params:
   isbn: '9785604458136'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/55710360
+  goodreads_link: https://www.goodreads.com/book/show/55710360
   page_count: '432'
   publication_year: '2020'
   publishers:

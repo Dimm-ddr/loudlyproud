@@ -14,7 +14,7 @@ params:
   - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1600264221i/39329461.jpg
   isbn: '9785045032513'
-  link: https://www.goodreads.com/book/show/39329461
+  goodreads_link: https://www.goodreads.com/book/show/39329461
   authors:
   - André Aciman, Андре Асиман
   publication_year: '2024'

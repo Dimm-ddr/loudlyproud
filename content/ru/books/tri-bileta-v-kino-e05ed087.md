@@ -8,7 +8,7 @@ params:
   - fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622041527i/58166560.jpg
   isbn: '9785043147509'
-  link: https://www.goodreads.com/book/show/58166560
+  goodreads_link: https://www.goodreads.com/book/show/58166560
   authors:
   - Яна Ткачёва
   publication_year: '2020'

@@ -15,7 +15,7 @@ params:
   isbn: '9780606291507'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/595375.Annie_on_My_Mind
+  goodreads_link: https://www.goodreads.com/book/show/595375.Annie_on_My_Mind
   page_count: '233'
   publication_year: '1982'
   russian_audioversion: 'no'

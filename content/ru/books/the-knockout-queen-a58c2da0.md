@@ -26,7 +26,7 @@ params:
   isbn: 0525656782
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/50852136-the-knockout-queen
+  goodreads_link: https://www.goodreads.com/book/show/50852136-the-knockout-queen
   page_count: '288'
   publication_year: '2020'
   russian_audioversion: 'no'

@@ -16,7 +16,7 @@ params:
   isbn: '9785604718117'
   languages:
   - Русский
-  link: https://www.goodreads.com/book/show/59921504
+  goodreads_link: https://www.goodreads.com/book/show/59921504
   page_count: '304'
   publishers:
   - Popcorn books

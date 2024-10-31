@@ -23,7 +23,7 @@ params:
   isbn: '9780241648506'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/59948520-in-memoriam
+  goodreads_link: https://www.goodreads.com/book/show/59948520-in-memoriam
   page_count: '400'
   publication_year: '2023'
   russian_audioversion: 'no'

@@ -20,7 +20,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650101290i/60821241.jpg
   editions count: '6'
   isbn: '9785604653296'
-  link: https://www.goodreads.com/book/show/60821241
+  goodreads_link: https://www.goodreads.com/book/show/60821241
   authors:
   - Adib Khorram, Адиб Хоррам
   publication_year: '2019'

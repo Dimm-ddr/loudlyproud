@@ -24,7 +24,7 @@ params:
   isbn: '9780802162120'
   languages:
   - Английский
-  link: https://www.goodreads.com/book/show/58891551-young-mungo
+  goodreads_link: https://www.goodreads.com/book/show/58891551-young-mungo
   page_count: '424'
   publication_year: '2022'
   russian_audioversion: 'no'
