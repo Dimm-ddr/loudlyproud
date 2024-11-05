@@ -5,7 +5,7 @@
     "build:pagefind": "pagefind --site public --output-subdir search",
     "build": "npm run build:css && npm run build:hugo && npm run build:pagefind",
     "dev:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch",
-    "dev:hugo": "hugo server --disableFastRender --cleanDestinationDir",
+    "dev:hugo": "hugo server --disableFastRender --cleanDestinationDir --printI18nWarnings",
     "dev:pagefind": "wait-on http://localhost:1313 && nodemon --watch public --exec \"npm run build:pagefind\" --ext html",
     "dev:cms": "npx decap-server",
     "predev:hugo": "npm run build:css",
