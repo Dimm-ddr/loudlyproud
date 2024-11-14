@@ -1,43 +1,67 @@
 import { PaginationConfig, PaginationElements, PaginationState } from '../types/pagination';
 
 export class Pagination {
-  private elements: PaginationElements;
-  private state: PaginationState;
-  private books: HTMLElement[];
+  private elements: {
+    gallery: HTMLElement;
+    itemsPerPageSelect: HTMLSelectElement;
+    prevButton: HTMLElement;
+    nextButton: HTMLElement;
+    pageInfo: HTMLElement;
+    noResults: HTMLElement;
+    pagination: HTMLElement;
+  };
 
-  constructor(elements: PaginationElements, config: PaginationConfig) {
+  private config: {
+    itemsPerPage: number;
+    currentPage: number;
+    totalItems: number;
+  };
+
+  constructor(elements: any, config: any) {
     this.elements = elements;
-    this.books = Array.from(this.elements.gallery.children) as HTMLElement[];
-
-    this.state = {
-      ...config,
-      totalPages: Math.ceil(config.totalItems / config.itemsPerPage)
-    };
+    this.config = config;
 
     this.initializeEventListeners();
-    this.renderPage();
+    this.updateDisplay();
   }
 
-  private renderPage(): void {
+  private initializeEventListeners() {
+    // Items per page change
+    this.elements.itemsPerPageSelect.addEventListener('change', () => {
+      this.config.itemsPerPage = parseInt(this.elements.itemsPerPageSelect.value);
+      this.config.currentPage = 1; // Reset to first page when changing items per page
+      this.updateDisplay();
+    });
+
+    // Navigation buttons
+    this.elements.prevButton.addEventListener('click', () => this.previousPage());
+    this.elements.nextButton.addEventListener('click', () => this.nextPage());
+  }
+
+  private updateDisplay(): void {
     // Hide all books
-    this.books.forEach(book => book.style.display = 'none');
+    Array.from(this.elements.gallery.children).forEach(book =>
+      (book as HTMLElement).style.display = 'none'
+    );
 
     // Show books for current page
-    const start = (this.state.currentPage - 1) * this.state.itemsPerPage;
-    const end = start + this.state.itemsPerPage;
-    this.books.slice(start, end).forEach(book => book.style.display = 'block');
+    const start = (this.config.currentPage - 1) * this.config.itemsPerPage;
+    const end = start + this.config.itemsPerPage;
+    Array.from(this.elements.gallery.children)
+      .slice(start, end)
+      .forEach(book => (book as HTMLElement).style.display = 'block');
 
     // Update page info
-    this.elements.pageInfo.textContent =
-      `Page ${this.state.currentPage} of ${this.state.totalPages}`;
+    const totalPages = Math.ceil(this.config.totalItems / this.config.itemsPerPage);
+    this.elements.pageInfo.textContent = `Page ${this.config.currentPage} of ${totalPages}`;
 
-    this.updateButtonStates();
-    this.toggleNoResults();
+    this.updateButtonStates(totalPages);
+    this.toggleNoResults(totalPages);
   }
 
-  private updateButtonStates(): void {
+  private updateButtonStates(totalPages: number): void {
     // Previous button
-    if (this.state.currentPage === 1) {
+    if (this.config.currentPage === 1) {
       this.elements.prevButton.classList.add('cursor-not-allowed', 'opacity-50');
       this.elements.prevButton.setAttribute('aria-disabled', 'true');
     } else {
@@ -46,7 +70,7 @@ export class Pagination {
     }
 
     // Next button
-    if (this.state.currentPage === this.state.totalPages || this.state.totalPages === 0) {
+    if (this.config.currentPage === totalPages || totalPages === 0) {
       this.elements.nextButton.classList.add('cursor-not-allowed', 'opacity-50');
       this.elements.nextButton.setAttribute('aria-disabled', 'true');
     } else {
@@ -55,8 +79,8 @@ export class Pagination {
     }
   }
 
-  private toggleNoResults(): void {
-    if (this.state.totalPages === 0) {
+  private toggleNoResults(totalPages: number): void {
+    if (totalPages === 0) {
       this.elements.noResults.classList.remove('hidden');
       this.elements.pagination.classList.add('hidden');
     } else {
@@ -65,11 +89,18 @@ export class Pagination {
     }
   }
 
-  private updatePagination(): void {
-    // Implementation for updating pagination
+  private previousPage(): void {
+    if (this.config.currentPage > 1) {
+      this.config.currentPage--;
+      this.updateDisplay();
+    }
   }
 
-  private initializeEventListeners(): void {
-    // Implementation for initializing event listeners
+  private nextPage(): void {
+    const totalPages = Math.ceil(this.config.totalItems / this.config.itemsPerPage);
+    if (this.config.currentPage < totalPages) {
+      this.config.currentPage++;
+      this.updateDisplay();
+    }
   }
-} 
+}
