@@ -15,6 +15,7 @@
 
     <!-- Content -->
     <div class="p-4 flex flex-col flex-grow">
+        <!-- Title -->
         <h2 class="text-xl font-black mb-2 text-primary">
             <a href="{{ .RelPermalink }}"
                class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
@@ -29,18 +30,53 @@
         </p>
         {{ end }}
 
-        <!-- Local-only content -->
+        <!-- Translators -->
+        {{ with .Params.translators }}
+        <p class="text-sm font-light text-primary mb-2">
+            <span class="italic">{{ i18n "translators" }}: {{ delimit . ", " }}</span>
+        </p>
+        {{ end }}
+
+        <!-- Series -->
+        {{ if .Params.series }}
+        <p class="series text-center text-base font-light italic text-gray-500 mb-2">
+            {{ .Params.series }}
+        </p>
+        {{ end }}
+
+        <!-- Short Description -->
         {{ with .Params.short_book_description }}
         <div class="prose prose-sm mb-4">
             {{ . | markdownify }}
         </div>
         {{ end }}
 
-        <!-- Tags -->
-        {{ with .Params.tags }}
-        <div class="mt-auto">
-            {{ partial "book-tags.html" (dict "tags" . "extraClasses" "mb-2") }}
+        <div class="mt-auto space-y-2">
+            <!-- Tags -->
+            {{ with .Params.tags }}
+            <div class="flex flex-wrap gap-1">
+                {{ range . }}
+                    {{ partial "tag-component.html" (dict "tag" . "clickable" true) }}
+                {{ end }}
+            </div>
+            {{ end }}
+
+            <!-- Translation Status -->
+            {{ with .Params.russian_translation_status }}
+            <div class="text-sm font-bold {{ template "getTranslationStatusColor" . }}">
+                {{ i18n (printf "translation_status_%s" .) }}
+            </div>
+            {{ end }}
+
+            <!-- Buy Link -->
+            {{ with .Params.buy_link }}
+            <a href="{{ . }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-sm font-normal text-accent3 hover:underline block">
+                {{ i18n "buy_link" }}
+            </a>
+            {{ end }}
         </div>
-        {{ end }}
     </div>
-</article> 
+</article>

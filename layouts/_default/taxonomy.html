@@ -61,15 +61,11 @@
 
                 <div class="flex flex-wrap gap-2" :class="{ 'max-h-20 overflow-hidden': !showAllTags }">
                     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                        <button
-                            x-data
-                            :data-tag="{{ $name | jsonify }}"
-                            @click="$store.tagManager.addTag($el.dataset.tag)"
-                            :class="{ 'bg-accent1 text-white': $store.tagManager.hasTag($el.dataset.tag) }"
-                            class="tag bg-light-gray hover:bg-accent1 hover:text-white transition-colors duration-200"
-                        >
-                            {{ humanize $name }} ({{ len $taxonomy }})
-                        </button>
+                        {{ partial "tag-component.html" (dict
+                            "tag" $name
+                            "clickable" true
+                            "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                        ) }}
                     {{ end }}
                 </div>
             </div>
@@ -79,7 +75,7 @@
         <section id="book-gallery"
                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {{ range .Pages }}
-                {{ partial "book-attributes.html" . }}
+                {{ partial "book-card.html" . }}
             {{ end }}
         </section>
 

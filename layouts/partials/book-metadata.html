@@ -1,0 +1,35 @@
+{{ define "book-metadata" }}
+<div class="book-metadata">
+  {{ with .Params.page_count }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "page_count" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  {{ with .Params.publication_year }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "publication_year" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  {{ with .Params.isbn }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "isbn" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  {{ with .Params.russian_translation_status }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "russian_translation" }}:</span>
+    {{ i18n (printf "translation_status_%s" .) }}
+  </div>
+  {{ end }}
+
+  {{ with .Params.languages }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "languages" }}:</span>
+    {{ delimit . ", " }}
+  </div>
+  {{ end }}
+</div>
+{{ end }} 

@@ -1,4 +1,9 @@
-{{ define "partials/getTranslationStatusColor" }}
+{{/*
+  custom-functions.html
+  Collection of reusable Hugo functions/helpers
+*/}}
+
+{{ define "getTranslationStatusColor" }}
   {{ $status := . }}
   {{ $color := "text-gray-600" }}
   {{ if eq $status "translation_status_exists" }}
@@ -10,5 +15,21 @@
   {{ else if eq $status "translation_status_does_not_exist" }}
     {{ $color = "text-red-600" }}
   {{ end }}
-  {{ return $color }}
+  {{ $color }}
 {{ end }}
+
+{{/* Add new functions below */}}
+
+{{ define "formatDate" }}
+  {{/* Date formatting helper - for future use */}}
+{{ end }}
+
+{{ define "truncateText" }}
+  {{/* Text truncation helper - for future use */}}
+{{ end }}
+
+{{/*
+  Usage examples:
+  {{ partial "custom-functions.html" "translation_status_exists" }}
+  {{ partial "custom-functions.html" "2024-03-14" }}
+*/}}

@@ -1,16 +1,12 @@
 {{ define "main" }}
 <div class="bg-background min-h-screen">
   <div class="container mx-auto px-4 py-8">
-    {{ block "hero" . }}
-      {{ partial "hero.html" . }}
-    {{ end }}
+    {{ partial "hero.html" . }}
 
     <div class="mb-8 flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0 md:space-x-6">
       <!-- Left side: Search and Tags -->
       <div class="w-full md:w-2/3 space-y-4">
-        <!-- Search Field -->
-        <div id="search" class="w-full"></div>
-
+        <div id="search"></div>
         {{ partial "tag-manager.html" . }}
       </div>
 
@@ -51,14 +47,12 @@
         <h3 class="text-lg font-bold text-text mb-2">{{ i18n "popular_tags" }}</h3>
         <div class="flex flex-wrap gap-2">
           {{ range .Site.Taxonomies.tags.ByCount }}
-          <button
-            x-data
-            :data-tag="{{ .Page.Title | jsonify }}"
-            @click="$store.tagManager.addTag($el.dataset.tag)"
-            :class="{ 'bg-accent1 text-white': $store.tagManager.hasTag($el.dataset.tag) }"
-            class="tag bg-light-gray hover:bg-accent1 hover:text-white transition-colors duration-200">
-            {{ .Page.Title }} ({{ .Count }})
-          </button>
+            {{ partial "tag-component.html" (dict
+              "tag" .Page.Title
+              "clickable" true
+              "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+              "count" .Count
+            ) }}
           {{ end }}
         </div>
       </div>
@@ -69,7 +63,7 @@
              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {{ range where .Site.Pages "Type" "books" }}
         {{ if .Params.bookTitle }}
-          {{ partial "book-attributes.html" . }}
+          {{ partial "book-card.html" . }}
         {{ end }}
       {{ end }}
     </section>
@@ -95,87 +89,27 @@
 </div>
 
 <!-- Pagination Script -->
-<script>
+<script type="module">
+  import { Pagination } from '/js/pagination.js';
+
   document.addEventListener("DOMContentLoaded", function() {
-    const gallery = document.getElementById('book-gallery');
-    const books = Array.from(gallery.children);
-    const itemsPerPageSelect = document.getElementById('items-per-page');
-    const prevButton = document.getElementById('prev-page');
-    const nextButton = document.getElementById('next-page');
-    const pageInfo = document.getElementById('page-info');
+    const elements = {
+      gallery: document.getElementById('book-gallery'),
+      itemsPerPageSelect: document.getElementById('items-per-page'),
+      prevButton: document.getElementById('prev-page'),
+      nextButton: document.getElementById('next-page'),
+      pageInfo: document.getElementById('page-info'),
+      noResults: document.getElementById('no-results'),
+      pagination: document.getElementById('pagination')
+    };
 
-    let currentPage = 1;
-    let itemsPerPage = parseInt(itemsPerPageSelect.value);
-    let totalPages = Math.ceil(books.length / itemsPerPage);
+    const config = {
+      itemsPerPage: parseInt(elements.itemsPerPageSelect.value),
+      currentPage: 1,
+      totalItems: elements.gallery.children.length
+    };
 
-    function renderPage() {
-      books.forEach(book => book.style.display = 'none');
-
-      const start = (currentPage - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-
-      books.slice(start, end).forEach(book => book.style.display = 'block');
-
-      pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-
-      // Update button states
-      if (currentPage === 1) {
-        prevButton.classList.add('cursor-not-allowed', 'opacity-50');
-        prevButton.setAttribute('aria-disabled', 'true');
-      } else {
-        prevButton.classList.remove('cursor-not-allowed', 'opacity-50');
-        prevButton.removeAttribute('aria-disabled');
-      }
-
-      if (currentPage === totalPages || totalPages === 0) {
-        nextButton.classList.add('cursor-not-allowed', 'opacity-50');
-        nextButton.setAttribute('aria-disabled', 'true');
-      } else {
-        nextButton.classList.remove('cursor-not-allowed', 'opacity-50');
-        nextButton.removeAttribute('aria-disabled');
-      }
-
-      // Toggle no results message
-      const noResults = document.getElementById('no-results');
-      const pagination = document.getElementById('pagination');
-
-      if (totalPages === 0) {
-        noResults.classList.remove('hidden');
-        pagination.classList.add('hidden');
-      } else {
-        noResults.classList.add('hidden');
-        pagination.classList.remove('hidden');
-      }
-    }
-
-    function updatePagination() {
-      itemsPerPage = parseInt(itemsPerPageSelect.value);
-      totalPages = Math.ceil(books.length / itemsPerPage);
-      currentPage = 1;
-      renderPage();
-    }
-
-    // Event Listeners
-    prevButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (currentPage > 1) {
-        currentPage--;
-        renderPage();
-      }
-    });
-
-    nextButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (currentPage < totalPages) {
-        currentPage++;
-        renderPage();
-      }
-    });
-
-    itemsPerPageSelect.addEventListener('change', updatePagination);
-
-    // Initial render
-    renderPage();
+    new Pagination(elements, config);
   });
 </script>
 {{ end }}

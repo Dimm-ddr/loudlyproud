@@ -30,60 +30,13 @@
           <h2 class="font-black">{{ i18n "tags" }}</h2>
           <div class="flex flex-wrap gap-2">
             {{ range . }}
-            <span class="px-2 py-1 bg-secondary rounded-full text-sm">{{ . }}</span>
+              {{ partial "tag-component.html" (dict "tag" . "clickable" false) }}
             {{ end }}
           </div>
         </div>
         {{ end }}
       </div>
 
-      <div class="book-metadata">
-        {{ with .Params.page_count }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "page_count" }}:</span> {{ . }}
-        </div>
-        {{ end }}
-
-        {{ with .Params.publication_year }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "publication_year" }}:</span> {{ . }}
-        </div>
-        {{ end }}
-
-        {{ with .Params.isbn }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "isbn" }}:</span> {{ . }}
-        </div>
-        {{ end }}
-
-        {{ with .Params.russian_translation_status }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "russian_translation" }}:</span>
-          {{ i18n (printf "translation_status_%s" .) }}
-        </div>
-        {{ end }}
-
-        {{ if eq .Params.russian_audioversion "yes" }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "audio_version" }}:</span>
-          {{ i18n "russian_audio_available" }}
-        </div>
-        {{ end }}
-
-        {{ with .Params.languages }}
-        <div class="mb-2">
-          <span class="font-black">{{ i18n "languages" }}:</span>
-          {{ delimit . ", " }}
-        </div>
-        {{ end }}
-
-        {{ with .Params.buy_link }}
-        <div class="mt-4">
-          <a href="{{ . }}" class="text-accent3 hover:underline" target="_blank" rel="noopener noreferrer">
-            {{ i18n "where_to_get" }}
-          </a>
-        </div>
-        {{ end }}
-      </div>
+      {{ partial "book-metadata.html" . }}
     </div>
   </div>
