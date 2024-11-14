@@ -42,14 +42,38 @@ module.exports = {
         black: 900,
       },
       colors: {
-        primary: "#000000", // Primary text color
-        secondary: "#eee7dc", // Secondary (background) color
-        accent1: "#E74C3C", // Accent color (red)
-        accent2: "#2ECC71", // Accent color (green)
-        accent3: "#3498DB", // Accent color (blue)
-        background: "#b7b0a7", // General background color
-        text: "#333333", // Text color
-        "light-gray": "#eaeaea", // Light gray for borders, etc.
+        primary: {
+          DEFAULT: "#000000", // Light theme text
+          dark: "#ffffff",    // Dark theme text
+        },
+        secondary: {
+          DEFAULT: "#eee7dc", // Light theme section bg
+          dark: "#2c2420",    // Dark theme section bg
+        },
+        background: {
+          DEFAULT: "#b7b0a7", // Light theme page bg
+          dark: "#1a1614",    // Dark theme page bg
+        },
+        accent1: {
+          DEFAULT: "#E74C3C", // Light theme red
+          dark: "#ff6b5b",    // Dark theme red
+        },
+        accent2: {
+          DEFAULT: "#2ECC71", // Light theme green
+          dark: "#4ade80",    // Dark theme green
+        },
+        accent3: {
+          DEFAULT: "#3498DB", // Light theme blue
+          dark: "#60a5fa",    // Dark theme blue
+        },
+        text: {
+          DEFAULT: "#333333", // Light theme text
+          dark: "#ffffff",    // Dark theme text
+        },
+        "light-gray": {
+          DEFAULT: "#eaeaea",
+          dark: "#4a4a4a",
+        },
       },
       spacing: {
         hero: "4rem", // Spacing for hero sections

@@ -1,0 +1,46 @@
+{{ $placeholderImage := "images/placeholder.jpg" | relURL }}
+
+<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col"
+         data-slug="{{ .Params.slug }}">
+    <!-- Image Container with Local Fallback -->
+    <div class="h-64 overflow-hidden relative">
+        <a href="{{ .RelPermalink }}" class="block w-full h-full">
+            <img class="w-full h-full object-contain transition-opacity duration-300"
+                 src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ $placeholderImage }}{{ end }}"
+                 onerror="this.onerror=null; this.src='{{ $placeholderImage }}'"
+                 alt="{{ .Params.bookTitle }}"
+                 loading="lazy">
+        </a>
+    </div>
+
+    <!-- Content -->
+    <div class="p-4 flex flex-col flex-grow">
+        <h2 class="text-xl font-black mb-2 text-primary">
+            <a href="{{ .RelPermalink }}"
+               class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
+                {{ .Params.bookTitle }}
+            </a>
+        </h2>
+
+        <!-- Authors -->
+        {{ with .Params.authors }}
+        <p class="text-sm font-normal text-primary mb-2">
+            {{ delimit . ", " }}
+        </p>
+        {{ end }}
+
+        <!-- Local-only content -->
+        {{ with .Params.short_book_description }}
+        <div class="prose prose-sm mb-4">
+            {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        <!-- Tags -->
+        {{ with .Params.tags }}
+        <div class="mt-auto">
+            {{ partial "book-tags.html" (dict "tags" . "extraClasses" "mb-2") }}
+        </div>
+        {{ end }}
+    </div>
+</article> 

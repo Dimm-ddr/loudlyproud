@@ -5,14 +5,16 @@
       {{ partial "hero.html" . }}
     {{ end }}
 
-    <div class="mb-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6">
-      <!-- Search Field -->
-      <div id="search" class="w-full md:w-1/2"></div>
+    <div class="mb-8 flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0 md:space-x-6">
+      <!-- Left side: Search and Tags -->
+      <div class="w-full md:w-2/3 space-y-4">
+        <!-- Search Field -->
+        <div id="search" class="w-full"></div>
 
-      <!-- Divider for Larger Screens -->
-      <div class="hidden md:block border-l border-light-gray h-8 mx-4"></div>
+        {{ partial "tag-manager.html" . }}
+      </div>
 
-      <!-- Items Per Page Dropdown -->
+      <!-- Right side: Items per page -->
       <div class="flex items-center space-x-2">
         <label for="items-per-page" class="text-text font-normal whitespace-nowrap">
           {{ i18n "items_per_page" }}
@@ -26,11 +28,45 @@
       </div>
     </div>
 
+    <!-- Tag Filter Section -->
+    <div x-data="{
+      showTagCloud: false,
+      popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
+        {{- range $index, $tag := $tags -}}
+          {{- if $index }}, {{ end -}}
+          `{{- $tag.Page.Title -}}`
+        {{- end -}}]
+    }" class="mb-6">
+      <button @click="showTagCloud = !showTagCloud"
+              class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
+        <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
+        <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
+      </button>
+
+      <div x-show="showTagCloud"
+           x-transition:enter="transition ease-out duration-200"
+           x-transition:enter-start="opacity-0 transform -translate-y-2"
+           x-transition:enter-end="opacity-100 transform translate-y-0"
+           class="mt-4">
+        <h3 class="text-lg font-bold text-text mb-2">{{ i18n "popular_tags" }}</h3>
+        <div class="flex flex-wrap gap-2">
+          {{ range .Site.Taxonomies.tags.ByCount }}
+          <button
+            x-data
+            :data-tag="{{ .Page.Title | jsonify }}"
+            @click="$store.tagManager.addTag($el.dataset.tag)"
+            :class="{ 'bg-accent1 text-white': $store.tagManager.hasTag($el.dataset.tag) }"
+            class="tag bg-light-gray hover:bg-accent1 hover:text-white transition-colors duration-200">
+            {{ .Page.Title }} ({{ .Count }})
+          </button>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
     <!-- Book Gallery -->
-    <section
-      id="book-gallery"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-    >
+    <section id="book-gallery"
+             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {{ range where .Site.Pages "Type" "books" }}
         {{ if .Params.bookTitle }}
           {{ partial "book-attributes.html" . }}
@@ -50,11 +86,9 @@
     <!-- Pagination Controls -->
     <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
       {{ partial "button.html" (dict "url" "#" "text" (i18n "previous") "id" "prev-page" "disabled" true) }}
-
       <span id="page-info" class="text-text font-normal">
         {{ printf (i18n "page_info") 1 1 }}
       </span>
-
       {{ partial "button.html" (dict "url" "#" "text" (i18n "next") "id" "next-page") }}
     </div>
   </div>

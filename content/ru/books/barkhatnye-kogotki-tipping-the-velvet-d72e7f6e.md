@@ -1,5 +1,6 @@
 ---
 draft: false
+slug: barkhatnye-kogotki-tipping-the-velvet-d72e7f6e
 params:
   authors:
   - Sarah Waters, Сара Уотерс
@@ -29,7 +30,6 @@ params:
     она посещает мюзик-холл, где с бурлескным номером выступает Китти Батлер. Постепенно
     девушки сближаются, и когда новый импресарио предлагает Китти лондонский ангажемент,
     Нэнси следует за ней в столицу…
-  slug: barkhatnye-kogotki-tipping-the-velvet-d72e7f6e
   tags:
   - 19th century
   - Cross-dressers

@@ -1,5 +1,6 @@
 ---
 title: Аристотель И Данте Открывают Тайны Вселенной
+slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
 draft: false
 type: books
 params:
@@ -37,6 +38,4 @@ params:
     которые раньше казались им непостижимыми загадками Вселенной, и наконец осознают,
     кто они на самом деле.
   russian_audioversion: 'no'
-  slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
-slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
 ---

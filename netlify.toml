@@ -1,10 +1,11 @@
 [build]
 publish = "public"
-command = "npm install && npm run build && hugo --gc --minify"
+command = "npm install && npm run build"
 
 [build.environment]
 NODE_VERSION = "20"
-HUGO_VERSION = "0.134.3"  # Set Hugo version globally
+HUGO_VERSION = "0.134.3"
+HUGO_ENV = "production"
 
 # Production context
 [context.production.environment]
@@ -13,15 +14,17 @@ HUGO_BASEURL = "https://loudlyproud.netlify.app/"
 
 # Preview context (for pull requests)
 [context.deploy-preview.environment]
-HUGO_ENV = "preview"
-HUGO_BASEURL = "/"  # This will be automatically set by Netlify
+HUGO_ENV = "staging"
 
 # Branch deploys (other than production)
 [context.branch-deploy.environment]
 HUGO_ENV = "staging"
-HUGO_BASEURL = "/"  # This will be automatically set by Netlify
 
 # Specific branch context (optional)
-[context.preview.environment]  # 'preview' here is your branch name
-HUGO_ENV = "preview"
-HUGO_BASEURL = "/"
+[context.preview.environment]
+HUGO_ENV = "staging"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Content-Type = "application/javascript"

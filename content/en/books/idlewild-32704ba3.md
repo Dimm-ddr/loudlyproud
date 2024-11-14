@@ -34,7 +34,6 @@ params:
   short_book_description: James Frankie Thomas’s Idlewild is a darkly funny story
     of two adults looking back on their intense teenage friendship, in a queer, trans,
     and early-Internet twist on the Manhattan prep school...
-  slug: idlewild-32704ba3
   tags:
   - LGBTQ+
   - coming of age
@@ -45,4 +44,5 @@ params:
   - transgender
 title: Idlewild
 type: books
+slug: idlewild-32704ba3
 ---

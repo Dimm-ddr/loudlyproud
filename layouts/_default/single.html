@@ -8,14 +8,9 @@
 
   <div class="content">{{ .Content }}</div>
 
-  {{ with .Params.tags }}
+  {{ if .Params.tags }}
   <div class="mt-4">
-    <h2 class="text-xl font-normal mb-2">Tags:</h2>
-    <ul class="list-disc list-inside">
-      {{ range . }}
-      <li>{{ . }}</li>
-      {{ end }}
-    </ul>
+    {{ partial "book-tags.html" (dict "tags" .Params.tags "tagStyle" (dict "bg" "bg-light-gray" "text" "text-text")) }}
   </div>
   {{ end }}
 </article>

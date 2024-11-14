@@ -1,5 +1,6 @@
 ---
 draft: false
+slug: annie-on-my-mind-41e49526
 params:
   authors:
   - Nancy Garden
@@ -23,7 +24,6 @@ params:
   short_book_description: This groundbreaking book is the story of two teenage girls
     whose friendship blossoms into love and who, despite pressures from family and
     school that threaten their relationship, promise to be...
-  slug: annie-on-my-mind-41e49526
   tags:
   - Children's fiction
   - Coming out (Sexual orientation)

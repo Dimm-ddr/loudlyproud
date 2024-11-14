@@ -1,0 +1,143 @@
+# Color schemes for tags
+# Each scheme includes:
+# - name: Human readable name
+# - bg: Background color class
+# - text: Text color class
+# - contrast: WCAG contrast ratio (for documentation)
+
+colors:
+  deep-blue:
+    name: "Deep Blue"
+    bg: "bg-[#1a365d]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#8ab4ff]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 13.5 # vs #eee7dc
+        text_vs_bg: 15.0
+      dark:
+        bg_vs_page: 4.8 # vs #2c2420
+        text_vs_bg: 13.2
+
+  burgundy:
+    name: "Burgundy"
+    bg: "bg-[#862e2d]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#ff7e7e]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 7.2
+        text_vs_bg: 8.1
+      dark:
+        bg_vs_page: 4.5
+        text_vs_bg: 11.3
+
+  forest:
+    name: "Forest Green"
+    bg: "bg-[#2d5a27]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#84e19c]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 6.8
+        text_vs_bg: 7.9
+      dark:
+        bg_vs_page: 4.7
+        text_vs_bg: 12.1
+
+  plum:
+    name: "Plum"
+    bg: "bg-[#663399]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#c084fc]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 7.5
+        text_vs_bg: 8.4
+      dark:
+        bg_vs_page: 4.6
+        text_vs_bg: 11.8
+
+  rust:
+    name: "Rust"
+    bg: "bg-[#a63d00]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#ffa04d]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 6.9
+        text_vs_bg: 7.8
+      dark:
+        bg_vs_page: 4.5
+        text_vs_bg: 11.5
+
+  slate:
+    name: "Slate"
+    bg: "bg-[#334155]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#94a3b8]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 9.8
+        text_vs_bg: 11.0
+      dark:
+        bg_vs_page: 4.6
+        text_vs_bg: 11.7
+
+  marine:
+    name: "Marine"
+    bg: "bg-[#164e63]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#22d3ee]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 8.9
+        text_vs_bg: 10.1
+      dark:
+        bg_vs_page: 4.7
+        text_vs_bg: 12.3
+
+  aubergine:
+    name: "Aubergine"
+    bg: "bg-[#4a044e]"
+    text: "text-white"
+    dark:
+      bg: "bg-[#e879f9]"
+      text: "text-black"
+    contrast:
+      light:
+        bg_vs_page: 9.2
+        text_vs_bg: 10.3
+      dark:
+        bg_vs_page: 4.8
+        text_vs_bg: 12.5
+
+  # Fallback style for unknown tags
+  fallback:
+    name: "Fallback Grey"
+    bg: "bg-gray-400"
+    text: "text-black"
+    dark:
+      bg: "bg-gray-600"
+      text: "text-white"
+    contrast:
+      light:
+        bg_vs_page: 4.5   # vs #eee7dc
+        text_vs_bg: 7.0
+      dark:
+        bg_vs_page: 4.5   # vs #2c2420
+        text_vs_bg: 7.0

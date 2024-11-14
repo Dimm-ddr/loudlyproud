@@ -1,0 +1,14 @@
+<div x-data>
+    <!-- Active Tags Display -->
+    <div class="flex flex-wrap gap-2 mb-4">
+        <template x-for="tag in $store.tagManager.activeTags">
+            <span class="inline-flex items-center bg-accent1 text-white px-3 py-1 rounded-full text-sm">
+                <span x-text="tag"></span>
+                <button
+                    @click="$store.tagManager.removeTag(tag)"
+                    class="ml-2 hover:text-gray-200"
+                >&times;</button>
+            </span>
+        </template>
+    </div>
+</div> 

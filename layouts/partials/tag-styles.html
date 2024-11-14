@@ -1,0 +1,23 @@
+{{ $colors := site.Data.colors.colors }}
+{{ $tagMapping := site.Data.tag_mapping.tag_colors }}
+{{ $fallback := $colors.fallback }}
+
+{{ define "getTagStyle" }}
+  {{ $tag := .tag }}
+  {{ $colors := .colors }}
+  {{ $mapping := .mapping }}
+  {{ $fallback := .fallback }}
+
+  {{ $normalizedTag := $tag | lower | urlize }}
+  {{ $colorKey := index $mapping $normalizedTag | default "fallback" }}
+  {{ $style := index $colors $colorKey | default $fallback }}
+
+  {{ return $style }}
+{{ end }}
+
+{{ define "renderTag" }}
+  {{ $tagStyle := partial "getTagStyle" (dict "tag" .tag "colors" .colors "mapping" .mapping "fallback" .fallback) }}
+  <span class="tag {{ $tagStyle.bg }} {{ $tagStyle.text }} dark:{{ $tagStyle.dark.bg }} dark:{{ $tagStyle.dark.text }}">
+    {{ .tag }}
+  </span>
+{{ end }} 

@@ -1,0 +1,7 @@
+# Maps various input forms to normalized tag keys
+aliases:
+  adult: adult-fiction
+  "adult fiction": adult-fiction
+  adventure: adventure
+  "american fiction": american-fiction
+  # ... more aliases ... 

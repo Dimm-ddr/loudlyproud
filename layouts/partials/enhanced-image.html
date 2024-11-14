@@ -1,0 +1,36 @@
+{{ define "enhanced-image" }}
+<div class="enhanced-image-container"
+     x-data="{
+       loaded: false,
+       offline: !navigator.onLine,
+       src: '{{ .src }}',
+       alt: '{{ .alt }}',
+       placeholder: '{{ "images/placeholder.jpg" | relURL }}'
+     }">
+  <!-- Offline or Fallback State -->
+  <img x-show="!loaded || offline"
+       :src="placeholder"
+       :alt="alt"
+       class="w-full h-full object-contain">
+
+  <!-- Enhanced Online State -->
+  <template x-if="!offline">
+    <img :src="src"
+         :alt="alt"
+         @load="loaded = true"
+         @error="offline = true"
+         class="w-full h-full object-contain"
+         :class="{ 'hidden': !loaded }"
+         loading="lazy">
+  </template>
+
+  <!-- Optional: Enhanced image features when online -->
+  <template x-if="loaded && !offline">
+    <button @click="$dispatch('open-modal', { src: src })"
+            class="sr-only focus:not-sr-only"
+            aria-label="View larger image">
+      Enlarge Image
+    </button>
+  </template>
+</div>
+{{ end }} 
