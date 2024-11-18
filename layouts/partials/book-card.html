@@ -54,7 +54,7 @@
         <div class="mt-auto space-y-2">
             <!-- Tags -->
             {{ with .Params.tags }}
-            <div class="flex flex-wrap gap-1">
+            <div class="flex flex-wrap gap-2">
                 {{ range . }}
                     {{ partial "tag-component.html" (dict "tag" . "clickable" true) }}
                 {{ end }}
@@ -78,5 +78,10 @@
             </a>
             {{ end }}
         </div>
+    </div>
+
+    <!-- Debug output -->
+    <div class="debug" style="display: none;">
+        {{ printf "%#v" .Params }}
     </div>
 </article>

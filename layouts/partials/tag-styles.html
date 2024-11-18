@@ -20,4 +20,13 @@
   <span class="tag {{ $tagStyle.bg }} {{ $tagStyle.text }} dark:{{ $tagStyle.dark.bg }} dark:{{ $tagStyle.dark.text }}">
     {{ .tag }}
   </span>
-{{ end }} 
+{{ end }}
+
+<!-- Debug Tag Styles -->
+<div class="bg-green-100 p-1 m-1">
+    <p>Tag Styles Debug:</p>
+    <p>Input tag: {{ printf "%#v" .tag }}</p>
+    <p>Colors: {{ printf "%#v" .colors }}</p>
+    <p>Mapping: {{ printf "%#v" .mapping }}</p>
+    <p>Fallback: {{ printf "%#v" .fallback }}</p>
+</div>
