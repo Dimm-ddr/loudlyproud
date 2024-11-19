@@ -1,0 +1,13 @@
+{{/*
+    Generates a clean URL-safe string without any problematic characters
+    Usage: {{ partial "helpers/clean-url" "Any String!" }}
+*/}}
+{{ $input := . | string | lower }}
+{{ $urlized := $input | urlize }}
+{{ $clean := $urlized }}
+{{ $clean = replace $clean "." "-" }}
+{{ $clean = replace $clean "--" "-" }}
+{{ $clean = replace $clean "----" "-" }}
+{{ $clean = strings.TrimSuffix "." $clean }}
+{{ $clean = strings.TrimSuffix "-" $clean }}
+{{ return $clean }} 

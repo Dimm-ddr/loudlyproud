@@ -1,6 +1,5 @@
 <!-- Absolute minimum tag component -->
 {{ $tag := .tag | string }}
-{{ $clickable := .clickable | default false }}
 {{ $normalizedTag := $tag | lower | urlize }}
 {{ $colorKey := index site.Data.tag_mapping.tag_colors $normalizedTag | default "fallback" }}
 
@@ -16,14 +15,13 @@
     "fallback" "bg-gray-400 text-black hover:bg-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
 }}
 
-<span
+{{ $cleanTag := partial "helpers/clean-url" $tag }}
+{{ $tagURL := printf "tags/%s" $cleanTag | relLangURL }}
+
+<a
+    href="{{ $tagURL }}"
     class="inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200
-           {{ index $tagStyles $colorKey }}
-           {{ if $clickable }}cursor-pointer{{ end }}"
-    {{ if $clickable }}
-        role="button"
-        data-tag="{{ $tag }}"
-    {{ end }}
+           {{ index $tagStyles $colorKey }}"
 >
     {{ $tag }}
-</span>
+</a>

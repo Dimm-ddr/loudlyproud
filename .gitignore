@@ -44,6 +44,7 @@ content/books/temp/*
 # Logs and local data
 .data
 console-export-*.txt
+settings.json
 
 # Generated files
 static/js/*.js

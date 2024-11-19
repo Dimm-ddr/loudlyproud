@@ -9,19 +9,6 @@
         <div id="search"></div>
         {{ partial "tag-manager.html" . }}
       </div>
-
-      <!-- Right side: Items per page -->
-      <div class="flex items-center space-x-2">
-        <label for="items-per-page" class="text-text font-normal whitespace-nowrap">
-          {{ i18n "items_per_page" }}
-        </label>
-        <select id="items-per-page"
-                class="border border-light-gray rounded px-2 py-1 font-normal text-text">
-          <option value="12" selected>12</option>
-          <option value="24">24</option>
-          <option value="36">36</option>
-        </select>
-      </div>
     </div>
 
     <!-- Tag Filter Section -->
@@ -58,58 +45,8 @@
       </div>
     </div>
 
-    <!-- Book Gallery -->
-    <section id="book-gallery"
-             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {{ range where .Site.Pages "Type" "books" }}
-        {{ if .Params.bookTitle }}
-          {{ partial "book-card.html" . }}
-        {{ end }}
-      {{ end }}
-    </section>
-
-    <!-- No Results Message -->
-    <div id="no-results" class="hidden text-center py-8 flex-col items-center">
-      <svg class="w-12 h-12 text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
-      </svg>
-      <p class="text-xl font-bold text-gray-600">{{ i18n "no_books_found" }}</p>
-    </div>
-
-    <!-- Pagination Controls -->
-    <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
-      {{ partial "button.html" (dict "url" "#" "text" (i18n "previous") "id" "prev-page" "disabled" true) }}
-      <span id="page-info" class="text-text font-normal">
-        {{ printf (i18n "page_info") 1 1 }}
-      </span>
-      {{ partial "button.html" (dict "url" "#" "text" (i18n "next") "id" "next-page") }}
-    </div>
+    {{ $books := where .Site.Pages "Type" "books" }}
+    {{ partial "client-pagination.html" (dict "books" $books) }}
   </div>
 </div>
-
-<!-- Pagination Script -->
-<script type="module">
-  import { Pagination } from '/js/pagination.js';
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const elements = {
-      gallery: document.getElementById('book-gallery'),
-      itemsPerPageSelect: document.getElementById('items-per-page'),
-      prevButton: document.getElementById('prev-page'),
-      nextButton: document.getElementById('next-page'),
-      pageInfo: document.getElementById('page-info'),
-      noResults: document.getElementById('no-results'),
-      pagination: document.getElementById('pagination')
-    };
-
-    const config = {
-      itemsPerPage: parseInt(elements.itemsPerPageSelect.value),
-      currentPage: 1,
-      totalItems: elements.gallery.children.length
-    };
-
-    new Pagination(elements, config);
-  });
-</script>
 {{ end }}
