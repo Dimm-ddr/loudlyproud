@@ -19,10 +19,13 @@ def process_file(filepath):
     unindented_lines = []
     indented_lines = []
     indented_slug = None
+    params_line = None
 
     # Process each line
     for line in lines:
-        if line.startswith("  slug:"):
+        if line == "params:":
+            params_line = line
+        elif line.startswith("  slug:"):
             indented_slug = line.lstrip()  # Remove leading spaces
         elif line.startswith("  "):
             indented_lines.append(line)  # Keep other indented lines
@@ -39,6 +42,8 @@ def process_file(filepath):
     # Reconstruct the file
     new_content = "---\n"
     new_content += "\n".join(unindented_lines)
+    if params_line:
+        new_content += "\n" + params_line
     if indented_lines:
         new_content += "\n" + "\n".join(indented_lines)
     new_content += "\n---"
