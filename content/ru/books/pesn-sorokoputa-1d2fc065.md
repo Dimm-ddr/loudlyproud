@@ -1,6 +1,7 @@
 ---
-title: Песнь Сорокопута
 draft: false
+slug: pesn-sorokoputa-1d2fc065
+title: Песнь Сорокопута
 type: books
 params:
   bookTitle: Песнь Сорокопута
@@ -30,6 +31,4 @@ params:
     уяснил только одну истину: "Чистокровные празднуют. Полукровки прислуживают. Низшие
     страдают".Их миры могли никогда не столкнуться, если бы не Скэриэл.'
   russian_audioversion: 'no'
-  slug: pesn-sorokoputa-1d2fc065
-slug: pesn-sorokoputa-1d2fc065
 ---

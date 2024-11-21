@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: with-teeth-2f162d1f
+title: With Teeth
+type: books
 params:
   authors:
   - Kristen Arnett
@@ -32,7 +35,6 @@ params:
   short_book_description: From the author of the New York Times-bestselling sensation
     Mostly Dead Things a surprising and moving story of two mothers, one difficult
     son, and the limitations of marriage, parenthood, and...
-  slug: with-teeth-2f162d1f
   tags:
   - American literature
   - Family violence
@@ -52,6 +54,4 @@ params:
   - lesbian
   - literary fiction
   - queer
-title: With Teeth
-type: books
 ---

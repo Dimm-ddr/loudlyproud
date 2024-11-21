@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: radio-molchanie-de57fd98
+title: Радио "молчание"
+type: books
 params:
   authors:
   - Alice Oseman, Элис Осман
@@ -26,7 +29,6 @@ params:
   short_book_description: Что, если все, ради чего ты живешь, — абсолютная ложь? Фрэнсис
     — круглая отличница и староста школы. У нее в жизни есть одна-единственная мечта
     — поступить в Кембридж…
-  slug: radio-molchanie-de57fd98
   tags:
   - LGBTQ+
   - audiobook
@@ -37,6 +39,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Радио "молчание"
-type: books
 ---

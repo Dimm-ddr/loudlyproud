@@ -1,6 +1,7 @@
 ---
-title: Шестерка Воронов
 draft: false
+slug: shesterka-voronov-dfbdc4bf
+title: Шестерка Воронов
 type: books
 params:
   bookTitle: Шестерка Воронов
@@ -43,6 +44,4 @@ params:
     и Каза Бреккера, способного без тени сомнения вырвать глаз предателю. Им предстоит
     один путь, но у каждого своя цель…
   russian_audioversion: 'no'
-  slug: shesterka-voronov-dfbdc4bf
-slug: shesterka-voronov-dfbdc4bf
 ---

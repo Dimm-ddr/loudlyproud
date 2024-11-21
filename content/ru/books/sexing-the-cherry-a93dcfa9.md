@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: sexing-the-cherry-a93dcfa9
+title: Sexing The Cherry
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
@@ -23,7 +26,6 @@ params:
   short_book_description: In a fantastic world that is and is not seventeenth-century
     England, a baby is found floating in the Thames. The child, Jordan, is rescued
     by Dog Woman and grows up to travel the world like...
-  slug: sexing-the-cherry-a93dcfa9
   tags:
   - Charles II 1660-1685
   - English fiction
@@ -45,6 +47,4 @@ params:
   - magical realism
   - novels
   - queer
-title: Sexing The Cherry
-type: books
 ---

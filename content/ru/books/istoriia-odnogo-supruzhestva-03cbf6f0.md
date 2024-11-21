@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: istoriia-odnogo-supruzhestva-03cbf6f0
+title: История Одного Супружества
+type: books
 params:
   authors:
   - Andrew Sean Greer, Эндрю Шон Грир
@@ -25,7 +28,6 @@ params:
   russian_audioversion: 'no'
   russian_translation_status: exists
   short_book_description: We think we know the ones we love. So Pearlie Cook begins her indirect, and devastating exploration of the mystery at the heart of every relationship...
-  slug: istoriia-odnogo-supruzhestva-03cbf6f0
   tags:
   - LGBTQ+
   - San Francisco
@@ -38,6 +40,4 @@ params:
   - literary fiction
   - marriage
   - novels
-title: История Одного Супружества
-type: books
 ---

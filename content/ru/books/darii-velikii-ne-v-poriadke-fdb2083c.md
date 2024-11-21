@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: darii-velikii-ne-v-poriadke-fdb2083c
+title: Дарий Великий Не В Порядке
+type: books
 params:
   authors:
   - Adib Khorram, Адиб Хоррам
@@ -30,7 +33,6 @@ params:
   series: Darius the Great
   short_book_description: В отличие от своего тезки-царя Дарий вовсе не Великий. Он
     наполовину перс, но всю жизнь прожил в Портленде.
-  slug: darii-velikii-ne-v-poriadke-fdb2083c
   tags:
   - Americans
   - Asian Americans
@@ -49,6 +51,4 @@ params:
   - queer
   - realistic fiction
   - young adult (YA)
-title: Дарий Великий Не В Порядке
-type: books
 ---

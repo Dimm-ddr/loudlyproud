@@ -1,6 +1,7 @@
 ---
-title: Возвращение Королевы
 draft: false
+slug: vozvrashchenie-korolevy-9d4ad0cf
+title: Возвращение Королевы
 type: books
 params:
   bookTitle: Возвращение Королевы
@@ -41,6 +42,4 @@ params:
     фантастики, как Джордж Р. Р. Мартин, Робин Хобб, и другими не менее известными
     мастерами жанра.
   russian_audioversion: 'no'
-  slug: vozvrashchenie-korolevy-9d4ad0cf
-slug: vozvrashchenie-korolevy-9d4ad0cf
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: voroniata-2613dfcd
+title: Воронята
+type: books
 params:
   authors:
   - Мэгги Стивотер (Maggie Stiefvater)
@@ -36,7 +39,6 @@ params:
   short_book_description: '"Есть только две причины, по которым незрячий может увидеть
     духа в канун дня святого Марка, Блу. Или ты полюбишь этого человека, или убьешь..."  Блу
     Сарджент уже сбилась со счета,...'
-  slug: voroniata-2613dfcd
   tags:
   - audiobook
   - fantasy
@@ -49,6 +51,4 @@ params:
   - young adult (YA)
   translators:
   - Вадим Павленко
-title: Воронята
-type: books
 ---

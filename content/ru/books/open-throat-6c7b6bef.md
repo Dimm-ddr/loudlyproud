@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: open-throat-6c7b6bef
+title: Open Throat
+type: books
 params:
   authors:
   - Henry Hoke
@@ -35,7 +38,6 @@ params:
   short_book_description: A lonely, lovable, queer mountain lion narrates this star-making
     fever dream of a novel.A queer and dangerously hungry mountain lion lives in the
     drought-devastated land under the Hollywood sign....
-  slug: open-throat-6c7b6bef
   tags:
   - Animals
   - LGBTQ+
@@ -44,6 +46,4 @@ params:
   - fiction
   - literary fiction
   - queer
-title: Open Throat
-type: books
 ---

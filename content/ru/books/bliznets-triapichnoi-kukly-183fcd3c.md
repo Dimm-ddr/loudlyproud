@@ -1,6 +1,7 @@
 ---
-title: Близнец Тряпичной Куклы
 draft: false
+slug: bliznets-triapichnoi-kukly-183fcd3c
+title: Близнец Тряпичной Куклы
 type: books
 params:
   bookTitle: Близнец Тряпичной Куклы
@@ -48,6 +49,4 @@ params:
     madness, and the terrifying rage of her brother’s demon spirit, determined to
     avenge his brutal murder....
   russian_audioversion: 'no'
-  slug: bliznets-triapichnoi-kukly-183fcd3c
-slug: bliznets-triapichnoi-kukly-183fcd3c
 ---

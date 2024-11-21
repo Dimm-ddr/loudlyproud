@@ -1,7 +1,7 @@
 ---
-title: Автоквирография
-slug: avtokvirografiia-a8069a4f
 draft: false
+slug: avtokvirografiia-a8069a4f
+title: Автоквирография
 type: books
 params:
   bookTitle: Автоквирография

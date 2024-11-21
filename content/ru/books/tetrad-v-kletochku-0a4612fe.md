@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: tetrad-v-kletochku-0a4612fe
+title: Тетрадь В Клеточку
+type: books
 params:
   authors:
   - Mikita Franko, Микита Франко
@@ -25,7 +28,6 @@ params:
   short_book_description: «Привет, тетрадь в клеточку» — так начинается каждая запись
     в дневнике Ильи, который он начал вести после переезда. В новом городе Илья очень
     хочет найти друзей, но с ним разговаривают только...
-  slug: tetrad-v-kletochku-0a4612fe
   tags:
   - LGBTQ+
   - Russia
@@ -33,6 +35,4 @@ params:
   - fiction
   - queer
   - young adult (YA)
-title: Тетрадь В Клеточку
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: passing-strange-7a80d263
+title: Passing Strange
+type: books
 params:
   authors:
   - Ellen Klages
@@ -26,7 +29,6 @@ params:
   short_book_description: 'San Francisco in 1940 is a haven for the unconventional.
     Tourists flock to the cities within the city: the Magic City of the World’s Fair
     on an island created of artifice and illusion; the...'
-  slug: passing-strange-7a80d263
   tags:
   - Fiction romance historical general
   - LGBTQ+
@@ -37,6 +39,4 @@ params:
   - novels
   - queer
   - romance
-title: Passing Strange
-type: books
 ---

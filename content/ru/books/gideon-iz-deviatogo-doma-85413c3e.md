@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: gideon-iz-deviatogo-doma-85413c3e
+title: Гидеон из девятого дома
+type: books
 params:
   authors:
   - Tamsyn Muir, Георгий Ладонщиков, Тэмсин Мьюир
@@ -28,7 +31,6 @@ params:
   short_book_description: Императору нужны некроманты.Некроманту Девятого дома нужен
     меченосец.Воспитанная недружелюбными, окостеневшими монахинями, древними слугами
     и бесчисленными скелетами, Гидеон готова предать...
-  slug: gideon-iz-deviatogo-doma-85413c3e
   tags:
   - LGBTQ+
   - fantasy
@@ -38,6 +40,4 @@ params:
   - lesbian
   - queer
   - science fiction
-title: Гидеон из девятого дома
-type: books
 ---

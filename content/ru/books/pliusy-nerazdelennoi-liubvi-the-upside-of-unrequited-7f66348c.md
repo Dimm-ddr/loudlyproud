@@ -1,6 +1,7 @@
 ---
-title: Плюсы неразделенной любви (The Upside Of Unrequited)
 draft: false
+slug: pliusy-nerazdelennoi-liubvi-the-upside-of-unrequited-7f66348c
+title: Плюсы неразделенной любви (The Upside Of Unrequited)
 type: books
 params:
   bookTitle: Плюсы неразделенной любви (The Upside Of Unrequited)
@@ -49,6 +50,4 @@ params:
     никак не выходит у нее из головы. Но Рид — совсем не ее типаж, и она никогда в
     него не влюбится. Так ведь?..
   russian_audioversion: 'no'
-  slug: pliusy-nerazdelennoi-liubvi-the-upside-of-unrequited-7f66348c
-slug: pliusy-nerazdelennoi-liubvi-the-upside-of-unrequited-7f66348c
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: heartstopper-s-zamiraniem-serdtsa-tom-2-fb4175db
+title: Heartstopper. С Замиранием Сердца. Том 2
+type: books
 params:
   authors:
   - Alice Oseman, Элис Осман
@@ -28,7 +31,6 @@ params:
   short_book_description: 'Ник и Чарли — лучшие друзья. После того, что случилось
     на вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга навсегда.Однако
     Ника ждет много открытий: не только о его друзьях...'
-  slug: heartstopper-s-zamiraniem-serdtsa-tom-2-fb4175db
   tags:
   - LGBTQ+
   - boys
@@ -48,6 +50,4 @@ params:
   - school
   - teenage
   - young adult (YA)
-title: Heartstopper. С Замиранием Сердца. Том 2
-type: books
 ---

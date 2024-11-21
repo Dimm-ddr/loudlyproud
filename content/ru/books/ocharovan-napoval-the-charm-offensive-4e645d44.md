@@ -1,6 +1,7 @@
 ---
-title: Очарован наповал (The Charm Offensive)
 draft: false
+slug: ocharovan-napoval-the-charm-offensive-4e645d44
+title: Очарован наповал (The Charm Offensive)
 type: books
 params:
   bookTitle: Очарован наповал (The Charm Offensive)
@@ -35,6 +36,4 @@ params:
     и чуткий человек. Теперь Дев помогает Чарли среди множества претенденток найти
     ту самую, которая в конце шоу получит корону Принцессы.'
   russian_audioversion: 'no'
-  slug: ocharovan-napoval-the-charm-offensive-4e645d44
-slug: ocharovan-napoval-the-charm-offensive-4e645d44
 ---

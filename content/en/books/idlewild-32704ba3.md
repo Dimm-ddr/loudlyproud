@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: idlewild-32704ba3
+title: Idlewild
+type: books
 params:
   authors:
   - James Frankie Thomas
@@ -42,7 +45,4 @@ params:
   - literary fiction
   - queer
   - transgender
-title: Idlewild
-type: books
-slug: idlewild-32704ba3
 ---

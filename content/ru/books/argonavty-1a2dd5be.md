@@ -1,6 +1,8 @@
 ---
 draft: false
 slug: argonavty-1a2dd5be
+title: Аргонавты
+type: books
 params:
   authors:
   - Maggie Nelson, Мэгги Нельсон
@@ -34,6 +36,4 @@ params:
   - memoir
   - nonfiction
   - queer
-title: Аргонавты
-type: books
 ---

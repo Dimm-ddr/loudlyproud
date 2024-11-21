@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: krai-zemli-progulka-po-provinstaunu-9e410a96
+title: Край Земли. Прогулка По Провинстауну
+type: books
 params:
   authors:
   - Maikl Kanningem, Michael Cunningham
@@ -28,7 +31,6 @@ params:
   short_book_description: “Край земли” — единственная документальная книга американского
     писателя Майкла Каннингема. Она посвящена Провинстауну, городу на полуострове
     Кейп-Код, ставшему в середине XX века богемным и...
-  slug: krai-zemli-progulka-po-provinstaunu-9e410a96
   tags:
   - LGBTQ+
   - audiobook
@@ -40,6 +42,4 @@ params:
   - recreation
   - sports
   - travel
-title: Край Земли. Прогулка По Провинстауну
-type: books
 ---

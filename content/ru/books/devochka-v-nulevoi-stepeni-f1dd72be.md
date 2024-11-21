@@ -1,6 +1,7 @@
 ---
-title: Девочка В Нулевой Степени
 draft: false
+slug: devochka-v-nulevoi-stepeni-f1dd72be
+title: Девочка В Нулевой Степени
 type: books
 params:
   bookTitle: Девочка В Нулевой Степени
@@ -27,6 +28,4 @@ params:
     единицей. Единственным на планете. Инородным объектом, пришельцем, случайно упавшим
     с космического корабля на чей-то балкон...»'
   russian_audioversion: 'no'
-  slug: devochka-v-nulevoi-stepeni-f1dd72be
-slug: devochka-v-nulevoi-stepeni-f1dd72be
 ---

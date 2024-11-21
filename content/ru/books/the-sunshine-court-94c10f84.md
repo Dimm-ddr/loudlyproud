@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-sunshine-court-94c10f84
+title: The Sunshine Court
+type: books
 params:
   authors:
   - Nora Sakavic
@@ -29,7 +32,6 @@ params:
   russian_translation_status: unknown
   series: All for the Game
   short_book_description: My name is Jean Moreau. My place is at Evermore.
-  slug: the-sunshine-court-94c10f84
   tags:
   - LGBTQ+
   - adult fiction
@@ -43,6 +45,4 @@ params:
   - romance
   - sports
   - young adult (YA)
-title: The Sunshine Court
-type: books
 ---

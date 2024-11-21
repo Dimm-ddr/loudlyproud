@@ -1,8 +1,8 @@
 ---
-title: Any Way The Wind Blows
 draft: false
-type: books
 slug: any-way-the-wind-blows-8e417f47
+title: Any Way The Wind Blows
+type: books
 params:
   bookTitle: Any Way The Wind Blows
   tags:

@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: stiortyi-malchik-boy-erased-dc59ce29
+title: Стёртый мальчик (Boy Erased)
+type: books
 params:
   authors:
   - Garrard Conley, Гаррард Конли
@@ -11,8 +16,6 @@ params:
     вынужден преодолеть огромный путь, чтобы обрести себя. В 2018 году по его мемуарам
     вышел художественный фильм «Стертая личность» с Николь Кидман, Расселом Кроу и
     Лукасом Хеджесом в главных ролях.
-
-
     A beautiful, raw and compassionate memoir about identity, love and understanding.
     Now a major motion picture starring Nicole Kidman, Russell Crowe, and Lucas Hedges,
     directed by Joel Edgerton. The son of a Baptist pastor and deeply embedded in
@@ -46,7 +49,6 @@ params:
   short_book_description: Гаррарду Конли было девятнадцать, когда по настоянию родителей
     ему пришлось пройти основанную на библейском учении конверсионную терапию, которая
     обещала «исцелить» его сексуальную ориентацию...
-  slug: stiortyi-malchik-boy-erased-dc59ce29
   tags:
   - Arkansas
   - Childhood and youth
@@ -65,6 +67,4 @@ params:
   - new york times bestseller
   - nonfiction
   - queer
-title: Стёртый мальчик (Boy Erased)
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: srednii-pol-235ff809
+title: Средний Пол
+type: books
 params:
   authors:
   - Eugenides Jeffrey, Jeffrey Eugenides
@@ -20,7 +23,6 @@ params:
   short_book_description: История жизни гермафродита, искренне и откровенно рассказанная
     от первого лица. Повествование ведется на фоне исторических, общественно-политических
     и социальных коллизий XX века, определивших...
-  slug: srednii-pol-235ff809
   tags:
   - Detroit
   - LGBTQ+
@@ -30,6 +32,4 @@ params:
   - historical fiction
   - literary fiction
   - queer
-title: Средний Пол
-type: books
 ---

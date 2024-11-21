@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: unfortunates-5b5e9799
+title: Unfortunates
+type: books
 params:
   authors:
   - J. K. Chukwu
@@ -30,7 +33,6 @@ params:
     college sophomore who, enraged and exhausted by the racism at her elite college,
     sets out to find truth about The Unfortunates—the unlucky subset of Black undergrads
     who have been mysteriously dying...
-  slug: unfortunates-5b5e9799
   tags:
   - LGBTQ+
   - adult fiction
@@ -39,6 +41,4 @@ params:
   - lesbian
   - literary fiction
   - queer
-title: Unfortunates
-type: books
 ---

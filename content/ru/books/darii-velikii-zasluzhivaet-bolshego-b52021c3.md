@@ -1,6 +1,7 @@
 ---
-title: Дарий Великий Заслуживает Большего
 draft: false
+slug: darii-velikii-zasluzhivaet-bolshego-b52021c3
+title: Дарий Великий Заслуживает Большего
 type: books
 params:
   bookTitle: Дарий Великий Заслуживает Большего
@@ -47,6 +48,4 @@ params:
     в порядке — как будто он наконец нашел себя в этом мире. Но, может, быть в порядке
     — недостаточно? Может, Дарий заслуживает большего?'
   russian_audioversion: 'no'
-  slug: darii-velikii-zasluzhivaet-bolshego-b52021c3
-slug: darii-velikii-zasluzhivaet-bolshego-b52021c3
 ---

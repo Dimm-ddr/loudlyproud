@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: zhazhda-i-zhelanie-707c3ead
+title: Жажда И Желание
+type: books
 params:
   authors:
   - Карла Николь (Karla Nikole)
@@ -28,7 +31,6 @@ params:
     пребыванием в этом мире. Чистокровный японский вампир из древнего знатного рода,
     живущий в двадцать первом веке в Англии. Харука сломлен и довольствуется своим
     жалким существованием...
-  slug: zhazhda-i-zhelanie-707c3ead
   tags:
   - LGBTQ+
   - adult fiction
@@ -39,6 +41,4 @@ params:
   - romance
   - urban fantasy
   - vampires
-title: Жажда И Желание
-type: books
 ---

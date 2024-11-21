@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: lisia-nora-8797e925
+title: Лисья Нора
+type: books
 params:
   authors:
   - Nora Sakavic, Нора Сакавич
@@ -27,7 +30,6 @@ params:
   short_book_description: Сенсационная трилогия писательницы Норы Сакавич «Все ради
     игры» была впервые опубликована в интернете, однако молниеносно покорила читателей
     во всем мире. Трилогия повествует о команде «Лисов» —...
-  slug: lisia-nora-8797e925
   tags:
   - LGBTQ+
   - contemporary
@@ -39,6 +41,4 @@ params:
   - romance
   - sports
   - young adult (YA)
-title: Лисья Нора
-type: books
 ---

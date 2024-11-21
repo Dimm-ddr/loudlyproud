@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: lore-lust-date-night-in-milan-e254b5c7
+title: 'Lore & Lust: Date Night In Milan'
+type: books
 params:
   authors:
   - Karla Nikole
@@ -20,7 +23,6 @@ params:
   series: Lore & Lust
   short_book_description: This story takes place between Chapters 31 and 32 of Lore
     and Lust Book One
-  slug: lore-lust-date-night-in-milan-e254b5c7
   tags:
   - LGBTQ+
   - adult fiction
@@ -31,6 +33,4 @@ params:
   - queer
   - romance
   - vampires
-title: 'Lore & Lust: Date Night In Milan'
-type: books
 ---

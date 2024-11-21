@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: tsena-soli-the-price-of-salt-a84cd3ed
+title: Цена соли (The Price Of Salt)
+type: books
 params:
   authors:
   - Claire  Morgan, Patricia Highsmith, Патриция Хайсмит
@@ -11,8 +16,6 @@ params:
     годов и актуальный поныне. Он рассказывает о нелегком пути, который пришлось преодолеть
     двум сильным и страстным женщинам - юной и бедной Терезе, работающей продавщицей
     в универмаге, и домохозяйке Кэрол, вымотанной бракоразводным процессом.
-
-
     Patricia Highsmith''s story of romantic obsession may be one of the most important,
     but still largely unrecognized, novels of the twentieth century. First published
     in 1952 and touted as "the novel of a love that society forbids," the book soon
@@ -42,7 +45,6 @@ params:
   russian_translation_status: exists
   short_book_description: '"Цена соли" - культовый роман, новаторский для американской
     литературы 1950-х годов и актуальный поныне…'
-  slug: tsena-soli-the-price-of-salt-a84cd3ed
   tags:
   - 1950s
   - 20th century
@@ -80,6 +82,4 @@ params:
   - novels
   - queer
   - romance
-title: Цена соли (The Price Of Salt)
-type: books
 ---

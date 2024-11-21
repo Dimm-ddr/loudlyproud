@@ -1,6 +1,8 @@
 ---
 draft: false
 slug: annie-on-my-mind-41e49526
+title: Annie On My Mind
+type: books
 params:
   authors:
   - Nancy Garden
@@ -48,6 +50,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Annie On My Mind
-type: books
 ---

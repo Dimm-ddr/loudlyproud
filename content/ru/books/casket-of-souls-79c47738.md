@@ -1,6 +1,7 @@
 ---
-title: Casket Of Souls
 draft: false
+slug: casket-of-souls-79c47738
+title: Casket Of Souls
 type: books
 params:
   bookTitle: Casket Of Souls
@@ -45,6 +46,4 @@ params:
     что заговоры и чуму объединяет одна вещь: лекарство может быть смертоноснее болезни.
     Любительский перевод'
   russian_audioversion: 'no'
-  slug: casket-of-souls-79c47738
-slug: casket-of-souls-79c47738
 ---

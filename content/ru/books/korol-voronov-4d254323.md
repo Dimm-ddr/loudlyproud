@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: korol-voronov-4d254323
+title: Король Воронов
+type: books
 params:
   authors:
   - Nora Sakavic, Нора Сакавич
@@ -27,7 +30,6 @@ params:
   short_book_description: Смерть товарища, потрясшая «Лисов» вскоре после начала игрового
     сезона, помогает команде наконец сплотиться. Проблема лишь в том, что Эндрю по-прежнему
     ни во что не ставит старшекурсников, а без...
-  slug: korol-voronov-4d254323
   tags:
   - LGBTQ+
   - contemporary
@@ -39,6 +41,4 @@ params:
   - romance
   - sports
   - young adult (YA)
-title: Король Воронов
-type: books
 ---

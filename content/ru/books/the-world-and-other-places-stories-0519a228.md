@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-world-and-other-places-stories-0519a228
+title: 'The World And Other Places: Stories'
+type: books
 params:
   authors:
   - Jeanette Winterson
@@ -46,7 +49,6 @@ params:
   short_book_description: Her first short story collection exhibits the multitude
     of talents that have made English novelist Jeanette Winterson not just admired
     but beloved by her many fans. There are the surprising, fresh...
-  slug: the-world-and-other-places-stories-0519a228
   tags:
   - LGBTQ+
   - adult fiction
@@ -57,6 +59,4 @@ params:
   - magical realism
   - queer
   - short stories
-title: 'The World And Other Places: Stories'
-type: books
 ---

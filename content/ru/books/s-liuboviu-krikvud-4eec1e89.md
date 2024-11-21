@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: s-liuboviu-krikvud-4eec1e89
+title: С Любовью, Криквуд
+type: books
 params:
   authors:
   - Becky Albertalli, Бекки Алберталли
@@ -23,7 +26,6 @@ params:
   short_book_description: Прошел год с тех пор, как виртуальные отношения Саймона
     и Блю переросли в реальные, и пара месяцев с незабываемого выпускного Эбби и Лиа.
     Теперь они все учатся в разных колледжах и вынуждены...
-  slug: s-liuboviu-krikvud-4eec1e89
   tags:
   - LGBTQ+
   - audiobook
@@ -34,6 +36,4 @@ params:
   - romance
   - short stories
   - young adult (YA)
-title: С Любовью, Криквуд
-type: books
 ---

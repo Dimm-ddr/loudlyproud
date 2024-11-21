@@ -1,6 +1,7 @@
 ---
-title: Жизнь На Repeat. За Тобой
 draft: false
+slug: zhizn-na-repeat-za-toboi-341610ff
+title: Жизнь На Repeat. За Тобой
 type: books
 params:
   bookTitle: Жизнь На Repeat. За Тобой
@@ -28,6 +29,4 @@ params:
     моменту своего рождения... в мужском теле. Однако сердце все равно тянется к тому
     же самому человеку, но теперь все становится еще сложнее...'
   russian_audioversion: 'no'
-  slug: zhizn-na-repeat-za-toboi-341610ff
-slug: zhizn-na-repeat-za-toboi-341610ff
 ---

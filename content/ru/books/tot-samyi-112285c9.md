@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: tot-samyi-112285c9
+title: Тот Самый
+type: books
 params:
   authors:
   - Ю Вереск, Юлия Вереск
@@ -21,7 +24,6 @@ params:
   short_book_description: Матвей прячется от внешнего мира в книгах. После семейной
     трагедии он еще больше замыкается в себе, а в густом воздухе старого дома, где
     он живет с мамой и сестрой, постоянно вспыхивают ссоры и...
-  slug: tot-samyi-112285c9
   tags:
   - LGBTQ+
   - Russia
@@ -32,6 +34,4 @@ params:
   - gay
   - romance
   - young adult (YA)
-title: Тот Самый
-type: books
 ---

@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: ubivaia-evu-3-umri-radi-menia-killing-eve-endgame-0df74ad9
+title: 'Убивая Еву 3: Умри ради меня (Killing Eve : Endgame)'
+type: books
 params:
   authors:
   - Luke Jennings, Люк Дженнингс
@@ -10,8 +15,6 @@ params:
     Ева Поластри находится в бегах, скрываясь от "Двенадцати", секретной организации,
     жаждущей ее смерти. Разыгрывается последняя шахматная партия, поражение в которой
     будет стоить жизни.
-
-
     As Villanelle returns to face her childhood demons and the Russian winter, Eve
     finds herself on the run from The Twelve, who want her dead. As the action moves
     between London and St Petersburg, and Eve and Villanelle finally admit their mutual
@@ -32,7 +35,6 @@ params:
   short_book_description: Противостояние наемной убийцы Вилланель и агента службы
     безопасности Евы Поластри продолжается. Действие разворачивается на фоне Лондона
     и Санкт-Петербурга...
-  slug: ubivaia-evu-3-umri-radi-menia-killing-eve-endgame-0df74ad9
   tags:
   - English literature
   - LGBTQ+
@@ -42,6 +44,4 @@ params:
   - fiction
   - mystery
   - queer
-title: 'Убивая Еву 3: Умри ради меня (Killing Eve : Endgame)'
-type: books
 ---

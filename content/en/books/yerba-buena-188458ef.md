@@ -1,9 +1,9 @@
 ---
-title: Yerba Buena
-type: books
 draft: false
 language: "en"
 slug: yerba-buena-188458ef
+title: Yerba Buena
+type: books
 params:
   authors:
   - Nina LaCour

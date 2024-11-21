@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: prekrasno-v-teorii-e3ff5217
+title: Прекрасно В Теории
+type: books
 params:
   authors:
   - Sophie Gonzales, Софи Гонзалес
@@ -30,7 +33,6 @@ params:
   short_book_description: Для фанатов сериала «Половое воспитание» и романа «Всем
     парням, которых я любила» Дженни Хан.Ее любовные советы всегда на высоте.Ее личная
     жизнь — не совсем.Дарси Филлипс:* Дает анонимные любовные...
-  slug: prekrasno-v-teorii-e3ff5217
   tags:
   - LGBTQ+
   - contemporary
@@ -39,6 +41,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Прекрасно В Теории
-type: books
 ---

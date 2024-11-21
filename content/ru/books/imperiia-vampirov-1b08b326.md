@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: imperiia-vampirov-1b08b326
+title: Империя Вампиров
+type: books
 params:
   authors:
   - Jay Kristoff, Джей Кристофф
@@ -25,7 +28,6 @@ params:
   short_book_description: Из чаши священной изливается свет,И верные руки избавят
     от бед.Перед светлыми давший обед,Один человек вернет небу свет.С последнего рассвета
     прошло двадцать семь лет. Вот уже почти три...
-  slug: imperiia-vampirov-1b08b326
   tags:
   - adult fiction
   - dark fantasy
@@ -34,6 +36,4 @@ params:
   - horror
   - paranormal
   - vampires
-title: Империя Вампиров
-type: books
 ---

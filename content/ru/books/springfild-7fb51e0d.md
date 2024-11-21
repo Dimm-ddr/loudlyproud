@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: springfild-7fb51e0d
+title: Спрингфилд
+type: books
 params:
   authors:
   - Сергей Давыдов
@@ -28,13 +31,10 @@ params:
   short_book_description: «Спрингфилд» ни при каких обстоятельствах не может быть
     издан в современной России, и не только из-за «неправильной» ориентации главного
     героя...
-  slug: springfild-7fb51e0d
   tags:
   - LGBTQ+
   - Russia
   - fiction
   - literary fiction
   - queer
-title: Спрингфилд
-type: books
 ---

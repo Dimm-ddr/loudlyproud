@@ -1,6 +1,8 @@
 ---
 draft: false
 slug: acrobat-6f66020e
+title: Acrobat
+type: books
 params:
   authors:
   - Mary Calmes
@@ -38,6 +40,4 @@ params:
   - male-male romance
   - romance
   - suspense
-title: Acrobat
-type: books
 ---

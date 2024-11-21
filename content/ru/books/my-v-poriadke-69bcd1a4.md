@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: my-v-poriadke-69bcd1a4
+title: Мы В Порядке
+type: books
 params:
   authors:
   - Nina LaCour, Нина Лакур
@@ -21,7 +24,6 @@ params:
   short_book_description: Марин бросила все и сбежала из родного города, не объяснив
     причин даже лучшей подруге Мейбл. Она поступает в колледж в Нью-Йорке, в тысячах
     километрах от дома, и пытается начать новую жизнь.
-  slug: my-v-poriadke-69bcd1a4
   tags:
   - LGBTQ+
   - college students
@@ -31,6 +33,4 @@ params:
   - mental health
   - queer
   - young adult (YA)
-title: Мы В Порядке
-type: books
 ---

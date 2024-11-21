@@ -1,12 +1,21 @@
 ---
+
+
+
+
+
+
+
+
 draft: false
+slug: tseluiu-tvoi-frankenshtein-istoriia-odnoi-liubvi-frankissstein-7c6930b0
+title: Целую, твой Франкенштейн. История одной любви (Frankissstein)
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
   bookTitle: Целую, твой Франкенштейн. История одной любви (Frankissstein)
   book_description: 'Лето 1816 года, Швейцария.
-
-
     Перси Биши Шелли со своей юной супругой Мэри и лорд Байрон со своим приятелем
     и личным врачом Джоном Полидори арендуют два дома на берегу Женевского озера.
     Проливные дожди не располагают к прогулкам, и большую часть времени молодые люди
@@ -16,16 +25,10 @@ params:
     физическом теле, начинает писать роман о новой, небиологической форме жизни. «Берегитесь
     меня: я бесстрашен и потому всемогущ», – заявляет о себе Франкенштейн, порожденный
     ее фантазией…
-
-
     Спустя два столетия, Англия, Манчестер.
-
-
     Близится день, когда чудовищный монстр, созданный воображением Мэри Шелли, обретет
     свое воплощение и столкновение искусственного и человеческого разума ввергнет
     мир в хаос…
-
-
     In Brexit Britain, a young transgender doctor called Ry is falling in love – against
     their better judgement – with Victor Stein, a celebrated professor leading the
     public debate around AI. Meanwhile, Ron Lord, just divorced and living with Mum
@@ -52,7 +55,6 @@ params:
   russian_audioversion: 'no'
   russian_translation_status: exists
   short_book_description: Лето 1816 года, Швейцария.
-  slug: tseluiu-tvoi-frankenshtein-istoriia-odnoi-liubvi-frankissstein-7c6930b0
   tags:
   - Artificial intelligence
   - Cryonics
@@ -73,6 +75,4 @@ params:
   - literary fiction
   - queer
   - science fiction
-title: Целую, твой Франкенштейн. История одной любви (Frankissstein)
-type: books
 ---

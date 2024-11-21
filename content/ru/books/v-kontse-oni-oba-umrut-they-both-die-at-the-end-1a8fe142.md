@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: v-kontse-oni-oba-umrut-they-both-die-at-the-end-1a8fe142
+title: В конце они оба умрут (They Both Die At The End)
+type: books
 params:
   authors:
   - Адам Сильвера (Adam Silvera)
@@ -32,7 +35,6 @@ params:
   short_book_description: «С прискорбием сообщаем вам, что в последующие двадцать
     четыре часа вас постигнет безвременная смерть. Приносим глубочайшие соболезнования
     вашим родным и близким…»
-  slug: v-kontse-oni-oba-umrut-they-both-die-at-the-end-1a8fe142
   tags:
   - Adventure and adventurers
   - Adventure and adventurers fiction
@@ -59,6 +61,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: В конце они оба умрут (They Both Die At The End)
-type: books
 ---

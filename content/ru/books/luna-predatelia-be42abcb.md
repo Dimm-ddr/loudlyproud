@@ -1,6 +1,7 @@
 ---
-title: Луна Предателя
 draft: false
+slug: luna-predatelia-be42abcb
+title: Луна Предателя
 type: books
 params:
   bookTitle: Луна Предателя
@@ -39,6 +40,4 @@ params:
     неразлучного друга — юного Алека, — в искусстве сражаться с Мраком, непобедимым
     силою оружия, в искусстве нанести удар в самое сердце предвечного Зла...
   russian_audioversion: 'no'
-  slug: luna-predatelia-be42abcb
-slug: luna-predatelia-be42abcb
 ---

@@ -1,6 +1,7 @@
 ---
-title: Chain-gang All-stars
 draft: false
+slug: chain-gang-all-stars-9a2644ac
+title: Chain-gang All-stars
 type: books
 params:
   bookTitle: Chain-gang All-stars
@@ -44,6 +45,4 @@ params:
     unholy alliance of systemic racism, unchecked capitalism, and mass incarceration,
     and a clear-eyed reckoning with what freedom in this country really means.'
   russian_audioversion: 'no'
-  slug: chain-gang-all-stars-9a2644ac
-slug: chain-gang-all-stars-9a2644ac
 ---

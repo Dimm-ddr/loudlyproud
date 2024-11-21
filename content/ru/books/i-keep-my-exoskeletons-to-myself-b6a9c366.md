@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: i-keep-my-exoskeletons-to-myself-b6a9c366
+title: I Keep My Exoskeletons To Myself
+type: books
 params:
   authors:
   - Marisa Crane
@@ -31,7 +34,6 @@ params:
   short_book_description: 'In a United States not so unlike our own, the Department
     of Balance has adopted a radical new form of law enforcement: rather than incarceration,
     wrongdoers are given a second (and sometimes,...'
-  slug: i-keep-my-exoskeletons-to-myself-b6a9c366
   tags:
   - Dystopia
   - LGBTQ+
@@ -40,6 +42,4 @@ params:
   - lesbian
   - queer
   - science fiction
-title: I Keep My Exoskeletons To Myself
-type: books
 ---

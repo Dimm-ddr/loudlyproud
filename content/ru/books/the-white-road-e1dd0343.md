@@ -1,6 +1,7 @@
 ---
-title: The White Road
 draft: false
+slug: the-white-road-e1dd0343
+title: The White Road
 type: books
 params:
   bookTitle: The White Road
@@ -41,6 +42,4 @@ params:
     На русском языке книга не издавалась. Это любительский перевод, выполненный Джу
     Лай(http://zhurnal.lib.ru/d/dzhu_l/).
   russian_audioversion: 'no'
-  slug: the-white-road-e1dd0343
-slug: the-white-road-e1dd0343
 ---

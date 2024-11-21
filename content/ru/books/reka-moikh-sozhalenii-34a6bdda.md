@@ -1,6 +1,7 @@
 ---
-title: Река Моих Сожалений
 draft: false
+slug: reka-moikh-sozhalenii-34a6bdda
+title: Река Моих Сожалений
 type: books
 params:
   bookTitle: Река Моих Сожалений
@@ -22,6 +23,4 @@ params:
     в смерти. Потерянный мальчик и мальчик, потерявший все. Готовы ли они погрузиться
     в реку своих сожалений?
   russian_audioversion: 'no'
-  slug: reka-moikh-sozhalenii-34a6bdda
-slug: reka-moikh-sozhalenii-34a6bdda
 ---

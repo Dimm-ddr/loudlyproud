@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: izbrannye-i-prekrasnye-ec200709
+title: Избранные И Прекрасные
+type: books
 params:
   authors:
   - Nghi Vo, Нги Во
@@ -19,7 +22,6 @@ params:
   short_book_description: Светская львица Джордан Бейкер выросла в изысканных кругах
     американского общества 1920-х годов - у нее есть деньги, популярность среди спортсменов-гольфистов
     и приглашения на большинство самых...
-  slug: izbrannye-i-prekrasnye-ec200709
   tags:
   - LGBTQ+
   - fantasy
@@ -28,6 +30,4 @@ params:
   - historical fiction
   - queer
   - retellings
-title: Избранные И Прекрасные
-type: books
 ---

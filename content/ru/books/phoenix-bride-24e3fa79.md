@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: phoenix-bride-24e3fa79
+title: Phoenix Bride
+type: books
 params:
   authors:
   - Natasha Siegel
@@ -37,7 +40,6 @@ params:
   short_book_description: A passionate tale of plague, fire, and forbidden love in
     seventeenth-century London from the acclaimed author of Solomon's Crown1666. It
     is a year after plague has devastated England.
-  slug: phoenix-bride-24e3fa79
   tags:
   - English literature
   - adult fiction
@@ -46,6 +48,4 @@ params:
   - historical fiction
   - queer
   - romance
-title: Phoenix Bride
-type: books
 ---

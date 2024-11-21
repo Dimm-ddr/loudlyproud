@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: this-is-how-it-always-is-5ac1d191
+title: This Is How It Always Is
+type: books
 params:
   authors:
   - Laurie Frankel
@@ -30,7 +33,6 @@ params:
   short_book_description: Alternate cover edition of ASIN B01HW6Z3FGThis is how a
     family keeps a secret…and how that secret ends up keeping them.This is how a family
     lives happily ever after…until happily ever after...
-  slug: this-is-how-it-always-is-5ac1d191
   tags:
   - Family secrets
   - Fiction family life
@@ -50,6 +52,4 @@ params:
   - contemporary
   - family
   - fiction
-title: This Is How It Always Is
-type: books
 ---

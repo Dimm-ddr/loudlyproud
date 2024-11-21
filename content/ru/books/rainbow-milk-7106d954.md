@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: rainbow-milk-7106d954
+title: Rainbow Milk
+type: books
 params:
   authors:
   - Paul Mendez
@@ -31,7 +34,6 @@ params:
   short_book_description: An essential and revelatory coming-of-age narrative from
     a thrilling new voice,Rainbow Milkfollows nineteen-year-old Jesse McCarthy as
     he grapples with his racial and sexual identities against the...
-  slug: rainbow-milk-7106d954
   tags:
   - English literature
   - FICTION / Cultural Heritage
@@ -63,6 +65,4 @@ params:
   - literary fiction
   - queer
   - teenage
-title: Rainbow Milk
-type: books
 ---

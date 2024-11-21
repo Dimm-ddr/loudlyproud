@@ -1,6 +1,7 @@
 ---
-title: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
 draft: false
+slug: za-stenkoi-istoriia-otisa-revialia-zvezdy-molodezhnoi-prozy-na-russkom-492be2e8
+title: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
 type: books
 params:
   bookTitle: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
@@ -32,6 +33,4 @@ params:
     момент, вставая на пути к их счастью. Эта смешная и трогательная история о том,
     как тонкая стенка может быть
   russian_audioversion: 'no'
-  slug: za-stenkoi-istoriia-otisa-revialia-zvezdy-molodezhnoi-prozy-na-russkom-492be2e8
-slug: za-stenkoi-istoriia-otisa-revialia-zvezdy-molodezhnoi-prozy-na-russkom-492be2e8
 ---

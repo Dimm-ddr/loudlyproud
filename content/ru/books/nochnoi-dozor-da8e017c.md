@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nochnoi-dozor-da8e017c
+title: Ночнои Дозор
+type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
@@ -22,7 +25,6 @@ params:
   short_book_description: «Ночной дозор» Сары Уотерс — один из сильнейших романов
     прославленного автора «Тонкой работы» и «Бархатных коготков», также вошедший в
     шортлист Букеровской премии. На этот раз викторианской Англии...
-  slug: nochnoi-dozor-da8e017c
   tags:
   - LGBTQ+
   - fiction
@@ -31,6 +33,4 @@ params:
   - queer
   - war
   - world war ii
-title: Ночнои Дозор
-type: books
 ---

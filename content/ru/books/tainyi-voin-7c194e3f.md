@@ -1,6 +1,7 @@
 ---
-title: Тайный Воин
 draft: false
+slug: tainyi-voin-7c194e3f
+title: Тайный Воин
 type: books
 params:
   bookTitle: Тайный Воин
@@ -50,6 +51,4 @@ params:
     в зеркало, Тобин-она видит лицо брата. Тобин-он ненавидит сестру, но вынужден
     защищать ее, чтобы вновь вступило в силу древнее пророчество.
   russian_audioversion: 'no'
-  slug: tainyi-voin-7c194e3f
-slug: tainyi-voin-7c194e3f
 ---

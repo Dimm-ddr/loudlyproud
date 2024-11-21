@@ -1,7 +1,7 @@
 ---
-title: Аристотель И Данте Открывают Тайны Вселенной
-slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
 draft: false
+slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
+title: Аристотель И Данте Открывают Тайны Вселенной
 type: books
 params:
   bookTitle: Аристотель И Данте Открывают Тайны Вселенной

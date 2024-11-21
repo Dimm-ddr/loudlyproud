@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: in-memoriam-a5afa326
+title: In Memoriam
+type: books
 params:
   authors:
   - Alice Winn
@@ -57,7 +60,4 @@ params:
   - romance
   - war
   - war stories
-title: In Memoriam
-type: books
-slug: in-memoriam-a5afa326
 ---

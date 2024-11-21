@@ -1,6 +1,7 @@
 ---
-title: Всего Лишь Полностью Раздавлен
 draft: false
+slug: vsego-lish-polnostiu-razdavlen-88444258
+title: Всего Лишь Полностью Раздавлен
 type: books
 params:
   bookTitle: Всего Лишь Полностью Раздавлен
@@ -39,6 +40,4 @@ params:
     сердце, Уилл вернул его растоптанным и избитым.Олли был идиотом, если бы доверился
     ему снова.Так? Так.'
   russian_audioversion: 'no'
-  slug: vsego-lish-polnostiu-razdavlen-88444258
-slug: vsego-lish-polnostiu-razdavlen-88444258
 ---

@@ -1,6 +1,7 @@
 ---
-title: Назови меня своим именем
 draft: false
+slug: nazovi-menia-svoim-imenem-64bc594d
+title: Назови меня своим именем
 type: books
 params:
   bookTitle: Назови меня своим именем
@@ -32,6 +33,4 @@ params:
     и желания, неизбежно усиливает их страсть, доводя до порога отчаяния и сопутствующего
     страха перед невозможностью только одного—полной близости.
   russian_audioversion: 'no'
-  slug: nazovi-menia-svoim-imenem-64bc594d
-slug: nazovi-menia-svoim-imenem-64bc594d
 ---

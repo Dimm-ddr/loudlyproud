@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: day-ec8ffff0
+title: Day
+type: books
 params:
   authors:
   - Michael Cunningham
@@ -38,7 +41,6 @@ params:
   short_book_description: As the world changes around them, a family weathers the
     storms of growing up, growing older, falling in and out of love, losing the things
     that are most precious—and learning to go on—from the...
-  slug: day-ec8ffff0
   tags:
   - LGBTQ+
   - audiobook
@@ -47,6 +49,4 @@ params:
   - fiction
   - literary fiction
   - novels
-title: Day
-type: books
 ---

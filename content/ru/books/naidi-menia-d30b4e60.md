@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: naidi-menia-d30b4e60
+title: Найди Меня
+type: books
 params:
   authors:
   - André Aciman, Андре Асиман
@@ -27,7 +30,6 @@ params:
   short_book_description: Андре Асимана называют одним из важнейших романистов современности.
     «Найди меня» — долгожданное продолжение его бестселлера «Назови меня своим именем»,
     покорившего миллионы читателей во всем мире.
-  slug: naidi-menia-d30b4e60
   tags:
   - American fiction
   - LGBTQ+
@@ -40,6 +42,4 @@ params:
   - novels
   - queer
   - romance
-title: Найди Меня
-type: books
 ---

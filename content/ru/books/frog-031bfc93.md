@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: frog-031bfc93
+title: Frog
+type: books
 params:
   authors:
   - Mary Calmes
@@ -29,7 +32,6 @@ params:
   short_book_description: Weber Yates's dreams of stardom are about to be reduced
     to a ranch hand's job in Texas, and his one relationship is with a guy so far
     out of his league he might as well be on the moon. Or at least...
-  slug: frog-031bfc93
   tags:
   - LGBTQ+
   - Westerns
@@ -38,6 +40,4 @@ params:
   - gay
   - male-male romance
   - romance
-title: Frog
-type: books
 ---

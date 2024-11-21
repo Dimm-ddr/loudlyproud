@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: you-exist-too-much-a928807d
+title: You Exist Too Much
+type: books
 params:
   authors:
   - Zaina Arafat
@@ -36,7 +39,6 @@ params:
   short_book_description: On a hot day in Bethlehem, a 12-year-old Palestinian-American
     girl is yelled at by a group of men outside the Church of the Nativity. She has
     exposed her legs in a biblical city, an act they deem...
-  slug: you-exist-too-much-a928807d
   tags:
   - Fiction lesbian
   - LGBTQ+
@@ -51,6 +53,4 @@ params:
   - literary fiction
   - novels
   - queer
-title: You Exist Too Much
-type: books
 ---

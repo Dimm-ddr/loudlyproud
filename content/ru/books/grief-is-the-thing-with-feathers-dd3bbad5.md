@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: grief-is-the-thing-with-feathers-dd3bbad5
+title: Grief Is The Thing With Feathers
+type: books
 params:
   authors:
   - Max Porter
@@ -27,7 +30,6 @@ params:
   short_book_description: In a London flat, two young boys face the unbearable sadness
     of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy
     romantic, imagines a future of well-meaning visitors and...
-  slug: grief-is-the-thing-with-feathers-dd3bbad5
   tags:
   - Bereavement
   - Death
@@ -48,6 +50,4 @@ params:
   - literary fiction
   - magical realism
   - novels
-title: Grief Is The Thing With Feathers
-type: books
 ---

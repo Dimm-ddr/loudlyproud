@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: snovidets-greiuoren-1fa29da4
+title: Сновидец. Грейуорен
+type: books
 params:
   authors:
   - Maggie Stiefvater, Мэгги Стивотер, Стелла Грей
@@ -27,7 +30,6 @@ params:
   short_book_description: НИАЛЛ и МОР сбежали из родной страны, чтобы начать новую
     жизнь. Но запутались и потеряли себя. ДИКЛАН вырос ответственным сыном и заботливым
     братом.
-  slug: snovidets-greiuoren-1fa29da4
   tags:
   - LGBTQ+
   - audiobook
@@ -38,6 +40,4 @@ params:
   - queer
   - urban fantasy
   - young adult (YA)
-title: Сновидец. Грейуорен
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Продажное Королевство
 draft: false
+slug: prodazhnoe-korolevstvo-6f240277
+title: Продажное Королевство
 type: books
 params:
   bookTitle: Продажное Королевство
@@ -37,6 +38,4 @@ params:
     вызов коварству Каза, а его окружение подвергают испытанию на прочность. На темных
     и извилистых улочках Кеттердама разразится война – она и решит судьбу гришей.
   russian_audioversion: 'no'
-  slug: prodazhnoe-korolevstvo-6f240277
-slug: prodazhnoe-korolevstvo-6f240277
 ---

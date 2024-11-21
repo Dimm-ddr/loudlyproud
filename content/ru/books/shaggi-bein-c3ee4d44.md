@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: shaggi-bein-c3ee4d44
+title: Шагги Бейн
+type: books
 params:
   authors:
   - Douglas   Stuart, Дуглас Стюарт
@@ -25,7 +28,6 @@ params:
   russian_translation_status: exists
   short_book_description: Агнес Бейн, когда выпьет, спит крепко. Малыш Шагги ставит
     на ей на тумбочку четыре кружки.
-  slug: shaggi-bein-c3ee4d44
   tags:
   - LGBTQ+
   - Scotland
@@ -37,6 +39,4 @@ params:
   - literary fiction
   - novels
   - queer
-title: Шагги Бейн
-type: books
 ---

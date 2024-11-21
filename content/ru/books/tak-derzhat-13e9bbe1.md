@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: tak-derzhat-13e9bbe1
+title: Так Держать!
+type: books
 params:
   authors:
   - Rainbow Rowell, Рейнбоу Рауэлл
@@ -28,7 +31,6 @@ params:
   russian_translation_status: exists
   short_book_description: Впервые Саймон Сноу появился в произведении Рейнбоу Рауэлл
     «Фанатка». Кэт, героиня романа, в детстве зачитывается книгами Джеммы Т.
-  slug: tak-derzhat-13e9bbe1
   tags:
   - LGBTQ+
   - audiobook
@@ -40,6 +42,4 @@ params:
   - romance
   - vampires
   - young adult (YA)
-title: Так Держать!
-type: books
 ---

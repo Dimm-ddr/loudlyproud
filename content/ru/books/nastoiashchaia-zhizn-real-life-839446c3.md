@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nastoiashchaia-zhizn-real-life-839446c3
+title: Настоящая жизнь (Real Life)
+type: books
 params:
   authors:
   - Brandon Taylor, Брендон Тейлор
@@ -58,7 +61,6 @@ params:
   short_book_description: Держать людей на расстоянии уже давно вошло у Уолласа в
     привычку. Нет, он не социофоб. Просто так безопасней. Он — первый за несколько
     десятков лет черный студент на факультете биохимии в Университете Среднего Запада...
-  slug: nastoiashchaia-zhizn-real-life-839446c3
   tags:
   - African American gay men
   - American literature
@@ -79,6 +81,4 @@ params:
   - gay
   - literary fiction
   - queer
-title: Настоящая жизнь (Real Life)
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: moia-intimnaia-zhizn-s-odinochestvom-tom-1-my-lesbian-experience-with-loneliness-5cecf5e8
+title: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With Loneliness)
+type: books
 params:
   authors:
   - Jocelyne Allen
@@ -29,7 +32,6 @@ params:
   short_book_description: Как покончить с бессмысленным существованием, начавшимся
     после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых
     десять лет?..
-  slug: moia-intimnaia-zhizn-s-odinochestvom-tom-1-my-lesbian-experience-with-loneliness-5cecf5e8
   tags:
   - Adolescence
   - Artists
@@ -66,6 +68,4 @@ params:
   - mental illness
   - nonfiction
   - queer
-title: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With Loneliness)
-type: books
 ---

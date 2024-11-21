@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: our-wives-under-the-sea-16bca213
+title: Our Wives Under The Sea
+type: books
 params:
   authors:
   - Julia Armfield
@@ -22,7 +25,6 @@ params:
   russian_translation_status: unknown
   short_book_description: Leah is changed. Months earlier, she left for a routine
     expedition, only this time her submarine sank to the sea floor.
-  slug: our-wives-under-the-sea-16bca213
   tags:
   - FICTION / LGBTQ+ / General
   - Grief
@@ -40,6 +42,4 @@ params:
   - lesbian
   - literary fiction
   - queer
-title: Our Wives Under The Sea
-type: books
 ---

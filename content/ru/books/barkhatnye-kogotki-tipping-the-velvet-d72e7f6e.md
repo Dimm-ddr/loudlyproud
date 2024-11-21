@@ -1,6 +1,8 @@
 ---
 draft: false
 slug: barkhatnye-kogotki-tipping-the-velvet-d72e7f6e
+title: Бархатные коготки (Tipping The Velvet)
+type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
@@ -62,6 +64,4 @@ params:
   - queer
   - romance
   - social life and customs
-title: Бархатные коготки (Tipping The Velvet)
-type: books
 ---

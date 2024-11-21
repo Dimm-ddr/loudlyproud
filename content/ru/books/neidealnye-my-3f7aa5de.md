@@ -1,6 +1,7 @@
 ---
-title: Неидеальные Мы
 draft: false
+slug: neidealnye-my-3f7aa5de
+title: Неидеальные Мы
 type: books
 params:
   bookTitle: Неидеальные Мы
@@ -41,6 +42,4 @@ params:
     понравились книги «Всем парням, которых я любила» Дженни Хан и «Красный, белый
     и королевский синий» Кейси Маккуистон.'
   russian_audioversion: 'no'
-  slug: neidealnye-my-3f7aa5de
-slug: neidealnye-my-3f7aa5de
 ---

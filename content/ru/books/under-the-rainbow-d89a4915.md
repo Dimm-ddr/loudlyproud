@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: under-the-rainbow-d89a4915
+title: Under The Rainbow
+type: books
 params:
   authors:
   - Celia Laskey
@@ -35,7 +38,6 @@ params:
     embracing novel. Big Burr, Kansas, is the kind of place where everyone seems to
     know everyone, and everyone shares the same values-or keeps their opinions to
     themselves...
-  slug: under-the-rainbow-d89a4915
   tags:
   - American literature
   - Attitude (Psychology)
@@ -57,6 +59,4 @@ params:
   - lesbian
   - literary fiction
   - queer
-title: Under The Rainbow
-type: books
 ---

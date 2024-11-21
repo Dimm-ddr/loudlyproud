@@ -1,6 +1,7 @@
 ---
-title: Пятая Сестра
 draft: false
+slug: piataia-sestra-bfc576fe
+title: Пятая Сестра
 type: books
 params:
   bookTitle: Пятая Сестра
@@ -31,6 +32,4 @@ params:
     Мелани не догадывалась, что сама относится к этим «диковинам». Что она и есть
     пятая сестра
   russian_audioversion: 'no'
-  slug: piataia-sestra-bfc576fe
-slug: piataia-sestra-bfc576fe
 ---

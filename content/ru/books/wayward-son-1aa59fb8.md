@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: wayward-son-1aa59fb8
+title: Wayward Son
+type: books
 params:
   authors:
   - Rainbow Rowell
@@ -36,7 +39,6 @@ params:
   series: Simon Snow
   short_book_description: The story is supposed to be over. Simon Snow did everything
     he was supposed to do...
-  slug: wayward-son-1aa59fb8
   tags:
   - LGBTQ+
   - audiobook
@@ -54,6 +56,4 @@ params:
   - romance
   - vampires
   - young adult (YA)
-title: Wayward Son
-type: books
 ---

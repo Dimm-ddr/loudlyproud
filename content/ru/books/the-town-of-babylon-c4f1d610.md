@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-town-of-babylon-c4f1d610
+title: The Town Of Babylon
+type: books
 params:
   authors:
   - Alejandro  Varela, Alejandro Varela
@@ -28,7 +31,6 @@ params:
   short_book_description: In this contemporary debut novel—an intimate portrait of
     queer, racial, and class identity —Andrés, a gay Latinx professor, returns to
     his suburban hometown in the wake of his husband’s...
-  slug: the-town-of-babylon-c4f1d610
   tags:
   - LGBTQ+
   - adult fiction
@@ -37,6 +39,4 @@ params:
   - literary fiction
   - mental health
   - queer
-title: The Town Of Babylon
-type: books
 ---

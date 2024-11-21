@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: garvardskaia-ploshchad-438c3b06
+title: Гарвардская Площадь
+type: books
 params:
   authors:
   - André Aciman, Александра Глебовская, Андре Асиман
@@ -21,7 +24,6 @@ params:
   short_book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта
     — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста
     и испытывает новую дружбу на...
-  slug: garvardskaia-ploshchad-438c3b06
   tags:
   - LGBTQ+
   - United States
@@ -32,6 +34,4 @@ params:
   - historical fiction
   - literary fiction
   - novels
-title: Гарвардская Площадь
-type: books
 ---

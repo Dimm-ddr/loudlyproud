@@ -1,5 +1,9 @@
 ---
+
 draft: false
+slug: chasy-the-hours-da2e8eeb
+title: Часы (The Hours)
+type: books
 params:
   authors:
   - Michael Cunningham, Майкл Каннингем
@@ -12,7 +16,6 @@ params:
     Вулф. Англия 20-х и Америка 90-х. Патриархальный Ричмонд, послевоенный Лос-Анджелес
     и сверхсовременный Нью-Йорк. Как устроено время? Как рождаются книги? Обо всем
     этом - "Часы".
-
     The Pulitzer Prize-winning novel that became a motion picture starring Meryl Streep,
     Julianne Moore, and Nicole Kidman, directed by Stephen Daldry from a screenplay
     by David Hare.InThe Hours, Michael Cunningham, widely praised as one of the most
@@ -47,7 +50,6 @@ params:
   short_book_description: Главная героиня романа - вдохновительница и мистический
     "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду
     с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века…
-  slug: chasy-the-hours-da2e8eeb
   tags:
   - Authors fiction
   - Belletristische Darstellung
@@ -92,6 +94,4 @@ params:
   - male-female romance
   - novels
   - romance
-title: Часы (The Hours)
-type: books
 ---

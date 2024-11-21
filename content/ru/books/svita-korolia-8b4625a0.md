@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: svita-korolia-8b4625a0
+title: Свита Короля
+type: books
 params:
   authors:
   - Nora Sakavic, Нора Сакавич
@@ -26,7 +29,6 @@ params:
   short_book_description: Время на исходе. Оказавшись в Университете Пальметто, Нил
     Джостен знал, что не доживет до конца года, но теперь, когда смерть не за горами,
     он больше чем прежде хочет жить.
-  slug: svita-korolia-8b4625a0
   tags:
   - LGBTQ+
   - contemporary
@@ -38,6 +40,4 @@ params:
   - romance
   - sports
   - young adult (YA)
-title: Свита Короля
-type: books
 ---

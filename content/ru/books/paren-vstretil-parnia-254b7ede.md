@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: paren-vstretil-parnia-254b7ede
+title: Парень встретил парня
+type: books
 params:
   authors:
   - David Levithan, Дэвид Левитан
@@ -24,7 +27,6 @@ params:
   russian_translation_status: exists
   short_book_description: Пол — душа компании. У него много друзей, которые принимают
     его таким, какой он есть.
-  slug: paren-vstretil-parnia-254b7ede
   tags:
   - Children's fiction
   - Cultural Literacy and Humanities
@@ -48,6 +50,4 @@ params:
   - romance
   - teenage
   - young adult (YA)
-title: Парень встретил парня
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: skoree-schastliv-chem-net-more-happy-than-not-7c1809e1
+title: Скорее счастлив, чем нет (More Happy Than Not)
+type: books
 params:
   authors:
   - Adam Silvera, Адам Сильвера
@@ -29,7 +32,6 @@ params:
     безуспешно пытается вновь обрести счастье. Горе и шрам в виде смайлика на запястье
     не дают ему забыть о случившемся. Несмотря на поддержку девушки и матери, боль
     не отпускает...
-  slug: skoree-schastliv-chem-net-more-happy-than-not-7c1809e1
   tags:
   - Bronx (New York N.Y.)
   - Bullying
@@ -64,6 +66,4 @@ params:
   - romance
   - science fiction
   - young adult (YA)
-title: Скорее счастлив, чем нет (More Happy Than Not)
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Встретимся В Новом Мире
 draft: false
+slug: vstretimsia-v-novom-mire-8d01f5a1
+title: Встретимся В Новом Мире
 type: books
 params:
   bookTitle: Встретимся В Новом Мире
@@ -21,6 +22,4 @@ params:
     Чжу Баи не из тех, кто может сидеть спокойно и позволять оберегать себя. Неприятности
     — его второе имя.'
   russian_audioversion: 'no'
-  slug: vstretimsia-v-novom-mire-8d01f5a1
-slug: vstretimsia-v-novom-mire-8d01f5a1
 ---

@@ -1,6 +1,7 @@
 ---
-title: Трепет И Гнев
 draft: false
+slug: trepet-i-gnev-ea09069b
+title: Трепет И Гнев
 type: books
 params:
   bookTitle: Трепет И Гнев
@@ -38,6 +39,4 @@ params:
     и какой секрет они скрывают. Но как не потерять рассудок, если последний пропавший
     — твой возлюбленный?
   russian_audioversion: 'no'
-  slug: trepet-i-gnev-ea09069b
-slug: trepet-i-gnev-ea09069b
 ---

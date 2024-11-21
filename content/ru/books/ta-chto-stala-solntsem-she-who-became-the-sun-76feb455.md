@@ -1,5 +1,12 @@
 ---
+
+
+
+
 draft: false
+slug: ta-chto-stala-solntsem-she-who-became-the-sun-76feb455
+title: Та, что стала солнцем (She Who Became The Sun)
+type: books
 params:
   authors:
   - Shelley Parker-Chan, Шелли Паркер-Чан
@@ -7,14 +14,10 @@ params:
   book_description: 'Небеса предсказали девушке, что рождена во время войны и голода
     — смерть, а ее брату — великое будущее. Но что, если тот, кому небо предписало
     быть великим, выбирает смерть?
-
-
     Она возьмет его имя и его судьбу. Она сделает все, чтобы выжить и самой стать
     великой, несмотря на голодные глаза призраков, что следят за каждым ее шагом.
     Она будет гибкой. Будет жестокой. Будет мужчиной. Чтобы стать Императором. Чтобы
     стать солнцем.
-
-
     In a famine-stricken village on a dusty yellow plain, two children are given two
     fates. A boy, greatness. A girl, nothingness…In 1345, China lies under harsh Mongol
     rule. For the starving peasants of the Central Plains, greatness is something
@@ -45,7 +48,6 @@ params:
   short_book_description: Небеса предсказали девушке, что рождена во время войны и
     голода — смерть, а ее брату — великое будущее. Но что, если тот, кому небо предписало
     быть великим, выбирает смерть?
-  slug: ta-chto-stala-solntsem-she-who-became-the-sun-76feb455
   tags:
   - English literature
   - Histoire
@@ -58,6 +60,4 @@ params:
   - history
   - lesbian
   - queer
-title: Та, что стала солнцем (She Who Became The Sun)
-type: books
 ---

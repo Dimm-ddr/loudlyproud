@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: young-mungo-2acb2a4f
+title: Young Mungo
+type: books
 params:
   authors:
   - Douglas Stuart
@@ -32,7 +35,6 @@ params:
   short_book_description: Growing up in a housing estate in Glasgow, Mungo and James
     are born under different stars--Mungo a Protestant and James a Catholic--and they
     should be sworn enemies if they're to be seen as men at...
-  slug: young-mungo-2acb2a4f
   tags:
   - American literature
   - Children of alcoholics
@@ -55,6 +57,4 @@ params:
   - romance
   - violence against gay teenagers
   - young adult (YA)
-title: Young Mungo
-type: books
 ---

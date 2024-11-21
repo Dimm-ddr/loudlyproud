@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-guardian-d51281d6
+title: The Guardian
+type: books
 params:
   authors:
   - Mary Calmes
@@ -26,7 +29,6 @@ params:
   short_book_description: Jude Shea's life is turned upside down when he rescues a
     dog he names Joe. Even though Jude has enough trouble taking care of himself-he
     doesn't even have a job-he can't resist the animal that...
-  slug: the-guardian-d51281d6
   tags:
   - Erotic Literature
   - Fiction lgbtq+ gay
@@ -39,6 +41,4 @@ params:
   - male-male romance
   - paranormal
   - romance
-title: The Guardian
-type: books
 ---

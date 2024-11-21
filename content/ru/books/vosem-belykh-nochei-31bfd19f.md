@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: vosem-belykh-nochei-31bfd19f
+title: Восемь Белых Ночей
+type: books
 params:
   authors:
   - André Aciman
@@ -24,7 +27,6 @@ params:
   short_book_description: «Восемь белых ночей» — романтическая история о встрече в
     канун Рождества и любви с первого взгляда. Молодым людям, познакомившимся на вечеринке,
     суждено провести вместе восемь ночей, в ходе...
-  slug: vosem-belykh-nochei-31bfd19f
   tags:
   - LGBTQ+
   - adult fiction
@@ -36,6 +38,4 @@ params:
   - male-female romance
   - novels
   - romance
-title: Восемь Белых Ночей
-type: books
 ---
