@@ -16,7 +16,7 @@
 }}
 
 {{ $cleanTag := partial "helpers/clean-url" $tag }}
-{{ $tagURL := printf "tags/%s" $cleanTag | relLangURL }}
+{{ $tagURL := path.Join "tags" $cleanTag | relLangURL }}
 
 <a
     href="{{ $tagURL }}"

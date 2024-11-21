@@ -1,3 +1,4 @@
+# Book Details
 title: "Название"
 authors: "Авторы"
 translators: "Перевод"
@@ -8,44 +9,57 @@ page_count: "Количество страниц"
 isbn: "ISBN"
 additional_isbns: "Дополнительные ISBN"
 languages: "Языки"
-russian_translation: "Статус перевода на русский"
-russian_audio_availability: "Аудиоверсия"
-series: "Серия"
-goodreads: "Ссылка на Goodreads"
-buy_link: "Где купить"
 publication_year: "Год публикации"
 publishers: "Издатели"
-checked_at: "Проверено"
-no_books_found: "Книги не найдены"
-audio_version: "Аудиоверсия"
-goodreads_link: "Ссылка на Goodreads"
-book_catalogue: "Каталог книг"
-all_rights_reserved: "Все права защищены"
-where_to_get: "Где найти"
-load_more: "Загрузить ещё"
-give_feedback: "Оставить отзыв"
-russian_audio_available: "Аудиоверсия доступна"
-no_audio_version: "Аудиоверсия отсутствует"
+series: "Серия"
+
+# Russian Translation Status
+russian_translation: "Статус перевода на русский"
 translation_status_exists: "Русская версия существует"
 translation_status_unknown: "Статус перевода неизвестен"
 translation_status_might_exist: "Возможно, есть перевод"
 translation_status_unlikely_to_exist: "Перевод маловероятен"
 translation_status_does_not_exist: "Русской версии нет"
+
+# Audio Version
+audio_version: "Аудиоверсия"
+russian_audio_availability: "Аудиоверсия"
+russian_audio_available: "Аудиоверсия доступна"
+no_audio_version: "Аудиоверсия отсутствует"
+
+# External Links
+goodreads: "Ссылка на Goodreads"
+goodreads_link: "Ссылка на Goodreads"
+buy_link: "Где купить"
+where_to_get: "Где найти"
+openlibrary_link: "OpenLibrary"
+other_resource: "Другой ресурс"
+
+# UI Elements
+book_catalogue: "Каталог книг"
 catalogue_description: "Описание каталога"
 book_details: "Детали"
+no_books_found: "Книги не найдены"
+load_more: "Загрузить ещё"
+give_feedback: "Оставить отзыв"
+checked_at: "Проверено"
+all_rights_reserved: "Все права защищены"
+
+# Pagination
 page_info: "Страница %d из %d"
 previous: "Предыдущая"
 next: "Следующая"
 items_per_page: "Книг на странице"
-external_links: "Внешние ссылки"
-openlibrary_link: "OpenLibrary"
-other_resource: "Другой ресурс"
+
+# Language Switcher
 switch_language_tooltip: "Переключить язык"
 language_switcher_label: "Переключатель языка"
 language_tooltip: "Перейти на главную страницу на русском"
+
+# Filters and Tags
 show_filters: "Показать фильтры по тегам"
 hide_filters: "Скрыть фильтры"
-popular_tags: "Популярные теги"
+prevalent_tags: "Распространённые теги"
 active_filters: "Активные фильтры"
 clear_filters: "Очистить все"
 no_active_filters: "Нет активных фильтров"
