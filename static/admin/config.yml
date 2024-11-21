@@ -27,24 +27,42 @@ collections:
       depth: 1
       summary: "{{title}}"
     fields:
-      - label: Page Title
+      - label: Title
         name: title
         widget: string
         i18n: true
+      - label: Slug
+        name: slug
+        widget: slug-generator
+        i18n: duplicate
+      - label: Type
+        name: type
+        widget: hidden
+        default: books
       - label: Draft
         name: draft
         widget: boolean
         default: false
-        i18n: true
+        i18n: duplicate
       - label: Params
         name: params
         widget: object
         i18n: true
         fields:
           - label: Book Title
-            name: title
-            widget: string
+            name: bookTitle
+            widget: book-title
             required: true
+            i18n: true
+          - label: Book Description
+            name: book_description
+            widget: markdown
+            required: false
+            i18n: true
+          - label: Short Description
+            name: short_book_description
+            widget: markdown
+            required: false
             i18n: true
           - label: Cover
             name: cover
@@ -94,13 +112,13 @@ collections:
             widget: string
             required: false
             i18n: true
-          - label: Goodreads Link
-            name: link
+          - label: ISBN
+            name: isbn
             widget: string
             required: false
-            i18n: true
-          - label: Buy Link
-            name: buy_link
+            i18n: duplicate
+          - label: Additional ISBNs
+            name: additional_isbns
             widget: list
             required: false
             allow_add: true
@@ -111,26 +129,34 @@ collections:
             widget: string
             required: false
             i18n: true
-          - label: ISBN
-            name: isbn
+          - label: Publishers
+            name: publishers
+            widget: list
+            required: false
+            allow_add: true
+            i18n: true
+          - label: Goodreads Link
+            name: goodreads_link
             widget: string
             required: false
             i18n: true
-          - label: Additional ISBNs
-            name: additional_isbns
-            widget: list
+          - label: Buy Link
+            name: buy_link
+            widget: string
             required: false
             allow_add: true
             collapsed: false
             i18n: true
-          - label: Where to get
+          - label: Where to Get
             name: where_to_get
             widget: list
             required: false
-            allow_add: true
-            collapsed: false
+            fields:
+              - {label: Store, name: store, widget: string}
+              - {label: Link, name: link, widget: string}
+              - {label: Date, name: date, widget: datetime}
             i18n: true
-          - label: Russian Edition
+          - label: Russian Translation Status
             name: russian_translation_status
             widget: select
             default: unknown
@@ -144,24 +170,10 @@ collections:
             i18n: true
           - label: Russian Audioversion
             name: russian_audioversion
-            widget: boolean
-            default: false
-            required: false
-            i18n: true
-          - label: Publishers
-            name: publishers
-            widget: list
-            required: false
-            allow_add: true
-            collapsed: false
-            i18n: true
-          - label: Book Description
-            name: book_description
-            widget: markdown
-            required: false
-            i18n: true
-          - label: Short Description
-            name: short_book_description
-            widget: markdown
+            widget: select
+            default: "no"
+            options:
+              - "yes"
+              - "no"
             required: false
             i18n: true
