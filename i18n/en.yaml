@@ -74,3 +74,9 @@ all_tags: "All Tags"
 explore_tags: "Tags"
 no_tags_available: "No tags available"
 books_tagged_with: "Books tagged with"
+
+# Telegram Updates
+telegram_updates: "Website News in Telegram"
+
+# Feedback
+share_feedback: "Share Feedback"
