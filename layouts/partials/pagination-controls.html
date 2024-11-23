@@ -1,0 +1,36 @@
+{{ $totalBooks := len .books }}
+{{ $totalPages := div (add $totalBooks (sub .itemsPerPage 1)) .itemsPerPage }}
+<div class="flex justify-center items-center space-x-2 mt-6">
+    {{ partial "button.html" (dict
+        "url" "#"
+        "text" (i18n "previous")
+        "id" "prev-page"
+        "disabled" true
+        "extraClasses" "pagination-button"
+    ) }}
+    <span id="page-info" class="text-text font-normal">
+        {{ printf (i18n "page_info") 1 $totalPages }}
+    </span>
+    {{ if gt $totalPages 1 }}
+        {{ partial "button.html" (dict
+            "url" "#"
+            "text" (i18n "next")
+            "id" "next-page"
+            "extraClasses" "pagination-button"
+        ) }}
+    {{ else }}
+        {{ partial "button.html" (dict
+            "url" "#"
+            "text" (i18n "next")
+            "id" "next-page"
+            "disabled" true
+            "extraClasses" "pagination-button"
+        ) }}
+    {{ end }}
+</div>
+
+<!-- Add data attributes for JavaScript -->
+<script>
+    document.getElementById('book-gallery').setAttribute('data-total-items', '{{ $totalBooks }}');
+    document.getElementById('book-gallery').setAttribute('data-items-per-page', '{{ .itemsPerPage }}');
+</script> 

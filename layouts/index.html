@@ -1,52 +1,135 @@
 {{ define "main" }}
 <div class="bg-background min-h-screen">
-  <div class="container mx-auto px-4 py-8">
+  <div class="container mx-auto px-4 py-4">
     {{ partial "hero.html" . }}
 
-    <div class="mb-8 flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0 md:space-x-6">
-      <!-- Left side: Search and Tags -->
-      <div class="w-full md:w-2/3 space-y-4">
-        <div id="search"></div>
-        {{ partial "tag-manager.html" . }}
-      </div>
-    </div>
-
-    <!-- Tag Filter Section -->
-    <div x-data="{
-      showTagCloud: false,
-      popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
-        {{- range $index, $tag := $tags -}}
-          {{- if $index }}, {{ end -}}
-          `{{- $tag.Page.Title -}}`
-        {{- end -}}]
-    }" class="mb-6">
-      <button @click="showTagCloud = !showTagCloud"
-              class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
-        <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
-        <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
-      </button>
-
-      <div x-show="showTagCloud"
-           x-transition:enter="transition ease-out duration-200"
-           x-transition:enter-start="opacity-0 transform -translate-y-2"
-           x-transition:enter-end="opacity-100 transform translate-y-0"
-           class="mt-4">
-        <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
-        <div class="flex flex-wrap gap-2">
-          {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-            {{ partial "tag-component.html" (dict
-              "tag" .Page.Title
-              "clickable" true
-              "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
-              "count" .Count
-            ) }}
-          {{ end }}
+    <!-- Search, Tags, and Books section -->
+    <div class="mt-2 mb-6">
+      <!-- Search and Pagination row -->
+      <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+        <div id="search" class="w-full lg:flex-grow"></div>
+        <div class="w-full lg:w-auto">
+          {{ partial "items-per-page.html" . }}
         </div>
       </div>
-    </div>
 
-    {{ $books := where .Site.Pages "Type" "books" }}
-    {{ partial "client-pagination.html" (dict "books" $books) }}
+      <!-- Tag Manager -->
+      <div class="mt-4">
+        {{ partial "tag-manager.html" . }}
+      </div>
+
+      <!-- Tag Filter Section -->
+      <div x-data="{
+        showTagCloud: false,
+        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
+          {{- range $index, $tag := $tags -}}
+            {{- if $index }}, {{ end -}}
+            `{{- $tag.Page.Title -}}`
+          {{- end -}}]
+      }" class="mb-6">
+        <button @click="showTagCloud = !showTagCloud"
+                class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
+          <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
+          <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
+        </button>
+
+        <div x-show="showTagCloud"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 transform -translate-y-2"
+             x-transition:enter-end="opacity-100 transform translate-y-0"
+             class="mt-4">
+          <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
+          <div class="flex flex-wrap gap-2">
+            {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+              {{ partial "tag-component.html" (dict
+                "tag" .Page.Title
+                "clickable" true
+                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                "count" .Count
+              ) }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Books Grid with Pagination -->
+      <div class="mt-4">
+        {{ $books := where (where .Site.Pages "Type" "books") "Kind" "page" }}
+        {{ $itemsPerPage := 12 }} <!-- Default items per page -->
+        {{ $paginatedBooks := first $itemsPerPage $books }}
+        <div id="book-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+             data-total-items="{{ len $books }}">
+          {{ range $books }}
+            <div class="book-item" style="display: none;">
+              {{ partial "book-card.html" . }}
+            </div>
+          {{ end }}
+        </div>
+        {{ partial "pagination-controls.html" (dict "books" $books "itemsPerPage" $itemsPerPage) }}
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Add pagination initialization script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.getElementById('book-gallery');
+    const itemsPerPageSelect = document.getElementById('items-per-page');
+    const pageInfo = document.getElementById('page-info');
+    const prevButton = document.getElementById('prev-page');
+    const nextButton = document.getElementById('next-page');
+
+    let currentPage = 1;
+    let itemsPerPage = parseInt(itemsPerPageSelect.value);
+    const totalItems = parseInt(gallery.dataset.totalItems);
+
+    function updateDisplay() {
+        const bookItems = gallery.getElementsByClassName('book-item');
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        // Hide all books
+        Array.from(bookItems).forEach((item, index) => {
+            item.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
+        });
+
+        // Update pagination info
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        // Update button states
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+    }
+
+    // Items per page change handler
+    itemsPerPageSelect.addEventListener('change', function() {
+        itemsPerPage = parseInt(this.value);
+        currentPage = 1; // Reset to first page
+        updateDisplay();
+    });
+
+    // Navigation button handlers
+    prevButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            updateDisplay();
+        }
+    });
+
+    nextButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            updateDisplay();
+        }
+    });
+
+    // Initial display
+    updateDisplay();
+});
+</script>
 {{ end }}
