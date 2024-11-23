@@ -1,6 +1,7 @@
 ---
-title: О Чем Молчит Ласточка
 draft: false
+slug: o-chem-molchit-lastochka-399cae41
+title: О Чем Молчит Ласточка
 type: books
 params:
   bookTitle: О Чем Молчит Ласточка
@@ -38,6 +39,4 @@ params:
     чем молчит Ласточка» — долгожданное продолжение бестселлера «Лето в пионерском
     галстуке».
   russian_audioversion: 'no'
-  slug: o-chem-molchit-lastochka-399cae41
-slug: o-chem-molchit-lastochka-399cae41
 ---

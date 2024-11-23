@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: in-memoriam-a5afa326
+title: In Memoriam
+type: books
 params:
   authors:
   - Alice Winn
@@ -31,7 +34,6 @@ params:
   short_book_description: A haunting, virtuosic debut novel about two young men who
     fall in love during a time of war.It's 1914, and World War I is ceaselessly churning
     through thousands of young men on both sides of the...
-  slug: in-memoriam-a5afa326
   tags:
   - '1914'
   - American literature
@@ -58,6 +60,4 @@ params:
   - romance
   - war
   - war stories
-title: In Memoriam
-type: books
 ---

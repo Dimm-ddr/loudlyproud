@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-well-of-loneliness-cded3f6d
+title: The Well Of Loneliness
+type: books
 params:
   authors:
   - Radclyffe Hall
@@ -25,7 +28,6 @@ params:
   short_book_description: Stephen is an ideal child of aristocratic parents—a fencer,
     a horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling
     writer and a loyal, protective lover.
-  slug: the-well-of-loneliness-cded3f6d
   tags:
   - Aristocracy (Social class)
   - Authors
@@ -49,6 +51,4 @@ params:
   - queer
   - romance
   - Écrivains
-title: The Well Of Loneliness
-type: books
 ---

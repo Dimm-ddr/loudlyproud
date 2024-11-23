@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: still-life-75e1591a
+title: Still Life
+type: books
 params:
   authors:
   - Sarah Winman
@@ -31,7 +34,6 @@ params:
   short_book_description: 'Tuscany, 1944: As Allied troops advance and bombs fall
     around deserted villages, a young English soldier, Ulysses Temper, finds himself
     in the wine cellar of a deserted villa. There, he has a...'
-  slug: still-life-75e1591a
   tags:
   - Italy
   - art
@@ -40,6 +42,4 @@ params:
   - historical
   - historical fiction
   - literary fiction
-title: Still Life
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Самая Темная Чаща
 draft: false
+slug: samaia-temnaia-chashcha-711a5311
+title: Самая Темная Чаща
 type: books
 params:
   bookTitle: Самая Темная Чаща
@@ -40,6 +41,4 @@ params:
     все-таки произошло… Весь мир перевернулся вверх дном. И Хейзел ждет все, что полагается
     в таких случаях: любовь, предательство и подвиги.'
   russian_audioversion: 'no'
-  slug: samaia-temnaia-chashcha-711a5311
-slug: samaia-temnaia-chashcha-711a5311
 ---

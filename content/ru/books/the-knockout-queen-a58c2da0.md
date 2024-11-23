@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-knockout-queen-a58c2da0
+title: The Knockout Queen
+type: books
 params:
   authors:
   - Rufi Thorpe
@@ -34,7 +37,6 @@ params:
   short_book_description: A dazzling and darkly comic novel of love, violence, and
     friendship in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful,
     tall, blond, with a rich...
-  slug: the-knockout-queen-a58c2da0
   tags:
   - Closeted gays
   - Electronic books
@@ -49,6 +51,4 @@ params:
   - fiction
   - literary fiction
   - young adult (YA)
-title: The Knockout Queen
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Плетёный Король
 draft: false
+slug: pletionyi-korol-ae233863
+title: Плетёный Король
 type: books
 params:
   bookTitle: Плетёный Король
@@ -29,6 +30,4 @@ params:
     жителей неминуемо ждет смерть. Вслед за Джеком Август погружается в вымышленный
     мир и вскоре сам начинает сомневаться, что реально, а что нет.
   russian_audioversion: 'no'
-  slug: pletionyi-korol-ae233863
-slug: pletionyi-korol-ae233863
 ---

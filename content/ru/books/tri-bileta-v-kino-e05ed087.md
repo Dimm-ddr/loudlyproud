@@ -1,6 +1,7 @@
 ---
-title: Три Билета В Кино
 draft: false
+slug: tri-bileta-v-kino-e05ed087
+title: Три Билета В Кино
 type: books
 params:
   bookTitle: Три Билета В Кино
@@ -26,6 +27,4 @@ params:
     порой настоящая семья — не та, в которой ты родился, а та, в которой чувствуешь
     себя самим собой.
   russian_audioversion: 'no'
-  slug: tri-bileta-v-kino-e05ed087
-slug: tri-bileta-v-kino-e05ed087
 ---

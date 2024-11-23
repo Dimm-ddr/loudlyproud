@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-lighthouse-95af1dad
+title: The Lighthouse
+type: books
 params:
   authors:
   - Robert Michael Ballantyne, T.J. Klune, Лиана Шаутидзе, Ти Джей Клун
@@ -27,7 +30,6 @@ params:
   short_book_description: 'Линус Бейкер живет четко по расписанию: утром – работа
     инспектора в Департаменте по делам магической молодежи, вечером – уютные посиделки
     дома с кошкой и старыми пластинками. Линус не собирается...'
-  slug: the-lighthouse-95af1dad
   tags:
   - LGBTQ+
   - adult fiction
@@ -37,6 +39,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: The Lighthouse
-type: books
 ---

@@ -1,24 +1,27 @@
 ---
+
+
+
+
+
+
 draft: false
+slug: the-seven-husbands-of-evelyn-hugo-af9a98c5
+title: The Seven Husbands Of Evelyn Hugo
+type: books
 params:
   authors:
   - Taylor Jenkins Reid, Тейлор Дженкинс Рейд
   bookTitle: The Seven Husbands Of Evelyn Hugo
   book_description: 'Ведущая затворнический образ жизни легенда старого Голливуда
     Эвелин Хьюго объявляет, что готова представить публике свои мемуары.
-
-
     Всю ее карьеру сопровождали загадки, сенсации и многочисленные скандалы. Мир жаждет
     узнать историю иконы кинематографа из первых уст. Осталось выбрать человека, которого
     допустят к работе с кинозвездой. Удивительно, но доверенным лицом Эвелин выбирает
     никому не известную сотрудницу глянцевого журнала Моник Грант. Они не знакомы,
     никогда не встречались, разве что отец Моник когда-то работал в сфере кино.
-
-
     Моник обескуражена свалившейся на нее внезапной популярностью. И ее первая встреча
     с Эвелин Хьюго лишь добавляет вопросов.
-
-
     Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell
     the truth about her glamorous and scandalous life. But when she chooses unknown
     magazine reporter Monique Grant for the job, no one is more astounded than Monique
@@ -49,7 +52,6 @@ params:
   short_book_description: Ведущая затворнический образ жизни легенда старого Голливуда
     Эвелин Хьюго объявляет, что готова представить публике свои мемуары.Всю ее карьеру
     сопровождали загадки, сенсации и многочисленные скандалы..
-  slug: the-seven-husbands-of-evelyn-hugo-af9a98c5
   tags:
   - Authorship
   - Biographers
@@ -69,6 +71,4 @@ params:
   - male-female romance
   - new york times bestseller
   - queer
-title: The Seven Husbands Of Evelyn Hugo
-type: books
 ---

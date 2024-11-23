@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: kogda-bog-byl-krolikom-f85e5396
+title: Когда Бог Был Кроликом
+type: books
 params:
   authors:
   - Irina Pander
@@ -30,7 +33,6 @@ params:
   short_book_description: Cамый трогательный литературный дебют последних лет, завораживающая,
     полная хрупкой красоты история о детстве и взрослении, о любви и дружбе во всех
     мыслимых формах, о тихом героизме перед лицом...
-  slug: kogda-bog-byl-krolikom-f85e5396
   tags:
   - LGBTQ+
   - adult fiction
@@ -43,6 +45,4 @@ params:
   - literary fiction
   - novels
   - young adult (YA)
-title: Когда Бог Был Кроликом
-type: books
 ---

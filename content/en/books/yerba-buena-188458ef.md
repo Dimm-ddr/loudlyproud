@@ -1,8 +1,9 @@
 ---
-title: Yerba Buena
-type: books
 draft: false
 language: "en"
+slug: yerba-buena-188458ef
+title: Yerba Buena
+type: books
 params:
   authors:
   - Nina LaCour
@@ -37,7 +38,6 @@ params:
   short_book_description: The debut adult novel by the bestselling and award-winning
     YA author Nina LaCour,following two women on a star-crossed journey toward each
     otherWhen Sara Foster runs away from home at sixteen, she...
-  slug: yerba-buena-188458ef
   tags:
   - LGBTQ+
   - audiobook

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: v-tsentre-vselennoi-25a7ae3f
+title: В Центре Вселенной
+type: books
 params:
   authors:
   - Андреас Штайнхефель (Andreas Steinhöfel)
@@ -31,7 +34,6 @@ params:
   short_book_description: Близнецы Фил и Диана и их мать Глэсс приехали из-за океана
     и поселились в доставшееся им по наследству поместье Визибл. Они - предмет обсуждения
     и осуждения всей округи...
-  slug: v-tsentre-vselennoi-25a7ae3f
   tags:
   - German literature
   - Germany
@@ -46,6 +48,4 @@ params:
   - young adult (YA)
   translators:
   - Татьяна Зборовская
-title: В Центре Вселенной
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Межвремье
 draft: false
+slug: mezhvreme-fa13d46e
+title: Межвремье
 type: books
 params:
   bookTitle: Межвремье
@@ -27,6 +28,4 @@ params:
     выжить, ведь в играх властителей времени все они всего лишь пешки. Но пешка может
     стать королевой .
   russian_audioversion: 'no'
-  slug: mezhvreme-fa13d46e
-slug: mezhvreme-fa13d46e
 ---

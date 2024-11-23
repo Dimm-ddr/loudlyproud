@@ -1,6 +1,7 @@
 ---
-title: Капучино с маршмэллоу. Том 2
 draft: false
+slug: kapuchino-s-marshmellou-tom-2-b250538d
+title: Капучино с маршмэллоу. Том 2
 type: books
 params:
   bookTitle: Капучино с маршмэллоу. Том 2
@@ -37,6 +38,4 @@ params:
     кем они хотят стать в будущем. Вас ждет еще больше историй из жизни очаровательной
     группы закадычных друзей, сдобренной ароматом свежесваренного капучино с маршмэллоу.
   russian_audioversion: 'no'
-  slug: kapuchino-s-marshmellou-tom-2-b250538d
-slug: kapuchino-s-marshmellou-tom-2-b250538d
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: monstrilio-a2d19f69
+title: Monstrilio
+type: books
 params:
   authors:
   - Gerardo Sámano Córdova
@@ -30,7 +33,6 @@ params:
   short_book_description: A literary horror debut about a boy who transforms into
     a monster, a monster who tries to be a man, and the people who love him in every
     form he takesGrieving mother Magos cuts out a piece of her...
-  slug: monstrilio-a2d19f69
   tags:
   - LGBTQ+
   - adult fiction
@@ -39,6 +41,4 @@ params:
   - horror
   - magical realism
   - queer
-title: Monstrilio
-type: books
 ---

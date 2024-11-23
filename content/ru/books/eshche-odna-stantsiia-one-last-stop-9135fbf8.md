@@ -1,5 +1,14 @@
 ---
+
+
+
+
+
+
 draft: false
+slug: eshche-odna-stantsiia-one-last-stop-9135fbf8
+title: Еще одна станция (One Last Stop)
+type: books
 params:
   authors:
   - Casey McQuiston, Кейси Маккуистон
@@ -8,18 +17,12 @@ params:
     любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого
     не изменят ни посетители круглосуточной  закусочной, где она работает, ни странные
     соседи. Ежедневная дорога на работу быстро превратилась в рутину.
-
     Правда, в поезде она встречает ее…
-
     Джейн. Потрясающая, очаровательная, загадочная Джейн, которая покоряет ее одной
     улыбкой. Она появляется в жизни Огаст в своей кожаной куртке и спасает ее именно
     тогда, когда ей больше всего нужна помощь. Вскоре Джейн становится лучшей частью
     дня Огаст. Есть только одна проблема: девушка из метро родом из прошлого.
-
-
     Возможно, настало время поверить в чудо.
-
-
     For cynical twenty-three-year-old August, moving to New York City is supposed
     to prove her right: that things like magic and cinematic love stories don’t exist,
     and the only smart way to go through life is alone. She can’t imagine how waiting
@@ -52,7 +55,6 @@ params:
     любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого
     не изменят ни посетители круглосуточной закусочной, где она работает, ни странные
     соседи. Ежедневная дорога на работу быстро превратилась в рутину...
-  slug: eshche-odna-stantsiia-one-last-stop-9135fbf8
   tags:
   - Brooklyn (New York N.Y.)
   - Fiction lesbian
@@ -67,6 +69,4 @@ params:
   - lesbian
   - new york times bestseller
   - queer
-title: Еще одна станция (One Last Stop)
-type: books
 ---

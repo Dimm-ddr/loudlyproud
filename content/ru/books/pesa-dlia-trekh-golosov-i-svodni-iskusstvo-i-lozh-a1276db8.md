@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: pesa-dlia-trekh-golosov-i-svodni-iskusstvo-i-lozh-a1276db8
+title: Пьеса Для Трех Голосов И Сводни. Искусство И Ложь
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон, Евгений Кац
@@ -28,7 +31,6 @@ params:
   short_book_description: '`Пьеса для трех голосов и сводни. Искусство и ложь` - изящная
     и глубокая импровизация самого провокационного британского автора последнего деcятилетия
     Дженет Уинтерсон, поэма в прозе об искусстве,...'
-  slug: pesa-dlia-trekh-golosov-i-svodni-iskusstvo-i-lozh-a1276db8
   tags:
   - British literature
   - LGBTQ+
@@ -40,6 +42,4 @@ params:
   - magical realism
   - queer
   - technology
-title: Пьеса Для Трех Голосов И Сводни. Искусство И Ложь
-type: books
 ---

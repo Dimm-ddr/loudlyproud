@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-thirty-names-of-night-d3fd6d3f
+title: The Thirty Names Of Night
+type: books
 params:
   authors:
   - Zeyn Joukhadar
@@ -41,7 +44,6 @@ params:
   short_book_description: Five years after a suspicious fire killed his ornithologist
     mother, a closeted Syrian American trans boy sheds his birth name and searches
     for a new one. He has been unable to paint since his...
-  slug: the-thirty-names-of-night-d3fd6d3f
   tags:
   - Américains d'origine syrienne
   - Artistes
@@ -66,6 +68,4 @@ params:
   - novels
   - queer
   - transgender
-title: The Thirty Names Of Night
-type: books
 ---

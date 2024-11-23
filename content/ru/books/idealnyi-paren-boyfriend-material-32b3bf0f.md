@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: idealnyi-paren-boyfriend-material-32b3bf0f
+title: Идеальный парень (Boyfriend Material)
+type: books
 params:
   authors:
   - Alexis  Hall, Алексис Холл
@@ -39,7 +42,6 @@ params:
   russian_translation_status: exists
   series: London Calling
   short_book_description: 'ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный...'
-  slug: idealnyi-paren-boyfriend-material-32b3bf0f
   tags:
   - English literature
   - LGBTQ+
@@ -52,6 +54,4 @@ params:
   - male-male romance
   - novels
   - queer
-title: Идеальный парень (Boyfriend Material)
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: siniaia-liliia-liliia-blu-131c22f0
+title: Синяя Лилия, Лилия Блу
+type: books
 params:
   authors:
   - Maggie Stiefvater
@@ -24,7 +27,6 @@ params:
   series: The Raven Cycle
   short_book_description: Блу Сарджент умела искать. После исчезновения матери девушка
     решила отправиться на ее поиски - под землю.
-  slug: siniaia-liliia-liliia-blu-131c22f0
   tags:
   - LGBTQ+
   - audiobook
@@ -35,6 +37,4 @@ params:
   - paranormal
   - urban fantasy
   - young adult (YA)
-title: Синяя Лилия, Лилия Блу
-type: books
 ---

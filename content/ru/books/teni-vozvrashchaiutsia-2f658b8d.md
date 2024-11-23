@@ -1,6 +1,7 @@
 ---
-title: Тени Возвращаются
 draft: false
+slug: teni-vozvrashchaiutsia-2f658b8d
+title: Тени Возвращаются
 type: books
 params:
   bookTitle: Тени Возвращаются
@@ -36,6 +37,4 @@ params:
     выполненный Джу Лай(http://zhurnal.lib.ru/d/dzhu_l/). На русском языке роман не
     издавался
   russian_audioversion: 'no'
-  slug: teni-vozvrashchaiutsia-2f658b8d
-slug: teni-vozvrashchaiutsia-2f658b8d
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: devushki-iz-bumagi-i-ognia-dc97810d
+title: Девушки Из Бумаги И Огня
+type: books
 params:
   authors:
   - Natasha Ngan, Наташа Нган
@@ -30,7 +33,6 @@ params:
   short_book_description: Мы — Бумажные Девушки, а бумагу так легко разорвать, так
     легко исписать чем угодно.Сам этот титул подразумевает, что мы — чистые листы,
     жаждущие, чтобы кто-то заполнил нас. Но кое-чего...
-  slug: devushki-iz-bumagi-i-ognia-dc97810d
   tags:
   - LGBTQ+
   - fantasy
@@ -39,6 +41,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Девушки Из Бумаги И Огня
-type: books
 ---

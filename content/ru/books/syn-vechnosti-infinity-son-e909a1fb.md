@@ -1,6 +1,7 @@
 ---
-title: Сын вечности (Infinity Son)
 draft: false
+slug: syn-vechnosti-infinity-son-e909a1fb
+title: Сын вечности (Infinity Son)
 type: books
 params:
   bookTitle: Сын вечности (Infinity Son)
@@ -59,6 +60,4 @@ params:
     \ always wanted to be. Brotherhood, love, and loyalty will be put to the test,\
     \ and no one will escape the fight unscathed."
   russian_audioversion: 'no'
-  slug: syn-vechnosti-infinity-son-e909a1fb
-slug: syn-vechnosti-infinity-son-e909a1fb
 ---

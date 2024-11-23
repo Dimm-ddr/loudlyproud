@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: dikie-wilder-girls-7112564a
+title: Дикие (Wilder Girls)
+type: books
 params:
   authors:
   - Rory Power
@@ -9,8 +14,6 @@ params:
     тела Гетти и ее одноклассниц мутировали. Отрезанные от мира девушки не покидают
     стен школы. Все, что им остается, — это ждать обещанного лекарства. Но когда лучшая
     подруга Гетти пропадает, она готова пожертвовать всем, лишь бы ее найти.
-
-
     It''s been eighteen months since the Raxter School for Girls was put under quarantine.
     Since the Tox hit and pulled Hetty''s life out from under her.It started slow.
     First the teachers died one by one. Then it began to infect the students, turning
@@ -37,7 +40,6 @@ params:
   short_book_description: Уже больше года школа-пансион для девочек на острове Ракстер
     находится в карантине. Из-за неизвестного вируса почти все учителя погибли, а
     тела Гетти и ее одноклассниц мутировали…
-  slug: dikie-wilder-girls-7112564a
   tags:
   - Diseases--Fiction.
   - LGBTQ+
@@ -57,6 +59,4 @@ params:
   - queer
   - science fiction
   - young adult (YA)
-title: Дикие (Wilder Girls)
-type: books
 ---

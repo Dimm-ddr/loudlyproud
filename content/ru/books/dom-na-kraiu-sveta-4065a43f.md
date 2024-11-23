@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: dom-na-kraiu-sveta-4065a43f
+title: Дом На Краю Света
+type: books
 params:
   authors:
   - Michael Cunningham, Майкл Каннингем
@@ -27,7 +30,6 @@ params:
   short_book_description: Майкл Каннингем родился в 1952 году в глухом углу американского
     штата Огайо. Уже первые его работы публиковались в самых популярных американских
     журналах, а в 1989-м рассказ "Белый ангел" был...
-  slug: dom-na-kraiu-sveta-4065a43f
   tags:
   - LGBTQ+
   - contemporary
@@ -37,6 +39,4 @@ params:
   - novels
   - queer
   - romance
-title: Дом На Краю Света
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nightcrawling-8e3325b7
+title: Nightcrawling
+type: books
 params:
   authors:
   - Leila Mottley
@@ -26,7 +29,6 @@ params:
   short_book_description: Kiara and her brother, Marcus, are scraping by in an East
     Oakland apartment complex optimistically called the Regal-Hi. Both have dropped
     out of high school, their family fractured by death and...
-  slug: nightcrawling-8e3325b7
   tags:
   - African Americans
   - American literature
@@ -47,6 +49,4 @@ params:
   - literary fiction
   - new york times bestseller
   - Écrivains noirs
-title: Nightcrawling
-type: books
 ---

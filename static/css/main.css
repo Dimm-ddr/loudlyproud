@@ -1,0 +1,110 @@
+/* node_modules/tailwindcss/base.css */
+@tailwind base;
+
+/* node_modules/tailwindcss/components.css */
+@tailwind components;
+
+/* node_modules/tailwindcss/utilities.css */
+@tailwind utilities;
+
+/* assets/css/tailwind.css */
+@layer base {
+  html {
+    font-family:
+      "Lato",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+}
+@layer utilities {
+  .font-thin {
+    font-weight: 100;
+  }
+  .font-light {
+    font-weight: 300;
+  }
+  .font-normal {
+    font-weight: 400;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-black {
+    font-weight: 900;
+  }
+}
+.styled-link {
+  @apply text-blue-600 underline font-normal;
+}
+.styled-link:hover {
+  @apply text-blue-800;
+}
+.styled-link:visited {
+  @apply text-purple-600;
+}
+.styled-link:active {
+  @apply text-red-500;
+}
+.tag {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-bold bg-gray-300 text-black transition-colors duration-200;
+}
+.tag.active {
+  @apply bg-accent1 text-white;
+}
+.book-card {
+  overflow: visible !important;
+}
+.book-card > a {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.pagefind-ui__results-container {
+  @apply mb-8 font-normal;
+}
+.pagefind-ui__result {
+  @apply mb-4;
+}
+.header-logo {
+  height: 20px !important;
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    height: 20px !important;
+  }
+}
+.button[aria-disabled=true] {
+  @apply cursor-not-allowed opacity-50;
+}
+.button[aria-disabled=true]:hover {
+  @apply bg-gray-600;
+}
+.btn {
+  @apply bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
+}
+.text-heading {
+  @apply font-black text-gray-900;
+}
+.text-subheading {
+  @apply font-bold text-gray-700;
+}
+.text-body {
+  @apply font-normal text-gray-600;
+}
+.text-caption {
+  @apply font-light text-gray-500;
+}
+
+/* Define custom classes if needed */
+.bg-light-gray {
+  background-color: #d3d3d3; /* Light Gray */
+}
+
+.text-primary {
+  color: #000000; /* Black */
+}

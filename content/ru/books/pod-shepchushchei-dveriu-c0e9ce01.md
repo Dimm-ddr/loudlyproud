@@ -1,6 +1,7 @@
 ---
-title: Под шепчущей дверью
 draft: false
+slug: pod-shepchushchei-dveriu-c0e9ce01
+title: Под шепчущей дверью
 type: books
 params:
   bookTitle: Под шепчущей дверью
@@ -34,6 +35,4 @@ params:
     от своей земной, пусть и не очень интересной жизни.Ему дают ровно неделю на переход.
     И Уоллес намерен провести эти семь дней так, как всегда мечтал.
   russian_audioversion: 'no'
-  slug: pod-shepchushchei-dveriu-c0e9ce01
-slug: pod-shepchushchei-dveriu-c0e9ce01
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: blessings-6a809315
+title: Blessings
+type: books
 params:
   authors:
   - Chukwuebuka Ibeh
@@ -33,7 +36,6 @@ params:
   short_book_description: Moonlight meets Purple Hibiscus in this gay coming-of-age
     novel from an astonishing young talent, set in post-military Nigeria and culminating
     in the Same-Sex Marriage Prohibition Act of...
-  slug: blessings-6a809315
   tags:
   - Africa
   - English literature
@@ -43,6 +45,4 @@ params:
   - fiction
   - literary fiction
   - queer
-title: Blessings
-type: books
 ---

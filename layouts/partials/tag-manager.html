@@ -1,0 +1,7 @@
+<div x-data>
+    <div class="flex flex-wrap gap-2 mb-4">
+        <template x-for="tag in $store.tagManager.activeTags">
+            {{ partial "tag-component.html" (dict "tag" "x-text='tag'" "clickable" true) }}
+        </template>
+    </div>
+</div>

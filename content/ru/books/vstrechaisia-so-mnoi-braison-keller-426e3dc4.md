@@ -1,6 +1,7 @@
 ---
-title: Встречайся со мной, Брайсон Келлер
 draft: false
+slug: vstrechaisia-so-mnoi-braison-keller-426e3dc4
+title: Встречайся со мной, Брайсон Келлер
 type: books
 params:
   bookTitle: Встречайся со мной, Брайсон Келлер
@@ -32,6 +33,4 @@ params:
     человеком, который пригласит его на свидание.Чем обернется для Кая и Брайсона
     этот шуточный спор?
   russian_audioversion: 'no'
-  slug: vstrechaisia-so-mnoi-braison-keller-426e3dc4
-slug: vstrechaisia-so-mnoi-braison-keller-426e3dc4
 ---

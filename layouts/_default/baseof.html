@@ -3,35 +3,142 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{ if .IsHome }}
-        {{ .Site.Title }}
-      {{ else }}
-        {{ .Title }} - {{ .Site.Title }}
-      {{ end }}
-    </title>
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    <meta
-      name="description"
-      content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.book_description }}{{ end }}"
-    >
+    <!-- Load Alpine.js -->
+    <script defer src="/js/alpine.js"></script>
 
-    {{ partial "site-scripts.html" . }}
+    <!-- Alpine.js setup -->
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.store('tagManager', {
+          activeTags: [],
+
+          init() {
+            // Initialize with empty tags array
+            this.activeTags = []
+          },
+
+          addTag(tag) {
+            if (!this.activeTags.includes(tag)) {
+              this.activeTags.push(tag)
+              this.filterBooks()
+            }
+          },
+
+          removeTag(tag) {
+            this.activeTags = this.activeTags.filter(t => t !== tag)
+            this.filterBooks()
+          },
+
+          hasTag(tag) {
+            return this.activeTags.includes(tag)
+          },
+
+          filterBooks() {
+            const books = document.querySelectorAll('#book-gallery > div')
+            books.forEach(book => {
+              const bookTags = Array.from(book.querySelectorAll('.tag'))
+                .map(tag => tag.textContent.trim())
+              const shouldShow = this.activeTags.length === 0 ||
+                               this.activeTags.every(tag => bookTags.includes(tag))
+              book.style.display = shouldShow ? 'block' : 'none'
+            })
+
+            window.dispatchEvent(new CustomEvent('booksFiltered'))
+          }
+        })
+      })
+    </script>
+
+    <!-- Core resources -->
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
-    <link href="/search/pagefind-ui.css" rel="stylesheet">
-    <script src="/search/pagefind-ui.js"></script>
+
+    <!-- Search functionality -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        // Try to load PageFind resources
+        const loadPagefind = async () => {
+          try {
+            const cssLink = document.createElement('link')
+            cssLink.rel = 'stylesheet'
+            cssLink.href = '/search/pagefind-ui.css'
+            document.head.appendChild(cssLink)
+
+            const script = document.createElement('script')
+            script.src = '/search/pagefind-ui.js'
+            script.onload = () => {
+              // Initialize PageFind after script loads
+              if (window.PagefindUI) {
+                new PagefindUI({
+                  element: "#search",
+                  showImages: false
+                })
+              }
+            }
+            document.head.appendChild(script)
+          } catch (error) {
+            console.log('PageFind resources not available yet')
+          }
+        }
+
+        loadPagefind()
+      })
+    </script>
+
+    <!-- Additional head content -->
     {{ partial "head-additions.html" . }}
+
+    <!-- Accessibility script -->
+    <script>
+      if ('onLine' in navigator && navigator.onLine) {
+        const script = document.createElement('script')
+        script.src = '/js/accessibility-enhancements.js'
+        script.type = 'text/javascript'
+        document.head.appendChild(script)
+        script.onerror = () => console.log('Accessibility enhancements unavailable')
+      }
+    </script>
+
+    <script>
+      window.tagMapping = {
+        {{- range $tag, $color := site.Data.tag_mapping.tag_colors }}
+          "{{ $tag }}": "{{ $color }}",
+        {{- end }}
+      };
+
+      window.tagStyles = {
+        {{- range $colorKey, $colorValues := site.Data.colors.colors }}
+          "{{ $colorKey }}": {
+            bg: "{{ $colorValues.DEFAULT | safeJS }}",
+            text: "{{ $colorValues.text | safeJS }}",
+            darkBg: "{{ $colorValues.dark.DEFAULT | safeJS }}",
+            darkText: "{{ $colorValues.dark.text | safeJS }}"
+          },
+        {{- end }}
+      };
+    </script>
   </head>
-  <body class="flex flex-col min-h-screen">
+
+  <body class="flex flex-col min-h-screen bg-background text-text">
+    <!-- Skip link for accessibility -->
+    <a href="#main-content"
+       class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black">
+      Skip to main content
+    </a>
+
     {{ partial "custom-functions.html" . }}
     {{ partial "site-header.html" . }}
 
-    <main class="flex-grow">{{ block "main" . }}{{ end }}</main>
+    <main id="main-content" class="flex-grow">
+      {{ block "main" . }}{{ end }}
+    </main>
 
     <footer>
-      {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+      {{ block "footer" . }}
+        {{ partial "site-footer.html" . }}
+      {{ end }}
     </footer>
-
   </body>
 </html>

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: skin-aabaef33
+title: Skin
+type: books
 params:
   authors:
   - Kathe Koja
@@ -19,7 +22,6 @@ params:
   short_book_description: Tess, a sculptor, and Bibi, a dancer, come together to create
     a new underground art form of metal and flesh, but their new art drives them deeper
     and deeper into a realm of obsession. Reprint.
-  slug: skin-aabaef33
   tags:
   - Dark
   - Fiction general
@@ -29,6 +31,4 @@ params:
   - fantasy
   - fiction
   - horror
-title: Skin
-type: books
 ---

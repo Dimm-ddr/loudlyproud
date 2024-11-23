@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nona-the-ninth-b9f008b2
+title: Nona The Ninth
+type: books
 params:
   authors:
   - Tamsyn Muir
@@ -29,7 +32,6 @@ params:
   russian_translation_status: unknown
   series: The Locked Tomb
   short_book_description: Her city is under siege. The zombies are coming back.
-  slug: nona-the-ninth-b9f008b2
   tags:
   - LGBTQ+
   - adult fiction
@@ -43,6 +45,4 @@ params:
   - queer
   - science fiction
   - space opera
-title: Nona The Ninth
-type: books
 ---

@@ -1,6 +1,7 @@
 <!-- layouts/partials/head-additions.html -->
 <!-- Additional meta tags -->
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 
 <!-- Local Lato font -->
 <style>
@@ -9,94 +10,69 @@
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Thin.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Thin.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Thin.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Thin.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 100;
     font-display: swap;
-    src: url('{{ "fonts/Lato-ThinItalic.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-ThinItalic.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-ThinItalic.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-ThinItalic.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Light.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Light.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Light.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Light.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 300;
     font-display: swap;
-    src: url('{{ "fonts/Lato-LightItalic.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-LightItalic.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-LightItalic.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-LightItalic.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Regular.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Regular.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Regular.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Regular.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Italic.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Italic.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Italic.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Italic.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Bold.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Bold.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Bold.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Bold.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: url('{{ "fonts/Lato-BoldItalic.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-BoldItalic.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-BoldItalic.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-BoldItalic.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: url('{{ "fonts/Lato-Black.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-Black.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-Black.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-Black.woff2" | relURL }}') format('woff2');
   }
   @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 900;
     font-display: swap;
-    src: url('{{ "fonts/Lato-BlackItalic.woff2" | relURL }}') format('woff2'),
-         url('{{ "fonts/Lato-BlackItalic.woff" | relURL }}') format('woff'),
-         url('{{ "fonts/Lato-BlackItalic.ttf" | relURL }}') format('truetype');
+    src: url('{{ "fonts/Lato-BlackItalic.woff2" | relURL }}') format('woff2');
   }
 </style>
-
-<!-- Preload most commonly used fonts -->
-<link rel="preload" href="{{ "fonts/Lato-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/Lato-Bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-<script src="//unpkg.com/alpinejs" defer></script>

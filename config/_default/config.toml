@@ -1,0 +1,27 @@
+# Base configuration used across all environments
+baseURL = "/"
+title = 'Loudly Proud'
+contentDir = "content"
+defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = true
+ignoreFiles = ['content/books/temp/.*']
+i18nDir = "i18n"
+
+[build]
+  writeStats = true
+
+[markup]
+[markup.postCSS]
+enable = true
+config = "postcss.config.js"
+
+[taxonomies]
+  tag = "tags"
+
+[section]
+[section.books]
+title = "Books"
+type = "books"
+
+[permalinks]
+books = "/books/:slugorfilename/" 

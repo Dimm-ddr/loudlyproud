@@ -1,6 +1,7 @@
 ---
-title: Правила выживания в Джакарте
 draft: false
+slug: pravila-vyzhivaniia-v-dzhakarte-e600c833
+title: Правила выживания в Джакарте
 type: books
 params:
   bookTitle: Правила выживания в Джакарте
@@ -36,6 +37,4 @@ params:
     вы когда-либо отправлялись. Главное — не забывать дышать, когда дыхание перехватывает
     от восторга. Это новая жизнь любимой истории, и вам в ней понравится!» - Юля vostochnyveter
   russian_audioversion: 'no'
-  slug: pravila-vyzhivaniia-v-dzhakarte-e600c833
-slug: pravila-vyzhivaniia-v-dzhakarte-e600c833
 ---

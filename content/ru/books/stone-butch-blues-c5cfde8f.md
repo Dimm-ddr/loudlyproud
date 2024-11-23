@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: stone-butch-blues-c5cfde8f
+title: Stone Butch Blues
+type: books
 params:
   authors:
   - Leslie Feinberg
@@ -26,7 +29,6 @@ params:
   short_book_description: Woman or man? This internationally acclaimed novel looks
     at the world through the eyes of Jess Goldberg, a masculine girl growing up in
     the "Ozzie and Harriet" McCarthy era and coming out as a...
-  slug: stone-butch-blues-c5cfde8f
   tags:
   - Butch and femme (Lesbianism)
   - Coming out (Sexual orientation)
@@ -49,6 +51,4 @@ params:
   - memoir
   - queer
   - transgender
-title: Stone Butch Blues
-type: books
 ---

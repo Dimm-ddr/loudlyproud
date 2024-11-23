@@ -1,6 +1,7 @@
 ---
-title: Ренессанс
 draft: false
+slug: renessans-039755bd
+title: Ренессанс
 type: books
 params:
   bookTitle: Ренессанс
@@ -25,6 +26,4 @@ params:
     все на своем пути.Чистокровным, полукровкам и низшим стало слишком тесно в Октавии.Грядут
     большие перемены.Грядет Ренессанс.
   russian_audioversion: 'no'
-  slug: renessans-039755bd
-slug: renessans-039755bd
 ---

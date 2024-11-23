@@ -1,6 +1,7 @@
 ---
-title: Капучино С Маршмэллоу. Том 1
 draft: false
+slug: kapuchino-s-marshmellou-tom-1-66cd903a
+title: Капучино С Маршмэллоу. Том 1
 type: books
 params:
   bookTitle: Капучино С Маршмэллоу. Том 1
@@ -37,6 +38,4 @@ params:
     кофейни, маршмэллоу и любовь, который обязательно понравится поклонникам комиксов
     Heartstopper, «Бей-пеки» и «Фехтовальщики».
   russian_audioversion: 'no'
-  slug: kapuchino-s-marshmellou-tom-1-66cd903a
-slug: kapuchino-s-marshmellou-tom-1-66cd903a
 ---

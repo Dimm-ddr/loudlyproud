@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: argonavty-1a2dd5be
+title: Аргонавты
+type: books
 params:
   authors:
   - Maggie Nelson, Мэгги Нельсон
@@ -24,7 +27,6 @@ params:
   short_book_description: «Аргонавты» Мэгги Нельсон — текст на стыке жанров, автотеоретическое
     высказывание о желании, идентичности, создании квир-семьи, ограничениях и возможностях
     любви и языка. Работая в традиции...
-  slug: argonavty-1a2dd5be
   tags:
   - LGBTQ+
   - biography
@@ -34,6 +36,4 @@ params:
   - memoir
   - nonfiction
   - queer
-title: Аргонавты
-type: books
 ---

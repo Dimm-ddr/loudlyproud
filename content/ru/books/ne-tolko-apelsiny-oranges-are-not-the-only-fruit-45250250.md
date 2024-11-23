@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: ne-tolko-apelsiny-oranges-are-not-the-only-fruit-45250250
+title: Не только апельсины (Oranges Are Not The Only Fruit)
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
@@ -33,7 +36,6 @@ params:
   russian_audioversion: 'no'
   russian_translation_status: exists
   short_book_description: Роман молодой писательницы, в котором она
-  slug: ne-tolko-apelsiny-oranges-are-not-the-only-fruit-45250250
   tags:
   - Christian gays
   - Christianity and sexuality
@@ -61,6 +63,4 @@ params:
   - fiction
   - lesbian
   - queer
-title: Не только апельсины (Oranges Are Not The Only Fruit)
-type: books
 ---

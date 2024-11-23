@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: tonkaia-rabota-fingersmith-e8a6fb9b
+title: Тонкая работа (Fingersmith)
+type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
@@ -42,7 +45,6 @@ params:
     Триндер, сирота, выросшая среди воров и мошенников, не знает, что судьба странными
     узами соединила ее жизнь с юной наследницей богатого имения, живущего замкнуто
     и уединенно…
-  slug: tonkaia-rabota-fingersmith-e8a6fb9b
   tags:
   - 19th century
   - Betrug
@@ -67,6 +69,4 @@ params:
   - mystery
   - queer
   - romance
-title: Тонкая работа (Fingersmith)
-type: books
 ---

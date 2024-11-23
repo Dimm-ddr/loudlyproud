@@ -1,6 +1,7 @@
 ---
-title: Город Из Воды И Песка
 draft: false
+slug: gorod-iz-vody-i-peska-c16bd66a
+title: Город Из Воды И Песка
 type: books
 params:
   bookTitle: Город Из Воды И Песка
@@ -30,6 +31,4 @@ params:
     вас. Любовь стоит того, чтобы ломать стены и возводить мосты. Или целые города,
     пусть даже из воды и песка.
   russian_audioversion: 'no'
-  slug: gorod-iz-vody-i-peska-c16bd66a
-slug: gorod-iz-vody-i-peska-c16bd66a
 ---

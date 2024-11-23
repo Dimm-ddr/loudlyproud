@@ -1,25 +1,28 @@
 <!-- layouts/partials/site-header.html -->
 <header class="bg-secondary py-1">
-  <div class="container mx-auto flex justify-between items-center">
+  <div class="container mx-auto px-4 flex justify-between items-center">
     <!-- Logo Section -->
-    <a href="{{ .Site.BaseURL }}" class="no-underline text-primary">
-      <svg width="170" height="30" viewBox="0 0 170 30" xmlns="http://www.w3.org/2000/svg">
-        <style>
-          .logo-text { font-family: 'Lato', sans-serif; font-weight: bold; }
-        </style>
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="logo-text" fill="currentColor" font-size="25">
-          Loudly Proud
-        </text>
-      </svg>
-    </a>
+    <div class="flex-1">
+      <a href="{{ .Site.BaseURL }}" class="no-underline text-primary inline-block ml-4">
+        <svg width="170" height="30" viewBox="0 0 170 30" xmlns="http://www.w3.org/2000/svg">
+          <style>
+            .logo-text { font-family: 'Lato', sans-serif; font-weight: bold; }
+          </style>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="logo-text" fill="currentColor" font-size="25">
+            Loudly Proud
+          </text>
+        </svg>
+      </a>
+    </div>
 
     <!-- Language Switcher Dropdown -->
-    <div x-data="{ open: false }" class="relative">
+    <div x-data="{ open: false }" class="relative flex-1 text-right">
       <button
         @click="open = !open"
-        class="flex items-center text-primary hover:text-accent3 focus:outline-none"
+        class="inline-flex items-center text-primary hover:text-accent3 focus:outline-none mr-4"
         aria-haspopup="true"
         :aria-expanded="open"
+        type="button"
       >
         <!-- Display Current Language Code -->
         <span class="uppercase">{{ .Site.Language.Lang }}</span>

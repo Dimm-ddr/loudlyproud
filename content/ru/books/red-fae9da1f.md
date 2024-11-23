@@ -1,6 +1,7 @@
 ---
-title: Red
 draft: false
+slug: red-fae9da1f
+title: Red
 type: books
 params:
   bookTitle: Red
@@ -43,6 +44,4 @@ params:
     her own destiny.A thoroughly modern reimagining of the Western genre,Lucky Redis
     a masterfully crafted, propulsive tale of adventure, loyalty, desire, and love.
   russian_audioversion: 'no'
-  slug: red-fae9da1f
-slug: red-fae9da1f
 ---

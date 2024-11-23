@@ -1,6 +1,7 @@
 ---
-title: Any Way The Wind Blows
 draft: false
+slug: any-way-the-wind-blows-8e417f47
+title: Any Way The Wind Blows
 type: books
 params:
   bookTitle: Any Way The Wind Blows
@@ -56,6 +57,4 @@ params:
     Wind Blows is an ending about endings. About catharsis and closure, and how we
     choose to move on from the traumas and triumphs that try to define us.
   russian_audioversion: 'no'
-  slug: any-way-the-wind-blows-8e417f47
-slug: any-way-the-wind-blows-8e417f47
 ---

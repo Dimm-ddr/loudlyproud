@@ -1,6 +1,7 @@
 ---
-title: Shards Of Time
 draft: false
+slug: shards-of-time-4a55201f
+title: Shards Of Time
 type: books
 params:
   bookTitle: Shards Of Time
@@ -51,6 +52,4 @@ params:
     to life—can step between the worlds and confront the killer . . . even if it means
     a second and all too permanent death.
   russian_audioversion: 'no'
-  slug: shards-of-time-4a55201f
-slug: shards-of-time-4a55201f
 ---

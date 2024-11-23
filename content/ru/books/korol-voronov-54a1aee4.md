@@ -1,6 +1,7 @@
 ---
-title: Король Воронов
 draft: false
+slug: korol-voronov-54a1aee4
+title: Король Воронов
 type: books
 params:
   bookTitle: Король Воронов
@@ -42,6 +43,4 @@ params:
     кошмары преследуют на каждом шагу, а по пятам идут опасные люди, друзьям предстоит
     сделать непростой выбор…
   russian_audioversion: 'no'
-  slug: korol-voronov-54a1aee4
-slug: korol-voronov-54a1aee4
 ---

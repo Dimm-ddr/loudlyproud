@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: bremia-mif-ob-atlase-i-gerakle-weight-24798884
+title: Бремя. Миф об Атласе и Геракле (Weight)
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
@@ -41,7 +44,6 @@ params:
   short_book_description: Роман "Бремя" - это рассказ об истории человечества, с момента
     зарождения мира и до наших дней. Об истории, которая движется со скоростью света
     и о месте человека в этом бесконечном движении…
-  slug: bremia-mif-ob-atlase-i-gerakle-weight-24798884
   tags:
   - Atlas (Greek deity)
   - Choice (Psychology)
@@ -57,6 +59,4 @@ params:
   - fiction
   - literary fiction
   - retellings
-title: Бремя. Миф об Атласе и Геракле (Weight)
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Координата Поврежденности
 draft: false
+slug: koordinata-povrezhdennosti-d3cbe077
+title: Координата Поврежденности
 type: books
 params:
   bookTitle: Координата Поврежденности
@@ -23,6 +24,4 @@ params:
     к нему, столкнутся. Однако никому неизвестно, какая именно встреча и с кем перевернет
     всю жизнь. Хотим мы того или нет.
   russian_audioversion: 'no'
-  slug: koordinata-povrezhdennosti-d3cbe077
-slug: koordinata-povrezhdennosti-d3cbe077
 ---

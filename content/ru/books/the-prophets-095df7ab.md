@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: the-prophets-095df7ab
+title: The Prophets
+type: books
 params:
   authors:
   - Robert Jones Jr.
@@ -35,7 +38,6 @@ params:
   short_book_description: Alternate cover edition of ISBN9780593085684A novel about
     the forbidden union between two enslaved young men on a Deep South plantation,
     the refuge they find in each other, and a betrayal that...
-  slug: the-prophets-095df7ab
   tags:
   - African American
   - African American gay men
@@ -58,6 +60,4 @@ params:
   - new york times bestseller
   - queer
   - romance
-title: The Prophets
-type: books
 ---

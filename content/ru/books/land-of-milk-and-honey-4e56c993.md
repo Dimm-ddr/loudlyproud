@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: land-of-milk-and-honey-4e56c993
+title: Land Of Milk And Honey
+type: books
 params:
   authors:
   - C Pam Zhang
@@ -32,7 +35,6 @@ params:
   short_book_description: The award-winning author of How Much of These Hills Is Gold
     returns with a rapturous and revelatory novel about a young chef whose discovery
     of pleasure alters her life and, indirectly, the world...
-  slug: land-of-milk-and-honey-4e56c993
   tags:
   - Dystopia
   - Food
@@ -41,6 +43,4 @@ params:
   - fiction
   - literary fiction
   - science fiction
-title: Land Of Milk And Honey
-type: books
 ---

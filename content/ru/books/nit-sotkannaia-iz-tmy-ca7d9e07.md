@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nit-sotkannaia-iz-tmy-ca7d9e07
+title: Нить, сотканная из тьмы
+type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
@@ -26,7 +29,6 @@ params:
   short_book_description: '"Нить, сотканная из тьмы" - самый знаменитый из ранних
     романов Сары Уотерс, прославленного автора "Тонкой работы", "Бархатных коготков"
     и "Ночного дозора". Замысел этой книги возник благодаря...'
-  slug: nit-sotkannaia-iz-tmy-ca7d9e07
   tags:
   - Gothic
   - LGBTQ+
@@ -38,6 +40,4 @@ params:
   - mystery
   - queer
   - romance
-title: Нить, сотканная из тьмы
-type: books
 ---

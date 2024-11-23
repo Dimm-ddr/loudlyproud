@@ -1,6 +1,7 @@
 ---
-title: Дни Нашей Жизни
 draft: false
+slug: dni-nashei-zhizni-d955ab61
+title: Дни Нашей Жизни
 type: books
 params:
   bookTitle: Дни Нашей Жизни
@@ -28,6 +29,4 @@ params:
     первое разочарование, первая любовь и первая нелюбовь. Но у Мики была одна тайна:
     его семья, которую никому нельзя показывать.Книга содержит нецензурную брань.'
   russian_audioversion: 'no'
-  slug: dni-nashei-zhizni-d955ab61
-slug: dni-nashei-zhizni-d955ab61
 ---

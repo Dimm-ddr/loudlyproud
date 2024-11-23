@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: zachem-byt-schastlivoi-esli-mozhno-byt-normalnoi-6377dad1
+title: Зачем Быть Счастливой, Если Можно Быть Нормальной?
+type: books
 params:
   authors:
   - Дженет Уинтерсон (Jeanette Winterson)
@@ -27,7 +30,6 @@ params:
   short_book_description: В книге «Зачем быть счастливой, если можно быть нормальной?»,
     впервые опубликованной в 2011 году, Джанет Уинтерсон возвращается к истории своего
     детства в приемной семье, легшей в основу...
-  slug: zachem-byt-schastlivoi-esli-mozhno-byt-normalnoi-6377dad1
   tags:
   - LGBTQ+
   - autobiography
@@ -35,6 +37,4 @@ params:
   - memoir
   - nonfiction
   - queer
-title: Зачем Быть Счастливой, Если Можно Быть Нормальной?
-type: books
 ---

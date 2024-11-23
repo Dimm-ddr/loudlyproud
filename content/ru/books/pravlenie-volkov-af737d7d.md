@@ -1,6 +1,7 @@
 ---
-title: Правление Волков
 draft: false
+slug: pravlenie-volkov-af737d7d
+title: Правление Волков
 type: books
 params:
   bookTitle: Правление Волков
@@ -43,6 +44,4 @@ params:
     найти свет во тьме будущего. Иначе все, что им дорого, навсегда превратится в
     руины.
   russian_audioversion: 'no'
-  slug: pravlenie-volkov-af737d7d
-slug: pravlenie-volkov-af737d7d
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: kharrou-iz-deviatogo-doma-b07dfa6d
+title: Харроу Из Девятого Дома
+type: books
 params:
   authors:
   - Tamsyn Muir, Тэмсин Мьюир
@@ -31,7 +34,6 @@ params:
   short_book_description: Вся жизнь Харроу — головоломка, лабиринт, полный тайн, убийств
     и лжи. Она — последний некромант Девятого дома, была призвана Императором, чтобы
     вести войну, в которой не победить.
-  slug: kharrou-iz-deviatogo-doma-b07dfa6d
   tags:
   - LGBTQ+
   - adult fiction
@@ -43,6 +45,4 @@ params:
   - mystery
   - queer
   - science fiction
-title: Харроу Из Девятого Дома
-type: books
 ---

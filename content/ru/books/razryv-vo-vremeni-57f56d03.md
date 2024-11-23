@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: razryv-vo-vremeni-57f56d03
+title: Разрыв во времени
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
@@ -10,8 +15,6 @@ params:
     что Пердита — брошенное дитя ревности. Ее настоящий отец — жестокий руководитель
     финансовой компании, приревновавший жену к лучшему другу. Удастся ли Пердите сомкнуть
     разрыв во времени и узнать правду о своем происхождении?
-
-
     The Winter’s Tale is one of Shakespeare’s “late plays.” It tells the story of
     a king whose jealousy results in the banishment of his baby daughter and the death
     of his beautiful wife. His daughter is found and brought up by a shepherd on the
@@ -41,7 +44,6 @@ params:
   short_book_description: Джазовый пианист и владелец небольшого бара Шеп находит
     подброшенную к больнице девочку-младенца — вместе с чемоданом денег. Шеп удочерит
     Пердиту, вырастит как свою и вложит в нее всю душу...
-  slug: razryv-vo-vremeni-57f56d03
   tags:
   - Adaptations
   - Exile (Punishment)
@@ -66,6 +68,4 @@ params:
   - literary fiction
   - queer
   - retellings
-title: Разрыв во времени
-type: books
 ---

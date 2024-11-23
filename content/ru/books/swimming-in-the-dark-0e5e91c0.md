@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: swimming-in-the-dark-0e5e91c0
+title: Swimming In The Dark
+type: books
 params:
   authors:
   - Tomasz Jedrowski
@@ -38,7 +41,6 @@ params:
   short_book_description: Set in early 1980s Poland against the violent decline of
     communism, a tender and passionate story of first love between two young men who
     eventually find themselves on opposite sides of the...
-  slug: swimming-in-the-dark-0e5e91c0
   tags:
   - English literature
   - Fiction coming of age
@@ -51,6 +53,4 @@ params:
   - historical fiction
   - queer
   - romance
-title: Swimming In The Dark
-type: books
 ---

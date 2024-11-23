@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: ziggi-stardast-i-ia-10a2bb97
+title: Зигги Стардаст и я
+type: books
 params:
   authors:
   - Джеймс Брендон (James Brandon)
@@ -27,7 +30,6 @@ params:
   short_book_description: На дворе 1973 год, во Вьетнаме свирепствует война. В США
     гомосексуальность преследуется законом.Жизнь Джонатана напоминает кромешный ад
     - над ним издеваются в школе, дядю держат в психбольнице, а...
-  slug: ziggi-stardast-i-ia-10a2bb97
   tags:
   - LGBTQ+
   - contemporary
@@ -39,6 +41,4 @@ params:
   - performing arts
   - queer
   - romance
-title: Зигги Стардаст и я
-type: books
 ---

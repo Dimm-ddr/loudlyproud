@@ -1,6 +1,7 @@
 ---
-title: Цветы В Пустоте
 draft: false
+slug: tsvety-v-pustote-68474371
+title: Цветы В Пустоте
 type: books
 params:
   bookTitle: Цветы В Пустоте
@@ -28,6 +29,4 @@ params:
     путешествии себя, не уничтожив при этом другого? И способно ли чудовище на человеческие
     чувства?'
   russian_audioversion: 'no'
-  slug: tsvety-v-pustote-68474371
-slug: tsvety-v-pustote-68474371
 ---

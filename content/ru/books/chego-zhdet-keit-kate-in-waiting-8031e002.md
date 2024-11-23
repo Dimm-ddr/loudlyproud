@@ -1,6 +1,7 @@
 ---
-title: Чего ждет Кейт (Kate In Waiting)
 draft: false
+slug: chego-zhdet-keit-kate-in-waiting-8031e002
+title: Чего ждет Кейт (Kate In Waiting)
 type: books
 params:
   bookTitle: Чего ждет Кейт (Kate In Waiting)
@@ -40,6 +41,4 @@ params:
     communal crushes aren’t so fun when real feelings are involved. This one might
     even bring the curtains down on Kate and Anderson’s friendship.
   russian_audioversion: 'no'
-  slug: chego-zhdet-keit-kate-in-waiting-8031e002
-slug: chego-zhdet-keit-kate-in-waiting-8031e002
 ---

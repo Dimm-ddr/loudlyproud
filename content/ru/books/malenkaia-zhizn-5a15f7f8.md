@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: malenkaia-zhizn-5a15f7f8
+title: Маленькая жизнь
+type: books
 params:
   authors:
   - Hanya Yanagihara, Ханья Янагинара, Ханья Янагихара
@@ -25,7 +28,6 @@ params:
   short_book_description: Американская писательница Ханья Янагихара создала необычный
     роман, где и о страшном, и о радостном говорится без лишнего надрыва и сентиментальности.
     Четверо друзей - талантливый архитектор...
-  slug: malenkaia-zhizn-5a15f7f8
   tags:
   - American literature
   - Anglo-American literature
@@ -82,6 +84,4 @@ params:
   - sexual abuse
   - social life and customs
   - the Bronx
-title: Маленькая жизнь
-type: books
 ---

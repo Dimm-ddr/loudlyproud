@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: ubivaia-evu-eto-sluchitsia-ne-zavtra-no-tomorrow-65834717
+title: 'Убивая Еву: Это случится не завтра (No Tomorrow)'
+type: books
 params:
   authors:
   - Luke Jennings, Люк Дженнингс
@@ -8,11 +13,9 @@ params:
     убийцы Вилланель. Фирменный британский юмор, неожиданные повороты сюжета и долгожданное
     продолжение захватывающего детектива пера Люка Дженнингса – впервые на русском
     языке.
-
     Ева обнаруживает, что старший офицер разведки куплен "Двенадцатью" (секретной
     организацией и работодателем Вилланель). Пока Ева его допрашивает, пытаясь соединить
     кусочки головоломки воедино, Вилланель снова начинает охоту…
-
     In a hotel room in Venice, where she''s just completed a routine assassination,
     Villanelle receives a late-night call.Eve Polastri has discovered that a senior
     MI5 officer is in the pay of the Twelve, and is about to debrief him. As Eve interrogates
@@ -38,7 +41,6 @@ params:
     убийцы Вилланель. Фирменный британский юмор, неожиданные повороты сюжета и долгожданное
     продолжение захватывающего детектива пера Люка Дженнингса – впервые на русском
     языке...
-  slug: ubivaia-evu-eto-sluchitsia-ne-zavtra-no-tomorrow-65834717
   tags:
   - Fiction espionage
   - Fiction thrillers espionage
@@ -50,6 +52,4 @@ params:
   - fiction
   - mystery
   - queer
-title: 'Убивая Еву: Это случится не завтра (No Tomorrow)'
-type: books
 ---

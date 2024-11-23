@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: nezhnost-i-nenavist-7b25bbbf
+title: Нежность и ненависть
+type: books
 params:
   authors:
   - Karla Nikole, Карла Николь
@@ -14,8 +19,6 @@ params:
     не было уже очень давно, если вообще было. Мне начинает казаться, что не такой
     уж он обычный человек, как сам утверждает. Но отступать поздно, и я проваливаюсь
     в этот омут с головой…
-
-
     How does lust turn into love? Slowly. And it might hurt. Contrary to popular belief,
     we don’t like feeding from humans because they taste like dirt. But I date them.
     They’re excellent for that. Vampires are demanding, arrogant and too focused on
@@ -38,7 +41,6 @@ params:
   series: Lore & Lust
   short_book_description: Вопреки распространенному мнению, мы не питаемся людьми.
     На вкус они как грязь. Зато люди отлично подходят для романов…
-  slug: nezhnost-i-nenavist-7b25bbbf
   tags:
   - LGBTQ+
   - adult fiction
@@ -50,6 +52,4 @@ params:
   - queer
   - romance
   - vampires
-title: Нежность и ненависть
-type: books
 ---

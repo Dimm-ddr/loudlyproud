@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: goida-a0cc82e9
+title: Гойда
+type: books
 params:
   authors:
   - Джек Гельб
@@ -19,9 +22,6 @@ params:
   short_book_description: 'Юный сын бывалого воеводы Федор Басманов прибывает к царскому
     двору, чтобы служить государю словом и делом. Страна разрывается на части: воля
     владыки все больше вызывает сомнение у народа, а...'
-  slug: goida-a0cc82e9
   tags:
   - Russian literature
-title: Гойда
-type: books
 ---

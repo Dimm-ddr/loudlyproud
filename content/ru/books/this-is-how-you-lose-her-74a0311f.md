@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: this-is-how-you-lose-her-74a0311f
+title: This Is How You Lose Her
+type: books
 params:
   authors:
   - Junot Díaz
@@ -28,7 +31,6 @@ params:
   short_book_description: On a beach in the Dominican Republic, a doomed relationship
     flounders. In the heat of a hospital laundry room in New Jersey, a woman does
     her lover’s washing and thinks about his wife.
-  slug: this-is-how-you-lose-her-74a0311f
   tags:
   - American Short stories
   - Dominican Americans
@@ -51,6 +53,4 @@ params:
   - nyt:trade-fiction-paperback=2013-09-22
   - romance
   - short stories
-title: This Is How You Lose Her
-type: books
 ---

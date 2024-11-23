@@ -12,6 +12,9 @@ heroDescription = "Друзья, это наша общая библиотека
 heroFeedbackLink = "https://forms.gle/YHhojq3Ts2LsDF6G8"
 heroTelegram = "<a href='https://t.me/loudlyProud' class=styled-link>Телеграм канал для анонсов о сайте</a>"
 
+[taxonomies]
+  tag = "tags"
+
 [build]
   writeStats = true
 

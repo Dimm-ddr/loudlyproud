@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: christmas-days-12-stories-and-12-feasts-for-12-days-f4b9e6bd
+title: 'Christmas Days: 12 Stories And 12 Feasts For 12 Days'
+type: books
 params:
   authors:
   - Jeanette Winterson
@@ -33,7 +36,6 @@ params:
   short_book_description: From the New York Times bestselling author of "Why Be Happy
     When You Could Be Normal?" comes an enchanting collection of stories for the holiday
     season.For years Jeanette Winterson has loved...
-  slug: christmas-days-12-stories-and-12-feasts-for-12-days-f4b9e6bd
   tags:
   - Christmas stories
   - Collected works (single author multi-form)
@@ -49,6 +51,4 @@ params:
   - fantasy
   - fiction
   - short stories
-title: 'Christmas Days: 12 Stories And 12 Feasts For 12 Days'
-type: books
 ---

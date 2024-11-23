@@ -1,0 +1,13 @@
+[en]
+languageName = "English"
+weight = 2
+languageCode = "en"
+contentDir = "content/en"
+disabled = false
+
+[ru]
+languageName = "Русский"
+weight = 1
+languageCode = "ru"
+contentDir = "content/ru"
+disabled = false 

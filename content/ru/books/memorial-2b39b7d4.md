@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: memorial-2b39b7d4
+title: Memorial
+type: books
 params:
   authors:
   - Bryan Washington
@@ -35,7 +38,6 @@ params:
   short_book_description: A funny, sexy, profound dramedy about two young people at
     a crossroads in their relationship and the limits of love.Benson and Mike are
     two young guys who live together in Houston. Mike is a...
-  slug: memorial-2b39b7d4
   tags:
   - African Americans
   - American literature
@@ -67,6 +69,4 @@ params:
   - novels
   - queer
   - romance
-title: Memorial
-type: books
 ---

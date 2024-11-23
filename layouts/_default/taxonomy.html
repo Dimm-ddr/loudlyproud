@@ -1,0 +1,115 @@
+{{ define "main" }}
+<div x-data class="bg-background min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="bg-secondary rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold text-primary mb-4">
+                {{ i18n "books_with_tag" }}: <span class="text-accent1">{{ .Title }}</span>
+            </h1>
+            <p class="text-text">
+                {{ i18n "showing_books_with_tag" }} <span class="font-bold">{{ .Title }}</span>
+                ({{ len .Pages }} {{ i18n "books" }})
+            </p>
+        </div>
+
+        <!-- Search and Filters Row -->
+        <div class="mb-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Search Field -->
+            <div id="search" class="w-full md:w-1/2"></div>
+
+            <!-- Divider for Larger Screens -->
+            <div class="hidden md:block border-l border-light-gray h-8 mx-4"></div>
+
+            <!-- Items Per Page Dropdown -->
+            <div class="flex items-center space-x-2">
+                <label for="items-per-page" class="text-text font-normal whitespace-nowrap">
+                    {{ i18n "items_per_page" }}
+                </label>
+                <select id="items-per-page"
+                        class="border border-light-gray rounded px-2 py-1 font-normal text-text">
+                    <option value="12" selected>12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tag Manager -->
+        {{ partial "tag-manager.html" . }}
+
+        <!-- Tag Buttons -->
+        <div x-data>
+            <button
+                x-data
+                :data-tag="{{ .Title | jsonify }}"
+                @click="$store.tagManager.addTag($el.dataset.tag)"
+                :class="{ 'bg-accent1 text-white': $store.tagManager.hasTag($el.dataset.tag) }"
+                class="tag bg-light-gray hover:bg-accent1 hover:text-white transition-colors duration-200"
+            >
+                {{ humanize .Title }} ({{ len .Pages }})
+            </button>
+
+            <!-- Tag Cloud Section -->
+            <div class="mb-8 bg-secondary rounded-lg p-6" x-data="{ showAllTags: false }">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-primary">{{ i18n "all_tags" }}</h2>
+                    <button @click="showAllTags = !showAllTags"
+                            class="text-accent1 hover:text-accent2 transition-colors duration-200">
+                        <span x-text="showAllTags ? '{{ i18n "show_less" }}' : '{{ i18n "show_more" }}'"></span>
+                    </button>
+                </div>
+
+                <div class="flex flex-wrap gap-2" :class="{ 'max-h-20 overflow-hidden': !showAllTags }">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                        {{ partial "tag-component.html" (dict
+                            "tag" $name
+                            "clickable" true
+                            "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                        ) }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Books Grid -->
+        <section id="book-gallery"
+                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {{ range .Pages }}
+                {{ partial "book-card.html" . }}
+            {{ end }}
+        </section>
+
+        <!-- No Results Message -->
+        {{ if eq (len .Pages) 0 }}
+        <div class="text-center py-8 flex flex-col items-center">
+            <svg class="w-12 h-12 text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
+            </svg>
+            <p class="text-xl font-bold text-gray-600">{{ i18n "no_books_with_tag" }}</p>
+        </div>
+        {{ end }}
+
+        <!-- Back to All Books -->
+        <div class="mt-8 text-center">
+            <a href="{{ "/" | relLangURL }}"
+               class="inline-flex items-center space-x-2 text-accent1 hover:text-accent2 transition-colors duration-200">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                <span>{{ i18n "back_to_all_books" }}</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize Pagefind search -->
+<script>
+    window.addEventListener('load', function () {
+        new PagefindUI({
+            element: "#search",
+            showImages: true
+        });
+    });
+</script>
+{{ end }}

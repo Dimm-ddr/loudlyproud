@@ -1,5 +1,10 @@
 ---
+
+
 draft: false
+slug: khoziaistvo-sveta-lighthousekeeping-66a6fd2f
+title: Хозяйство света (Lighthousekeeping)
+type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
@@ -9,8 +14,6 @@ params:
     не дать свету угаснуть - это научиться рассказывать истории. И они увлекают девочку
     в глубины готического кошмара жизни священника Вавилона Мрака, где встречаются
     Роберт Луис Стивенсон и Чарлз Дарвин…
-
-
     Lighthousekeeping tells the tale of Silver ("My mother called me Silver. I was
     born part precious metal, part pirate."), an orphaned girl who is taken in by
     blind Mr. Pew, the mysterious and miraculously old keeper of a lighthouse on the
@@ -42,7 +45,6 @@ params:
   short_book_description: После того, как маму юной Сильвер буквально сдувает с лица
     земли, девочка попадает к слепому и мудрому хранителю маяка Пью, который учит
     ее, что не дать свету угаснуть - это научиться рассказывать истории…
-  slug: khoziaistvo-sveta-lighthousekeeping-66a6fd2f
   tags:
   - Blind
   - Clergy
@@ -64,6 +66,4 @@ params:
   - magical realism
   - queer
   - romance
-title: Хозяйство света (Lighthousekeeping)
-type: books
 ---

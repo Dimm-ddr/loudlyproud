@@ -1,8 +1,12 @@
 <footer class="bg-secondary text-gray-700 py-4">
   <div class="container mx-auto px-4 text-center">
+    <div class="mb-4">
+      <a href="https://t.me/loudlyProud" class="styled-link hover:text-gray-900">
+        {{ i18n "telegram_updates" }}
+      </a>
+    </div>
     <p class="text-sm">
-      &copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n
-      "all_rights_reserved" }}
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" }}
     </p>
   </div>
 </footer>

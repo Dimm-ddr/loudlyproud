@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: enigma-variatsii-51b8c521
+title: Энигма-вариации
+type: books
 params:
   authors:
   - André Aciman, Александра Глебовская, Андре Асиман
@@ -27,7 +30,6 @@ params:
   short_book_description: Андре Асимана называют одним из важнейших романистов современности.
     Его новая книга - "Энигма-вариации" - повествует о жизни Пола, любовные интересы
     которого остаются столь же волнующими и...
-  slug: enigma-variatsii-51b8c521
   tags:
   - LGBTQ+
   - adult fiction
@@ -40,6 +42,4 @@ params:
   - queer
   - romance
   - short stories
-title: Энигма-вариации
-type: books
 ---

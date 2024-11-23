@@ -1,6 +1,7 @@
 ---
-title: Мальчики с кладбища
 draft: false
+slug: malchiki-s-kladbishcha-368a670f
+title: Мальчики с кладбища
 type: books
 params:
   bookTitle: Мальчики с кладбища
@@ -39,6 +40,4 @@ params:
     Джулиану, чтобы каждый получил желаемое. Но так ли просто избавиться от того,
     кто совсем не собирается никуда уходить?'
   russian_audioversion: 'no'
-  slug: malchiki-s-kladbishcha-368a670f
-slug: malchiki-s-kladbishcha-368a670f
 ---

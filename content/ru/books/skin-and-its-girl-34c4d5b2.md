@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: skin-and-its-girl-34c4d5b2
+title: Skin And Its Girl
+type: books
 params:
   authors:
   - Sarah Cypher
@@ -36,7 +39,6 @@ params:
   short_book_description: A young, queer Palestinian American woman pieces together
     her great aunt’s secrets in this sweeping debut, a family saga confronting questions
     of sexual identity, exile, and lineage.In a Pacific...
-  slug: skin-and-its-girl-34c4d5b2
   tags:
   - LGBTQ+
   - adult fiction
@@ -45,6 +47,4 @@ params:
   - lesbian
   - literary fiction
   - queer
-title: Skin And Its Girl
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Автоквирография
 draft: false
+slug: avtokvirografiia-a8069a4f
+title: Автоквирография
 type: books
 params:
   bookTitle: Автоквирография
@@ -28,6 +29,4 @@ params:
     сложнее, чем предполагал Таннер, потому что вне­запная влюбленность рушит все
     его планы…
   russian_audioversion: 'no'
-  slug: avtokvirografiia-a8069a4f
-slug: avtokvirografiia-a8069a4f
 ---

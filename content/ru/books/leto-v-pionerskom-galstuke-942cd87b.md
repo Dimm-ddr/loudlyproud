@@ -1,6 +1,7 @@
 ---
-title: Лето в пионерском галстуке
 draft: false
+slug: leto-v-pionerskom-galstuke-942cd87b
+title: Лето в пионерском галстуке
 type: books
 params:
   bookTitle: Лето в пионерском галстуке
@@ -36,6 +37,4 @@ params:
     в рамки морали на пути к «светлому будущему». И что это будущее оказалось не таким
     уж и светлым.
   russian_audioversion: 'no'
-  slug: leto-v-pionerskom-galstuke-942cd87b
-slug: leto-v-pionerskom-galstuke-942cd87b
 ---

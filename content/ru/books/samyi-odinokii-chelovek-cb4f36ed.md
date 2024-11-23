@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: samyi-odinokii-chelovek-cb4f36ed
+title: Самый Одинокий Человек
+type: books
 params:
   authors:
   - Sarah Winman
@@ -31,7 +34,6 @@ params:
   short_book_description: В 2011 году дебютный роман английской актрисы Сары Уинман
     "Когда бог был кроликом" стал настоящей сенсацией. Эта "безукоризненно точная
     и хватающая за душу, в равной мере комичная и трагичная"...
-  slug: samyi-odinokii-chelovek-cb4f36ed
   tags:
   - LGBTQ+
   - adult fiction
@@ -43,6 +45,4 @@ params:
   - literary fiction
   - queer
   - romance
-title: Самый Одинокий Человек
-type: books
 ---

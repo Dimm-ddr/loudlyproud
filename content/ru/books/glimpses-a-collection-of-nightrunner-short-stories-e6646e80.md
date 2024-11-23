@@ -1,6 +1,7 @@
 ---
-title: 'Glimpses: A Collection Of Nightrunner Short Stories'
 draft: false
+slug: glimpses-a-collection-of-nightrunner-short-stories-e6646e80
+title: 'Glimpses: A Collection Of Nightrunner Short Stories'
 type: books
 params:
   bookTitle: 'Glimpses: A Collection Of Nightrunner Short Stories'
@@ -57,6 +58,4 @@ params:
     collection, lovingly illustrated, a gift to all of us who love the Nightrunners.
     This rocks." -Patricia Briggs, Mercy Thompson Series
   russian_audioversion: 'no'
-  slug: glimpses-a-collection-of-nightrunner-short-stories-e6646e80
-slug: glimpses-a-collection-of-nightrunner-short-stories-e6646e80
 ---

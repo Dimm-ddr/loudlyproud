@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: ia-rozhdena-dlia-etogo-b98d3a3a
+title: Я Рожден(а) Для Этого
+type: books
 params:
   authors:
   - Alice Oseman, Элис Осман
@@ -23,7 +26,6 @@ params:
   short_book_description: Для Ангел нет ничего важнее «Ковчега» — самого популярного
     бойз-бенда Великобритании. Благодаря фандому Ангел нашла верных друзей и единомышленников,
     а ее мечта — увидеть кумиров вживую — вот-вот...
-  slug: ia-rozhdena-dlia-etogo-b98d3a3a
   tags:
   - LGBTQ+
   - audiobook
@@ -34,6 +36,4 @@ params:
   - romance
   - transgender
   - young adult (YA)
-title: Я Рожден(а) Для Этого
-type: books
 ---

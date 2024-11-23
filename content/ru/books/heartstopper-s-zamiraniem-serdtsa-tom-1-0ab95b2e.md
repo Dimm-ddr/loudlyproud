@@ -1,6 +1,7 @@
 ---
-title: Heartstopper. С Замиранием Сердца. Том 1
 draft: false
+slug: heartstopper-s-zamiraniem-serdtsa-tom-1-0ab95b2e
+title: Heartstopper. С Замиранием Сердца. Том 1
 type: books
 params:
   bookTitle: Heartstopper. С Замиранием Сердца. Том 1
@@ -40,6 +41,4 @@ params:
     общался. Они становятся друзьями, и вскоре Чарли по уши влюбляется в Ника, хотя
     и знает, что шансов у него нет…
   russian_audioversion: 'no'
-  slug: heartstopper-s-zamiraniem-serdtsa-tom-1-0ab95b2e
-slug: heartstopper-s-zamiraniem-serdtsa-tom-1-0ab95b2e
 ---

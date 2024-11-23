@@ -1,5 +1,12 @@
 ---
+
+
+
+
 draft: false
+slug: odinokii-muzhchina-a-single-man-316da7cf
+title: Одинокий мужчина (A Single Man)
+type: books
 params:
   authors:
   - Christopher Isherwood, Кристофер Ишервуд
@@ -7,15 +14,11 @@ params:
   book_description: 'Роман "Одинокий мужчина", впервые опубликованный в 1964 году
     и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной роли), -
     одно из самых известных произведений Ишервуда.
-
     Один день из жизни немолодого университетского профессора, недавно потерявшего
     самого близкого человека - и теперь не знающего, как и зачем жить дальше.
-
     Он постоянно окружен людьми - людьми, которые, пожалуй, даже любят его и уж точно
     стараются понять и поддержать. Но их благие намерения лишь заставляют его тем
     сильнее чувствовать свое абсолютное одиночество.
-
-
     "When A Single Man was originally published, it shocked many by its frank, sympathetic,
     and moving portrayal of a gay man in midlife. George, the protagonist, is adjusting
     to life on his own after the sudden death of his partner, determined to persist
@@ -40,7 +43,6 @@ params:
   short_book_description: Роман "Одинокий мужчина", впервые опубликованный в 1964
     году и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной роли),
     - одно из самых известных произведений Ишервуда…
-  slug: odinokii-muzhchina-a-single-man-316da7cf
   tags:
   - British and irish fiction (fictional works by one author)
   - Fiction general
@@ -63,6 +65,4 @@ params:
   - literary fiction
   - novels
   - queer
-title: Одинокий мужчина (A Single Man)
-type: books
 ---

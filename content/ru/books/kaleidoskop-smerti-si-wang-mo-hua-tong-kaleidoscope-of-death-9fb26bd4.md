@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: kaleidoskop-smerti-si-wang-mo-hua-tong-kaleidoscope-of-death-9fb26bd4
+title: Калейдоскоп смерти (死亡万花筒 Kaleidoscope Of Death)
+type: books
 params:
   authors:
   - Xi Zi Xu, Си Цзысюй, 西子绪
@@ -21,7 +24,6 @@ params:
   short_book_description: Всё началось со странных знаков. Сперва домашний кот отказался
     от привычных объятий, затем Линь Цюши начал замечать, что чувство дисгармонии
     и несоответствия стало постепенно пронизывать всё вокруг…
-  slug: kaleidoskop-smerti-si-wang-mo-hua-tong-kaleidoscope-of-death-9fb26bd4
   tags:
   - China
   - LGBTQ+
@@ -30,6 +32,4 @@ params:
   - horror
   - mystery
   - romance
-title: Калейдоскоп смерти (死亡万花筒 Kaleidoscope Of Death)
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: lish-less-5688e5c6
+title: Лишь (Less)
+type: books
 params:
   authors:
   - Andrew Sean Greer, Эндрю Шон Грир
@@ -66,7 +69,6 @@ params:
   series: Arthur Less
   short_book_description: Накануне своего пятидесятилетия писатель-неудачник Артур
     Лишь получает приглашение на свадьбу бывшего, которого до сих пор не разлюбил...
-  slug: lish-less-5688e5c6
   tags:
   - Arthur Less
   - Authors
@@ -111,6 +113,4 @@ params:
   - novels
   - queer
   - romance
-title: Лишь (Less)
-type: books
 ---

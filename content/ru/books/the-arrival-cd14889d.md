@@ -1,6 +1,7 @@
 ---
-title: The Arrival
 draft: false
+slug: the-arrival-cd14889d
+title: The Arrival
 type: books
 params:
   bookTitle: The Arrival
@@ -38,6 +39,4 @@ params:
     the perspective of Nino and Haruka across the span of Lore and Lust Book Three:
     The Awakening, and beyond.'
   russian_audioversion: 'no'
-  slug: the-arrival-cd14889d
-slug: the-arrival-cd14889d
 ---

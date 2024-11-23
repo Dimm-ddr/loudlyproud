@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: ubit-nekromanta-8411080b
+title: Убить Некроманта
+type: books
 params:
   authors:
   - Maxim Dalin, Макс Далин
@@ -18,7 +21,6 @@ params:
   russian_translation_status: exists
   short_book_description: что думает герой, отправляясь на битву со злодеем, всем
     давно известно. А что в это время думает злодей, темный властелин?
-  slug: ubit-nekromanta-8411080b
   tags:
   - LGBTQ+
   - Russia
@@ -26,6 +28,4 @@ params:
   - fiction
   - ghosts
   - vampires
-title: Убить Некроманта
-type: books
 ---

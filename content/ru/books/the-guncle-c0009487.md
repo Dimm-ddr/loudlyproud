@@ -1,6 +1,7 @@
 ---
-title: The Guncle
 draft: false
+slug: the-guncle-c0009487
+title: The Guncle
 type: books
 params:
   bookTitle: The Guncle
@@ -41,6 +42,4 @@ params:
     and the realization that, sometimes, even being larger than life means you’re
     unfailingly human.
   russian_audioversion: 'no'
-  slug: the-guncle-c0009487
-slug: the-guncle-c0009487
 ---

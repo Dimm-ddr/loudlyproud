@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: detransition-baby-3a9be202
+title: Detransition, Baby
+type: books
 params:
   authors:
   - Torrey Peters
@@ -35,7 +38,6 @@ params:
   short_book_description: A whipsmart debut about three women—transgender and cisgender—whose
     lives collide after an unexpected pregnancy forces them to confront their deepest
     desires around gender, motherhood, and...
-  slug: detransition-baby-3a9be202
   tags:
   - Fiction women
   - LGBTQ+
@@ -52,6 +54,4 @@ params:
   - male-female romance
   - queer
   - transgender
-title: Detransition, Baby
-type: books
 ---

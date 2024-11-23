@@ -1,6 +1,7 @@
 ---
-title: Король Шрамов
 draft: false
+slug: korol-shramov-0ffeb1f0
+title: Король Шрамов
 type: books
 params:
   bookTitle: Король Шрамов
@@ -38,6 +39,4 @@ params:
     этого придется вытащить на свет секреты, которым лучше оставаться похороненными,
     и разбередить раны, которые никогда не заживут…'
   russian_audioversion: 'no'
-  slug: korol-shramov-0ffeb1f0
-slug: korol-shramov-0ffeb1f0
 ---

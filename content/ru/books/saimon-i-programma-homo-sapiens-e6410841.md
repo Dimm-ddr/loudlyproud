@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: saimon-i-programma-homo-sapiens-e6410841
+title: Саймон И Программа Homo Sapiens
+type: books
 params:
   authors:
   - Becky Albertalli, Бекки Алберталли
@@ -20,7 +23,6 @@ params:
   series: Creekwood
   short_book_description: У Саймона есть большой секрет, который он доверил только
     Блю, своему интернет-другу. Но однажды их переписку прочитал одноклассник Мартин.
-  slug: saimon-i-programma-homo-sapiens-e6410841
   tags:
   - LGBTQ+
   - contemporary
@@ -30,6 +32,4 @@ params:
   - realistic fiction
   - romance
   - young adult (YA)
-title: Саймон И Программа Homo Sapiens
-type: books
 ---

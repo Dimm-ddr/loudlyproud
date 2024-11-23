@@ -1,19 +1,22 @@
 ---
+
+
+
+
 draft: false
+slug: pesn-akhilla-the-song-of-achilles-ceae7fbd
+title: Песнь Ахилла (The Song Of Achilles)
+type: books
 params:
   authors:
   - Madeline Miller, Мадлен Миллер
   bookTitle: Песнь Ахилла (The Song Of Achilles)
   book_description: 'Дебютный роман американки Мадлен Миллер. Специалиста по античной
     культуре. Очаровал не только читателей и критиков, но и коллег-писателей.
-
-
     Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил
     и робок, так еще и нечаянно убивает сверстника. В ссылке при дворе царя Пелея
     он встречает неотразимого Ахилла, и вместе они вступают на трудный путь в легенду
     — путь дружбы, любви и жестоких испытаний.
-
-
     A thrilling, profoundly moving, and utterly unique retelling of the legend of
     Achilles and the Trojan War from the bestselling author of Circe. A tale of gods,
     kings, immortal fame, and the human heart, The Song of Achillesis a dazzling literary
@@ -39,7 +42,6 @@ params:
   russian_translation_status: exists
   short_book_description: 'Юный Патрокл — сплошное разочарование для своего отца:
     мало того что слишком хил и робок, так еще и нечаянно убивает сверстника..'
-  slug: pesn-akhilla-the-song-of-achilles-ceae7fbd
   tags:
   - Achilles
   - Achilles (Greek mythology)
@@ -76,6 +78,4 @@ params:
   - history
   - new york times bestseller
   - romance
-title: Песнь Ахилла (The Song Of Achilles)
-type: books
 ---

@@ -1,6 +1,7 @@
 ---
-title: Что, если это мы (What If It's Us)
 draft: false
+slug: chto-esli-eto-my-what-if-its-us-4d74df44
+title: Что, если это мы (What If It's Us)
 type: books
 params:
   bookTitle: Что, если это мы (What If It's Us)
@@ -47,6 +48,4 @@ params:
     друг друга в огромном мегаполисе? А что, если найдут... но все пойдет не так,
     как в великих мюзиклах о любви?'
   russian_audioversion: 'no'
-  slug: chto-esli-eto-my-what-if-its-us-4d74df44
-slug: chto-esli-eto-my-what-if-its-us-4d74df44
 ---

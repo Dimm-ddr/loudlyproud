@@ -37,7 +37,15 @@
 
           <!-- Tags -->
           {{ with .Params.tags }}
-            {{ partial "book-tags.html" (dict "tags" . "extraClasses" "mb-4") }}
+          <div class="flex flex-wrap gap-2 mb-4">
+            {{ range . }}
+              {{ partial "tag-component.html" (dict
+                "tag" .
+                "clickable" true
+                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+              ) }}
+            {{ end }}
+          </div>
           {{ end }}
         </div>
       </div>
@@ -51,73 +59,7 @@
       {{ end }}
 
       <!-- Book Metadata -->
-      <section class="mt-8">
-        <h2 class="text-2xl font-bold mb-4 text-primary">{{ i18n "book_details" }}</h2>
-        <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-lg">
-          {{ with .Params.page_count }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "page_count" }}:</dt>
-            <dd class="font-normal">{{ . }}</dd>
-          </div>
-          {{ end }}
-          {{ with .Params.isbn }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">ISBN:</dt>
-            <dd class="font-normal">{{ . }}</dd>
-          </div>
-          {{ end }}
-          {{ with .Params.languages }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "languages" }}:</dt>
-            <dd class="font-normal">{{ delimit . ", " }}</dd>
-          </div>
-          {{ end }}
-          {{ with .Params.publication_year }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "publication_year" }}:</dt>
-            <dd class="font-normal">{{ . }}</dd>
-          </div>
-          {{ end }}
-          {{ with .Params.russian_translation_status }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "russian_translation" }}:</dt>
-            <dd class="font-normal">
-              {{ with i18n (printf "translation_status_%s" .) }}
-                {{ . }}
-              {{ end }}
-            </dd>
-          </div>
-          {{ end }}
-          {{ if isset .Params "russian_audioversion" }}
-          <div class="flex justify-between md:col-span-1 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "audio_version" }}:</dt>
-            <dd class="flex items-center space-x-2">
-              {{ if eq .Params.russian_audioversion "yes" }}
-                <span class="inline-flex items-center px-3 py-1 rounded-full bg-accent2 bg-opacity-20 text-accent2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.828-2.828"/>
-                  </svg>
-                  <span class="font-medium">{{ i18n "russian_audio_available" }}</span>
-                </span>
-              {{ else }}
-                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-gray-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.828-2.828M6 18L18 6M6 6l12 12"/>
-                  </svg>
-                  <span class="font-medium">{{ i18n "no_audio_version" }}</span>
-                </span>
-              {{ end }}
-            </dd>
-          </div>
-          {{ end }}
-          {{ with .Params.publishers }}
-          <div class="flex justify-between md:col-span-2 py-2 border-b border-gray-300">
-            <dt class="font-bold text-primary">{{ i18n "publishers" }}:</dt>
-            <dd class="font-normal">{{ delimit . ", " }}</dd>
-          </div>
-          {{ end }}
-        </dl>
-      </section>
+      {{ partial "book-metadata.html" . }}
 
       <section class="mt-8">
         <h2 class="text-2xl font-bold mb-4 text-primary">{{ i18n "external_links" }}</h2>

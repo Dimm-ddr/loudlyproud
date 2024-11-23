@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: okna-vo-dvor-bd48dde2
+title: Окна Во Двор
+type: books
 params:
   authors:
   - Mikita Franko, Микита Франко
@@ -21,11 +24,8 @@ params:
   short_book_description: 'Мики переезжает в Ванкувер вместе с родителями и младшим
     братом. Необычная семья легко вписывается в канадское общество, но только внешне:
     отношения родителей в новой стране начинают стремительно...'
-  slug: okna-vo-dvor-bd48dde2
   tags:
   - LGBTQ+
   - gay-parent families
   - queer
-title: Окна Во Двор
-type: books
 ---

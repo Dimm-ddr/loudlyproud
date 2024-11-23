@@ -1,0 +1,8 @@
+{{/* Input: Any string that needs to be converted to a URL-safe format */}}
+{{ $input := . | string | lower }}
+{{ $clean := $input | urlize }}
+{{ $clean = replace $clean "." "-" }}         {{/* Replace dots with dashes */}}
+{{ $clean = replaceRE "-+" "-" $clean }}      {{/* Replace multiple dashes with single dash */}}
+{{ $clean = strings.TrimSuffix "." $clean }}  {{/* Remove trailing dot if present */}}
+{{ $clean = strings.TrimSuffix "-" $clean }}  {{/* Remove trailing dash if present */}}
+{{ return $clean }} 

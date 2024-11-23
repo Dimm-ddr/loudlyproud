@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: prizovi-sokola-85c7c4ef
+title: Призови Сокола
+type: books
 params:
   authors:
   - Maggie Stiefvater, Мэгги Стивотер, Павел Шабрин
@@ -30,7 +33,6 @@ params:
   series: Dreamer Trilogy
   short_book_description: Сновидцы расхаживают среди нас - и их сны тоже. Те, кто
     грезят, не могут перестать - они могут лишь по мере сил управлять своими грёзами.
-  slug: prizovi-sokola-85c7c4ef
   tags:
   - LGBTQ+
   - audiobook
@@ -41,6 +43,4 @@ params:
   - queer
   - urban fantasy
   - young adult (YA)
-title: Призови Сокола
-type: books
 ---

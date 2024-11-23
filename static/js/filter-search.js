@@ -1,71 +1,89 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // At this point, the `books` variable is already declared in the <script> tag from baseof.html
-
-  const searchField = document.getElementById("search-field");
+// src/js/filter-search.ts
+document.addEventListener("DOMContentLoaded", function() {
+  const searchField = document.getElementById(
+    "search-field"
+  );
   const tagFilters = document.querySelectorAll(".tag-filter");
   const authorFilters = document.querySelectorAll(".author-filter");
-  const bookList = document.getElementById("book-list");
-
-  // Initialize Fuse.js
-  const fuse = new Fuse(books, {
+  const bookList = document.getElementById("book-gallery");
+  const fuse = new window.Fuse(window.books, {
     keys: ["title", "authors", "tags", "book_description"],
-    threshold: 0.4,
+    threshold: 0.4
   });
-
+  function getTagStyle(tag) {
+    const normalizedTag = tag.toLowerCase().replace(/\s+/g, "-");
+    const colorKey = window.tagMapping[normalizedTag] || "fallback";
+    return window.tagStyles[colorKey] || window.tagStyles["fallback"];
+  }
+  function renderTags(tags) {
+    return tags.map((tag) => {
+      const style = getTagStyle(tag);
+      return `<span class="tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}">${tag}</span>`;
+    }).join("");
+  }
   function renderBooks(filteredBooks) {
     bookList.innerHTML = "";
     filteredBooks.forEach((book) => {
+      const tagsHTML = renderTags(book.tags);
       const bookHTML = `
-                <div class="book-item">
-                    <h2>${book.title}</h2>
-                    <!-- Other book info here -->
-                </div>`;
+        <article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col">
+          <!-- Image Container -->
+          <div class="h-64 overflow-hidden relative">
+            <a href="${book.buy_link || "#"}" class="block w-full h-full">
+              <img class="w-full h-full object-contain transition-opacity duration-300"
+                   src="${book.cover || "/images/placeholder.jpg"}"
+                   onerror="this.onerror=null; this.src='/images/placeholder.jpg'"
+                   alt="${book.bookTitle}"
+                   loading="lazy">
+            </a>
+          </div>
+          <!-- Content -->
+          <div class="p-4 flex flex-col flex-grow">
+            <h2 class="text-xl font-black mb-2 text-primary">
+              <a href="${book.buy_link || "#"}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
+                ${book.bookTitle}
+              </a>
+            </h2>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+              ${tagsHTML}
+            </div>
+          </div>
+        </article>
+      `;
       bookList.innerHTML += bookHTML;
     });
   }
-
-  // Search functionality
-  searchField.addEventListener("input", (event) => {
-    const results = fuse.search(event.target.value);
-    const filteredBooks = results.map((result) => result.item);
-    renderBooks(filteredBooks);
-  });
-
-  // Filter functionality
   function applyFilters() {
-    let filteredBooks = books;
-
-    const selectedTags = [...tagFilters]
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value);
-
-    const selectedAuthors = [...authorFilters]
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value);
-
+    let filteredBooks = window.books;
+    const selectedTags = Array.from(tagFilters).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+    const selectedAuthors = Array.from(authorFilters).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
     if (selectedTags.length) {
-      filteredBooks = filteredBooks.filter((book) =>
-        book.tags.some((tag) => selectedTags.includes(tag)),
+      filteredBooks = filteredBooks.filter(
+        (book) => book.tags.some((tag) => selectedTags.includes(tag))
       );
     }
-
     if (selectedAuthors.length) {
-      filteredBooks = filteredBooks.filter((book) =>
-        book.authors.some((author) => selectedAuthors.includes(author)),
+      filteredBooks = filteredBooks.filter(
+        (book) => book.authors.some((author) => selectedAuthors.includes(author))
       );
     }
-
     renderBooks(filteredBooks);
   }
-
-  // Attach filter event listeners
-  tagFilters.forEach((checkbox) =>
-    checkbox.addEventListener("change", applyFilters),
+  if (searchField) {
+    searchField.addEventListener("input", (event) => {
+      const target = event.target;
+      const results = fuse.search(target.value);
+      const filteredBooks = results.map((result) => result.item);
+      renderBooks(filteredBooks);
+    });
+  }
+  tagFilters.forEach(
+    (checkbox) => checkbox.addEventListener("change", applyFilters)
   );
-  authorFilters.forEach((checkbox) =>
-    checkbox.addEventListener("change", applyFilters),
+  authorFilters.forEach(
+    (checkbox) => checkbox.addEventListener("change", applyFilters)
   );
-
-  // Initial render
-  renderBooks(books);
+  renderBooks(window.books);
 });
+//# sourceMappingURL=filter-search.js.map

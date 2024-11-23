@@ -1,6 +1,7 @@
 ---
-title: Крадущаяся Тьма
 draft: false
+slug: kradushchaiasia-tma-fdd1bbdf
+title: Крадущаяся Тьма
 type: books
 params:
   bookTitle: Крадущаяся Тьма
@@ -41,6 +42,4 @@ params:
     — бога, чьё имя не произносят вслух. Бесстрашный воин Серегил и его юный спутник
     Алек выходят на защиту Света, и со всех сторон их обступает Крадущаяся тьма...
   russian_audioversion: 'no'
-  slug: kradushchaiasia-tma-fdd1bbdf
-slug: kradushchaiasia-tma-fdd1bbdf
 ---

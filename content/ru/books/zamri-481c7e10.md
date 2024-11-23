@@ -1,6 +1,7 @@
 ---
-title: Замри
 draft: false
+slug: zamri-481c7e10
+title: Замри
 type: books
 params:
   bookTitle: Замри
@@ -31,6 +32,4 @@ params:
     Кейтлин находит под своей кроватью тайный дневник Ингрид, в котором та делилась
     переживаниями и чувствами в борьбе с тяжелой депрессией.
   russian_audioversion: 'no'
-  slug: zamri-481c7e10
-slug: zamri-481c7e10
 ---

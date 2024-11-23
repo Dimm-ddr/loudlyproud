@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: acrobat-6f66020e
+title: Acrobat
+type: books
 params:
   authors:
   - Mary Calmes
@@ -29,7 +32,6 @@ params:
   short_book_description: Forty-five-year-old English professor Nathan Qells is very
     good at making people feel important. What he’s not very good at is sticking around
     afterward.
-  slug: acrobat-6f66020e
   tags:
   - LGBTQ+
   - contemporary
@@ -38,6 +40,4 @@ params:
   - male-male romance
   - romance
   - suspense
-title: Acrobat
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: codename-villanelle-3d85624f
+title: Codename Villanelle
+type: books
 params:
   authors:
   - Luke Jennings, Люк Дженнингс
@@ -36,7 +39,6 @@ params:
     отсутствием каких-либо суперспособностей: она обычная женщина, которая устает
     и испытывает страх. Это рядовая сотрудница, и лишь случайное стечение обстоятельств
     приводит её к руководству одним непростым делом…'
-  slug: codename-villanelle-3d85624f
   tags:
   - Businessmen
   - Female assassins
@@ -51,6 +53,4 @@ params:
   - fiction
   - murder
   - mystery
-title: Codename Villanelle
-type: books
 ---

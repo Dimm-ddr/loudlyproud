@@ -1,6 +1,7 @@
 ---
-title: Месть Темного Бога
 draft: false
+slug: mest-temnogo-boga-0aded87b
+title: Месть Темного Бога
 type: books
 params:
   bookTitle: Месть Темного Бога
@@ -43,6 +44,4 @@ params:
     и магией, предательством и изменой. Демоны, вызванные из бездны Ада, вырываются
     на волю, и страшной будет месть Тёмного Бога.
   russian_audioversion: 'no'
-  slug: mest-temnogo-boga-0aded87b
-slug: mest-temnogo-boga-0aded87b
 ---

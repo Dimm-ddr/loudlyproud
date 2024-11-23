@@ -1,22 +1,25 @@
 ---
+
+
+
+
 draft: false
+slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
+title: Красный, белый и королевский синий
+type: books
 params:
   authors:
   - Casey McQuiston
   bookTitle: Красный, белый и королевский синий
   book_description: 'После того как мать Алекса избрали президентом, парня стали воспринимать
     кем-то вроде небожителя.
-
     Привлекательный, умный, харизматичный — просто находка для PR-службы Белого дома.
     Есть только одна проблема: отношения Алекса с Генри, принцем Великобритании, не
     задались с самого начала. И когда в СМИ появляется фото неприятного инцидента
     между Алексом и Генри, становится понятно, что пора что-то предпринять.
-
     Так появляется план: сделать вид, будто молодые люди — давние приятели. И что
     начинается как фальшивая дружба, красивая только на фото в социальных сетях, становится
     глубже и опасней и для Алекса, и для Генри.
-
-
     First Son Alex Claremont-Diaz is the closest thing to a prince this side of the
     Atlantic. With his intrepid sister and the Veep’s genius granddaughter, they’re
     the White House Trio, a beautiful millennial marketing strategy for his mother,
@@ -42,7 +45,6 @@ params:
   russian_translation_status: exists
   short_book_description: После того как мать Алекса избрали президентом, парня стали
     воспринимать кем-то вроде небожителя.
-  slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
   tags:
   - '2019'
   - '2020'
@@ -71,6 +73,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Красный, белый и королевский синий
-type: books
 ---

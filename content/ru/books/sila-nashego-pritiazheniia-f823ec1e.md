@@ -1,6 +1,7 @@
 ---
-title: Сила нашего притяжения
 draft: false
+slug: sila-nashego-pritiazheniia-f823ec1e
+title: Сила нашего притяжения
 type: books
 params:
   bookTitle: Сила нашего притяжения
@@ -32,6 +33,4 @@ params:
     и Кэл невольно становится участником реалити-шоу. А потом он встречает Леона и
     обретает опору под ногами – даже если это всего лишь гравитация.
   russian_audioversion: 'no'
-  slug: sila-nashego-pritiazheniia-f823ec1e
-slug: sila-nashego-pritiazheniia-f823ec1e
 ---

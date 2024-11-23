@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: eti-vedmy-ne-goriat-ad09df90
+title: Эти Ведьмы Не Горят
+type: books
 params:
   authors:
   - Isabel Sterling, Изабель Стерлинг
@@ -32,7 +35,6 @@ params:
   short_book_description: Ханна — настоящая ведьма из Салема, Массачусетс. Ее магия
     — секрет, и если обычный человек застанет ее за колдовством, то она может лишиться
     сил. Большую часть времени девушка избегает...
-  slug: eti-vedmy-ne-goriat-ad09df90
   tags:
   - LGBTQ+
   - contemporary
@@ -44,6 +46,4 @@ params:
   - romance
   - witches
   - young adult (YA)
-title: Эти Ведьмы Не Горят
-type: books
 ---

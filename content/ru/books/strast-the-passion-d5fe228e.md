@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: strast-the-passion-d5fe228e
+title: Страсть (The Passion)
+type: books
 params:
   authors:
   - Jeanette Winterson
@@ -43,7 +46,6 @@ params:
     душевная скорбь, тоска; подвиг, сознательно принятые на себя тяготы, мученичество".
     Так нам говорит словарь Даля. Но роман Дженет Уинтерсон - бесспорной звезды британской
     литературы конца XX века - не только об этом...'
-  slug: strast-the-passion-d5fe228e
   tags:
   - 19th century
   - English literature
@@ -79,6 +81,4 @@ params:
   - male-female romance
   - queer
   - social life and customs
-title: Страсть (The Passion)
-type: books
 ---

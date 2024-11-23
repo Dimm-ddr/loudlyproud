@@ -1,6 +1,7 @@
 ---
-title: Вдребезги
 draft: false
+slug: vdrebezgi-88b5f565
+title: Вдребезги
 type: books
 params:
   bookTitle: Вдребезги
@@ -28,6 +29,4 @@ params:
     неспокойное ирландское сердце? Что, если он влюбится без оглядки в того, кто ему
     не ровня, и на дороге к мечте, стремительной и прямой, влетит в катастрофу?'
   russian_audioversion: 'no'
-  slug: vdrebezgi-88b5f565
-slug: vdrebezgi-88b5f565
 ---

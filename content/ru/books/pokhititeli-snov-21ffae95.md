@@ -1,6 +1,7 @@
 ---
-title: Похитители Снов
 draft: false
+slug: pokhititeli-snov-21ffae95
+title: Похитители Снов
 type: books
 params:
   bookTitle: Похитители Снов
@@ -39,6 +40,4 @@ params:
     городок Генриетта, сблизили Ганси, Ронана, Адама и Ноя. Теперь же с пробуждением
     силовых линий оживают и самые страшные кошмары Ронана.
   russian_audioversion: 'no'
-  slug: pokhititeli-snov-21ffae95
-slug: pokhititeli-snov-21ffae95
 ---

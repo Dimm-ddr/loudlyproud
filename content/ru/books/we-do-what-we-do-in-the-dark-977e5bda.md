@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: we-do-what-we-do-in-the-dark-977e5bda
+title: We Do What We Do In The Dark
+type: books
 params:
   authors:
   - Michelle  Hart
@@ -32,7 +35,6 @@ params:
   short_book_description: A novel about a young woman's life-altering affair with
     a much older, married woman.Mallory is a freshman in college, reeling from her
     mother's recent death, when she encounters the woman. She...
-  slug: we-do-what-we-do-in-the-dark-977e5bda
   tags:
   - Adultery
   - LGBTQ+
@@ -47,6 +49,4 @@ params:
   - queer
   - romance
   - Étudiantes
-title: We Do What We Do In The Dark
-type: books
 ---

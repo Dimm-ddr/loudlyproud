@@ -1,6 +1,7 @@
 ---
-title: Если О Нас Узнают
 draft: false
+slug: esli-o-nas-uznaiut-c6f15c12
+title: Если О Нас Узнают
 type: books
 params:
   bookTitle: Если О Нас Узнают
@@ -32,6 +33,4 @@ params:
     понимают, что никогда не получат ту поддержку, которая им по-настоящему нужна.Когда
     мир трещит по швам, останется только крепче держаться друг за друга.
   russian_audioversion: 'no'
-  slug: esli-o-nas-uznaiut-c6f15c12
-slug: esli-o-nas-uznaiut-c6f15c12
 ---

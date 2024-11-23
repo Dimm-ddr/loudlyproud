@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: nepravilnoe-vospitanie-kemeron-post-c152f733
+title: Неправильное Воспитание Кэмерон Пост
+type: books
 params:
   authors:
   - Emily M. Danforth, Эмили М. Дэнфорт
@@ -21,7 +24,6 @@ params:
   short_book_description: После гибели родителей в автокатастрофе Кэмерон Пост отдают
     на попечение бабушки и набожной тети Рут. Вскоре в их городке появляется Коули
     Тейлор, с которой Кэмерон проводит все свое время.
-  slug: nepravilnoe-vospitanie-kemeron-post-c152f733
   tags:
   - LGBTQ+
   - contemporary
@@ -30,6 +32,4 @@ params:
   - queer
   - romance
   - young adult (YA)
-title: Неправильное Воспитание Кэмерон Пост
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: mister-nevozmozhnost-cab96831
+title: Мистер Невозможность
+type: books
 params:
   authors:
   - Maggie Stiefvater, Мэгги Стивотер, Софья Коваль
@@ -28,7 +31,6 @@ params:
   russian_translation_status: exists
   series: Dreamer Trilogy
   short_book_description: Что-то происходит с источником силы сновидцев. Он блокируется.
-  slug: mister-nevozmozhnost-cab96831
   tags:
   - LGBTQ+
   - audiobook
@@ -40,6 +42,4 @@ params:
   - queer
   - urban fantasy
   - young adult (YA)
-title: Мистер Невозможность
-type: books
 ---

@@ -1,5 +1,8 @@
 ---
 draft: false
+slug: elizium-50a020fc
+title: Элизиум
+type: books
 params:
   authors:
   - Nora Sakavic, Нора Сакавич
@@ -25,7 +28,6 @@ params:
   short_book_description: Эвелин Нотт вот уже шестнадцать лет привязана к Элизиуму
     — прибежищу для сверхъестественных существ. Все эти годы она планировала отомстить
     бывшему мужу Адаму, который забрал ее ребенка сразу...
-  slug: elizium-50a020fc
   tags:
   - LGBTQ+
   - adult fiction
@@ -37,6 +39,4 @@ params:
   - queer
   - urban fantasy
   - vampires
-title: Элизиум
-type: books
 ---
