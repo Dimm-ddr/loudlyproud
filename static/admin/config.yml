@@ -24,7 +24,7 @@ collections:
     slug: "{{fields.slug}}"
     path: "{{i18n.locale}}/books/{{fields.slug}}"
     nested:
-      depth: 1
+      depth: 2
       summary: "{{title}}"
     fields:
       - label: Title
