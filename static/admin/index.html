@@ -13,97 +13,10 @@
     <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <!-- First load Decap CMS -->
+    <!-- Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
 
-    <!-- Then immediately add our debug code before CMS initializes -->
-    <script>
-      // Prevent automatic initialization
-      window.CMS_MANUAL_INIT = true;
-
-      // Add debug logging that persists
-      const debugLog = (message, data) => {
-        const timestamp = new Date().toISOString();
-        const logEntry = {
-          timestamp,
-          message,
-          data
-        };
-
-        // Store in localStorage
-        const logs = JSON.parse(localStorage.getItem('cms_debug_logs') || '[]');
-        logs.push(logEntry);
-        localStorage.setItem('cms_debug_logs', JSON.stringify(logs));
-      };
-
-      // Monitor API calls
-      const originalFetch = window.fetch;
-      window.fetch = function(...fetchArgs) {
-        const [url, options] = fetchArgs;
-        if (url.includes('git-gateway') || url.includes('.netlify')) {
-          debugLog('Git Gateway API Call', {
-            url,
-            method: options?.method,
-            headers: {...options?.headers}
-          });
-        }
-        return originalFetch.apply(this, fetchArgs);
-      };
-
-      // Add a way to view logs
-      window.showCMSLogs = function() {
-        const logs = JSON.parse(localStorage.getItem('cms_debug_logs') || '[]');
-        console.group('CMS Debug Logs');
-        logs.forEach(log => {
-          console.log(`[${log.timestamp}] ${log.message}`, log.data);
-        });
-        console.groupEnd();
-      };
-
-      // Clear old logs on page load
-      localStorage.removeItem('cms_debug_logs');
-
-      // Now manually initialize CMS
-      window.CMS.init();
-    </script>
-
-    <!-- Then load your custom widgets -->
+    <!-- Load custom widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
-
-    <script>
-      // Wait for CMS to be ready
-      window.addEventListener('load', function() {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-
-        // Initialize preview styles if needed
-        if (window.CMSPreviewStyles && typeof window.CMSPreviewStyles.init === 'function') {
-          window.CMSPreviewStyles.init();
-        }
-      });
-
-      window.CMS.registerEventListener({
-        name: 'preSave',
-        handler: ({ entry }) => {
-          console.log('Content being saved:', entry.get('data').toJS());
-          return entry;
-        },
-      });
-
-      window.CMS.registerEventListener({
-        name: 'prePublish',
-        handler: ({ entry }) => {
-          console.log('Content being published:', entry.get('data').toJS());
-          return entry;
-        },
-      });
-    </script>
   </body>
 </html>
