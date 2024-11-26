@@ -1,5 +1,44 @@
 // static/admin/auth-handler.js
 
+// Add this near the top of the file
+const debugBackend = (config) => {
+  const originalBackend = config.backend;
+
+  return {
+    ...originalBackend,
+    getEntry: async (...args) => {
+      console.group('Backend getEntry');
+      console.log('Arguments:', args);
+      try {
+        const result = await originalBackend.getEntry(...args);
+        console.log('Result:', result);
+        return result;
+      } catch (error) {
+        console.error('Error:', error);
+        throw error;
+      } finally {
+        console.groupEnd();
+      }
+    },
+
+    getEntries: async (...args) => {
+      console.group('Backend getEntries');
+      console.log('Arguments:', args);
+      try {
+        const results = await originalBackend.getEntries(...args);
+        console.log('Results count:', results?.length);
+        console.log('First few results:', results?.slice(0, 3));
+        return results;
+      } catch (error) {
+        console.error('Error:', error);
+        throw error;
+      } finally {
+        console.groupEnd();
+      }
+    }
+  };
+};
+
 window.addEventListener("load", function () {
   const originalInit = window.CMS.init;
 
@@ -119,6 +158,11 @@ window.addEventListener("load", function () {
   window.CMS.init = (...args) => {
     const enhanceConfig = (config) => {
       const enhancedConfig = { ...config };
+
+      // Wrap backend methods with debugging
+      if (enhancedConfig.backend) {
+        enhancedConfig.backend = debugBackend(enhancedConfig);
+      }
 
       // Add explicit backend configuration
       if (!enhancedConfig.backend) {
