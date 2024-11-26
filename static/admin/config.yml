@@ -16,9 +16,16 @@ i18n:
 collections:
   - name: books
     label: Books
-    folder: "content"
+    folder: "content/{{i18n.locale}}/books"
     create: true
+    i18n: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "hidden", default: "books"}
-
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "hidden", default: "books" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Params"
+        name: "params"
+        widget: "object"
+        fields:
+          - { label: "Book Title", name: "bookTitle", widget: "string" }
+          # Add other fields as needed
