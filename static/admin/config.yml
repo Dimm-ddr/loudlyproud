@@ -15,17 +15,164 @@ i18n:
 
 collections:
   - name: books
+    i18n:
+      locales: [ru, en]
     label: Books
-    folder: "content/{{i18n.locale}}/books"
+    label_singular: Book
+    folder: "content"
     create: true
-    i18n: true
+    slug: "{{fields.slug}}"
+    path: "{{locale}}/books/{{fields.slug}}"
+    filter: { field: "type", value: "books" }
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type", name: "type", widget: "hidden", default: "books" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - label: "Params"
-        name: "params"
-        widget: "object"
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Slug
+        name: slug
+        widget: hidden
+        i18n: duplicate
+        required: false
+      - label: Type
+        name: type
+        widget: hidden
+        default: books
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: false
+        i18n: duplicate
+      - label: Params
+        name: params
+        widget: object
+        i18n: true
         fields:
-          - { label: "Book Title", name: "bookTitle", widget: "string" }
-          # Add other fields as needed
+          - label: Book Title
+            name: bookTitle
+            widget: book-title
+            required: true
+            i18n: true
+          - label: Book Description
+            name: book_description
+            widget: markdown
+            required: false
+            i18n: true
+          - label: Short Description
+            name: short_book_description
+            widget: markdown
+            required: false
+            i18n: true
+          - label: Cover
+            name: cover
+            widget: image
+            required: false
+            i18n: true
+          - label: Cover Alt text
+            name: coverAlt
+            widget: string
+            required: false
+            i18n: true
+          - label: Tags
+            name: tags
+            widget: list
+            required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Authors
+            name: authors
+            widget: list
+            required: true
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Translators
+            name: translators
+            widget: list
+            required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Languages
+            name: languages
+            widget: list
+            required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Page count
+            name: page_count
+            widget: number
+            required: false
+            i18n: true
+          - label: First Publication Year
+            name: publication_year
+            widget: string
+            required: false
+            i18n: true
+          - label: ISBN
+            name: isbn
+            widget: string
+            required: false
+            i18n: duplicate
+          - label: Additional ISBNs
+            name: additional_isbns
+            widget: list
+            required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Series
+            name: series
+            widget: string
+            required: false
+            i18n: true
+          - label: Publishers
+            name: publishers
+            widget: list
+            required: false
+            allow_add: true
+            i18n: true
+          - label: Goodreads Link
+            name: goodreads_link
+            widget: string
+            required: false
+            i18n: true
+          - label: Buy Link
+            name: buy_link
+            widget: string
+            required: false
+            allow_add: true
+            collapsed: false
+            i18n: true
+          - label: Where to Get
+            name: where_to_get
+            widget: list
+            required: false
+            fields:
+              - { label: Store, name: store, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Date, name: date, widget: datetime }
+            i18n: true
+          - label: Russian Translation Status
+            name: russian_translation_status
+            widget: select
+            default: unknown
+            options:
+              - unknown
+              - might_exist
+              - unlikely_to_exist
+              - does_not_exist
+              - exists
+            required: false
+            i18n: true
+          - label: Russian Audioversion
+            name: russian_audioversion
+            widget: select
+            default: "no"
+            options:
+              - "yes"
+              - "no"
+            required: false
+            i18n: true
