@@ -19,11 +19,11 @@ collections:
       locales: [ru, en]
     label: Books
     label_singular: Book
-    folder: "content"
+    folder: "{{i18n.locale}}/books"
     create: true
     slug: "{{fields.slug}}"
-    path: "{{i18n.locale}}/books/{{fields.slug}}"
-    filter: {field: "type", value: "books"}
+    path: "{{fields.slug}}"
+    filter: { field: "type", value: "books" }
     fields:
       - label: Title
         name: title
