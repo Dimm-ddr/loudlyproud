@@ -22,7 +22,7 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
-    path: "{{locale}}/books/{{slug}}"
+    path: "{{locale}}books/{{slug}}"
     filter: { field: "type", value: "books" }
     fields:
       - label: Title
