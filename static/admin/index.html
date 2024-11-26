@@ -37,6 +37,22 @@
           window.CMSPreviewStyles.init();
         }
       });
+
+      window.CMS.registerEventListener({
+        name: 'preSave',
+        handler: ({ entry }) => {
+          console.log('Content being saved:', entry.get('data').toJS());
+          return entry;
+        },
+      });
+
+      window.CMS.registerEventListener({
+        name: 'prePublish',
+        handler: ({ entry }) => {
+          console.log('Content being published:', entry.get('data').toJS());
+          return entry;
+        },
+      });
     </script>
   </body>
 </html>
