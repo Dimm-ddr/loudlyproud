@@ -120,6 +120,15 @@ window.addEventListener("load", function () {
     const enhanceConfig = (config) => {
       const enhancedConfig = { ...config };
 
+      // Add explicit backend configuration
+      if (!enhancedConfig.backend) {
+        enhancedConfig.backend = {
+          name: 'git-gateway',
+          branch: 'main',
+          repo: process.env.REPOSITORY_URL
+        };
+      }
+
       // Add CMS-specific handlers
       enhancedConfig.onLogin = () => {
         console.log("CMS login successful");
