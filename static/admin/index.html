@@ -13,50 +13,53 @@
     <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <!-- Decap CMS -->
-    <script>
-      // Enable verbose logging
-      window.CMS_DEBUG = true;
-
-      window.addEventListener('load', function() {
-        // Store the original init function
-        const originalInit = window.CMS.init;
-
-        // Override init to add logging
-        window.CMS.init = function(...args) {
-          console.group('CMS Initialization');
-          console.log('Init Arguments:', args);
-          console.log('Current Config:', window.CMS.getConfig?.());
-          console.groupEnd();
-
-          // Monitor API calls
-          const originalFetch = window.fetch;
-          window.fetch = function(...fetchArgs) {
-            const [url, options] = fetchArgs;
-            if (url.includes('git-gateway') || url.includes('.netlify')) {
-              console.group('Git Gateway API Call');
-              console.log('URL:', url);
-              console.log('Method:', options?.method);
-              console.log('Headers:', {...options?.headers});
-              if (options?.body) {
-                try {
-                  console.log('Body:', JSON.parse(options.body));
-                } catch (e) {
-                  console.log('Body:', options.body);
-                }
-              }
-              console.groupEnd();
-            }
-            return originalFetch.apply(this, fetchArgs);
-          };
-
-          return originalInit.apply(this, args);
-        };
-      });
-    </script>
+    <!-- First load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
 
-    <!-- Custom widgets -->
+    <!-- Then immediately add our debug code before CMS initializes -->
+    <script>
+      // Prevent automatic initialization
+      window.CMS_MANUAL_INIT = true;
+
+      // Add debug logging
+      console.log('Setting up CMS debug...');
+
+      const originalInit = window.CMS.init;
+      window.CMS.init = function(...args) {
+        console.group('CMS Initialization');
+        console.log('Init Arguments:', args);
+        console.log('Current Config:', window.CMS.getConfig?.());
+        console.groupEnd();
+
+        // Monitor API calls
+        const originalFetch = window.fetch;
+        window.fetch = function(...fetchArgs) {
+          const [url, options] = fetchArgs;
+          if (url.includes('git-gateway') || url.includes('.netlify')) {
+            console.group('Git Gateway API Call');
+            console.log('URL:', url);
+            console.log('Method:', options?.method);
+            console.log('Headers:', {...options?.headers});
+            if (options?.body) {
+              try {
+                console.log('Body:', JSON.parse(options.body));
+              } catch (e) {
+                console.log('Body:', options.body);
+              }
+            }
+            console.groupEnd();
+          }
+          return originalFetch.apply(this, fetchArgs);
+        };
+
+        return originalInit.apply(this, args);
+      };
+
+      // Now manually initialize CMS
+      window.CMS.init();
+    </script>
+
+    <!-- Then load your custom widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
 
     <script>
