@@ -21,39 +21,58 @@
       // Prevent automatic initialization
       window.CMS_MANUAL_INIT = true;
 
-      // Add debug logging
-      console.log('Setting up CMS debug...');
+      // Add debug logging that persists
+      const debugLog = (message, data) => {
+        const timestamp = new Date().toISOString();
+        const logEntry = {
+          timestamp,
+          message,
+          data
+        };
+
+        // Store in localStorage
+        const logs = JSON.parse(localStorage.getItem('cms_debug_logs') || '[]');
+        logs.push(logEntry);
+        localStorage.setItem('cms_debug_logs', JSON.stringify(logs));
+
+        // Also console log
+        console.log(`[${timestamp}] ${message}`, data);
+      };
 
       const originalInit = window.CMS.init;
       window.CMS.init = function(...args) {
-        console.group('CMS Initialization');
-        console.log('Init Arguments:', args);
-        console.log('Current Config:', window.CMS.getConfig?.());
-        console.groupEnd();
+        debugLog('CMS Initialization', { args, config: window.CMS.getConfig?.() });
 
         // Monitor API calls
         const originalFetch = window.fetch;
         window.fetch = function(...fetchArgs) {
           const [url, options] = fetchArgs;
           if (url.includes('git-gateway') || url.includes('.netlify')) {
-            console.group('Git Gateway API Call');
-            console.log('URL:', url);
-            console.log('Method:', options?.method);
-            console.log('Headers:', {...options?.headers});
-            if (options?.body) {
-              try {
-                console.log('Body:', JSON.parse(options.body));
-              } catch (e) {
-                console.log('Body:', options.body);
-              }
-            }
-            console.groupEnd();
+            debugLog('Git Gateway API Call', {
+              url,
+              method: options?.method,
+              headers: {...options?.headers},
+              body: options?.body ? JSON.parse(options.body) : undefined
+            });
           }
           return originalFetch.apply(this, fetchArgs);
         };
 
         return originalInit.apply(this, args);
       };
+
+      // Add a way to view logs
+      window.showCMSLogs = function() {
+        const logs = JSON.parse(localStorage.getItem('cms_debug_logs') || '[]');
+        console.group('CMS Debug Logs');
+        logs.forEach(log => {
+          console.log(`[${log.timestamp}] ${log.message}`, log.data);
+        });
+        console.groupEnd();
+      };
+
+      // Clear old logs on page load
+      localStorage.removeItem('cms_debug_logs');
 
       // Now manually initialize CMS
       window.CMS.init();

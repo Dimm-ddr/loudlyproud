@@ -33,6 +33,7 @@ collections:
         name: slug
         widget: slug-generator
         i18n: duplicate
+        required: false
       - label: Type
         name: type
         widget: hidden
