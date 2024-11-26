@@ -19,9 +19,9 @@
       window.CMS_DEBUG = true;
 
       window.addEventListener('load', function() {
-        // Log all CMS configuration on init
+        // Log all CMS configuration when initialized
         window.CMS.registerEventListener({
-          name: 'onInit',
+          name: 'init',
           handler: () => {
             console.group('CMS Initialization');
             console.log('Config:', window.CMS.getConfig());
@@ -29,32 +29,32 @@
           },
         });
 
-        // Log collection loading attempts
+        // Log before entries are loaded
         window.CMS.registerEventListener({
-          name: 'preCMS',
-          handler: ({ collection }) => {
-            console.group('Collection Loading Attempt');
-            console.log('Collection:', collection?.get('name'));
-            console.log('Path:', collection?.get('path'));
-            console.log('Folder:', collection?.get('folder'));
+          name: 'preLoad',
+          handler: ({ entries, collection }) => {
+            console.group('Pre-Load Collection');
+            console.log('Collection Name:', collection?.name);
+            console.log('Collection Path:', collection?.path);
+            console.log('Collection Folder:', collection?.folder);
             console.groupEnd();
-            return collection;
+            return entries;
           },
         });
 
-        // Log entry loading attempts
+        // Log after entries are loaded
         window.CMS.registerEventListener({
-          name: 'preLoadEntry',
-          handler: ({ entry }) => {
-            console.group('Entry Loading Attempt');
-            console.log('Entry Path:', entry?.path);
-            console.log('Entry Data:', entry?.data);
+          name: 'load',
+          handler: ({ entries, collection }) => {
+            console.group('Collection Loaded');
+            console.log('Collection:', collection?.name);
+            console.log('Entries Count:', entries?.length);
+            console.log('First Entry:', entries?.[0]);
             console.groupEnd();
-            return entry;
           },
         });
 
-        // Log API calls
+        // Monitor API calls
         const originalFetch = window.fetch;
         window.fetch = function(...args) {
           const [url, options] = args;
@@ -68,9 +68,9 @@
           return originalFetch.apply(this, args);
         };
 
-        // Log any errors during content loading
+        // Log errors
         window.CMS.registerEventListener({
-          name: 'onError',
+          name: 'error',
           handler: ({ error }) => {
             console.group('CMS Error');
             console.error('Error Type:', error.name);
