@@ -31,7 +31,7 @@ collections:
         i18n: true
       - label: Slug
         name: slug
-        widget: slug-generator
+        widget: hidden
         i18n: duplicate
         required: false
       - label: Type

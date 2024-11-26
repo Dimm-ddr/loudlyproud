@@ -34,31 +34,20 @@
         const logs = JSON.parse(localStorage.getItem('cms_debug_logs') || '[]');
         logs.push(logEntry);
         localStorage.setItem('cms_debug_logs', JSON.stringify(logs));
-
-        // Also console log
-        console.log(`[${timestamp}] ${message}`, data);
       };
 
-      const originalInit = window.CMS.init;
-      window.CMS.init = function(...args) {
-        debugLog('CMS Initialization', { args, config: window.CMS.getConfig?.() });
-
-        // Monitor API calls
-        const originalFetch = window.fetch;
-        window.fetch = function(...fetchArgs) {
-          const [url, options] = fetchArgs;
-          if (url.includes('git-gateway') || url.includes('.netlify')) {
-            debugLog('Git Gateway API Call', {
-              url,
-              method: options?.method,
-              headers: {...options?.headers},
-              body: options?.body ? JSON.parse(options.body) : undefined
-            });
-          }
-          return originalFetch.apply(this, fetchArgs);
-        };
-
-        return originalInit.apply(this, args);
+      // Monitor API calls
+      const originalFetch = window.fetch;
+      window.fetch = function(...fetchArgs) {
+        const [url, options] = fetchArgs;
+        if (url.includes('git-gateway') || url.includes('.netlify')) {
+          debugLog('Git Gateway API Call', {
+            url,
+            method: options?.method,
+            headers: {...options?.headers}
+          });
+        }
+        return originalFetch.apply(this, fetchArgs);
       };
 
       // Add a way to view logs
