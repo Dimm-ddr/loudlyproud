@@ -3,51 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
     <title>Content Manager</title>
-
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Admin Styles -->
-    <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <!-- Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
-
-    <!-- Add the debug widget code -->
     <script>
-      const DebugControl = createClass({
-        getDebugInfo() {
-          const cms = window.CMS;
-          return {
-            methods: Object.keys(cms),
-            backend: cms.getBackend(),
-            collections: cms.getCollections ? cms.getCollections() : 'Not available',
-            widgets: cms.getWidgets().map(w => ({
-              name: w.name,
-              control: w.controlComponent?.name,
-              preview: w.previewComponent?.name
-            })),
-            locale: cms.getLocale(),
-            mediaLibrary: cms.getMediaLibrary(),
-            editorComponents: cms.getEditorComponents(),
-            entry: this.props.entry?.toJS(),
-            field: this.props.field?.toJS(),
-            value: this.props.value
-          };
+      // Transliteration map for Cyrillic characters
+      const translitMap = {
+        а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "yo",
+        ж: "zh", з: "z", и: "i", й: "y", к: "k", л: "l", м: "m",
+        н: "n", о: "o", п: "p", р: "r", с: "s", т: "t", у: "u",
+        ф: "f", х: "h", ц: "ts", ч: "ch", ш: "sh", щ: "sch", ъ: "",
+        ы: "y", ь: "", э: "e", ю: "yu", я: "ya"
+      };
+
+      function generateSlug(title) {
+        if (!title) return Math.random().toString(36).substring(2, 10);
+
+        const transliterate = (str) => {
+          return str
+            .toLowerCase()
+            .split("")
+            .map((char) => translitMap[char] || char)
+            .join("");
+        };
+
+        const baseSlug = transliterate(title)
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-")
+          .trim();
+
+        return `${baseSlug}-${Math.random().toString(36).substring(2, 8)}`;
+      }
+
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: async ({ entry }) => {
+          const bookTitle = entry.get('params').get('bookTitle');
+
+          // Generate and set the slug
+          const slug = generateSlug(bookTitle);
+          entry = entry.set('slug', slug);
+
+          // Set the title to match bookTitle
+          entry = entry.set('title', bookTitle);
+
+          return entry;
         },
-
-        render() {
-          const debugInfo = this.getDebugInfo();
-          console.log('Debug Info:', debugInfo);
-
-          return h('pre', {}, JSON.stringify(debugInfo, null, 2));
-        }
       });
-
-      CMS.registerWidget('debug-widget', DebugControl);
     </script>
   </body>
 </html>
