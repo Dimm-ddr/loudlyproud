@@ -18,5 +18,26 @@
 
     <!-- Load custom widgets -->
     <script src="/admin/widgets/book-widgets.js"></script>
+
+    <!-- Add the debug widget code -->
+    <script>
+      const DebugControl = createClass({
+        render: function() {
+          console.log('Debug Widget Props:', {
+            value: this.props.value,
+            field: this.props.field?.toJS(),
+            entry: this.props.entry?.toJS(),
+            collection: this.props.field?.get('collection'),
+            path: window.location.pathname,
+            cms: window.CMS.getState()
+          });
+
+          return h('div', {}, 'Debug Widget Active - Check Console');
+        }
+      });
+
+      // Register the debug widget
+      CMS.registerWidget('debug-widget', DebugControl);
+    </script>
   </body>
 </html>
