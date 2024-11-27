@@ -25,7 +25,7 @@ collections:
     path: "{{locale}}books/{{fields.slug}}"
     filter: { field: "type", value: "books" }
     fields:
-      - {label: "Debug", name: "debug", widget: "debug-widget"}
+      - {label: "Debug Info", name: "debug_info", widget: "debug-widget"}
       - label: Title
         name: title
         widget: string

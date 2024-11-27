@@ -19,31 +19,35 @@
     <!-- Add the debug widget code -->
     <script>
       const DebugControl = createClass({
-        render: function() {
-          console.log('Debug Widget Props:', {
-            value: this.props.value,
-            field: this.props.field?.toJS(),
+        getDebugInfo() {
+          const cms = window.CMS;
+          return {
+            methods: Object.keys(cms),
+            backend: cms.getBackend(),
+            collections: cms.getCollections ? cms.getCollections() : 'Not available',
+            widgets: cms.getWidgets().map(w => ({
+              name: w.name,
+              control: w.controlComponent?.name,
+              preview: w.previewComponent?.name
+            })),
+            locale: cms.getLocale(),
+            mediaLibrary: cms.getMediaLibrary(),
+            editorComponents: cms.getEditorComponents(),
             entry: this.props.entry?.toJS(),
-            collection: this.props.field?.get('collection'),
-            path: window.location.pathname,
-            cms: window.CMS
-          });
+            field: this.props.field?.toJS(),
+            value: this.props.value
+          };
+        },
 
-          // Add specific debug for content loading
-          const backend = window.CMS.getBackend();
-          console.log('Backend Config:', backend);
+        render() {
+          const debugInfo = this.getDebugInfo();
+          console.log('Debug Info:', debugInfo);
 
-          return h('div', {}, 'Debug Widget Active - Check Console');
+          return h('pre', {}, JSON.stringify(debugInfo, null, 2));
         }
       });
 
-      // Register the debug widget
       CMS.registerWidget('debug-widget', DebugControl);
-
-      // Add global error handler for CMS initialization
-      window.addEventListener('load', () => {
-        console.log('CMS Config:', window.CMS.getWidget('debug-widget'));
-      });
     </script>
   </body>
 </html>
