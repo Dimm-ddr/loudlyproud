@@ -29,7 +29,7 @@
             entry: this.props.entry?.toJS(),
             collection: this.props.field?.get('collection'),
             path: window.location.pathname,
-            cms: window.CMS.getState()
+            cms: window.CMS
           });
 
           return h('div', {}, 'Debug Widget Active - Check Console');
