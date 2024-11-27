@@ -16,9 +16,6 @@
     <!-- Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
 
-    <!-- Load custom widgets -->
-    <script src="/admin/widgets/book-widgets.js"></script>
-
     <!-- Add the debug widget code -->
     <script>
       const DebugControl = createClass({
@@ -32,12 +29,21 @@
             cms: window.CMS
           });
 
+          // Add specific debug for content loading
+          const backend = window.CMS.getBackend();
+          console.log('Backend Config:', backend);
+
           return h('div', {}, 'Debug Widget Active - Check Console');
         }
       });
 
       // Register the debug widget
       CMS.registerWidget('debug-widget', DebugControl);
+
+      // Add global error handler for CMS initialization
+      window.addEventListener('load', () => {
+        console.log('CMS Config:', window.CMS.getWidget('debug-widget'));
+      });
     </script>
   </body>
 </html>
