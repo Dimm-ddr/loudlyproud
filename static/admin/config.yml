@@ -24,16 +24,22 @@ collections:
     slug: "{{fields.slug}}"
     path: "{{locale}}books/{{fields.slug}}"
     filter: { field: "type", value: "books" }
+    identifier_field: "{{fields.title}}"
     fields:
-      - {label: "Title", name: "title", widget: "hidden"}
-      - {label: "Slug", name: "slug", widget: "hidden"}
-      - {label: "Type", name: "type", widget: "hidden", default: "books"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - { label: "Title", name: "title", widget: "hidden" }
+      - { label: "Slug", name: "slug", widget: "hidden" }
+      - { label: "Type", name: "type", widget: "hidden", default: "books" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - label: "Params"
         name: "params"
         widget: "object"
         fields:
-          - {label: "Book Title", name: "bookTitle", widget: "string", required: true}
+          - {
+              label: "Book Title",
+              name: "bookTitle",
+              widget: "string",
+              required: true,
+            }
           - label: "Book Description"
             name: "book_description"
             widget: "markdown"
