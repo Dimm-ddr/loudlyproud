@@ -4,7 +4,7 @@ slug: heartstopper-s-zamiraniem-serdtsa-tom-1-0ab95b2e
 title: Heartstopper. С Замиранием Сердца. Том 1
 type: books
 params:
-  bookTitle: Heartstopper. С Замиранием Сердца. Том 1
+  book_title: Heartstopper. С Замиранием Сердца. Том 1
   tags:
   - graphic novels & comics
   - coming of age

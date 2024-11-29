@@ -4,7 +4,7 @@ slug: pliusy-nerazdelennoi-liubvi-the-upside-of-unrequited-7f66348c
 title: Плюсы неразделенной любви (The Upside Of Unrequited)
 type: books
 params:
-  bookTitle: Плюсы неразделенной любви (The Upside Of Unrequited)
+  book_title: Плюсы неразделенной любви (The Upside Of Unrequited)
   tags:
   - Anxiety disorders
   - Children of gay parents

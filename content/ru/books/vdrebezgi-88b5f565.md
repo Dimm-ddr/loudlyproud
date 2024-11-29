@@ -4,7 +4,7 @@ slug: vdrebezgi-88b5f565
 title: Вдребезги
 type: books
 params:
-  bookTitle: Вдребезги
+  book_title: Вдребезги
   tags:
   - fiction
   - LGBTQ+

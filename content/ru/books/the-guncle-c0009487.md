@@ -4,7 +4,7 @@ slug: the-guncle-c0009487
 title: The Guncle
 type: books
 params:
-  bookTitle: The Guncle
+  book_title: The Guncle
   tags:
   - American literature
   - adult fiction

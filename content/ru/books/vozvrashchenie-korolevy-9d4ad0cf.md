@@ -4,7 +4,7 @@ slug: vozvrashchenie-korolevy-9d4ad0cf
 title: Возвращение Королевы
 type: books
 params:
-  bookTitle: Возвращение Королевы
+  book_title: Возвращение Королевы
   tags:
   - adult fiction
   - dark fantasy

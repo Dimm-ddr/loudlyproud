@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Karla Nikole
-  bookTitle: 'Lore & Lust: Date Night In Milan'
+  book_title: 'Lore & Lust: Date Night In Milan'
   book_description: This story takes place between Chapters 31 and 32 of Lore and
     Lust Book One
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624477910i/58410375.jpg

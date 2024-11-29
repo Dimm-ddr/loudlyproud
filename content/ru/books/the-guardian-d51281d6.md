@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Mary Calmes
-  bookTitle: The Guardian
+  book_title: The Guardian
   book_description: Jude Shea's life is turned upside down when he rescues a dog he
     names Joe. Even though Jude has enough trouble taking care of himself-he doesn't
     even have a job-he can't resist the animal that needs him. Then one night, a man

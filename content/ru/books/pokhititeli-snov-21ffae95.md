@@ -4,7 +4,7 @@ slug: pokhititeli-snov-21ffae95
 title: Похитители Снов
 type: books
 params:
-  bookTitle: Похитители Снов
+  book_title: Похитители Снов
   tags:
   - audiobook
   - fantasy

@@ -4,7 +4,7 @@ slug: devochka-v-nulevoi-stepeni-f1dd72be
 title: Девочка В Нулевой Степени
 type: books
 params:
-  bookTitle: Девочка В Нулевой Степени
+  book_title: Девочка В Нулевой Степени
   tags:
   - LGBTQ+
   - queer

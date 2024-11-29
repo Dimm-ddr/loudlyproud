@@ -4,7 +4,7 @@ slug: korol-voronov-54a1aee4
 title: Король Воронов
 type: books
 params:
-  bookTitle: Король Воронов
+  book_title: Король Воронов
   tags:
   - audiobook
   - fantasy
@@ -15,8 +15,9 @@ params:
   - romance
   - urban fantasy
   - young adult (YA)
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477103790i/17378527.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680395146i/124937664.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477103790i/17378527.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680395146i/124937664.jpg
   isbn: '9785041737771'
   goodreads_link: https://www.goodreads.com/book/show/124937664
   authors:

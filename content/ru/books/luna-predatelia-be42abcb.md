@@ -4,7 +4,7 @@ slug: luna-predatelia-be42abcb
 title: Луна Предателя
 type: books
 params:
-  bookTitle: Луна Предателя
+  book_title: Луна Предателя
   tags:
   - adventure
   - fantasy

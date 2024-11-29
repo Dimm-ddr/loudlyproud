@@ -7,7 +7,7 @@ type: books
 params:
   authors:
   - Nina LaCour
-  bookTitle: Yerba Buena
+  book_title: Yerba Buena
   book_description: The debut adult novel by the bestselling and award-winning YA
     author Nina LaCour,following two women on a star-crossed journey toward each otherWhen
     Sara Foster runs away from home at sixteen, she leaves behind not only the losses

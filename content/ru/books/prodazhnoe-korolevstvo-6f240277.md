@@ -4,7 +4,7 @@ slug: prodazhnoe-korolevstvo-6f240277
 title: Продажное Королевство
 type: books
 params:
-  bookTitle: Продажное Королевство
+  book_title: Продажное Королевство
   tags:
   - adventure
   - fantasy

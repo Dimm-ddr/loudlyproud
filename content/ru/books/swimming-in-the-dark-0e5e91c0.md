@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Tomasz Jedrowski
-  bookTitle: Swimming In The Dark
+  book_title: Swimming In The Dark
   book_description: Set in early 1980s Poland against the violent decline of communism, a
     tender and passionate story of first love between two young men who eventually
     find themselves on opposite sides of the political divide—a stunningly poetic

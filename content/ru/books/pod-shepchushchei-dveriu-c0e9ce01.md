@@ -4,7 +4,7 @@ slug: pod-shepchushchei-dveriu-c0e9ce01
 title: Под шепчущей дверью
 type: books
 params:
-  bookTitle: Под шепчущей дверью
+  book_title: Под шепчущей дверью
   tags:
   - Religion
   - adult fiction

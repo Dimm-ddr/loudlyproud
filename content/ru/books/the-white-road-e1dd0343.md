@@ -4,7 +4,7 @@ slug: the-white-road-e1dd0343
 title: The White Road
 type: books
 params:
-  bookTitle: The White Road
+  book_title: The White Road
   tags:
   - adventure
   - epic fantasy

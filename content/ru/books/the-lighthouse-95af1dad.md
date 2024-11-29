@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Robert Michael Ballantyne, T.J. Klune, Лиана Шаутидзе, Ти Джей Клун
-  bookTitle: The Lighthouse
+  book_title: The Lighthouse
   book_description: 'Линус Бейкер живет четко по расписанию: утром – работа инспектора
     в Департаменте по делам магической молодежи, вечером – уютные посиделки дома с
     кошкой и старыми пластинками. Линус не собирается ничего менять в своей жизни,

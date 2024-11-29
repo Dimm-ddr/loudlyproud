@@ -4,7 +4,7 @@ slug: kak-proigrat-v-voine-vremion-this-is-how-you-lose-the-time-war-f67f0fff
 title: Как проиграть в войне времён (This Is How You Lose The Time War)
 type: books
 params:
-  bookTitle: Как проиграть в войне времён (This Is How You Lose The Time War)
+  book_title: Как проиграть в войне времён (This Is How You Lose The Time War)
   tags:
   - Atlantis
   - English literature

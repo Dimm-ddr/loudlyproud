@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson
-  bookTitle: 'The World And Other Places: Stories'
+  book_title: 'The World And Other Places: Stories'
   book_description: 'Her first short story collection exhibits the multitude of talents
     that have made English novelist Jeanette Winterson not just admired but beloved
     by her many fans. There are the surprising, fresh little phrases minted expressly

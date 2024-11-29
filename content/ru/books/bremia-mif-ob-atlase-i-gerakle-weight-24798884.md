@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Бремя. Миф об Атласе и Геракле (Weight)
+  book_title: Бремя. Миф об Атласе и Геракле (Weight)
   book_description: "Повесть Джанет Уинтерсон «Бремя» - не просто изложенный на современный\
     \ \nлад древний миф о титане Атласе, который восстал против богов и в \nнаказание\
     \ был обречен вечно поддерживать мир на своих плечах. Это \nавтобиографическая\
@@ -28,8 +28,9 @@ params:
     \ loneliness, isolation, responsibility, burden, and freedom, too, because my\
     \ version has a very particular end not found elsewhere.” -- from Jeanette Winterson’s\
     \ Foreword to Weight"
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1538032254i/42080336.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405975290i/15046.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1538032254i/42080336.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405975290i/15046.jpg
   editions count: '80'
   isbn: '9785974300127'
   languages:

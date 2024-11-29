@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - C Pam Zhang
-  bookTitle: Land Of Milk And Honey
+  book_title: Land Of Milk And Honey
   book_description: The award-winning author ofHow Much of These Hills Is Goldreturns
     with a rapturous and revelatory novel about a young chef whose discovery of pleasure
     alters her life and, indirectly, the worldA smog has spread. Food crops are rapidly

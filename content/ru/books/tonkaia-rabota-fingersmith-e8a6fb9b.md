@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
-  bookTitle: Тонкая работа (Fingersmith)
+  book_title: Тонкая работа (Fingersmith)
   book_description: "Лондонский бедный квартал, вторая половина XIX века. Сью Триндер,\
     \ сирота, выросшая среди воров и мошенников, не знает, что судьба странными узами\
     \ соединила ее жизнь с юной наследницей богатого имения, живущего замкнуто и уединенно.\
@@ -28,8 +28,9 @@ params:
     \ to the plan. Once in, however, Sue begins to pity her helpless mark and care\
     \ for Maud Lilly in unexpected ways...But no one and nothing is as it seems in\
     \ this Dickensian novel of thrills and reversals."
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1545241494i/8913370.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377028250i/2138520.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1545241494i/8913370.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377028250i/2138520.jpg
   editions count: '133'
   isbn: '9785353017509'
   languages:

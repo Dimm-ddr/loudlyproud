@@ -4,7 +4,7 @@ slug: malchiki-s-kladbishcha-368a670f
 title: Мальчики с кладбища
 type: books
 params:
-  bookTitle: Мальчики с кладбища
+  book_title: Мальчики с кладбища
   tags:
   - fantasy
   - fiction

@@ -4,7 +4,7 @@ slug: darii-velikii-zasluzhivaet-bolshego-b52021c3
 title: Дарий Великий Заслуживает Большего
 type: books
 params:
-  bookTitle: Дарий Великий Заслуживает Большего
+  book_title: Дарий Великий Заслуживает Большего
   tags:
   - audiobook
   - children's fiction

@@ -4,7 +4,7 @@ slug: renessans-039755bd
 title: Ренессанс
 type: books
 params:
-  bookTitle: Ренессанс
+  book_title: Ренессанс
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653727911i/61179959.jpg
   isbn: '9785041645816'
   goodreads_link: https://www.goodreads.com/book/show/61179959

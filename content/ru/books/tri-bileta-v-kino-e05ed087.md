@@ -4,7 +4,7 @@ slug: tri-bileta-v-kino-e05ed087
 title: Три Билета В Кино
 type: books
 params:
-  bookTitle: Три Билета В Кино
+  book_title: Три Билета В Кино
   tags:
   - fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622041527i/58166560.jpg

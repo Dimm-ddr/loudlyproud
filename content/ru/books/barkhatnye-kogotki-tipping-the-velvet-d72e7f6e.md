@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Sarah Waters, Сара Уотерс
-  bookTitle: Бархатные коготки (Tipping The Velvet)
+  book_title: Бархатные коготки (Tipping The Velvet)
   book_description: 'Нэнси живет в провинциальном английском городке, ее отец держит
     приморский устричный бар. Каждый вечер, переодевшись в выходное платье, она посещает
     мюзик-холл, где с бурлескным номером выступает Китти Батлер. Постепенно девушки
@@ -14,8 +14,9 @@ params:
     следует за ней в столицу. Вскоре об их совместном номере говорит весь Лондон.
     Нэнси счастлива, еще не догадываясь, как близка разлука, на какое дно ей придется
     опуститься, чтобы найти себя, и какие хищники водятся в придонных водах…'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425892206i/25104465.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551514885i/44171782.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425892206i/25104465.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551514885i/44171782.jpg
   editions count: '97'
   isbn: '9785389161740'
   languages:

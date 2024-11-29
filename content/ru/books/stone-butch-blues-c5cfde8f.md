@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Leslie Feinberg
-  bookTitle: Stone Butch Blues
+  book_title: Stone Butch Blues
   book_description: Woman or man? This internationally acclaimed novel looks at the
     world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie
     and Harriet" McCarthy era and coming out as a young butch lesbian in the pre-Stonewall

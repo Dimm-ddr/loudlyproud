@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Rufi Thorpe
-  bookTitle: The Knockout Queen
+  book_title: The Knockout Queen
   book_description: A dazzling and darkly comic novel of love, violence, and friendship
     in the California suburbsBunny Lampert is the princess of North Shore⁠--beautiful,
     tall, blond, with a rich real-estate-developer father and a swimming pool in her

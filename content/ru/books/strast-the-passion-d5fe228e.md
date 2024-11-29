@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson
-  bookTitle: Страсть (The Passion)
+  book_title: Страсть (The Passion)
   book_description: "\"Страсть: страданье, муки, маета, мученье, \nтелесная боль,\
     \ душевная скорбь, тоска; подвиг, сознательно принятые на \nсебя тяготы, мученичество\"\
     . Так нам говорит словарь Даля. Но роман \nДженет Уинтерсон - бесспорной звезды\
@@ -28,8 +28,9 @@ params:
     \ and darkness, the pair meet their singular destiny.In her unique and mesmerizing\
     \ voice, Winterson blends reality with fantasy, dream, and imagination to weave\
     \ a hypnotic tale with stunning effects."
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1203799610i/2885232.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388187737i/15047.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1203799610i/2885232.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388187737i/15047.jpg
   editions count: '125'
   isbn: '9785699018765'
   languages:

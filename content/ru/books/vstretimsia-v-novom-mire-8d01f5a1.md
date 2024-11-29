@@ -4,7 +4,7 @@ slug: vstretimsia-v-novom-mire-8d01f5a1
 title: Встретимся В Новом Мире
 type: books
 params:
-  bookTitle: Встретимся В Новом Мире
+  book_title: Встретимся В Новом Мире
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668715859i/63128074.jpg
   isbn: '9785171528768'
   goodreads_link: https://www.goodreads.com/book/show/63128074

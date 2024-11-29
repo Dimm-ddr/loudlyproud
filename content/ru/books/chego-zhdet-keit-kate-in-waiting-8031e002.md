@@ -4,7 +4,7 @@ slug: chego-zhdet-keit-kate-in-waiting-8031e002
 title: Чего ждет Кейт (Kate In Waiting)
 type: books
 params:
-  bookTitle: Чего ждет Кейт (Kate In Waiting)
+  book_title: Чего ждет Кейт (Kate In Waiting)
   tags:
   - audiobook
   - contemporary
@@ -13,8 +13,9 @@ params:
   - queer
   - romance
   - young adult (YA)
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323816i/62246618.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1599810921i/48579405.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323816i/62246618.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1599810921i/48579405.jpg
   editions count: '28'
   isbn: '9785604785904'
   goodreads_link: https://www.goodreads.com/book/show/62246618

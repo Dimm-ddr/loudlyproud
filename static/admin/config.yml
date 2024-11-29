@@ -22,7 +22,7 @@ collections:
         name: "params"
         widget: "object"
         fields:
-          - { label: "Book Title", name: "bookTitle", widget: "string" }
+          - { label: "Book Title", name: "book_title", widget: "string" }
           - {
               label: "Book Description",
               name: "book_description",

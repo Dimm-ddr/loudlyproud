@@ -4,7 +4,7 @@ slug: mest-temnogo-boga-0aded87b
 title: Месть Темного Бога
 type: books
 params:
-  bookTitle: Месть Темного Бога
+  book_title: Месть Темного Бога
   tags:
   - adventure
   - fantasy

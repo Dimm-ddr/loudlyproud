@@ -8,7 +8,7 @@ type: books
 params:
   authors:
   - Alice Walker, Элис Уокер
-  bookTitle: Цвет пурпурный (The Color Purple)
+  book_title: Цвет пурпурный (The Color Purple)
   book_description: 'Действие романа происходит в сельской местности штата Джорджия
     в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины. Жизнь
     то и дело подтверждает эту незыблемую истину. Элис Уокер без обиняков говорит
@@ -17,8 +17,9 @@ params:
     by.Then her husband''s lover, a flamboyant blues singer, barreled into her world
     and gave Celie the courage to ask for more - to laugh, to play, and finally -
     to love.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1556348375i/11486.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554483387i/22023345.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1556348375i/11486.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554483387i/22023345.jpg
   editions count: '385'
   isbn: '5824306028'
   languages:

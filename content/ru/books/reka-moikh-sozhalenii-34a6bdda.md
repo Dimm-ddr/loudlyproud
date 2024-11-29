@@ -4,7 +4,7 @@ slug: reka-moikh-sozhalenii-34a6bdda
 title: Река Моих Сожалений
 type: books
 params:
-  bookTitle: Река Моих Сожалений
+  book_title: Река Моих Сожалений
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1584271264i/52394893.jpg
   isbn: '9785171213800'
   goodreads_link: https://www.goodreads.com/book/show/52394893

@@ -4,7 +4,7 @@ slug: kapuchino-s-marshmellou-tom-2-b250538d
 title: Капучино с маршмэллоу. Том 2
 type: books
 params:
-  bookTitle: Капучино с маршмэллоу. Том 2
+  book_title: Капучино с маршмэллоу. Том 2
   tags:
   - graphic novels & comics
   - LGBTQ+

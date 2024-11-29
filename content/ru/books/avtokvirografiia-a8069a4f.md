@@ -4,7 +4,7 @@ slug: avtokvirografiia-a8069a4f
 title: Автоквирография
 type: books
 params:
-  bookTitle: Автоквирография
+  book_title: Автоквирография
   tags:
   - audiobook
   - contemporary

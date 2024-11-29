@@ -4,7 +4,7 @@ slug: piataia-sestra-bfc576fe
 title: Пятая Сестра
 type: books
 params:
-  bookTitle: Пятая Сестра
+  book_title: Пятая Сестра
   tags:
   - fiction
   cover: 7128e3fe4e35dca2c08c9e213d32dc11cd2eba93684ef0636580f665aebf91e2.jpg

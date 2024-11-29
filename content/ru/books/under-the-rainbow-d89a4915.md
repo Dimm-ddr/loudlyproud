@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Celia Laskey
-  bookTitle: Under The Rainbow
+  book_title: Under The Rainbow
   book_description: When a group of social activists arrive in a small town, the lives
     and beliefs of residents and outsiders alike are upended, in this wry, embracing
     novel. Big Burr, Kansas, is the kind of place where everyone seems to know everyone,

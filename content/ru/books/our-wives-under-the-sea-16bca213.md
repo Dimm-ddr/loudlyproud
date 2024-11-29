@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Julia Armfield
-  bookTitle: Our Wives Under The Sea
+  book_title: Our Wives Under The Sea
   book_description: Leah is changed. Months earlier, she left for a routine expedition,
     only this time her submarine sank to the sea floor. When she finally surfaces
     and returns home, her wife Miri knows that something is wrong. Barely eating and

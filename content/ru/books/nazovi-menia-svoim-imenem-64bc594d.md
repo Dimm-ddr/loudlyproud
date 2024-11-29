@@ -4,7 +4,7 @@ slug: nazovi-menia-svoim-imenem-64bc594d
 title: Назови меня своим именем
 type: books
 params:
-  bookTitle: Назови меня своим именем
+  book_title: Назови меня своим именем
   tags:
   - audiobook
   - contemporary

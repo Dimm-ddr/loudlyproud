@@ -7,7 +7,7 @@ params:
   authors:
   - Jocelyne Allen
   - Kabi Nagata, Nagata Kabi
-  bookTitle: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With
+  book_title: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With
     Loneliness)
   book_description: 'Как покончить с бессмысленным существованием, начавшимся
     после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых

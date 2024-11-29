@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Mary Calmes
-  bookTitle: Frog
+  book_title: Frog
   book_description: Weber Yates's dreams of stardom are about to be reduced to a ranch
     hand's job in Texas, and his one relationship is with a guy so far out of his
     league he might as well be on the moon. Or at least in San Francisco, where Weber

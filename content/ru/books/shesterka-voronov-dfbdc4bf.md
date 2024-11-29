@@ -4,7 +4,7 @@ slug: shesterka-voronov-dfbdc4bf
 title: Шестерка Воронов
 type: books
 params:
-  bookTitle: Шестерка Воронов
+  book_title: Шестерка Воронов
   tags:
   - adventure
   - audiobook

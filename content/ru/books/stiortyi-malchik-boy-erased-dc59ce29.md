@@ -8,7 +8,7 @@ type: books
 params:
   authors:
   - Garrard Conley, Гаррард Конли
-  bookTitle: Стёртый мальчик (Boy Erased)
+  book_title: Стёртый мальчик (Boy Erased)
   book_description: 'Гаррарду Конли было девятнадцать, когда по настоянию родителей
     ему пришлось пройти основанную на библейском учении конверсионную терапию, которая
     обещала «исцелить» его сексуальную ориентацию. Будучи сыном баптистского священника
@@ -33,8 +33,9 @@ params:
     traces the complex relationships among family, faith, and community. At times
     heart-breaking, at times triumphant, this memoir is a testament to love that survives
     despite all odds.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617884308i/56468783.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1484165172i/33358204.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617884308i/56468783.jpg,
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1484165172i/33358204.jpg
   editions count: '39'
   isbn: '9785604360583'
   languages:

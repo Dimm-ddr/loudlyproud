@@ -4,7 +4,7 @@ slug: pesn-sorokoputa-1d2fc065
 title: Песнь Сорокопута
 type: books
 params:
-  bookTitle: Песнь Сорокопута
+  book_title: Песнь Сорокопута
   tags:
   - fantasy
   - LGBTQ+

@@ -4,7 +4,7 @@ slug: syn-vechnosti-infinity-son-e909a1fb
 title: Сын вечности (Infinity Son)
 type: books
 params:
-  bookTitle: Сын вечности (Infinity Son)
+  book_title: Сын вечности (Infinity Son)
   tags:
   - Children's fiction
   - Young adult fiction family siblings

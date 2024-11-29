@@ -4,7 +4,7 @@ slug: za-stenkoi-istoriia-otisa-revialia-zvezdy-molodezhnoi-prozy-na-russkom-492
 title: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
 type: books
 params:
-  bookTitle: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
+  book_title: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
   tags:
   - fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1710480243i/209972881.jpg

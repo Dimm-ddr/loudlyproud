@@ -4,7 +4,7 @@ slug: chain-gang-all-stars-9a2644ac
 title: Chain-gang All-stars
 type: books
 params:
-  bookTitle: Chain-gang All-stars
+  book_title: Chain-gang All-stars
   tags:
   - Dystopia
   - audiobook

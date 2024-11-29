@@ -4,7 +4,7 @@ slug: o-chem-molchit-lastochka-399cae41
 title: О Чем Молчит Ласточка
 type: books
 params:
-  bookTitle: О Чем Молчит Ласточка
+  book_title: О Чем Молчит Ласточка
   tags:
   - fiction
   - LGBTQ+

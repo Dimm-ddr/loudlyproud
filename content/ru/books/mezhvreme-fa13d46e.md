@@ -4,7 +4,7 @@ slug: mezhvreme-fa13d46e
 title: Межвремье
 type: books
 params:
-  bookTitle: Межвремье
+  book_title: Межвремье
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610273320i/55887057.jpg
   isbn: '517132834'
   goodreads_link: https://www.goodreads.com/book/show/55887057

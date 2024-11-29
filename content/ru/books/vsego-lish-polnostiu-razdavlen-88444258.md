@@ -4,7 +4,7 @@ slug: vsego-lish-polnostiu-razdavlen-88444258
 title: Всего Лишь Полностью Раздавлен
 type: books
 params:
-  bookTitle: Всего Лишь Полностью Раздавлен
+  book_title: Всего Лишь Полностью Раздавлен
   tags:
   - contemporary
   - fiction

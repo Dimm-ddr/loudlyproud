@@ -4,7 +4,7 @@ slug: ocharovan-napoval-the-charm-offensive-4e645d44
 title: Очарован наповал (The Charm Offensive)
 type: books
 params:
-  bookTitle: Очарован наповал (The Charm Offensive)
+  book_title: Очарован наповал (The Charm Offensive)
   tags:
   - adult fiction
   - audiobook

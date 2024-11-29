@@ -4,7 +4,7 @@ slug: pletionyi-korol-ae233863
 title: Плетёный Король
 type: books
 params:
-  bookTitle: Плетёный Король
+  book_title: Плетёный Король
   tags:
   - contemporary
   - fantasy

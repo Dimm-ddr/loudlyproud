@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Michael Cunningham
-  bookTitle: Day
+  book_title: Day
   book_description: 'As the world changes around them, a family weathers the storms
     of growing up, growing older, falling in and out of love, losing the things that
     are most precious—and learning to go on—from the Pulitzer Prize–winning author

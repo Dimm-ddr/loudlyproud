@@ -4,7 +4,7 @@ slug: glimpses-a-collection-of-nightrunner-short-stories-e6646e80
 title: 'Glimpses: A Collection Of Nightrunner Short Stories'
 type: books
 params:
-  bookTitle: 'Glimpses: A Collection Of Nightrunner Short Stories'
+  book_title: 'Glimpses: A Collection Of Nightrunner Short Stories'
   tags:
   - anthologies
   - fantasy

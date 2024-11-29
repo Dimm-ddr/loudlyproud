@@ -4,7 +4,7 @@ slug: kradushchaiasia-tma-fdd1bbdf
 title: Крадущаяся Тьма
 type: books
 params:
-  bookTitle: Крадущаяся Тьма
+  book_title: Крадущаяся Тьма
   tags:
   - adventure
   - fantasy

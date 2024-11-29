@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Sarah Cypher
-  bookTitle: Skin And Its Girl
+  book_title: Skin And Its Girl
   book_description: 'A young, queer Palestinian American woman pieces together her
     great aunt’s secrets in this sweeping debut, a family saga confronting questions
     of sexual identity, exile, and lineage.In a Pacific Northwest hospital far from

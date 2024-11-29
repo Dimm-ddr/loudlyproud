@@ -4,7 +4,7 @@ slug: teni-vozvrashchaiutsia-2f658b8d
 title: Тени Возвращаются
 type: books
 params:
-  bookTitle: Тени Возвращаются
+  book_title: Тени Возвращаются
   tags:
   - adventure
   - fantasy

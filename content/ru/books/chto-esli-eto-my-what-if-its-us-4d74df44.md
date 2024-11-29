@@ -4,7 +4,7 @@ slug: chto-esli-eto-my-what-if-its-us-4d74df44
 title: Что, если это мы (What If It's Us)
 type: books
 params:
-  bookTitle: Что, если это мы (What If It's Us)
+  book_title: Что, если это мы (What If It's Us)
   tags:
   - Children's fiction
   - Dating (Social customs)

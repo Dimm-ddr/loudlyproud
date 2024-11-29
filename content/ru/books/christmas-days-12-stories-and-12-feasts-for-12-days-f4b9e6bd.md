@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson
-  bookTitle: 'Christmas Days: 12 Stories And 12 Feasts For 12 Days'
+  book_title: 'Christmas Days: 12 Stories And 12 Feasts For 12 Days'
   book_description: 'From the New York Times bestselling author of "Why Be Happy When
     You Could Be Normal?" comes an enchanting collection of stories for the holiday
     season.For years Jeanette Winterson has loved writing a new story at Christmas

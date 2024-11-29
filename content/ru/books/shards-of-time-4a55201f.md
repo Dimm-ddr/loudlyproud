@@ -4,7 +4,7 @@ slug: shards-of-time-4a55201f
 title: Shards Of Time
 type: books
 params:
-  bookTitle: Shards Of Time
+  book_title: Shards Of Time
   tags:
   - adventure
   - crime

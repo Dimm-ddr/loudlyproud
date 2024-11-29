@@ -4,7 +4,7 @@ slug: red-fae9da1f
 title: Red
 type: books
 params:
-  bookTitle: Red
+  book_title: Red
   tags:
   - American literature
   - Westerns

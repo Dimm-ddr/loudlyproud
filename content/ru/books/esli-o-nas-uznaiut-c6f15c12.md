@@ -4,7 +4,7 @@ slug: esli-o-nas-uznaiut-c6f15c12
 title: Если О Нас Узнают
 type: books
 params:
-  bookTitle: Если О Нас Узнают
+  book_title: Если О Нас Узнают
   tags:
   - contemporary
   - fiction

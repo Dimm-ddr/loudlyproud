@@ -4,7 +4,7 @@ slug: leto-v-pionerskom-galstuke-942cd87b
 title: Лето в пионерском галстуке
 type: books
 params:
-  bookTitle: Лето в пионерском галстуке
+  book_title: Лето в пионерском галстуке
   tags:
   - Children
   - Vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni V.I. Lenina

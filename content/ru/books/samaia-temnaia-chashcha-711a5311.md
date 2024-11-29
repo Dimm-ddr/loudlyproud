@@ -4,7 +4,7 @@ slug: samaia-temnaia-chashcha-711a5311
 title: Самая Темная Чаща
 type: books
 params:
-  bookTitle: Самая Темная Чаща
+  book_title: Самая Темная Чаща
   tags:
   - fae
   - fairies

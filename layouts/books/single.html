@@ -7,13 +7,13 @@
         <figure class="book-cover w-full md:w-1/3 mb-8 md:mb-0 md:mr-8">
           <img class="w-full h-auto object-contain rounded-lg shadow-md"
                src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
-               alt="Cover of {{ .Params.bookTitle }}" loading="lazy">
+               alt="Cover of {{ .Params.book_title }}" loading="lazy">
         </figure>
 
         <div class="w-full md:w-2/3">
           <!-- Title and Series -->
           <header>
-            <h1 class="text-4xl font-black mb-2 text-primary">{{ .Params.bookTitle }}</h1>
+            <h1 class="text-4xl font-black mb-2 text-primary">{{ .Params.book_title }}</h1>
             {{ with .Params.series }}
             <p class="text-xl font-light italic text-gray-600 mb-4">{{ . }}</p>
             {{ end }}

@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Adib Khorram, Адиб Хоррам
-  bookTitle: Дарий Великий Не В Порядке
+  book_title: Дарий Великий Не В Порядке
   book_description: В отличие от своего тезки-царя Дарий вовсе не Великий. Он наполовину
     перс, но всю жизнь прожил в Портленде. В раннем возрасте Дарию диагностировали
     клиническую депрессию, и, несмотря на лечение, ему все еще сложно найти общий
@@ -19,7 +19,7 @@ params:
   languages:
   - Английский
   - Русский
-  goodreads_link: <https://www.goodreads.com/book/show/49531567>
+  goodreads_link: https://www.goodreads.com/book/show/49531567
   page_count: '432'
   publication_year: '2019'
   publishers:

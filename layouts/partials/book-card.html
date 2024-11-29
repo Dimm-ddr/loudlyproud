@@ -8,7 +8,7 @@
             <img class="w-full h-full object-contain transition-opacity duration-300"
                  src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ $placeholderImage }}{{ end }}"
                  onerror="this.onerror=null; this.src='{{ $placeholderImage }}'"
-                 alt="{{ .Params.bookTitle }}"
+                 alt="{{ .Params.book_title }}"
                  loading="lazy">
         </a>
     </div>
@@ -19,7 +19,7 @@
         <h2 class="text-xl font-black mb-2 text-primary">
             <a href="{{ .RelPermalink }}"
                class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
-                {{ .Params.bookTitle }}
+                {{ .Params.book_title }}
             </a>
         </h2>
 

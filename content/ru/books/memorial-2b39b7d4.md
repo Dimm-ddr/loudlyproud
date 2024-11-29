@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Bryan Washington
-  bookTitle: Memorial
+  book_title: Memorial
   book_description: A funny, sexy, profound dramedy about two young people at a crossroads
     in their relationship and the limits of love.Benson and Mike are two young guys
     who live together in Houston. Mike is a Japanese American chef at a Mexican restaurant

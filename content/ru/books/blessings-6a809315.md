@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Chukwuebuka Ibeh
-  bookTitle: Blessings
+  book_title: Blessings
   book_description: Moonlight meets Purple Hibiscus in this gay coming-of-age novel
     from an astonishing young talent, set in post-military Nigeria and culminating
     in the Same-Sex Marriage Prohibition Act of 2014.Obiefuna has always been the

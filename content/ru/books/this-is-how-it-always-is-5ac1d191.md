@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Laurie Frankel
-  bookTitle: This Is How It Always Is
+  book_title: This Is How It Always Is
   book_description: 'Alternate cover edition of ASIN B01HW6Z3FGThis is how a family
     keeps a secret…and how that secret ends up keeping them.This is how a family lives
     happily ever after…until happily ever after becomes complicated.This is how children

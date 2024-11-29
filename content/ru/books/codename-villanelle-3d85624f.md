@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Luke Jennings, Люк Дженнингс
-  bookTitle: Codename Villanelle
+  book_title: Codename Villanelle
   book_description: 'Villanelle (a codename, of course) is one of the world''s most
     skilled assassins. A catlike psychopath whose love for the creature comforts of
     her luxurious lifestyle is second only to her love of the game, she specializes

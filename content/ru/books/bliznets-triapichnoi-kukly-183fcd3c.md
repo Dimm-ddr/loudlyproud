@@ -4,7 +4,7 @@ slug: bliznets-triapichnoi-kukly-183fcd3c
 title: Близнец Тряпичной Куклы
 type: books
 params:
-  bookTitle: Близнец Тряпичной Куклы
+  book_title: Близнец Тряпичной Куклы
   tags:
   - adult fiction
   - dark fantasy

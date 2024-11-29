@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Adam Silvera, Адам Сильвера
-  bookTitle: Скорее счастлив, чем нет (More Happy Than Not)
+  book_title: Скорее счастлив, чем нет (More Happy Than Not)
   book_description: 'Вскоре после самоубийства отца шестнадцатилетний аарон сото безуспешно
     пытается вновь обрести счастье. горе и шрам в виде смайлика на запястье не дают
     ему забыть о случившемся. несмотря на поддержку девушки и матери, боль не отпускает.
@@ -15,8 +15,9 @@ params:
     аарон решается на крайние меры: он обращается в институт Летео, который специализируется
     на новой революционной технологии подавления памяти. Аарон хочет забыть свои чувства
     и стать таким, как все, даже если это вынудит его потерять себя.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1591802916i/53937273.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1437759419i/19542841.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1591802916i/53937273.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1437759419i/19542841.jpg
   editions count: '56'
   isbn: '9785604458051'
   languages:

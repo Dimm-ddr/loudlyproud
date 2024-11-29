@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Не только апельсины (Oranges Are Not The Only Fruit)
+  book_title: Не только апельсины (Oranges Are Not The Only Fruit)
   book_description: "Роман молодой писательницы, в котором она \nоткровенно рассказала\
     \ о своем детстве и трагической первой любви, вызвал\n жаркие дискуссии и стал\
     \ одним из главных культурных событий \nвосьмидесятых.\n\nДетство и юность Дженет\

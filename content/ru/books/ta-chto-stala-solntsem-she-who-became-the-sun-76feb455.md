@@ -10,7 +10,7 @@ type: books
 params:
   authors:
   - Shelley Parker-Chan, Шелли Паркер-Чан
-  bookTitle: Та, что стала солнцем (She Who Became The Sun)
+  book_title: Та, что стала солнцем (She Who Became The Sun)
   book_description: 'Небеса предсказали девушке, что рождена во время войны и голода
     — смерть, а ее брату — великое будущее. Но что, если тот, кому небо предписало
     быть великим, выбирает смерть?

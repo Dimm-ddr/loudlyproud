@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Sexing The Cherry
+  book_title: Sexing The Cherry
   book_description: In a fantastic world that is and is not seventeenth-century England,
     a baby is found floating in the Thames. The child, Jordan, is rescued by Dog Woman
     and grows up to travel the world like Gulliver, though he finds that the world’s

@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Radclyffe Hall
-  bookTitle: The Well Of Loneliness
+  book_title: The Well Of Loneliness
   book_description: Stephen is an ideal child of aristocratic parents—a fencer, a
     horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling
     writer and a loyal, protective lover. But Stephen is a woman, and her lovers are

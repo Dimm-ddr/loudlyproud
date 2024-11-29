@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - J. K. Chukwu
-  bookTitle: Unfortunates
+  book_title: Unfortunates
   book_description: 'An edgy, bitingly funny debut about a queer, half-Nigerian college
     sophomore who, enraged and exhausted by the racism at her elite college, sets
     out to find truth about The  Unfortunates—the unlucky subset of Black undergrads

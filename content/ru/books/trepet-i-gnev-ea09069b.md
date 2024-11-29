@@ -4,7 +4,7 @@ slug: trepet-i-gnev-ea09069b
 title: Трепет И Гнев
 type: books
 params:
-  bookTitle: Трепет И Гнев
+  book_title: Трепет И Гнев
   tags:
   - adult fiction
   - contemporary

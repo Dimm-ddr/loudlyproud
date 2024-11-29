@@ -4,7 +4,7 @@ slug: sila-nashego-pritiazheniia-f823ec1e
 title: Сила нашего притяжения
 type: books
 params:
-  bookTitle: Сила нашего притяжения
+  book_title: Сила нашего притяжения
   tags:
   - Children's fiction
   - contemporary

@@ -4,7 +4,7 @@ slug: pravila-vyzhivaniia-v-dzhakarte-e600c833
 title: Правила выживания в Джакарте
 type: books
 params:
-  bookTitle: Правила выживания в Джакарте
+  book_title: Правила выживания в Джакарте
   tags:
   - adventure
   - fiction

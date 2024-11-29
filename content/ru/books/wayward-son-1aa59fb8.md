@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Rainbow Rowell
-  bookTitle: Wayward Son
+  book_title: Wayward Son
   book_description: The story is supposed to be over. Simon Snow did everything he
     was supposed to do. He beat the villain. He won the war. He even fell in love.
     Now comes the good part, right? Now comes the happily ever after…So why can’t

@@ -4,7 +4,7 @@ slug: dni-nashei-zhizni-d955ab61
 title: Дни Нашей Жизни
 type: books
 params:
-  bookTitle: Дни Нашей Жизни
+  book_title: Дни Нашей Жизни
   tags:
   - contemporary
   - fiction

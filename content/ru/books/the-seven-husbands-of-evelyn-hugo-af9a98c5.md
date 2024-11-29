@@ -12,7 +12,7 @@ type: books
 params:
   authors:
   - Taylor Jenkins Reid, Тейлор Дженкинс Рейд
-  bookTitle: The Seven Husbands Of Evelyn Hugo
+  book_title: The Seven Husbands Of Evelyn Hugo
   book_description: 'Ведущая затворнический образ жизни легенда старого Голливуда
     Эвелин Хьюго объявляет, что готова представить публике свои мемуары.
     Всю ее карьеру сопровождали загадки, сенсации и многочисленные скандалы. Мир жаждет
@@ -36,8 +36,9 @@ params:
     real connection to the legendary star, but as Evelyn’s story nears its conclusion,
     it becomes clear that her life intersects with Monique’s own in tragic and irreversible
     ways.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653682965i/61177447.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664458703i/32620332.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653682965i/61177447.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664458703i/32620332.jpg
   editions count: '154'
   isbn: '9785041594565'
   languages:

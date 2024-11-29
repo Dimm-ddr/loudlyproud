@@ -4,7 +4,7 @@ slug: vstrechaisia-so-mnoi-braison-keller-426e3dc4
 title: Встречайся со мной, Брайсон Келлер
 type: books
 params:
-  bookTitle: Встречайся со мной, Брайсон Келлер
+  book_title: Встречайся со мной, Брайсон Келлер
   tags:
   - Children's fiction
   - contemporary

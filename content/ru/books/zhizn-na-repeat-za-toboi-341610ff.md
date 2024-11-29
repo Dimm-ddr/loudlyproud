@@ -4,7 +4,7 @@ slug: zhizn-na-repeat-za-toboi-341610ff
 title: Жизнь На Repeat. За Тобой
 type: books
 params:
-  bookTitle: Жизнь На Repeat. За Тобой
+  book_title: Жизнь На Repeat. За Тобой
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675674857i/102189973.jpg
   isbn: '9785171351793'
   goodreads_link: https://www.goodreads.com/book/show/102189973-repeat

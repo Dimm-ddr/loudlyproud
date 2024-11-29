@@ -8,7 +8,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Хозяйство света (Lighthousekeeping)
+  book_title: Хозяйство света (Lighthousekeeping)
   book_description: 'После того, как маму юной Сильвер буквально сдувает с лица земли,
     девочка попадает к слепому и мудрому хранителю маяка Пью, который учит ее, что
     не дать свету угаснуть - это научиться рассказывать истории. И они увлекают девочку
@@ -23,8 +23,9 @@ params:
     map through her own darkness, into her own story, and, finally, into love.One
     of the most original and extraordinary writers of her generation, Jeanette Winterson
     has created a modern fable about the transformative power of storytelling.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1229468907i/2524212.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328875027i/15052.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1229468907i/2524212.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328875027i/15052.jpg
   editions count: '75'
   isbn: '9785699186587'
   languages:

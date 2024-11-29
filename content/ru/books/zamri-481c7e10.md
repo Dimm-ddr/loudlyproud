@@ -4,7 +4,7 @@ slug: zamri-481c7e10
 title: Замри
 type: books
 params:
-  bookTitle: Замри
+  book_title: Замри
   tags:
   - contemporary
   - fiction

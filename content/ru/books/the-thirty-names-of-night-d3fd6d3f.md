@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Zeyn Joukhadar
-  bookTitle: The Thirty Names Of Night
+  book_title: The Thirty Names Of Night
   book_description: 'Five years after a suspicious fire killed his ornithologist mother,
     a closeted Syrian American trans boy sheds his birth name and searches for a new
     one. He has been unable to paint since his mother’s ghost has begun to visit him

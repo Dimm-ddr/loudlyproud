@@ -8,7 +8,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Разрыв во времени
+  book_title: Разрыв во времени
   book_description: 'Джазовый пианист и владелец небольшого бара Шеп находит подброшенную
     к больнице девочку-младенца — вместе с чемоданом денег. Шеп удочерит Пердиту,
     вырастит как свою и вложит в нее всю душу. Оба они не будут догадываться о том,
@@ -26,8 +26,9 @@ params:
     nature of time. Written with energy and wit, this is a story of the consuming
     power of jealousy on the one hand, and redemption and the enduring love of a lost
     child on the other.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1503860333i/36134429.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1438620932i/24727420.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1503860333i/36134429.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1438620932i/24727420.jpg
   editions count: '63'
   isbn: '9785699951413'
   languages:

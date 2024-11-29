@@ -4,7 +4,7 @@ slug: tainyi-voin-7c194e3f
 title: Тайный Воин
 type: books
 params:
-  bookTitle: Тайный Воин
+  book_title: Тайный Воин
   tags:
   - adult fiction
   - epic fantasy

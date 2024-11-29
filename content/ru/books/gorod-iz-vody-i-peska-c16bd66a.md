@@ -4,7 +4,7 @@ slug: gorod-iz-vody-i-peska-c16bd66a
 title: Город Из Воды И Песка
 type: books
 params:
-  bookTitle: Город Из Воды И Песка
+  book_title: Город Из Воды И Песка
   cover: Melina_Divajn__Gorod_iz_vody_i_peska.jpeg
   editions count: '1'
   isbn: '5171512167'

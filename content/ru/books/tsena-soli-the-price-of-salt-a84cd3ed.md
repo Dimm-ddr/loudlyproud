@@ -8,7 +8,7 @@ type: books
 params:
   authors:
   - Claire  Morgan, Patricia Highsmith, Патриция Хайсмит
-  bookTitle: Цена соли (The Price Of Salt)
+  book_title: Цена соли (The Price Of Salt)
   book_description: 'Патриция Хайсмит - известная американская писательница, работавшая
     с жанром рассказа, психологического нуарного детектива и романа. Ее произведения
     экранизировали Альфред Хичкок, Лилиана Кавани, Вим Вендерс, Рене Клеман и другие.
@@ -30,8 +30,9 @@ params:
     story that may surprise Highsmith fans and will delight those discovering her
     work.This authorized edition includes an afterword by Patricia Highsmith. Previously
     titledThe Price of Salt.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588791366i/53341254.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1451790279i/25622850.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588791366i/53341254.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1451790279i/25622850.jpg
   editions count: '228'
   isbn: '9785171216429'
   languages:

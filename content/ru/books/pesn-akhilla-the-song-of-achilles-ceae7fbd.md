@@ -1,8 +1,4 @@
 ---
-
-
-
-
 draft: false
 slug: pesn-akhilla-the-song-of-achilles-ceae7fbd
 title: Песнь Ахилла (The Song Of Achilles)
@@ -10,7 +6,7 @@ type: books
 params:
   authors:
   - Madeline Miller, Мадлен Миллер
-  bookTitle: Песнь Ахилла (The Song Of Achilles)
+  book_title: Песнь Ахилла (The Song Of Achilles)
   book_description: 'Дебютный роман американки Мадлен Миллер. Специалиста по античной
     культуре. Очаровал не только читателей и критиков, но и коллег-писателей.
     Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил
@@ -26,8 +22,9 @@ params:
     of contemporary fiction’s brightest lights—and fans of Mary Renault, Bernard Cornwell,
     Steven Pressfield, and Colleen McCullough’s Masters of Rome series will delight
     in this unforgettable journey back to ancient Greece in the Age of Heroes.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1570891752l/52732634.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641141248i/59062169.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1570891752l/52732634.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641141248i/59062169.jpg
   editions count: '221'
   isbn: '9785171087654'
   languages:

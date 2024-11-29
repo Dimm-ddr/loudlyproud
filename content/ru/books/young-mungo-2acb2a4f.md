@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Douglas Stuart
-  bookTitle: Young Mungo
+  book_title: Young Mungo
   book_description: Growing up in a housing estate in Glasgow, Mungo and James are
     born under different stars--Mungo a Protestant and James a Catholic--and they
     should be sworn enemies if they're to be seen as men at all. Yet against all odds,

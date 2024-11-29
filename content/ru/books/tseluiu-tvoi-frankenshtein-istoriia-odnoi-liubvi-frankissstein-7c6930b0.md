@@ -14,7 +14,7 @@ type: books
 params:
   authors:
   - Jeanette Winterson, Дженет Уинтерсон
-  bookTitle: Целую, твой Франкенштейн. История одной любви (Frankissstein)
+  book_title: Целую, твой Франкенштейн. История одной любви (Frankissstein)
   book_description: 'Лето 1816 года, Швейцария.
     Перси Биши Шелли со своей юной супругой Мэри и лорд Байрон со своим приятелем
     и личным врачом Джоном Полидори арендуют два дома на берегу Женевского озера.
@@ -41,8 +41,9 @@ params:
     is no longer the smartest being on the planet? Jeanette Winterson shows us how
     much closer we are to that future than we realize. Funny and furious, bold and
     clear-sighted, Frankissstein is a love story about life itself.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1547329058i/42123790.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606717068i/56096639.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1547329058i/42123790.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606717068i/56096639.jpg
   editions count: '51'
   isbn: '9785171216412'
   languages:

@@ -4,7 +4,7 @@ slug: korol-shramov-0ffeb1f0
 title: Король Шрамов
 type: books
 params:
-  bookTitle: Король Шрамов
+  book_title: Король Шрамов
   tags:
   - adventure
   - audiobook

@@ -4,7 +4,7 @@ slug: casket-of-souls-79c47738
 title: Casket Of Souls
 type: books
 params:
-  bookTitle: Casket Of Souls
+  book_title: Casket Of Souls
   tags:
   - adventure
   - fantasy

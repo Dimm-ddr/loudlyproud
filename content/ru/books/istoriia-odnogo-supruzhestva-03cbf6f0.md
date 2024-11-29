@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Andrew Sean Greer, Эндрю Шон Грир
-  bookTitle: История Одного Супружества
+  book_title: История Одного Супружества
   book_description: We think we know the ones we love. So Pearlie Cook begins her indirect, and devastating exploration of the mystery at the heart of every relationship -- how we can ever truly know another
     person. It is 1953 and Pearlie, a dutiful young housewife, finds herself living
     in the Sunset District in San Francisco, caring not only for her husband's fragile

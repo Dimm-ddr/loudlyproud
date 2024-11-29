@@ -4,7 +4,7 @@ slug: the-arrival-cd14889d
 title: The Arrival
 type: books
 params:
-  bookTitle: The Arrival
+  book_title: The Arrival
   tags:
   - adult fiction
   - contemporary

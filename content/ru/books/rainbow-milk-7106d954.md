@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Paul Mendez
-  bookTitle: Rainbow Milk
+  book_title: Rainbow Milk
   book_description: An essential and revelatory coming-of-age narrative from a thrilling
     new voice,Rainbow Milkfollows nineteen-year-old Jesse McCarthy as he grapples
     with his racial and sexual identities against the backdrop of his Jehovah's Witness

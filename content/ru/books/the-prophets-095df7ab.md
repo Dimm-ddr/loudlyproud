@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Robert Jones Jr.
-  bookTitle: The Prophets
+  book_title: The Prophets
   book_description: Alternate cover edition of ISBN9780593085684A novel about the
     forbidden union between two enslaved young men on a Deep South plantation, the
     refuge they find in each other, and a betrayal that threatens their existence.Isaiah

@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Nancy Garden
-  bookTitle: Annie On My Mind
+  book_title: Annie On My Mind
   book_description: This groundbreaking book is the story of two teenage girls whose
     friendship blossoms into love and who, despite pressures from family and school
     that threaten their relationship, promise to be true to each other and their feelings.

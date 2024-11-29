@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Gerardo Sámano Córdova
-  bookTitle: Monstrilio
+  book_title: Monstrilio
   book_description: A literary horror debut about a boy who transforms into a monster,
     a monster who tries to be a man, and the people who love him in every form he
     takesGrieving mother Magos cuts out a piece of her deceased eleven-year-old son

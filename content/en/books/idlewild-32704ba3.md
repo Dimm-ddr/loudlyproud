@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - James Frankie Thomas
-  bookTitle: Idlewild
+  book_title: Idlewild
   book_description: James Frankie Thomas’s Idlewild is a darkly funny story of two
     adults looking back on their intense teenage friendship, in a queer, trans, and
     early-Internet twist on the Manhattan prep school novel.Idlewild is a tiny, artsy

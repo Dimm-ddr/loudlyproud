@@ -4,7 +4,7 @@ slug: kapuchino-s-marshmellou-tom-1-66cd903a
 title: Капучино С Маршмэллоу. Том 1
 type: books
 params:
-  bookTitle: Капучино С Маршмэллоу. Том 1
+  book_title: Капучино С Маршмэллоу. Том 1
   tags:
   - graphic novels & comics
   - LGBTQ+

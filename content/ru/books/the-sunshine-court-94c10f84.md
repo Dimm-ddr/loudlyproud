@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Nora Sakavic
-  bookTitle: The Sunshine Court
+  book_title: The Sunshine Court
   book_description: My name is Jean Moreau. My place is at Evermore. I belong to the
     Moriyamas. It is a truth Jean has built his life around, a reminder this is the
     best he can hope for and all he deserves. But when he is stolen from Edgar Allan

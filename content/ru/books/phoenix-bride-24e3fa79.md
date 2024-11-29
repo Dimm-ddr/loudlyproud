@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Natasha Siegel
-  bookTitle: Phoenix Bride
+  book_title: Phoenix Bride
   book_description: A passionate tale of plague, fire, and forbidden love in seventeenth-century
     London from the acclaimed author of Solomon's Crown1666. It is a year after plague
     has devastated England. Young widow Cecilia Thorowgood is a prisoner, trapped

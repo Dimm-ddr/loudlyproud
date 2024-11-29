@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Max Porter
-  bookTitle: Grief Is The Thing With Feathers
+  book_title: Grief Is The Thing With Feathers
   book_description: In a London flat, two young boys face the unbearable sadness of
     their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic,
     imagines a future of well-meaning visitors and emptiness.In this moment of despair

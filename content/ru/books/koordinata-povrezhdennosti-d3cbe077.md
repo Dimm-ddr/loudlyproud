@@ -4,7 +4,7 @@ slug: koordinata-povrezhdennosti-d3cbe077
 title: Координата Поврежденности
 type: books
 params:
-  bookTitle: Координата Поврежденности
+  book_title: Координата Поврежденности
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1619971294i/57919873.jpg
   isbn: '9785005354099'
   goodreads_link: https://www.goodreads.com/book/show/57919873

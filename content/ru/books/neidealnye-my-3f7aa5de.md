@@ -4,7 +4,7 @@ slug: neidealnye-my-3f7aa5de
 title: Неидеальные Мы
 type: books
 params:
-  bookTitle: Неидеальные Мы
+  book_title: Неидеальные Мы
   tags:
   - contemporary
   - fiction

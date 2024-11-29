@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Alejandro  Varela, Alejandro Varela
-  bookTitle: The Town Of Babylon
+  book_title: The Town Of Babylon
   book_description: In this contemporary debut novel—an intimate portrait of queer,
     racial, and class identity —Andrés, a gay Latinx professor, returns to his suburban
     hometown in the wake of his husband’s infidelity. There he finds himself with

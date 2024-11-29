@@ -10,7 +10,7 @@ type: books
 params:
   authors:
   - Christopher Isherwood, Кристофер Ишервуд
-  bookTitle: Одинокий мужчина (A Single Man)
+  book_title: Одинокий мужчина (A Single Man)
   book_description: 'Роман "Одинокий мужчина", впервые опубликованный в 1964 году
     и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной роли), -
     одно из самых известных произведений Ишервуда.
@@ -27,8 +27,9 @@ params:
     and interactions with others reveal a man who loves being alive despite everyday
     injustices and loneliness. Wry, suddenly manic, constantly funny, surprisingly
     sad, this novel catches the true textures of life itself."--BOOK JACKET.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1646305232i/16842.jpg,
-    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1569950915l/52179977.jpg
+  cover:
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1646305232i/16842.jpg
+  - https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1569950915l/52179977.jpg
   editions count: '122'
   isbn: '9785171140052'
   languages:

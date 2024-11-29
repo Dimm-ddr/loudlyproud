@@ -4,7 +4,7 @@ slug: aristotel-i-dante-otkryvaiut-tainy-vselennoi-6496c116
 title: Аристотель И Данте Открывают Тайны Вселенной
 type: books
 params:
-  bookTitle: Аристотель И Данте Открывают Тайны Вселенной
+  book_title: Аристотель И Данте Открывают Тайны Вселенной
   tags:
   - Anger
   - audiobook

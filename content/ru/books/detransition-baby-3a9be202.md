@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Torrey Peters
-  bookTitle: Detransition, Baby
+  book_title: Detransition, Baby
   book_description: 'A whipsmart debut about three women—transgender and cisgender—whose
     lives collide after an unexpected pregnancy forces them to confront their deepest
     desires around gender, motherhood, and sex.Reese almost had it all: a loving relationship

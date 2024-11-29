@@ -4,7 +4,7 @@ slug: tsvety-v-pustote-68474371
 title: Цветы В Пустоте
 type: books
 params:
-  bookTitle: Цветы В Пустоте
+  book_title: Цветы В Пустоте
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660550972i/61224340.jpg
   isbn: '9785041226398'
   goodreads_link: https://www.goodreads.com/book/show/61224340

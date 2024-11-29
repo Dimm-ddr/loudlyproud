@@ -4,7 +4,7 @@ slug: pravlenie-volkov-af737d7d
 title: Правление Волков
 type: books
 params:
-  bookTitle: Правление Волков
+  book_title: Правление Волков
   tags:
   - audiobook
   - fantasy

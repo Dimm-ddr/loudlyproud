@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Marisa Crane
-  bookTitle: I Keep My Exoskeletons To Myself
+  book_title: I Keep My Exoskeletons To Myself
   book_description: 'In a United States not so unlike our own, the Department of Balance
     has adopted a radical new form of law enforcement: rather than incarceration,
     wrongdoers are given a second (and sometimes, third, fourth, and fifth) shadow

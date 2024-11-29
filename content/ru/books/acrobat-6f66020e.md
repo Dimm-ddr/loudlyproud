@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Mary Calmes
-  bookTitle: Acrobat
+  book_title: Acrobat
   book_description: Forty-five-year-old English professor Nathan Qells is very good
     at making people feel important. What he’s not very good at is sticking around
     afterward. He’s a nice guy; he just doesn’t feel things the way other people do.

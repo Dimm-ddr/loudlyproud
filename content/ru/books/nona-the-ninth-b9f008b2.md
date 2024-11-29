@@ -6,7 +6,7 @@ type: books
 params:
   authors:
   - Tamsyn Muir
-  bookTitle: Nona The Ninth
+  book_title: Nona The Ninth
   book_description: Her city is under siege. The zombies are coming back. And all
     Nona wants is a birthday party. In many ways, Nona is like other people. She lives
     with her family, has a job at her local school, and loves walks on the beach and
