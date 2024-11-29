@@ -14,9 +14,15 @@ collections:
     folder: "content/ru/books"
     create: true
     fields:
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Draft",
+          name: "draft",
+          widget: "boolean",
+          default: false,
+          required: true,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
       - { label: "Type", name: "type", widget: "hidden", default: "books" }
       - label: "Params"
         name: "params"
@@ -35,7 +41,7 @@ collections:
             }
           - { label: "Cover", name: "cover", widget: "string" }
           - { label: "Authors", name: "authors", widget: "list" }
-          - { label: "Tags", name: "tags", widget: "list" }
+          - { label: "Tags", name: "tags", widget: "list", required: false }
           - {
               label: "Publication Year",
               name: "publication_year",
@@ -47,11 +53,40 @@ collections:
               label: "Russian Translation Status",
               name: "russian_translation_status",
               widget: "select",
-              options: ["exists", "in progress", "unknown"],
+              options:
+                [
+                  "unknown",
+                  "might_exist",
+                  "unlikely_to_exist",
+                  "does_not_exist",
+                  "exists",
+                ],
             }
           - {
               label: "Russian Audioversion",
               name: "russian_audioversion",
-              widget: "select",
-              options: ["yes", "no"],
+              widget: "boolean",
             }
+          - { label: "Cover Alt Text", name: "cover_alt", widget: "string" }
+          - { label: "ISBN", name: "isbn", widget: "string" }
+          - {
+              label: "Additional ISBNs",
+              name: "additional_isbns",
+              widget: "list",
+            }
+          - { label: "Page Count", name: "page_count", widget: "string" }
+          - {
+              label: "Goodreads Link",
+              name: "goodreads_link",
+              widget: "string",
+            }
+          - { label: "Buy Link", name: "buy_link", widget: "string" }
+          - { label: "Series", name: "series", widget: "string" }
+          - { label: "Translators", name: "translators", widget: "list" }
+          - label: "Where to Get"
+            name: "where_to_get"
+            widget: "list"
+            fields:
+              - { label: "Store", name: "store", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Date", name: "date", widget: "date" }

@@ -73,6 +73,10 @@ SCHEMA = {
                 ],
             },
             "russian_audioversion": {"type": "boolean"},
+            "tags": {
+                "type": "array",
+                "item_type": "string"
+            },
         },
     },
 }

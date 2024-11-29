@@ -14,6 +14,7 @@ import json
 @dataclass
 class ContentIssue:
     """Represents a content validation issue."""
+
     file_path: str
     issue_type: str
     message: str
@@ -35,7 +36,7 @@ class FieldDefinition(TypedDict):
     format: NotRequired[str]
     enum: NotRequired[list[str]]
     item_type: NotRequired[str]
-    properties: NotRequired[dict[str, 'FieldDefinition']]
+    properties: NotRequired[dict[str, "FieldDefinition"]]
     description: NotRequired[str]
 
 
@@ -51,7 +52,7 @@ def is_valid_url(url: str) -> bool:
 def is_valid_date(date_str: str) -> bool:
     """Check if string is a valid date in YYYY-MM-DD format."""
     try:
-        datetime.strptime(date_str, '%Y-%m-%d')
+        datetime.strptime(date_str, "%Y-%m-%d")
         return True
     except:
         return False
@@ -63,7 +64,9 @@ def is_valid_isbn(isbn: str) -> bool:
     return True
 
 
-def validate_value(value: Any, field_type: str, field_def: FieldDefinition) -> str | None:
+def validate_value(
+    value: Any, field_type: str, field_def: FieldDefinition
+) -> str | None:
     """Validate a single value against its type definition."""
     match field_type:
         case "string":
@@ -99,9 +102,7 @@ def validate_value(value: Any, field_type: str, field_def: FieldDefinition) -> s
                         for prop_name, prop_def in properties.items():
                             if prop_name in item:
                                 if error := validate_value(
-                                    item[prop_name],
-                                    prop_def["type"],
-                                    prop_def
+                                    item[prop_name], prop_def["type"], prop_def
                                 ):
                                     return f"Invalid {prop_name}: {error}"
                 case item_type:
@@ -169,20 +170,20 @@ class ContentChecker:
                         issues.append(ContentIssue(relative_path, "yaml_error", str(e)))
                         return issues
                 case _:
-                    issues.append(ContentIssue(
-                        relative_path,
-                        "format_error",
-                        "Invalid markdown frontmatter format"
-                    ))
+                    issues.append(
+                        ContentIssue(
+                            relative_path,
+                            "format_error",
+                            "Invalid markdown frontmatter format",
+                        )
+                    )
                     return issues
 
             # Basic structure validation
             if not isinstance(data, dict):
                 issues.append(
                     ContentIssue(
-                        relative_path,
-                        "format_error",
-                        "Content must be a YAML mapping"
+                        relative_path, "format_error", "Content must be a YAML mapping"
                     )
                 )
                 return issues
@@ -204,17 +205,16 @@ class ContentChecker:
                 if field_def := self.schema["field_types"].get(field):
                     if field_type := field_def.get("type"):
                         if error := validate_value(value, field_type, field_def):
-                            auto_fixable = (
-                                field_def.get("format") == "isbn"
-                                and not isinstance(value, str)
-                            )
+                            auto_fixable = field_def.get(
+                                "format"
+                            ) == "isbn" and not isinstance(value, str)
                             issues.append(
                                 ContentIssue(
                                     relative_path,
                                     "validation_error",
                                     f"Field '{field}': {error}",
                                     field=field,
-                                    auto_fixable=auto_fixable
+                                    auto_fixable=auto_fixable,
                                 )
                             )
 
@@ -283,7 +283,7 @@ class ContentChecker:
                                 "format_error",
                                 "'russian_audioversion' should be a boolean, not a string",
                                 field="params.russian_audioversion",
-                                auto_fixable=True
+                                auto_fixable=True,
                             )
                         )
 
@@ -331,7 +331,7 @@ def main() -> None:
         issues_file.parent.mkdir(exist_ok=True)
         issues_data = {
             "timestamp": datetime.now().isoformat(),
-            "issues": [issue.to_dict() for issue in all_issues]
+            "issues": [issue.to_dict() for issue in all_issues],
         }
         with issues_file.open("w", encoding="utf-8") as f:
             json.dump(issues_data, f, indent=2, ensure_ascii=False)
