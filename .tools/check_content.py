@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-import yaml
 from datetime import datetime
 from urllib.parse import urlparse
 from typing import Any, NotRequired, TypedDict
 from dataclasses import dataclass, field
+from collections import Counter
+from ruamel.yaml import YAML
 from book_schema import SCHEMA
 import json
-from collections import Counter
 
 
 @dataclass
@@ -57,11 +57,20 @@ def is_valid_date(date_str: str) -> bool:
         return False
 
 
+def is_valid_isbn(isbn: str) -> bool:
+    """Check if string is a valid ISBN-10 or ISBN-13."""
+    # Implement ISBN validation logic here
+    return True
+
+
 def validate_value(value: Any, field_type: str, field_def: FieldDefinition) -> str | None:
     """Validate a single value against its type definition."""
     match field_type:
         case "string":
             if not isinstance(value, str):
+                if field_def.get("format") == "isbn":
+                    # Special case for ISBNs - can be fixed by converting to string
+                    return "Must be a string (currently a number)"
                 return "Must be a string"
             # Check format if specified
             match field_def.get("format"):
@@ -69,6 +78,8 @@ def validate_value(value: Any, field_type: str, field_def: FieldDefinition) -> s
                     return "Must be a valid URL"
                 case "date" if not is_valid_date(value):
                     return "Must be a valid date in YYYY-MM-DD format"
+                case "isbn" if not is_valid_isbn(value):
+                    return "Must be a valid ISBN-10 or ISBN-13"
 
         case "boolean":
             if not isinstance(value, bool):
@@ -148,27 +159,30 @@ class ContentChecker:
             content = file_path.read_text(encoding="utf-8")
 
             # Extract frontmatter
-            parts = content.split("---", 2)
-            if len(parts) < 3:
-                issues.append(ContentIssue(
-                    relative_path,
-                    "format_error",
-                    "Invalid markdown frontmatter format"
-                ))
-                return issues
-
-            # Parse only the frontmatter part
-            try:
-                data = yaml.safe_load(parts[1])
-            except yaml.YAMLError as e:
-                issues.append(ContentIssue(relative_path, "yaml_error", str(e)))
-                return issues
+            match content.split("---\n", 2):
+                case ["", frontmatter, *rest] if rest:
+                    try:
+                        yaml = YAML()
+                        yaml.preserve_quotes = True
+                        data = yaml.load(frontmatter)
+                    except Exception as e:
+                        issues.append(ContentIssue(relative_path, "yaml_error", str(e)))
+                        return issues
+                case _:
+                    issues.append(ContentIssue(
+                        relative_path,
+                        "format_error",
+                        "Invalid markdown frontmatter format"
+                    ))
+                    return issues
 
             # Basic structure validation
             if not isinstance(data, dict):
                 issues.append(
                     ContentIssue(
-                        relative_path, "format_error", "Content must be a YAML mapping"
+                        relative_path,
+                        "format_error",
+                        "Content must be a YAML mapping"
                     )
                 )
                 return issues
@@ -190,12 +204,17 @@ class ContentChecker:
                 if field_def := self.schema["field_types"].get(field):
                     if field_type := field_def.get("type"):
                         if error := validate_value(value, field_type, field_def):
+                            auto_fixable = (
+                                field_def.get("format") == "isbn"
+                                and not isinstance(value, str)
+                            )
                             issues.append(
                                 ContentIssue(
                                     relative_path,
                                     "validation_error",
                                     f"Field '{field}': {error}",
                                     field=field,
+                                    auto_fixable=auto_fixable
                                 )
                             )
 

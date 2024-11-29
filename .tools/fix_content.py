@@ -101,6 +101,39 @@ def fix_audioversion_field(data: dict) -> tuple[bool, list[str]]:
     return modified, fixes
 
 
+def fix_isbn_field(data: dict) -> tuple[bool, list[str]]:
+    """Fix ISBN fields that are numbers instead of strings."""
+    fixes = []
+    modified = False
+
+    if "params" in data:
+        params = data["params"]
+
+        # Fix main ISBN
+        if "isbn" in params and not isinstance(params["isbn"], str):
+            params["isbn"] = str(params["isbn"])
+            fixes.append("Converted numeric ISBN to string")
+            modified = True
+
+        # Fix additional ISBNs
+        if "additional_isbns" in params and isinstance(params["additional_isbns"], list):
+            new_isbns = []
+            needs_fix = False
+            for isbn in params["additional_isbns"]:
+                if not isinstance(isbn, str):
+                    new_isbns.append(str(isbn))
+                    needs_fix = True
+                else:
+                    new_isbns.append(isbn)
+
+            if needs_fix:
+                params["additional_isbns"] = new_isbns
+                fixes.append("Converted numeric additional ISBNs to strings")
+                modified = True
+
+    return modified, fixes
+
+
 def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
     """Fix issues in a single file."""
     full_path = project_root / file_path
@@ -115,8 +148,18 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
         yaml.width = 4096  # Prevent line wrapping
         yaml.indent(mapping=2, sequence=4, offset=2)
 
-        with full_path.open("r", encoding="utf-8") as f:
-            data = yaml.load(f)
+        # Read and parse frontmatter
+        content = full_path.read_text(encoding='utf-8')
+        parts = content.split("---", 2)
+        if len(parts) < 3:
+            print(f"❌ Invalid frontmatter format in {file_path}")
+            return
+
+        try:
+            data = yaml.load(parts[1])
+        except yaml.YAMLError as e:
+            print(f"❌ YAML error in {file_path}: {e}")
+            return
 
         modified = False
         fixes = []
@@ -133,6 +176,12 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
             modified = True
             fixes.extend(audio_fixes)
 
+        # Fix ISBNs
+        isbn_modified, isbn_fixes = fix_isbn_field(data)
+        if isbn_modified:
+            modified = True
+            fixes.extend(isbn_fixes)
+
         # Reorder frontmatter if requested
         if reorder:
             data = reorder_frontmatter(data)
@@ -144,8 +193,15 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
             for fix in fixes:
                 print(f"  - {fix}")
 
-            with full_path.open("w", encoding="utf-8") as f:
+            # Reconstruct the file with fixed frontmatter
+            new_content = "---\n"
+            yaml.dump(data, full_path.open('w', encoding='utf-8'))
+            with full_path.open('w', encoding='utf-8') as f:
+                f.write("---\n")
                 yaml.dump(data, f)
+                f.write("---")
+                if parts[2]:
+                    f.write(parts[2])
 
     except Exception as e:
         print(f"❌ Error fixing {file_path}: {str(e)}")
@@ -162,24 +218,30 @@ def main():
         print("No issues file found. Run check_content.py first.")
         sys.exit(1)
 
-    issues_data = json.loads(issues_file.read_text())
-    fixable_issues = [issue for issue in issues_data["issues"] if issue["auto_fixable"]]
+    try:
+        # Add encoding parameter here
+        issues_data = json.loads(issues_file.read_text(encoding='utf-8'))
+        fixable_issues = [issue for issue in issues_data["issues"] if issue["auto_fixable"]]
 
-    if not fixable_issues:
-        print("No auto-fixable issues found.")
-        return
+        if not fixable_issues:
+            print("No auto-fixable issues found.")
+            return
 
-    print(f"Found {len(fixable_issues)} auto-fixable issues.")
+        print(f"Found {len(fixable_issues)} auto-fixable issues.")
 
-    # Group issues by file
-    files_to_fix = set(issue["file_path"] for issue in fixable_issues)
+        # Group issues by file
+        files_to_fix = set(issue["file_path"] for issue in fixable_issues)
 
-    for file_path in files_to_fix:
-        fix_file(project_root, file_path, reorder)
+        for file_path in files_to_fix:
+            fix_file(project_root, file_path, reorder)
 
-    # Remove issues file after fixing
-    issues_file.unlink()
-    print("\nDone! Run check_content.py again to verify fixes.")
+        # Remove issues file after fixing
+        issues_file.unlink()
+        print("\nDone! Run check_content.py again to verify fixes.")
+
+    except Exception as e:
+        print(f"Error processing issues file: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,18 @@
 """Schema definition for book content validation."""
 
+def is_valid_isbn(isbn: str) -> bool:
+    """Validate ISBN format."""
+    # Remove any hyphens or spaces
+    cleaned = isbn.replace('-', '').replace(' ', '')
+
+    # Check if it's a valid ISBN-10 or ISBN-13
+    if len(cleaned) == 10:
+        return cleaned.isdigit() or (cleaned[:-1].isdigit() and cleaned[-1] in '0123456789X')
+    elif len(cleaned) == 13:
+        return cleaned.isdigit()
+
+    return False
+
 SCHEMA = {
     "required_fields": ["draft", "slug", "title", "type", "params"],
     "field_types": {
@@ -22,8 +35,17 @@ SCHEMA = {
                 "type": "string",
                 "description": "Alternative text description for the cover image(s)",
             },
-            "isbn": {"type": "string"},
-            "additional_isbns": {"type": "array", "item_type": "string"},
+            "isbn": {
+                "type": "string",
+                "format": "isbn",
+                "description": "ISBN-10 or ISBN-13, can include hyphens"
+            },
+            "additional_isbns": {
+                "type": "array",
+                "item_type": "string",
+                "format": "isbn",
+                "description": "Additional ISBNs for other editions"
+            },
             "languages": {"type": "array", "item_type": "string"},
             "page_count": {"type": "string"},  # String to allow "~300" format
             "publication_year": {"type": "string"},  # String to allow approximate dates
