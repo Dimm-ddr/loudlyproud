@@ -48,3 +48,6 @@ console-export-*.txt
 static/js/*.js.map
 **/*.pyc
 __pycache__/
+
+# Python tools related files
+.tools/.venv/

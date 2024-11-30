@@ -4,7 +4,6 @@ import sys
 import json
 from pathlib import Path
 from ruamel.yaml import YAML
-from typing import List, Dict
 
 from fixers.text_fixes import apply_text_fixes
 from fixers.yaml_fixes import apply_yaml_fixes
@@ -20,14 +19,14 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
 
     try:
         # First, handle text-based fixes
-        content = full_path.read_text(encoding='utf-8')
+        content = full_path.read_text(encoding="utf-8")
         content, text_fixes = apply_text_fixes(content)
         modified = bool(text_fixes)
         all_fixes = text_fixes
 
         if modified:
             # Write back the text fixes
-            with full_path.open('w', encoding='utf-8') as f:
+            with full_path.open("w", encoding="utf-8") as f:
                 f.write(content)
 
         # Then handle YAML-based fixes
@@ -66,7 +65,7 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
                 print(f"  - {fix}")
 
             # Write back with proper formatting
-            with full_path.open('w', encoding='utf-8') as f:
+            with full_path.open("w", encoding="utf-8") as f:
                 f.write("---\n")
                 yaml.dump(data, f)
                 f.write("---")
@@ -89,8 +88,10 @@ def main() -> None:
         sys.exit(1)
 
     try:
-        issues_data = json.loads(issues_file.read_text(encoding='utf-8'))
-        fixable_issues = [issue for issue in issues_data["issues"] if issue["auto_fixable"]]
+        issues_data = json.loads(issues_file.read_text(encoding="utf-8"))
+        fixable_issues = [
+            issue for issue in issues_data["issues"] if issue["auto_fixable"]
+        ]
 
         if not fixable_issues:
             print("No auto-fixable issues found.")

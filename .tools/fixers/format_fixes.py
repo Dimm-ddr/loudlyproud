@@ -1,13 +1,21 @@
-from typing import Dict
-
-def reorder_frontmatter(data: Dict) -> Dict:
+def reorder_frontmatter(data: dict) -> dict:
     """Reorder frontmatter fields in a consistent way."""
     root_order = ["draft", "slug", "title", "type", "params"]
     params_order = [
-        "authors", "book_title", "book_description", "short_book_description",
-        "cover", "isbn", "languages", "goodreads_link", "page_count",
-        "publication_year", "publishers", "russian_audioversion",
-        "russian_translation_status", "tags",
+        "authors",
+        "book_title",
+        "book_description",
+        "short_book_description",
+        "cover",
+        "isbn",
+        "languages",
+        "goodreads_link",
+        "page_count",
+        "publication_year",
+        "publishers",
+        "russian_audioversion",
+        "russian_translation_status",
+        "tags",
     ]
 
     ordered = {}

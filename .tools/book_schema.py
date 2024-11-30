@@ -1,17 +1,21 @@
 """Schema definition for book content validation."""
 
+
 def is_valid_isbn(isbn: str) -> bool:
     """Validate ISBN format."""
     # Remove any hyphens or spaces
-    cleaned = isbn.replace('-', '').replace(' ', '')
+    cleaned = isbn.replace("-", "").replace(" ", "")
 
     # Check if it's a valid ISBN-10 or ISBN-13
     if len(cleaned) == 10:
-        return cleaned.isdigit() or (cleaned[:-1].isdigit() and cleaned[-1] in '0123456789X')
+        return cleaned.isdigit() or (
+            cleaned[:-1].isdigit() and cleaned[-1] in "0123456789X"
+        )
     elif len(cleaned) == 13:
         return cleaned.isdigit()
 
     return False
+
 
 SCHEMA = {
     "required_fields": ["draft", "slug", "title", "type", "params"],
@@ -38,13 +42,13 @@ SCHEMA = {
             "isbn": {
                 "type": "string",
                 "format": "isbn",
-                "description": "ISBN-10 or ISBN-13, can include hyphens"
+                "description": "ISBN-10 or ISBN-13, can include hyphens",
             },
             "additional_isbns": {
                 "type": "array",
                 "item_type": "string",
                 "format": "isbn",
-                "description": "Additional ISBNs for other editions"
+                "description": "Additional ISBNs for other editions",
             },
             "languages": {"type": "array", "item_type": "string"},
             "page_count": {"type": "string"},  # String to allow "~300" format
@@ -59,7 +63,7 @@ SCHEMA = {
                     "store": {"type": "string"},
                     "link": {"type": "string", "format": "url"},
                     "date": {"type": "string", "format": "date"},
-                }
+                },
             },
             "publishers": {"type": "array", "item_type": "string"},
             "russian_translation_status": {
@@ -73,10 +77,7 @@ SCHEMA = {
                 ],
             },
             "russian_audioversion": {"type": "boolean"},
-            "tags": {
-                "type": "array",
-                "item_type": "string"
-            },
+            "tags": {"type": "array", "item_type": "string"},
         },
     },
 }

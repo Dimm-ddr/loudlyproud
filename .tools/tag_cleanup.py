@@ -11,11 +11,13 @@ import sys
 
 class TagMapping(TypedDict):
     """Type for tag mapping entries."""
+
     normalized: str | list[str] | None
 
 
 class StatsDict(TypedDict):
     """Type for statistics output."""
+
     total_files: int
     files_with_changes: int
     unknown_tags: list[str]
@@ -26,6 +28,7 @@ class StatsDict(TypedDict):
 @dataclass
 class TagStats:
     """Statistics for tag processing."""
+
     total_files: int = 0
     files_with_changes: int = 0
     unknown_tags: set[str] = field(default_factory=set)
@@ -59,7 +62,7 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
                 yaml = YAML()
                 yaml.preserve_quotes = True
                 return yaml.load(frontmatter), rest[0]
-            except:
+            except yaml.YAMLError:
                 return None
         case _:
             return None
@@ -85,15 +88,13 @@ def normalize_tags(tags: list[str], tags_map: dict[str, TagMapping]) -> list[str
     if not tags:
         return []
 
-    normalized = [
-        new_tag
-        for tag in tags
-        for new_tag in normalize_tag(tag, tags_map)
-    ]
+    normalized = [new_tag for tag in tags for new_tag in normalize_tag(tag, tags_map)]
     return sorted(set(normalized))
 
 
-def process_book_file(file_path: Path, tags_map: dict[str, TagMapping], stats: TagStats) -> bool:
+def process_book_file(
+    file_path: Path, tags_map: dict[str, TagMapping], stats: TagStats
+) -> bool:
     """Process a single book file, updating tags if necessary."""
     try:
         content = file_path.read_text(encoding="utf-8")
@@ -121,7 +122,7 @@ def process_book_file(file_path: Path, tags_map: dict[str, TagMapping], stats: T
             yaml.width = 4096
             yaml.indent(mapping=2, sequence=4, offset=2)
 
-            with file_path.open('w', encoding="utf-8") as f:
+            with file_path.open("w", encoding="utf-8") as f:
                 f.write("---\n")
                 yaml.dump(frontmatter, f)
                 f.write("---")

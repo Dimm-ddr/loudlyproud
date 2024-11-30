@@ -1,5 +1,3 @@
-from typing import Tuple, List, Dict, Any
-
 def fix_languages_field(data: dict) -> tuple[bool, list[str]]:
     """Fix languages field in the data."""
     fixes = []
@@ -8,7 +6,7 @@ def fix_languages_field(data: dict) -> tuple[bool, list[str]]:
     if "params" in data and "languages" in data["params"]:
         params = data["params"]
         if isinstance(params["languages"], str):
-            langs = [l.strip() for l in params["languages"].split(",")]
+            langs = [lang.strip() for lang in params["languages"].split(",")]
             params["languages"] = langs
             fixes.append("Converted 'languages' from string to list")
             modified = True
@@ -16,7 +14,7 @@ def fix_languages_field(data: dict) -> tuple[bool, list[str]]:
             new_langs = []
             for lang in params["languages"]:
                 if "," in lang:
-                    new_langs.extend(l.strip() for l in lang.split(","))
+                    new_langs.extend(part.strip() for part in lang.split(","))
                     modified = True
                 else:
                     new_langs.append(lang)
@@ -37,7 +35,8 @@ def fix_audioversion_field(data: dict) -> tuple[bool, list[str]]:
         if isinstance(params["russian_audioversion"], str):
             value = params["russian_audioversion"].lower()
             params["russian_audioversion"] = value == "yes"
-            fixes.append("Converted 'russian_audioversion' from string to boolean")
+            msg = "Converted 'russian_audioversion' from string to boolean"
+            fixes.append(msg)
             modified = True
 
     return modified, fixes
@@ -55,7 +54,9 @@ def fix_isbn_field(data: dict) -> tuple[bool, list[str]]:
             fixes.append("Converted numeric ISBN to string")
             modified = True
 
-        if "additional_isbns" in params and isinstance(params["additional_isbns"], list):
+        if "additional_isbns" in params and isinstance(
+            params["additional_isbns"], list
+        ):
             new_isbns = []
             needs_fix = False
             for isbn in params["additional_isbns"]:
