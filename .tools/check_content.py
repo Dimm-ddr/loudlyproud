@@ -287,10 +287,76 @@ class ContentChecker:
                             )
                         )
 
+            # Check multi-line strings
+            multiline_issues = self.check_multiline_strings(data)
+            for issue in multiline_issues:
+                issue.file_path = relative_path
+                issues.append(issue)
+
+            # Check content issues
+            content_issues = self.check_content_issues(data)
+            for issue in content_issues:
+                issue.file_path = relative_path
+                issues.append(issue)
+
         except Exception as e:
             issues.append(
                 ContentIssue(relative_path, "error", f"Error processing file: {str(e)}")
             )
+
+        return issues
+
+    def check_multiline_strings(self, data: dict, field_path: str = "") -> list[ContentIssue]:
+        """Check for improperly formatted multi-line strings."""
+        issues = []
+
+        if isinstance(data, dict):
+            for key, value in data.items():
+                current_path = f"{field_path}.{key}" if field_path else key
+                if isinstance(value, str) and '\n' in value:
+                    # Multi-line string found, check if it's properly formatted
+                    if any(not line.startswith('  ') for line in value.split('\n')[1:]):
+                        issues.append(ContentIssue(
+                            file_path="",  # Will be set later
+                            issue_type="format_error",
+                            message=f"Multi-line string in field '{current_path}' needs proper indentation",
+                            field=current_path,
+                            auto_fixable=False
+                        ))
+                elif isinstance(value, (dict, list)):
+                    issues.extend(self.check_multiline_strings(value, current_path))
+        elif isinstance(data, list):
+            for i, item in enumerate(data):
+                if isinstance(item, (dict, list)):
+                    issues.extend(self.check_multiline_strings(item, field_path))
+
+        return issues
+
+    def check_content_issues(self, data: dict, field_path: str = "") -> list[ContentIssue]:
+        """Check for various content issues that might cause YAML problems."""
+        issues = []
+
+        if isinstance(data, dict):
+            for key, value in data.items():
+                current_path = f"{field_path}.{key}" if field_path else key
+                if isinstance(value, str):
+                    # Check for potentially problematic characters
+                    if '&' in value:
+                        issues.append(ContentIssue(
+                            file_path="",
+                            issue_type="content_warning",
+                            message=f"Field '{current_path}' contains ampersand which might cause YAML issues",
+                            field=current_path,
+                            auto_fixable=True
+                        ))
+
+                if isinstance(value, (dict, list)):
+                    issues.extend(self.check_content_issues(value, current_path))
+
+        elif isinstance(data, list):
+            for i, item in enumerate(data):
+                if isinstance(item, (dict, list)):
+                    issues.extend(self.check_content_issues(item, field_path))
 
         return issues
 
