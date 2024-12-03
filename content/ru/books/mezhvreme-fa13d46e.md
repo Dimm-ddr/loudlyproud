@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Межвремье
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610273320i/55887057.jpg
-  isbn: '517132834'
+  isbn: '517132834X'
   goodreads_link: https://www.goodreads.com/book/show/55887057
   authors:
     - Медина Мирай

@@ -9,7 +9,7 @@ params:
   book_title: Skin
   book_description: Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1297222257i/219588.jpg
-  isbn: '38530899'
+  isbn: '0440211158'
   languages:
     - Английский
   goodreads_link: https://www.goodreads.com/book/show/219588.Skin
