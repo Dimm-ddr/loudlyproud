@@ -27,66 +27,154 @@ collections:
       - label: "Params"
         name: "params"
         widget: "object"
+        required: true
         fields:
-          - { label: "Book Title", name: "book_title", widget: "string" }
+          - {
+              label: "Book Title",
+              name: "book_title",
+              widget: "string",
+              required: true
+            }
+          - {
+              label: "Authors",
+              name: "authors",
+              widget: "list",
+              field: { label: "Author", name: "author", widget: "string" },
+              required: true,
+              allow_add: true,
+              collapsed: false,
+            }
           - {
               label: "Book Description",
               name: "book_description",
               widget: "text",
+              required: false,
             }
           - {
               label: "Short Book Description",
               name: "short_book_description",
               widget: "text",
+              required: false,
             }
-          - { label: "Cover", name: "cover", widget: "string" }
-          - { label: "Authors", name: "authors", widget: "list" }
-          - { label: "Tags", name: "tags", widget: "list", required: false }
+          - {
+              label: "Cover",
+              name: "cover",
+              widget: "string",
+              pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+            }
+          - {
+              label: "Cover Alt Text",
+              name: "cover_alt",
+              widget: "string",
+              hint: "Alternative text description for the cover image(s)",
+            }
+          - {
+              label: "ISBN",
+              name: "isbn",
+              widget: "string",
+              pattern: ['^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$', "Must be a valid ISBN-10 or ISBN-13"],
+              hint: "ISBN-10 or ISBN-13, can include hyphens",
+            }
+          - {
+              label: "Additional ISBNs",
+              name: "additional_isbns",
+              widget: "list",
+              field: {
+                label: "ISBN",
+                name: "isbn",
+                widget: "string",
+                pattern: ['^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$', "Must be a valid ISBN-10 or ISBN-13"],
+              },
+              required: false,
+              allow_add: true,
+              collapsed: false,
+            }
+          - {
+              label: "Languages",
+              name: "languages",
+              widget: "list",
+              field: { label: "Language", name: "language", widget: "string" },
+              allow_add: true,
+              collapsed: false,
+            }
+          - {
+              label: "Page Count",
+              name: "page_count",
+              widget: "string",
+              hint: "Can use approximate format like '~300'",
+            }
           - {
               label: "Publication Year",
               name: "publication_year",
               widget: "string",
+              hint: "Can use approximate dates",
             }
-          - { label: "Publishers", name: "publishers", widget: "list" }
-          - { label: "Languages", name: "languages", widget: "list" }
+          - {
+              label: "Goodreads Link",
+              name: "goodreads_link",
+              widget: "string",
+              pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+            }
+          - {
+              label: "Buy Link",
+              name: "buy_link",
+              widget: "string",
+              pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+            }
+          - { label: "Series", name: "series", widget: "string", required: false }
+          - {
+              label: "Translators",
+              name: "translators",
+              widget: "list",
+              field: { label: "Translator", name: "translator", widget: "string" },
+              required: false,
+              allow_add: true,
+              collapsed: false,
+            }
+          - {
+              label: "Publishers",
+              name: "publishers",
+              widget: "list",
+              field: { label: "Publisher", name: "publisher", widget: "string" },
+              allow_add: true,
+              collapsed: false,
+            }
           - {
               label: "Russian Translation Status",
               name: "russian_translation_status",
               widget: "select",
-              options:
-                [
-                  "unknown",
-                  "might_exist",
-                  "unlikely_to_exist",
-                  "does_not_exist",
-                  "exists",
-                ],
+              options: [
+                "unknown",
+                "might_exist",
+                "unlikely_to_exist",
+                "does_not_exist",
+                "exists",
+              ],
             }
           - {
               label: "Russian Audioversion",
               name: "russian_audioversion",
               widget: "boolean",
             }
-          - { label: "Cover Alt Text", name: "cover_alt", widget: "string" }
-          - { label: "ISBN", name: "isbn", widget: "string" }
           - {
-              label: "Additional ISBNs",
-              name: "additional_isbns",
+              label: "Tags",
+              name: "tags",
               widget: "list",
+              field: { label: "Tag", name: "tag", widget: "string" },
+              required: false,
+              allow_add: true,
+              collapsed: false,
             }
-          - { label: "Page Count", name: "page_count", widget: "string" }
-          - {
-              label: "Goodreads Link",
-              name: "goodreads_link",
-              widget: "string",
-            }
-          - { label: "Buy Link", name: "buy_link", widget: "string" }
-          - { label: "Series", name: "series", widget: "string" }
-          - { label: "Translators", name: "translators", widget: "list" }
           - label: "Where to Get"
             name: "where_to_get"
             widget: "list"
+            required: false
             fields:
               - { label: "Store", name: "store", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+                }
               - { label: "Date", name: "date", widget: "date" }
