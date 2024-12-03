@@ -21,6 +21,9 @@ const BookPreview = createClass({
           getList(['authors']).map((author, idx) =>
             h('span', {key: idx, className: "author"}, author)
           )
+        ),
+        getValue(['series']) && h('div', {className: "book-series"},
+          getValue(['series'])
         )
       ),
       h('div', {className: "book-content"},
