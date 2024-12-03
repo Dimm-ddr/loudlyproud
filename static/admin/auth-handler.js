@@ -8,6 +8,28 @@ window.addEventListener("load", function () {
     return editor !== null || dirtyFields.length > 0;
   };
 
+  // Helper to clean up auth-related storage
+  const cleanAuthStorage = () => {
+    // Clear Netlify Identity specific items
+    localStorage.removeItem("netlify-cms-user");
+    localStorage.removeItem("netlify-cms-api");
+    localStorage.removeItem("netlify-cms-collection");
+    localStorage.removeItem("netlify-cms-slug");
+    localStorage.removeItem("netlifySiteURL");
+    localStorage.removeItem("nf_jwt");
+
+    // Clear any Git Gateway tokens
+    localStorage.removeItem("git-gateway-repo");
+    localStorage.removeItem("git-gateway-branch");
+    localStorage.removeItem("git-gateway-token");
+
+    // Remove any session cookies
+    document.cookie.split(";").forEach((cookie) => {
+      const name = cookie.split("=")[0].trim();
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    });
+  };
+
   // Helper to handle session expiry
   const handleSessionExpiry = (reason) => {
     if (hasUnsavedChanges()) {
@@ -30,13 +52,12 @@ window.addEventListener("load", function () {
         `;
         warning.innerHTML = `
           <div style="margin-bottom: 8px;">${message}</div>
-          <button onclick="window.location.reload()" style="background: white; color: #ff9800; border: none; padding: 4px 8px; border-radius: 2px; cursor: pointer;">
+          <button onclick="handleLogout()" style="background: white; color: #ff9800; border: none; padding: 4px 8px; border-radius: 2px; cursor: pointer;">
             Refresh Now
           </button>
         `;
         document.body.appendChild(warning);
 
-        // Remove warning after timeout
         setTimeout(() => {
           if (document.getElementById("cms-session-warning")) {
             document.getElementById("cms-session-warning").remove();
@@ -44,30 +65,43 @@ window.addEventListener("load", function () {
         }, warningTime);
       }
     } else {
-      // Clear localStorage and reload if no unsaved changes
-      localStorage.clear();
-      window.location.reload();
+      handleLogout();
     }
+  };
+
+  // Handle logout and cleanup
+  const handleLogout = () => {
+    cleanAuthStorage();
+    window.location.reload();
   };
 
   // Check for expired token on load
   const checkTokenExpiration = () => {
-    const token = localStorage.getItem('netlify-cms-user');
+    const token = localStorage.getItem("netlify-cms-user");
     if (token) {
       try {
-        const { exp } = JSON.parse(atob(token.split('.')[1]));
+        const { exp } = JSON.parse(atob(token.split(".")[1]));
         if (exp * 1000 < Date.now()) {
-          handleSessionExpiry('Token expired');
+          handleSessionExpiry("Token expired");
         }
       } catch (e) {
-        console.error('Error checking token expiration:', e);
-        localStorage.clear();
-        window.location.reload();
+        console.error("Error checking token expiration:", e);
+        handleLogout();
       }
     }
   };
 
+  // Add error event listener for Git Gateway errors
+  window.addEventListener("unhandledrejection", function (event) {
+    if (event.reason && event.reason.toString().includes("Git Gateway Error")) {
+      handleLogout();
+    }
+  });
+
   // Check token on load and periodically
   checkTokenExpiration();
   setInterval(checkTokenExpiration, 60000); // Check every minute
+
+  // Make logout handler available globally
+  window.handleLogout = handleLogout;
 });
