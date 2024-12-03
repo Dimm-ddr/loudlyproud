@@ -115,12 +115,6 @@ collections:
               widget: "string",
               pattern: ['^https?:\/\/.*', "Must be a valid URL"],
             }
-          - {
-              label: "Buy Link",
-              name: "buy_link",
-              widget: "string",
-              pattern: ['^https?:\/\/.*', "Must be a valid URL"],
-            }
           - { label: "Series", name: "series", widget: "string", required: false }
           - {
               label: "Translators",

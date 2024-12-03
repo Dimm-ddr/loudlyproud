@@ -54,7 +54,6 @@ SCHEMA = {
             "page_count": {"type": "string"},  # String to allow "~300" format
             "publication_year": {"type": "string"},  # String to allow approximate dates
             "goodreads_link": {"type": "string", "format": "url"},
-            "buy_link": {"type": "string", "format": "url"},
             "series": {"type": "string"},
             "where_to_get": {
                 "type": "array",
