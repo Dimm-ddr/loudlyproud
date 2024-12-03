@@ -26,6 +26,18 @@
   </head>
   <body>
     <button type="button" onclick="handleLogout()" class="logout-button">Logout</button>
+    <script>
+      // Initialize Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
     <script src="auth-handler.js"></script>
   </body>

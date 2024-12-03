@@ -11,23 +11,35 @@ window.addEventListener("load", function () {
   // Helper to clean up auth-related storage
   const cleanAuthStorage = () => {
     // Clear Netlify Identity specific items
-    localStorage.removeItem("netlify-cms-user");
-    localStorage.removeItem("netlify-cms-api");
-    localStorage.removeItem("netlify-cms-collection");
-    localStorage.removeItem("netlify-cms-slug");
-    localStorage.removeItem("netlifySiteURL");
-    localStorage.removeItem("nf_jwt");
-
-    // Clear any Git Gateway tokens
-    localStorage.removeItem("git-gateway-repo");
-    localStorage.removeItem("git-gateway-branch");
-    localStorage.removeItem("git-gateway-token");
+    localStorage.clear(); // Clear everything to be thorough
+    sessionStorage.clear(); // Clear session storage as well
 
     // Remove any session cookies
     document.cookie.split(";").forEach((cookie) => {
       const name = cookie.split("=")[0].trim();
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/.netlify/;`;
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/admin;`;
     });
+  };
+
+  // Handle logout and cleanup
+  const handleLogout = async () => {
+    try {
+      // Try to logout from Netlify Identity first
+      const netlifyIdentity = window.netlifyIdentity;
+      if (netlifyIdentity && netlifyIdentity.currentUser()) {
+        await netlifyIdentity.logout();
+      }
+    } catch (e) {
+      console.error("Error during Netlify Identity logout:", e);
+    }
+
+    cleanAuthStorage();
+
+    // Force reload from server, not cache
+    window.location.href =
+      window.location.href.split("#")[0] + "?t=" + Date.now();
   };
 
   // Helper to handle session expiry
@@ -69,12 +81,6 @@ window.addEventListener("load", function () {
     }
   };
 
-  // Handle logout and cleanup
-  const handleLogout = () => {
-    cleanAuthStorage();
-    window.location.reload();
-  };
-
   // Check for expired token on load
   const checkTokenExpiration = () => {
     const token = localStorage.getItem("netlify-cms-user");
@@ -91,12 +97,40 @@ window.addEventListener("load", function () {
     }
   };
 
-  // Add error event listener for Git Gateway errors
+  // Add error event listeners for various authentication issues
   window.addEventListener("unhandledrejection", function (event) {
-    if (event.reason && event.reason.toString().includes("Git Gateway Error")) {
+    if (
+      event.reason &&
+      (event.reason.toString().includes("Git Gateway Error") ||
+        event.reason.toString().includes("Failed to fetch") ||
+        event.reason.toString().includes("API_ERROR"))
+    ) {
+      event.preventDefault(); // Prevent the default error handling
       handleLogout();
     }
   });
+
+  // Listen for specific HTTP errors
+  const originalFetch = window.fetch;
+  window.fetch = async function (...args) {
+    try {
+      const response = await originalFetch(...args);
+      if (
+        response.status === 401 ||
+        response.status === 403 ||
+        response.status === 400
+      ) {
+        if (args[0].includes("git/settings") || args[0].includes("git/token")) {
+          handleLogout();
+          return new Response(null, { status: 401 });
+        }
+      }
+      return response;
+    } catch (error) {
+      handleLogout();
+      throw error;
+    }
+  };
 
   // Check token on load and periodically
   checkTokenExpiration();
