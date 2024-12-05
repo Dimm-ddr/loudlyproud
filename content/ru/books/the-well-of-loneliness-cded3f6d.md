@@ -24,7 +24,7 @@ params:
     - Aristocracy (Social class)
     - Authors
     - British and irish fiction (fictional works by one author)
-    - England fiction
+    - England
     - Fiction lesbian
     - Fiction lgbtq+ lesbian
     - Heroes

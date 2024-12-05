@@ -34,8 +34,6 @@ params:
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - London
-    - London (England)
-    - London (england) fiction
     - Pickpockets
     - Social conditions
     - Stonewall book awards

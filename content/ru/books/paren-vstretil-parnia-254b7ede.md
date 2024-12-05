@@ -25,18 +25,17 @@ params:
     - Children's fiction
     - Cultural Literacy and Humanities
     - Fiction general
-    - Friendship fiction
     - Gay men fiction
     - LGBTQ+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
-    - Male friendship
     - Origami
     - Origami in literature
     - Youth fiction
     - boys
     - contemporary
     - fiction
+    - friendship
     - gay
     - gay teenagers
     - juvenile fiction

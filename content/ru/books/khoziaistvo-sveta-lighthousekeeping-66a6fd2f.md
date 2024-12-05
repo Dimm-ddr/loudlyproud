@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: khoziaistvo-sveta-lighthousekeeping-66a6fd2f
 title: Хозяйство света (Lighthousekeeping)
@@ -38,7 +37,7 @@ params:
     - LGBTQ+
     - Lighthouse keepers
     - Older men
-    - Scotland fiction
+    - Scotland
     - Storytelling
     - Young women
     - Young women fiction

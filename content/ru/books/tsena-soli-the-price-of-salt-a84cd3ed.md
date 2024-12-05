@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: tsena-soli-the-price-of-salt-a84cd3ed
 title: Цена соли (The Price Of Salt)
@@ -32,12 +31,9 @@ params:
   tags:
     - 1950s
     - 20th century
-    - Automobile travel
     - Chicago
-    - Child custody
     - Custody of children
     - Divorce
-    - Family relationships
     - Fiction action & adventure
     - Fiction lesbian
     - Fiction lgbtq+ gay
@@ -60,10 +56,12 @@ params:
     - Social conditions
     - United States
     - classics
+    - family
     - fiction
     - historical fiction
     - lesbian
     - novels
     - queer
     - romance
+    - travel
 ---

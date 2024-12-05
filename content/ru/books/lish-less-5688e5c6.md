@@ -30,8 +30,6 @@ params:
   tags:
     - Arthur Less
     - Authors
-    - Authors fiction
-    - Berlin
     - Carlos Pelu
     - Fiction humorous
     - Fiction humorous general
@@ -39,19 +37,21 @@ params:
     - Freddy Pelu
     - Gay men fiction
     - Gay novelists
+    - Germany
     - Homoseksualizm
     - Humorous
     - Humour
     - India
+    - Italy
     - Japan
     - Kryzys wieku średniego
     - LGBTQ+
     - Literary
     - Marian Brownburn
-    - Mexico City
+    - Mexico
     - Miłość
     - Morocco
-    - New York City
+    - New York
     - New York Times reviewed
     - Paris
     - Pisarze
@@ -59,9 +59,9 @@ params:
     - Present
     - Robert Brownburn
     - San Francisco
-    - Turin Italy
     - Voyages and travels
     - audiobook
+    - authors
     - contemporary
     - fiction
     - gay

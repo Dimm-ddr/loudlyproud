@@ -23,7 +23,7 @@ params:
     - Fiction coming of age
     - Fiction lgbtq+ general
     - LGBTQ+
-    - Poland fiction
+    - Poland
     - fiction
     - gay
     - historical

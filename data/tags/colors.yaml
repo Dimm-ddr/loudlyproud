@@ -15,6 +15,11 @@ tag_colors:
   san-francisco: deep-blue
   scotland: deep-blue
   united-states: deep-blue
+  mexico: deep-blue
+  morocco: deep-blue
+  poland: deep-blue
+  united-kingdom: deep-blue
+  washington-dc: deep-blue
 
   # Age Categories & Formats (burgundy)
   adult-fiction: burgundy
@@ -61,6 +66,9 @@ tag_colors:
   gay-teenagers: rust
   gays-writings: rust
   gay-parent-families: rust
+  coming-out: rust
+  dating: rust
+  relationships: rust
 
   # Life Stages & Relationships (slate)
   coming-of-age: slate
@@ -75,6 +83,9 @@ tag_colors:
   prep-school: slate
   college-students: slate
   campus: slate
+  teenagers: slate
+  students: slate
+  authors: slate
 
   # Story Elements (marine)
   adventure: marine
@@ -91,6 +102,10 @@ tag_colors:
   fae: marine
   fairies: marine
   ghosts: marine
+  greek-mythology: marine
+  mythology: marine
+  shapeshifters: marine
+  time-traveling: marine
 
   # Types & Classifications (aubergine)
   classics: aubergine
@@ -141,6 +156,7 @@ tag_colors:
   19th-century: deep-blue
   20th-century: deep-blue
   21st-century: deep-blue
+  victorian-era: deep-blue
 
   # Additional Geographic/Cultural (deep-blue)
   african-american: deep-blue
@@ -190,3 +206,4 @@ tag_colors:
 
   # Additional Classifications (aubergine)
   humor: aubergine
+  erotic-literature: burgundy

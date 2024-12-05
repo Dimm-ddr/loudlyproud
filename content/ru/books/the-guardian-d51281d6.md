@@ -19,15 +19,15 @@ params:
   russian_translation_status: unknown
   short_book_description: Jude Shea's life is turned upside down when he rescues a dog he names Joe. Even though Jude has enough trouble taking care of himself-he doesn't even have a job-he can't resist the animal that...
   tags:
-    - Erotic Literature
     - Fiction lgbtq+ gay
     - LGBTQ+
     - M M Fantasy
     - Science Fiction & Fantasy
-    - Shapeshifters
+    - erotic literature
     - fantasy
     - fiction
     - male-male romance
     - paranormal
     - romance
+    - shapeshifters
 ---

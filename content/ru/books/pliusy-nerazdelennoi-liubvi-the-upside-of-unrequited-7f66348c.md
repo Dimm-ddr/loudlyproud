@@ -6,13 +6,11 @@ type: books
 params:
   book_title: Плюсы неразделенной любви (The Upside Of Unrequited)
   tags:
-    - Anxiety disorders
     - Children of gay parents
     - Children of sperm donors
     - Children's fiction
-    - Friendship fiction
     - Homosexuality fiction
-    - Interpersonal relations
+    - LGBTQ+
     - Lesbian teenagers
     - Overweight teenagers
     - Romance fiction
@@ -21,9 +19,11 @@ params:
     - audiobook
     - contemporary
     - fiction
+    - friendship
     - gay teenagers
-    - LGBTQ+
+    - mental illness
     - queer
+    - relationships
     - romance
     - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg

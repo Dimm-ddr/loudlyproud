@@ -37,15 +37,12 @@ params:
     - Fiction historical
     - Fiction historical general
     - Fiction war & military
-    - Friendship fiction
     - Gay fiction
     - Gay love
     - Greece
     - Greeks
     - Guerre de Troie
     - LGBTQ+
-    - Male friendship
-    - Mythology
     - New York Times reviewed
     - Patroclus
     - Phthia
@@ -59,9 +56,11 @@ params:
     - Turkey
     - fantasy
     - fiction
+    - friendship
     - historical
     - historical fiction
     - history
+    - mythology
     - new york times bestseller
     - romance
 ---

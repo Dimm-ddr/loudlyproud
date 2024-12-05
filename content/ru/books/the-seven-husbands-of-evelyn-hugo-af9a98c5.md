@@ -4,7 +4,6 @@
 
 
 
-
 draft: false
 slug: the-seven-husbands-of-evelyn-hugo-af9a98c5
 title: The Seven Husbands Of Evelyn Hugo
@@ -38,7 +37,6 @@ params:
     - Hollywood (los angeles calif.) fiction
     - LGBTQ+
     - Motion picture actors and actresses
-    - Motion picture industry
     - Women journalists
     - audiobook
     - biography
@@ -48,5 +46,6 @@ params:
     - historical fiction
     - male-female romance
     - new york times bestseller
+    - performing arts
     - queer
 ---

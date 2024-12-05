@@ -31,7 +31,6 @@ params:
     - Fiction african american & black general
     - Fiction african american general
     - Graduate students
-    - Interpersonal relations
     - LGBTQ+
     - New York Times reviewed
     - Race
@@ -42,4 +41,5 @@ params:
     - gay
     - literary fiction
     - queer
+    - relationships
 ---

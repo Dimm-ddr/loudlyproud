@@ -7,21 +7,21 @@ params:
   book_title: Что, если это мы (What If It's Us)
   tags:
     - Children's fiction
-    - Dating (Social customs)
     - Dating (social customs) fiction
     - Fate and fatalism
     - Homosexuality fiction
-    - New York (N.Y.)
+    - LGBTQ+
+    - New York
     - New york (n.y.) fiction
     - audiobook
     - contemporary
+    - dating
     - fiction
     - gay
-    - LGBTQ+
-    - young adult (YA)
     - new york times bestseller
     - queer
     - romance
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   editions count: '61'
   isbn: '9785045041126'

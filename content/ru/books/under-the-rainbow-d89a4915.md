@@ -24,7 +24,6 @@ params:
     - Fiction lesbian
     - Gays and lesbians
     - Homophobia
-    - Interpersonal relations
     - Kansas fiction
     - LGBTQ+
     - Lesbian teenagers
@@ -39,4 +38,5 @@ params:
     - lesbian
     - literary fiction
     - queer
+    - relationships
 ---

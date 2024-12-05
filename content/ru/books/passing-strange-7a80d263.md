@@ -21,7 +21,7 @@ params:
   tags:
     - Fiction romance historical general
     - LGBTQ+
-    - San francisco (calif.) fiction
+    - San Francisco
     - fantasy
     - historical
     - historical fiction

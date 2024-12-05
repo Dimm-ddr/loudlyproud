@@ -4,7 +4,6 @@
 
 
 
-
 draft: false
 slug: eshche-odna-stantsiia-one-last-stop-9135fbf8
 title: Еще одна станция (One Last Stop)
@@ -29,11 +28,11 @@ params:
   russian_translation_status: exists
   short_book_description: Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину...
   tags:
-    - Brooklyn (New York N.Y.)
     - Fiction lesbian
     - Fiction romance contemporary
     - LGBTQ+
     - Lesbians fiction
+    - New York
     - New york (n.y.) fiction
     - adult fiction
     - audiobook

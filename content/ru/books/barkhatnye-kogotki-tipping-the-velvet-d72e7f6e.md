@@ -28,7 +28,6 @@ params:
     - 19th century
     - Cross-dressers
     - England
-    - England fiction
     - English drama
     - English literature
     - Female impersonators

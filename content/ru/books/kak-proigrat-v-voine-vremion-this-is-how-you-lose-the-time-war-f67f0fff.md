@@ -9,13 +9,12 @@ params:
     - Atlantis
     - English literature
     - Fiction science fiction general
+    - LGBTQ+
     - London
     - The whole of time and space
-    - Time Travel
     - epistolary
     - fantasy
     - fiction
-    - LGBTQ+
     - new york times bestseller
     - queer
     - romance
