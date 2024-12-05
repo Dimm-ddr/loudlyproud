@@ -8,27 +8,31 @@ from ruamel.yaml import YAML
 import json
 import sys
 
+# Path constants
+TAGS_CONFIG_DIR = Path("data/tags")
+GENERATED_DATA_DIR = Path(".data/tags")
+CONTENT_DIR = Path("content")
+
+# File names
+MAPPING_FILE = "mapping.json"
+COLORS_FILE = "colors.yaml"
+STATS_FILE = "cleanup-stats.json"
 
 class TagMapping(TypedDict):
     """Type for tag mapping entries."""
-
     normalized: str | list[str] | None
-
 
 class StatsDict(TypedDict):
     """Type for statistics output."""
-
     total_files: int
     files_with_changes: int
     unknown_tags: list[str]
     normalized_tags: dict[str, int]
     tag_mapping_issues: NotRequired[list[str]]
 
-
 @dataclass
 class TagStats:
     """Statistics for tag processing."""
-
     total_files: int = 0
     files_with_changes: int = 0
     unknown_tags: set[str] = field(default_factory=set)
@@ -43,16 +47,25 @@ class TagStats:
             "normalized_tags": dict(sorted(self.normalized_tags.items())),
         }
 
-
 def load_tags_map(project_root: Path) -> dict[str, TagMapping]:
     """Load tags mapping from JSON file."""
-    tags_file = project_root / ".data" / "tags_map.json"
+    tags_file = project_root.joinpath(TAGS_CONFIG_DIR, MAPPING_FILE)
     try:
         return json.loads(tags_file.read_text(encoding="utf-8"))
     except Exception as e:
         print(f"Error loading tags map: {e}")
         sys.exit(1)
 
+def load_color_mapping(project_root: Path) -> set[str]:
+    """Load valid tags from color mapping file."""
+    color_file = project_root.joinpath(TAGS_CONFIG_DIR, COLORS_FILE)
+    try:
+        yaml = YAML()
+        data = yaml.load(color_file)
+        return set(data.get('tag_colors', {}).keys())
+    except Exception as e:
+        print(f"Error loading color mapping: {e}")
+        sys.exit(1)
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
@@ -66,7 +79,6 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
                 return None
         case _:
             return None
-
 
 def normalize_tag(tag: str, tags_map: dict[str, TagMapping]) -> list[str]:
     """Normalize a single tag using the mapping."""
@@ -82,7 +94,6 @@ def normalize_tag(tag: str, tags_map: dict[str, TagMapping]) -> list[str]:
         case _:  # Unexpected mapping value
             return [tag]
 
-
 def normalize_tags(tags: list[str], tags_map: dict[str, TagMapping]) -> list[str]:
     """Normalize a list of tags, handling all mapping cases."""
     if not tags:
@@ -90,7 +101,6 @@ def normalize_tags(tags: list[str], tags_map: dict[str, TagMapping]) -> list[str
 
     normalized = [new_tag for tag in tags for new_tag in normalize_tag(tag, tags_map)]
     return sorted(set(normalized))
-
 
 def process_book_file(
     file_path: Path, tags_map: dict[str, TagMapping], stats: TagStats
@@ -136,7 +146,6 @@ def process_book_file(
         print(f"Error processing {file_path}: {e}")
         return False
 
-
 def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStats:
     """Process all book files in the content directory."""
     stats = TagStats()
@@ -157,13 +166,45 @@ def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStat
 
     return stats
 
+def validate_tag_mapping(tags_map: dict[str, TagMapping], valid_colors: set[str]) -> list[str]:
+    """Validate that all normalized tags have color mappings."""
+    issues = []
+
+    for source, mapping in tags_map.items():
+        if mapping is None:  # Skip null mappings
+            continue
+
+        # Get normalized tags
+        if isinstance(mapping, str):
+            tags = [mapping]
+        elif isinstance(mapping, list):
+            tags = mapping
+        else:
+            continue
+
+        # Check each normalized tag
+        for tag in tags:
+            if tag.replace(' ', '-').lower() not in valid_colors:
+                issues.append(f"Tag '{tag}' has no color mapping")
+
+    return issues
 
 def main() -> None:
     project_root = Path.cwd()
-    content_dir = project_root / "content"
-    stats_file = project_root / ".data" / "tag-cleanup-stats.json"
+    content_dir = project_root.joinpath(CONTENT_DIR)
+    stats_file = project_root.joinpath(GENERATED_DATA_DIR, STATS_FILE)
 
     tags_map = load_tags_map(project_root)
+    valid_colors = load_color_mapping(project_root)
+
+    # Validate mappings
+    if issues := validate_tag_mapping(tags_map, valid_colors):
+        print("\nTag mapping issues found:")
+        for issue in issues:
+            print(f"  - {issue}")
+        if input("\nContinue anyway? [y/N] ").lower() != 'y':
+            sys.exit(1)
+
     print("\nProcessing book files...")
     stats = process_books(content_dir, tags_map)
 
@@ -182,12 +223,11 @@ def main() -> None:
             print(f"  {tag}: {count}")
 
     # Save statistics
-    stats_file.parent.mkdir(exist_ok=True)
+    stats_file.parent.mkdir(parents=True, exist_ok=True)
     with stats_file.open("w", encoding="utf-8") as f:
         json.dump(stats.to_dict(), f, indent=2, ensure_ascii=False)
 
     print(f"\nTag statistics saved to {stats_file}")
-
 
 if __name__ == "__main__":
     main()

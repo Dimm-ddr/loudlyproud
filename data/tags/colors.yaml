@@ -136,3 +136,57 @@ tag_colors:
   # Awards & Recognition
   new-york-times-bestseller: aubergine
   stonewall-book-awards: aubergine
+
+  # Time Periods (deep-blue)
+  19th-century: deep-blue
+  20th-century: deep-blue
+  21st-century: deep-blue
+
+  # Additional Geographic/Cultural (deep-blue)
+  african-american: deep-blue
+  hispanic-americans: deep-blue
+  japanese-americans: deep-blue
+  syrian-americans: deep-blue
+  brooklyn: deep-blue
+  chicago: deep-blue
+  england: deep-blue
+  france: deep-blue
+  greece: deep-blue
+  india: deep-blue
+  italy: deep-blue
+  london: deep-blue
+  new-york: deep-blue
+  paris: deep-blue
+  venice: deep-blue
+
+  # Family Relationships (slate)
+  father-son-relationship: slate
+  father-daughter-relationship: slate
+  parent-child-relationship: slate
+  mother-daughter-relationship: slate
+  mother-son-relationship: slate
+  single-parent-families: slate
+  dysfunctional-families: slate
+
+  # Additional Identity & Social (rust)
+  gender-identity: rust
+  transgender-children: rust
+  sexual-minorities: rust
+  african-american-authors: rust
+
+  # Additional Themes (marine)
+  abuse: marine
+  bullying: marine
+  death: marine
+  grief: marine
+  survival: marine
+  violence: marine
+
+  # Additional Genre Variations (plum)
+  epistolary: plum
+  gothic-fiction: plum
+  psychological-fiction: plum
+  war-fiction: plum
+
+  # Additional Classifications (aubergine)
+  humor: aubergine

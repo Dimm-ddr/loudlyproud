@@ -36,7 +36,7 @@ jobs:
 
       - name: Check for new tags
         run: |
-          python .github/scripts/check_new_tags.py
+          python tools/tags/monitor.py
         id: tag-check
 
       - name: Comment on PR
