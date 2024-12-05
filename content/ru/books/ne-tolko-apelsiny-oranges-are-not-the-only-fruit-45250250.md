@@ -42,7 +42,6 @@ params:
     - LGBTQ+
     - Lesbians -- Fiction
     - Lesbians fiction
-    - Mothers and daughters
     - Mothers and daughters fiction
     - Religion
     - Teenage girls
@@ -52,5 +51,6 @@ params:
     - family
     - fiction
     - lesbian
+    - mother-daughter relationship
     - queer
 ---

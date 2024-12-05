@@ -35,7 +35,6 @@ params:
     - Brooklyn
     - Brooklyn College
     - Chinatown
-    - Dysfunctional families
     - Dysfunctional families -- Fiction
     - FICTION / Coming of Age
     - FICTION / Literary
@@ -74,6 +73,7 @@ params:
     - coming of age
     - contemporary
     - domestic fiction
+    - dysfunctional families
     - family
     - fiction
     - friendship

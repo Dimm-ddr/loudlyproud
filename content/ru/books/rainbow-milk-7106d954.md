@@ -27,7 +27,6 @@ params:
     - Fiction cultural heritage
     - Fiction lgbtq+ general
     - Garçons adolescents
-    - Gender identity
     - Homosexuels masculins
     - Identité sexuelle
     - Jamaicans
@@ -38,12 +37,12 @@ params:
     - New York Times reviewed
     - Romans nouvelles
     - Sex workers
-    - Sexual minorities
     - Témoins de Jéhovah
     - boys
     - contemporary
     - fiction
     - gay
+    - gender identity
     - historical
     - historical fiction
     - literary fiction

@@ -20,8 +20,8 @@ params:
   short_book_description: После принятия закона о добровольной эвтаназии реки и озера Москвы были превращены в подводные кладбища. Мара — молодой художник в творческом кризисе — готовится уйти в воду, но после знакомства с...
   tags:
     - 21st century
-    - Loneliness
     - Russia
     - Russian literature
     - fiction
+    - isolation
 ---

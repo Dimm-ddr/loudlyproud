@@ -43,5 +43,5 @@ params:
     - queer
     - romance
     - war
-    - war stories
+    - war fiction
 ---

@@ -2,7 +2,6 @@
 
 
 
-
 draft: false
 slug: odinokii-muzhchina-a-single-man-316da7cf
 title: Одинокий мужчина (A Single Man)
@@ -35,7 +34,6 @@ params:
     - Gay college teachers
     - Gay men fiction
     - Gay teachers
-    - Grief
     - Homosexuella män
     - LGBTQ+
     - LGBTQ+ novels before Stonewall
@@ -46,6 +44,7 @@ params:
     - classics
     - fiction
     - gay
+    - grief
     - literary fiction
     - novels
     - queer

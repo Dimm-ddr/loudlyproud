@@ -24,7 +24,6 @@ params:
     - LGBTQ+
     - Lesbian mothers
     - Mothers
-    - Mothers and sons
     - Mères
     - Mères et fils
     - Mères lesbiennes
@@ -36,5 +35,6 @@ params:
     - fiction
     - lesbian
     - literary fiction
+    - mother-son relationship
     - queer
 ---

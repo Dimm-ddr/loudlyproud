@@ -6,11 +6,11 @@ type: books
 params:
   book_title: Chain-gang All-stars
   tags:
-    - Dystopia
+    - LGBTQ+
     - audiobook
+    - dystopia
     - fantasy
     - fiction
-    - LGBTQ+
     - queer
     - science fiction
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682956296i/61190770.jpg

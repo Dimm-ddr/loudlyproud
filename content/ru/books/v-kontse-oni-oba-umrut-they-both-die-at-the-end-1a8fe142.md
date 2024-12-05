@@ -28,7 +28,6 @@ params:
     - Adventure and adventurers
     - Adventure and adventurers fiction
     - Children's fiction
-    - Death
     - Death fiction
     - Friendship fiction
     - Hispanic Americans
@@ -41,6 +40,7 @@ params:
     - Romance fiction
     - audiobook
     - contemporary
+    - death
     - fiction
     - friendship
     - gay

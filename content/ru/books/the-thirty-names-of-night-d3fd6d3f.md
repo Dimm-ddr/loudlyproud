@@ -22,7 +22,6 @@ params:
     - Américains d'origine syrienne
     - Artistes
     - Artists
-    - Death
     - FICTION / Literary
     - Fiction ghost
     - LGBTQ gender identity
@@ -33,9 +32,9 @@ params:
     - Romans nouvelles
     - Stonewall book awards
     - Syrian Americans
-    - Transgender people
     - Transgenres
     - contemporary
+    - death
     - fiction
     - historical fiction
     - literary fiction

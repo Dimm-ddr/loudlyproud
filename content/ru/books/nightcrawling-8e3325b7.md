@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: Kiara and her brother, Marcus, are scraping by in an East Oakland apartment complex optimistically called the Regal-Hi. Both have dropped out of high school, their family fractured by death and...
   tags:
-    - African Americans
+    - African American
     - American literature
     - Bildungsromans
     - Brothers and sisters

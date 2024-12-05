@@ -23,8 +23,8 @@ params:
     - Fiction general
     - LGBTQ+
     - Thriller
-    - Weird Fiction
     - fantasy
     - fiction
     - horror
+    - weird fiction
 ---

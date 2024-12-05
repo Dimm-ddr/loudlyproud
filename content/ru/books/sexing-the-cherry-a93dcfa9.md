@@ -35,12 +35,12 @@ params:
     - Great Britain in fiction
     - LGBTQ+
     - London (england) fiction
-    - Mothers and sons
     - fantasy
     - fiction
     - historical fiction
     - history
     - magical realism
+    - mother-son relationship
     - novels
     - queer
 ---

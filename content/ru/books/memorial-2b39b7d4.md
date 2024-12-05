@@ -19,15 +19,13 @@ params:
   russian_translation_status: unknown
   short_book_description: A funny, sexy, profound dramedy about two young people at a crossroads in their relationship and the limits of love.Benson and Mike are two young guys who live together in Houston. Mike is a...
   tags:
-    - African Americans
+    - African American
     - American literature
     - Américains d'origine japonaise
     - Belles-mères
     - FICTION / Coming of Age
     - FICTION / LGBT / General
     - FICTION / Literary
-    - Father-son relationship
-    - Fathers and sons
     - Fiction coming of age
     - Fiction lgbtq+ general
     - Gay couples
@@ -39,10 +37,10 @@ params:
     - New York Times reviewed
     - Pères et fils
     - Romans nouvelles
-    - Sexual minorities
     - Stonewall book awards
     - audiobook
     - contemporary
+    - father-son relationship
     - fiction
     - gay
     - literary fiction

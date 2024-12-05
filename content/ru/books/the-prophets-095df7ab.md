@@ -20,7 +20,6 @@ params:
   tags:
     - African American
     - African American gay men
-    - Black Gay men
     - FICTION / African American / General
     - FICTION / Historical / General
     - FICTION / Literary
@@ -33,6 +32,7 @@ params:
     - Slaves
     - Slaves fiction
     - fiction
+    - gay
     - historical
     - historical fiction
     - literary fiction

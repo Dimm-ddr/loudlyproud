@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: levaia-ruka-tmy-ed9e5079
 title: Левая Рука Тьмы
@@ -39,5 +38,5 @@ params:
     - queer
     - science fiction
     - social commentary
-    - speculative fiction
+    - weird fiction
 ---

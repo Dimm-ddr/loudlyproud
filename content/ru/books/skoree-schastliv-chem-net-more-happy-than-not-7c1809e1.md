@@ -24,7 +24,6 @@ params:
   short_book_description: Вскоре после самоубийства отца шестнадцатилетний Аарон Сото безуспешно пытается вновь обрести счастье. Горе и шрам в виде смайлика на запястье не дают ему забыть о случившемся. Несмотря на поддержку девушки и матери, боль не отпускает...
   tags:
     - Bronx (New York N.Y.)
-    - Bullying
     - Children of suicide victims
     - Children's fiction
     - Coming out (Sexual orientation)
@@ -41,10 +40,10 @@ params:
     - New York Times reviewed
     - New york (n.y.) fiction
     - Puerto Rican youth
-    - Single-parent families
     - Single-parent families fiction
     - Urban poor
     - Youths' writings
+    - bullying
     - collectionID:KellerChallenge
     - collectionID:bannedbooks
     - contemporary
@@ -55,5 +54,6 @@ params:
     - queer
     - romance
     - science fiction
+    - single-parent families
     - young adult (YA)
 ---

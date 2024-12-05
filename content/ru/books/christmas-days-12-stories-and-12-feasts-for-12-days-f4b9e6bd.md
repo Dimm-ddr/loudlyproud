@@ -22,18 +22,16 @@ params:
   russian_translation_status: unknown
   short_book_description: From the New York Times bestselling author of "Why Be Happy When You Could Be Normal?" comes an enchanting collection of stories for the holiday season.For years Jeanette Winterson has loved...
   tags:
-    - Christmas stories
     - Collected works (single author multi-form)
     - Fasts and feasts
-    - Fiction christian short stories
     - Food
-    - Holiday
     - Holidays)
     - New York Times reviewed
-    - Short Stories (single author)
     - audiobook
+    - christian
     - christmas
     - fantasy
     - fiction
+    - holidays
     - short stories
 ---

@@ -17,9 +17,8 @@ COLORS_FILE = "colors.yaml"
 VALIDATION_FILE = "validation-report.txt"
 
 class ValidationReport(TypedDict):
-    unmapped_tags: list[str]  # Tags not in mapping keys or values
-    unknown_tags: list[str]   # Tags not in mapping keys
-    uncolored_tags: list[str] # Tags not in colors (excluding mapped values)
+    unmapped_tags: list[str]  # Tags not in mapping keys
+    uncolored_tags: list[str] # Tags not in colors (checking mapped values)
 
 def load_tags_map(project_root: Path) -> dict:
     """Load tags mapping configuration."""
@@ -79,7 +78,7 @@ def collect_all_tags(content_dir: Path) -> set[str]:
 
         for book_file in books_dir.glob("*.md"):
             tags = extract_tags_from_file(book_file)
-            all_tags.update(tag.lower() for tag in tags)
+            all_tags.update(tags)
 
     return all_tags
 
@@ -105,23 +104,23 @@ def validate_tags(project_root: Path) -> ValidationReport:
 
     # Collect all tags from files
     all_tags = collect_all_tags(content_dir)
-    mapped_values = get_mapped_values(tags_map)
+    tags_lower_map = {tag.lower(): tag for tag in all_tags}
+
     mapping_keys = {k.lower() for k in tags_map}
+    mapped_values = get_mapped_values(tags_map)
 
     # Generate reports
-    unmapped_tags = sorted(tag for tag in all_tags
-                          if tag not in mapping_keys and tag not in mapped_values)
+    unmapped_tags = sorted(orig_tag
+                          for lower_tag, orig_tag in tags_lower_map.items()
+                          if lower_tag not in mapping_keys)
 
-    unknown_tags = sorted(tag for tag in all_tags
-                         if tag not in mapping_keys)
-
-    uncolored_tags = sorted(tag for tag in all_tags
-                           if tag not in mapping_keys
-                           and tag.replace(' ', '-') not in color_tags)
+    # Check colors for mapped values and unmapped tags
+    tags_to_check_colors = mapped_values | {tag.lower() for tag in unmapped_tags}
+    uncolored_tags = sorted(tag for tag in tags_to_check_colors
+                            if tag.replace(' ', '-') not in color_tags)
 
     return {
         "unmapped_tags": unmapped_tags,
-        "unknown_tags": unknown_tags,
         "uncolored_tags": uncolored_tags
     }
 
@@ -133,9 +132,8 @@ def main() -> None:
 
     # Print summary
     print(f"\nValidation Summary:")
-    print(f"Tags not in mapping (keys or values): {len(report['unmapped_tags'])}")
-    print(f"Tags not in mapping keys: {len(report['unknown_tags'])}")
-    print(f"Tags without colors: {len(report['uncolored_tags'])}")
+    print(f"Tags not in mapping keys: {len(report['unmapped_tags'])}")
+    print(f"Tags without colors (values and unmapped): {len(report['uncolored_tags'])}")
 
     # Save detailed report
     data_dir = project_root.joinpath(GENERATED_DATA_DIR)
@@ -145,16 +143,12 @@ def main() -> None:
 
     # Create formatted output
     output = [
-        "Tags not in mapping keys or values:",
-        "=" * 30,
+        "Tags not in mapping keys:",
+        "=" * 23,
         *[f"- {tag}" for tag in report['unmapped_tags']],
         "",
-        "Tags not in mapping keys:",
-        "=" * 20,
-        *[f"- {tag}" for tag in report['unknown_tags']],
-        "",
-        "Tags without colors:",
-        "=" * 17,
+        "Tags without colors (values and unmapped):",
+        "=" * 37,
         *[f"- {tag}" for tag in report['uncolored_tags']]
     ]
 

@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: stiortyi-malchik-boy-erased-dc59ce29
 title: Стёртый мальчик (Boy Erased)
@@ -33,7 +32,6 @@ params:
     - LGBTQ+
     - Religion
     - Sexual reorientation programs
-    - Sexuality
     - United States
     - biography
     - gay
@@ -42,4 +40,5 @@ params:
     - new york times bestseller
     - nonfiction
     - queer
+    - sexuality
 ---

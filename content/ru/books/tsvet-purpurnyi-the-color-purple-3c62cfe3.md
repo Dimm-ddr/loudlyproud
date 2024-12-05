@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: tsvet-purpurnyi-the-color-purple-3c62cfe3
 title: Цвет пурпурный (The Color Purple)
@@ -38,8 +37,8 @@ params:
     - Adult child sexual abuse victims
     - Africa
     - African American authors
+    - African American fiction
     - African American women
-    - African americans fiction
     - African continental ancestry group
     - Albert
     - Alphonso

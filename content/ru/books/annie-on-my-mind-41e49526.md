@@ -34,12 +34,12 @@ params:
     - Lesbian teenagers
     - Love fiction
     - Private schools
-    - Sexuality
     - contemporary
     - fiction
     - juvenile fiction
     - lesbian
     - queer
     - romance
+    - sexuality
     - young adult (YA)
 ---

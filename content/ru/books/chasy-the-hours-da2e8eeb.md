@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: chasy-the-hours-da2e8eeb
 title: Часы (The Hours)
@@ -52,7 +51,6 @@ params:
     - New York Times reviewed
     - New york (n.y.) fiction
     - PEN/Faulkner Award Winner
-    - Psychological fiction
     - Relations entre hommes et femmes
     - Roman américain
     - Romans nouvelles
@@ -72,5 +70,6 @@ params:
     - literary fiction
     - male-female romance
     - novels
+    - psychological fiction
     - romance
 ---

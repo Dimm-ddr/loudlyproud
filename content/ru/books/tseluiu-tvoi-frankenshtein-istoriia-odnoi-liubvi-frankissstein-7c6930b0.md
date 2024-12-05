@@ -1,12 +1,4 @@
 ---
-
-
-
-
-
-
-
-
 draft: false
 slug: tseluiu-tvoi-frankenshtein-istoriia-odnoi-liubvi-frankissstein-7c6930b0
 title: Целую, твой Франкенштейн. История одной любви (Frankissstein)
@@ -44,11 +36,11 @@ params:
     - LGBTQ+
     - New York Times reviewed
     - Sex dolls
-    - Transgender people
     - contemporary
     - fiction
     - historical fiction
     - literary fiction
     - queer
     - science fiction
+    - transgender
 ---

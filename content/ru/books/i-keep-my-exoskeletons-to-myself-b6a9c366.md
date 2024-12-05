@@ -19,8 +19,8 @@ params:
   russian_translation_status: unknown
   short_book_description: 'In a United States not so unlike our own, the Department of Balance has adopted a radical new form of law enforcement: rather than incarceration, wrongdoers are given a second (and sometimes,...'
   tags:
-    - Dystopia
     - LGBTQ+
+    - dystopia
     - fantasy
     - fiction
     - lesbian

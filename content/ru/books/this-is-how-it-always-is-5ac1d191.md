@@ -23,14 +23,11 @@ params:
     - Family secrets
     - Fiction family life
     - Fiction family life general
-    - Gender identity
     - LGBTQ+
     - New York Times reviewed
-    - Parent and child
     - Parenting
     - Parents of transgender children
     - Sexual behavior
-    - Transgender children
     - adult fiction
     - audiobook
     - book club
@@ -38,4 +35,7 @@ params:
     - contemporary
     - family
     - fiction
+    - gender identity
+    - parent-child relationship
+    - transgender children
 ---

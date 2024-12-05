@@ -40,7 +40,6 @@ params:
     - Lesbianism
     - Lesbians -- Comic books strips etc
     - Lesbiennes
-    - Loneliness
     - Loneliness -- Comic books strips etc
     - Manga
     - Personnes seules
@@ -57,6 +56,7 @@ params:
     - Women artists
     - biography
     - graphic novels & comics
+    - isolation
     - lesbian
     - memoir
     - mental illness

@@ -31,7 +31,10 @@
         "biography",
         "memoir"
     ],
-    "black gay men": ["African American", "gay"],
+    "black gay men": [
+        "African American",
+        "gay"
+    ],
     "boarding school": "boarding school",
     "boarding school & prep school": "boarding school",
     "boarding schools": "boarding school",
@@ -130,7 +133,8 @@
     "germany": "Germany",
     "ghosts": "ghosts",
     "good and evil": "good and evil",
-    "gothic": "gothic fiction",
+    "gothic": "gothic",
+    "gothic fiction": "gothic",
     "grandparents": "family",
     "graphic novels": "graphic novels & comics",
     "graphic novels comics": "graphic novels & comics",
@@ -265,7 +269,7 @@
     "short stories (single author)": "short stories",
     "single-parent families": "single-parent families",
     "social commentary": "social commentary",
-    "speculative fiction": "speculative fiction",
+    "speculative fiction": "weird fiction",
     "sports": "sports",
     "sports romance": [
         "sports",
@@ -298,7 +302,7 @@
     "violence": "violence",
     "war": "war",
     "war stories": "war fiction",
-    "weird fiction": "speculative fiction",
+    "weird fiction": "weirdfiction",
     "witches": "witches",
     "wizards & witches": [
         "wizards",

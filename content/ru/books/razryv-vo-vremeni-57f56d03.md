@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: razryv-vo-vremeni-57f56d03
 title: Разрыв во времени
@@ -30,7 +29,6 @@ params:
     - Father and child
     - Father and child fiction
     - Father-child relationship
-    - Fathers and daughters
     - Fiction family life
     - Fiction family life general
     - Forgiveness
@@ -44,6 +42,7 @@ params:
     - adult fiction
     - contemporary
     - fantasy
+    - father-daughter relationship
     - fiction
     - literary fiction
     - queer
