@@ -103,7 +103,7 @@
 
     <script>
       window.tagMapping = {
-        {{- range $tag, $color := site.Data.tag_mapping.tag_colors }}
+        {{- range $tag, $color := site.Data.tags.colors.tag_colors }}
           "{{ $tag }}": "{{ $color }}",
         {{- end }}
       };

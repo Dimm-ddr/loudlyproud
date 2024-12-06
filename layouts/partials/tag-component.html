@@ -1,7 +1,7 @@
 <!-- Absolute minimum tag component -->
 {{ $tag := .tag | string }}
 {{ $normalizedTag := $tag | lower | urlize }}
-{{ $colorKey := index site.Data.tag_mapping.tag_colors $normalizedTag | default "fallback" }}
+{{ $colorKey := index site.Data.tags.colors.tag_colors $normalizedTag | default "fallback" }}
 
 {{ $tagStyles := dict
     "aubergine" "bg-purple-900 text-white hover:bg-purple-800 dark:bg-purple-400 dark:text-black dark:hover:bg-purple-300"
