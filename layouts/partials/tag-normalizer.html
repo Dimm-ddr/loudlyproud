@@ -1,0 +1,14 @@
+{{- /* Tag normalization functions */ -}}
+
+{{- define "normalize_tag" -}}
+  {{- $tag := . | lower | strings.TrimSpace -}}
+  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $tag | default $tag -}}
+  {{- return $normalized -}}
+{{- end -}}
+
+{{- define "get_tag_display" -}}
+  {{- $tag := . -}}
+  {{- $normalized := partial "normalize_tag" $tag -}}
+  {{- $display := index site.Data.tags.tag_normalization.display $normalized | default $tag -}}
+  {{- return $display -}}
+{{- end -}}

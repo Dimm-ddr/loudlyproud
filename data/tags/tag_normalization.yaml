@@ -1,0 +1,28 @@
+# Normalization mappings (key is lowercased before lookup)
+normalizations:
+  "lgbtq+": "lgbtq-plus"
+  "lgbtqia+": "lgbtq-plus"
+  "u.s.a": "united-states"
+  "u.s": "united-states"
+  "u.s.": "united-states"
+  "usa": "united-states"
+  "science & fiction": "science-fiction"
+  "sci-fi": "science-fiction"
+  "sci fi": "science-fiction"
+  "young adult": "young-adult-ya"
+  "ya": "young-adult-ya"
+  "(ya)": "young-adult-ya"
+  "boys love": "boys-love-bl"
+  "(bl)": "boys-love-bl"
+  "bl": "boys-love-bl"
+  "new adult": "new-adult-na"
+  "(na)": "new-adult-na"
+  "na": "new-adult-na"
+
+# Display overrides (how normalized tags should be displayed)
+display:
+  "lgbtq-plus": "LGBTQIA+"
+  "young-adult-ya": "Young Adult"
+  "boys-love-bl": "Boys Love"
+  "new-adult-na": "New Adult"
+  "science-fiction": "Science Fiction"

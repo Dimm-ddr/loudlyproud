@@ -12,6 +12,7 @@ from typing import TypedDict, NotRequired
 from collections import Counter
 from ruamel.yaml import YAML
 import json
+from normalize import normalize_tag, get_tag_display_name
 from validate import validate_tags
 
 # Path constants
@@ -24,21 +25,27 @@ MAPPING_FILE = "mapping.json"
 COLORS_FILE = "colors.yaml"
 STATS_FILE = "cleanup-stats.json"
 
+
 class TagMapping(TypedDict):
     """Type for tag mapping entries."""
+
     normalized: str | list[str] | None
+
 
 class StatsDict(TypedDict):
     """Type for statistics output."""
+
     total_files: int
     files_with_changes: int
     unknown_tags: list[str]
     normalized_tags: dict[str, int]
     tag_mapping_issues: NotRequired[list[str]]
 
+
 @dataclass
 class TagStats:
     """Statistics for tag processing."""
+
     total_files: int = 0
     files_with_changes: int = 0
     unknown_tags: set[str] = field(default_factory=set)
@@ -53,6 +60,7 @@ class TagStats:
             "normalized_tags": dict(sorted(self.normalized_tags.items())),
         }
 
+
 def load_tags_map(project_root: Path) -> dict[str, TagMapping]:
     """Load tags mapping from JSON file."""
     tags_file = project_root.joinpath(TAGS_CONFIG_DIR, MAPPING_FILE)
@@ -62,16 +70,18 @@ def load_tags_map(project_root: Path) -> dict[str, TagMapping]:
         print(f"Error loading tags map: {e}")
         sys.exit(1)
 
+
 def load_color_mapping(project_root: Path) -> set[str]:
     """Load valid tags from color mapping file."""
     color_file = project_root.joinpath(TAGS_CONFIG_DIR, COLORS_FILE)
     try:
         yaml = YAML()
         data = yaml.load(color_file)
-        return set(data.get('tag_colors', {}).keys())
+        return set(data.get("tag_colors", {}).keys())
     except Exception as e:
         print(f"Error loading color mapping: {e}")
         sys.exit(1)
+
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
@@ -86,27 +96,16 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
         case _:
             return None
 
-def normalize_tag(tag: str, tags_map: dict[str, TagMapping]) -> list[str]:
-    """Normalize a single tag using the mapping."""
-    match tags_map.get(tag.lower()):
-        case None:
-            return [tag]  # Keep original if not in mapping
-        case [*tags]:  # List of replacement tags
-            return tags
-        case str() as normalized:  # Single replacement tag
-            return [normalized]
-        case None if tag.lower() in tags_map:  # Explicit removal
-            return []
-        case _:  # Unexpected mapping value
-            return [tag]
 
 def normalize_tags(tags: list[str], tags_map: dict[str, TagMapping]) -> list[str]:
-    """Normalize a list of tags, handling all mapping cases."""
-    if not tags:
-        return []
+    """Normalize a list of tags using the mapping."""
+    normalized = []
+    for tag in tags:
+        normalized_tag = normalize_tag(tag)
+        if normalized_tag:
+            normalized.append(normalized_tag)
+    return normalized
 
-    normalized = [new_tag for tag in tags for new_tag in normalize_tag(tag, tags_map)]
-    return sorted(set(normalized))
 
 def process_book_file(
     file_path: Path, tags_map: dict[str, TagMapping], stats: TagStats
@@ -152,6 +151,7 @@ def process_book_file(
         print(f"Error processing {file_path}: {e}")
         return False
 
+
 def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStats:
     """Process all book files in the content directory."""
     stats = TagStats()
@@ -172,6 +172,7 @@ def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStat
 
     return stats
 
+
 def main() -> None:
     project_root = Path.cwd()
     content_dir = project_root.joinpath(CONTENT_DIR)
@@ -186,7 +187,7 @@ def main() -> None:
         print("\nWarning: Some tags are missing color definitions:")
         for tag in validation["uncolored_tags"]:
             print(f"  - {tag}")
-        if input("\nContinue with cleanup? [y/N] ").lower() != 'y':
+        if input("\nContinue with cleanup? [y/N] ").lower() != "y":
             sys.exit(1)
 
     print("\nProcessing book files...")
@@ -212,6 +213,7 @@ def main() -> None:
         json.dump(stats.to_dict(), f, indent=2, ensure_ascii=False)
 
     print(f"\nTag statistics saved to {stats_file}")
+
 
 if __name__ == "__main__":
     main()

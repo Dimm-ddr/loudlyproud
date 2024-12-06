@@ -5,6 +5,7 @@ from ruamel.yaml import YAML
 from dataclasses import dataclass
 from typing import TypedDict
 import json
+from normalize import normalize_tag, get_tag_display_name
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -42,29 +43,6 @@ def load_color_mapping(project_root: Path) -> set[str]:
     except Exception as e:
         print(f"Error loading color mapping: {e}")
         return set()
-
-
-def normalize_tag_for_colors(tag: str) -> str:
-    """Normalize tag name for color mapping comparison."""
-    # Convert to lowercase
-    tag = tag.lower()
-    # Replace spaces with hyphens
-    tag = tag.replace(" ", "-")
-    # Replace special characters
-    tag = tag.replace("&", "and")
-    tag = tag.replace("'", "")
-    # Remove periods from abbreviations
-    tag = tag.replace(".", "")
-    # Special cases
-    tag = tag.replace("lgbtq+", "lgbtq-plus")
-    tag = tag.replace("(bl)", "bl")
-    tag = tag.replace("(ya)", "ya")
-    tag = tag.replace("(na)", "na")
-
-    # Location special cases
-    tag = tag.replace("u-s-a", "united-states")  # in case we get U.S.A.
-    tag = tag.replace("u-s", "united-states")  # in case we get U.S.
-    return tag
 
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
@@ -157,7 +135,7 @@ def validate_tags(project_root: Path) -> ValidationReport:
     uncolored_tags = sorted(
         tag
         for tag in tags_to_check_colors
-        if normalize_tag_for_colors(tag) not in color_tags
+        if normalize_tag(tag) not in color_tags
     )
 
     return {"unmapped_tags": unmapped_tags, "uncolored_tags": uncolored_tags}

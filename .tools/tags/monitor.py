@@ -12,6 +12,7 @@ import json
 from datetime import datetime
 from typing import TypedDict
 from ruamel.yaml import YAML
+from normalize import normalize_tag, get_tag_display_name
 from validate import validate_tags
 
 # Path constants
@@ -25,15 +26,18 @@ COLORS_FILE = "colors.yaml"
 REPORT_FILE = "new_tags_report.json"
 PR_REPORT_FILE = "new_tags.json"
 
+
 class TagReport(TypedDict):
     original_forms: list[str]
     first_seen: str
     files: list[str]
     occurrences: int
 
+
 class TagsReport(TypedDict):
     unprocessed_tags: dict[str, TagReport]
     processed_tags: dict[str, TagReport]
+
 
 def load_tags_map(project_root: Path) -> dict:
     """Load tags mapping configuration."""
@@ -44,16 +48,18 @@ def load_tags_map(project_root: Path) -> dict:
         print(f"Error loading tags map: {e}")
         return {}
 
+
 def load_color_mapping(project_root: Path) -> set[str]:
     """Load valid tags from color mapping."""
     color_file = project_root.joinpath(TAGS_CONFIG_DIR, COLORS_FILE)
     try:
         yaml = YAML()
         data = yaml.load(color_file)
-        return set(data.get('tag_colors', {}).keys())
+        return set(data.get("tag_colors", {}).keys())
     except Exception as e:
         print(f"Error loading color mapping: {e}")
         return set()
+
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
@@ -68,6 +74,7 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
         case _:
             return None
 
+
 def extract_tags_from_file(file_path: Path) -> list[str]:
     """Extract tags from a book's frontmatter."""
     try:
@@ -79,22 +86,10 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
         print(f"Error reading {file_path}: {e}")
     return []
 
-def normalize_tag_for_colors(tag: str) -> str:
-    """Normalize tag name for color mapping comparison."""
-    tag = tag.lower()
-    tag = tag.replace(" ", "-")
-    tag = tag.replace("&", "and")
-    tag = tag.replace("'", "")
-    tag = tag.replace(".", "")
-    tag = tag.replace("lgbtq+", "lgbtq-plus")
-    tag = tag.replace("(bl)", "bl")
-    tag = tag.replace("(ya)", "ya")
-    tag = tag.replace("(na)", "na")
-    tag = tag.replace("u-s-a", "united-states")
-    tag = tag.replace("u-s", "united-states")
-    return tag
 
-def find_unmapped_tags(tags: list[str], tags_map: dict, valid_colors: set[str]) -> list[str]:
+def find_unmapped_tags(
+    tags: list[str], tags_map: dict, valid_colors: set[str]
+) -> list[str]:
     """Find tags that don't have proper mappings."""
     unmapped = []
     for tag in tags:
@@ -108,11 +103,12 @@ def find_unmapped_tags(tags: list[str], tags_map: dict, valid_colors: set[str]) 
         if mapping:
             normalized_tags = mapping if isinstance(mapping, list) else [mapping]
             for normalized in normalized_tags:
-                if normalize_tag_for_colors(normalized) not in valid_colors:
+                if normalize_tag(normalized) not in valid_colors:
                     unmapped.append(tag)
                     break
 
     return unmapped
+
 
 def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsReport:
     """Update the tags report with newly found tags."""
@@ -126,7 +122,7 @@ def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsRep
                     "original_forms": [tag],
                     "first_seen": current_time,
                     "files": [file_path],
-                    "occurrences": 1
+                    "occurrences": 1,
                 }
             else:
                 tag_info = report["unprocessed_tags"][tag_lower]
@@ -138,6 +134,7 @@ def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsRep
 
     return report
 
+
 def load_tags_report(project_root: Path) -> TagsReport:
     """Load existing tags report from file."""
     report_file = project_root.joinpath(GENERATED_DATA_DIR, REPORT_FILE)
@@ -148,6 +145,7 @@ def load_tags_report(project_root: Path) -> TagsReport:
         print(f"Error loading existing report: {e}")
     return {"unprocessed_tags": {}, "processed_tags": {}}
 
+
 def main() -> None:
     project_root = Path.cwd()
 
@@ -156,8 +154,9 @@ def main() -> None:
     diff_command = f"git diff --name-only origin/{base_ref}...HEAD"
 
     changed_files = os.popen(diff_command).read().splitlines()
-    book_files = [f for f in changed_files
-                  if f.startswith(str(CONTENT_DIR)) and f.endswith(".md")]
+    book_files = [
+        f for f in changed_files if f.startswith(str(CONTENT_DIR)) and f.endswith(".md")
+    ]
 
     # Load configurations
     tags_map = load_tags_map(project_root)
@@ -182,8 +181,7 @@ def main() -> None:
         # Save updated report
         report_file = data_dir.joinpath(REPORT_FILE)
         report_file.write_text(
-            json.dumps(report, indent=2, ensure_ascii=False),
-            encoding="utf-8"
+            json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
         )
 
         # Save immediate results for PR comment
@@ -206,6 +204,7 @@ def main() -> None:
             body += "\nTags missing color definitions:\n"
             for tag in validation["uncolored_tags"]:
                 body += f"- `{tag}`\n"
+
 
 if __name__ == "__main__":
     main()
