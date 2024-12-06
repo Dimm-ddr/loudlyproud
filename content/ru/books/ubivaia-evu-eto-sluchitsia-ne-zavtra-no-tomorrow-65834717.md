@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: ubivaia-evu-eto-sluchitsia-ne-zavtra-no-tomorrow-65834717
 title: 'Убивая Еву: Это случится не завтра (No Tomorrow)'
@@ -26,14 +25,12 @@ params:
   series: Killing Eve
   short_book_description: Вторая часть трилогии о тандеме агента Евы Поластри и наемной убийцы Вилланель. Фирменный британский юмор, неожиданные повороты сюжета и долгожданное продолжение захватывающего детектива пера Люка Дженнингса – впервые на русском языке...
   tags:
-    - Fiction espionage
-    - Fiction thrillers espionage
-    - Fiction thrillers general
     - LGBTQ+
-    - Mystery Thriller
-    - Thriller
     - crime
     - fiction
     - mystery
     - queer
+    - spy stories
+    - thriller
+    - thrillers
 ---

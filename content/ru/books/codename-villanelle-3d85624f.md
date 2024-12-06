@@ -26,15 +26,14 @@ params:
   tags:
     - Businessmen
     - Female assassins
-    - Fiction espionage
-    - Fiction suspense
     - LGBTQ+
-    - Mystery Thriller
-    - Students
-    - Thriller
     - audiobook
     - crime
     - fiction
     - murder
     - mystery
+    - spy stories
+    - students
+    - suspense
+    - thriller
 ---

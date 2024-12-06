@@ -2,20 +2,31 @@
     "1930s": null,
     "1950s": null,
     "19th century": "19th century",
+    "2019": null,
+    "2020": null,
     "20th century": "20th century",
     "21st century": "21st century",
     "abuse": "abuse",
     "adult": "adult fiction",
     "adult fiction": "adult fiction",
+    "adultery": "relationships",
     "adventure": "adventure",
     "africa": "Africa",
     "african american": "African American",
     "african american authors": "African American authors",
     "african americans": "African American",
     "african americans fiction": "African American fiction",
+    "alex claremont-diaz": null,
     "alien cultures": "alien cultures",
     "american fiction": "American fiction",
+    "american literature": "American fiction",
+    "american short stories": [
+        "American fiction",
+        "short stories"
+    ],
     "americans": "Americans",
+    "anger": "mental health",
+    "animals": "animals",
     "anthologies": "anthologies",
     "anxiety disorders": "mental illness",
     "art": "art",
@@ -45,14 +56,22 @@
     "book club": "book club",
     "boys": "boys",
     "boys love": "boys love (BL)",
+    "boys love (bl)": "boys love (BL)",
     "british literature": "British literature",
     "brooklyn": "Brooklyn",
     "brooklyn (new york n.y.)": "New York",
     "bullying": "bullying",
+    "businessmen": null,
+    "butch and femme (lesbianism)": [
+        "lesbian",
+        "gender identity"
+    ],
     "campus": "campus",
     "charlie spring": null,
     "chicago": "Chicago",
     "child custody": "family",
+    "children": "children's fiction",
+    "children's fiction": "children's fiction",
     "children of alcoholics": [
         "family",
         "mental illness"
@@ -69,6 +88,7 @@
     "comics": "graphic novels & comics",
     "comics & graphic novels": "graphic novels & comics",
     "coming of age": "coming of age",
+    "coming out (sexual orientation)": "coming out",
     "contemporary": "contemporary",
     "contemporary romance": [
         "contemporary",
@@ -80,17 +100,26 @@
     "dating (social customs)": "dating",
     "death": "death",
     "depression": "mental illness",
+    "desire": "desire",
     "desire (philosophy)": "desire",
+    "detective": "detective",
     "detective and mystery stories": [
         "detective",
         "mystery"
     ],
     "detroit": "Detroit",
     "detroit (mich.)": "Detroit",
+    "diseases--fiction.": [
+        "diseases",
+        "fiction"
+    ],
     "domestic fiction": "domestic fiction",
+    "dominican americans": "Hispanic Americans",
+    "dominican americans fiction": "Hispanic Americans",
     "dragons": "dragons",
     "dysfunctional families": "dysfunctional families",
     "dystopia": "dystopia",
+    "ellen claremont": null,
     "england": "England",
     "england fiction": "England",
     "english fantasy fiction": "fantasy",
@@ -113,21 +142,37 @@
     "father-son relationship": "father-son relationship",
     "fathers and daughters": "father-daughter relationship",
     "fathers and sons": "father-son relationship",
+    "female assassins": null,
     "feminism": "feminism",
+    "ficción": "fiction",
     "fiction": "fiction",
     "fiction christian short stories": [
         "fiction",
         "christian",
         "short stories"
     ],
+    "fiction espionage": "spy stories",
     "fiction fantasy epic": "epic fantasy",
     "fiction gay": "gay",
+    "fiction humorous": "humor",
+    "fiction humorous general": "humor",
+    "fiction lesbian": "lesbian",
+    "fiction lgbtq+ gay": "gay",
+    "fiction lgbtq+ lesbian": "lesbian",
+    "fiction psychological": "psychological fiction",
+    "fiction romance contemporary": [
+        "contemporary",
+        "romance"
+    ],
     "fiction romance general": "romance",
     "fiction science fiction space opera": [
         "science fiction",
         "space opera"
     ],
     "fiction short stories (single author)": "short stories",
+    "fiction suspense": "suspense",
+    "fiction thrillers espionage": "spy stories",
+    "fiction thrillers general": "thrillers",
     "first loves": "love in adolescence",
     "food": null,
     "france": "France",
@@ -137,11 +182,16 @@
     "friendship in youth": "friendship",
     "gay": "gay",
     "gay men": "gay",
+    "gay men fiction": [
+        "gay",
+        "fiction"
+    ],
     "gay men's writings russian": "gay's writings",
     "gay teenagers": "gay teenagers",
     "gay's writings": "gay's writings",
     "gay-parent families": "gay-parent families",
     "gays": "gay",
+    "gender": "gender identity",
     "gender identity": "gender identity",
     "gender studies": "gender studies",
     "genderqueer": "genderqueer",
@@ -155,14 +205,17 @@
     "gothic fiction": "gothic",
     "grandparents": "family",
     "graphic novels": "graphic novels & comics",
+    "graphic novels & comics": "graphic novels & comics",
     "graphic novels comics": "graphic novels & comics",
     "greece": "Greece",
     "greece fiction": "Greece",
     "greek mythology": "greek mythology",
     "grief": "grief",
     "high fantasy": "high fantasy",
+    "high school": "high school",
     "high schools": "high school",
     "hispanic americans": "Hispanic Americans",
+    "histoire": "historical",
     "historical": "historical",
     "historical fiction": "historical fiction",
     "historical romance": [
@@ -183,10 +236,22 @@
     "italy": "Italy",
     "italy fiction": "Italy",
     "japanese americans": "Japanese Americans",
+    "june claremont-diaz": null,
     "juvenile fiction": "juvenile fiction",
+    "lambda literary award winner": "Lambda Literary Awards",
+    "lambda literary awards": "Lambda Literary Awards",
+    "large type books": null,
     "lesbian": "lesbian",
     "lesbians": "lesbian",
+    "lesbians fiction": [
+        "lesbian",
+        "fiction"
+    ],
     "lgbt": "LGBTQ+",
+    "lgbt historical fiction": [
+        "LGBTQ+",
+        "historical fiction"
+    ],
     "lgbt memoir": [
         "LGBTQ+",
         "memoir"
@@ -213,6 +278,7 @@
     ],
     "lgbtq+": "LGBTQ+",
     "lgbtq+ activists": "LGBTQ+ activists",
+    "lgbtq+ novels before stonewall": "LGBTQ+ novels before Stonewall",
     "literary collections": "literary collections",
     "literary fiction": "literary fiction",
     "literature": null,
@@ -228,6 +294,8 @@
     "magic": "magic",
     "magical realism": "magical realism",
     "male friendship": "friendship",
+    "male-female romance": "male-female romance",
+    "male-male romance": "male-male romance",
     "man-woman relationships": "male-female romance",
     "marriage": "marriage",
     "married people fiction": "marriage",
@@ -244,11 +312,18 @@
     "mothers and daughters": "mother-daughter relationship",
     "mothers and sons": "mother-son relationship",
     "motion picture industry": "performing arts",
+    "mujeres": "women",
     "murder": "murder",
     "mystery": "mystery",
+    "mystery thriller": [
+        "mystery",
+        "thriller"
+    ],
     "mythology": "mythology",
     "new adult": "new adult (NA)",
+    "new adult (na)": "new adult (NA)",
     "new jersey": null,
+    "new jersey fiction": null,
     "new york": "New York",
     "new york (n.y.)": "New York",
     "new york city": "New York",
@@ -256,8 +331,15 @@
     "new york times reviewed": null,
     "nick nelson": null,
     "nonfiction": "nonfiction",
+    "novela": "novels",
     "novella": "novels",
     "novels": "novels",
+    "nyt:combined-print-and-e-book-fiction=2012-09-30": null,
+    "nyt:trade-fiction-paperback=2013-09-22": null,
+    "palestinian american girls": [
+        "Arab Americans",
+        "teenage"
+    ],
     "paranormal": "paranormal",
     "paranormal romance": [
         "paranormal",
@@ -267,20 +349,27 @@
     "parent-child relationship": "parent-child relationship",
     "paris": "Paris",
     "performing arts": "performing arts",
-    "plague": "plague",
+    "plague": "diseases",
     "poland fiction": "Poland",
     "political intrigue": "political intrigue",
     "prep school": "prep school",
     "present day": null,
+    "presidents united states fiction": null,
+    "prince henry of wales": null,
     "psychological fiction": "psychological fiction",
     "psychology": "mental health",
+    "quarantine--fiction.": "fiction",
     "queer": "queer",
     "queer lit": "queer",
     "realistic fiction": "realistic fiction",
     "recreation": "recreation",
+    "relaciones hombre-mujer": "male-female romance",
+    "religion": "religion",
     "renaissance art": "renaissance art",
     "retellings": "retellings",
     "romance": "romance",
+    "romance fiction": "romance",
+    "romans nouvelles": null,
     "rus": "Russia",
     "russia": "Russia",
     "russia -- fiction.": "Russia",
@@ -293,6 +382,7 @@
     "school": "school",
     "school & education": "school",
     "schools": "school",
+    "schools--fiction.": "school",
     "science fiction": "science fiction",
     "science fiction fantasy": [
         "science fiction",
@@ -307,6 +397,7 @@
     "short stories (single author)": "short stories",
     "single-parent families": "single-parent families",
     "social commentary": "social commentary",
+    "space opera": "space opera",
     "speculative fiction": "speculative fiction",
     "sports": "sports",
     "sports romance": [
@@ -317,43 +408,67 @@
     "stephen kellner": null,
     "stonewall book awards": "Stonewall book awards",
     "strips": null,
+    "students": "students",
     "supernatural": "supernatural",
     "survival": "survival",
+    "survival--fiction.": "survival",
     "suspense": "suspense",
     "syrian americans": "Syrian Americans",
+    "teacher-student relationships": "school",
     "technology": "technology",
+    "teenage": "teenage",
     "teenage boys": [
         "teenage",
         "boys"
     ],
+    "teenagers": "teenage",
     "the united states of america": "United States",
+    "thriller": "thriller",
     "thrillers": "thrillers",
     "time travel": "time-traveling",
     "transgender": "transgender",
     "transgender children": "transgender children",
     "transgender people": "transgender",
     "transgender women": "transgender",
+    "transsexuals": "transgender",
     "travel": "travel",
     "turin italy": "Italy",
+    "united kingdom": "United Kingdom",
     "united states": "United States",
+    "united states of american": "United States",
     "urban fantasy": "urban fantasy",
     "vampires": "vampires",
     "venice": "Venice",
     "venice (italy)": "Venice",
     "victorian era": "Victorian era",
     "violence": "violence",
+    "vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni v.i. lenina": null,
     "war": "war",
     "war stories": "war fiction",
     "washington d.c.": "Washington D.C.",
     "weird fiction": "speculative fiction",
+    "westerns": "Westerns",
+    "white house": null,
     "witches": "witches",
+    "wizards": "wizards",
     "wizards & witches": [
         "wizards",
         "witches"
     ],
+    "women": "women",
+    "women authors": "authors",
+    "women college students": [
+        "college students",
+        "women"
+    ],
+    "women college teachers": [
+        "college students",
+        "women"
+    ],
     "world war ii": "world war ii",
     "ya": "young adult (YA)",
     "young adult": "young adult (YA)",
+    "young adult (ya)": "young adult (YA)",
     "young adult contemporary": [
         "young adult (YA)",
         "contemporary"
@@ -376,5 +491,46 @@
         "young adult (YA)",
         "graphic novels & comics",
         "romance"
-    ]
+    ],
+    "young adult fiction action & adventure survival stories": [
+        "young adult (YA)",
+        "adventure",
+        "survival"
+    ],
+    "young adult fiction family siblings": [
+        "young adult (YA)",
+        "family"
+    ],
+    "young adult fiction lgbt": [
+        "young adult (YA)",
+        "LGBTQ+"
+    ],
+    "young adult fiction lgbtq+": [
+        "young adult (YA)",
+        "LGBTQ+"
+    ],
+    "young adult fiction paranormal occult & supernatural": [
+        "young adult (YA)",
+        "paranormal",
+        "supernatural"
+    ],
+    "young adult fiction school & education boarding school & prep school": [
+        "young adult (YA)",
+        "boarding school"
+    ],
+    "young adult fiction science fiction general": [
+        "young adult (YA)",
+        "science fiction"
+    ],
+    "young adult fiction thrillers & suspense": [
+        "young adult (YA)",
+        "thrillers",
+        "suspense"
+    ],
+    "young adult fiction thrillers & suspense general": [
+        "young adult (YA)",
+        "thrillers"
+    ],
+    "youth": "teenage",
+    "étudiantes": "college students"
 }

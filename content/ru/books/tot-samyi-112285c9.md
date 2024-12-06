@@ -22,10 +22,10 @@ params:
     - LGBTQ+
     - Russia
     - Russian literature
-    - Teenagers
-    - Women authors
+    - authors
     - fiction
     - gay
     - romance
+    - teenage
     - young adult (YA)
 ---

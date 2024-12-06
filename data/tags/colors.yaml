@@ -20,6 +20,9 @@ tag_colors:
   poland: deep-blue
   united-kingdom: deep-blue
   washington-dc: deep-blue
+  africa: deep-blue
+  african-american-fiction: deep-blue
+  english-literature: deep-blue
 
   # Age Categories & Formats (burgundy)
   adult-fiction: burgundy
@@ -41,6 +44,8 @@ tag_colors:
   horror: forest
   thriller: forest
   realistic-fiction: forest
+  historical: forest
+  thrillers: forest
 
   # Genre Variations (plum)
   dark-fantasy: plum
@@ -51,6 +56,10 @@ tag_colors:
   paranormal: plum
   speculative-fiction: plum
   space-opera: plum
+  gothic: plum
+  domestic-fiction: plum
+  dystopia: plum
+  retellings: plum
 
   # Identity & Social Themes (rust)
   lgbtq: rust
@@ -69,6 +78,12 @@ tag_colors:
   coming-out: rust
   dating: rust
   relationships: rust
+  arab-americans: rust
+  lgbtq-plus: rust
+  lgbtq-plus-activists: rust
+  lgbtq-plus-novels-before-stonewall: rust
+  sexuality: rust
+  women: rust
 
   # Life Stages & Relationships (slate)
   coming-of-age: slate
@@ -86,6 +101,10 @@ tag_colors:
   teenagers: slate
   students: slate
   authors: slate
+  teenage: slate
+  boys: slate
+  desire: slate
+  good-and-evil: slate
 
   # Story Elements (marine)
   adventure: marine
@@ -106,6 +125,11 @@ tag_colors:
   mythology: marine
   shapeshifters: marine
   time-traveling: marine
+  animals: marine
+  westerns: marine
+  alien-cultures: marine
+  spy-stories: marine
+  extortion: marine
 
   # Types & Classifications (aubergine)
   classics: aubergine
@@ -120,6 +144,8 @@ tag_colors:
   literary-collections: aubergine
   anthologies: aubergine
   sagas: aubergine
+  lambda-literary-awards: aubergine
+  religion: aubergine
 
   # Additional Categories (using existing colors strategically)
   art: slate
@@ -131,7 +157,6 @@ tag_colors:
   mental-illness: rust
   murder: marine
   performing-arts: slate
-  plague: marine
   political-intrigue: marine
   recreation: slate
   renaissance-art: slate
@@ -141,6 +166,10 @@ tag_colors:
   travel: deep-blue
   war: marine
   world-war-ii: marine
+  christian: aubergine
+  christmas: burgundy
+  diseases: marine
+  holidays: burgundy
 
   # Relationship Types (using romance color)
   female-female-romance: forest

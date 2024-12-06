@@ -19,8 +19,8 @@ params:
   russian_translation_status: unknown
   short_book_description: A lonely, lovable, queer mountain lion narrates this star-making fever dream of a novel.A queer and dangerously hungry mountain lion lives in the drought-devastated land under the Hollywood sign....
   tags:
-    - Animals
     - LGBTQ+
+    - animals
     - contemporary
     - fantasy
     - fiction

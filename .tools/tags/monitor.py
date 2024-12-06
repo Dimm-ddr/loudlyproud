@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 
+import sys
+from pathlib import Path
+
+# Add project root to Python path
+project_root = Path(__file__).parent.parent.parent
+sys.path.append(str(project_root))
+
 import os
 import json
-from pathlib import Path
 from datetime import datetime
 from typing import TypedDict
 from ruamel.yaml import YAML
+from validate import validate_tags
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -72,6 +79,21 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
         print(f"Error reading {file_path}: {e}")
     return []
 
+def normalize_tag_for_colors(tag: str) -> str:
+    """Normalize tag name for color mapping comparison."""
+    tag = tag.lower()
+    tag = tag.replace(" ", "-")
+    tag = tag.replace("&", "and")
+    tag = tag.replace("'", "")
+    tag = tag.replace(".", "")
+    tag = tag.replace("lgbtq+", "lgbtq-plus")
+    tag = tag.replace("(bl)", "bl")
+    tag = tag.replace("(ya)", "ya")
+    tag = tag.replace("(na)", "na")
+    tag = tag.replace("u-s-a", "united-states")
+    tag = tag.replace("u-s", "united-states")
+    return tag
+
 def find_unmapped_tags(tags: list[str], tags_map: dict, valid_colors: set[str]) -> list[str]:
     """Find tags that don't have proper mappings."""
     unmapped = []
@@ -86,7 +108,7 @@ def find_unmapped_tags(tags: list[str], tags_map: dict, valid_colors: set[str]) 
         if mapping:
             normalized_tags = mapping if isinstance(mapping, list) else [mapping]
             for normalized in normalized_tags:
-                if normalized.replace(' ', '-').lower() not in valid_colors:
+                if normalize_tag_for_colors(normalized) not in valid_colors:
                     unmapped.append(tag)
                     break
 
@@ -171,6 +193,19 @@ def main() -> None:
     # Set output for GitHub Actions
     with open(os.environ["GITHUB_OUTPUT"], "a") as f:
         print(f"has_new_tags={'true' if new_tags else 'false'}", file=f)
+
+    # Use validation results in PR comment
+    validation = validate_tags(project_root)
+    if validation["unmapped_tags"] or validation["uncolored_tags"]:
+        body += "\n\nValidation issues found:\n"
+        if validation["unmapped_tags"]:
+            body += "\nTags missing from mapping:\n"
+            for tag in validation["unmapped_tags"]:
+                body += f"- `{tag}`\n"
+        if validation["uncolored_tags"]:
+            body += "\nTags missing color definitions:\n"
+            for tag in validation["uncolored_tags"]:
+                body += f"- `{tag}`\n"
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,6 @@
 
 
 
-
 draft: false
 slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
 title: Красный, белый и королевский синий
@@ -33,18 +32,13 @@ params:
     - '2020'
     - Alex Claremont-Diaz
     - Ellen Claremont
-    - Fiction humorous
-    - Fiction humorous general
-    - Fiction lgbtq+ gay
-    - Fiction romance contemporary
-    - Gay men fiction
     - June Claremont-Diaz
     - LGBTQ+
     - London
     - Presidents united states fiction
     - Prince Henry of Wales
     - United Kingdom
-    - United States of American
+    - United States
     - Washington D.C.
     - White House
     - contemporary

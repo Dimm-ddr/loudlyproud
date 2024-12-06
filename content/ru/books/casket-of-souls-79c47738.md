@@ -6,15 +6,15 @@ type: books
 params:
   book_title: Casket Of Souls
   tags:
+    - LGBTQ+
     - adventure
+    - diseases
     - fantasy
     - fiction
     - gay
     - high fantasy
-    - LGBTQ+
-    - male-male romance
     - magic
-    - plague
+    - male-male romance
     - queer
     - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388342261i/10184855.jpg

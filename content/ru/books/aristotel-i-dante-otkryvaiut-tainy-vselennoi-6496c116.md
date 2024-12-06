@@ -6,12 +6,12 @@ type: books
 params:
   book_title: Аристотель И Данте Открывают Тайны Вселенной
   tags:
-    - Anger
+    - LGBTQ+
     - audiobook
     - coming of age
     - contemporary
     - fiction
-    - LGBTQ+
+    - mental health
     - queer
     - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551444831i/44165654.jpg

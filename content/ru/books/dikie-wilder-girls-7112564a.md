@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: dikie-wilder-girls-7112564a
 title: Дикие (Wilder Girls)
@@ -25,22 +24,19 @@ params:
   russian_translation_status: exists
   short_book_description: Уже больше года школа-пансион для девочек на острове Ракстер находится в карантине. Из-за неизвестного вируса почти все учителя погибли, а тела Гетти и ее одноклассниц мутировали…
   tags:
-    - Diseases--Fiction.
     - LGBTQ+
-    - Quarantine--Fiction.
-    - Schools--Fiction.
-    - Survival--Fiction.
-    - Young adult fiction action & adventure survival stories
-    - Young adult fiction school & education boarding school & prep school
-    - Young adult fiction science fiction general
-    - Young adult fiction thrillers & suspense
-    - Young adult fiction thrillers & suspense general
+    - adventure
     - boarding school
+    - diseases
     - fiction
     - horror
     - mystery
     - new york times bestseller
     - queer
+    - school
     - science fiction
+    - survival
+    - suspense
+    - thrillers
     - young adult (YA)
 ---

@@ -6,14 +6,14 @@ type: books
 params:
   book_title: Сила нашего притяжения
   tags:
-    - Children's fiction
+    - LGBTQ+
+    - children's fiction
     - contemporary
     - fiction
     - gay
-    - LGBTQ+
-    - young adult (YA)
     - queer
     - romance
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1643405670i/60232655.jpg
   isbn: '9781526619945'
   goodreads_link: https://www.goodreads.com/book/show/60232655

@@ -1,9 +1,4 @@
 ---
-
-
-
-
-
 draft: false
 slug: eshche-odna-stantsiia-one-last-stop-9135fbf8
 title: Еще одна станция (One Last Stop)

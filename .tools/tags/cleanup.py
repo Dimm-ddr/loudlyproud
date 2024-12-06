@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 
+import sys
 from pathlib import Path
+
+# Add project root to Python path
+project_root = Path(__file__).parent.parent.parent
+sys.path.append(str(project_root))
+
 from dataclasses import dataclass, field
 from typing import TypedDict, NotRequired
 from collections import Counter
 from ruamel.yaml import YAML
 import json
-import sys
+from validate import validate_tags
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -166,29 +172,6 @@ def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStat
 
     return stats
 
-def validate_tag_mapping(tags_map: dict[str, TagMapping], valid_colors: set[str]) -> list[str]:
-    """Validate that all normalized tags have color mappings."""
-    issues = []
-
-    for source, mapping in tags_map.items():
-        if mapping is None:  # Skip null mappings
-            continue
-
-        # Get normalized tags
-        if isinstance(mapping, str):
-            tags = [mapping]
-        elif isinstance(mapping, list):
-            tags = mapping
-        else:
-            continue
-
-        # Check each normalized tag
-        for tag in tags:
-            if tag.replace(' ', '-').lower() not in valid_colors:
-                issues.append(f"Tag '{tag}' has no color mapping")
-
-    return issues
-
 def main() -> None:
     project_root = Path.cwd()
     content_dir = project_root.joinpath(CONTENT_DIR)
@@ -197,12 +180,13 @@ def main() -> None:
     tags_map = load_tags_map(project_root)
     valid_colors = load_color_mapping(project_root)
 
-    # Validate mappings
-    if issues := validate_tag_mapping(tags_map, valid_colors):
-        print("\nTag mapping issues found:")
-        for issue in issues:
-            print(f"  - {issue}")
-        if input("\nContinue anyway? [y/N] ").lower() != 'y':
+    # Validate before cleanup
+    validation = validate_tags(project_root)
+    if validation["uncolored_tags"]:
+        print("\nWarning: Some tags are missing color definitions:")
+        for tag in validation["uncolored_tags"]:
+            print(f"  - {tag}")
+        if input("\nContinue with cleanup? [y/N] ").lower() != 'y':
             sys.exit(1)
 
     print("\nProcessing book files...")

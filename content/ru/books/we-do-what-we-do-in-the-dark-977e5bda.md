@@ -19,17 +19,16 @@ params:
   russian_translation_status: unknown
   short_book_description: A novel about a young woman's life-altering affair with a much older, married woman.Mallory is a freshman in college, reeling from her mother's recent death, when she encounters the woman. She...
   tags:
-    - Adultery
     - LGBTQ+
     - Romans nouvelles
-    - Teacher-student relationships
-    - Women college students
-    - Women college teachers
+    - college students
     - contemporary
     - fiction
     - lesbian
     - literary fiction
     - queer
+    - relationships
     - romance
-    - Étudiantes
+    - school
+    - women
 ---

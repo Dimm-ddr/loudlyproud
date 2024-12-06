@@ -21,25 +21,20 @@ params:
   russian_translation_status: unknown
   short_book_description: On a beach in the Dominican Republic, a doomed relationship flounders. In the heat of a hospital laundry room in New Jersey, a woman does her lover’s washing and thinks about his wife.
   tags:
-    - American Short stories
-    - Dominican Americans
-    - Dominican americans fiction
-    - Ficción
+    - American fiction
+    - Hispanic Americans
     - Large type books
-    - Mujeres
     - New jersey fiction
-    - Novela
-    - Relaciones hombre-mujer
-    - Romance fiction
-    - Women
     - adult fiction
     - contemporary
     - fiction
     - literary fiction
     - male-female romance
     - new york times bestseller
+    - novels
     - nyt:combined-print-and-e-book-fiction=2012-09-30
     - nyt:trade-fiction-paperback=2013-09-22
     - romance
     - short stories
+    - women
 ---

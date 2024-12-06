@@ -7,15 +7,14 @@ params:
   book_title: Сын вечности (Infinity Son)
   tags:
     - Children's fiction
-    - Young adult fiction family siblings
-    - Young adult fiction lgbt
-    - Young adult fiction lgbtq+
-    - Young adult fiction paranormal occult & supernatural
+    - LGBTQ+
+    - family
     - fantasy
     - fiction
-    - LGBTQ+
     - new york times bestseller
+    - paranormal
     - queer
+    - supernatural
     - urban fantasy
     - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1562781746i/34510711.jpg
