@@ -2,7 +2,26 @@
 {{ $tag := .tag | string }}
 {{ $normalizedTag := partial "tag-normalizer" "normalize_tag" $tag }}
 {{ $displayTag := partial "tag-normalizer" "get_tag_display" $tag }}
-{{ $colorKey := index site.Data.tags.colors.tag_colors $normalizedTag | default "fallback" }}
+
+<!-- Debug info -->
+{{ if eq $tag "LGBTQ+" }}
+<!-- Debug:
+Original: {{ $tag }}
+Normalized: {{ $normalizedTag }}
+Display: {{ $displayTag }}
+Colors Data: {{ printf "%#v" site.Data.tags.colors.tag_colors }}
+Looking up: {{ $normalizedTag }}
+Color: {{ index site.Data.tags.colors.tag_colors $normalizedTag | default "fallback" }}
+-->
+{{ end }}
+
+<!-- Get color key with fallback -->
+{{ $colorKey := "fallback" }}
+{{ with site.Data.tags.colors.tag_colors }}
+  {{ with index . $normalizedTag }}
+    {{ $colorKey = . }}
+  {{ end }}
+{{ end }}
 
 {{ $tagStyles := dict
     "aubergine" "bg-purple-900 text-white hover:bg-purple-800 dark:bg-purple-400 dark:text-black dark:hover:bg-purple-300"
@@ -16,13 +35,15 @@
     "fallback" "bg-gray-400 text-black hover:bg-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
 }}
 
-{{ $cleanTag := partial "helpers/clean-url" $tag }}
-{{ $tagURL := path.Join "tags" $cleanTag | relLangURL }}
+<!-- Use normalized tag for both URL and color lookup -->
+{{ $tagURL := path.Join "tags" $normalizedTag | relLangURL }}
 
 <a
     href="{{ $tagURL }}"
     class="inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200
            {{ index $tagStyles $colorKey }}"
+    data-tag="{{ $normalizedTag }}"
+    data-color="{{ $colorKey }}"
 >
     {{ $displayTag }}
 </a>
