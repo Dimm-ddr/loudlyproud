@@ -1,6 +1,6 @@
 <!-- Absolute minimum tag component -->
 {{ $tag := .tag | string }}
-{{ $normalizedTag := partial "tag-normalizer" "normalize_tag" $tag }}
+{{ $normalizedTag := partial "tag-normalizer" "normalize_tag" $tag | string }}
 {{ $displayTag := partial "tag-normalizer" "get_tag_display" $tag }}
 
 <!-- Debug info -->
@@ -17,9 +17,11 @@ Color: {{ index site.Data.tags.colors.tag_colors $normalizedTag | default "fallb
 
 <!-- Get color key with fallback -->
 {{ $colorKey := "fallback" }}
-{{ with site.Data.tags.colors.tag_colors }}
-  {{ with index . $normalizedTag }}
+{{ range $category, $tags := site.Data.tags.colors }}
+  {{ $tagStr := $normalizedTag | string }}
+  {{ with index $tags $tagStr }}
     {{ $colorKey = . }}
+    {{ break }}
   {{ end }}
 {{ end }}
 
