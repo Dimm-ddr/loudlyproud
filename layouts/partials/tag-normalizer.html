@@ -1,14 +1,23 @@
 {{- /* Tag normalization functions */ -}}
 
 {{- define "normalize_tag" -}}
-  {{- $tag := . | lower | strings.TrimSpace -}}
-  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $tag | default $tag -}}
-  {{- return $normalized -}}
+  {{- $input := .tag | string -}}
+  {{- $lowered := lower $input -}}
+  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $lowered | default $lowered -}}
+  {{- $normalized | safeHTML | string -}}
 {{- end -}}
 
 {{- define "get_tag_display" -}}
-  {{- $tag := . -}}
-  {{- $normalized := partial "normalize_tag" $tag -}}
-  {{- $display := index site.Data.tags.tag_normalization.display $normalized | default $tag -}}
-  {{- return $display -}}
+  {{- $input := .tag | string -}}
+  {{- $lowered := lower $input -}}
+  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $lowered | default $lowered -}}
+  {{- $display := index site.Data.tags.tag_normalization.display $normalized | default $input -}}
+  {{- $display | safeHTML | string -}}
+{{- end -}}
+
+{{- /* Main entry point */ -}}
+{{- if eq .action "normalize_tag" -}}
+  {{- template "normalize_tag" . -}}
+{{- else if eq .action "get_tag_display" -}}
+  {{- template "get_tag_display" . -}}
 {{- end -}}

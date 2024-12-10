@@ -1,25 +1,12 @@
 <!-- Absolute minimum tag component -->
-{{ $tag := .tag | string }}
-{{ $normalizedTag := partial "tag-normalizer" "normalize_tag" $tag | string }}
-{{ $displayTag := partial "tag-normalizer" "get_tag_display" $tag }}
-
-<!-- Debug info -->
-{{ if eq $tag "LGBTQIA+" }}
-<!-- Debug:
-Original: {{ $tag }}
-Normalized: {{ $normalizedTag }}
-Display: {{ $displayTag }}
-Colors Data: {{ printf "%#v" site.Data.tags.colors.tag_colors }}
-Looking up: {{ $normalizedTag }}
-Color: {{ index site.Data.tags.colors.tag_colors $normalizedTag | default "fallback" }}
--->
-{{ end }}
+{{ $input := .tag | string }}
+{{ $normalizedTag := partial "tag-normalizer.html" (dict "action" "normalize_tag" "tag" $input) | string }}
+{{ $displayTag := partial "tag-normalizer.html" (dict "action" "get_tag_display" "tag" $input) | string }}
 
 <!-- Get color key with fallback -->
 {{ $colorKey := "fallback" }}
 {{ range $category, $tags := site.Data.tags.colors }}
-  {{ $tagStr := $normalizedTag | string }}
-  {{ with index $tags $tagStr }}
+  {{ with index $tags ($displayTag | htmlUnescape) }}
     {{ $colorKey = . }}
     {{ break }}
   {{ end }}
@@ -38,7 +25,7 @@ Color: {{ index site.Data.tags.colors.tag_colors $normalizedTag | default "fallb
 }}
 
 <!-- Use normalized tag for both URL and color lookup -->
-{{ $tagURL := path.Join "tags" $normalizedTag | relLangURL }}
+{{ $tagURL := path.Join "tags" ($normalizedTag | string) | relLangURL }}
 
 <a
     href="{{ $tagURL }}"
@@ -47,5 +34,5 @@ Color: {{ index site.Data.tags.colors.tag_colors $normalizedTag | default "fallb
     data-tag="{{ $normalizedTag }}"
     data-color="{{ $colorKey }}"
 >
-    {{ $displayTag }}
+    {{ $displayTag | safeHTML }}
 </a>
