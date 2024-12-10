@@ -8,8 +8,8 @@ params:
   tags:
     - adventure
     - fiction
-    - LGBTQ+
-    - Russia
+    - lgbtq-plus
+    - russia
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642798893i/60176962.jpg
   isbn: '9785001699842'
   goodreads_link: https://www.goodreads.com/book/show/60176962

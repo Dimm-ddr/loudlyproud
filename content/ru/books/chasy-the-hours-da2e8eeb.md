@@ -38,7 +38,7 @@ params:
     - Influence
     - Influence (Literary artistic etc.)
     - LGBTQ HIV/AIDS
-    - LGBTQ+
+    - LGBTQIA+
     - Large type books
     - Literatura norte-americana
     - Malades en phase terminale

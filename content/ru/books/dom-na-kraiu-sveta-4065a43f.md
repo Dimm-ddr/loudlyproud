@@ -19,7 +19,7 @@ params:
   russian_translation_status: exists
   short_book_description: Майкл Каннингем родился в 1952 году в глухом углу американского штата Огайо. Уже первые его работы публиковались в самых популярных американских журналах, а в 1989-м рассказ "Белый ангел" был...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - contemporary
     - domestic fiction
     - fiction

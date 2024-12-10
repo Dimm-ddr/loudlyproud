@@ -20,7 +20,7 @@ params:
   short_book_description: A whipsmart debut about three women—transgender and cisgender—whose lives collide after an unexpected pregnancy forces them to confront their deepest desires around gender, motherhood, and...
   tags:
     - Fiction women
-    - LGBTQ+
+    - LGBTQIA+
     - Man-woman relationship
     - Sexual minorities' families
     - Transsexuals

@@ -22,14 +22,14 @@ params:
   series: All for the Game
   short_book_description: Смерть товарища, потрясшая «Лисов» вскоре после начала игрового сезона, помогает команде наконец сплотиться. Проблема лишь в том, что Эндрю по-прежнему ни во что не ставит старшекурсников, а без...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - contemporary
     - fiction
     - gay
     - male-male romance
-    - new adult (NA)
+    - new adult (na)
     - queer
     - romance
     - sports
-    - young adult (YA)
+    - young adult (ya)
 ---

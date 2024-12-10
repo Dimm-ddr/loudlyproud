@@ -36,12 +36,12 @@ params:
     - Divorce
     - Fiction action & adventure
     - Fiction lesbian
-    - Fiction lgbtq+ gay
-    - Fiction lgbtq+ lesbian
+    - Fiction LGBTQIA+ gay
+    - Fiction LGBTQIA+ lesbian
     - Fiction mystery & detective general
     - Fiction romance fantasy
-    - LGBTQ+
-    - LGBTQ+ novels before Stonewall
+    - LGBTQIA+
+    - LGBTQIA+ novels before Stonewall
     - Lesbian love story
     - Lesbian romance novel
     - Lesbians fiction

@@ -36,7 +36,7 @@ params:
     - Female Homosexuality
     - Japan
     - Kabi Nagata
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbianism
     - Lesbians -- Comic books strips etc
     - Lesbiennes

@@ -21,7 +21,7 @@ params:
   tags:
     - Dark
     - Fiction general
-    - LGBTQ+
+    - LGBTQIA+
     - Thriller
     - fantasy
     - fiction

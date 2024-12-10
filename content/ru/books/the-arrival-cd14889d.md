@@ -10,7 +10,7 @@ params:
     - contemporary
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - male-male romance
     - paranormal
     - queer

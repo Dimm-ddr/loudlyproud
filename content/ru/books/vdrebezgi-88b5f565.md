@@ -7,7 +7,7 @@ params:
   book_title: Вдребезги
   tags:
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631313710i/52293127.jpg
   isbn: '9785041593926'

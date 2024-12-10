@@ -26,7 +26,7 @@ params:
   tags:
     - Businessmen
     - Female assassins
-    - LGBTQ+
+    - LGBTQIA+
     - audiobook
     - crime
     - fiction

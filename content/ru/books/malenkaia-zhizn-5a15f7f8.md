@@ -47,7 +47,7 @@ params:
     - Flora
     - Haiti
     - Homosexuels masculins
-    - LGBTQ+
+    - LGBTQIA+
     - Lispenard Street
     - Literary
     - Male friendship

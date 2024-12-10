@@ -7,7 +7,7 @@ params:
   book_title: Red
   tags:
     - American fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Westerns
     - fiction
     - historical

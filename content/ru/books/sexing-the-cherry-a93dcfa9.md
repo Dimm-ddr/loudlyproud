@@ -33,7 +33,7 @@ params:
     - Giants
     - Great Britain
     - Great Britain in fiction
-    - LGBTQ+
+    - LGBTQIA+
     - London (england) fiction
     - fantasy
     - fiction

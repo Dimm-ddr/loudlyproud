@@ -9,12 +9,12 @@ params:
     - audiobook
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - magic
     - paranormal
     - romance
     - urban fantasy
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1540659639i/42476572.jpg
   isbn: '9785040931798'
   goodreads_link: https://www.goodreads.com/book/show/42476572

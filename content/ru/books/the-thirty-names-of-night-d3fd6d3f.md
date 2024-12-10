@@ -25,7 +25,7 @@ params:
     - FICTION / Literary
     - Fiction ghost
     - LGBTQ gender identity
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - Mothers

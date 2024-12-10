@@ -26,7 +26,7 @@ params:
     - Gay fiction
     - Great Britain
     - Henry Gaunt
-    - LGBTQ+
+    - LGBTQIA+
     - Sidney Ellwood
     - War fiction
     - World War 1914-1918

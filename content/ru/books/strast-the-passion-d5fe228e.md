@@ -39,7 +39,7 @@ params:
     - French -- Russia -- Fiction.
     - French fiction
     - Italy
-    - LGBTQ+
+    - LGBTQIA+
     - Man-woman relationships fiction
     - Napoleonic War
     - Napoleonic Wars 1800-1815

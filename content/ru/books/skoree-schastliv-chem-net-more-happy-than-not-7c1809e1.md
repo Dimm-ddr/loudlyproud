@@ -33,7 +33,7 @@ params:
     - Homosexuality fiction
     - JUVENILE FICTION / Fantasy & Magic
     - JUVENILE FICTION / Love & Romance
-    - LGBTQ+
+    - LGBTQIA+
     - Love & Romance
     - Memory
     - New York (N.Y.)

@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Сила нашего притяжения
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - children's fiction
     - contemporary
     - fiction

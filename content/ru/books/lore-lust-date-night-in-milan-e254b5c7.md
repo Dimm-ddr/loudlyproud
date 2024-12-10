@@ -22,7 +22,7 @@ params:
   series: Lore & Lust
   short_book_description: This story takes place between Chapters 31 and 32 of Lore and Lust Book One
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - fantasy
     - gay

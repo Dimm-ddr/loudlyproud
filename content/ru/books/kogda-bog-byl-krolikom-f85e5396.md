@@ -22,7 +22,7 @@ params:
   russian_translation_status: exists
   short_book_description: Cамый трогательный литературный дебют последних лет, завораживающая, полная хрупкой красоты история о детстве и взрослении, о любви и дружбе во всех мыслимых формах, о тихом героизме перед лицом...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - book club
     - coming of age
@@ -32,5 +32,5 @@ params:
     - literary collections
     - literary fiction
     - novels
-    - young adult (YA)
+    - young adult (ya)
 ---

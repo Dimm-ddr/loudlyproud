@@ -18,7 +18,7 @@ params:
   russian_translation_status: exists
   short_book_description: 'Мики переезжает в Ванкувер вместе с родителями и младшим братом. Необычная семья легко вписывается в канадское общество, но только внешне: отношения родителей в новой стране начинают стремительно...'
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - gay-parent families
     - queer
 ---

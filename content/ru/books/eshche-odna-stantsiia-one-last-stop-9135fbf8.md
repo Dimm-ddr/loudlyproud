@@ -25,7 +25,7 @@ params:
   tags:
     - Fiction lesbian
     - Fiction romance contemporary
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbians fiction
     - New York
     - New york (n.y.) fiction

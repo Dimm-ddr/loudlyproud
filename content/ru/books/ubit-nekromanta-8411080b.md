@@ -16,8 +16,8 @@ params:
   russian_translation_status: exists
   short_book_description: что думает герой, отправляясь на битву со злодеем, всем давно известно. А что в это время думает злодей, темный властелин?
   tags:
-    - LGBTQ+
-    - Russia
+    - lgbtq-plus
+    - russia
     - fantasy
     - fiction
     - ghosts

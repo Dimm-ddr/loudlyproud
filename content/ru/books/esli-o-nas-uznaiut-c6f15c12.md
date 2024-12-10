@@ -9,10 +9,10 @@ params:
     - contemporary
     - fiction
     - gay
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653252011i/61147862.jpg
   isbn: '9785171394493'
   goodreads_link: https://www.goodreads.com/book/show/61147862

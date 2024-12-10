@@ -12,7 +12,7 @@ params:
     - fiction
     - gay
     - high fantasy
-    - LGBTQ+
+    - lgbtq-plus
     - male-male romance
     - magic
     - murder

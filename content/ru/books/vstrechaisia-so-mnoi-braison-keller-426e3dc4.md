@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Встречайся со мной, Брайсон Келлер
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - children's fiction
     - contemporary
     - fiction

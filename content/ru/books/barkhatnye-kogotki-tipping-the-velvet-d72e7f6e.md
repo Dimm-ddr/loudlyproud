@@ -35,7 +35,7 @@ params:
     - Fiction historical general
     - Fiction lesbian
     - Great Britain
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - Lesbians fiction

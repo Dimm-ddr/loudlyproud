@@ -1,6 +1,6 @@
 # Normalization mappings (key is lowercased before lookup)
 normalizations:
-  "lgbtq+": "lgbtq-plus"
+  "LGBTQIA+": "lgbtq-plus"
   "lgbtqia+": "lgbtq-plus"
   "u.s.a": "united-states"
   "u.s": "united-states"

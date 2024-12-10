@@ -24,8 +24,8 @@ params:
   series: London Calling
   short_book_description: 'ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный...'
   tags:
-    - English literature
-    - LGBTQ+
+    - english literature
+    - lgbtq-plus
     - adult fiction
     - audiobook
     - contemporary

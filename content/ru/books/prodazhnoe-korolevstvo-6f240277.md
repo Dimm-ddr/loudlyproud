@@ -10,11 +10,11 @@ params:
     - fantasy
     - fiction
     - high fantasy
-    - LGBTQ+
+    - lgbtq-plus
     - magic
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1513238989i/37518761.jpg
   isbn: '9785171062224'
   goodreads_link: https://www.goodreads.com/book/show/37518761

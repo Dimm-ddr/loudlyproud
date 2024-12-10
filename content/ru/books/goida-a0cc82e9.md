@@ -16,5 +16,5 @@ params:
   russian_translation_status: exists
   short_book_description: 'Юный сын бывалого воеводы Федор Басманов прибывает к царскому двору, чтобы служить государю словом и делом. Страна разрывается на части: воля владыки все больше вызывает сомнение у народа, а...'
   tags:
-    - Russian literature
+    - russian literature
 ---

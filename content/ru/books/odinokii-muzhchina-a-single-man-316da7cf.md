@@ -35,8 +35,8 @@ params:
     - Gay men fiction
     - Gay teachers
     - Homosexuella män
-    - LGBTQ+
-    - LGBTQ+ novels before Stonewall
+    - LGBTQIA+
+    - LGBTQIA+ novels before Stonewall
     - Loss (Psychology)
     - Middle-aged gay men
     - Middle-aged men

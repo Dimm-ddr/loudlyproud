@@ -16,11 +16,11 @@ params:
   russian_translation_status: exists
   short_book_description: После гибели родителей в автокатастрофе Кэмерон Пост отдают на попечение бабушки и набожной тети Рут. Вскоре в их городке появляется Коули Тейлор, с которой Кэмерон проводит все свое время.
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - contemporary
     - fiction
     - lesbian
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
 ---

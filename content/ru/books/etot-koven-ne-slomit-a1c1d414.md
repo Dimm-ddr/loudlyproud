@@ -2,7 +2,6 @@
 
 
 
-
 draft: false
 slug: etot-koven-ne-slomit-a1c1d414
 title: Этот Ковен Не Сломить
@@ -25,7 +24,7 @@ params:
   series: These Witches Don't Burn
   short_book_description: В свой последний год в старшей школе Ханна Уолш собирается готовиться к экзаменам, проводить время со своей девушкой Морган и тусоваться с друзьями. Но юную колдунью ждет другая судьба.
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - audiobook
     - contemporary
     - fantasy
@@ -34,5 +33,5 @@ params:
     - queer
     - romance
     - witches
-    - young adult (YA)
+    - young adult (ya)
 ---

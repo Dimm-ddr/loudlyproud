@@ -19,7 +19,7 @@ params:
   russian_translation_status: exists
   short_book_description: '"Нить, сотканная из тьмы" - самый знаменитый из ранних романов Сары Уотерс, прославленного автора "Тонкой работы", "Бархатных коготков" и "Ночного дозора". Замысел этой книги возник благодаря...'
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - fiction
     - gothic
     - historical

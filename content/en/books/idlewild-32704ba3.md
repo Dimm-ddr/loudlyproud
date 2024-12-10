@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: James Frankie Thomas’s Idlewild is a darkly funny story of two adults looking back on their intense teenage friendship, in a queer, trans, and early-Internet twist on the Manhattan prep school...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - coming of age
     - contemporary
     - fiction

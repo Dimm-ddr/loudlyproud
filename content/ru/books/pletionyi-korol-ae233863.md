@@ -9,10 +9,10 @@ params:
     - contemporary
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - mental health
     - queer
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654705474i/61251131.jpg
   isbn: '9785604718193'
   goodreads_link: https://www.goodreads.com/book/show/61251131

@@ -26,11 +26,11 @@ params:
     - British and irish fiction (fictional works by one author)
     - England
     - Fiction lesbian
-    - Fiction lgbtq+ lesbian
+    - Fiction LGBTQIA+ lesbian
     - Heroes
     - Héros
-    - LGBTQ+
-    - LGBTQ+ novels before Stonewall
+    - LGBTQIA+
+    - LGBTQIA+ novels before Stonewall
     - Lesbiennes
     - Romans nouvelles
     - Savants

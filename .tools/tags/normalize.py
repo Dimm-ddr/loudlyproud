@@ -1,55 +1,110 @@
 #!/usr/bin/env python3
 
+import re
 from pathlib import Path
+from typing import TypeAlias
+from collections.abc import Sequence
 from ruamel.yaml import YAML
-from typing import Dict, Optional
+
+# Type aliases
+TagValue: TypeAlias = str | list[str] | None
+
 
 class TagNormalizer:
-    def __init__(self, rules_file: Path):
-        yaml = YAML(typ='safe')
-        rules = yaml.load(rules_file.read_text())
-        self.normalizations = rules.get('normalizations', {})
-        self.display_overrides = rules.get('display', {})
+    def __init__(self, patterns_file: Path | None = None) -> None:
+        if patterns_file is None:
+            patterns_file = Path("data/tags/patterns.yaml")
+        yaml = YAML(typ="safe")
+        with open(patterns_file) as f:
+            self.patterns = yaml.load(f)
 
-    def normalize(self, tag: str) -> str:
-        """Convert a tag to its normalized form."""
-        tag = tag.lower().strip()
-        return self.normalizations.get(tag, tag)
+    def should_remove(self, tag: str) -> bool:
+        """Check if tag should be removed entirely."""
+        tag = tag.lower()
+        # Check prefixes
+        for prefix in self.patterns["remove"]["prefixes"]:
+            if tag.startswith(prefix.lower()):
+                return True
+        # Check exact matches
+        return tag in (x.lower() for x in self.patterns["remove"]["exact"])
 
-    def get_display_name(self, tag: str) -> str:
-        """Get the display form of a tag."""
-        normalized = self.normalize(tag)
-        return self.display_overrides.get(normalized, tag)
+    def trim_tag(self, tag: str) -> str:
+        """Remove common prefixes and suffixes."""
+        for suffix in self.patterns["trim"]["suffixes"]:
+            if tag.lower().endswith(suffix.lower()):
+                tag = tag[: -len(suffix)]
+        for prefix in self.patterns["trim"]["prefixes"]:
+            if tag.lower().startswith(prefix.lower()):
+                tag = tag[len(prefix) :]
+        return tag.strip()
 
-# Create a singleton instance
-_normalizer: Optional[TagNormalizer] = None
+    def split_tag(self, tag: str) -> list[str] | str:
+        """Split tag if it matches any splitting patterns."""
+        for rule in self.patterns["split"]["separators"]:
+            pattern = rule["pattern"]
+            if "extract_groups" in rule and rule["extract_groups"]:
+                if match := re.search(pattern, tag):
+                    parts = [tag.replace(match.group(0), "").strip()]
+                    parts.extend(g.strip() for g in match.groups())
+                    return [p for p in parts if p]
+            elif "replace" in rule:
+                tag = re.sub(pattern, rule["replace"], tag)
+            elif "keep_parts" in rule and rule["keep_parts"]:
+                if pattern in tag:
+                    return [p.strip() for p in tag.split(pattern) if p.strip()]
+        return tag
 
-def get_normalizer() -> TagNormalizer:
-    """Get or create the TagNormalizer instance."""
-    global _normalizer
-    if _normalizer is None:
-        rules_file = Path(__file__).parent.parent.parent / 'data' / 'tags' / 'tag_normalization.yaml'
-        _normalizer = TagNormalizer(rules_file)
-    return _normalizer
+    def apply_compound_rules(self, tag: str) -> list[str] | str:
+        """Apply compound mapping rules."""
+        for rule in self.patterns["compounds"]:
+            pattern = rule["pattern"]
+            if match := re.match(pattern, tag, re.IGNORECASE):
+                return [
+                    part.format(*(match.groups())) if "{}" in part else part.strip()
+                    for part in rule["map_to"]
+                ]
+        return tag
+
+    def normalize(self, tag: str) -> TagValue:
+        """
+        Normalize a single tag, returning either:
+        - None if tag should be removed
+        - A string if tag should be kept as is (after cleanup)
+        - A list of strings if tag should be split into multiple tags
+        """
+        if self.should_remove(tag):
+            return None
+
+        # First try compound rules
+        result = self.apply_compound_rules(tag)
+        if isinstance(result, list):
+            return result
+
+        # Then try splitting
+        tag = self.trim_tag(tag)
+        result = self.split_tag(tag)
+
+        return result if result else None
+
+    def normalize_tags(self, tags: Sequence[str]) -> list[str]:
+        """Normalize a list of tags, expanding any that split into multiple tags."""
+        normalized = []
+        for tag in tags:
+            result = self.normalize(tag)
+            if isinstance(result, list):
+                normalized.extend(result)
+            elif result:
+                normalized.append(result)
+        return list(
+            dict.fromkeys(normalized)
+        )  # Remove duplicates while preserving order
+
 
 def normalize_tag(tag: str) -> str:
-    """Normalize a single tag."""
-    return get_normalizer().normalize(tag)
+    """Legacy normalize function for backward compatibility."""
+    return tag.lower().strip()
+
 
 def get_tag_display_name(tag: str) -> str:
-    """Get the display name for a tag."""
-    return get_normalizer().get_display_name(tag)
-
-if __name__ == "__main__":
-    # Simple test
-    test_tags = [
-        "LGBTQ+",
-        "U.S.A",
-        "Science & Fiction",
-        "Young Adult (YA)",
-    ]
-
-    for tag in test_tags:
-        normalized = normalize_tag(tag)
-        display = get_tag_display_name(tag)
-        print(f"{tag!r} -> normalized: {normalized!r}, display: {display!r}")
+    """Get display name for a tag."""
+    return tag

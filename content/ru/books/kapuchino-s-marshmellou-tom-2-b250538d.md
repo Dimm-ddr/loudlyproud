@@ -7,10 +7,10 @@ params:
   book_title: Капучино с маршмэллоу. Том 2
   tags:
     - graphic novels & comics
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
-    - Russia
+    - russia
   cover: https://covers.openlibrary.org/b/id/14587298-L.jpg
   editions count: '2'
   isbn: '9786010692992'

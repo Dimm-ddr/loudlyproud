@@ -21,7 +21,7 @@ params:
   russian_translation_status: exists
   short_book_description: «Восемь белых ночей» — романтическая история о встрече в канун Рождества и любви с первого взгляда. Молодым людям, познакомившимся на вечеринке, суждено провести вместе восемь ночей, в ходе...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - christmas
     - contemporary

@@ -19,8 +19,8 @@ params:
   russian_translation_status: unknown
   short_book_description: Leah is changed. Months earlier, she left for a routine expedition, only this time her submarine sank to the sea floor.
   tags:
-    - FICTION / LGBTQ+ / General
-    - LGBTQ+
+    - FICTION / LGBTQIA+ / General
+    - LGBTQIA+
     - Lesbian couples
     - Life change events
     - Same-sex marriage

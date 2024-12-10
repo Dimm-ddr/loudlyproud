@@ -10,9 +10,9 @@ params:
     - contemporary
     - fiction
     - gay
-    - LGBTQ+
+    - lgbtq-plus
     - queer
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1600264221i/39329461.jpg
   isbn: '9785045032513'
   goodreads_link: https://www.goodreads.com/book/show/39329461

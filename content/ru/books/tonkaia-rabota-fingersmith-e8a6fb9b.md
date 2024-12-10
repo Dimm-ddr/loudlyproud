@@ -30,7 +30,7 @@ params:
     - Fiction historical
     - Fiction historical general
     - Junge Frau
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - London

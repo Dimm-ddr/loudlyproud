@@ -28,7 +28,7 @@ params:
   russian_translation_status: exists
   short_book_description: Woman or man? This internationally acclaimed novel looks at the world through the eyes of Jess Goldberg, a masculine girl growing up in the "Ozzie and Harriet" McCarthy era and coming out as a...
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Awards
     - Stonewall book awards
     - classics

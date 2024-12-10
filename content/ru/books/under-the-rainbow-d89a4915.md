@@ -25,7 +25,7 @@ params:
     - Gays and lesbians
     - Homophobia
     - Kansas fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbian teenagers
     - Lesbians fiction
     - Secrecy

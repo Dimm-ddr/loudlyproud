@@ -33,7 +33,7 @@ params:
     - Alex Claremont-Diaz
     - Ellen Claremont
     - June Claremont-Diaz
-    - LGBTQ+
+    - LGBTQIA+
     - London
     - Presidents united states fiction
     - Prince Henry of Wales

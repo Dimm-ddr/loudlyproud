@@ -24,7 +24,7 @@ params:
   russian_translation_status: exists
   short_book_description: Уже больше года школа-пансион для девочек на острове Ракстер находится в карантине. Из-за неизвестного вируса почти все учителя погибли, а тела Гетти и ее одноклассниц мутировали…
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - adventure
     - boarding school
     - diseases

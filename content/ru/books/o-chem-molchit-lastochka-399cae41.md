@@ -7,11 +7,11 @@ params:
   book_title: О Чем Молчит Ласточка
   tags:
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
-    - Russia
-    - young adult (YA)
+    - russia
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1724790439i/60586323.jpg
   editions count: '1'
   isbn: '9785045045209'

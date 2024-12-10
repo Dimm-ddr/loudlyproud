@@ -45,7 +45,7 @@ params:
     - Italy
     - Japan
     - Kryzys wieku średniego
-    - LGBTQ+
+    - LGBTQIA+
     - Literary
     - Marian Brownburn
     - Mexico

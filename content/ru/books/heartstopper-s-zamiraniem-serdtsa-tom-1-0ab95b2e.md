@@ -11,9 +11,9 @@ params:
     - contemporary
     - fiction
     - gay
-    - LGBTQ+
+    - lgbtq-plus
     - queer
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653312503i/61152840.jpg
   isbn: '9785045056632'
   goodreads_link: https://www.goodreads.com/book/show/61152840-heartstopper-1

@@ -21,18 +21,18 @@ params:
   tags:
     - English literature
     - FICTION / Cultural Heritage
-    - FICTION / LGBTQ+ / General
+    - FICTION / LGBTQIA+ / General
     - FICTION / Literary
     - Fiction coming of age
     - Fiction cultural heritage
-    - Fiction lgbtq+ general
+    - Fiction LGBTQIA+ general
     - Garçons adolescents
     - Homosexuels masculins
     - Identité sexuelle
     - Jamaicans
     - Jamaïquains
     - Jehovah's Witnesses
-    - LGBTQ+
+    - LGBTQIA+
     - Minorités sexuelles
     - New York Times reviewed
     - Romans nouvelles

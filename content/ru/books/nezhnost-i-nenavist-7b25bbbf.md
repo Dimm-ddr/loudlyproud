@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: nezhnost-i-nenavist-7b25bbbf
 title: Нежность и ненависть
@@ -25,7 +24,7 @@ params:
   series: Lore & Lust
   short_book_description: Вопреки распространенному мнению, мы не питаемся людьми. На вкус они как грязь. Зато люди отлично подходят для романов…
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - fantasy
     - fiction

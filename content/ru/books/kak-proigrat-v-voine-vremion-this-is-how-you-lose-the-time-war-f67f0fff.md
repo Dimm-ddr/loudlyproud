@@ -9,7 +9,7 @@ params:
     - Atlantis
     - English literature
     - Fiction science fiction general
-    - LGBTQ+
+    - LGBTQIA+
     - London
     - The whole of time and space
     - epistolary

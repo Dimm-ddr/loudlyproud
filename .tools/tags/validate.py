@@ -5,7 +5,7 @@ from ruamel.yaml import YAML
 from dataclasses import dataclass
 from typing import TypedDict
 import json
-from normalize import normalize_tag, get_tag_display_name
+from .normalize import TagNormalizer, normalize_tag, get_tag_display_name
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -110,6 +110,8 @@ def validate_tags(project_root: Path) -> ValidationReport:
     - unmapped_tags: tags not in mapping keys
     - uncolored_tags: tags not in colors (checking mapped values)
     """
+    normalizer = TagNormalizer()
+
     content_dir = project_root.joinpath(CONTENT_DIR)
 
     # Load configurations
@@ -133,9 +135,7 @@ def validate_tags(project_root: Path) -> ValidationReport:
     # Check colors for mapped values and unmapped tags
     tags_to_check_colors = mapped_values | {tag.lower() for tag in unmapped_tags}
     uncolored_tags = sorted(
-        tag
-        for tag in tags_to_check_colors
-        if normalize_tag(tag) not in color_tags
+        tag for tag in tags_to_check_colors if normalize_tag(tag) not in color_tags
     )
 
     return {"unmapped_tags": unmapped_tags, "uncolored_tags": uncolored_tags}
@@ -160,7 +160,7 @@ def write_report(report: ValidationReport, project_root: Path) -> None:
         "",
         "Tags without colors (values and unmapped):",
         "=" * 37,
-        *[f"- {tag}" for tag in report["uncolored_tags"]]
+        *[f"- {tag}" for tag in report["uncolored_tags"]],
     ]
 
     report_file.write_text("\n".join(output), encoding="utf-8")

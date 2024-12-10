@@ -12,7 +12,7 @@ params:
     - fiction
     - genderqueer
     - high fantasy
-    - LGBTQ+
+    - lgbtq-plus
     - magic
     - queer
     - science fiction

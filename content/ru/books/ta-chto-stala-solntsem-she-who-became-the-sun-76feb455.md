@@ -27,7 +27,7 @@ params:
   short_book_description: Небеса предсказали девушке, что рождена во время войны и голода — смерть, а ее брату — великое будущее. Но что, если тот, кому небо предписало быть великим, выбирает смерть?
   tags:
     - English literature
-    - LGBTQ+
+    - LGBTQIA+
     - Romans nouvelles
     - fantasy
     - fiction

@@ -16,7 +16,7 @@ params:
   russian_translation_status: exists
   short_book_description: В книге «Зачем быть счастливой, если можно быть нормальной?», впервые опубликованной в 2011 году, Джанет Уинтерсон возвращается к истории своего детства в приемной семье, легшей в основу...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - autobiography
     - biography
     - memoir

@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Под шепчущей дверью
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - fantasy

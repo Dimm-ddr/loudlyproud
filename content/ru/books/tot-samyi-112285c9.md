@@ -19,7 +19,7 @@ params:
   russian_translation_status: exists
   short_book_description: Матвей прячется от внешнего мира в книгах. После семейной трагедии он еще больше замыкается в себе, а в густом воздухе старого дома, где он живет с мамой и сестрой, постоянно вспыхивают ссоры и...
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - Russia
     - Russian literature
     - authors

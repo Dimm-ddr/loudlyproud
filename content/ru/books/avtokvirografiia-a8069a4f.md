@@ -9,10 +9,10 @@ params:
     - audiobook
     - contemporary
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1605623377i/55922344.jpg
   isbn: '9785604458143'
   goodreads_link: https://www.goodreads.com/book/show/55922344

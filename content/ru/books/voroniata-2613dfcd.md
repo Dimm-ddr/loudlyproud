@@ -32,7 +32,7 @@ params:
     - romance
     - supernatural
     - urban fantasy
-    - young adult (YA)
+    - young adult (ya)
   translators:
     - Вадим Павленко
 ---

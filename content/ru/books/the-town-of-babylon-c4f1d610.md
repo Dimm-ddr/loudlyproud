@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: In this contemporary debut novel—an intimate portrait of queer, racial, and class identity —Andrés, a gay Latinx professor, returns to his suburban hometown in the wake of his husband’s...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - contemporary
     - fiction

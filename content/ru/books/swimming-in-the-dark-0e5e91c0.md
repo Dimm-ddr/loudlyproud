@@ -21,8 +21,8 @@ params:
   tags:
     - English literature
     - Fiction coming of age
-    - Fiction lgbtq+ general
-    - LGBTQ+
+    - Fiction LGBTQIA+ general
+    - LGBTQIA+
     - Poland
     - fiction
     - gay

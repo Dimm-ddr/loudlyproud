@@ -29,7 +29,7 @@ params:
     - Ex-gay movement
     - Gay men biography
     - Gays identity
-    - LGBTQ+
+    - LGBTQIA+
     - Religion
     - Sexual reorientation programs
     - United States

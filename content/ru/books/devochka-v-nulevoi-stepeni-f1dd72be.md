@@ -6,10 +6,10 @@ type: books
 params:
   book_title: Девочка В Нулевой Степени
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - queer
-    - Russia
-    - young adult (YA)
+    - russia
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653768916i/58911744.jpg
   goodreads_link: https://www.goodreads.com/book/show/58911744
   authors:

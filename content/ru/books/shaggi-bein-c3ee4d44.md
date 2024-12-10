@@ -20,8 +20,8 @@ params:
   russian_translation_status: exists
   short_book_description: Агнес Бейн, когда выпьет, спит крепко. Малыш Шагги ставит на ей на тумбочку четыре кружки.
   tags:
-    - LGBTQ+
-    - Scotland
+    - lgbtq-plus
+    - scotland
     - audiobook
     - contemporary
     - fiction

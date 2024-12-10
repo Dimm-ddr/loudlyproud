@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Casket Of Souls
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - adventure
     - diseases
     - fantasy

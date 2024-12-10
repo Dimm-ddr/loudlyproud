@@ -10,7 +10,7 @@ params:
     - boarding school
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - magic
     - new york times bestseller
     - queer
@@ -19,7 +19,7 @@ params:
     - vampires
     - wizards
     - witches
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1610744543i/52190991.jpg
   isbn: '9781250254337'
   goodreads_link: https://www.goodreads.com/book/show/52190991-any-way-the-wind-blows

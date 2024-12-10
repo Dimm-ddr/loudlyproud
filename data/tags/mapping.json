@@ -162,8 +162,8 @@
     "fiction humorous": "humor",
     "fiction humorous general": "humor",
     "fiction lesbian": "lesbian",
-    "fiction lgbtq+ gay": "gay",
-    "fiction lgbtq+ lesbian": "lesbian",
+    "fiction lgbtqia+ gay": "gay",
+    "fiction lgbtqia+ lesbian": "lesbian",
     "fiction psychological": "psychological fiction",
     "fiction romance contemporary": [
         "contemporary",
@@ -252,38 +252,41 @@
         "lesbian",
         "fiction"
     ],
-    "lgbt": "LGBTQ+",
+    "lgbt": "LGBTQIA+",
     "lgbt historical fiction": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "historical fiction"
     ],
     "lgbt memoir": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "memoir"
     ],
-    "lgbtq": "LGBTQ+",
+    "lgbt+": "LGBTQIA+",
+    "lgbtq": "LGBTQIA+",
     "lgbtq historical fiction": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "historical fiction"
     ],
     "lgbtq novels": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "novels"
     ],
     "lgbtq novels before stonewall": [
-        "LGBTQ+ novels before Stonewall"
+        "LGBTQIA+ novels before Stonewall"
     ],
     "lgbtq romance": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "romance"
     ],
     "lgbtq young adult": [
-        "LGBTQ+",
+        "LGBTQIA+",
         "young adult (YA)"
     ],
-    "lgbtq+": "LGBTQ+",
-    "lgbtq+ activists": "LGBTQ+ activists",
-    "lgbtq+ novels before stonewall": "LGBTQ+ novels before Stonewall",
+    "lgbtq+": "LGBTQIA+",
+    "lgbtq-plus": "LGBTQIA+",
+    "lgbtqia+": "LGBTQIA+",
+    "lgbtqia+ activists": "LGBTQIA+ activists",
+    "lgbtqia+ novels before stonewall": "LGBTQIA+ novels before Stonewall",
     "literary collections": "literary collections",
     "literary fiction": "literary fiction",
     "literature": null,
@@ -396,7 +399,7 @@
     ],
     "scotland": "Scotland",
     "scotland fiction": "Scotland",
-    "sexual minorities": "LGBTQ+",
+    "sexual minorities": "LGBTQIA+",
     "sexuality": "sexuality",
     "shapeshifters": "shapeshifters",
     "short stories": "short stories",
@@ -464,7 +467,10 @@
         "witches"
     ],
     "women": "women",
-    "women authors": ["authors", "women"],
+    "women authors": [
+        "authors",
+        "women"
+    ],
     "women college students": [
         "college students",
         "women"
@@ -493,7 +499,7 @@
     "young adult fiction / comics & graphic novels / lgbt": [
         "young adult (YA)",
         "graphic novels & comics",
-        "LGBTQ+"
+        "LGBTQIA+"
     ],
     "young adult fiction / comics & graphic novels / romance": [
         "young adult (YA)",
@@ -511,11 +517,11 @@
     ],
     "young adult fiction lgbt": [
         "young adult (YA)",
-        "LGBTQ+"
+        "LGBTQIA+"
     ],
-    "young adult fiction lgbtq+": [
+    "young adult fiction lgbtqia+": [
         "young adult (YA)",
-        "LGBTQ+"
+        "LGBTQIA+"
     ],
     "young adult fiction paranormal occult & supernatural": [
         "young adult (YA)",

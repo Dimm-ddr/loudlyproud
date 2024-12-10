@@ -20,7 +20,7 @@ params:
   short_book_description: On a hot day in Bethlehem, a 12-year-old Palestinian-American girl is yelled at by a group of men outside the Church of the Nativity. She has exposed her legs in a biblical city, an act they deem...
   tags:
     - Arab Americans
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Awards
     - contemporary
     - feminism

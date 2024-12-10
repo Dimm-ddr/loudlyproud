@@ -8,11 +8,11 @@ params:
   tags:
     - contemporary
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - mental health
     - realistic fiction
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625861151i/58523381.jpg
   isbn: '9785604629017'
   goodreads_link: https://www.goodreads.com/book/show/58523381

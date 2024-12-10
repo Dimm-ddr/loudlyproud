@@ -33,7 +33,7 @@ params:
     - Hispanic Americans
     - Hispanic americans fiction
     - Homosexuality fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Love fiction
     - New York (N.Y.)
     - New york (n.y.) fiction

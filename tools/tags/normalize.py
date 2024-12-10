@@ -5,10 +5,12 @@ from ruamel.yaml import YAML
 from typing import Dict, List, Optional
 from dataclasses import dataclass
 
+
 @dataclass
 class Replacement:
     from_str: str
     to: str
+
 
 @dataclass
 class SpecialCase:
@@ -16,26 +18,26 @@ class SpecialCase:
     normalized: str
     display: Optional[str] = None
 
+
 class TagNormalizer:
     def __init__(self, rules_file: Path):
-        yaml = YAML(typ='safe')
+        yaml = YAML(typ="safe")
         rules = yaml.load(rules_file.read_text())
 
         self.replacements = [
-            Replacement(r['from'], r['to'])
-            for r in rules['replacements']
+            Replacement(r["from"], r["to"]) for r in rules["replacements"]
         ]
 
         self.special_cases = [
             SpecialCase(
-                from_str=sc['from'],
-                normalized=sc['normalized'],
-                display=sc.get('display')
+                from_str=sc["from"],
+                normalized=sc["normalized"],
+                display=sc.get("display"),
             )
-            for sc in rules['special_cases']
+            for sc in rules["special_cases"]
         ]
 
-        self.display_overrides = rules.get('display_overrides', {})
+        self.display_overrides = rules.get("display_overrides", {})
 
     def normalize(self, tag: str) -> str:
         """Normalize a tag according to the rules."""
@@ -67,29 +69,39 @@ class TagNormalizer:
 
         return tag
 
+
 # Create a singleton instance
 _normalizer: Optional[TagNormalizer] = None
+
 
 def get_normalizer() -> TagNormalizer:
     """Get or create the TagNormalizer instance."""
     global _normalizer
     if _normalizer is None:
-        rules_file = Path(__file__).parent.parent.parent / 'data' / 'tags' / 'normalization_rules.yaml'
+        rules_file = (
+            Path(__file__).parent.parent.parent
+            / "data"
+            / "tags"
+            / "normalization_rules.yaml"
+        )
         _normalizer = TagNormalizer(rules_file)
     return _normalizer
+
 
 def normalize_tag(tag: str) -> str:
     """Normalize a single tag."""
     return get_normalizer().normalize(tag)
 
+
 def get_tag_display_name(tag: str) -> str:
     """Get the display name for a tag."""
     return get_normalizer().get_display_name(tag)
 
+
 if __name__ == "__main__":
     # Simple test
     test_tags = [
-        "LGBTQ+",
+        "LGBTQIA+",
         "U.S.A",
         "Science & Fiction",
         "Young Adult (YA)",

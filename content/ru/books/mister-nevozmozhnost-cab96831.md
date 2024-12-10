@@ -23,7 +23,7 @@ params:
   series: Dreamer Trilogy
   short_book_description: Что-то происходит с источником силы сновидцев. Он блокируется.
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - audiobook
     - fantasy
     - fiction
@@ -32,5 +32,5 @@ params:
     - paranormal
     - queer
     - urban fantasy
-    - young adult (YA)
+    - young adult (ya)
 ---

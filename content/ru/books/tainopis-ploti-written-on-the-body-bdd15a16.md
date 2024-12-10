@@ -33,7 +33,7 @@ params:
     - Ehefrau
     - England
     - Fiction general
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - Leukämie

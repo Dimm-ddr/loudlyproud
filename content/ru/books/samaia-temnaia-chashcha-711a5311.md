@@ -10,12 +10,12 @@ params:
     - fairies
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - magic
     - paranormal
     - romance
     - urban fantasy
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453485838i/28674947.jpg
   isbn: '9785170941889'
   goodreads_link: https://www.goodreads.com/book/show/28674947

@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: An edgy, bitingly funny debut about a queer, half-Nigerian college sophomore who, enraged and exhausted by the racism at her elite college, sets out to find truth about The Unfortunates—the unlucky subset of Black undergrads who have been mysteriously dying...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - contemporary
     - fiction

@@ -36,10 +36,10 @@ params:
     - Family relationships
     - Fiction coming of age
     - Fiction lesbian
-    - Fiction lgbtq+ lesbian
-    - Fiction romance lgbtq+ lesbian
+    - Fiction LGBTQIA+ lesbian
+    - Fiction romance LGBTQIA+ lesbian
     - Great britain fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbians -- Fiction
     - Lesbians fiction
     - Mothers and daughters fiction

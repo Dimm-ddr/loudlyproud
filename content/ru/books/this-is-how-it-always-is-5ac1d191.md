@@ -23,7 +23,7 @@ params:
     - Family secrets
     - Fiction family life
     - Fiction family life general
-    - LGBTQ+
+    - LGBTQIA+
     - New York Times reviewed
     - Parenting
     - Parents of transgender children

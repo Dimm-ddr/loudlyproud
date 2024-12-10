@@ -59,7 +59,7 @@ params:
     - Grady
     - Harpo
     - Imprimés espagnols
-    - LGBTQ+
+    - LGBTQIA+
     - Language readers
     - Large type books
     - Lesbian fiction

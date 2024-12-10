@@ -21,7 +21,7 @@ params:
   tags:
     - American literature
     - Family violence
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbian mothers
     - Mothers
     - Mères

@@ -22,7 +22,7 @@ params:
   series: These Witches Don't Burn
   short_book_description: Ханна — настоящая ведьма из Салема, Массачусетс. Ее магия — секрет, и если обычный человек застанет ее за колдовством, то она может лишиться сил. Большую часть времени девушка избегает...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - contemporary
     - fantasy
     - fiction
@@ -31,5 +31,5 @@ params:
     - queer
     - romance
     - witches
-    - young adult (YA)
+    - young adult (ya)
 ---

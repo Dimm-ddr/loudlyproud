@@ -11,13 +11,13 @@ params:
     - coming of age
     - contemporary
     - fiction
-    - LGBTQ+
-    - young adult (YA)
+    - lgbtq-plus
+    - young adult (ya)
     - mental health
     - queer
     - realistic fiction
     - romance
-    - Stonewall book awards
+    - stonewall book awards
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650101290i/60821241.jpg
   editions count: '6'
   isbn: '9785604653296'

@@ -26,7 +26,7 @@ params:
     - Fiction african american & black historical
     - Fiction historical
     - Fiction historical general
-    - LGBTQ+
+    - LGBTQIA+
     - Literary
     - New York Times reviewed
     - Slaves

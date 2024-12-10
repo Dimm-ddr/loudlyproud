@@ -1,12 +1,21 @@
+#!/usr/bin/env python3
+
 import json
+from pathlib import Path
 
-# Load the file
-with open("data/tags/mapping.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
 
-# Sort alphabetically
-sorted_data = dict(sorted(data.items(), key=lambda x: x[0].lower()))
+def sort_mapping(mapping_file: Path) -> None:
+    """Sort mapping file alphabetically by keys."""
+    with open(mapping_file) as f:
+        mapping = json.load(f)
 
-# Save back with proper formatting
-with open("data/tags/mapping.json", "w", encoding="utf-8") as f:
-    json.dump(sorted_data, f, indent=4, ensure_ascii=False)
+    sorted_mapping = dict(sorted(mapping.items()))
+
+    with open(mapping_file, "w") as f:
+        json.dump(sorted_mapping, f, indent=4, ensure_ascii=False)
+
+
+if __name__ == "__main__":
+    project_root = Path(__file__).parent.parent.parent
+    mapping_file = project_root / "data" / "tags" / "mapping.json"
+    sort_mapping(mapping_file)

@@ -35,7 +35,7 @@ params:
     - Fiction general
     - Fiction romance contemporary
     - Hollywood (los angeles calif.) fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Motion picture actors and actresses
     - Women journalists
     - audiobook

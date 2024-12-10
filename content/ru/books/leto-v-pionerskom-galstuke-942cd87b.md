@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Лето в пионерском галстуке
   tags:
-    - LGBTQ+
+    - LGBTQIA+
     - Russia
     - Vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni V.I. Lenina
     - children's fiction

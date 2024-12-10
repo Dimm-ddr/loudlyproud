@@ -42,7 +42,7 @@ params:
     - Greece
     - Greeks
     - Guerre de Troie
-    - LGBTQ+
+    - LGBTQIA+
     - New York Times reviewed
     - Patroclus
     - Phthia

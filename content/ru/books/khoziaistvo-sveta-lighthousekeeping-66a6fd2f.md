@@ -34,7 +34,7 @@ params:
     - Clergy fiction
     - Fiction general
     - Fiction psychological
-    - LGBTQ+
+    - LGBTQIA+
     - Lighthouse keepers
     - Older men
     - Scotland

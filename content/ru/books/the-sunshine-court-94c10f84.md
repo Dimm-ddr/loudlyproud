@@ -22,16 +22,16 @@ params:
   series: All for the Game
   short_book_description: My name is Jean Moreau. My place is at Evermore.
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - adult fiction
     - contemporary
     - detective
     - fiction
     - male-male romance
     - mystery
-    - new adult (NA)
+    - new adult (na)
     - queer
     - romance
     - sports
-    - young adult (YA)
+    - young adult (ya)
 ---

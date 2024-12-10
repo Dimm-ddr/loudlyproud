@@ -27,7 +27,7 @@ params:
     - Homophobia
     - Homosexuality fiction
     - Interviews
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbian love stories
     - Lesbian students
     - Lesbian teachers

@@ -26,7 +26,7 @@ params:
     - Cultural Literacy and Humanities
     - Fiction general
     - Gay men fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - Origami

@@ -26,7 +26,7 @@ params:
     - Brothers and sisters - Fiction
     - FICTION / Literary
     - FICTION / Urban & Street Lit
-    - LGBTQ+
+    - LGBTQIA+
     - Police
     - Race
     - Scandals

@@ -10,7 +10,7 @@ params:
     - Dating (social customs) fiction
     - Fate and fatalism
     - Homosexuality fiction
-    - LGBTQ+
+    - LGBTQIA+
     - New York
     - New york (n.y.) fiction
     - audiobook

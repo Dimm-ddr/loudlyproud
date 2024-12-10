@@ -19,11 +19,11 @@ params:
   russian_translation_status: exists
   short_book_description: Для фанатов сериала «Половое воспитание» и романа «Всем парням, которых я любила» Дженни Хан.Ее любовные советы всегда на высоте.Ее личная жизнь — не совсем.Дарси Филлипс:* Дает анонимные любовные...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - contemporary
     - fiction
     - lesbian
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
 ---

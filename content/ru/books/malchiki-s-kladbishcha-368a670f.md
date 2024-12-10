@@ -8,11 +8,11 @@ params:
   tags:
     - fantasy
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - paranormal
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640457315i/59931036.jpg
   editions count: '52'
   isbn: '9785041573485'

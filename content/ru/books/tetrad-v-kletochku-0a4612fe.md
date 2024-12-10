@@ -19,10 +19,10 @@ params:
   russian_translation_status: exists
   short_book_description: «Привет, тетрадь в клеточку» — так начинается каждая запись в дневнике Ильи, который он начал вести после переезда. В новом городе Илья очень хочет найти друзей, но с ним разговаривают только...
   tags:
-    - LGBTQ+
-    - Russia
-    - Russian literature
+    - lgbtq-plus
+    - russia
+    - russian literature
     - fiction
     - queer
-    - young adult (YA)
+    - young adult (ya)
 ---

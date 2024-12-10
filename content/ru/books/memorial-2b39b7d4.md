@@ -27,11 +27,11 @@ params:
     - FICTION / LGBT / General
     - FICTION / Literary
     - Fiction coming of age
-    - Fiction lgbtq+ general
+    - Fiction LGBTQIA+ general
     - Gay couples
     - Gay relationships
     - Japanese Americans
-    - LGBTQ+
+    - LGBTQIA+
     - Minorités sexuelles
     - Mothers-in-law
     - New York Times reviewed

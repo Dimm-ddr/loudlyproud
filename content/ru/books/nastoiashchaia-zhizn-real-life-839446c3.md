@@ -31,7 +31,7 @@ params:
     - Fiction african american & black general
     - Fiction african american general
     - Graduate students
-    - LGBTQ+
+    - LGBTQIA+
     - New York Times reviewed
     - Race
     - audiobook

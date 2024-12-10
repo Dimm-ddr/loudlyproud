@@ -12,8 +12,8 @@ import json
 from datetime import datetime
 from typing import TypedDict
 from ruamel.yaml import YAML
-from normalize import normalize_tag, get_tag_display_name
-from validate import validate_tags
+from .normalize import normalize_tag, get_tag_display_name
+from .validate import validate_tags
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")

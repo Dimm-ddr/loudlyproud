@@ -7,7 +7,7 @@ params:
   book_title: The Guncle
   tags:
     - American fiction
-    - LGBTQ+
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - contemporary

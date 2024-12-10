@@ -7,10 +7,10 @@ params:
   book_title: Песнь Сорокопута
   tags:
     - fantasy
-    - LGBTQ+
+    - lgbtq-plus
     - mental health
-    - Russia
-    - young adult (YA)
+    - russia
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1645450275i/59664428.jpg
   isbn: '9785041605759'
   goodreads_link: https://www.goodreads.com/book/show/59664428

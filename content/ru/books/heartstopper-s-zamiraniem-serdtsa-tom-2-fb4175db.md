@@ -27,7 +27,7 @@ params:
   series: Heartstopper
   short_book_description: 'Ник и Чарли — лучшие друзья. После того, что случилось на вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга навсегда.Однако Ника ждет много открытий: не только о его друзьях...'
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - boys
     - coming of age
     - contemporary
@@ -44,5 +44,5 @@ params:
     - romance
     - school
     - teenage
-    - young adult (YA)
+    - young adult (ya)
 ---

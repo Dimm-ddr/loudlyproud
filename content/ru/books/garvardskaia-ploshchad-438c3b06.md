@@ -20,8 +20,8 @@ params:
   russian_translation_status: exists
   short_book_description: «Гарвардская площадь» — это изящная история молодого студента-иммигранта — еврея из Египта, — который встречает дерзкого и притягательного арабского таксиста и испытывает новую дружбу на...
   tags:
-    - LGBTQ+
-    - United States
+    - lgbtq-plus
+    - united states
     - adult fiction
     - campus
     - contemporary

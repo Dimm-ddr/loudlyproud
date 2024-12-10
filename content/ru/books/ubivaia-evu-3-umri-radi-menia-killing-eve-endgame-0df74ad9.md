@@ -26,7 +26,7 @@ params:
   short_book_description: Противостояние наемной убийцы Вилланель и агента службы безопасности Евы Поластри продолжается. Действие разворачивается на фоне Лондона и Санкт-Петербурга...
   tags:
     - English literature
-    - LGBTQ+
+    - LGBTQIA+
     - crime
     - fiction
     - mystery

@@ -9,10 +9,10 @@ params:
     - contemporary
     - fiction
     - gay
-    - LGBTQ+
+    - lgbtq-plus
     - queer
-    - Russia
-    - young adult (YA)
+    - russia
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1578398401i/50347526.jpg
   isbn: '9785449668981'
   goodreads_link: https://www.goodreads.com/book/show/50347526

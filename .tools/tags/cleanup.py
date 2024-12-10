@@ -12,8 +12,8 @@ from typing import TypedDict, NotRequired
 from collections import Counter
 from ruamel.yaml import YAML
 import json
-from normalize import normalize_tag, get_tag_display_name
-from validate import validate_tags
+from .normalize import TagNormalizer
+from .validate import validate_tags
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -97,18 +97,16 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
             return None
 
 
-def normalize_tags(tags: list[str], tags_map: dict[str, TagMapping]) -> list[str]:
-    """Normalize a list of tags using the mapping."""
-    normalized = []
-    for tag in tags:
-        normalized_tag = normalize_tag(tag)
-        if normalized_tag:
-            normalized.append(normalized_tag)
-    return normalized
+def normalize_tags(tags: list[str], normalizer: TagNormalizer) -> list[str]:
+    """Normalize a list of tags using the normalizer."""
+    return normalizer.normalize_tags(tags)
 
 
 def process_book_file(
-    file_path: Path, tags_map: dict[str, TagMapping], stats: TagStats
+    file_path: Path,
+    tags_map: dict[str, TagMapping],
+    normalizer: TagNormalizer,
+    stats: TagStats,
 ) -> bool:
     """Process a single book file, updating tags if necessary."""
     try:
@@ -120,7 +118,7 @@ def process_book_file(
         if not (tags := frontmatter.get("params", {}).get("tags")):
             return False
 
-        normalized_tags = normalize_tags(tags, tags_map)
+        normalized_tags = normalize_tags(tags, normalizer)
 
         # Update stats
         for tag in normalized_tags:
@@ -152,7 +150,9 @@ def process_book_file(
         return False
 
 
-def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStats:
+def process_books(
+    content_dir: Path, tags_map: dict[str, TagMapping], normalizer: TagNormalizer
+) -> TagStats:
     """Process all book files in the content directory."""
     stats = TagStats()
 
@@ -166,7 +166,7 @@ def process_books(content_dir: Path, tags_map: dict[str, TagMapping]) -> TagStat
 
         for book_file in books_dir.glob("*.md"):
             stats.total_files += 1
-            if process_book_file(book_file, tags_map, stats):
+            if process_book_file(book_file, tags_map, normalizer, stats):
                 stats.files_with_changes += 1
                 print(f"Updated tags in: {book_file.relative_to(content_dir)}")
 
@@ -180,6 +180,7 @@ def main() -> None:
 
     tags_map = load_tags_map(project_root)
     valid_colors = load_color_mapping(project_root)
+    normalizer = TagNormalizer()
 
     # Validate before cleanup
     validation = validate_tags(project_root)
@@ -191,7 +192,7 @@ def main() -> None:
             sys.exit(1)
 
     print("\nProcessing book files...")
-    stats = process_books(content_dir, tags_map)
+    stats = process_books(content_dir, tags_map, normalizer)
 
     # Print report
     print(f"\nProcessed {stats.total_files} files")

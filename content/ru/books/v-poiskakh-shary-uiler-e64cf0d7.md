@@ -3,7 +3,6 @@
 
 
 
-
 draft: false
 slug: v-poiskakh-shary-uiler-e64cf0d7
 title: В Поисках Шары Уилер
@@ -25,7 +24,7 @@ params:
   russian_translation_status: exists
   short_book_description: Хлоя Грин как никогда близка к победе. После переезда в Алабаму она провела четыре долгих года, избегая сплетен, одноклассников и администрации академии Уиллоугроув...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - audiobook
     - contemporary
     - fiction
@@ -34,5 +33,5 @@ params:
     - mystery
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
 ---

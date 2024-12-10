@@ -21,8 +21,8 @@ params:
   russian_translation_status: exists
   short_book_description: '`Пьеса для трех голосов и сводни. Искусство и ложь` - изящная и глубокая импровизация самого провокационного британского автора последнего деcятилетия Дженет Уинтерсон, поэма в прозе об искусстве,...'
   tags:
-    - British literature
-    - LGBTQ+
+    - british literature
+    - lgbtq-plus
     - art
     - contemporary
     - fiction

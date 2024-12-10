@@ -1,0 +1,39 @@
+# Tags matching these patterns will be removed entirely
+remove:
+  prefixes:
+    - "nyt:"
+    - "collectionID:"
+    - "fiction /"  # Catches all "fiction / category / subcategory" patterns
+  exact:
+    - "general"
+    - "literature"
+    - "strips"
+    - "fiction"
+
+# Tags matching these patterns will be split into components
+split:
+  separators:
+    - pattern: "--"
+      keep_parts: true
+    - pattern: " \\(([^)]+)\\)"  # Matches parenthetical content
+      extract_groups: true
+    - pattern: "\\.$"  # Remove trailing dots
+      replace: ""
+
+# Common prefixes/suffixes to remove
+trim:
+  suffixes:
+    - " fiction"
+    - " fiction."
+    - " -- fiction."
+    - " -- fiction"
+  prefixes:
+    - "fiction "
+    - "fiction: "
+
+# Common compound mappings
+compounds:
+  - pattern: "^young adult fiction (.+)"
+    map_to: ["young adult (YA)", "{}"]
+  - pattern: "^fiction lgbtqia\\+ (.+)"
+    map_to: ["LGBTQIA+", "{}"]

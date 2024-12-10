@@ -10,7 +10,7 @@ params:
     - Children of sperm donors
     - Children's fiction
     - Homosexuality fiction
-    - LGBTQ+
+    - LGBTQIA+
     - Lesbian teenagers
     - Overweight teenagers
     - Romance fiction

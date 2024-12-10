@@ -10,7 +10,7 @@ params:
     - audiobook
     - contemporary
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663969139i/62698467.jpg

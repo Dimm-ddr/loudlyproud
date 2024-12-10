@@ -26,7 +26,7 @@ params:
   series: Simon Snow
   short_book_description: The story is supposed to be over. Simon Snow did everything he was supposed to do...
   tags:
-    - LGBTQ+
+    - lgbtq-plus
     - audiobook
     - children's fiction
     - contemporary
@@ -41,5 +41,5 @@ params:
     - queer
     - romance
     - vampires
-    - young adult (YA)
+    - young adult (ya)
 ---

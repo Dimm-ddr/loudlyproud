@@ -22,7 +22,7 @@ params:
     - American literature
     - Gay fiction
     - James
-    - LGBTQ+
+    - LGBTQIA+
     - Mungo
     - Scotland
     - Working class families

@@ -9,10 +9,10 @@ params:
     - audiobook
     - contemporary
     - fiction
-    - LGBTQ+
+    - lgbtq-plus
     - queer
     - romance
-    - young adult (YA)
+    - young adult (ya)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323816i/62246618.jpg
   editions count: '28'
   isbn: '9785604785904'

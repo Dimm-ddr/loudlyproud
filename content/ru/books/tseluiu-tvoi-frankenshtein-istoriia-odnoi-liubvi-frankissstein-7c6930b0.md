@@ -33,7 +33,7 @@ params:
     - Fiction romance science fiction
     - Fiction science fiction general
     - Fiction women
-    - LGBTQ+
+    - LGBTQIA+
     - New York Times reviewed
     - Sex dolls
     - contemporary
