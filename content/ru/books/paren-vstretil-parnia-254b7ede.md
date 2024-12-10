@@ -22,25 +22,25 @@ params:
   russian_translation_status: exists
   short_book_description: Пол — душа компании. У него много друзей, которые принимают его таким, какой он есть.
   tags:
-    - Children's fiction
+    - Children's
     - Cultural Literacy and Humanities
-    - Fiction general
-    - Gay men fiction
+    - general
+    - Gay men
     - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
     - Origami
     - Origami in literature
-    - Youth fiction
+    - Youth
     - boys
     - contemporary
-    - fiction
     - friendship
     - gay
     - gay teenagers
-    - juvenile fiction
+    - juvenile
     - queer
     - romance
     - teenage
-    - young adult (YA)
+    - young adult
+    - YA
 ---

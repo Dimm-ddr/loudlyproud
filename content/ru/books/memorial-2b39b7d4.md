@@ -23,15 +23,12 @@ params:
     - American literature
     - Américains d'origine japonaise
     - Belles-mères
-    - FICTION / Coming of Age
-    - FICTION / LGBT / General
-    - FICTION / Literary
-    - Fiction coming of age
-    - Fiction LGBTQIA+ general
+    - coming of age
+    - LGBTQIA+
+    - general
     - Gay couples
     - Gay relationships
     - Japanese Americans
-    - LGBTQIA+
     - Minorités sexuelles
     - Mothers-in-law
     - New York Times reviewed
@@ -41,9 +38,8 @@ params:
     - audiobook
     - contemporary
     - father-son relationship
-    - fiction
     - gay
-    - literary fiction
+    - literary
     - novels
     - queer
     - romance

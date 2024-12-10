@@ -23,7 +23,6 @@ params:
     - animals
     - contemporary
     - fantasy
-    - fiction
-    - literary fiction
+    - literary
     - queer
 ---

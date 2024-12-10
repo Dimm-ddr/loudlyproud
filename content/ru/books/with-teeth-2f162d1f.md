@@ -30,11 +30,10 @@ params:
     - New York Times reviewed
     - Romans nouvelles
     - Violence familiale
-    - adult fiction
+    - adult
     - contemporary
-    - fiction
     - lesbian
-    - literary fiction
+    - literary
     - mother-son relationship
     - queer
 ---

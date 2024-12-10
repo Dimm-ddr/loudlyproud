@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: tsvet-purpurnyi-the-color-purple-3c62cfe3
 title: Цвет пурпурный (The Color Purple)
@@ -37,22 +36,23 @@ params:
     - Adult child sexual abuse victims
     - Africa
     - African American authors
-    - African American fiction
+    - African American
     - African American women
     - African continental ancestry group
     - Albert
     - Alphonso
+    - American
     - American fiction
-    - American fiction (fictional works by one author)
+    - fictional works by one author
     - American literature
     - Books that Shaped Work in America
     - Celie
     - Corrine
-    - Fiction & literature
-    - Fiction african american & black general
-    - Fiction african american general
-    - Fiction family life general
-    - Fiction general
+    - '& literature'
+    - african american & black general
+    - african american general
+    - family life general
+    - general
     - Fictional Works Publication Type
     - Georgia
     - Germaine
@@ -62,7 +62,7 @@ params:
     - LGBTQIA+
     - Language readers
     - Large type books
-    - Lesbian fiction
+    - Lesbian
     - Long now manual for civilization
     - National Book Award Winner
     - Nettie
@@ -82,8 +82,8 @@ params:
     - Social conditions
     - Sofia
     - Southern States
-    - Southern states fiction
-    - Spanish fiction
+    - Southern states
+    - Spanish
     - Spanish imprints
     - Squeak
     - Tashi
@@ -92,12 +92,10 @@ params:
     - United States
     - Vrouwenemancipatie
     - classics
-    - domestic fiction
+    - domestic
     - feminism
-    - fiction
     - friendship
     - historical
-    - historical fiction
     - lesbian
     - novels
     - queer

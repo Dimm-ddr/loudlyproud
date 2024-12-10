@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: khoziaistvo-sveta-lighthousekeeping-66a6fd2f
 title: Хозяйство света (Lighthousekeeping)
@@ -31,21 +30,18 @@ params:
   tags:
     - Blind
     - Clergy
-    - Clergy fiction
-    - Fiction general
-    - Fiction psychological
+    - general
+    - psychological
     - LGBTQIA+
     - Lighthouse keepers
     - Older men
     - Scotland
     - Storytelling
     - Young women
-    - Young women fiction
     - contemporary
-    - fiction
-    - historical fiction
+    - historical
     - lesbian
-    - literary fiction
+    - literary
     - magical realism
     - queer
     - romance

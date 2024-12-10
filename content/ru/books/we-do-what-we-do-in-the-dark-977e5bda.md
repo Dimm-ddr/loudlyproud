@@ -23,9 +23,8 @@ params:
     - Romans nouvelles
     - college students
     - contemporary
-    - fiction
     - lesbian
-    - literary fiction
+    - literary
     - queer
     - relationships
     - romance

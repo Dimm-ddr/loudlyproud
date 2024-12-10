@@ -1,7 +1,6 @@
 ---
 
 
-
 draft: false
 slug: ta-chto-stala-solntsem-she-who-became-the-sun-76feb455
 title: Та, что стала солнцем (She Who Became The Sun)
@@ -30,9 +29,7 @@ params:
     - LGBTQIA+
     - Romans nouvelles
     - fantasy
-    - fiction
     - historical
-    - historical fiction
     - history
     - lesbian
     - queer

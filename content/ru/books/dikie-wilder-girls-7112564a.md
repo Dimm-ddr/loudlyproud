@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: dikie-wilder-girls-7112564a
 title: Дикие (Wilder Girls)
@@ -28,15 +27,15 @@ params:
     - adventure
     - boarding school
     - diseases
-    - fiction
     - horror
     - mystery
     - new york times bestseller
     - queer
     - school
-    - science fiction
+    - science
     - survival
     - suspense
     - thrillers
-    - young adult (YA)
+    - young adult
+    - YA
 ---

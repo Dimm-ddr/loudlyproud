@@ -27,8 +27,8 @@ params:
     - 19th century
     - Betrug
     - England
-    - Fiction historical
-    - Fiction historical general
+    - historical
+    - historical general
     - Junge Frau
     - LGBTQIA+
     - Lambda Literary Award Winner
@@ -38,9 +38,6 @@ params:
     - Social conditions
     - Stonewall book awards
     - Unterschicht
-    - fiction
-    - historical
-    - historical fiction
     - lesbian
     - mystery
     - queer

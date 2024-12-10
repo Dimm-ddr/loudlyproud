@@ -3,7 +3,6 @@ remove:
   prefixes:
     - "nyt:"
     - "collectionID:"
-    - "fiction /"  # Catches all "fiction / category / subcategory" patterns
   exact:
     - "general"
     - "literature"
@@ -15,9 +14,11 @@ split:
   separators:
     - pattern: "--"
       keep_parts: true
+    - pattern: " /"
+      keep_parts: true
     - pattern: " \\(([^)]+)\\)"  # Matches parenthetical content
       extract_groups: true
-    - pattern: "\\.$"  # Remove trailing dots
+    - pattern: "\\.$" # Remove trailing dots
       replace: ""
 
 # Common prefixes/suffixes to remove

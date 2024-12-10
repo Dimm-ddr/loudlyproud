@@ -2,7 +2,9 @@
 
 import pytest
 import json
-from tags.sorting import sort_mapping
+import tomllib
+from pathlib import Path
+from tags.sorting import sort_mapping, sort_colors
 
 
 @pytest.fixture
@@ -14,21 +16,37 @@ def test_mapping_file(tmp_path):
     return mapping_file
 
 
-def test_sort_mapping(test_mapping_file):
-    """Test that mapping file gets sorted alphabetically"""
-    # Sort the mapping file
-    sort_mapping(test_mapping_file)
+def test_sort_mapping(tmp_path):
+    """Test sorting mapping file."""
+    mapping_file = tmp_path / "mapping.json"
+    mapping_file.write_text('{"c": 1, "a": 2, "b": 3}')
 
-    # Read the sorted file
-    with open(test_mapping_file) as f:
-        content = f.read()
+    sort_mapping(mapping_file)
 
-    # Check that keys appear in alphabetical order in the file
-    key_positions = {
-        key: content.index(f'"{key}"') for key in ["apple", "banana", "zebra"]
-    }
+    with open(mapping_file) as f:
+        sorted_mapping = json.load(f)
+        assert list(sorted_mapping.keys()) == ["a", "b", "c"]
 
-    assert key_positions["apple"] < key_positions["banana"] < key_positions["zebra"]
+
+def test_sort_colors(tmp_path):
+    """Test sorting colors file."""
+    colors_file = tmp_path / "colors.toml"
+    colors_file.write_text('''
+["Genres"]
+"horror" = "forest"
+"fantasy" = "forest"
+
+["Cultural and Geographic"]
+"Venice" = "deep-blue"
+"Africa" = "deep-blue"
+''')
+
+    sort_colors(colors_file)
+
+    with open(colors_file, "rb") as f:
+        sorted_colors = tomllib.load(f)
+        assert list(sorted_colors["Genres"].keys()) == ["fantasy", "horror"]
+        assert list(sorted_colors["Cultural and Geographic"].keys()) == ["Africa", "Venice"]
 
 
 def test_sort_mapping_preserves_content(test_mapping_file):

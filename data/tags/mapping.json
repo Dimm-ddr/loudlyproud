@@ -31,6 +31,7 @@
     "anthologies": "anthologies",
     "anxiety disorders": "mental illness",
     "arab americans": "Arab Americans",
+    "arcansas": "Arkansas",
     "art": "art",
     "art and technology": [
         "art",
@@ -73,6 +74,10 @@
     "charlie spring": null,
     "chicago": "Chicago",
     "child custody": "family",
+    "childhood and youth": [
+        "children's fiction",
+        "teenage"
+    ],
     "children": "children's fiction",
     "children of alcoholics": [
         "family",
@@ -114,10 +119,6 @@
     "detroit": "Detroit",
     "detroit (mich.)": "Detroit",
     "diseases": "diseases",
-    "diseases--fiction.": [
-        "diseases",
-        "fiction"
-    ],
     "domestic fiction": "domestic fiction",
     "dominican americans": "Hispanic Americans",
     "dominican americans fiction": "Hispanic Americans",
@@ -133,6 +134,7 @@
     "epistolary": "epistolary",
     "erotic literature": "erotic literature",
     "essays": "essays",
+    "ex-gay movement": "ex-gay movement",
     "extortion": "extortion",
     "f f romance": "female-female romance",
     "fae": "fae",
@@ -149,10 +151,9 @@
     "fathers and sons": "father-son relationship",
     "female assassins": null,
     "feminism": "feminism",
-    "ficción": "fiction",
-    "fiction": "fiction",
+    "ficciÃ³n": null,
+    "fiction": null,
     "fiction christian short stories": [
-        "fiction",
         "christian",
         "short stories"
     ],
@@ -177,7 +178,7 @@
     "fiction short stories (single author)": "short stories",
     "fiction suspense": "suspense",
     "fiction thrillers espionage": "spy stories",
-    "fiction thrillers general": "thrillers",
+    "fiction thrillers general": "thriller",
     "first loves": "love in adolescence",
     "food": null,
     "france": "France",
@@ -187,15 +188,17 @@
     "friendship in youth": "friendship",
     "gay": "gay",
     "gay men": "gay",
-    "gay men fiction": [
+    "gay men biography": [
         "gay",
-        "fiction"
+        "biography"
     ],
+    "gay men fiction": "gay",
     "gay men's writings russian": "gay's writings",
     "gay teenagers": "gay teenagers",
     "gay's writings": "gay's writings",
     "gay-parent families": "gay-parent families",
     "gays": "gay",
+    "gays identity": "gay",
     "gender": "gender identity",
     "gender identity": "gender identity",
     "gender studies": "gender studies",
@@ -248,10 +251,7 @@
     "large type books": null,
     "lesbian": "lesbian",
     "lesbians": "lesbian",
-    "lesbians fiction": [
-        "lesbian",
-        "fiction"
-    ],
+    "lesbians fiction": "lesbian",
     "lgbt": "LGBTQIA+",
     "lgbt historical fiction": [
         "LGBTQIA+",
@@ -342,8 +342,6 @@
     "novela": "novels",
     "novella": "novels",
     "novels": "novels",
-    "nyt:combined-print-and-e-book-fiction=2012-09-30": null,
-    "nyt:trade-fiction-paperback=2013-09-22": null,
     "palestinian american girls": [
         "Arab Americans",
         "teenage"
@@ -367,7 +365,6 @@
     "prince henry of wales": null,
     "psychological fiction": "psychological fiction",
     "psychology": "mental health",
-    "quarantine--fiction.": "fiction",
     "queer": "queer",
     "queer lit": "queer",
     "realistic fiction": "realistic fiction",
@@ -381,7 +378,6 @@
     "romans nouvelles": null,
     "rus": "Russia",
     "russia": "Russia",
-    "russia -- fiction.": "Russia",
     "russian fiction": "Russian literature",
     "russian literature": "Russian literature",
     "sagas": "sagas",
@@ -391,7 +387,6 @@
     "school": "school",
     "school & education": "school",
     "schools": "school",
-    "schools--fiction.": "school",
     "science fiction": "science fiction",
     "science fiction fantasy": [
         "science fiction",
@@ -400,6 +395,7 @@
     "scotland": "Scotland",
     "scotland fiction": "Scotland",
     "sexual minorities": "LGBTQIA+",
+    "sexual reorientation programs": "sexual reorientation programs",
     "sexuality": "sexuality",
     "shapeshifters": "shapeshifters",
     "short stories": "short stories",
@@ -420,7 +416,6 @@
     "students": "students",
     "supernatural": "supernatural",
     "survival": "survival",
-    "survival--fiction.": "survival",
     "suspense": "suspense",
     "syrian americans": "Syrian Americans",
     "teacher-student relationships": "school",
@@ -433,7 +428,6 @@
     "teenagers": "teenage",
     "the united states of america": "United States",
     "thriller": "thriller",
-    "thrillers": "thrillers",
     "time travel": "time-traveling",
     "time-traveling": "time-traveling",
     "transgender": "transgender",
@@ -452,7 +446,7 @@
     "venice (italy)": "Venice",
     "victorian era": "Victorian era",
     "violence": "violence",
-    "vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni v.i. lenina": null,
+    "vsesoiï¸ uï¸¡znaiï¸ aï¸¡ pionerskaiï¸ aï¸¡ organizatï¸ sï¸¡iiï¸ aï¸¡ imeni v.i. lenina": null,
     "war": "war",
     "war fiction": "war fiction",
     "war stories": "war fiction",
@@ -538,13 +532,13 @@
     ],
     "young adult fiction thrillers & suspense": [
         "young adult (YA)",
-        "thrillers",
+        "thriller",
         "suspense"
     ],
     "young adult fiction thrillers & suspense general": [
         "young adult (YA)",
-        "thrillers"
+        "thriller"
     ],
     "youth": "teenage",
-    "étudiantes": "college students"
+    "Ã©tudiantes": "college students"
 }

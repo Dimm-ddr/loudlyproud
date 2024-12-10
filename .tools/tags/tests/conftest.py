@@ -1,5 +1,6 @@
 from typing import Any, NamedTuple
 import pytest
+from pathlib import Path
 
 
 class TestAssertContext(NamedTuple):
@@ -29,3 +30,9 @@ def assert_context():
             extra_info=extra_info
         )
     return _make_context
+
+
+@pytest.fixture
+def test_data_dir():
+    """Return path to test data directory."""
+    return Path(__file__).parent / "data"

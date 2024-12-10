@@ -32,27 +32,28 @@ params:
     - Bandes dessinées
     - Biographies
     - Comic books strips
-    - Comic books strips etc. -- Japan -- Translations into English
-    - Female Homosexuality
+    - Comic books strips etc.
     - Japan
+    - Translations into English
+    - Female Homosexuality
     - Kabi Nagata
     - LGBTQIA+
     - Lesbianism
-    - Lesbians -- Comic books strips etc
+    - Lesbians
+    - Comic books strips etc
     - Lesbiennes
-    - Loneliness -- Comic books strips etc
+    - Loneliness
     - Manga
     - Personnes seules
     - Prostitution
-    - Self-actualization (Psychology)
+    - Self-actualization
+    - Psychology
     - Sexual behavior
     - Sexualité
     - Single Person
     - Single people
     - Single women
-    - Single women -- Comic books strips etc
     - Solitude
-    - Translations into English
     - Women artists
     - biography
     - graphic novels & comics

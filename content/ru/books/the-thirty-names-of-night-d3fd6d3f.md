@@ -22,8 +22,7 @@ params:
     - Américains d'origine syrienne
     - Artistes
     - Artists
-    - FICTION / Literary
-    - Fiction ghost
+    - ghost
     - LGBTQ gender identity
     - LGBTQIA+
     - Lambda Literary Award Winner
@@ -35,9 +34,8 @@ params:
     - Transgenres
     - contemporary
     - death
-    - fiction
-    - historical fiction
-    - literary fiction
+    - historical
+    - literary
     - novels
     - queer
     - transgender

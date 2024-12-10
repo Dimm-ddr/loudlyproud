@@ -10,9 +10,8 @@ params:
     - audiobook
     - dystopia
     - fantasy
-    - fiction
     - queer
-    - science fiction
+    - science
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682956296i/61190770.jpg
   isbn: '9780375715402'
   goodreads_link: https://www.goodreads.com/book/show/61190770-chain-gang-all-stars

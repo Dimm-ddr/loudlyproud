@@ -19,7 +19,6 @@ params:
   russian_translation_status: unknown
   short_book_description: Leah is changed. Months earlier, she left for a routine expedition, only this time her submarine sank to the sea floor.
   tags:
-    - FICTION / LGBTQIA+ / General
     - LGBTQIA+
     - Lesbian couples
     - Life change events
@@ -29,10 +28,9 @@ params:
     - Wives
     - Women marine biologists
     - contemporary
-    - fiction
     - grief
     - horror
     - lesbian
-    - literary fiction
+    - literary
     - queer
 ---

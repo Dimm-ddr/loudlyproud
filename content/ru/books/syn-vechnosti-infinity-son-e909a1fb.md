@@ -6,17 +6,17 @@ type: books
 params:
   book_title: Сын вечности (Infinity Son)
   tags:
-    - Children's fiction
+    - Children's
     - LGBTQIA+
     - family
     - fantasy
-    - fiction
     - new york times bestseller
     - paranormal
     - queer
     - supernatural
     - urban fantasy
-    - young adult (YA)
+    - young adult
+    - YA
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1562781746i/34510711.jpg
   editions count: '37'
   isbn: '9785604687765'

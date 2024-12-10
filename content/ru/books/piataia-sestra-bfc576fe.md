@@ -5,8 +5,7 @@ title: Пятая Сестра
 type: books
 params:
   book_title: Пятая Сестра
-  tags:
-    - fiction
+  tags: []
   cover: https://covers.openlibrary.org/b/id/13296584-L.jpg
   isbn: '9785171273835'
   openlibrary_link: https://openlibrary.org/books/OL46543156M/Pyataya_sestra

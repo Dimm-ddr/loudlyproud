@@ -23,19 +23,16 @@ params:
     - American literature
     - Bildungsromans
     - Brothers and sisters
-    - Brothers and sisters - Fiction
-    - FICTION / Literary
-    - FICTION / Urban & Street Lit
+    - Brothers and sisters -
     - LGBTQIA+
     - Police
     - Race
     - Scandals
     - Witnesses
-    - adult fiction
+    - adult
     - audiobook
     - contemporary
-    - fiction
-    - literary fiction
+    - literary
     - new york times bestseller
     - Écrivains noirs
 ---

@@ -21,15 +21,16 @@ params:
   russian_translation_status: exists
   short_book_description: Stephen is an ideal child of aristocratic parents—a fencer, a horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling writer and a loyal, protective lover.
   tags:
-    - Aristocracy (Social class)
+    - Aristocracy
+    - Social class
     - Authors
-    - British and irish fiction (fictional works by one author)
+    - British and irish fiction
+    - fictional works by one author
     - England
-    - Fiction lesbian
-    - Fiction LGBTQIA+ lesbian
+    - lesbian
+    - LGBTQIA+
     - Heroes
     - Héros
-    - LGBTQIA+
     - LGBTQIA+ novels before Stonewall
     - Lesbiennes
     - Romans nouvelles
@@ -37,9 +38,7 @@ params:
     - Scholars
     - Social conditions
     - classics
-    - fiction
-    - historical fiction
-    - lesbian
+    - historical
     - queer
     - romance
     - Écrivains

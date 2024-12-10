@@ -23,17 +23,16 @@ params:
   russian_translation_status: exists
   short_book_description: Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину...
   tags:
-    - Fiction lesbian
-    - Fiction romance contemporary
+    - lesbian
+    - romance contemporary
     - LGBTQIA+
-    - Lesbians fiction
+    - Lesbians
     - New York
-    - New york (n.y.) fiction
-    - adult fiction
+    - New york
+    - n.y.
+    - adult
     - audiobook
     - contemporary
-    - fiction
-    - lesbian
     - new york times bestseller
     - queer
 ---

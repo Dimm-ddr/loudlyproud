@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: stiortyi-malchik-boy-erased-dc59ce29
 title: Стёртый мальчик (Boy Erased)
@@ -24,14 +23,14 @@ params:
   russian_translation_status: exists
   short_book_description: Гаррарду Конли было девятнадцать, когда по настоянию родителей ему пришлось пройти основанную на библейском учении конверсионную терапию, которая обещала «исцелить» его сексуальную ориентацию...
   tags:
-    - Arkansas
-    - Childhood and youth
-    - Ex-gay movement
-    - Gay men biography
-    - Gays identity
+    - arkansas
+    - childhood and youth
+    - ex-gay movement
+    - gay men biography
+    - gays identity
     - LGBTQIA+
-    - Religion
-    - Sexual reorientation programs
+    - religion
+    - sexual reorientation programs
     - United States
     - biography
     - gay

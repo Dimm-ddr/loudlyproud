@@ -34,13 +34,12 @@ params:
     - classics
     - coming out
     - feminism
-    - fiction
     - gay
     - gender identity
-    - historical fiction
+    - historical
     - lesbian
     - memoir
-    - psychological fiction
+    - psychological
     - queer
     - transgender
 ---

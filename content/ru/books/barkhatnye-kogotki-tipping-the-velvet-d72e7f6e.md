@@ -31,26 +31,24 @@ params:
     - English drama
     - English literature
     - Female impersonators
-    - Fiction historical
-    - Fiction historical general
-    - Fiction lesbian
+    - historical
+    - historical general
+    - lesbian
     - Great Britain
     - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
-    - Lesbians fiction
-    - Music-halls (Variety-theaters cabarets etc.)
+    - Lesbians
+    - Music-halls
+    - Variety-theaters cabarets etc.
     - Relations with lesbians
     - Transvestites
     - Victoria 1837-1901
-    - Virginia Woolf (1882-1941)
-    - fiction
+    - Virginia Woolf
+    - 1882-1941
     - gay
-    - historical
-    - historical fiction
     - history
     - identity
-    - lesbian
     - novels
     - queer
     - romance

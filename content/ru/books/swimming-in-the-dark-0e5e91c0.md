@@ -20,14 +20,12 @@ params:
   short_book_description: Set in early 1980s Poland against the violent decline of communism, a tender and passionate story of first love between two young men who eventually find themselves on opposite sides of the...
   tags:
     - English literature
-    - Fiction coming of age
-    - Fiction LGBTQIA+ general
+    - coming of age
     - LGBTQIA+
+    - general
     - Poland
-    - fiction
     - gay
     - historical
-    - historical fiction
     - queer
     - romance
 ---

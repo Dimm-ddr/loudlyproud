@@ -22,8 +22,7 @@ params:
     - LGBTQIA+
     - dystopia
     - fantasy
-    - fiction
     - lesbian
     - queer
-    - science fiction
+    - science
 ---

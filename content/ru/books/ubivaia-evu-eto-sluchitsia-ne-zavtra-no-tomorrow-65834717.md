@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: ubivaia-evu-eto-sluchitsia-ne-zavtra-no-tomorrow-65834717
 title: 'Убивая Еву: Это случится не завтра (No Tomorrow)'
@@ -27,7 +26,6 @@ params:
   tags:
     - LGBTQIA+
     - crime
-    - fiction
     - mystery
     - queer
     - spy stories

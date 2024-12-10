@@ -20,22 +20,15 @@ params:
   tags:
     - African American
     - African American gay men
-    - FICTION / African American / General
-    - FICTION / Historical / General
-    - FICTION / Literary
-    - Fiction african american & black historical
-    - Fiction historical
-    - Fiction historical general
+    - african american & black historical
+    - historical
+    - historical general
     - LGBTQIA+
     - Literary
     - New York Times reviewed
     - Slaves
-    - Slaves fiction
-    - fiction
     - gay
-    - historical
-    - historical fiction
-    - literary fiction
+    - literary
     - new york times bestseller
     - queer
     - romance

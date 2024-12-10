@@ -10,7 +10,6 @@ params:
     - adventure
     - diseases
     - fantasy
-    - fiction
     - gay
     - high fantasy
     - magic

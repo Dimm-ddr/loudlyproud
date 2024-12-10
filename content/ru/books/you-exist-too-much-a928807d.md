@@ -24,9 +24,8 @@ params:
     - Lambda Literary Awards
     - contemporary
     - feminism
-    - fiction
     - lesbian
-    - literary fiction
+    - literary
     - novels
     - queer
     - teenage

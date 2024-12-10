@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: tainopis-ploti-written-on-the-body-bdd15a16
 title: Тайнопись плоти. (Written On The Body)
@@ -32,7 +31,7 @@ params:
     - Belletristische Darstellung
     - Ehefrau
     - England
-    - Fiction general
+    - general
     - LGBTQIA+
     - Lambda Literary Award Winner
     - Lambda Literary Awards
@@ -41,8 +40,7 @@ params:
     - Married women
     - Stonewall book awards
     - contemporary
-    - fiction
-    - literary fiction
+    - literary
     - marriage
     - novels
     - queer

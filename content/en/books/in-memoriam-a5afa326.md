@@ -23,25 +23,22 @@ params:
     - American literature
     - Boarding school students
     - England
-    - Gay fiction
+    - Gay
     - Great Britain
     - Henry Gaunt
     - LGBTQIA+
     - Sidney Ellwood
-    - War fiction
+    - War
     - World War 1914-1918
     - best friends
     - boarding school
-    - fiction
     - gay
     - historical
-    - historical fiction
     - history
-    - literary fiction
-    - male fiction
+    - literary
+    - male
     - novels
     - queer
     - romance
     - war
-    - war fiction
 ---

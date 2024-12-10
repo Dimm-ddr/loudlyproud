@@ -5,18 +5,29 @@ from pathlib import Path
 from typing import TypeAlias
 from collections.abc import Sequence
 from ruamel.yaml import YAML
+import json
 
 # Type aliases
 TagValue: TypeAlias = str | list[str] | None
 
 
 class TagNormalizer:
-    def __init__(self, patterns_file: Path | None = None) -> None:
+    def __init__(
+        self, patterns_file: Path | None = None, mapping_file: Path | None = None
+    ) -> None:
         if patterns_file is None:
             patterns_file = Path("data/tags/patterns.yaml")
+        if mapping_file is None:
+            mapping_file = Path("data/tags/mapping.json")
+
         yaml = YAML(typ="safe")
         with open(patterns_file) as f:
             self.patterns = yaml.load(f)
+
+        # Load mapping for correct capitalization
+        with open(mapping_file) as f:
+            self.mapping = json.load(f)
+            self.mapping_lower = {k.lower(): k for k in self.mapping}
 
     def should_remove(self, tag: str) -> bool:
         """Check if tag should be removed entirely."""
@@ -67,44 +78,63 @@ class TagNormalizer:
 
     def normalize(self, tag: str) -> TagValue:
         """
-        Normalize a single tag, returning either:
-        - None if tag should be removed
-        - A string if tag should be kept as is (after cleanup)
-        - A list of strings if tag should be split into multiple tags
+        Normalize a single tag in steps:
+        1. Apply patterns (split/transform)
+        2. Convert to lowercase
+        3. Apply mapping
         """
         if self.should_remove(tag):
             return None
 
-        # First try compound rules
+        # 1. Apply patterns
         result = self.apply_compound_rules(tag)
         if isinstance(result, list):
-            return result
+            transformed_tags = result
+        else:
+            # Try splitting if compound rules didn't apply
+            tag = self.trim_tag(tag)
+            result = self.split_tag(tag)
+            transformed_tags = result if isinstance(result, list) else [result]
 
-        # Then try splitting
-        tag = self.trim_tag(tag)
-        result = self.split_tag(tag)
+        # 2. Convert to lowercase
+        lowercase_tags = [t.lower() for t in transformed_tags]
 
-        return result if result else None
+        # 3. Apply mapping
+        mapped_tags = [self.mapping.get(tag, tag) for tag in lowercase_tags]
+
+        return mapped_tags if len(mapped_tags) > 1 else mapped_tags[0]
 
     def normalize_tags(self, tags: Sequence[str]) -> list[str]:
-        """Normalize a list of tags, expanding any that split into multiple tags."""
+        """
+        Normalize a list of tags:
+        1. Apply normalization to each tag
+        2. Flatten the results
+        3. Remove duplicates (case-sensitive since mapping was already applied)
+        """
         normalized = []
+        seen = set()
+
         for tag in tags:
             result = self.normalize(tag)
             if isinstance(result, list):
-                normalized.extend(result)
+                for r in result:
+                    if r and r.lower() not in seen:
+                        normalized.append(r)
+                        seen.add(r.lower())
             elif result:
-                normalized.append(result)
-        return list(
-            dict.fromkeys(normalized)
-        )  # Remove duplicates while preserving order
+                if result.lower() not in seen:
+                    normalized.append(result)
+                    seen.add(result.lower())
+
+        return normalized
 
 
-def normalize_tag(tag: str) -> str:
-    """Legacy normalize function for backward compatibility."""
-    return tag.lower().strip()
-
-
-def get_tag_display_name(tag: str) -> str:
-    """Get display name for a tag."""
-    return tag
+def load_tag_normalization() -> tuple[dict[str, str], dict[str, str]]:
+    """Load tag normalization rules."""
+    yaml = YAML(typ="safe")
+    with open(Path("data/tags/tag_normalization.yaml")) as f:
+        data = yaml.load(f)
+        return (
+            {k.lower(): v for k, v in data.get("normalizations", {}).items()},
+            data.get("display", {}),
+        )

@@ -9,13 +9,13 @@ params:
     - LGBTQIA+
     - Russia
     - Vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni V.I. Lenina
-    - children's fiction
+    - children's
     - contemporary
-    - fiction
     - queer
     - romance
     - teenage
-    - young adult (YA)
+    - young adult
+    - YA
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630593788i/58870322.jpg
   isbn: '9785604653005'
   goodreads_link: https://www.goodreads.com/book/show/58870322

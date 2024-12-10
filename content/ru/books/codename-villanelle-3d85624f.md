@@ -29,7 +29,6 @@ params:
     - LGBTQIA+
     - audiobook
     - crime
-    - fiction
     - murder
     - mystery
     - spy stories

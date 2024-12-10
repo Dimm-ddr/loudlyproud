@@ -23,37 +23,40 @@ params:
   russian_translation_status: exists
   short_book_description: Вскоре после самоубийства отца шестнадцатилетний Аарон Сото безуспешно пытается вновь обрести счастье. Горе и шрам в виде смайлика на запястье не дают ему забыть о случившемся. Несмотря на поддержку девушки и матери, боль не отпускает...
   tags:
-    - Bronx (New York N.Y.)
+    - Bronx
+    - New York N.Y.
     - Children of suicide victims
-    - Children's fiction
-    - Coming out (Sexual orientation)
-    - Dating (Social customs)
-    - Dating (social customs) fiction
+    - Children's
+    - Coming out
+    - Sexual orientation
+    - Dating
+    - Social customs
+    - social customs
     - Fantasy & Magic
-    - Homosexuality fiction
+    - Homosexuality
     - JUVENILE FICTION / Fantasy & Magic
     - JUVENILE FICTION / Love & Romance
     - LGBTQIA+
     - Love & Romance
     - Memory
-    - New York (N.Y.)
+    - New York
+    - N.Y.
     - New York Times reviewed
-    - New york (n.y.) fiction
+    - New york
+    - n.y.
     - Puerto Rican youth
-    - Single-parent families fiction
+    - Single-parent families
     - Urban poor
     - Youths' writings
     - bullying
-    - collectionID:KellerChallenge
-    - collectionID:bannedbooks
     - contemporary
-    - fiction
     - gay
     - gay teenagers
-    - juvenile fiction
+    - juvenile
     - queer
     - romance
-    - science fiction
+    - science
     - single-parent families
-    - young adult (YA)
+    - young adult
+    - YA
 ---

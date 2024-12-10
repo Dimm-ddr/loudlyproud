@@ -6,12 +6,10 @@ type: books
 params:
   book_title: Red
   tags:
-    - American fiction
+    - American
     - LGBTQIA+
     - Westerns
-    - fiction
     - historical
-    - historical fiction
     - queer
     - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1671472804i/61387980.jpg

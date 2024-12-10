@@ -26,13 +26,12 @@ Book content
 
 def test_normalize_tags():
     """Test tag normalization"""
+    tags = ["venice", "italy", "romance"]
     normalizer = TagNormalizer()
-    tags = ["fiction romance", "venice (italy)", "nyt:bestseller"]
-    normalized = normalize_tags(tags, normalizer)
+    normalized = normalizer.normalize_tags(tags)
+    assert "Venice" in normalized
+    assert "Italy" in normalized
     assert "romance" in normalized
-    assert "venice" in normalized
-    assert "italy" in normalized
-    assert "nyt:bestseller" not in normalized
 
 
 def test_process_book_file(test_data_dir):

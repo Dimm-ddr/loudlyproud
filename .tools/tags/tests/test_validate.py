@@ -3,8 +3,14 @@
 import json
 import pytest
 from ruamel.yaml import YAML
-from tags.validate import validate_tags, load_tags_map, load_color_mapping
+from tags.validate import (
+    validate_tags,
+    load_tags_map,
+    load_color_mapping,
+    extract_tags_from_file,
+)
 from .test_helpers import detailed_assert, with_context
+from pathlib import Path
 
 
 @pytest.fixture
@@ -21,19 +27,19 @@ def test_project_dir(tmp_path):
     mapping_file.parent.mkdir(parents=True)
     mapping_file.write_text(json.dumps(mapping))
 
-    # Create colors.yaml with proper capitalization
-    colors = {
-        "tag_colors": {
-            "romance": "#ff0000",
-            "Venice": "#00ff00",
-            "Italy": "#0000ff",
-            "fiction": "#cccccc"
-        }
-    }
-    colors_file = tmp_path / "data" / "tags" / "colors.yaml"
-    yaml = YAML()
-    with colors_file.open("w") as f:
-        yaml.dump(colors, f)
+    # Create colors.toml with proper categories
+    colors_file = tmp_path / "data" / "tags" / "colors.toml"
+    colors_file.write_text('''
+    ["Genres"]
+    "romance" = "forest"
+
+    ["Cultural and Geographic"]
+    "Venice" = "deep-blue"
+    "Italy" = "deep-blue"
+
+    ["Literary Classifications"]
+    "fiction" = "aubergine"
+    ''')
 
     # Create test book with unmapped tag
     book_content = """---
@@ -91,10 +97,119 @@ def test_load_tags_map(test_project_dir):
     assert "italy" in tags_map
 
 
-def test_load_color_mapping(test_project_dir):
-    """Test loading color mapping"""
-    colors = load_color_mapping(test_project_dir)
-    # Colors should be case-insensitive
-    assert "venice" in colors
-    assert "italy" in colors
-    assert "romance" in colors
+@pytest.fixture
+def mock_colors_toml(tmp_path):
+    """Create a mock colors.toml file."""
+    colors_file = tmp_path / "data" / "tags" / "colors.toml"
+    colors_file.parent.mkdir(parents=True)
+    colors_file.write_text('''
+["Genres"]
+"fantasy" = "forest"
+"science fiction" = "forest"
+
+["Cultural and Geographic"]
+"American fiction" = "deep-blue"
+"British literature" = "deep-blue"
+''')
+    return colors_file
+
+
+def test_load_color_mapping(mock_colors_toml):
+    """Test loading color mapping from TOML file."""
+    colors = load_color_mapping(mock_colors_toml.parent.parent.parent)
+    assert colors == {
+        "fantasy",
+        "science fiction",
+        "American fiction",
+        "British literature"
+    }
+
+
+def test_validate_tags_with_colors(tmp_path, mock_colors_toml):
+    """Test tag validation with color mapping."""
+    # Create mock mapping file
+    mapping_file = tmp_path / "data" / "tags" / "mapping.json"
+    mapping_file.parent.mkdir(parents=True, exist_ok=True)
+    mapping_file.write_text('''{
+        "fantasy": "fantasy",
+        "science fiction": "science fiction",
+        "american fiction": "American fiction",
+        "british literature": "British literature",
+        "unmapped tag": "unmapped tag"
+    }''')
+
+    # Create mock content file
+    content_dir = tmp_path / "content"
+    content_dir.mkdir(parents=True)
+    (content_dir / "books").mkdir()
+    (content_dir / "books" / "test.md").write_text('''---
+params:
+  tags: ["fantasy", "unmapped tag"]
+---
+''')
+
+    report = validate_tags(tmp_path)
+    assert "unmapped tag" in report["uncolored_tags"]
+    assert "fantasy" not in report["uncolored_tags"]
+
+
+@pytest.mark.parametrize(
+    "content,expected",
+    [
+        (
+            """---
+params: "not a dictionary"
+---
+""",
+            [],
+        ),
+        (
+            """---
+params:
+  tags: "not a list"
+---
+""",
+            [],
+        ),
+        (
+            """---
+no_params: true
+---
+""",
+            [],
+        ),
+        (
+            "Not a YAML content",
+            [],
+        ),
+        (
+            """---
+params:
+  tags:
+    - "valid tag"
+  other: value
+---
+""",
+            ["valid tag"],
+        ),
+    ],
+)
+def test_extract_tags_invalid_frontmatter(tmp_path, content, expected):
+    """Test extracting tags with various invalid frontmatter structures."""
+    book_file = tmp_path / "test.md"
+    book_file.write_text(content)
+    assert extract_tags_from_file(book_file) == expected
+
+
+def test_extract_tags_missing_file(tmp_path):
+    """Test extracting tags from non-existent file."""
+    non_existent = tmp_path / "does_not_exist.md"
+    assert extract_tags_from_file(non_existent) == []
+
+
+def test_extract_tags_invalid_encoding(tmp_path):
+    """Test extracting tags from file with invalid encoding."""
+    book_file = tmp_path / "test.md"
+    # Write bytes that are not valid UTF-8
+    book_file.write_bytes(b"\xFF\xFE Invalid UTF-8 content")
+    assert extract_tags_from_file(book_file) == []

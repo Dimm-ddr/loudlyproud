@@ -1,7 +1,6 @@
 ---
 
 
-
 draft: false
 slug: odinokii-muzhchina-a-single-man-316da7cf
 title: Одинокий мужчина (A Single Man)
@@ -27,25 +26,26 @@ params:
   russian_translation_status: exists
   short_book_description: Роман "Одинокий мужчина", впервые опубликованный в 1964 году и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной роли), - одно из самых известных произведений Ишервуда…
   tags:
-    - British and irish fiction (fictional works by one author)
-    - Fiction general
-    - Fiction in English
-    - Fiction psychological
+    - British and irish fiction
+    - fictional works by one author
+    - general
+    - in English
+    - psychological
     - Gay college teachers
-    - Gay men fiction
+    - Gay men
     - Gay teachers
     - Homosexuella män
     - LGBTQIA+
     - LGBTQIA+ novels before Stonewall
-    - Loss (Psychology)
+    - Loss
+    - Psychology
     - Middle-aged gay men
     - Middle-aged men
     - Skönlitteratur
     - classics
-    - fiction
     - gay
     - grief
-    - literary fiction
+    - literary
     - novels
     - queer
 ---

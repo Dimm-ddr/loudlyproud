@@ -23,9 +23,9 @@ params:
     - Russia
     - Russian literature
     - authors
-    - fiction
     - gay
     - romance
     - teenage
-    - young adult (YA)
+    - young adult
+    - YA
 ---

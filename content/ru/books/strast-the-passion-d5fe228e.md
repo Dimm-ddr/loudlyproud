@@ -32,29 +32,23 @@ params:
     - 19th century
     - English literature
     - Europe history
-    - Fiction romance historical
-    - Fiction romance historical general
+    - romance historical
+    - romance historical general
     - France
     - French
-    - French -- Russia -- Fiction.
-    - French fiction
+    - Russia
     - Italy
     - LGBTQIA+
-    - Man-woman relationships fiction
+    - Man-woman relationships
     - Napoleonic War
     - Napoleonic Wars 1800-1815
-    - Napoleonic Wars 1800-1815 -- Fiction.
-    - Napoleonic wars 1800-1815 fiction
-    - Russia
+    - Napoleonic wars 1800-1815
     - Soldiers
-    - Soldiers -- Fiction.
     - Venice
-    - Venice (Italy) -- Fiction.
+    - Venice (Italy)
     - Wives
     - fantasy
-    - fiction
     - historical
-    - historical fiction
     - magical realism
     - male-female romance
     - queer

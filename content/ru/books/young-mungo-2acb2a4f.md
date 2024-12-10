@@ -20,7 +20,7 @@ params:
   short_book_description: Growing up in a housing estate in Glasgow, Mungo and James are born under different stars--Mungo a Protestant and James a Catholic--and they should be sworn enemies if they're to be seen as men at...
   tags:
     - American literature
-    - Gay fiction
+    - Gay
     - James
     - LGBTQIA+
     - Mungo
@@ -28,16 +28,16 @@ params:
     - Working class families
     - contemporary
     - family
-    - fiction
     - friendship
     - gay teenagers
-    - historical fiction
-    - literary fiction
+    - historical
+    - literary
     - love in adolescence
     - mental illness
     - novels
     - queer
     - romance
     - violence against gay teenagers
-    - young adult (YA)
+    - young adult
+    - YA
 ---

@@ -2,10 +2,10 @@
 
 from pathlib import Path
 from ruamel.yaml import YAML
-from dataclasses import dataclass
+from tags.normalize import TagNormalizer
+import tomllib
 from typing import TypedDict
 import json
-from .normalize import TagNormalizer, normalize_tag, get_tag_display_name
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -14,7 +14,7 @@ CONTENT_DIR = Path("content")
 
 # File names
 MAPPING_FILE = "mapping.json"
-COLORS_FILE = "colors.yaml"
+COLORS_FILE = "colors.toml"
 VALIDATION_FILE = "validation-report.txt"
 
 
@@ -37,23 +37,27 @@ def load_color_mapping(project_root: Path) -> set[str]:
     """Load valid tags from color mapping."""
     color_file = project_root.joinpath(TAGS_CONFIG_DIR, COLORS_FILE)
     try:
-        yaml = YAML()
-        data = yaml.load(color_file)
-        return {k.lower() for k in data.get("tag_colors", {})}
+        with open(color_file, "rb") as f:  # TOML requires binary mode
+            data = tomllib.load(f)
+            # Collect all tags from all categories
+            tags = set()
+            for category in data.values():
+                tags.update(category.keys())
+            return tags
     except Exception as e:
-        print(f"Error loading color mapping: {e}")
+        print(f"Error loading TOML color mapping: {e}")
         return set()
 
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
+    yaml = YAML()
+    yaml.preserve_quotes = True
     match content.split("---\n", 2):
         case ["", frontmatter, *rest] if rest:
             try:
-                yaml = YAML()
-                yaml.preserve_quotes = True
                 return yaml.load(frontmatter), rest[0]
-            except yaml.YAMLError:
+            except Exception:  # Handle any YAML parsing errors
                 return None
         case _:
             return None
@@ -65,9 +69,19 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
         content = file_path.read_text(encoding="utf-8")
         if result := split_frontmatter(content):
             frontmatter, _ = result
-            return frontmatter.get("params", {}).get("tags", []) or []
+            # Handle missing params or tags
+            params = frontmatter.get("params", {})
+            if not isinstance(params, dict):
+                print(f"Warning: 'params' in {file_path} is not a dictionary")
+                return []
+            tags = params.get("tags", [])
+            if not isinstance(tags, list):
+                print(f"Warning: 'tags' in {file_path} is not a list")
+                return []
+            return tags
+        return []
     except Exception as e:
-        print(f"Error reading {file_path}: {e}")
+        print(f"Warning: Could not process {file_path}: {e}")
     return []
 
 
@@ -111,12 +125,13 @@ def validate_tags(project_root: Path) -> ValidationReport:
     - uncolored_tags: tags not in colors (checking mapped values)
     """
     normalizer = TagNormalizer()
-
     content_dir = project_root.joinpath(CONTENT_DIR)
 
     # Load configurations
     tags_map = load_tags_map(project_root)
-    color_tags = load_color_mapping(project_root)
+    color_tags = load_color_mapping(
+        project_root
+    )  # Now contains canonical names from TOML
 
     # Collect all tags from files
     all_tags = collect_all_tags(content_dir)
@@ -133,10 +148,20 @@ def validate_tags(project_root: Path) -> ValidationReport:
     )
 
     # Check colors for mapped values and unmapped tags
-    tags_to_check_colors = mapped_values | {tag.lower() for tag in unmapped_tags}
-    uncolored_tags = sorted(
-        tag for tag in tags_to_check_colors if normalize_tag(tag) not in color_tags
+    # Use canonical names from mapping for mapped values
+    mapped_canonical = {
+        tags_map[k] for k, v in tags_map.items() if v is not None and isinstance(v, str)
+    }
+    mapped_canonical.update(
+        tag
+        for k, v in tags_map.items()
+        if v is not None and isinstance(v, list)
+        for tag in v
     )
+
+    # Combine with unmapped tags
+    tags_to_check = mapped_canonical | set(unmapped_tags)
+    uncolored_tags = sorted(tag for tag in tags_to_check if tag not in color_tags)
 
     return {"unmapped_tags": unmapped_tags, "uncolored_tags": uncolored_tags}
 
@@ -167,7 +192,12 @@ def write_report(report: ValidationReport, project_root: Path) -> None:
     print(f"\nDetailed report saved to {report_file}")
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Main function for tag validation."""
     project_root = Path.cwd()
     report = validate_tags(project_root)
     write_report(report, project_root)
+
+
+if __name__ == "__main__":
+    main()

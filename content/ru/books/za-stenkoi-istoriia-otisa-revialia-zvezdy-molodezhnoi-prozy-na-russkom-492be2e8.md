@@ -5,8 +5,7 @@ title: За Стенкой. История Отиса Ревиаля (звезд
 type: books
 params:
   book_title: За Стенкой. История Отиса Ревиаля (звезды Молодежной Прозы На Русском)
-  tags:
-    - fiction
+  tags: []
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1710480243i/209972881.jpg
   isbn: '9785043228932'
   goodreads_link: https://www.goodreads.com/book/show/209972881

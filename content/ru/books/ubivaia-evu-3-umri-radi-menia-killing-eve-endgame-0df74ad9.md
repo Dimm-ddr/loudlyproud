@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: ubivaia-evu-3-umri-radi-menia-killing-eve-endgame-0df74ad9
 title: 'Убивая Еву 3: Умри ради меня (Killing Eve : Endgame)'
@@ -28,7 +27,6 @@ params:
     - English literature
     - LGBTQIA+
     - crime
-    - fiction
     - mystery
     - queer
     - thriller

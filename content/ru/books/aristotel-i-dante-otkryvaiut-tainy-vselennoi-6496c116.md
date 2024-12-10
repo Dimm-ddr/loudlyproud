@@ -10,10 +10,10 @@ params:
     - audiobook
     - coming of age
     - contemporary
-    - fiction
     - mental health
     - queer
-    - young adult (YA)
+    - young adult
+    - YA
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551444831i/44165654.jpg
   isbn: '9785604072134'
   goodreads_link: https://www.goodreads.com/book/show/44165654

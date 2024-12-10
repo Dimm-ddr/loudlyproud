@@ -26,28 +26,29 @@ params:
   short_book_description: «С прискорбием сообщаем вам, что в последующие двадцать четыре часа вас постигнет безвременная смерть. Приносим глубочайшие соболезнования вашим родным и близким…»
   tags:
     - Adventure and adventurers
-    - Adventure and adventurers fiction
-    - Children's fiction
-    - Death fiction
-    - Friendship fiction
+    - Children's
+    - Death
+    - Friendship
     - Hispanic Americans
-    - Hispanic americans fiction
-    - Homosexuality fiction
+    - Hispanic americans
+    - Homosexuality
     - LGBTQIA+
-    - Love fiction
-    - New York (N.Y.)
-    - New york (n.y.) fiction
-    - Romance fiction
+    - Love
+    - New York
+    - N.Y.
+    - New york
+    - n.y.
+    - Romance
     - audiobook
     - contemporary
     - death
-    - fiction
     - friendship
     - gay
-    - juvenile fiction
+    - juvenile
     - love
     - new york times bestseller
     - queer
     - romance
-    - young adult (YA)
+    - young adult
+    - YA
 ---

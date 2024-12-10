@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 
-import sys
 from pathlib import Path
-
-# Add project root to Python path
-project_root = Path(__file__).parent.parent.parent
-sys.path.append(str(project_root))
-
+import sys
 from dataclasses import dataclass, field
 from typing import TypedDict, NotRequired
 from collections import Counter
@@ -174,6 +169,7 @@ def process_books(
 
 
 def main() -> None:
+    """Main function for tag cleanup."""
     project_root = Path.cwd()
     content_dir = project_root.joinpath(CONTENT_DIR)
     stats_file = project_root.joinpath(GENERATED_DATA_DIR, STATS_FILE)
@@ -194,7 +190,7 @@ def main() -> None:
     print("\nProcessing book files...")
     stats = process_books(content_dir, tags_map, normalizer)
 
-    # Print report
+    # Print and save report
     print(f"\nProcessed {stats.total_files} files")
     print(f"Updated tags in {stats.files_with_changes} files")
 

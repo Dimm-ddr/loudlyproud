@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: tsena-soli-the-price-of-salt-a84cd3ed
 title: Цена соли (The Price Of Salt)
@@ -34,17 +33,16 @@ params:
     - Chicago
     - Custody of children
     - Divorce
-    - Fiction action & adventure
-    - Fiction lesbian
-    - Fiction LGBTQIA+ gay
-    - Fiction LGBTQIA+ lesbian
-    - Fiction mystery & detective general
-    - Fiction romance fantasy
+    - action & adventure
+    - lesbian
     - LGBTQIA+
+    - gay
+    - mystery & detective general
+    - romance fantasy
     - LGBTQIA+ novels before Stonewall
     - Lesbian love story
     - Lesbian romance novel
-    - Lesbians fiction
+    - Lesbians
     - Literary
     - Media Tie-In
     - Mothers
@@ -57,9 +55,7 @@ params:
     - United States
     - classics
     - family
-    - fiction
-    - historical fiction
-    - lesbian
+    - historical
     - novels
     - queer
     - romance

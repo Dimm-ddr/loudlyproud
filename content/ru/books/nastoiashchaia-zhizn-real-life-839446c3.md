@@ -25,21 +25,17 @@ params:
   tags:
     - African American gay men
     - American literature
-    - FICTION / African American / General
-    - FICTION / LGBT / Gay
-    - FICTION / Literary
-    - Fiction african american & black general
-    - Fiction african american general
+    - african american & black general
+    - african american general
     - Graduate students
     - LGBTQIA+
     - New York Times reviewed
     - Race
     - audiobook
     - contemporary
-    - fiction
     - friendship
     - gay
-    - literary fiction
+    - literary
     - queer
     - relationships
 ---

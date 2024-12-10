@@ -66,13 +66,30 @@ def test_compound_rules():
 
 
 def test_normalize_tags():
-    """Test full normalization process"""
-    normalizer = TagNormalizer()
+    """Test normalizing a list of tags."""
     input_tags = [
-        "nyt:bestseller",
-        "fiction romance",
-        "venice (italy)",
-        "tag--fiction",
+        "fantasy",
+        "romance",
+        "strips",  # should be removed
+        "contemporary romance",  # should be split via mapping
     ]
-    expected = ["fiction", "romance", "venice", "italy", "tag"]
+    expected = ["fantasy", "romance", "contemporary"]
+    normalizer = TagNormalizer()
+    assert set(normalizer.normalize_tags(input_tags)) == set(expected)
+
+
+@pytest.mark.parametrize(
+    "input_tags,expected",
+    [
+        (["fantasy"], ["fantasy"]),
+        (["strips"], []),  # should be removed
+        (["fantasy", "strips"], ["fantasy"]),
+        (["american short stories"], ["American fiction", "short stories"]),  # split via mapping
+        (["detective and mystery stories"], ["detective", "mystery"]),  # another mapping example
+        (["venice (italy)"], ["Venice", "Italy"]),  # parentheses pattern with proper capitalization
+    ],
+)
+def test_normalize_tags_parametrized(input_tags, expected):
+    """Test tag normalization with various inputs."""
+    normalizer = TagNormalizer()
     assert set(normalizer.normalize_tags(input_tags)) == set(expected)

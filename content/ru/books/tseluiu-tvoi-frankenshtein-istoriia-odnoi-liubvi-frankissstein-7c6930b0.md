@@ -26,21 +26,20 @@ params:
   tags:
     - Artificial intelligence
     - Cryonics
-    - Fiction gothic
-    - Fiction political
-    - Fiction romance historical
-    - Fiction romance historical general
-    - Fiction romance science fiction
-    - Fiction science fiction general
-    - Fiction women
+    - gothic
+    - political
+    - romance historical
+    - romance historical general
+    - romance science
+    - science fiction general
+    - women
     - LGBTQIA+
     - New York Times reviewed
     - Sex dolls
     - contemporary
-    - fiction
-    - historical fiction
-    - literary fiction
+    - historical
+    - literary
     - queer
-    - science fiction
+    - science
     - transgender
 ---

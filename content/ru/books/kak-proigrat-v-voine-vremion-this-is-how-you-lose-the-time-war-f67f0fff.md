@@ -8,17 +8,16 @@ params:
   tags:
     - Atlantis
     - English literature
-    - Fiction science fiction general
+    - science fiction general
     - LGBTQIA+
     - London
     - The whole of time and space
     - epistolary
     - fantasy
-    - fiction
     - new york times bestseller
     - queer
     - romance
-    - science fiction
+    - science
     - time-traveling
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
   editions count: '42'

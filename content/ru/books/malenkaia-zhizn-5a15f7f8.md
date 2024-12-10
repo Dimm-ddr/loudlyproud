@@ -35,15 +35,12 @@ params:
     - Brooklyn
     - Brooklyn College
     - Chinatown
-    - Dysfunctional families -- Fiction
-    - FICTION / Coming of Age
-    - FICTION / Literary
-    - FICTION / Sagas
+    - Dysfunctional families
     - Familias
     - Familles
-    - Fiction coming of age
-    - Fiction family life
-    - Fiction family life general
+    - coming of age
+    - family life
+    - family life general
     - Flora
     - Haiti
     - Homosexuels masculins
@@ -51,34 +48,32 @@ params:
     - Lispenard Street
     - Literary
     - Male friendship
-    - Male friendship -- Fiction
     - Manhattan
     - Memoria
     - Memory
-    - Memory -- Fiction
     - Museum of Modern Art
     - New York
-    - New York (N.Y.)
+    - N.Y.
+    - State
     - New York (State)
-    - New York (State) -- Social life and customs -- Fiction
+    - Social life and customs
     - New York City
     - New York Times reviewed
-    - New york (n.y.) fiction
+    - New york
+    - n.y.
     - Queens
     - Romans nouvelles
     - SoHo
     - Upper East Side
-    - adult fiction
+    - adult
     - child abuse
-    - coming of age
     - contemporary
-    - domestic fiction
+    - domestic
     - dysfunctional families
     - family
-    - fiction
     - friendship
     - gay
-    - literary fiction
+    - literary
     - mental health
     - novels
     - queer

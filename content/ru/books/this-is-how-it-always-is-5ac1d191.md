@@ -21,20 +21,19 @@ params:
   short_book_description: Alternate cover edition of ASIN B01HW6Z3FGThis is how a family keeps a secret…and how that secret ends up keeping them.This is how a family lives happily ever after…until happily ever after...
   tags:
     - Family secrets
-    - Fiction family life
-    - Fiction family life general
+    - family life
+    - family life general
     - LGBTQIA+
     - New York Times reviewed
     - Parenting
     - Parents of transgender children
     - Sexual behavior
-    - adult fiction
+    - adult
     - audiobook
     - book club
     - boys
     - contemporary
     - family
-    - fiction
     - gender identity
     - parent-child relationship
     - transgender children

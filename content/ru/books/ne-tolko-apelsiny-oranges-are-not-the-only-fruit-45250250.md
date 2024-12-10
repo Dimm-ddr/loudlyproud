@@ -30,27 +30,20 @@ params:
     - Christian gays
     - Christianity and sexuality
     - England
-    - England -- Fiction
-    - England fiction
-    - English fiction
+    - English
     - Family relationships
-    - Fiction coming of age
-    - Fiction lesbian
-    - Fiction LGBTQIA+ lesbian
-    - Fiction romance LGBTQIA+ lesbian
-    - Great britain fiction
+    - coming of age
+    - lesbian
     - LGBTQIA+
-    - Lesbians -- Fiction
-    - Lesbians fiction
-    - Mothers and daughters fiction
+    - romance LGBTQIA+ lesbian
+    - Great britain
+    - Lesbians
+    - Mothers and daughters
     - Religion
     - Teenage girls
-    - Teenage girls -- Fiction
     - classics
     - contemporary
     - family
-    - fiction
-    - lesbian
     - mother-daughter relationship
     - queer
 ---

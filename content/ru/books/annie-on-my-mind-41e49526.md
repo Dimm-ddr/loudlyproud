@@ -19,27 +19,28 @@ params:
   russian_translation_status: might_exist
   short_book_description: This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be...
   tags:
-    - Children's fiction
-    - Coming out (Sexual orientation)
+    - Children's
+    - Coming out
+    - Sexual orientation
     - First loves
-    - Friendship fiction
-    - Girls fiction
+    - Friendship
+    - Girls
     - Homophobia
-    - Homosexuality fiction
+    - Homosexuality
     - Interviews
     - LGBTQIA+
     - Lesbian love stories
     - Lesbian students
     - Lesbian teachers
     - Lesbian teenagers
-    - Love fiction
+    - Love
     - Private schools
     - contemporary
-    - fiction
-    - juvenile fiction
+    - juvenile
     - lesbian
     - queer
     - romance
     - sexuality
-    - young adult (YA)
+    - young adult
+    - YA
 ---

@@ -1,5 +1,6 @@
 # Geographic/Cultural (deep-blue)
 tag_colors:
+  arkansas: deep-blue
   american-fiction: deep-blue
   americans: deep-blue
   asian-americans: deep-blue
@@ -62,9 +63,10 @@ tag_colors:
   retellings: plum
 
   # Identity & Social Themes (rust)
-  lgbtq: rust
-  lgbtq-activists: rust
-  lgbtq-novels-before-stonewall: rust
+  ex-gay-movement: rust
+  lgbtqia: rust
+  lgbtqia-activists: rust
+  lgbtqia-novels-before-stonewall: rust
   gay: rust
   lesbian: rust
   queer: rust
@@ -79,9 +81,9 @@ tag_colors:
   dating: rust
   relationships: rust
   arab-americans: rust
-  lgbtq-plus: rust
-  lgbtq-plus-activists: rust
-  lgbtq-plus-novels-before-stonewall: rust
+  lgbtqia-plus: rust
+  lgbtqia-plus-activists: rust
+  lgbtqia-plus-novels-before-stonewall: rust
   sexuality: rust
   women: rust
 
@@ -170,6 +172,7 @@ tag_colors:
   christmas: burgundy
   diseases: marine
   holidays: burgundy
+  sexual-reorientation-programs: rust
 
   # Relationship Types (using romance color)
   female-female-romance: forest

@@ -19,12 +19,11 @@ params:
   russian_translation_status: unknown
   short_book_description: 'San Francisco in 1940 is a haven for the unconventional. Tourists flock to the cities within the city: the Magic City of the World’s Fair on an island created of artifice and illusion; the...'
   tags:
-    - Fiction romance historical general
+    - romance historical general
     - LGBTQIA+
     - San Francisco
     - fantasy
     - historical
-    - historical fiction
     - novels
     - queer
     - romance

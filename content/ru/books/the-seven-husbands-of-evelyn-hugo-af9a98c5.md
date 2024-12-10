@@ -3,7 +3,6 @@
 
 
 
-
 draft: false
 slug: the-seven-husbands-of-evelyn-hugo-af9a98c5
 title: The Seven Husbands Of Evelyn Hugo
@@ -32,18 +31,17 @@ params:
   tags:
     - Authorship
     - Biographers
-    - Fiction general
-    - Fiction romance contemporary
-    - Hollywood (los angeles calif.) fiction
+    - general
+    - romance contemporary
+    - Hollywood
+    - los angeles calif.
     - LGBTQIA+
     - Motion picture actors and actresses
     - Women journalists
     - audiobook
     - biography
     - contemporary
-    - fiction
     - historical
-    - historical fiction
     - male-female romance
     - new york times bestseller
     - performing arts

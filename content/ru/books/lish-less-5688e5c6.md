@@ -31,11 +31,11 @@ params:
     - Arthur Less
     - Authors
     - Carlos Pelu
-    - Fiction humorous
-    - Fiction humorous general
-    - Fiction satire
+    - humorous
+    - humorous general
+    - satire
     - Freddy Pelu
-    - Gay men fiction
+    - Gay men
     - Gay novelists
     - Germany
     - Homoseksualizm
@@ -63,10 +63,9 @@ params:
     - audiobook
     - authors
     - contemporary
-    - fiction
     - gay
     - humor
-    - literary fiction
+    - literary
     - new york times bestseller
     - novels
     - queer

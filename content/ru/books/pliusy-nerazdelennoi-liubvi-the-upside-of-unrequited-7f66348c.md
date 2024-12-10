@@ -8,24 +8,24 @@ params:
   tags:
     - Children of gay parents
     - Children of sperm donors
-    - Children's fiction
-    - Homosexuality fiction
+    - Children's
+    - Homosexuality
     - LGBTQIA+
     - Lesbian teenagers
     - Overweight teenagers
-    - Romance fiction
+    - Romance
     - Sisters
     - Twins
     - audiobook
     - contemporary
-    - fiction
     - friendship
     - gay teenagers
     - mental illness
     - queer
     - relationships
     - romance
-    - young adult (YA)
+    - young adult
+    - YA
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg
   isbn: '9785604219638'
   goodreads_link: https://www.goodreads.com/book/show/43702718

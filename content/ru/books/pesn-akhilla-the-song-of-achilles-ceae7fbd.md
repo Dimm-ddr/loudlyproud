@@ -30,14 +30,14 @@ params:
   short_book_description: 'Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил и робок, так еще и нечаянно убивает сверстника..'
   tags:
     - Achilles
-    - Achilles (Greek mythology)
+    - Greek mythology
     - Amitié masculine
     - Ancient Greece
     - Chiron
-    - Fiction historical
-    - Fiction historical general
-    - Fiction war & military
-    - Gay fiction
+    - historical
+    - historical general
+    - war & military
+    - Gay
     - Gay love
     - Greece
     - Greeks
@@ -49,16 +49,13 @@ params:
     - Romans nouvelles
     - Stonewall book awards
     - Thetis
-    - To 146 B.C.
+    - To 146 B.C
     - Trojan War
     - Troy
-    - Troy (Extinct city)
+    - Extinct city
     - Turkey
     - fantasy
-    - fiction
     - friendship
-    - historical
-    - historical fiction
     - history
     - mythology
     - new york times bestseller

@@ -1,7 +1,6 @@
 ---
 
 
-
 draft: false
 slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
 title: Красный, белый и королевский синий
@@ -35,19 +34,20 @@ params:
     - June Claremont-Diaz
     - LGBTQIA+
     - London
-    - Presidents united states fiction
+    - Presidents united states
     - Prince Henry of Wales
     - United Kingdom
     - United States
-    - Washington D.C.
+    - Washington D.C
     - White House
     - contemporary
-    - fiction
     - gay
     - humor
-    - new adult (NA)
+    - new adult
+    - NA
     - new york times bestseller
     - queer
     - romance
-    - young adult (YA)
+    - young adult
+    - YA
 ---
