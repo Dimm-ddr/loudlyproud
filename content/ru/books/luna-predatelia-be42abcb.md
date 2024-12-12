@@ -6,16 +6,13 @@ type: books
 params:
   book_title: Луна Предателя
   tags:
+    - LGBTQIA+
     - adventure
-    - fantasy
-    - fiction
     - gay
     - high fantasy
-    - lgbtq-plus
-    - male-male romance
     - magic
+    - male-male romance
     - queer
-    - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486139033i/34108291.jpg
   isbn: '9785699351282'
   goodreads_link: https://www.goodreads.com/book/show/34108291
@@ -33,3 +30,4 @@ params:
   book_description: И опять, опять приходит Время перемен — время страшных перемен. Воины земель Пленимара тянут хищные когти к плодородным землям вдоль Золотого пути. Нет, кажется, конца войне; и нет, похоже, силы, способной победить Зло, чёрной тенью окутавшее мир, во лжи, предательстве и убийстве черпающее могущество. И, значит, вновь настала нужда в искусстве непобедимого воителя Серегила и его неразлучного друга — юного Алека, — в искусстве сражаться с Мраком, непобедимым силою оружия, в искусстве нанести удар в самое сердце предвечного Зла...
   russian_audioversion: false
 ---
+

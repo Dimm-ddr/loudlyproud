@@ -6,24 +6,21 @@ type: books
 params:
   book_title: Что, если это мы (What If It's Us)
   tags:
-    - Children's
-    - Dating
-    - social customs
-    - Fate and fatalism
-    - Homosexuality
     - LGBTQIA+
     - New York
-    - New york
-    - n.y.
     - audiobook
+    - children's
     - contemporary
     - dating
+    - fate and fatalism
     - gay
+    - homosexuality
+    - n.y
     - new york times bestseller
     - queer
     - romance
-    - young adult
-    - YA
+    - social customs
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   editions count: '61'
   isbn: '9785045041126'
@@ -44,3 +41,4 @@ params:
   book_description: 'Для Артура все только начинается: он приехал в Нью-Йорк на летнюю стажировку и мечтает попасть на все свои любимые бродвейские шоу.У Бена каникулы не задались: он недавно пережил расставание и, вместо того чтобы писать свою книгу, вынужден ходить на дополнительные занятия.Однако мимолетная встреча в почтовом отделении переворачивает их жизни с ног на голову. Что, если они никогда не найдут друг друга в огромном мегаполисе? А что, если найдут... но все пойдет не так, как в великих мюзиклах о любви?'
   russian_audioversion: false
 ---
+

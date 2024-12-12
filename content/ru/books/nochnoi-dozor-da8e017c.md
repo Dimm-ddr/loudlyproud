@@ -19,11 +19,9 @@ params:
   russian_translation_status: exists
   short_book_description: «Ночной дозор» Сары Уотерс — один из сильнейших романов прославленного автора «Тонкой работы» и «Бархатных коготков», также вошедший в шортлист Букеровской премии. На этот раз викторианской Англии...
   tags:
-    - lgbtq-plus
-    - fiction
-    - historical
+    - LGBTQIA+
     - historical fiction
     - queer
-    - war
     - world war ii
 ---
+

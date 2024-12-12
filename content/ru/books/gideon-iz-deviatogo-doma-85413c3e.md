@@ -20,12 +20,12 @@ params:
   series: The Locked Tomb
   short_book_description: Императору нужны некроманты.Некроманту Девятого дома нужен меченосец.Воспитанная недружелюбными, окостеневшими монахинями, древними слугами и бесчисленными скелетами, Гидеон готова предать...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - fantasy
-    - fiction
     - horror
     - juvenile fiction
     - lesbian
     - queer
     - science fiction
 ---
+

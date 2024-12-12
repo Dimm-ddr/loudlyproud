@@ -24,14 +24,13 @@ params:
   series: Lore & Lust
   short_book_description: Вопреки распространенному мнению, мы не питаемся людьми. На вкус они как грязь. Зато люди отлично подходят для романов…
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - fantasy
-    - fiction
     - gay
     - male-male romance
     - paranormal
     - queer
-    - romance
     - vampires
 ---
+

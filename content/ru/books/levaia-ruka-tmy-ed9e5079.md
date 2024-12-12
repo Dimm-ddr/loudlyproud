@@ -29,7 +29,6 @@ params:
     - classics
     - fantasy
     - feminism
-    - fiction
     - friendship
     - gender studies
     - identity
@@ -38,5 +37,6 @@ params:
     - queer
     - science fiction
     - social commentary
-    - weird fiction
+    - speculative fiction
 ---
+

@@ -28,21 +28,21 @@ params:
   russian_translation_status: exists
   short_book_description: После того, как маму юной Сильвер буквально сдувает с лица земли, девочка попадает к слепому и мудрому хранителю маяка Пью, который учит ее, что не дать свету угаснуть - это научиться рассказывать истории…
   tags:
-    - Blind
-    - Clergy
-    - general
-    - psychological
     - LGBTQIA+
-    - Lighthouse keepers
-    - Older men
     - Scotland
-    - Storytelling
-    - Young women
+    - blind
+    - clergy
     - contemporary
     - historical
     - lesbian
+    - lighthouse keepers
     - literary
     - magical realism
+    - older men
+    - psychological
     - queer
     - romance
+    - storytelling
+    - young women
 ---
+

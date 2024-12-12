@@ -22,13 +22,12 @@ params:
   series: Dreamer Trilogy
   short_book_description: НИАЛЛ и МОР сбежали из родной страны, чтобы начать новую жизнь. Но запутались и потеряли себя. ДИКЛАН вырос ответственным сыном и заботливым братом.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
-    - fantasy
-    - fiction
     - magical realism
     - paranormal
     - queer
     - urban fantasy
-    - young adult (ya)
+    - young adult (YA)
 ---
+

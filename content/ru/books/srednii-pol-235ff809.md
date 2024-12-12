@@ -19,12 +19,12 @@ params:
   russian_translation_status: exists
   short_book_description: История жизни гермафродита, искренне и откровенно рассказанная от первого лица. Повествование ведется на фоне исторических, общественно-политических и социальных коллизий XX века, определивших...
   tags:
-    - detroit
-    - lgbtq-plus
+    - Detroit
+    - LGBTQIA+
     - classics
     - contemporary
-    - fiction
     - historical fiction
     - literary fiction
     - queer
 ---
+

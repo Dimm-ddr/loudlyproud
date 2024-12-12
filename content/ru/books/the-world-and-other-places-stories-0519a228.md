@@ -24,13 +24,13 @@ params:
   russian_translation_status: unknown
   short_book_description: Her first short story collection exhibits the multitude of talents that have made English novelist Jeanette Winterson not just admired but beloved by her many fans. There are the surprising, fresh...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - contemporary
     - fantasy
-    - fiction
     - literary fiction
     - magical realism
     - queer
     - short stories
 ---
+

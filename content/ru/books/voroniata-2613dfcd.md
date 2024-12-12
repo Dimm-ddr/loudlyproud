@@ -25,14 +25,13 @@ params:
   short_book_description: '"Есть только две причины, по которым незрячий может увидеть духа в канун дня святого Марка, Блу. Или ты полюбишь этого человека, или убьешь..."  Блу Сарджент уже сбилась со счета,...'
   tags:
     - audiobook
-    - fantasy
-    - fiction
     - magic
     - paranormal
     - romance
     - supernatural
     - urban fantasy
-    - young adult (ya)
+    - young adult (YA)
   translators:
     - Вадим Павленко
 ---
+

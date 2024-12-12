@@ -21,9 +21,9 @@ params:
   russian_translation_status: exists
   short_book_description: «Спрингфилд» ни при каких обстоятельствах не может быть издан в современной России, и не только из-за «неправильной» ориентации главного героя...
   tags:
-    - lgbtq-plus
-    - russia
-    - fiction
+    - LGBTQIA+
+    - Russia
     - literary fiction
     - queer
 ---
+

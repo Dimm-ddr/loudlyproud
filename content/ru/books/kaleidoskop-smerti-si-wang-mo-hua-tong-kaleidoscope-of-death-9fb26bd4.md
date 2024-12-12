@@ -18,11 +18,13 @@ params:
   russian_translation_status: exists
   short_book_description: Всё началось со странных знаков. Сперва домашний кот отказался от привычных объятий, затем Линь Цюши начал замечать, что чувство дисгармонии и несоответствия стало постепенно пронизывать всё вокруг…
   tags:
-    - china
-    - lgbtq-plus
-    - boys love (bl)
+    - China
+    - LGBTQIA+
+    - bl
+    - boys love (BL)
     - fantasy
     - horror
     - mystery
     - romance
 ---
+

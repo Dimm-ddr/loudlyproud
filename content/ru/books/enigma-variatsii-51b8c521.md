@@ -21,11 +21,10 @@ params:
   russian_translation_status: exists
   short_book_description: Андре Асимана называют одним из важнейших романистов современности. Его новая книга - "Энигма-вариации" - повествует о жизни Пола, любовные интересы которого остаются столь же волнующими и...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - contemporary
     - desire
-    - fiction
     - gay
     - literary fiction
     - novels
@@ -33,3 +32,4 @@ params:
     - romance
     - short stories
 ---
+

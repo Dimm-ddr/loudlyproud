@@ -21,14 +21,14 @@ params:
   series: All for the Game
   short_book_description: Время на исходе. Оказавшись в Университете Пальметто, Нил Джостен знал, что не доживет до конца года, но теперь, когда смерть не за горами, он больше чем прежде хочет жить.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - contemporary
-    - fiction
     - gay
     - male-male romance
-    - new adult (na)
+    - na
+    - new adult (NA)
     - queer
-    - romance
     - sports
-    - young adult (ya)
+    - young adult (YA)
 ---
+

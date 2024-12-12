@@ -19,12 +19,12 @@ params:
   russian_translation_status: exists
   short_book_description: «Аргонавты» Мэгги Нельсон — текст на стыке жанров, автотеоретическое высказывание о желании, идентичности, создании квир-семьи, ограничениях и возможностях любви и языка. Работая в традиции...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - biography
     - essays
     - feminism
-    - fiction
     - memoir
     - nonfiction
     - queer
 ---
+

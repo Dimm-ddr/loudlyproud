@@ -6,11 +6,11 @@ type: books
 params:
   book_title: Капучино С Маршмэллоу. Том 1
   tags:
+    - LGBTQIA+
+    - Russia
     - graphic novels & comics
-    - lgbtq-plus
     - queer
     - romance
-    - russia
   cover: https://covers.openlibrary.org/b/id/14587297-L.jpg
   editions count: '2'
   isbn: '9786010925809'
@@ -34,3 +34,4 @@ params:
   book_description: «Капучино с маршмэллоу» рассказывает историю Рэя и его лучших друзей — Таро, Бена, Тори, Яны и Лили. Это графический роман про дружбу, уютные кофейни, маршмэллоу и любовь, который обязательно понравится поклонникам комиксов Heartstopper, «Бей-пеки» и «Фехтовальщики».
   russian_audioversion: false
 ---
+

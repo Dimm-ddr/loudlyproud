@@ -21,14 +21,14 @@ params:
   russian_translation_status: exists
   short_book_description: Впервые Саймон Сноу появился в произведении Рейнбоу Рауэлл «Фанатка». Кэт, героиня романа, в детстве зачитывается книгами Джеммы Т.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - boarding school
     - fantasy
-    - fiction
     - magic
     - queer
     - romance
     - vampires
-    - young adult (ya)
+    - young adult (YA)
 ---
+

@@ -24,7 +24,7 @@ params:
   series: Crown Journeys Series
   short_book_description: “Край земли” — единственная документальная книга американского писателя Майкла Каннингема. Она посвящена Провинстауну, городу на полуострове Кейп-Код, ставшему в середине XX века богемным и...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - essays
     - gay
@@ -35,3 +35,4 @@ params:
     - sports
     - travel
 ---
+

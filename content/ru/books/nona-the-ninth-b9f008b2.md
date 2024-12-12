@@ -22,12 +22,10 @@ params:
   series: The Locked Tomb
   short_book_description: Her city is under siege. The zombies are coming back.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - epic fantasy
-    - fantasy
-    - fiction
     - horror
     - lesbian
     - new york times bestseller
@@ -35,3 +33,4 @@ params:
     - science fiction
     - space opera
 ---
+

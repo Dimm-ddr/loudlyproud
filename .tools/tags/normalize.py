@@ -41,20 +41,25 @@ class TagNormalizer:
 
     def should_remove(self, tag: str) -> bool:
         """
-        Check if tag should be removed entirely.
-        - exact: remove if the tag matches exactly
-        - prefixes: remove if the tag starts with any of these prefixes
+        Check if tag should be removed. The logic is:
+        1. First check if tag starts with any of the prefixes - if yes, remove the whole tag
+        2. If no prefix match, check if tag exactly matches one of the exact patterns
         """
         tag = tag.lower().strip()
 
-        # Check exact matches - must match the whole tag
-        exact_matches = self.patterns.get("remove", {}).get("exact", [])
-        if tag in (x.lower() for x in exact_matches):
-            return True
-
-        # Check prefixes - if tag starts with prefix, remove the whole tag
+        # 1. First check prefixes - if tag starts with any prefix, remove it
         prefixes = self.patterns.get("remove", {}).get("prefixes", [])
-        return any(tag.startswith(prefix.lower()) for prefix in prefixes)
+        for prefix in prefixes:
+            if tag.startswith(prefix.lower()):
+                return True
+
+        # 2. Then check exact matches - must match the whole tag exactly
+        exact_matches = self.patterns.get("remove", {}).get("exact", [])
+        for exact in exact_matches:
+            if tag == exact.lower():
+                return True
+
+        return False
 
     def split_tag(self, tag: str) -> list[str] | str:
         """Split tag if it matches any splitting patterns."""
@@ -94,6 +99,7 @@ class TagNormalizer:
         3. Convert to lowercase
         4. Apply mapping
         """
+        tag = tag.strip()
         if self.should_remove(tag):
             return None
 
@@ -106,21 +112,26 @@ class TagNormalizer:
             result = self.split_tag(tag)
             transformed_tags = result if isinstance(result, list) else [result]
 
-        # 2. Convert to lowercase
+        # 2. Convert to lowercase for mapping lookup
         lowercase_tags = [t.lower() for t in transformed_tags]
 
-        # 3. Apply mapping
+        # 3. Apply mapping and track unknown tags
         mapped_tags = []
         for tag in lowercase_tags:
-            # First try to get the proper capitalization from mapping
             if tag in self.mapping_lower:
                 proper_key = self.mapping_lower[tag]
                 mapped = self.mapping[proper_key]
                 if mapped is not None:
                     mapped_tags.append(mapped)
             else:
-                self.stats.unknown_tags.add(tag)
-                mapped_tags.append(tag)
+                # Track the original case of unknown tags
+                original_tag = tag.lower()
+                for t in transformed_tags:
+                    if t.lower() == tag:
+                        original_tag = t
+                        break
+                self.stats.unknown_tags.add(original_tag)
+                mapped_tags.append(original_tag)
 
         return mapped_tags if len(mapped_tags) > 1 else mapped_tags[0]
 
@@ -130,13 +141,10 @@ class TagNormalizer:
         1. Apply normalization to each tag
         2. Flatten the results
         3. Remove duplicates (case-sensitive since mapping was already applied)
-        4. Remove redundant tags (e.g. if we have both "YA" and "young adult")
         """
-        print("\nNormalizing tags:", tags)  # Debug
         normalized = []
         seen = set()
 
-        # First pass: normalize all tags
         for tag in tags:
             result = self.normalize(tag)
             if isinstance(result, list):
@@ -151,36 +159,7 @@ class TagNormalizer:
                     seen.add(result.lower())
                     self.stats.normalized_tags[result] += 1
 
-        print(f"\nAfter first pass: {normalized}")  # Debug
-
-        # Second pass: remove redundant tags
-        final_tags = []
-        seen_lower = set()
-
-        for tag in sorted(normalized):  # Sort to ensure consistent order
-            tag_lower = tag.lower()
-
-            # Skip if we've seen this tag in any form
-            if tag_lower in seen_lower:
-                print(f"  Skipping duplicate: {tag}")  # Debug
-                continue
-
-            # Skip if this is a redundant form
-            is_redundant = False
-            for other in normalized:
-                if other != tag and other.lower() != tag_lower:
-                    # Check if this tag is a part of another tag
-                    if tag_lower in other.lower().split():
-                        print(f"  Skipping redundant: {tag} (part of {other})")  # Debug
-                        is_redundant = True
-                        break
-
-            if not is_redundant:
-                final_tags.append(tag)
-                seen_lower.add(tag_lower)
-
-        print(f"\nFinal tags: {sorted(final_tags)}")  # Debug
-        return sorted(final_tags)
+        return sorted(normalized)
 
 
 def load_tag_normalization() -> tuple[dict[str, str], dict[str, str]]:

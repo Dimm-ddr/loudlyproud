@@ -12,8 +12,7 @@ params:
     - gay
     - queer
     - romance
-    - young adult
-    - YA
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1643405670i/60232655.jpg
   isbn: '9781526619945'
   goodreads_link: https://www.goodreads.com/book/show/60232655
@@ -29,3 +28,4 @@ params:
   book_description: Если ты – сын астронавта, всё может перевернуться с ног на голову с космической скоростью. Кэлу пришлось отказаться от своей мечты ради мечты отца и переехать с семьей в Хьюстон. Вся страна жаждет узнать что-нибудь о новых астронавтах, и Кэл невольно становится участником реалити-шоу. А потом он встречает Леона и обретает опору под ногами – даже если это всего лишь гравитация.
   russian_audioversion: false
 ---
+

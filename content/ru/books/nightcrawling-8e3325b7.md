@@ -20,19 +20,20 @@ params:
   short_book_description: Kiara and her brother, Marcus, are scraping by in an East Oakland apartment complex optimistically called the Regal-Hi. Both have dropped out of high school, their family fractured by death and...
   tags:
     - African American
-    - American literature
-    - Bildungsromans
-    - Brothers and sisters
-    - Brothers and sisters -
+    - American fiction
     - LGBTQIA+
-    - Police
-    - Race
-    - Scandals
-    - Witnesses
-    - adult
+    - adult fiction
     - audiobook
+    - bildungsromans
+    - brothers and sisters
+    - brothers and sisters -
     - contemporary
     - literary
     - new york times bestseller
-    - Écrivains noirs
+    - police
+    - race
+    - scandals
+    - witnesses
+    - écrivains noirs
 ---
+

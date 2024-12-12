@@ -22,13 +22,12 @@ params:
   series: Dreamer Trilogy
   short_book_description: Сновидцы расхаживают среди нас - и их сны тоже. Те, кто грезят, не могут перестать - они могут лишь по мере сил управлять своими грёзами.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
-    - fantasy
-    - fiction
     - magical realism
     - paranormal
     - queer
     - urban fantasy
-    - young adult (ya)
+    - young adult (YA)
 ---
+

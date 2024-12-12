@@ -21,13 +21,13 @@ params:
   series: Creekwood
   short_book_description: Прошел год с тех пор, как виртуальные отношения Саймона и Блю переросли в реальные, и пара месяцев с незабываемого выпускного Эбби и Лиа. Теперь они все учатся в разных колледжах и вынуждены...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - contemporary
-    - fiction
     - novels
     - queer
     - romance
     - short stories
-    - young adult (ya)
+    - young adult (YA)
 ---
+

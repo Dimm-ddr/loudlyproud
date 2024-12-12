@@ -22,15 +22,14 @@ params:
   russian_translation_status: exists
   short_book_description: We think we know the ones we love. So Pearlie Cook begins her indirect, and devastating exploration of the mystery at the heart of every relationship...
   tags:
-    - lgbtq-plus
-    - san francisco
-    - united states
+    - LGBTQIA+
+    - San Francisco
+    - United States
     - adult fiction
     - contemporary
-    - fiction
-    - historical
     - historical fiction
     - literary fiction
     - marriage
     - novels
 ---
+

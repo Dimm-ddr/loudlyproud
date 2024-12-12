@@ -25,21 +25,20 @@ params:
   short_book_description: Лондонский бедный квартал, вторая половина XIX века. Сью Триндер, сирота, выросшая среди воров и мошенников, не знает, что судьба странными узами соединила ее жизнь с юной наследницей богатого имения, живущего замкнуто и уединенно…
   tags:
     - 19th century
-    - Betrug
     - England
-    - historical
-    - historical general
-    - Junge Frau
     - LGBTQIA+
-    - Lambda Literary Award Winner
     - Lambda Literary Awards
     - London
-    - Pickpockets
-    - Social conditions
-    - Stonewall book awards
-    - Unterschicht
+    - Stonewall Book Awards
+    - betrug
+    - historical general
+    - junge frau
     - lesbian
     - mystery
+    - pickpockets
     - queer
     - romance
+    - social conditions
+    - unterschicht
 ---
+

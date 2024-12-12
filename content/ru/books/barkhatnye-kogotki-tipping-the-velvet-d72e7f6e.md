@@ -25,32 +25,30 @@ params:
   russian_translation_status: exists
   short_book_description: Нэнси живет в провинциальном английском городке, ее отец держит приморский устричный бар. Каждый вечер, переодевшись в выходное платье, она посещает мюзик-холл, где с бурлескным номером выступает Китти Батлер. Постепенно девушки сближаются, и когда новый импресарио предлагает Китти лондонский ангажемент, Нэнси следует за ней в столицу…
   tags:
-    - 19th century
-    - Cross-dressers
-    - England
-    - English drama
-    - English literature
-    - Female impersonators
-    - historical
-    - historical general
-    - lesbian
-    - Great Britain
-    - LGBTQIA+
-    - Lambda Literary Award Winner
-    - Lambda Literary Awards
-    - Lesbians
-    - Music-halls
-    - Variety-theaters cabarets etc.
-    - Relations with lesbians
-    - Transvestites
-    - Victoria 1837-1901
-    - Virginia Woolf
     - 1882-1941
+    - 19th century
+    - England
+    - English literature
+    - LGBTQIA+
+    - Lambda Literary Awards
+    - cross-dressers
+    - english drama
+    - female impersonators
     - gay
+    - great britain
+    - historical general
     - history
     - identity
+    - lesbian
+    - music-halls
     - novels
     - queer
+    - relations with lesbians
     - romance
     - social life and customs
+    - transvestites
+    - variety-theaters cabarets etc
+    - victoria 1837-1901
+    - virginia woolf
 ---
+

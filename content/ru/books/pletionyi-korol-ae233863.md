@@ -6,13 +6,12 @@ type: books
 params:
   book_title: Плетёный Король
   tags:
+    - LGBTQIA+
     - contemporary
     - fantasy
-    - fiction
-    - lgbtq-plus
     - mental health
     - queer
-    - young adult (ya)
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654705474i/61251131.jpg
   isbn: '9785604718193'
   goodreads_link: https://www.goodreads.com/book/show/61251131
@@ -24,3 +23,4 @@ params:
   book_description: Когда Август узнаёт, что его лучший друг Джек страдает галлюцинациями, он решает ему помочь. Видения Джека с каждым днем становятся все ярче. Наложенные на реальность, они создают вокруг него тщательно продуманный мир фантазий, которым правит Плетеный Король. Согласно темному пророчеству, существующему в этом мире, Плетеный Король должен найти и вернуть пропавший Лазурный Сполох, иначе всех его жителей неминуемо ждет смерть. Вслед за Джеком Август погружается в вымышленный мир и вскоре сам начинает сомневаться, что реально, а что нет.
   russian_audioversion: false
 ---
+

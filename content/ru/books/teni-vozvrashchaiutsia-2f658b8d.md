@@ -6,16 +6,13 @@ type: books
 params:
   book_title: Тени Возвращаются
   tags:
+    - LGBTQIA+
     - adventure
-    - fantasy
-    - fiction
     - gay
     - high fantasy
-    - lgbtq-plus
-    - male-male romance
     - magic
+    - male-male romance
     - queer
-    - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320504721i/2065091.jpg
   editions count: '2'
   goodreads_link: https://www.goodreads.com/book/show/2065091.Shadows_Return
@@ -34,3 +31,4 @@ params:
   book_description: Четвертая книга Линн Флевелинг — продолжение знаменитой трилогии про Ночных скитальцев. Алек и Серегил снова вместе. Идут навстречу своей судьбе, предсказаниям Оракула Сарикали и новым испытаниям. Это любительский перевод , выполненный Джу Лай(http://zhurnal.lib.ru/d/dzhu_l/). На русском языке роман не издавался
   russian_audioversion: false
 ---
+

@@ -19,11 +19,11 @@ params:
   russian_translation_status: unknown
   short_book_description: A literary horror debut about a boy who transforms into a monster, a monster who tries to be a man, and the people who love him in every form he takesGrieving mother Magos cuts out a piece of her...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - fantasy
-    - fiction
     - horror
     - magical realism
     - queer
 ---
+

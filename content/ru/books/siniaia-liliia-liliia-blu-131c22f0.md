@@ -21,13 +21,12 @@ params:
   series: The Raven Cycle
   short_book_description: Блу Сарджент умела искать. После исчезновения матери девушка решила отправиться на ее поиски - под землю.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
-    - fantasy
-    - fiction
     - magic
     - magical realism
     - paranormal
     - urban fantasy
-    - young adult (ya)
+    - young adult (YA)
 ---
+

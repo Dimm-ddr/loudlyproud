@@ -26,14 +26,14 @@ params:
   series: The Locked Tomb
   short_book_description: Вся жизнь Харроу — головоломка, лабиринт, полный тайн, убийств и лжи. Она — последний некромант Девятого дома, была призвана Императором, чтобы вести войну, в которой не победить.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - fantasy
-    - fiction
     - horror
     - lesbian
     - mystery
     - queer
     - science fiction
 ---
+

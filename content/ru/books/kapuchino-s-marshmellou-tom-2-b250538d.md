@@ -6,11 +6,11 @@ type: books
 params:
   book_title: Капучино с маршмэллоу. Том 2
   tags:
+    - LGBTQIA+
+    - Russia
     - graphic novels & comics
-    - lgbtq-plus
     - queer
     - romance
-    - russia
   cover: https://covers.openlibrary.org/b/id/14587298-L.jpg
   editions count: '2'
   isbn: '9786010692992'
@@ -34,3 +34,4 @@ params:
   book_description: Во втором томе графического романа «Капучино с маршмэллоу» Рэю и его друзьям предстоит не только сдать выпускные экзамены, но и определиться, кем они хотят стать в будущем. Вас ждет еще больше историй из жизни очаровательной группы закадычных друзей, сдобренной ароматом свежесваренного капучино с маршмэллоу.
   russian_audioversion: false
 ---
+

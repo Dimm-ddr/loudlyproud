@@ -6,15 +6,13 @@ type: books
 params:
   book_title: Король Воронов
   tags:
+    - LGBTQIA+
     - audiobook
-    - fantasy
-    - fiction
-    - lgbtq-plus
     - magic
     - paranormal
     - romance
     - urban fantasy
-    - young adult (ya)
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680395146i/124937664.jpg
   isbn: '9785041737771'
   goodreads_link: https://www.goodreads.com/book/show/124937664
@@ -35,3 +33,4 @@ params:
   book_description: Ганси предначертано умереть до конца месяца. Стремясь его спасти, Ронан-сновидец, Адам, ставший частью Кабесуотера, Ной, застрявший между жизнью и смертью, и Блу – милая девушка, обремененная жутким проклятием, объединяются в поисках валлийского короля, способного выполнить любую просьбу. Заветное желание ребят – сохранить жизнь Ганси.<br /><br />Теперь, когда поиски подходят к концу, кошмары преследуют на каждом шагу, а по пятам идут опасные люди, друзьям предстоит сделать непростой выбор…
   russian_audioversion: false
 ---
+

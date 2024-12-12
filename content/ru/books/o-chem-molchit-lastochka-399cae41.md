@@ -6,12 +6,11 @@ type: books
 params:
   book_title: О Чем Молчит Ласточка
   tags:
-    - fiction
-    - lgbtq-plus
+    - LGBTQIA+
+    - Russia
     - queer
     - romance
-    - russia
-    - young adult (ya)
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1724790439i/60586323.jpg
   editions count: '1'
   isbn: '9785045045209'
@@ -34,3 +33,4 @@ params:
   book_description: «Что бы ни случилось, не потеряйте друг друга. Что бы ни случилось, не потеряйте себя», — повторяли они в далекой юности. Не сбылось.Но спустя двадцать лет Володя и Юра встретились снова. Возможно ли построить будущее на руинах давно забытого прошлого? Или лучше позволить ему умереть, сделав по-настоящему ценным?..«О чем молчит Ласточка» — долгожданное продолжение бестселлера «Лето в пионерском галстуке».
   russian_audioversion: false
 ---
+

@@ -6,13 +6,12 @@ type: books
 params:
   book_title: Дни Нашей Жизни
   tags:
+    - LGBTQIA+
+    - Russia
     - contemporary
-    - fiction
     - gay
-    - lgbtq-plus
     - queer
-    - russia
-    - young adult (ya)
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1578398401i/50347526.jpg
   isbn: '9785449668981'
   goodreads_link: https://www.goodreads.com/book/show/50347526
@@ -24,3 +23,4 @@ params:
   book_description: 'В детстве маленького Мики было всё, как у обычных детей: любимые герои, каши по утрам, дни рождения, скучные линейки в школе и сочинения на заданные темы. В юности взрослеющего Мики было всё, как у обычных подростков: первая драка, первое разочарование, первая любовь и первая нелюбовь. Но у Мики была одна тайна: его семья, которую никому нельзя показывать.Книга содержит нецензурную брань.'
   russian_audioversion: false
 ---
+

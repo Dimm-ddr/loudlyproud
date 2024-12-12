@@ -27,23 +27,19 @@ params:
   russian_translation_status: exists
   short_book_description: Роман молодой писательницы, в котором она
   tags:
-    - Christian gays
-    - Christianity and sexuality
     - England
-    - English
-    - Family relationships
-    - coming of age
-    - lesbian
-    - LGBTQIA+
-    - romance LGBTQIA+ lesbian
-    - Great britain
-    - Lesbians
-    - Mothers and daughters
-    - Religion
-    - Teenage girls
+    - christian gays
+    - christianity and sexuality
     - classics
+    - coming of age
     - contemporary
+    - english
     - family
+    - great britain
     - mother-daughter relationship
     - queer
+    - religion
+    - romance lgbtqia+ lesbian
+    - teenage girls
 ---
+

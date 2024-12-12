@@ -21,14 +21,14 @@ params:
   russian_translation_status: exists
   short_book_description: В 2011 году дебютный роман английской актрисы Сары Уинман "Когда бог был кроликом" стал настоящей сенсацией. Эта "безукоризненно точная и хватающая за душу, в равной мере комичная и трагичная"...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - contemporary
-    - fiction
     - friendship
     - historical fiction
     - literary fiction
     - queer
     - romance
 ---
+

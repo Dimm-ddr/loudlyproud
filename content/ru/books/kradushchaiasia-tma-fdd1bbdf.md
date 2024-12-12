@@ -6,16 +6,13 @@ type: books
 params:
   book_title: Крадущаяся Тьма
   tags:
+    - LGBTQIA+
     - adventure
-    - fantasy
-    - fiction
     - gay
     - high fantasy
-    - lgbtq-plus
-    - male-male romance
     - magic
+    - male-male romance
     - queer
-    - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486137882i/34108223.jpg
   isbn: '9785699333950'
   goodreads_link: https://www.goodreads.com/book/show/34108223
@@ -35,3 +32,4 @@ params:
   book_description: «Камень внутри льда внутри камня внутри льда» — лишь несколько слов на древнем пергаменте, лишь туманное указание на страшную Долину Рогов, где демоны танцуют на снегу и пьют человеческую кровь, где спрятано нечто, за обладание чем силы Зла готовы отдать многое... Грядут великие сражения, и мертвецы будут подниматься из земли, чтобы снова сражаться во имя ненасытного Пожирателя Смерти — бога, чьё имя не произносят вслух. Бесстрашный воин Серегил и его юный спутник Алек выходят на защиту Света, и со всех сторон их обступает Крадущаяся тьма...
   russian_audioversion: false
 ---
+

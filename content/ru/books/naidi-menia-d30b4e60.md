@@ -24,15 +24,15 @@ params:
   series: Call Me By Your Name
   short_book_description: Андре Асимана называют одним из важнейших романистов современности. «Найди меня» — долгожданное продолжение его бестселлера «Назови меня своим именем», покорившего миллионы читателей во всем мире.
   tags:
-    - american fiction
-    - lgbtq-plus
+    - American fiction
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - contemporary
-    - fiction
     - gay
     - literary fiction
     - novels
     - queer
     - romance
 ---
+

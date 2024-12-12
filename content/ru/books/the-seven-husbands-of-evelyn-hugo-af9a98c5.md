@@ -29,21 +29,20 @@ params:
   russian_translation_status: exists
   short_book_description: Ведущая затворнический образ жизни легенда старого Голливуда Эвелин Хьюго объявляет, что готова представить публике свои мемуары.Всю ее карьеру сопровождали загадки, сенсации и многочисленные скандалы..
   tags:
-    - Authorship
-    - Biographers
-    - general
-    - romance contemporary
-    - Hollywood
-    - los angeles calif.
     - LGBTQIA+
-    - Motion picture actors and actresses
-    - Women journalists
     - audiobook
+    - authorship
+    - biographers
     - biography
-    - contemporary
     - historical
+    - hollywood
+    - los angeles calif
     - male-female romance
+    - motion picture actors and actresses
     - new york times bestseller
     - performing arts
     - queer
+    - romance contemporary
+    - women journalists
 ---
+

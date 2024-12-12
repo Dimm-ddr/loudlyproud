@@ -23,24 +23,20 @@ params:
   russian_translation_status: unknown
   short_book_description: In a fantastic world that is and is not seventeenth-century England, a baby is found floating in the Thames. The child, Jordan, is rescued by Dog Woman and grows up to travel the world like...
   tags:
-    - Charles II 1660-1685
-    - English
+    - England
     - English literature
-    - erotica
-    - erotica general
-    - fantasy historical
-    - general
-    - Giants
-    - Great Britain
-    - Great Britain in
     - LGBTQIA+
     - London
-    - england
-    - fantasy
-    - historical
+    - charles ii 1660-1685
+    - erotica general
+    - fantasy historical
+    - giants
+    - great britain
+    - great britain in
     - history
     - magical realism
     - mother-son relationship
     - novels
     - queer
 ---
+

@@ -11,9 +11,7 @@ params:
     - contemporary
     - male-male romance
     - queer
-    - romance
-    - young adult
-    - YA
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650137817i/60824456.jpg
   isbn: '5001954037'
   goodreads_link: https://www.goodreads.com/book/show/60824456
@@ -29,3 +27,4 @@ params:
   book_description: Кай Шеридан вел привычную жизнь, тщательно охраняя секрет, который мог ее разрушить. Но случайное пари все изменило. Брайсон Келлер, красавчик и всеобщий любимец академии Фэйрвейл, должен каждую неделю встречаться с первым человеком, который пригласит его на свидание.Чем обернется для Кая и Брайсона этот шуточный спор?
   russian_audioversion: false
 ---
+

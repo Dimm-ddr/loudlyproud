@@ -19,12 +19,12 @@ params:
   russian_translation_status: exists
   short_book_description: Марин бросила все и сбежала из родного города, не объяснив причин даже лучшей подруге Мейбл. Она поступает в колледж в Нью-Йорке, в тысячах километрах от дома, и пытается начать новую жизнь.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - college students
     - contemporary
-    - fiction
     - lesbian
     - mental health
     - queer
-    - young adult (ya)
+    - young adult (YA)
 ---
+

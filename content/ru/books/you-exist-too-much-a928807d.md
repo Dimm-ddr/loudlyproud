@@ -25,8 +25,8 @@ params:
     - contemporary
     - feminism
     - lesbian
-    - literary
     - novels
     - queer
     - teenage
 ---
+

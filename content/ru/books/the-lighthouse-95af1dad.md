@@ -19,12 +19,12 @@ params:
   russian_translation_status: exists
   short_book_description: 'Линус Бейкер живет четко по расписанию: утром – работа инспектора в Департаменте по делам магической молодежи, вечером – уютные посиделки дома с кошкой и старыми пластинками. Линус не собирается...'
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - fantasy
-    - fiction
     - juvenile fiction
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
 ---
+

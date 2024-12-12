@@ -15,11 +15,10 @@ params:
   russian_translation_status: exists
   short_book_description: Светская львица Джордан Бейкер выросла в изысканных кругах американского общества 1920-х годов - у нее есть деньги, популярность среди спортсменов-гольфистов и приглашения на большинство самых...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - fantasy
-    - fiction
-    - historical
     - historical fiction
     - queer
     - retellings
 ---
+

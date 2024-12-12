@@ -26,26 +26,22 @@ params:
   russian_translation_status: exists
   short_book_description: Роман "Одинокий мужчина", впервые опубликованный в 1964 году и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной роли), - одно из самых известных произведений Ишервуда…
   tags:
-    - British and irish fiction
-    - fictional works by one author
-    - general
-    - in English
-    - psychological
-    - Gay college teachers
-    - Gay men
-    - Gay teachers
-    - Homosexuella män
-    - LGBTQIA+
     - LGBTQIA+ novels before Stonewall
-    - Loss
-    - Psychology
-    - Middle-aged gay men
-    - Middle-aged men
-    - Skönlitteratur
+    - british and irish fiction
     - classics
-    - gay
+    - fictional works by one author
+    - gay college teachers
+    - gay teachers
     - grief
+    - homosexuella män
+    - in english
     - literary
-    - novels
+    - loss
+    - mental health
+    - middle-aged gay men
+    - middle-aged men
+    - psychological
     - queer
+    - skönlitteratur
 ---
+

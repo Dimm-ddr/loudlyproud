@@ -19,12 +19,12 @@ params:
   russian_translation_status: unknown
   short_book_description: Moonlight meets Purple Hibiscus in this gay coming-of-age novel from an astonishing young talent, set in post-military Nigeria and culminating in the Same-Sex Marriage Prohibition Act of...
   tags:
-    - africa
-    - english literature
-    - lgbtq-plus
+    - Africa
+    - English literature
+    - LGBTQIA+
     - adult fiction
     - contemporary
-    - fiction
     - literary fiction
     - queer
 ---
+

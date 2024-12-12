@@ -6,18 +6,15 @@ type: books
 params:
   book_title: Shards Of Time
   tags:
+    - LGBTQIA+
     - adventure
     - crime
-    - fantasy
-    - fiction
     - gay
     - high fantasy
-    - lgbtq-plus
-    - male-male romance
     - magic
+    - male-male romance
     - murder
     - queer
-    - romance
     - spy stories
     - suspense
     - thrillers
@@ -39,3 +36,4 @@ params:
   book_description: Acclaimed author Lynn Flewelling brings her beloved Nightrunners series to a close—at least for now—with a thrilling novel of murder, mystery, and magic. The governor of the sacred island of Korous and his mistress have been killed inside a locked and guarded room. The sole witnesses to the crime—guards who broke down the doors, hearing the screams from within—have gone mad with terror, babbling about ghosts . . . and things worse than ghosts. Dispatched to Korous by the queen, master spies Alec and Seregil find all the excitement and danger they could want—and more. For an ancient evil has been awakened there, a great power that will not rest until it has escaped its otherworldly prison and taken revenge on all that lives. And only those like Alec—who have died and returned to life—can step between the worlds and confront the killer . . . even if it means a second and all too permanent death.
   russian_audioversion: false
 ---
+

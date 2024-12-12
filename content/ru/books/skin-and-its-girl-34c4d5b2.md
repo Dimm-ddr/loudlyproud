@@ -19,11 +19,11 @@ params:
   russian_translation_status: does_not_exist
   short_book_description: A young, queer Palestinian American woman pieces together her great aunt’s secrets in this sweeping debut, a family saga confronting questions of sexual identity, exile, and lineage.In a Pacific...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
     - contemporary
-    - fiction
     - lesbian
     - literary fiction
     - queer
 ---
+

@@ -6,13 +6,12 @@ type: books
 params:
   book_title: Автоквирография
   tags:
+    - LGBTQIA+
     - audiobook
     - contemporary
-    - fiction
-    - lgbtq-plus
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1605623377i/55922344.jpg
   isbn: '9785604458143'
   goodreads_link: https://www.goodreads.com/book/show/55922344
@@ -24,3 +23,4 @@ params:
   book_description: Таннер Скотт мечтает только об одном — поскорее выбраться из небольшого городка Прово. Школа подходит к концу — и вскоре Таннер будет свободен. В последнем семестре его лучшая подруга предлагает записаться на литера­турный семинар, на котором они должны за четыре месяца сочинить роман. Однако задача оказывается сложнее, чем предполагал Таннер, потому что вне­запная влюбленность рушит все его планы…
   russian_audioversion: false
 ---
+

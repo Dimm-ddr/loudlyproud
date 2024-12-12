@@ -23,21 +23,21 @@ params:
   russian_translation_status: exists
   short_book_description: Гаррарду Конли было девятнадцать, когда по настоянию родителей ему пришлось пройти основанную на библейском учении конверсионную терапию, которая обещала «исцелить» его сексуальную ориентацию...
   tags:
-    - arkansas
-    - childhood and youth
-    - ex-gay movement
-    - gay men biography
-    - gays identity
     - LGBTQIA+
-    - religion
-    - sexual reorientation programs
     - United States
+    - arkansas
     - biography
+    - children's fiction
+    - ex-gay movement
     - gay
     - identity
     - memoir
     - new york times bestseller
     - nonfiction
     - queer
+    - religion
+    - sexual reorientation programs
     - sexuality
+    - teenage
 ---
+

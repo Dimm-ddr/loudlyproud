@@ -27,40 +27,37 @@ params:
   russian_translation_status: exists
   short_book_description: Как покончить с бессмысленным существованием, начавшимся после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых десять лет?..
   tags:
-    - Adolescence
-    - Artists
-    - Bandes dessinées
-    - Biographies
-    - Comic books strips
-    - Comic books strips etc.
-    - Japan
-    - Translations into English
-    - Female Homosexuality
-    - Kabi Nagata
     - LGBTQIA+
-    - Lesbianism
-    - Lesbians
-    - Comic books strips etc
-    - Lesbiennes
-    - Loneliness
-    - Manga
-    - Personnes seules
-    - Prostitution
-    - Self-actualization
-    - Psychology
-    - Sexual behavior
-    - Sexualité
-    - Single Person
-    - Single people
-    - Single women
-    - Solitude
-    - Women artists
+    - adolescence
+    - bandes dessinées
+    - biographies
     - biography
+    - comic books strips
+    - comic books strips etc
+    - female homosexuality
     - graphic novels & comics
     - isolation
+    - japan
+    - kabi nagata
     - lesbian
+    - lesbianism
+    - lesbiennes
+    - manga
     - memoir
+    - mental health
     - mental illness
     - nonfiction
+    - personnes seules
+    - prostitution
     - queer
+    - self-actualization
+    - sexual behavior
+    - sexualité
+    - single people
+    - single person
+    - single women
+    - solitude
+    - translations into english
+    - women artists
 ---
+

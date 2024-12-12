@@ -6,26 +6,24 @@ type: books
 params:
   book_title: Плюсы неразделенной любви (The Upside Of Unrequited)
   tags:
-    - Children of gay parents
-    - Children of sperm donors
-    - Children's
-    - Homosexuality
     - LGBTQIA+
-    - Lesbian teenagers
-    - Overweight teenagers
-    - Romance
-    - Sisters
-    - Twins
     - audiobook
+    - children of gay parents
+    - children of sperm donors
+    - children's
     - contemporary
     - friendship
     - gay teenagers
+    - homosexuality
+    - lesbian teenagers
     - mental illness
+    - overweight teenagers
     - queer
     - relationships
     - romance
-    - young adult
-    - YA
+    - sisters
+    - twins
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg
   isbn: '9785604219638'
   goodreads_link: https://www.goodreads.com/book/show/43702718
@@ -43,3 +41,4 @@ params:
   book_description: Молли знает все о неразделенной любви. Она влюблялась двадцать шесть раз и всякий раз — безответно. Но парни и не догадываются о ее чувствах, ведь она очень осторожна. А как иначе? Толстые девчонки не могут рисковать. Однако сестра Молли, Кэсси, настаивает, что ей давно пора повзрослеть и перестать бояться отказов. Кэсси пытается свести Молли с красавчиком Уиллом, который проявляет к ней интерес. Есть только одна проблема — неуклюжий гик Рид, коллега Молли, — он никак не выходит у нее из головы. Но Рид — совсем не ее типаж, и она никогда в него не влюбится. Так ведь?..
   russian_audioversion: false
 ---
+

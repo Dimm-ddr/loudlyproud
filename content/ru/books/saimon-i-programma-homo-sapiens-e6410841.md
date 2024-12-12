@@ -20,12 +20,12 @@ params:
   series: Creekwood
   short_book_description: У Саймона есть большой секрет, который он доверил только Блю, своему интернет-другу. Но однажды их переписку прочитал одноклассник Мартин.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - contemporary
     - extortion
-    - fiction
     - queer
     - realistic fiction
     - romance
-    - young adult (ya)
+    - young adult (YA)
 ---
+

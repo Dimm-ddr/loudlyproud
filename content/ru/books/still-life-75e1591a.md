@@ -19,11 +19,10 @@ params:
   russian_translation_status: unknown
   short_book_description: 'Tuscany, 1944: As Allied troops advance and bombs fall around deserted villages, a young English soldier, Ulysses Temper, finds himself in the wine cellar of a deserted villa. There, he has a...'
   tags:
-    - italy
+    - Italy
     - art
     - audiobook
-    - fiction
-    - historical
     - historical fiction
     - literary fiction
 ---
+

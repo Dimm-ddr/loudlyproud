@@ -19,11 +19,10 @@ params:
   russian_translation_status: unknown
   short_book_description: Weber Yates's dreams of stardom are about to be reduced to a ranch hand's job in Texas, and his one relationship is with a guy so far out of his league he might as well be on the moon. Or at least...
   tags:
-    - lgbtq-plus
-    - westerns
+    - LGBTQIA+
     - contemporary
-    - fiction
     - gay
     - male-male romance
-    - romance
+    - westerns
 ---
+

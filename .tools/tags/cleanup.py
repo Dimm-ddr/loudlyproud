@@ -134,10 +134,21 @@ def main() -> None:
 
     # Validate before cleanup
     validation = validate_tags(project_root)
+    has_validation_issues = False
+
+    if validation["unmapped_tags"]:
+        print("\nWarning: Some tags are not in the mapping file:")
+        for tag in validation["unmapped_tags"]:
+            print(f"  - {tag}")
+        has_validation_issues = True
+
     if validation["uncolored_tags"]:
         print("\nWarning: Some tags are missing color definitions:")
         for tag in validation["uncolored_tags"]:
             print(f"  - {tag}")
+        has_validation_issues = True
+
+    if has_validation_issues:
         if input("\nContinue with cleanup? [y/N] ").lower() != "y":
             sys.exit(1)
 

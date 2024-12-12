@@ -21,13 +21,12 @@ params:
   series: Lore & Lust
   short_book_description: Харука жив. Но в то же время мертв. Коротает дни, не наслаждаясь пребыванием в этом мире. Чистокровный японский вампир из древнего знатного рода, живущий в двадцать первом веке в Англии. Харука сломлен и довольствуется своим жалким существованием...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - adult fiction
-    - fantasy
     - male-male romance
     - paranormal
     - queer
-    - romance
     - urban fantasy
     - vampires
 ---
+

@@ -31,11 +31,10 @@ params:
     - mystery
     - new york times bestseller
     - queer
-    - school
     - science
     - survival
     - suspense
     - thrillers
-    - young adult
-    - YA
+    - young adult (YA)
 ---
+

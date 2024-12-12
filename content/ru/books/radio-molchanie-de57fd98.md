@@ -21,13 +21,13 @@ params:
   russian_translation_status: exists
   short_book_description: Что, если все, ради чего ты живешь, — абсолютная ложь? Фрэнсис — круглая отличница и староста школы. У нее в жизни есть одна-единственная мечта — поступить в Кембридж…
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - coming of age
     - contemporary
-    - fiction
     - mental health
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
 ---
+

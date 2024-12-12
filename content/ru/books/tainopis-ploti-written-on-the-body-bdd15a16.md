@@ -28,21 +28,19 @@ params:
   russian_translation_status: exists
   short_book_description: Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине…
   tags:
-    - Belletristische Darstellung
-    - Ehefrau
     - England
-    - general
     - LGBTQIA+
-    - Lambda Literary Award Winner
     - Lambda Literary Awards
-    - Leukämie
-    - Liebesbeziehung
-    - Married women
-    - Stonewall book awards
+    - Stonewall Book Awards
+    - belletristische darstellung
     - contemporary
-    - literary
+    - ehefrau
+    - leukämie
+    - liebesbeziehung
     - marriage
+    - married women
     - novels
     - queer
     - romance
 ---
+

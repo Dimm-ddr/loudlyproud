@@ -19,11 +19,10 @@ params:
   russian_translation_status: unknown
   short_book_description: A passionate tale of plague, fire, and forbidden love in seventeenth-century London from the acclaimed author of Solomon's Crown1666. It is a year after plague has devastated England.
   tags:
-    - english literature
+    - English literature
     - adult fiction
-    - fiction
-    - historical
     - historical fiction
     - queer
     - romance
 ---
+

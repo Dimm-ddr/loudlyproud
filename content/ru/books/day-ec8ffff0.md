@@ -19,11 +19,11 @@ params:
   russian_translation_status: unknown
   short_book_description: As the world changes around them, a family weathers the storms of growing up, growing older, falling in and out of love, losing the things that are most precious—and learning to go on—from the...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - contemporary
     - family
-    - fiction
     - literary fiction
     - novels
 ---
+

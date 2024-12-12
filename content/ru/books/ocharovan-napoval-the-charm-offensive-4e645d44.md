@@ -6,11 +6,10 @@ type: books
 params:
   book_title: Очарован наповал (The Charm Offensive)
   tags:
+    - LGBTQIA+
     - adult fiction
     - audiobook
     - contemporary
-    - fiction
-    - lgbtq-plus
     - queer
     - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663969139i/62698467.jpg
@@ -30,3 +29,4 @@ params:
   book_description: 'Дев Дешпанде - продюсер культового шоу "Долго и счастливо" - убежден: каждый может найти свою любовь, но иногда для этого требуется помощь со стороны.В новом сезоне ему предстоит стать наставником очередного Принца Чарли Уиншо - айти-гения и миллионера, словно сошедшего со страниц модного журнала. Вскоре он узнает, что за потрясающей внешностью кроется надломленный, но добрый и чуткий человек. Теперь Дев помогает Чарли среди множества претенденток найти ту самую, которая в конце шоу получит корону Принцессы.'
   russian_audioversion: false
 ---
+

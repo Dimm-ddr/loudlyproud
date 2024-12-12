@@ -22,14 +22,13 @@ params:
   russian_translation_status: exists
   short_book_description: На дворе 1973 год, во Вьетнаме свирепствует война. В США гомосексуальность преследуется законом.Жизнь Джонатана напоминает кромешный ад - над ним издеваются в школе, дядю держат в психбольнице, а...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - contemporary
-    - fiction
     - gay
-    - historical
     - historical fiction
     - mental health
     - performing arts
     - queer
     - romance
 ---
+

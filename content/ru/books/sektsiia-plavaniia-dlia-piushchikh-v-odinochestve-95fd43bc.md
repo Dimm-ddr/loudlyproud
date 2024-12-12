@@ -22,6 +22,6 @@ params:
     - 21st century
     - Russia
     - Russian literature
-    - fiction
     - isolation
 ---
+

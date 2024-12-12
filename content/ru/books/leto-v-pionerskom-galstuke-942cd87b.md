@@ -8,14 +8,13 @@ params:
   tags:
     - LGBTQIA+
     - Russia
-    - Vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni V.I. Lenina
     - children's
     - contemporary
     - queer
     - romance
     - teenage
-    - young adult
-    - YA
+    - vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni v.i. lenina
+    - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630593788i/58870322.jpg
   isbn: '9785604653005'
   goodreads_link: https://www.goodreads.com/book/show/58870322
@@ -31,3 +30,4 @@ params:
   book_description: Юра возвращается в пионерский лагерь своей юности спустя двадцать лет. В руинах прошлого он надеется отыскать путь в настоящее, к человеку, которого когда-то любил. Эта история о том, что в СССР не все было гладко, правильно и безлико. Что были переживания, страсти, влечения и чувства, которые не вписывались в рамки морали на пути к «светлому будущему». И что это будущее оказалось не таким уж и светлым.
   russian_audioversion: false
 ---
+

@@ -1,4 +1,6 @@
 {
+    "1882-1941": null,
+    "1914": null,
     "1930s": null,
     "1950s": null,
     "19th century": "19th century",
@@ -7,10 +9,12 @@
     "20th century": "20th century",
     "21st century": "21st century",
     "abuse": "abuse",
+    "adolescence": "teenagers",
     "adult": "adult fiction",
     "adult fiction": "adult fiction",
     "adultery": "relationships",
     "adventure": "adventure",
+    "adventure and adventurers": "adventure",
     "africa": "Africa",
     "african american": "African American",
     "african american authors": "African American authors",
@@ -19,6 +23,7 @@
     "african americans fiction": "African American fiction",
     "alex claremont-diaz": null,
     "alien cultures": "alien cultures",
+    "american": "American fiction",
     "american fiction": "American fiction",
     "american literature": "American fiction",
     "american short stories": [
@@ -32,19 +37,28 @@
     "anxiety disorders": "mental illness",
     "arab americans": "Arab Americans",
     "arcansas": "Arkansas",
+    "arkansas": "Arkansas",
     "art": "art",
     "art and technology": [
         "art",
         "technology"
     ],
     "asian americans": "Asian Americans",
+    "atlantis": "Atlantis",
+    "atlas": "Atlas",
+    "attitude": "attitude",
     "audiobook": "audiobook",
     "authors": "authors",
     "authors fiction": "authors",
+    "authorship": null,
     "autobiography": "autobiography",
     "automobile travel": "travel",
+    "bandes dessinées": "graphic novels & comics",
+    "belletristische darstellung": null,
     "bereavement": "grief",
-    "berlin": "Germany",
+    "berlin": "Berlin",
+    "best friends": "friendship",
+    "betrug": "extortion",
     "biography": "biography",
     "biography memoir": [
         "biography",
@@ -76,13 +90,10 @@
     "child custody": "family",
     "childhood and youth": [
         "children's fiction",
-        "teenage"
+        "teenagers"
     ],
     "children": "children's fiction",
-    "children of alcoholics": [
-        "family",
-        "mental illness"
-    ],
+    "children's": "children's fiction",
     "children's fiction": "children's fiction",
     "childrens fiction": "children's fiction",
     "china": "China",
@@ -344,7 +355,7 @@
     "novels": "novels",
     "palestinian american girls": [
         "Arab Americans",
-        "teenage"
+        "teenagers"
     ],
     "paranormal": "paranormal",
     "paranormal romance": [
@@ -420,12 +431,12 @@
     "syrian americans": "Syrian Americans",
     "teacher-student relationships": "school",
     "technology": "technology",
-    "teenage": "teenage",
+    "teenage": "teenagers",
     "teenage boys": [
-        "teenage",
+        "teenagers",
         "boys"
     ],
-    "teenagers": "teenage",
+    "teenagers": "teenagers",
     "the united states of america": "United States",
     "thriller": "thriller",
     "time travel": "time-traveling",
@@ -539,6 +550,6 @@
         "young adult (YA)",
         "thriller"
     ],
-    "youth": "teenage",
+    "youth": "teenagers",
     "Ã©tudiantes": "college students"
 }

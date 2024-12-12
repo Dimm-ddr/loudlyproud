@@ -19,11 +19,10 @@ params:
   russian_translation_status: unknown
   short_book_description: Forty-five-year-old English professor Nathan Qells is very good at making people feel important. What he’s not very good at is sticking around afterward.
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - contemporary
-    - fiction
     - gay
     - male-male romance
-    - romance
     - suspense
 ---
+

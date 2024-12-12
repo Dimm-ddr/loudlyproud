@@ -24,14 +24,14 @@ params:
   russian_translation_status: exists
   short_book_description: Хлоя Грин как никогда близка к победе. После переезда в Алабаму она провела четыре долгих года, избегая сплетен, одноклассников и администрации академии Уиллоугроув...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - contemporary
-    - fiction
     - gay
     - lesbian
     - mystery
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
 ---
+

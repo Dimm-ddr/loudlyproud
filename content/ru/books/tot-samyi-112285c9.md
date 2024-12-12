@@ -26,6 +26,6 @@ params:
     - gay
     - romance
     - teenage
-    - young adult
-    - YA
+    - young adult (YA)
 ---
+

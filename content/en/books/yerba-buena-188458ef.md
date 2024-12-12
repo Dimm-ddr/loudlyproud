@@ -20,11 +20,11 @@ params:
   russian_translation_status: does_not_exist
   short_book_description: The debut adult novel by the bestselling and award-winning YA author Nina LaCour,following two women on a star-crossed journey toward each otherWhen Sara Foster runs away from home at sixteen, she...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - contemporary
-    - fiction
     - lesbian
     - queer
     - romance
 ---
+

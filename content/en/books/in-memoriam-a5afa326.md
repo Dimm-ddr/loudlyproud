@@ -20,19 +20,15 @@ params:
   short_book_description: A haunting, virtuosic debut novel about two young men who fall in love during a time of war.It's 1914, and World War I is ceaselessly churning through thousands of young men on both sides of the...
   tags:
     - '1914'
-    - American literature
-    - Boarding school students
+    - American fiction
     - England
-    - Gay
-    - Great Britain
-    - Henry Gaunt
     - LGBTQIA+
-    - Sidney Ellwood
-    - War
-    - World War 1914-1918
     - best friends
     - boarding school
+    - boarding school students
     - gay
+    - great britain
+    - henry gaunt
     - historical
     - history
     - literary
@@ -40,5 +36,7 @@ params:
     - novels
     - queer
     - romance
-    - war
+    - sidney ellwood
+    - world war 1914-1918
 ---
+

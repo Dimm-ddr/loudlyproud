@@ -19,11 +19,11 @@ params:
   series: Girls of Paper and Fire
   short_book_description: Мы — Бумажные Девушки, а бумагу так легко разорвать, так легко исписать чем угодно.Сам этот титул подразумевает, что мы — чистые листы, жаждущие, чтобы кто-то заполнил нас. Но кое-чего...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - fantasy
-    - fiction
     - lesbian
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
 ---
+

@@ -21,17 +21,17 @@ params:
   russian_translation_status: exists
   short_book_description: Близнецы Фил и Диана и их мать Глэсс приехали из-за океана и поселились в доставшееся им по наследству поместье Визибл. Они - предмет обсуждения и осуждения всей округи...
   tags:
-    - german literature
-    - germany
-    - lgbtq-plus
+    - German literature
+    - Germany
+    - LGBTQIA+
     - coming of age
     - contemporary
     - family
-    - fiction
     - gay
     - queer
     - romance
-    - young adult (ya)
+    - young adult (YA)
   translators:
     - Татьяна Зборовская
 ---
+

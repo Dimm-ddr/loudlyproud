@@ -6,16 +6,13 @@ type: books
 params:
   book_title: Месть Темного Бога
   tags:
+    - LGBTQIA+
     - adventure
-    - fantasy
-    - fiction
     - gay
     - high fantasy
-    - lgbtq-plus
-    - male-male romance
     - magic
+    - male-male romance
     - queer
-    - romance
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486137639i/34108203.jpg
   isbn: '9785699290345'
   goodreads_link: https://www.goodreads.com/book/show/34108203
@@ -36,3 +33,4 @@ params:
   book_description: Защита, как нож, — оружие обоюдоострое. Но юному Алеку, с ужасом ожидавшему казни за преступление, которого не совершал, было не из чего выбирать. Потому он и ухватился за помощь таинственного незнакомца, зовущего себя Серегилом... и очень скоро оказался втянутым в войну против самого Тёмного Бога — всемогущего Властителя Смерти. Ставка в такой игре — жизнь, правила её неизвестны. Служители Тёмного Бога следуют за воинами Света по пятам, охотятся за ними, разя клинком и магией, предательством и изменой. Демоны, вызванные из бездны Ада, вырываются на волю, и страшной будет месть Тёмного Бога.
   russian_audioversion: false
 ---
+

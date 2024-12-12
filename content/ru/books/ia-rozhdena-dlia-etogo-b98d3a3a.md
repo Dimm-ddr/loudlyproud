@@ -21,13 +21,13 @@ params:
   russian_translation_status: exists
   short_book_description: Для Ангел нет ничего важнее «Ковчега» — самого популярного бойз-бенда Великобритании. Благодаря фандому Ангел нашла верных друзей и единомышленников, а ее мечта — увидеть кумиров вживую — вот-вот...
   tags:
-    - lgbtq-plus
+    - LGBTQIA+
     - audiobook
     - contemporary
-    - fiction
     - mental health
     - queer
     - romance
     - transgender
-    - young adult (ya)
+    - young adult (YA)
 ---
+
