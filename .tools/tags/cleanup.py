@@ -2,127 +2,88 @@
 
 from pathlib import Path
 import sys
-from dataclasses import dataclass, field
-from typing import TypedDict, NotRequired
-from collections import Counter
 from ruamel.yaml import YAML
 import json
 from .normalize import TagNormalizer
 from .validate import validate_tags
+from .common import (
+    TAGS_CONFIG_DIR,
+    GENERATED_DATA_DIR,
+    CONTENT_DIR,
+    MAPPING_FILE,
+    COLORS_FILE,
+    STATS_FILE,
+    TagStats,
+)
 
-# Path constants
-TAGS_CONFIG_DIR = Path("data/tags")
-GENERATED_DATA_DIR = Path(".data/tags")
-CONTENT_DIR = Path("content")
-
-# File names
-MAPPING_FILE = "mapping.json"
-COLORS_FILE = "colors.yaml"
-STATS_FILE = "cleanup-stats.json"
-
-
-class TagMapping(TypedDict):
-    """Type for tag mapping entries."""
-
-    normalized: str | list[str] | None
-
-
-class StatsDict(TypedDict):
-    """Type for statistics output."""
-
-    total_files: int
-    files_with_changes: int
-    unknown_tags: list[str]
-    normalized_tags: dict[str, int]
-    tag_mapping_issues: NotRequired[list[str]]
-
-
-@dataclass
-class TagStats:
-    """Statistics for tag processing."""
-
-    total_files: int = 0
-    files_with_changes: int = 0
-    unknown_tags: set[str] = field(default_factory=set)
-    normalized_tags: Counter = field(default_factory=Counter)
-
-    def to_dict(self) -> StatsDict:
-        """Convert stats to dictionary for JSON output."""
-        return {
-            "total_files": self.total_files,
-            "files_with_changes": self.files_with_changes,
-            "unknown_tags": sorted(self.unknown_tags),
-            "normalized_tags": dict(sorted(self.normalized_tags.items())),
-        }
-
-
-def load_tags_map(project_root: Path) -> dict[str, TagMapping]:
-    """Load tags mapping from JSON file."""
-    tags_file = project_root.joinpath(TAGS_CONFIG_DIR, MAPPING_FILE)
-    try:
-        return json.loads(tags_file.read_text(encoding="utf-8"))
-    except Exception as e:
-        print(f"Error loading tags map: {e}")
-        sys.exit(1)
-
-
-def load_color_mapping(project_root: Path) -> set[str]:
-    """Load valid tags from color mapping file."""
-    color_file = project_root.joinpath(TAGS_CONFIG_DIR, COLORS_FILE)
-    try:
-        yaml = YAML()
-        data = yaml.load(color_file)
-        return set(data.get("tag_colors", {}).keys())
-    except Exception as e:
-        print(f"Error loading color mapping: {e}")
-        sys.exit(1)
-
+# Re-export TagStats for backward compatibility
+__all__ = ['TagStats', 'process_book_file', 'normalize_tags']
 
 def split_frontmatter(content: str) -> tuple[dict, str] | None:
     """Split content into frontmatter and body."""
-    match content.split("---\n", 2):
-        case ["", frontmatter, *rest] if rest:
-            try:
-                yaml = YAML()
-                yaml.preserve_quotes = True
-                return yaml.load(frontmatter), rest[0]
-            except yaml.YAMLError:
+    try:
+        # Normalize line endings
+        content = content.replace('\r\n', '\n')
+
+        # Try to split on frontmatter delimiters
+        parts = content.split("---\n", 2)
+        print(f"Split parts: {len(parts)}")  # Debug
+
+        if len(parts) < 3:
+            # Try alternative delimiter format
+            parts = content.split("---", 2)
+            print(f"Trying alternative split: {len(parts)}")  # Debug
+
+        match parts:
+            case ["", frontmatter, *rest] if rest:
+                try:
+                    yaml = YAML()
+                    yaml.preserve_quotes = True
+                    data = yaml.load(frontmatter)
+                    if not isinstance(data, dict):
+                        print(f"Frontmatter is not a dictionary: {type(data)}")  # Debug
+                        return None
+                    return data, rest[0]
+                except Exception as e:
+                    print(f"YAML parsing error: {str(e)}")  # Debug
+                    print(f"Frontmatter content:\n{frontmatter}")  # Debug
+                    return None
+            case _:
+                print(f"Invalid frontmatter format. Parts: {[p[:50] + '...' if len(p) > 50 else p for p in parts]}")  # Debug
                 return None
-        case _:
-            return None
-
-
-def normalize_tags(tags: list[str], normalizer: TagNormalizer) -> list[str]:
-    """Normalize a list of tags using the normalizer."""
-    return normalizer.normalize_tags(tags)
-
+    except Exception as e:
+        print(f"Unexpected error in split_frontmatter: {str(e)}")  # Debug
+        return None
 
 def process_book_file(
     file_path: Path,
-    tags_map: dict[str, TagMapping],
     normalizer: TagNormalizer,
-    stats: TagStats,
 ) -> bool:
     """Process a single book file, updating tags if necessary."""
     try:
         content = file_path.read_text(encoding="utf-8")
         if not (result := split_frontmatter(content)):
+            print(f"Failed to parse frontmatter in {file_path}")  # Debug
             return False
 
         frontmatter, body = result
         if not (tags := frontmatter.get("params", {}).get("tags")):
+            print(f"No tags found in {file_path}")  # Debug
             return False
 
-        normalized_tags = normalize_tags(tags, normalizer)
-
-        # Update stats
-        for tag in normalized_tags:
-            stats.normalized_tags[tag] += 1
-            if tag.lower() not in tags_map:
-                stats.unknown_tags.add(tag)
+        print(f"\nProcessing {file_path}")  # Debug
+        print(f"Original tags: {tags}")  # Debug
+        normalized_tags = normalizer.normalize_tags(tags)
+        print(f"Normalized tags: {normalized_tags}")  # Debug
 
         # Update file if tags changed
-        if set(tags) != set(normalized_tags):
+        original_set = {t.lower() for t in tags}
+        normalized_set = {t.lower() for t in normalized_tags}
+
+        if original_set != normalized_set:
+            print(f"Tags changed, updating file")  # Debug
+            print(f"Original set: {original_set}")  # Debug
+            print(f"Normalized set: {normalized_set}")  # Debug
             frontmatter["params"]["tags"] = normalized_tags
 
             yaml = YAML()
@@ -131,26 +92,26 @@ def process_book_file(
             yaml.indent(mapping=2, sequence=4, offset=2)
 
             with file_path.open("w", encoding="utf-8") as f:
-                f.write("---\n")
+                f.write("---\n")  # Opening delimiter
                 yaml.dump(frontmatter, f)
-                f.write("---")
+                f.write("---\n")  # Closing delimiter with newline
                 if body:
-                    f.write(body)
+                    f.write(body)  # Body already includes leading newline from split
+                else:
+                    f.write("\n")  # Ensure there's always a final newline
 
             return True
-
-        return False
+        else:
+            print(f"No changes needed for {file_path}")  # Debug
+            print(f"Original set: {original_set}")  # Debug
+            print(f"Normalized set: {normalized_set}")  # Debug
+            return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
-
-def process_books(
-    content_dir: Path, tags_map: dict[str, TagMapping], normalizer: TagNormalizer
-) -> TagStats:
+def process_books(content_dir: Path, normalizer: TagNormalizer) -> None:
     """Process all book files in the content directory."""
-    stats = TagStats()
-
     for locale_dir in content_dir.iterdir():
         if not locale_dir.is_dir():
             continue
@@ -160,23 +121,16 @@ def process_books(
             continue
 
         for book_file in books_dir.glob("*.md"):
-            stats.total_files += 1
-            if process_book_file(book_file, tags_map, normalizer, stats):
-                stats.files_with_changes += 1
+            normalizer.stats.total_files += 1
+            if process_book_file(book_file, normalizer):
+                normalizer.stats.files_with_changes += 1
                 print(f"Updated tags in: {book_file.relative_to(content_dir)}")
-
-    return stats
-
 
 def main() -> None:
     """Main function for tag cleanup."""
     project_root = Path.cwd()
     content_dir = project_root.joinpath(CONTENT_DIR)
     stats_file = project_root.joinpath(GENERATED_DATA_DIR, STATS_FILE)
-
-    tags_map = load_tags_map(project_root)
-    valid_colors = load_color_mapping(project_root)
-    normalizer = TagNormalizer()
 
     # Validate before cleanup
     validation = validate_tags(project_root)
@@ -188,29 +142,29 @@ def main() -> None:
             sys.exit(1)
 
     print("\nProcessing book files...")
-    stats = process_books(content_dir, tags_map, normalizer)
+    normalizer = TagNormalizer(project_root)
+    process_books(content_dir, normalizer)
 
     # Print and save report
-    print(f"\nProcessed {stats.total_files} files")
-    print(f"Updated tags in {stats.files_with_changes} files")
+    print(f"\nProcessed {normalizer.stats.total_files} files")
+    print(f"Updated tags in {normalizer.stats.files_with_changes} files")
 
-    if stats.unknown_tags:
-        print(f"\nFound {len(stats.unknown_tags)} unknown tags:")
-        for tag in sorted(stats.unknown_tags):
+    if normalizer.stats.unknown_tags:
+        print(f"\nFound {len(normalizer.stats.unknown_tags)} unknown tags:")
+        for tag in sorted(normalizer.stats.unknown_tags):
             print(f"  - {tag}")
 
-    if stats.normalized_tags:
+    if normalizer.stats.normalized_tags:
         print("\nTag usage statistics:")
-        for tag, count in stats.normalized_tags.most_common():
+        for tag, count in normalizer.stats.normalized_tags.most_common():
             print(f"  {tag}: {count}")
 
     # Save statistics
     stats_file.parent.mkdir(parents=True, exist_ok=True)
     with stats_file.open("w", encoding="utf-8") as f:
-        json.dump(stats.to_dict(), f, indent=2, ensure_ascii=False)
+        json.dump(normalizer.stats.to_dict(), f, indent=2, ensure_ascii=False)
 
     print(f"\nTag statistics saved to {stats_file}")
-
 
 if __name__ == "__main__":
     main()

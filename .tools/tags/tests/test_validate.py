@@ -2,7 +2,6 @@
 
 import json
 import pytest
-from ruamel.yaml import YAML
 from tags.validate import (
     validate_tags,
     load_tags_map,
@@ -10,7 +9,6 @@ from tags.validate import (
     extract_tags_from_file,
 )
 from .test_helpers import detailed_assert, with_context
-from pathlib import Path
 
 
 @pytest.fixture

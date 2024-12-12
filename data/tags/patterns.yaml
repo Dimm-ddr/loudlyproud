@@ -21,17 +21,6 @@ split:
     - pattern: "\\.$" # Remove trailing dots
       replace: ""
 
-# Common prefixes/suffixes to remove
-trim:
-  suffixes:
-    - " fiction"
-    - " fiction."
-    - " -- fiction."
-    - " -- fiction"
-  prefixes:
-    - "fiction "
-    - "fiction: "
-
 # Common compound mappings
 compounds:
   - pattern: "^young adult fiction (.+)"

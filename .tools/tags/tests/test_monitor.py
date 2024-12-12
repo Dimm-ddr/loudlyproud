@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 import pytest
-from pathlib import Path
 from tags.monitor import update_tags_report
-from tags.validate import extract_tags_from_file, validate_tags
+from tags.validate import validate_tags
 
 
 @pytest.fixture

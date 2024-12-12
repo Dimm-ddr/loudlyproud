@@ -3,7 +3,6 @@
 import pytest
 import json
 import tomllib
-from pathlib import Path
 from tags.sorting import sort_mapping, sort_colors
 
 
