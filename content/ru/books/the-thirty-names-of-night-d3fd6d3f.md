@@ -19,24 +19,24 @@ params:
   russian_translation_status: might_exist
   short_book_description: Five years after a suspicious fire killed his ornithologist mother, a closeted Syrian American trans boy sheds his birth name and searches for a new one. He has been unable to paint since his...
   tags:
-    - Américains d'origine syrienne
-    - Artistes
-    - Artists
-    - ghost
-    - LGBTQ gender identity
     - LGBTQIA+
-    - Lambda Literary Award Winner
     - Lambda Literary Awards
-    - Mothers
-    - Romans nouvelles
-    - Stonewall book awards
+    - Stonewall Book Awards
     - Syrian Americans
-    - Transgenres
+    - américains d'origine syrienne
+    - artistes
+    - artists
     - contemporary
     - death
+    - ghost
     - historical
+    - lambda literary award winner
+    - lgbtq gender identity
     - literary
+    - mothers
     - novels
     - queer
     - transgender
+    - transgenres
 ---
+

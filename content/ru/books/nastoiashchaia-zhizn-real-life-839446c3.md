@@ -23,19 +23,19 @@ params:
   russian_translation_status: exists
   short_book_description: Держать людей на расстоянии уже давно вошло у Уолласа в привычку. Нет, он не социофоб. Просто так безопасней. Он — первый за несколько десятков лет черный студент на факультете биохимии в Университете Среднего Запада...
   tags:
-    - African American gay men
-    - American literature
-    - african american & black general
-    - african american general
-    - Graduate students
+    - American fiction
     - LGBTQIA+
-    - New York Times reviewed
-    - Race
+    - african american & black general
+    - african american gay men
+    - african american general
     - audiobook
     - contemporary
     - friendship
     - gay
+    - graduate students
     - literary
     - queer
+    - race
     - relationships
 ---
+

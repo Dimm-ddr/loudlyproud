@@ -19,17 +19,15 @@ params:
   short_book_description: Alternate cover edition of ISBN9780593085684A novel about the forbidden union between two enslaved young men on a Deep South plantation, the refuge they find in each other, and a betrayal that...
   tags:
     - African American
-    - African American gay men
-    - african american & black historical
-    - historical
-    - historical general
     - LGBTQIA+
-    - Literary
-    - New York Times reviewed
-    - Slaves
+    - african american & black historical
+    - african american gay men
     - gay
+    - historical
     - literary
     - new york times bestseller
     - queer
     - romance
+    - slaves
 ---
+

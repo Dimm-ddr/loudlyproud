@@ -6,17 +6,16 @@ type: books
 params:
   book_title: Как проиграть в войне времён (This Is How You Lose The Time War)
   tags:
+    - Atlantis
     - English literature
     - LGBTQIA+
     - London
-    - atlantis
     - epistolary
     - fantasy
     - new york times bestseller
     - queer
     - romance
-    - science fiction general
-    - the whole of time and space
+    - science fiction
     - time-traveling
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
   editions count: '42'

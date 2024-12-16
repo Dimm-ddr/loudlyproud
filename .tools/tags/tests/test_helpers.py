@@ -5,11 +5,7 @@ from functools import wraps
 
 
 def detailed_assert(
-    test_name: str,
-    input_value: Any,
-    expected: Any,
-    actual: Any,
-    **extra_info: Any
+    test_name: str, input_value: Any, expected: Any, actual: Any, **extra_info: Any
 ) -> None:
     """
     Assert with detailed failure reporting.
@@ -30,13 +26,12 @@ def detailed_assert(
 
 
 def with_context(
-    func: Callable[[Any], Any] | None = None,
-    *,
-    show_args: bool = True
+    func: Callable[[Any], Any] | None = None, *, show_args: bool = True
 ) -> Callable:
     """
     Decorator to add detailed failure reporting to test functions.
     """
+
     def decorator(test_func):
         @wraps(test_func)
         def wrapper(*args, **kwargs):
@@ -51,5 +46,7 @@ def with_context(
                         error_msg.append(f"Kwargs: {kwargs!r}")
                 error_msg.append(str(e))
                 raise AssertionError("\n".join(error_msg))
+
         return wrapper
+
     return decorator if func is None else decorator(func)

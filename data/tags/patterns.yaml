@@ -3,11 +3,6 @@ remove:
   prefixes:
     - "nyt:"
     - "collectionID:"
-  exact:
-    - "general"
-    - "literature"
-    - "strips"
-    - "fiction"
 
 # Tags matching these patterns will be split into components
 split:
@@ -22,6 +17,16 @@ split:
       replace: ""
     - pattern: "\\ -$" # Remove trailing -
       replace: ""
+    - pattern: " & " # Split "action & adventure" into ["action", "adventure"]
+      keep_parts: true
+    - pattern: " general$" # Remove trailing "general" from tags
+      replace: ""
+    - pattern: " in$" # Remove trailing "in" from tags
+      replace: ""
+    - pattern: "^fiction " # Remove leading "fiction"
+      replace: ""
+    - pattern: " fiction$" # Remove trailing "fiction"
+      replace: ""
 
 # Common compound mappings
 compounds:
@@ -29,3 +34,29 @@ compounds:
     map_to: ["young adult (YA)", "{}"]
   - pattern: "^fiction lgbtqia\\+ (.+)"
     map_to: ["LGBTQIA+", "{}"]
+  - pattern: "^(.+) mothers$"
+    map_to: ["mothers", "{}"]
+  - pattern: "^(.+) novelists$"
+    map_to: ["authors", "{}"]
+  - pattern: "^(.+) couples$"
+    map_to: ["couples", "{}"]
+  - pattern: "^(.+) relationships$"
+    map_to: ["relationships", "{}"]
+  - pattern: "^(.+) love story$"
+    map_to: ["romance", "{}"]
+  - pattern: "^(.+) love$"
+    map_to: ["love", "{}"]
+  - pattern: "^(.+) romance novel$"
+    map_to: ["romance", "{}"]
+  - pattern: "^mères (.+)$" # French "mothers"
+    map_to: ["mothers", "{}"]
+  - pattern: "^pères (.+)$" # French "fathers"
+    map_to: ["fathers", "{}"]
+  - pattern: "^(.+) award winner$"
+    map_to: ["{}"]
+  - pattern: "^the (.+)$" # e.g. "the bronx" -> "bronx"
+    map_to: ["{}"]
+  - pattern: ".+ (brownburn|pelu|avery|hodges)$"
+    map_to: null
+  - pattern: "^(.+) & (.+)$"
+    map_to: ["{}1", "{}2"]

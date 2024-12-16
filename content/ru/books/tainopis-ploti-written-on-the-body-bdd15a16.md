@@ -32,15 +32,12 @@ params:
     - LGBTQIA+
     - Lambda Literary Awards
     - Stonewall Book Awards
-    - belletristische darstellung
     - contemporary
-    - ehefrau
-    - leukämie
-    - liebesbeziehung
+    - leukemia
     - marriage
-    - married women
     - novels
     - queer
     - romance
+    - women
 ---
 

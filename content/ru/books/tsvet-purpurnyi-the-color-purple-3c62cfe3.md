@@ -30,75 +30,66 @@ params:
   russian_translation_status: exists
   short_book_description: Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины…
   tags:
-    - 1930s
-    - Abused wives
-    - Adam
-    - Adult child sexual abuse victims
-    - Africa
-    - African American authors
-    - African American
-    - African American women
-    - African continental ancestry group
-    - Albert
-    - Alphonso
-    - American
-    - American fiction
-    - fictional works by one author
-    - American literature
-    - Books that Shaped Work in America
-    - Celie
-    - Corrine
     - '& literature'
+    - Africa
+    - African American
+    - African American authors
+    - American fiction
+    - LGBTQIA+
+    - United States
+    - abused wives
+    - adam
+    - adult child sexual abuse victims
     - african american & black general
     - african american general
-    - family life general
-    - general
-    - Fictional Works Publication Type
-    - Georgia
-    - Germaine
-    - Grady
-    - Harpo
-    - Imprimés espagnols
-    - LGBTQIA+
-    - Language readers
-    - Large type books
-    - Lesbian
-    - Long now manual for civilization
-    - National Book Award Winner
-    - Nettie
-    - New York Times reviewed
-    - Noires
-    - Noires américaines
-    - Olivia
-    - Racisme
-    - Roman espagnol
-    - Romans
-    - Romans en novellen ; vertaald
-    - Romans nouvelles
-    - Samuel
-    - Sheriff Hodges
-    - Shug Avery
-    - Sisters
-    - Social conditions
-    - Sofia
-    - Southern States
-    - Southern states
-    - Spanish
-    - Spanish imprints
-    - Squeak
-    - Tashi
-    - Tennessee
-    - Translations into Spanish
-    - United States
-    - Vrouwenemancipatie
+    - african american women
+    - african continental ancestry group
+    - albert
+    - alphonso
+    - books that shaped work in america
+    - celie
     - classics
+    - corrine
     - domestic
+    - family life general
     - feminism
+    - fictional works publication type
     - friendship
+    - georgia
+    - germaine
+    - grady
+    - harpo
     - historical
+    - imprimés espagnols
+    - language readers
+    - large type books
     - lesbian
+    - long now manual for civilization
+    - national book award winner
+    - nettie
+    - noires
+    - noires américaines
     - novels
+    - olivia
     - queer
-    - social life and customs
+    - racisme
+    - roman espagnol
+    - romans
+    - romans en novellen ; vertaald
+    - samuel
+    - sheriff hodges
+    - shug avery
+    - siblings
+    - social commentary
+    - sofia
     - songs and music
+    - southern states
+    - spanish
+    - spanish imprints
+    - squeak
+    - tashi
+    - tennessee
+    - translations into spanish
+    - vrouwenemancipatie
 ---
+

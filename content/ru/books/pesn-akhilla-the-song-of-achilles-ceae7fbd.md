@@ -29,35 +29,33 @@ params:
   russian_translation_status: exists
   short_book_description: 'Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил и робок, так еще и нечаянно убивает сверстника..'
   tags:
-    - Achilles
-    - Greek mythology
-    - Amitié masculine
-    - Ancient Greece
-    - Chiron
-    - historical
-    - historical general
-    - war & military
-    - Gay
-    - Gay love
     - Greece
-    - Greeks
-    - Guerre de Troie
     - LGBTQIA+
-    - New York Times reviewed
-    - Patroclus
-    - Phthia
-    - Romans nouvelles
-    - Stonewall book awards
-    - Thetis
-    - To 146 B.C
-    - Trojan War
-    - Troy
-    - Extinct city
-    - Turkey
+    - Stonewall Book Awards
+    - achilles
+    - amitié masculine
+    - ancient greece
+    - chiron
+    - extinct city
     - fantasy
     - friendship
+    - gay
+    - gay love
+    - greek mythology
+    - greeks
+    - guerre de troie
+    - historical
     - history
     - mythology
     - new york times bestseller
+    - patroclus
+    - phthia
     - romance
+    - thetis
+    - to 146 b.c
+    - trojan war
+    - troy
+    - turkey
+    - war & military
 ---
+

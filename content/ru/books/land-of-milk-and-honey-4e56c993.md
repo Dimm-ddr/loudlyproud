@@ -19,11 +19,10 @@ params:
   russian_translation_status: unknown
   short_book_description: The award-winning author of How Much of These Hills Is Gold returns with a rapturous and revelatory novel about a young chef whose discovery of pleasure alters her life and, indirectly, the world...
   tags:
-    - Food
     - audiobook
     - contemporary
     - dystopia
-    - fiction
     - literary fiction
     - science fiction
 ---
+

@@ -25,18 +25,14 @@ params:
   russian_translation_status: exists
   short_book_description: Роман "Бремя" - это рассказ об истории человечества, с момента зарождения мира и до наших дней. Об истории, которая движется со скоростью света и о месте человека в этом бесконечном движении…
   tags:
+    - Atlas
     - Greece
-    - atlas
-    - choice
-    - fiction fantasy general
-    - fiction general
-    - fiction religious
-    - greek deity
+    - fantasy
     - greek mythology
-    - heracles
     - literary fiction
     - mental health
     - psychological fiction
+    - religious fiction
     - retellings
 ---
 

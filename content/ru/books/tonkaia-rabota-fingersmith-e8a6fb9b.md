@@ -33,12 +33,11 @@ params:
     - crime
     - extortion
     - historical
-    - junge frau
     - lesbian
     - mystery
     - queer
     - romance
     - social commentary
-    - unterschicht
+    - young adult (YA)
 ---
 

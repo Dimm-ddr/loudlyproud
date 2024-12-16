@@ -2,7 +2,6 @@
 
 
 
-
 draft: false
 slug: the-seven-husbands-of-evelyn-hugo-af9a98c5
 title: The Seven Husbands Of Evelyn Hugo
@@ -29,20 +28,20 @@ params:
   russian_translation_status: exists
   short_book_description: Ведущая затворнический образ жизни легенда старого Голливуда Эвелин Хьюго объявляет, что готова представить публике свои мемуары.Всю ее карьеру сопровождали загадки, сенсации и многочисленные скандалы..
   tags:
+    - Hollywood
     - LGBTQIA+
+    - Los Angeles
     - audiobook
-    - authorship
-    - biographers
+    - authors
     - biography
+    - contemporary
     - historical
-    - hollywood
-    - los angeles calif
+    - journalism
     - male-female romance
-    - motion picture actors and actresses
     - new york times bestseller
     - performing arts
     - queer
-    - romance contemporary
-    - women journalists
+    - romance
+    - women
 ---
 

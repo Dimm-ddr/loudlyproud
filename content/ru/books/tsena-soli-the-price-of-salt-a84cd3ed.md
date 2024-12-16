@@ -28,36 +28,34 @@ params:
   russian_translation_status: exists
   short_book_description: '"Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне…'
   tags:
-    - 1950s
     - 20th century
     - Chicago
-    - Custody of children
-    - Divorce
-    - action & adventure
-    - lesbian
     - LGBTQIA+
-    - gay
-    - mystery & detective general
-    - romance fantasy
     - LGBTQIA+ novels before Stonewall
-    - Lesbian love story
-    - Lesbian romance novel
-    - Lesbians
-    - Literary
-    - Media Tie-In
-    - Mothers
-    - New Jersey
     - New York
-    - Nineteen fifties
-    - Psychological
-    - Road trip
-    - Social conditions
     - United States
+    - action & adventure
     - classics
+    - custody of children
+    - divorce
     - family
+    - gay
     - historical
+    - lesbian
+    - lesbian love story
+    - lesbian romance novel
+    - literary
+    - media tie-in
+    - mothers
+    - mystery & detective general
+    - nineteen fifties
     - novels
+    - psychological fiction
     - queer
+    - road trip
     - romance
+    - romance fantasy
+    - social commentary
     - travel
 ---
+

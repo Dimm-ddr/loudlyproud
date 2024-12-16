@@ -3,11 +3,52 @@
 import pytest
 from tags.normalize import TagNormalizer
 from .test_helpers import detailed_assert, with_context
+from pathlib import Path
+from ..file_ops import (
+    write_mapping_file,
+    write_patterns_file,
+)
 
 
 @pytest.fixture
-def normalizer():
-    return TagNormalizer()
+def normalizer(tmp_path: Path) -> TagNormalizer:
+    """Create normalizer with test configuration."""
+    # Create test mapping file
+    mapping = {
+        "american": "American fiction",
+        "american fiction": "American fiction",
+        "short stories": "short stories",
+        "american short stories": ["American fiction", "short stories"],
+        "fantasy": "fantasy",
+        "strips": None,
+        "detective and mystery stories": ["detective", "mystery"],
+        "venice": "Venice",
+        "italy": "Italy",
+    }
+    mapping_file = tmp_path / "data/tags/mapping.json"
+    mapping_file.parent.mkdir(parents=True, exist_ok=True)
+    write_mapping_file(mapping_file, mapping)
+
+    # Create test patterns file
+    patterns = {
+        "remove": {"prefixes": ["nyt:"]},
+        "split": {
+            "separators": [
+                {"pattern": " \\(([^)]+)\\)", "extract_groups": True},
+            ]
+        },
+        "compounds": [],
+    }
+    patterns_file = tmp_path / "data/tags/patterns.yaml"
+    write_patterns_file(patterns_file, patterns)
+
+    # Create to_remove file
+    remove_file = tmp_path / "data/tags/to_remove.toml"
+    remove_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(remove_file, "w", encoding="utf-8") as f:
+        f.write('to_remove = ["fiction", "general", "strips"]\n')
+
+    return TagNormalizer(tmp_path)
 
 
 def test_should_remove():
@@ -89,7 +130,6 @@ def test_normalize_tags():
         ),  # parentheses pattern with proper capitalization
     ],
 )
-def test_normalize_tags_parametrized(input_tags, expected):
+def test_normalize_tags_parametrized(input_tags, expected, normalizer):
     """Test tag normalization with various inputs."""
-    normalizer = TagNormalizer()
     assert set(normalizer.normalize_tags(input_tags)) == set(expected)

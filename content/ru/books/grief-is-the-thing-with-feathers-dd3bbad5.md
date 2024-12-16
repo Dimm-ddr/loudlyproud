@@ -19,22 +19,22 @@ params:
   russian_translation_status: unknown
   short_book_description: In a London flat, two young boys face the unbearable sadness of their mother's sudden death. Their father, a Ted Hughes scholar and scruffy romantic, imagines a future of well-meaning visitors and...
   tags:
-    - Fiction family life
-    - Fiction family life general
-    - Fiction psychological
-    - London (England)
-    - Motherless families
-    - Mothers
-    - New York Times reviewed
-    - Poetry
-    - Widowers
+    - England
+    - London
     - contemporary
     - death
     - fantasy
     - father-son relationship
-    - fiction
+    - fiction family life
+    - fiction family life general
     - grief
     - literary fiction
     - magical realism
+    - motherless families
+    - mothers
     - novels
+    - poetry
+    - psychological fiction
+    - widowers
 ---
+

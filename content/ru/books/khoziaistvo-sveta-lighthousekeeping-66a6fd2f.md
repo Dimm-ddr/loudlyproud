@@ -30,19 +30,17 @@ params:
   tags:
     - LGBTQIA+
     - Scotland
-    - blind
-    - clergy
     - contemporary
+    - disabilities
     - historical
     - lesbian
-    - lighthouse keepers
     - literary
     - magical realism
-    - older men
-    - psychological
+    - new adult (NA)
+    - psychological fiction
     - queer
+    - religion
     - romance
-    - storytelling
-    - young women
+    - women
 ---
 

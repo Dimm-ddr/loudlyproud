@@ -8,21 +8,19 @@ params:
   tags:
     - LGBTQIA+
     - audiobook
-    - children of gay parents
-    - children of sperm donors
-    - children's
+    - body image
+    - children's fiction
     - contemporary
     - friendship
     - gay teenagers
-    - homosexuality
-    - lesbian teenagers
+    - gay-parent families
+    - lesbian
     - mental illness
-    - overweight teenagers
     - queer
     - relationships
     - romance
-    - sisters
-    - twins
+    - siblings
+    - teenagers
     - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487956734i/30653853.jpg
   isbn: '9785604219638'

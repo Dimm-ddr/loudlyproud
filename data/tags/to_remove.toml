@@ -1,0 +1,28 @@
+# Tags that should be removed
+
+to_remove = [
+    # Character names
+    "alex claremont-diaz",
+    "june claremont-diaz",
+    "ellen claremont",
+    "henry gaunt",
+    "sidney ellwood",
+    "lynn",
+    "mungo",
+
+    # Generic/meaningless tags
+    "general",
+    "literature",
+    "strips",
+    "fiction",
+    "influence",
+    "state",
+    "present",
+    "domestic",
+    "memory",
+
+    # Years and dates (unless historically significant)
+    "1882-1941",
+    "2019",
+    "2020",
+]

@@ -20,27 +20,25 @@ params:
   short_book_description: An essential and revelatory coming-of-age narrative from a thrilling new voice,Rainbow Milkfollows nineteen-year-old Jesse McCarthy as he grapples with his racial and sexual identities against the...
   tags:
     - English literature
-    - coming of age
-    - cultural heritage
     - LGBTQIA+
-    - general
-    - Garçons adolescents
-    - Homosexuels masculins
-    - Identité sexuelle
-    - Jamaicans
-    - Jamaïquains
-    - Jehovah's Witnesses
-    - Minorités sexuelles
-    - New York Times reviewed
-    - Romans nouvelles
-    - Sex workers
-    - Témoins de Jéhovah
     - boys
+    - coming of age
     - contemporary
+    - cultural heritage
+    - garçons adolescents
     - gay
     - gender identity
     - historical
+    - homosexuels masculins
+    - identité sexuelle
+    - jamaicans
+    - jamaïquains
+    - jehovah's witnesses
     - literary
+    - minorités sexuelles
     - queer
-    - teenage
+    - sex workers
+    - teenagers
+    - témoins de jéhovah
 ---
+

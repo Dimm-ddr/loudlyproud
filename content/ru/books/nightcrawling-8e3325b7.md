@@ -24,14 +24,12 @@ params:
     - LGBTQIA+
     - adult fiction
     - audiobook
-    - bildungsromans
-    - brothers and sisters
+    - coming of age
     - contemporary
     - literary
     - new york times bestseller
     - police
     - race
-    - scandals
-    - witnesses
-    - écrivains noirs
+    - siblings
 ---
+

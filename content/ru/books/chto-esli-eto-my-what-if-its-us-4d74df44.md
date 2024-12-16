@@ -9,17 +9,14 @@ params:
     - LGBTQIA+
     - New York
     - audiobook
-    - children's
+    - children's fiction
     - contemporary
     - dating
-    - fate and fatalism
     - gay
-    - homosexuality
-    - n.y
     - new york times bestseller
     - queer
     - romance
-    - social customs
+    - social commentary
     - young adult (YA)
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   editions count: '61'

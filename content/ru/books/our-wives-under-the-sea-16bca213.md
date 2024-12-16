@@ -20,17 +20,16 @@ params:
   short_book_description: Leah is changed. Months earlier, she left for a routine expedition, only this time her submarine sank to the sea floor.
   tags:
     - LGBTQIA+
+    - adventure
     - contemporary
     - grief
     - horror
-    - lesbian couples
-    - life change events
+    - lesbian
     - literary
+    - marriage
+    - personal growth
     - queer
-    - same-sex marriage
-    - submarines
-    - underwater exploration
-    - wives
-    - women marine biologists
+    - science
+    - women
 ---
 

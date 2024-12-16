@@ -27,27 +27,19 @@ params:
   russian_translation_status: exists
   short_book_description: После того как мать Алекса избрали президентом, парня стали воспринимать кем-то вроде небожителя.
   tags:
-    - '2019'
-    - '2020'
-    - Alex Claremont-Diaz
-    - Ellen Claremont
-    - June Claremont-Diaz
     - LGBTQIA+
     - London
-    - Presidents united states
-    - Prince Henry of Wales
     - United Kingdom
     - United States
-    - Washington D.C
-    - White House
     - contemporary
     - gay
     - humor
-    - new adult
-    - NA
+    - new adult (NA)
     - new york times bestseller
+    - presidents united states
     - queer
     - romance
-    - young adult
-    - YA
+    - washington d.c
+    - young adult (YA)
 ---
+

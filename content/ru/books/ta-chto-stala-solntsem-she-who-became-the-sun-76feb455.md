@@ -27,10 +27,10 @@ params:
   tags:
     - English literature
     - LGBTQIA+
-    - Romans nouvelles
     - fantasy
     - historical
     - history
     - lesbian
     - queer
 ---
+

@@ -29,47 +29,39 @@ params:
   russian_translation_status: exists
   short_book_description: Главная героиня романа - вдохновительница и мистический "соавтор" Каннингема, знаменитая английская писательница Вирджиния Вулф. Наряду с ней, пишущей свой прославленный роман "Миссис Дэллоуэй" в 20-х годах XX века…
   tags:
-    - Authors
-    - Belletristische Darstellung
-    - Femmes
-    - psychological
-    - Frau
     - French
-    - Influence
-    - Literary artistic etc.
-    - LGBTQ HIV/AIDS
     - LGBTQIA+
-    - Large type books
-    - Literatura norte-americana
-    - Malades en phase terminale
-    - Man-Woman relationships-Fiction
-    - Man-woman relationships
-    - Man-woman relationships in
     - New York
-    - N.Y.
-    - State
-    - New York Times reviewed
-    - New york
-    - n.y.
-    - PEN/Faulkner Award Winner
-    - Relations entre hommes et femmes
-    - Roman américain
-    - Romans nouvelles
-    - Stonewall book awards
-    - Terminally ill
-    - Terminally ill in
-    - Virginia Woolf
-    - 1882-1941
-    - Women
-    - Women in
-    - Woolf Virginia 1882-1941
-    - Woolf Virginia in
+    - Stonewall Book Awards
+    - authors
     - classics
     - contemporary
     - domestic
+    - femmes
+    - frau
     - historical
+    - influence
+    - large type books
+    - lgbtq hiv/aids
     - literary
+    - literary artistic etc
+    - literatura norte-americana
+    - malades en phase terminale
     - male-female romance
+    - man-woman relationships in
+    - man-woman relationships-fiction
     - novels
+    - pen/faulkner award winner
+    - psychological fiction
+    - relations entre hommes et femmes
+    - roman américain
     - romance
+    - state
+    - terminally ill
+    - terminally ill in
+    - women
+    - women in
+    - woolf virginia 1882-1941
+    - woolf virginia in
 ---
+

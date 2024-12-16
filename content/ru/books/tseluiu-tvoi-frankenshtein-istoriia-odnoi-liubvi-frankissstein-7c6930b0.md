@@ -24,22 +24,21 @@ params:
   russian_translation_status: exists
   short_book_description: Лето 1816 года, Швейцария.
   tags:
-    - Artificial intelligence
-    - Cryonics
-    - gothic
-    - political
-    - romance historical
-    - romance historical general
-    - romance science
-    - science fiction general
-    - women
     - LGBTQIA+
-    - New York Times reviewed
-    - Sex dolls
+    - artificial intelligence
     - contemporary
+    - cryonics
+    - gothic
     - historical
     - literary
+    - political
     - queer
+    - romance
+    - romance science
     - science
+    - science fiction
+    - sex dolls
     - transgender
+    - women
 ---
+

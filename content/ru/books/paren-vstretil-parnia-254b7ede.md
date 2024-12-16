@@ -25,16 +25,14 @@ params:
     - LGBTQIA+
     - Lambda Literary Awards
     - boys
-    - children's
+    - children's fiction
     - contemporary
-    - cultural literacy and humanities
     - friendship
     - gay teenagers
-    - juvenile
-    - origami in literature
+    - juvenile fiction
     - queer
     - romance
-    - teenage
+    - teenagers
     - young adult (YA)
 ---
 

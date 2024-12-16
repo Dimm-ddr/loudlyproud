@@ -23,18 +23,15 @@ params:
   tags:
     - American fiction
     - Hispanic Americans
-    - Large type books
-    - New jersey fiction
     - adult fiction
     - contemporary
-    - fiction
+    - large type books
     - literary fiction
     - male-female romance
     - new york times bestseller
     - novels
-    - nyt:combined-print-and-e-book-fiction=2012-09-30
-    - nyt:trade-fiction-paperback=2013-09-22
     - romance
     - short stories
     - women
 ---
+

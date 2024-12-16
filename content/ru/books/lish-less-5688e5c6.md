@@ -28,46 +28,42 @@ params:
   series: Arthur Less
   short_book_description: Накануне своего пятидесятилетия писатель-неудачник Артур Лишь получает приглашение на свадьбу бывшего, которого до сих пор не разлюбил...
   tags:
-    - Arthur Less
-    - Authors
-    - Carlos Pelu
-    - humorous
-    - humorous general
-    - satire
-    - Freddy Pelu
-    - Gay men
-    - Gay novelists
     - Germany
-    - Homoseksualizm
-    - Humorous
-    - Humour
     - India
     - Italy
     - Japan
-    - Kryzys wieku średniego
     - LGBTQIA+
-    - Literary
-    - Marian Brownburn
-    - Mexico
-    - Miłość
     - Morocco
     - New York
-    - New York Times reviewed
     - Paris
-    - Pisarze
-    - Podróże dookoła świata
-    - Present
-    - Robert Brownburn
     - San Francisco
-    - Voyages and travels
+    - arthur less
     - audiobook
     - authors
+    - carlos pelu
     - contemporary
+    - freddy pelu
     - gay
+    - gay novelists
+    - homoseksualizm
     - humor
+    - humorous
+    - humorous general
+    - humour
+    - kryzys wieku średniego
     - literary
+    - marian brownburn
+    - mexico
+    - miłość
     - new york times bestseller
     - novels
+    - pisarze
+    - podróże dookoła świata
+    - present
     - queer
+    - robert brownburn
     - romance
+    - satire
+    - voyages and travels
 ---
+
