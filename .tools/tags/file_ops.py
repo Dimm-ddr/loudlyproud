@@ -74,12 +74,23 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
 def write_frontmatter(file_path: Path, frontmatter: dict, body: str) -> bool:
     """Write frontmatter and body back to file."""
     try:
+        # Validate frontmatter structure
+        if "type" not in frontmatter:
+            print(f"Error: Missing 'type' in frontmatter for {file_path}")
+            return False
+        if "params" not in frontmatter:
+            print(f"Error: Missing 'params' in frontmatter for {file_path}")
+            return False
+        if "tags" not in frontmatter["params"]:
+            print(f"Error: Missing 'tags' in params for {file_path}")
+            return False
+
         yaml = YAML()
         yaml.preserve_quotes = True
         yaml.width = 4096
         yaml.indent(mapping=2, sequence=4, offset=2)
 
-        with file_path.open("w", encoding="utf-8", newline="\n") as f:
+        with open(file_path, "w", encoding="utf-8", newline="\n") as f:
             f.write("---\n")  # Opening delimiter
             yaml.dump(frontmatter, f)
             f.write("---\n")  # Closing delimiter with newline

@@ -72,6 +72,43 @@ def test_get_removable_mapping_keys(tmp_path: Path):
     assert "test tag" not in result["exact matches"]
 
 
+def test_get_removable_mapping_keys_empty_files(tmp_path: Path):
+    # Empty mapping file
+    mapping_file = tmp_path / "empty_mapping.json"
+    write_mapping_file(mapping_file, {})
+
+    patterns_file = tmp_path / "patterns.yaml"
+    write_patterns_file(patterns_file, {"remove": {"prefixes": ["nyt:"]}})
+
+    result = get_removable_mapping_keys(mapping_file, patterns_file)
+    assert not result  # Should return empty dict
+
+    # Empty patterns file
+    mapping = {"test": None}
+    write_mapping_file(mapping_file, mapping)
+    write_patterns_file(patterns_file, {})
+
+    result = get_removable_mapping_keys(mapping_file, patterns_file)
+    assert not result  # Should return empty dict
+
+
+def test_get_removable_mapping_keys_no_removable(tmp_path: Path):
+    # No tags match removal patterns
+    mapping = {
+        "valid_tag": "Valid Tag",
+        "another_tag": "Another Tag",
+    }
+    mapping_file = tmp_path / "mapping.json"
+    write_mapping_file(mapping_file, mapping)
+
+    patterns = {"remove": {"prefixes": ["nyt:"]}}
+    patterns_file = tmp_path / "patterns.yaml"
+    write_patterns_file(patterns_file, patterns)
+
+    result = get_removable_mapping_keys(mapping_file, patterns_file)
+    assert not result  # Should return empty dict
+
+
 def test_get_removable_color_tags(tmp_path: Path):
     # Create test mapping file
     mapping = {
