@@ -35,8 +35,8 @@ params:
     - novels
     - queer
     - romance
-    - violence against gay teenagers
-    - working class families
+    - social class
+    - violence
     - young adult (YA)
 ---
 

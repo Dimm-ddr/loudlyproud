@@ -39,7 +39,7 @@ params:
     - new york times bestseller
     - queer
     - romance
-    - teenage
+    - teenagers
     - young adult (YA)
 ---
 

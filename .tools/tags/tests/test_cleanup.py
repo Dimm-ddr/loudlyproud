@@ -58,4 +58,4 @@ def test_process_book_file(test_data_dir):
     normalized_tags = frontmatter["params"]["tags"]
     assert "Venice" in normalized_tags
     assert "Italy" in normalized_tags
-    assert "romance" in normalized_tags
+    assert "fiction romance" in normalized_tags

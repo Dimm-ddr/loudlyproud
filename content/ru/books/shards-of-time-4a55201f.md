@@ -6,18 +6,18 @@ type: books
 params:
   book_title: Shards Of Time
   tags:
-    - LGBTQIA+
     - adventure
     - crime
     - gay
     - high fantasy
+    - LGBTQIA+
     - magic
     - male-male romance
     - murder
     - queer
     - spy stories
     - suspense
-    - thrillers
+    - thriller
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377657570i/18006456.jpg
   editions count: '3'
   isbn: '9780345522313'

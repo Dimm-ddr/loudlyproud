@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import TypedDict
 from .validate import validate_tags, extract_tags_from_file
+from .sorting import sort_strings, sort_dict_by_keys
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -34,7 +35,8 @@ def load_tags_report(project_root: Path) -> TagsReport:
     report_file = project_root.joinpath(GENERATED_DATA_DIR, REPORT_FILE)
     try:
         if report_file.exists():
-            return json.loads(report_file.read_text(encoding="utf-8"))
+            with open(report_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
     except Exception as e:
         print(f"Error loading existing report: {e}")
     return {"unprocessed_tags": {}, "processed_tags": {}}
@@ -44,8 +46,8 @@ def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsRep
     """Update the tags report with newly found tags."""
     current_time = datetime.now().isoformat()
 
-    for file_path, tags in new_tags.items():
-        for tag in tags:
+    for file_path, tags in sorted(new_tags.items()):
+        for tag in sort_strings(tags):
             tag_lower = tag.lower()
             if tag_lower not in report["unprocessed_tags"]:
                 report["unprocessed_tags"][tag_lower] = {
@@ -57,10 +59,18 @@ def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsRep
             else:
                 tag_info = report["unprocessed_tags"][tag_lower]
                 if tag not in tag_info["original_forms"]:
+                    # Keep original_forms sorted
                     tag_info["original_forms"].append(tag)
+                    tag_info["original_forms"] = sort_strings(tag_info["original_forms"])
                 if file_path not in tag_info["files"]:
+                    # Keep files sorted
                     tag_info["files"].append(file_path)
+                    tag_info["files"] = sort_strings(tag_info["files"])
                 tag_info["occurrences"] += 1
+
+    # Sort the unprocessed_tags dictionary by keys
+    report["unprocessed_tags"] = sort_dict_by_keys(report["unprocessed_tags"])
+    report["processed_tags"] = sort_dict_by_keys(report["processed_tags"])
 
     return report
 
@@ -74,9 +84,9 @@ def main() -> None:
     diff_command = f"git diff --name-only origin/{base_ref}...HEAD"
 
     changed_files = os.popen(diff_command).read().splitlines()
-    book_files = [
-        f for f in changed_files if f.startswith(str(CONTENT_DIR)) and f.endswith(".md")
-    ]
+    book_files = sort_strings(
+        [f for f in changed_files if f.startswith(str(CONTENT_DIR)) and f.endswith(".md")]
+    )
 
     # Validate changed files
     validation_report = validate_tags(project_root)
@@ -86,11 +96,11 @@ def main() -> None:
     for file_path in book_files:
         tags = extract_tags_from_file(Path(file_path))
         # Check for unmapped or uncolored tags
-        invalid_tags = [
-            tag for tag in tags
-            if tag in validation_report["unmapped_tags"] or
-               tag in validation_report["uncolored_tags"]
-        ]
+        invalid_tags = sort_strings(
+            [tag for tag in tags
+             if tag in validation_report["unmapped_tags"] or
+                tag in validation_report["uncolored_tags"]]
+        )
         if invalid_tags:
             new_tags[file_path] = invalid_tags
 
@@ -105,13 +115,14 @@ def main() -> None:
 
         # Save updated report
         report_file = data_dir.joinpath(REPORT_FILE)
-        report_file.write_text(
-            json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
+        with open(report_file, "w", encoding="utf-8", newline='\n') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
 
         # Save immediate results for PR comment
-        with open(PR_REPORT_FILE, "w", encoding="utf-8") as f:
-            json.dump(new_tags, f, indent=2, ensure_ascii=False)
+        with open(PR_REPORT_FILE, "w", encoding="utf-8", newline='\n') as f:
+            # Sort new_tags before saving
+            sorted_new_tags = {k: sort_strings(v) for k, v in sorted(new_tags.items())}
+            json.dump(sorted_new_tags, f, indent=2, ensure_ascii=False)
 
     # Set output for GitHub Actions
     with open(os.environ["GITHUB_OUTPUT"], "a") as f:

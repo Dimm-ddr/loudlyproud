@@ -20,10 +20,9 @@ params:
   russian_translation_status: exists
   short_book_description: Эвелин Нотт вот уже шестнадцать лет привязана к Элизиуму — прибежищу для сверхъестественных существ. Все эти годы она планировала отомстить бывшему мужу Адаму, который забрал ее ребенка сразу...
   tags:
-    - LGBTQIA+
     - adult fiction
     - adventure
-    - na
+    - LGBTQIA+
     - new adult (NA)
     - paranormal
     - queer

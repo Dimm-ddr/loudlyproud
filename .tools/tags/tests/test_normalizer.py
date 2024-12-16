@@ -20,15 +20,6 @@ def test_should_remove():
     assert normalizer.should_remove("valid tag") is False
 
 
-def test_trim_tag():
-    """Test trimming of common prefixes and suffixes"""
-    normalizer = TagNormalizer()
-    assert normalizer.trim_tag("fiction something") == "something"
-    assert normalizer.trim_tag("something fiction") == "something"
-    assert normalizer.trim_tag("something fiction.") == "something"
-    assert normalizer.trim_tag("fiction: something") == "something"
-
-
 def test_split_tag():
     """Test tag splitting patterns"""
     normalizer = TagNormalizer()
@@ -84,9 +75,18 @@ def test_normalize_tags():
         (["fantasy"], ["fantasy"]),
         (["strips"], []),  # should be removed
         (["fantasy", "strips"], ["fantasy"]),
-        (["american short stories"], ["American fiction", "short stories"]),  # split via mapping
-        (["detective and mystery stories"], ["detective", "mystery"]),  # another mapping example
-        (["venice (italy)"], ["Venice", "Italy"]),  # parentheses pattern with proper capitalization
+        (
+            ["american short stories"],
+            ["American fiction", "short stories"],
+        ),  # split via mapping
+        (
+            ["detective and mystery stories"],
+            ["detective", "mystery"],
+        ),  # another mapping example
+        (
+            ["venice (italy)"],
+            ["Venice", "Italy"],
+        ),  # parentheses pattern with proper capitalization
     ],
 )
 def test_normalize_tags_parametrized(input_tags, expected):

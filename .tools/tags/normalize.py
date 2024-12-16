@@ -7,10 +7,10 @@ from collections.abc import Sequence
 from ruamel.yaml import YAML
 import json
 from .common import TAGS_CONFIG_DIR, TagStats
+from .sorting import sort_strings
 
 # Type aliases
 TagValue: TypeAlias = str | list[str] | None
-
 
 class TagNormalizer:
     def __init__(
@@ -28,11 +28,11 @@ class TagNormalizer:
             mapping_file = self.project_root / TAGS_CONFIG_DIR / "mapping.json"
 
         yaml = YAML(typ="safe")
-        with open(patterns_file) as f:
+        with open(patterns_file, 'r', encoding='utf-8') as f:
             self.patterns = yaml.load(f)
 
         # Load mapping for correct capitalization
-        with open(mapping_file) as f:
+        with open(mapping_file, 'r', encoding='utf-8') as f:
             self.mapping = json.load(f)
             self.mapping_lower = {k.lower(): k for k in self.mapping}
 
@@ -159,13 +159,13 @@ class TagNormalizer:
                     seen.add(result.lower())
                     self.stats.normalized_tags[result] += 1
 
-        return sorted(normalized)
+        return sort_strings(normalized)
 
 
 def load_tag_normalization() -> tuple[dict[str, str], dict[str, str]]:
     """Load tag normalization rules."""
     yaml = YAML(typ="safe")
-    with open(Path("data/tags/tag_normalization.yaml")) as f:
+    with open(Path("data/tags/tag_normalization.yaml"), 'r', encoding='utf-8') as f:
         data = yaml.load(f)
         return (
             {k.lower(): v for k, v in data.get("normalizations", {}).items()},

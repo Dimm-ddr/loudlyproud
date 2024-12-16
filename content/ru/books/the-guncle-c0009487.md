@@ -6,9 +6,9 @@ type: books
 params:
   book_title: The Guncle
   tags:
+    - American fiction
     - LGBTQIA+
     - adult fiction
-    - american
     - audiobook
     - contemporary
     - humor

@@ -26,7 +26,6 @@ params:
     - audiobook
     - bildungsromans
     - brothers and sisters
-    - brothers and sisters -
     - contemporary
     - literary
     - new york times bestseller
@@ -36,4 +35,3 @@ params:
     - witnesses
     - écrivains noirs
 ---
-

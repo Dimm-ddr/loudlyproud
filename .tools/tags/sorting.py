@@ -3,34 +3,39 @@
 import json
 import tomllib
 from pathlib import Path
+from typing import TypeVar, Sequence
 
+T = TypeVar('T', str, Path)
+
+def sort_strings(items: Sequence[T]) -> list[T]:
+    """Sort strings or paths using byte value comparison."""
+    return sorted(items)
+
+def sort_dict_by_keys(d: dict) -> dict:
+    """Sort dictionary by keys using byte value comparison."""
+    return dict(sorted(d.items()))
 
 def sort_mapping(mapping_file: Path) -> None:
-    """Sort mapping file alphabetically by keys."""
-    with open(mapping_file) as f:
+    """Sort mapping file alphabetically by keys using byte value comparison."""
+    with open(mapping_file, 'r', encoding='utf-8') as f:
         mapping = json.load(f)
 
-    sorted_mapping = dict(sorted(mapping.items()))
+    sorted_mapping = sort_dict_by_keys(mapping)
 
-    with open(mapping_file, "w", encoding="utf-8") as f:
+    with open(mapping_file, "w", encoding="utf-8", newline='\n') as f:
         json.dump(sorted_mapping, f, indent=4, ensure_ascii=False)
 
 
 def sort_colors(colors_file: Path) -> None:
-    """Sort colors file by sections and tags."""
-    # Read TOML
+    """Sort colors file by sections and tags using byte value comparison."""
     with open(colors_file, "rb") as f:
         colors = tomllib.load(f)
 
-    # Sort sections and their contents
     sorted_colors = {}
-    for section in sorted(colors.keys()):
-        sorted_colors[section] = dict(
-            sorted(colors[section].items(), key=lambda x: x[0].lower())
-        )
+    for section in sort_strings(colors.keys()):
+        sorted_colors[section] = sort_dict_by_keys(colors[section])
 
-    # Write back
-    with open(colors_file, "w", encoding="utf-8") as f:
+    with open(colors_file, "w", encoding="utf-8", newline='\n') as f:
         for section in sorted_colors:
             f.write(f'["{section}"]\n')
             for tag, color in sorted_colors[section].items():

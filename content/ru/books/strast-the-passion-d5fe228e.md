@@ -31,23 +31,24 @@ params:
   tags:
     - 19th century
     - English literature
+    - Europe
+    - fantasy
     - France
+    - French
+    - historical
+    - history
     - Italy
     - LGBTQIA+
-    - Russia
-    - Venice
-    - europe history
-    - fantasy
-    - french
     - magical realism
     - male-female romance
-    - napoleonic war
-    - napoleonic wars 1800-1815
+    - marriage
     - queer
-    - romance historical
-    - romance historical general
-    - social life and customs
+    - romance
+    - Russia
+    - social commentary
     - soldiers
-    - wives
+    - Venice
+    - war
+    - women
 ---
 

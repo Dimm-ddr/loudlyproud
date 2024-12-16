@@ -20,7 +20,6 @@ params:
   tags:
     - China
     - LGBTQIA+
-    - bl
     - boys love (BL)
     - fantasy
     - horror

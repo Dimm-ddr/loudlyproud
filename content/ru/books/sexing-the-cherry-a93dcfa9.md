@@ -25,18 +25,17 @@ params:
   tags:
     - England
     - English literature
+    - erotic literature
+    - fantasy
+    - historical
+    - historical fantasy
+    - history
     - LGBTQIA+
     - London
-    - charles ii 1660-1685
-    - erotica general
-    - fantasy historical
-    - giants
-    - great britain
-    - great britain in
-    - history
     - magical realism
     - mother-son relationship
     - novels
     - queer
+    - United Kingdom
 ---
 

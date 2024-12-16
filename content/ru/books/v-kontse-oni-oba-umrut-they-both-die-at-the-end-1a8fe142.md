@@ -25,20 +25,18 @@ params:
   russian_translation_status: exists
   short_book_description: «С прискорбием сообщаем вам, что в последующие двадцать четыре часа вас постигнет безвременная смерть. Приносим глубочайшие соболезнования вашим родным и близким…»
   tags:
-    - Hispanic Americans
-    - LGBTQIA+
-    - New York
-    - adventure and adventurers
+    - adventure
     - audiobook
-    - children's
+    - children's fiction
     - contemporary
     - death
     - friendship
     - gay
-    - homosexuality
-    - juvenile
+    - Hispanic Americans
+    - juvenile fiction
+    - LGBTQIA+
     - love
-    - n.y
+    - New York
     - new york times bestseller
     - queer
     - romance

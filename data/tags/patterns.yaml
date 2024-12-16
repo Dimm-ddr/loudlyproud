@@ -16,9 +16,11 @@ split:
       keep_parts: true
     - pattern: " /"
       keep_parts: true
-    - pattern: " \\(([^)]+)\\)"  # Matches parenthetical content
+    - pattern: " \\(([^)]+)\\)" # Matches parenthetical content
       extract_groups: true
     - pattern: "\\.$" # Remove trailing dots
+      replace: ""
+    - pattern: "\\ -$" # Remove trailing -
       replace: ""
 
 # Common compound mappings

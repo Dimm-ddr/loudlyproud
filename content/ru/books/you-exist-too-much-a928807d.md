@@ -27,6 +27,6 @@ params:
     - lesbian
     - novels
     - queer
-    - teenage
+    - teenagers
 ---
 

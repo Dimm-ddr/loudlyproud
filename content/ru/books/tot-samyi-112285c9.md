@@ -25,7 +25,7 @@ params:
     - authors
     - gay
     - romance
-    - teenage
+    - teenagers
     - young adult (YA)
 ---
 

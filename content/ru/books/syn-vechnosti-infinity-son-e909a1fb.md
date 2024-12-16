@@ -7,7 +7,7 @@ params:
   book_title: Сын вечности (Infinity Son)
   tags:
     - LGBTQIA+
-    - children's
+    - children's fiction
     - family
     - new york times bestseller
     - paranormal

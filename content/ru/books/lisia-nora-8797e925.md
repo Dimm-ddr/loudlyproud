@@ -22,11 +22,10 @@ params:
   series: All for the Game
   short_book_description: Сенсационная трилогия писательницы Норы Сакавич «Все ради игры» была впервые опубликована в интернете, однако молниеносно покорила читателей во всем мире. Трилогия повествует о команде «Лисов» —...
   tags:
-    - LGBTQIA+
     - contemporary
     - gay
+    - LGBTQIA+
     - male-male romance
-    - na
     - new adult (NA)
     - queer
     - sports

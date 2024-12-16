@@ -1,7 +1,7 @@
 ["Awards and Recognition"]
 "Lambda Literary Awards" = "aubergine"
-"new york times bestseller" = "aubergine"
 "Stonewall Book Awards" = "aubergine"
+"new york times bestseller" = "aubergine"
 
 ["Cultural and Geographic"]
 "Africa" = "deep-blue"
@@ -91,6 +91,9 @@
 "war fiction" = "forest"
 
 ["Identity and Relationships"]
+"LGBTQIA+" = "rust"
+"LGBTQIA+ activists" = "rust"
+"LGBTQIA+ novels before Stonewall" = "rust"
 "coming out" = "rust"
 "dating" = "rust"
 "female-female romance" = "rust"
@@ -103,9 +106,6 @@
 "gender studies" = "rust"
 "genderqueer" = "rust"
 "lesbian" = "rust"
-"LGBTQIA+" = "rust"
-"LGBTQIA+ activists" = "rust"
-"LGBTQIA+ novels before Stonewall" = "rust"
 "male-female romance" = "rust"
 "male-male romance" = "rust"
 "queer" = "rust"

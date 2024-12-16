@@ -30,15 +30,15 @@ params:
     - Lambda Literary Awards
     - London
     - Stonewall Book Awards
-    - betrug
-    - historical general
+    - crime
+    - extortion
+    - historical
     - junge frau
     - lesbian
     - mystery
-    - pickpockets
     - queer
     - romance
-    - social conditions
+    - social commentary
     - unterschicht
 ---
 

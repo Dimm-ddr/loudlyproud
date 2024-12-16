@@ -6,6 +6,7 @@ from tags.normalize import TagNormalizer
 import tomllib
 from typing import TypedDict
 import json
+from .sorting import sort_strings
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -27,7 +28,8 @@ def load_tags_map(project_root: Path) -> dict:
     """Load tags mapping configuration."""
     tags_file = project_root.joinpath(TAGS_CONFIG_DIR, MAPPING_FILE)
     try:
-        return json.loads(tags_file.read_text(encoding="utf-8"))
+        with open(tags_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
     except Exception as e:
         print(f"Error loading tags map: {e}")
         return {}
@@ -141,7 +143,7 @@ def validate_tags(project_root: Path) -> ValidationReport:
     mapped_values = get_mapped_values(tags_map)
 
     # Generate reports
-    unmapped_tags = sorted(
+    unmapped_tags = sort_strings(
         orig_tag
         for lower_tag, orig_tag in tags_lower_map.items()
         if lower_tag not in mapping_keys
@@ -161,7 +163,7 @@ def validate_tags(project_root: Path) -> ValidationReport:
 
     # Combine with unmapped tags
     tags_to_check = mapped_canonical | set(unmapped_tags)
-    uncolored_tags = sorted(tag for tag in tags_to_check if tag not in color_tags)
+    uncolored_tags = sort_strings(tag for tag in tags_to_check if tag not in color_tags)
 
     return {"unmapped_tags": unmapped_tags, "uncolored_tags": uncolored_tags}
 
@@ -181,14 +183,15 @@ def write_report(report: ValidationReport, project_root: Path) -> None:
     output = [
         "Tags not in mapping keys:",
         "=" * 23,
-        *[f"- {tag}" for tag in report["unmapped_tags"]],
+        *[f"- {tag}" for tag in sort_strings(report["unmapped_tags"])],
         "",
         "Tags without colors (values and unmapped):",
         "=" * 37,
-        *[f"- {tag}" for tag in report["uncolored_tags"]],
+        *[f"- {tag}" for tag in sort_strings(report["uncolored_tags"])],
     ]
 
-    report_file.write_text("\n".join(output), encoding="utf-8")
+    with open(report_file, "w", encoding="utf-8", newline='\n') as f:
+        f.write("\n".join(output))
     print(f"\nDetailed report saved to {report_file}")
 
 

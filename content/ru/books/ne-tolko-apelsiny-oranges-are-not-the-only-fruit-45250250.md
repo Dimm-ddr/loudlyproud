@@ -28,18 +28,21 @@ params:
   short_book_description: Роман молодой писательницы, в котором она
   tags:
     - England
-    - christian gays
-    - christianity and sexuality
+    - LGBTQIA+
+    - United Kingdom
+    - christian
     - classics
     - coming of age
     - contemporary
     - english
     - family
-    - great britain
+    - girls
+    - lesbian
     - mother-daughter relationship
     - queer
     - religion
-    - romance lgbtqia+ lesbian
-    - teenage girls
+    - romance
+    - sexuality
+    - teenagers
 ---
 

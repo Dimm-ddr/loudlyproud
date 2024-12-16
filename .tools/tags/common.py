@@ -4,6 +4,7 @@ from typing import TypedDict, NotRequired
 from collections import Counter
 import json
 import sys
+from .sorting import sort_strings, sort_dict_by_keys
 
 # Path constants
 TAGS_CONFIG_DIR = Path("data/tags")
@@ -40,8 +41,8 @@ class TagStats:
         return {
             "total_files": self.total_files,
             "files_with_changes": self.files_with_changes,
-            "unknown_tags": sorted(self.unknown_tags),
-            "normalized_tags": dict(sorted(self.normalized_tags.items())),
+            "unknown_tags": sort_strings(self.unknown_tags),
+            "normalized_tags": sort_dict_by_keys(self.normalized_tags),
         }
 
 def load_tags_map(project_root: Path) -> dict[str, TagMapping]:
