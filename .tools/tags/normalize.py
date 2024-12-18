@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 from typing import TypeAlias
 from collections.abc import Sequence
-from .common import TagStats
+from .common import TagStats, MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE
 from .sorting import sort_strings
 from .file_ops import load_patterns, load_tags_map, load_removable_tags
 
@@ -16,25 +16,14 @@ class TagNormalizer:
     def __init__(
         self,
         project_root: Path = None,
-        patterns_file: Path = None,
-        mapping_file: Path = None,
-        remove_file: Path = None,
     ) -> None:
         """Initialize normalizer with patterns and mapping files."""
         self.project_root = project_root or Path.cwd()
 
-        # Set up file paths
-        if patterns_file is None:
-            patterns_file = self.project_root / "data/tags/patterns.yaml"
-        if mapping_file is None:
-            mapping_file = self.project_root / "data/tags/mapping.json"
-        if remove_file is None:
-            remove_file = self.project_root / "data/tags/to_remove.toml"
-
         # Load patterns and mapping
-        self.patterns = load_patterns(patterns_file)
-        self.mapping = load_tags_map(mapping_file)
-        self.removable_tags = load_removable_tags(remove_file)
+        self.patterns = load_patterns(PATTERNS_FILE)
+        self.mapping = load_tags_map(MAPPING_FILE)
+        self.removable_tags = load_removable_tags(TO_REMOVE_FILE)
 
         # Create case-insensitive lookup
         self.mapping_lower = {k.lower(): k for k in self.mapping}

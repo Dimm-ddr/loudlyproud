@@ -24,7 +24,7 @@ params:
     - classics
     - contemporary
     - historical fiction
-    - literary fiction
+    - literary
     - queer
 ---
 

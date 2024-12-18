@@ -59,4 +59,4 @@ compounds:
   - pattern: ".+ (brownburn|pelu|avery|hodges)$"
     map_to: null
   - pattern: "^(.+) & (.+)$"
-    map_to: ["{}1", "{}2"]
+    map_to: ["{0}", "{1}"]

@@ -27,7 +27,7 @@ params:
     - contemporary
     - friendship
     - historical fiction
-    - literary fiction
+    - literary
     - queer
     - romance
 ---

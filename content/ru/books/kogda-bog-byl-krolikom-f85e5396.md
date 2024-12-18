@@ -28,8 +28,8 @@ params:
     - coming of age
     - contemporary
     - family
+    - literary
     - literary collections
-    - literary fiction
     - novels
     - young adult (YA)
 ---

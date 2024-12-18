@@ -25,7 +25,7 @@ params:
     - adult fiction
     - christmas
     - contemporary
-    - literary fiction
+    - literary
     - love
     - male-female romance
     - novels

@@ -28,7 +28,7 @@ params:
     - adult fiction
     - contemporary
     - historical fiction
-    - literary fiction
+    - literary
     - marriage
     - novels
 ---

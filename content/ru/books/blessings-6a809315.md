@@ -24,7 +24,7 @@ params:
     - LGBTQIA+
     - adult fiction
     - contemporary
-    - literary fiction
+    - literary
     - queer
 ---
 

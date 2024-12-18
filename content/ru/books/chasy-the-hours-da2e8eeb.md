@@ -36,11 +36,9 @@ params:
     - authors
     - classics
     - contemporary
-    - domestic
     - femmes
     - frau
     - historical
-    - influence
     - large type books
     - lgbtq hiv/aids
     - literary
@@ -48,20 +46,18 @@ params:
     - literatura norte-americana
     - malades en phase terminale
     - male-female romance
-    - man-woman relationships in
+    - man-woman
     - man-woman relationships-fiction
     - novels
-    - pen/faulkner award winner
+    - pen/faulkner
     - psychological fiction
     - relations entre hommes et femmes
+    - relationships
     - roman américain
     - romance
-    - state
     - terminally ill
-    - terminally ill in
     - women
-    - women in
+    - woolf virginia
     - woolf virginia 1882-1941
-    - woolf virginia in
 ---
 

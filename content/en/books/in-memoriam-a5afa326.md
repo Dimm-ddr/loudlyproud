@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: A haunting, virtuosic debut novel about two young men who fall in love during a time of war.It's 1914, and World War I is ceaselessly churning through thousands of young men on both sides of the...
   tags:
-    - American fiction
+    - American
     - England
     - LGBTQIA+
     - United Kingdom

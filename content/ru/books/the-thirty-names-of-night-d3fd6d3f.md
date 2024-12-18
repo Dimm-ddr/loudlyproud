@@ -30,7 +30,7 @@ params:
     - death
     - ghost
     - historical
-    - lambda literary award winner
+    - lambda literary
     - lgbtq gender identity
     - literary
     - mothers

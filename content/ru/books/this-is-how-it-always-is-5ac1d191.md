@@ -28,7 +28,6 @@ params:
     - contemporary
     - family
     - family life
-    - family life general
     - family secrets
     - gender identity
     - parent-child relationship

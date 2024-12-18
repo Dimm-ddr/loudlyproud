@@ -19,19 +19,17 @@ params:
   russian_translation_status: unknown
   short_book_description: From the author of the New York Times-bestselling sensation Mostly Dead Things a surprising and moving story of two mothers, one difficult son, and the limitations of marriage, parenthood, and...
   tags:
-    - American fiction
+    - American
     - LGBTQIA+
     - adult fiction
     - contemporary
+    - et fils
     - family violence
     - lesbian
-    - lesbian mothers
     - literary
     - mother-son relationship
     - mothers
     - mères
-    - mères et fils
-    - mères lesbiennes
     - queer
     - violence familiale
 ---

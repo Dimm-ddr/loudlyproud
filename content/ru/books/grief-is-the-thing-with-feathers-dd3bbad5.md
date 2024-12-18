@@ -23,12 +23,11 @@ params:
     - London
     - contemporary
     - death
+    - family life
     - fantasy
     - father-son relationship
-    - fiction family life
-    - fiction family life general
     - grief
-    - literary fiction
+    - literary
     - magical realism
     - motherless families
     - mothers

@@ -28,7 +28,7 @@ params:
     - adult fiction
     - contemporary
     - fantasy
-    - literary fiction
+    - literary
     - magical realism
     - queer
     - short stories

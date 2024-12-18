@@ -8,6 +8,7 @@ from .file_ops import (
     write_mapping_file,
     write_colors_file,
 )
+from .common import DATA_DIR, MAPPING_FILENAME, COLORS_FILENAME
 
 T = TypeVar("T", str, Path)
 
@@ -70,8 +71,8 @@ def sort_colors_file(colors_file: Path) -> None:
 def main() -> None:
     """Main function for sorting tag files."""
     project_root = Path.cwd()
-    mapping_file = project_root / "data" / "tags" / "mapping.json"
-    colors_file = project_root / "data" / "tags" / "colors.toml"
+    mapping_file = DATA_DIR / MAPPING_FILENAME
+    colors_file = DATA_DIR / COLORS_FILENAME
 
     sort_mapping_file(mapping_file)
     print(f"Sorted mapping file: {mapping_file}")

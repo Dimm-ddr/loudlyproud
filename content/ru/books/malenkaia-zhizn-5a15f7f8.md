@@ -30,24 +30,23 @@ params:
   russian_translation_status: exists
   short_book_description: Американская писательница Ханья Янагихара создала необычный роман, где и о страшном, и о радостном говорится без лишнего надрыва и сентиментальности. Четверо друзей - талантливый архитектор...
   tags:
-    - American fiction
+    - American
     - Brooklyn
     - LGBTQIA+
     - New York
     - adult fiction
     - anglo-american literature
+    - bronx
     - brooklyn college
     - child abuse
     - chinatown
     - coming of age
     - contemporary
-    - domestic
     - dysfunctional families
     - familias
     - familles
     - family
     - family life
-    - family life general
     - flora
     - friendship
     - gay
@@ -57,7 +56,6 @@ params:
     - literary
     - manhattan
     - memoria
-    - memory
     - mental health
     - museum of modern art
     - novels
@@ -66,8 +64,6 @@ params:
     - sexual abuse
     - social commentary
     - soho
-    - state
-    - the bronx
     - upper east side
 ---
 

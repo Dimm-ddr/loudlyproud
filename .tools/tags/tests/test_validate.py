@@ -7,6 +7,12 @@ from tags.file_ops import (
     write_mapping_file,
     write_colors_file,
 )
+from tags.common import (
+    MAPPING_FILENAME,
+    COLORS_FILENAME,
+    DATA_DIR,
+    CONTENT_DIR,
+)
 
 
 @pytest.fixture
@@ -22,21 +28,24 @@ params:
 ---
 Book content
 """
+    # Create content directory structure
     book_dir = tmp_path / "content" / "en" / "books"
     book_dir.mkdir(parents=True)
     book_file = book_dir / "test-book.md"
     book_file.write_text(book_content)
 
+    # Create data directory structure
+    data_dir = tmp_path / "data" / "tags"
+    data_dir.mkdir(parents=True)
+
     # Create test mapping file
     mapping = {"romance": "Romance", "uncolored-tag": "Uncolored Tag"}
-    config_dir = tmp_path / "data" / "tags"
-    config_dir.mkdir(parents=True)
-    mapping_file = config_dir / "mapping.json"
+    mapping_file = data_dir / MAPPING_FILENAME
     write_mapping_file(mapping_file, mapping)
 
     # Create test colors file
     colors = {"Genres": {"Romance": "forest"}}
-    colors_file = config_dir / "colors.toml"
+    colors_file = data_dir / COLORS_FILENAME
     write_colors_file(colors_file, colors)
 
     return tmp_path
@@ -53,8 +62,22 @@ def test_extract_tags_from_file(test_data_dir):
 
 def test_validate_tags(test_data_dir):
     """Test tag validation"""
-    validation = validate_tags(test_data_dir)
-    assert "unknown-tag" in validation["unmapped_tags"]
+    # Get paths to test files
+    mapping_file = test_data_dir / "data" / "tags" / MAPPING_FILENAME
+    colors_file = test_data_dir / "data" / "tags" / COLORS_FILENAME
+    content_dir = test_data_dir / "content"
+
+    validation = validate_tags(
+        test_data_dir,
+        content_path=content_dir,
+        mapping_file=mapping_file,
+        colors_file=colors_file,
+    )
+
+    print(f"Got validation: {validation}, from folder: {test_data_dir}")
+    assert (
+        "unknown-tag" in validation["unmapped_tags"]
+    ), f"Got unmapped tags: {validation['unmapped_tags']}"
     assert "Uncolored Tag" in validation["uncolored_tags"]
     assert "romance" not in validation["unmapped_tags"]
     assert "Romance" not in validation["uncolored_tags"]

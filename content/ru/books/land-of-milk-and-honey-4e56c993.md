@@ -22,7 +22,7 @@ params:
     - audiobook
     - contemporary
     - dystopia
-    - literary fiction
+    - literary
     - science fiction
 ---
 

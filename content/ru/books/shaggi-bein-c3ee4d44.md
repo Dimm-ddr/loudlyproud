@@ -25,7 +25,7 @@ params:
     - audiobook
     - contemporary
     - historical fiction
-    - literary fiction
+    - literary
     - novels
     - queer
 ---

@@ -8,6 +8,7 @@ from tags.file_ops import (
     write_mapping_file,
     write_colors_file,
 )
+from tags.common import MAPPING_FILE, COLORS_FILE
 
 
 @pytest.fixture
@@ -15,7 +16,7 @@ def test_files(tmp_path):
     """Create test files with unsorted content"""
     # Create test mapping file
     mapping = {"zebra": "Zebra", "apple": "Apple", "banana": "Banana"}
-    mapping_file = tmp_path / "mapping.json"
+    mapping_file = tmp_path / MAPPING_FILE.name
     write_mapping_file(mapping_file, mapping)
 
     # Create test colors file
@@ -23,7 +24,7 @@ def test_files(tmp_path):
         "Section B": {"zebra": "blue", "apple": "red"},
         "Section A": {"dog": "brown", "cat": "black"},
     }
-    colors_file = tmp_path / "colors.toml"
+    colors_file = tmp_path / COLORS_FILE.name
     write_colors_file(colors_file, colors)
 
     return mapping_file, colors_file

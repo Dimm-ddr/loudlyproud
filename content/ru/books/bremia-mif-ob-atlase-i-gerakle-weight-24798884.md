@@ -29,7 +29,7 @@ params:
     - Greece
     - fantasy
     - greek mythology
-    - literary fiction
+    - literary
     - mental health
     - psychological fiction
     - religious fiction

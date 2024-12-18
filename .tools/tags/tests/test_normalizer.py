@@ -1,54 +1,20 @@
 #!/usr/bin/env python3
 
 import pytest
-from tags.normalize import TagNormalizer
-from .test_helpers import detailed_assert, with_context
 from pathlib import Path
+from ..normalize import TagNormalizer
+from .test_helpers import detailed_assert, with_context
 from ..file_ops import (
     write_mapping_file,
     write_patterns_file,
 )
+from ..common import MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE, DATA_DIR
 
 
 @pytest.fixture
-def normalizer(tmp_path: Path) -> TagNormalizer:
+def normalizer(test_project: Path) -> TagNormalizer:
     """Create normalizer with test configuration."""
-    # Create test mapping file
-    mapping = {
-        "american": "American fiction",
-        "american fiction": "American fiction",
-        "short stories": "short stories",
-        "american short stories": ["American fiction", "short stories"],
-        "fantasy": "fantasy",
-        "strips": None,
-        "detective and mystery stories": ["detective", "mystery"],
-        "venice": "Venice",
-        "italy": "Italy",
-    }
-    mapping_file = tmp_path / "data/tags/mapping.json"
-    mapping_file.parent.mkdir(parents=True, exist_ok=True)
-    write_mapping_file(mapping_file, mapping)
-
-    # Create test patterns file
-    patterns = {
-        "remove": {"prefixes": ["nyt:"]},
-        "split": {
-            "separators": [
-                {"pattern": " \\(([^)]+)\\)", "extract_groups": True},
-            ]
-        },
-        "compounds": [],
-    }
-    patterns_file = tmp_path / "data/tags/patterns.yaml"
-    write_patterns_file(patterns_file, patterns)
-
-    # Create to_remove file
-    remove_file = tmp_path / "data/tags/to_remove.toml"
-    remove_file.parent.mkdir(parents=True, exist_ok=True)
-    with open(remove_file, "w", encoding="utf-8") as f:
-        f.write('to_remove = ["fiction", "general", "strips"]\n')
-
-    return TagNormalizer(tmp_path)
+    return TagNormalizer(test_project)
 
 
 def test_should_remove():
@@ -118,7 +84,7 @@ def test_normalize_tags():
         (["fantasy", "strips"], ["fantasy"]),
         (
             ["american short stories"],
-            ["American fiction", "short stories"],
+            ["American", "short stories"],
         ),  # split via mapping
         (
             ["detective and mystery stories"],
@@ -132,4 +98,7 @@ def test_normalize_tags():
 )
 def test_normalize_tags_parametrized(input_tags, expected, normalizer):
     """Test tag normalization with various inputs."""
-    assert set(normalizer.normalize_tags(input_tags)) == set(expected)
+    result = normalizer.normalize_tags(input_tags)
+    assert set(result) == set(
+        expected
+    ), f"Failed to normalize {input_tags}. Got {result}, expected {expected}"

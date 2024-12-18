@@ -23,7 +23,7 @@ params:
     - adult fiction
     - contemporary
     - lesbian
-    - literary fiction
+    - literary
     - queer
 ---
 

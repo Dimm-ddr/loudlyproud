@@ -23,6 +23,6 @@ params:
     - art
     - audiobook
     - historical fiction
-    - literary fiction
+    - literary
 ---
 

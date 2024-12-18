@@ -40,12 +40,12 @@ params:
     - fantasy
     - friendship
     - gay
-    - gay love
     - greek mythology
     - greeks
     - guerre de troie
     - historical
     - history
+    - love
     - mythology
     - new york times bestseller
     - patroclus

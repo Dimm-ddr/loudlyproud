@@ -26,7 +26,7 @@ params:
     - contemporary
     - desire
     - gay
-    - literary fiction
+    - literary
     - novels
     - queer
     - romance

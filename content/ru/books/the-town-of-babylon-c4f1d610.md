@@ -22,7 +22,7 @@ params:
     - LGBTQIA+
     - adult fiction
     - contemporary
-    - literary fiction
+    - literary
     - mental health
     - queer
 ---

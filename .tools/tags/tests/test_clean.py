@@ -15,6 +15,14 @@ from ..file_ops import (
     write_removable_tags,
     split_frontmatter,
 )
+from ..common import (
+    MAPPING_FILE,
+    PATTERNS_FILE,
+    COLORS_FILE,
+    TO_REMOVE_FILE,
+    DATA_DIR,
+    CONTENT_DIR,
+)
 import pytest
 
 # Test data
@@ -53,12 +61,12 @@ def test_get_removable_mapping_keys(tmp_path: Path):
         "nyt:bestseller": None,
         "test tag": "test tag",
     }
-    mapping_file = tmp_path / "mapping.json"
+    mapping_file = tmp_path / MAPPING_FILE.name
     write_mapping_file(mapping_file, mapping)
 
     # Create test patterns file
     patterns = {"remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]}}
-    patterns_file = tmp_path / "patterns.yaml"
+    patterns_file = tmp_path / PATTERNS_FILE.name
     write_patterns_file(patterns_file, patterns)
 
     result = get_removable_mapping_keys(mapping_file, patterns_file)
@@ -74,10 +82,10 @@ def test_get_removable_mapping_keys(tmp_path: Path):
 
 def test_get_removable_mapping_keys_empty_files(tmp_path: Path):
     # Empty mapping file
-    mapping_file = tmp_path / "empty_mapping.json"
+    mapping_file = tmp_path / MAPPING_FILE.name
     write_mapping_file(mapping_file, {})
 
-    patterns_file = tmp_path / "patterns.yaml"
+    patterns_file = tmp_path / PATTERNS_FILE.name
     write_patterns_file(patterns_file, {"remove": {"prefixes": ["nyt:"]}})
 
     result = get_removable_mapping_keys(mapping_file, patterns_file)
@@ -98,11 +106,11 @@ def test_get_removable_mapping_keys_no_removable(tmp_path: Path):
         "valid_tag": "Valid Tag",
         "another_tag": "Another Tag",
     }
-    mapping_file = tmp_path / "mapping.json"
+    mapping_file = tmp_path / MAPPING_FILE.name
     write_mapping_file(mapping_file, mapping)
 
     patterns = {"remove": {"prefixes": ["nyt:"]}}
-    patterns_file = tmp_path / "patterns.yaml"
+    patterns_file = tmp_path / PATTERNS_FILE.name
     write_patterns_file(patterns_file, patterns)
 
     result = get_removable_mapping_keys(mapping_file, patterns_file)
@@ -115,7 +123,7 @@ def test_get_removable_color_tags(tmp_path: Path):
         "valid tag": "Valid Tag",
         "another tag": "Another Tag",
     }
-    mapping_file = tmp_path / "mapping.json"
+    mapping_file = tmp_path / MAPPING_FILE.name
     write_mapping_file(mapping_file, mapping)
 
     # Create test colors file
@@ -129,7 +137,7 @@ def test_get_removable_color_tags(tmp_path: Path):
             "Old Tag": "#fedcba",
         },
     }
-    colors_file = tmp_path / "colors.toml"
+    colors_file = tmp_path / COLORS_FILE.name
     write_colors_file(colors_file, colors)
 
     result = get_removable_color_tags(colors_file, mapping_file)
@@ -165,7 +173,8 @@ def test_config(tmp_path: Path) -> dict:
     }
 
     # Write to_remove.toml file
-    remove_file = tmp_path / "data/tags/to_remove.toml"
+    remove_file = tmp_path / DATA_DIR.name / TO_REMOVE_FILE.name
+    remove_file.parent.mkdir(parents=True, exist_ok=True)
     write_removable_tags(remove_file, config["to_remove"])
 
     return config
@@ -173,7 +182,7 @@ def test_config(tmp_path: Path) -> dict:
 
 def test_clean_frontmatter(tmp_path: Path, test_config):
     # Set up test environment
-    content_dir = tmp_path / "content"
+    content_dir = tmp_path / CONTENT_DIR.name
     locale_dir = content_dir / "en"
     books_dir = locale_dir / "books"
     books_dir.mkdir(parents=True, exist_ok=True)
@@ -183,14 +192,12 @@ def test_clean_frontmatter(tmp_path: Path, test_config):
     write_sample_book(book_file)
 
     # Create test configuration files
-    mapping = test_config["mapping"]
-    mapping_file = tmp_path / "data/tags/mapping.json"
+    mapping_file = tmp_path / DATA_DIR.name / MAPPING_FILE.name
+    patterns_file = tmp_path / DATA_DIR.name / PATTERNS_FILE.name
     mapping_file.parent.mkdir(parents=True, exist_ok=True)
-    write_mapping_file(mapping_file, mapping)
 
-    patterns = test_config["patterns"]
-    patterns_file = tmp_path / "data/tags/patterns.yaml"
-    write_patterns_file(patterns_file, patterns)
+    write_mapping_file(mapping_file, test_config["mapping"])
+    write_patterns_file(patterns_file, test_config["patterns"])
 
     # Create normalizer with test configuration
     normalizer = TagNormalizer(tmp_path)
@@ -225,14 +232,12 @@ def test_process_book_file(tmp_path: Path, test_config):
     write_sample_book(book_file)
 
     # Create test configuration
-    mapping = test_config["mapping"]
-    mapping_file = tmp_path / "data/tags/mapping.json"
+    mapping_file = tmp_path / DATA_DIR.name / MAPPING_FILE.name
+    patterns_file = tmp_path / DATA_DIR.name / PATTERNS_FILE.name
     mapping_file.parent.mkdir(parents=True, exist_ok=True)
-    write_mapping_file(mapping_file, mapping)
 
-    patterns = test_config["patterns"]
-    patterns_file = tmp_path / "data/tags/patterns.yaml"
-    write_patterns_file(patterns_file, patterns)
+    write_mapping_file(mapping_file, test_config["mapping"])
+    write_patterns_file(patterns_file, test_config["patterns"])
 
     # Create normalizer with test configuration
     normalizer = TagNormalizer(tmp_path)

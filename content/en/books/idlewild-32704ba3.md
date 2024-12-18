@@ -22,7 +22,7 @@ params:
     - LGBTQIA+
     - coming of age
     - contemporary
-    - literary fiction
+    - literary
     - queer
     - transgender
 ---

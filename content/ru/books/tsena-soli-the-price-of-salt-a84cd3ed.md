@@ -42,8 +42,6 @@ params:
     - gay
     - historical
     - lesbian
-    - lesbian love story
-    - lesbian romance novel
     - literary
     - media tie-in
     - mothers

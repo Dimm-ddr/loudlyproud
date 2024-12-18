@@ -23,7 +23,7 @@ params:
     - audiobook
     - contemporary
     - family
-    - literary fiction
+    - literary
     - novels
 ---
 

@@ -3,16 +3,27 @@ from dataclasses import dataclass, field
 from typing import TypedDict, NotRequired
 from collections import Counter
 
-# Path constants
-TAGS_CONFIG_DIR = Path("data/tags")
-GENERATED_DATA_DIR = Path(".data/tags")
-CONTENT_DIR = Path("content")
+# Base paths
+PROJECT_ROOT = Path.cwd()
+CONTENT_DIR = PROJECT_ROOT / "content"
+DATA_DIR = PROJECT_ROOT / "data/tags"
+GENERATED_DATA_DIR = PROJECT_ROOT / ".data/tags"
 
 # File names
-MAPPING_FILE = "mapping.json"
-COLORS_FILE = "colors.yaml"
-STATS_FILE = "cleanup-stats.json"
-VALIDATION_FILE = "validation-report.txt"
+MAPPING_FILENAME = "mapping.json"
+COLORS_FILENAME = "colors.toml"
+PATTERNS_FILENAME = "patterns.yaml"
+TO_REMOVE_FILENAME = "to_remove.toml"
+STATS_FILENAME = "cleanup-stats.json"
+VALIDATION_FILENAME = "validation-report.txt"
+
+# Config files
+MAPPING_FILE = DATA_DIR / MAPPING_FILENAME
+COLORS_FILE = DATA_DIR / COLORS_FILENAME
+PATTERNS_FILE = DATA_DIR / PATTERNS_FILENAME
+TO_REMOVE_FILE = DATA_DIR / TO_REMOVE_FILENAME
+STATS_FILE = GENERATED_DATA_DIR / STATS_FILENAME
+VALIDATION_FILE = GENERATED_DATA_DIR / VALIDATION_FILENAME
 
 
 class TagMapping(TypedDict):

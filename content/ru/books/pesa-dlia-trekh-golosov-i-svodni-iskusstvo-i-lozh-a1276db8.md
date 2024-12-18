@@ -26,7 +26,7 @@ params:
     - art
     - contemporary
     - lesbian
-    - literary fiction
+    - literary
     - magical realism
     - queer
     - technology

@@ -23,7 +23,7 @@ params:
   tags:
     - LGBTQIA+
     - Russia
-    - literary fiction
+    - literary
     - queer
 ---
 
