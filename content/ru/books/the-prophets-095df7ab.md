@@ -20,8 +20,8 @@ params:
   tags:
     - African American
     - LGBTQIA+
-    - african american & black historical
     - african american gay men
+    - black historical
     - gay
     - historical
     - literary

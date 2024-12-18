@@ -32,12 +32,12 @@ params:
     - coming out
     - contemporary
     - dating
-    - fantasy & magic
+    - fantasy
     - gay
     - gay teenagers
     - juvenile fiction
-    - love & romance
-    - memory
+    - love
+    - magic
     - new york n.y
     - puerto rican youth
     - queer

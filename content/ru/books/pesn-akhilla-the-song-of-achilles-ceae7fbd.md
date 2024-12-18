@@ -46,6 +46,7 @@ params:
     - historical
     - history
     - love
+    - military
     - mythology
     - new york times bestseller
     - patroclus
@@ -56,6 +57,6 @@ params:
     - trojan war
     - troy
     - turkey
-    - war & military
+    - war
 ---
 

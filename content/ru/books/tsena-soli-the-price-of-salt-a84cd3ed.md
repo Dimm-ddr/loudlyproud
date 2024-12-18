@@ -34,9 +34,11 @@ params:
     - LGBTQIA+ novels before Stonewall
     - New York
     - United States
-    - action & adventure
+    - action
+    - adventure
     - classics
     - custody of children
+    - detective
     - divorce
     - family
     - gay
@@ -45,7 +47,7 @@ params:
     - literary
     - media tie-in
     - mothers
-    - mystery & detective general
+    - mystery
     - nineteen fifties
     - novels
     - psychological fiction

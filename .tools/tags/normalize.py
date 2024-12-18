@@ -81,8 +81,13 @@ class TagNormalizer:
         for rule in self.patterns["compounds"]:
             pattern = rule["pattern"]
             if match := re.match(pattern, tag, re.IGNORECASE):
+                groups = match.groups()
+                # For patterns like "term1 & term2", return both terms as separate tags
+                if pattern == "^(.+) & (.+)$":
+                    return [g.strip() for g in groups]
+                # For other patterns, continue using the existing format mechanism
                 return [
-                    part.format(*(match.groups())) if "{}" in part else part.strip()
+                    part.format(*(groups)) if "{}" in part else part.strip()
                     for part in rule["map_to"]
                 ]
         return tag
