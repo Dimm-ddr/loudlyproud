@@ -2,16 +2,28 @@
 
 {{- define "normalize_tag" -}}
   {{- $input := .tag | string -}}
-  {{- $lowered := lower $input -}}
-  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $lowered | default $lowered -}}
-  {{- $normalized | safeHTML | string -}}
+  {{- /* First decode any HTML entities */ -}}
+  {{- $decoded := $input | htmlUnescape -}}
+  {{- /* Check for special URL normalization */ -}}
+  {{- $special_url := index site.Data.tags.tag_normalization.url_normalizations $decoded | default "" -}}
+  {{- if $special_url -}}
+    {{- $special_url | safeHTML | string -}}
+  {{- else -}}
+    {{- /* Apply regular normalization */ -}}
+    {{- $lowered := lower $decoded -}}
+    {{- $mapped := index site.Data.tags.tag_normalization.normalizations $lowered | default $lowered -}}
+    {{- $normalized := $mapped | urlize -}}
+    {{- $normalized | safeHTML | string -}}
+  {{- end -}}
 {{- end -}}
 
 {{- define "get_tag_display" -}}
   {{- $input := .tag | string -}}
-  {{- $lowered := lower $input -}}
-  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $lowered | default $lowered -}}
-  {{- $display := index site.Data.tags.tag_normalization.display $normalized | default $input -}}
+  {{- /* First decode any HTML entities */ -}}
+  {{- $decoded := $input | htmlUnescape -}}
+  {{- $lowered := lower $decoded -}}
+  {{- $normalized := index site.Data.tags.tag_normalization.normalizations $lowered | default $decoded -}}
+  {{- $display := index site.Data.tags.tag_normalization.display $normalized | default $decoded -}}
   {{- $display | safeHTML | string -}}
 {{- end -}}
 

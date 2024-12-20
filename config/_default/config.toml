@@ -24,4 +24,11 @@ title = "Books"
 type = "books"
 
 [permalinks]
-books = "/books/:slugorfilename/" 
+books = "/books/:slugorfilename/"
+# Define how taxonomy term URLs should be structured
+tags = "/tags/:slug/"
+
+# Configure how Hugo generates taxonomy URLs
+[outputs]
+  taxonomy = ["HTML"]
+  term = ["HTML"]

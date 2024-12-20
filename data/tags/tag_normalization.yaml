@@ -1,6 +1,5 @@
 # Normalization mappings (key is lowercased before lookup)
 normalizations:
-  "lgbtqia+": "lgbtq-plus"
   "u.s.a": "united-states"
   "u.s": "united-states"
   "u.s.": "united-states"
@@ -18,9 +17,13 @@ normalizations:
   "(na)": "new-adult-na"
   "na": "new-adult-na"
 
+# Special URL normalizations for tags that need custom handling
+url_normalizations:
+  "LGBTQIA+": "lgbtqia-plus"
+
 # Display overrides (how normalized tags should be displayed)
 display:
-  "lgbtq-plus": "LGBTQIA+"
+  "lgbtqia-plus": "LGBTQIA+"
   "young-adult-ya": "Young Adult"
   "boys-love-bl": "Boys Love"
   "new-adult-na": "New Adult"
