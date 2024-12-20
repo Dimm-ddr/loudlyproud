@@ -25,19 +25,17 @@ params:
   short_book_description: Лето 1816 года, Швейцария.
   tags:
     - LGBTQIA+
-    - artificial intelligence
+    - technology
     - contemporary
-    - cryonics
+    - science
     - gothic
     - historical
     - literary
-    - political
+    - political intrigue
     - queer
     - romance
-    - romance science
-    - science
     - science fiction
-    - sex dolls
+    - sexuality
     - transgender
     - women
 ---

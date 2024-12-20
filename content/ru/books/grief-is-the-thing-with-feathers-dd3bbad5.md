@@ -23,17 +23,17 @@ params:
     - London
     - contemporary
     - death
-    - family life
+    - family
     - fantasy
     - father-son relationship
     - grief
     - literary
     - magical realism
-    - motherless families
-    - mothers
+    - single-parent families
+    - women
     - novels
     - poetry
     - psychological fiction
-    - widowers
+    - marriage
 ---
 

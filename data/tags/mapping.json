@@ -1,17 +1,23 @@
 {
-    "1882-1941": null,
-    "1914": null,
-    "1930s": null,
-    "1950s": null,
     "19th century": "19th century",
-    "2019": null,
-    "2020": null,
     "20th century": "20th century",
     "21st century": "21st century",
     "Lambda Literary Awards": "Lambda Literary Awards",
     "abuse": "abuse",
+    "abused wives": [
+        "abuse",
+        "marriage",
+        "women"
+    ],
+    "achilles": "greek mythology",
+    "action": "adventure",
+    "adaptations": "retellings",
     "adolescence": "teenagers",
     "adult": "adult fiction",
+    "adult child sexual abuse victims": [
+        "abuse",
+        "mental health"
+    ],
     "adult fiction": "adult fiction",
     "adultery": "relationships",
     "adventure": "adventure",
@@ -20,30 +26,50 @@
     "african american": "African American",
     "african american authors": "African American authors",
     "african american fiction": "African American",
+    "african american gay men": [
+        "African American",
+        "gay"
+    ],
+    "african american women": [
+        "African American",
+        "women"
+    ],
     "african americans": "African American",
     "african americans fiction": "African American",
-    "alex claremont-diaz": null,
+    "african continental ancestry group": "African American",
     "alien cultures": "alien cultures",
-    "american": "American",
-    "american fiction": "American",
-    "american literature": "American",
+    "american": "Americans",
+    "american fiction": "Americans",
+    "american literature": "Americans",
     "american short stories": [
-        "American",
+        "Americans",
         "short stories"
     ],
     "americans": "Americans",
+    "amitié masculine": "friendship",
+    "américains d'origine japonaise": "Japanese Americans",
+    "américains d'origine syrienne": "Syrian Americans",
+    "ancient greece": "Greece",
     "anger": "mental health",
+    "anglo-american literature": [
+        "British literature",
+        "Americans"
+    ],
     "animals": "animals",
     "anthologies": "anthologies",
     "anxiety disorders": "mental illness",
     "arab americans": "Arab Americans",
     "arcansas": "Arkansas",
+    "aristocracy": "social class",
     "arkansas": "Arkansas",
     "art": "art",
     "art and technology": [
         "art",
         "technology"
     ],
+    "artificial intelligence": "technology",
+    "artistes": "art",
+    "artists": "art",
     "asian americans": "Asian Americans",
     "atlantis": "Atlantis",
     "atlas": "Atlas",
@@ -56,7 +82,10 @@
     "automobile travel": "travel",
     "bandes dessinÃ©es": "graphic novels & comics",
     "bandes dessinées": "graphic novels & comics",
-    "belletristische darstellung": null,
+    "belles-mères": [
+        "family",
+        "marriage"
+    ],
     "bereavement": "grief",
     "berlin": "Berlin",
     "best friends": "friendship",
@@ -73,9 +102,14 @@
         "memoir"
     ],
     "bl": "boys love (BL)",
+    "black": "Black",
     "black gay men": [
         "African American",
         "gay"
+    ],
+    "black historical": [
+        "Black",
+        "historical"
     ],
     "blind": "disabilities",
     "boarding school": "boarding school",
@@ -83,6 +117,10 @@
     "boarding school students": "boarding school",
     "boarding schools": "boarding school",
     "book club": "book club",
+    "books that shaped work in america": [
+        "Americans",
+        "social commentary"
+    ],
     "boys": "boys",
     "boys love": "boys love (BL)",
     "boys love (bl)": "boys love (BL)",
@@ -91,11 +129,16 @@
         "Irish literature"
     ],
     "british literature": "British literature",
+    "bronx": "New York",
     "brooklyn": "Brooklyn",
     "brooklyn (new york n.y.)": "New York",
+    "brooklyn college": [
+        "New York",
+        "school"
+    ],
     "brothers and sisters": "siblings",
     "bullying": "bullying",
-    "businessmen": null,
+    "businessmen": "business",
     "butch and femme (lesbianism)": [
         "lesbian",
         "gender identity"
@@ -105,8 +148,8 @@
         "historical",
         "England"
     ],
-    "charlie spring": null,
     "chicago": "Chicago",
+    "child abuse": "abuse",
     "child custody": "family",
     "childhood and youth": [
         "children's fiction",
@@ -114,12 +157,18 @@
     ],
     "children": "children's fiction",
     "children of gay parents": "gay-parent families",
-    "children of sperm donors": null,
+    "children of suicide victims": [
+        "grief",
+        "mental health"
+    ],
     "children's": "children's fiction",
     "children's fiction": "children's fiction",
     "childrens fiction": "children's fiction",
     "china": "China",
-    "choice": null,
+    "chinatown": [
+        "Asian Americans",
+        "social commentary"
+    ],
     "christian": "christian",
     "christian gays": [
         "christian",
@@ -133,7 +182,7 @@
     "christmas stories": "christmas",
     "classics": "classics",
     "clergy": "religion",
-    "collected works (single author multi-form)": null,
+    "collected works": "literary collections",
     "college students": "college students",
     "comic book": "graphic novels & comics",
     "comic books": "graphic novels & comics",
@@ -149,10 +198,15 @@
         "contemporary",
         "romance"
     ],
+    "couples": "relationships",
     "crime": "crime",
     "cross-dressers": "cross-dressers",
-    "cultural literacy and humanities": null,
-    "darius kellner": null,
+    "cryonics": "science",
+    "cultural heritage": "social commentary",
+    "custody of children": [
+        "family",
+        "parent-child relationship"
+    ],
     "dark": "dark",
     "dark fantasy": "dark fantasy",
     "dating": "dating",
@@ -170,14 +224,13 @@
     "detroit (mich.)": "Detroit",
     "discrimination": "discrimination",
     "diseases": "diseases",
+    "divorce": "divorce",
     "domestic fiction": "domestic fiction",
     "dominican americans": "Hispanic Americans",
     "dominican americans fiction": "Hispanic Americans",
     "dragons": "dragons",
     "dysfunctional families": "dysfunctional families",
     "dystopia": "dystopia",
-    "ehefrau": null,
-    "ellen claremont": null,
     "england": "England",
     "england fiction": "England",
     "english": "English",
@@ -189,34 +242,45 @@
     "erotic literature": "erotic literature",
     "erotica general": "erotic literature",
     "essays": "essays",
+    "et fils": "father-son relationship",
     "europe": "Europe",
     "europe history": [
         "Europe",
         "history"
     ],
     "ex-gay movement": "ex-gay movement",
+    "exile": "isolation",
+    "extinct city": "historical",
     "extortion": "extortion",
     "f f romance": "female-female romance",
     "fae": "fae",
     "fairies": "fairies",
+    "familias": "family",
     "families": "family",
+    "familles": "family",
     "family": "family",
+    "family life": "family",
     "family relationships": "family",
+    "family secrets": "family",
+    "family violence": [
+        "abuse",
+        "family"
+    ],
     "fantasy": "fantasy",
     "fantasy fiction": "fantasy",
     "fantasy historical": "historical fantasy",
-    "fasts and feasts": null,
-    "fate and fatalism": null,
+    "father and child": "parent-child relationship",
+    "father-child relationship": "parent-child relationship",
     "father-daughter relationship": "father-daughter relationship",
     "father-son relationship": "father-son relationship",
+    "fathers": "fathers",
     "fathers and daughters": "father-daughter relationship",
     "fathers and sons": "father-son relationship",
     "female assassins": null,
     "female homosexuality": "lesbian",
     "female impersonators": "gender identity",
     "feminism": "feminism",
-    "ficciÃƒÂ³n": null,
-    "fiction": null,
+    "femmes": "women",
     "fiction christian short stories": [
         "christian",
         "short stories"
@@ -225,7 +289,6 @@
     "fiction fantasy epic": "epic fantasy",
     "fiction fantasy general": "fantasy",
     "fiction gay": "gay",
-    "fiction general": null,
     "fiction humorous": "humor",
     "fiction humorous general": "humor",
     "fiction lesbian": "lesbian",
@@ -246,15 +309,21 @@
     "fiction suspense": "suspense",
     "fiction thrillers espionage": "spy stories",
     "fiction thrillers general": "thriller",
-    "fictional works by one author": null,
+    "fictional works publication type": "literary",
     "first loves": "love in adolescence",
-    "food": null,
+    "flora": "nature",
+    "forgiveness": "personal growth",
     "france": "France",
     "france fiction": "France",
+    "frau": "women",
     "french": "French",
     "friendship": "friendship",
     "friendship fiction": "friendship",
     "friendship in youth": "friendship",
+    "garçons adolescents": [
+        "boys",
+        "teenagers"
+    ],
     "gay": "gay",
     "gay college teachers": [
         "gay",
@@ -281,9 +350,11 @@
     "gender identity": "gender identity",
     "gender studies": "gender studies",
     "genderqueer": "genderqueer",
-    "general": null,
+    "georgia": "Georgia",
+    "germaine": "France",
     "german literature": "German literature",
     "germany": "Germany",
+    "ghost": "ghosts",
     "ghosts": "ghosts",
     "giants": "fantasy",
     "girls": "girls",
@@ -291,6 +362,10 @@
     "good and evil": "good and evil",
     "gothic": "gothic",
     "gothic fiction": "gothic",
+    "graduate students": [
+        "college students",
+        "school"
+    ],
     "grandparents": "family",
     "graphic novels": "graphic novels & comics",
     "graphic novels & comics": "graphic novels & comics",
@@ -301,9 +376,14 @@
     "greece fiction": "Greece",
     "greek deity": "greek mythology",
     "greek mythology": "greek mythology",
+    "greeks": "Greece",
     "grief": "grief",
-    "henry gaunt": null,
-    "heracles": null,
+    "guerre de troie": [
+        "war",
+        "greek mythology"
+    ],
+    "haiti": "Haiti",
+    "heroes": "adventure",
     "high fantasy": "high fantasy",
     "high school": "high school",
     "high schools": "high school",
@@ -322,12 +402,18 @@
     "holidays": "holidays",
     "hollywood": "Hollywood",
     "homophobia": "discrimination",
+    "homoseksualizm": "LGBTQIA+",
     "homosexuality": "LGBTQIA+",
     "homosexuella män": "gay",
+    "homosexuels masculins": "gay",
     "horror": "horror",
     "humor": "humor",
+    "humorous": "humor",
+    "humour": "humor",
+    "héros": "adventure",
     "identity": "identity",
-    "in english": null,
+    "identité sexuelle": "sexuality",
+    "imprimés espagnols": "translations",
     "india": "India",
     "interpersonal relations": "relationships",
     "interviews": "interviews",
@@ -336,15 +422,20 @@
     "isolation": "isolation",
     "italy": "Italy",
     "italy fiction": "Italy",
-    "james": null,
+    "jamaicans": "Jamaica",
+    "jamaïquains": "Jamaica",
     "japan": "Japan",
     "japanese americans": "Japanese Americans",
-    "june claremont-diaz": null,
+    "jealousy": "relationships",
+    "jehovah's witnesses": "religion",
     "junge frau": "young adult (YA)",
     "juvenile": "juvenile fiction",
     "juvenile fiction": "juvenile fiction",
-    "kabi nagata": null,
     "kansas": "Kansas",
+    "kryzys wieku średniego": "middle age",
+    "lambda literary": "Lambda Literary Awards",
+    "language readers": "translations",
+    "large type books": "accessibility",
     "lesbian": "lesbian",
     "lesbian couples": "lesbian",
     "lesbian love stories": [
@@ -379,9 +470,14 @@
     ],
     "lgbt+": "LGBTQIA+",
     "lgbtq": "LGBTQIA+",
+    "lgbtq gender identity": "gender identity",
     "lgbtq historical fiction": [
         "LGBTQIA+",
         "historical fiction"
+    ],
+    "lgbtq hiv/aids": [
+        "LGBTQIA+",
+        "diseases"
     ],
     "lgbtq novels": [
         "LGBTQIA+",
@@ -406,18 +502,20 @@
     "liebesbeziehung": "romance",
     "life change events": "personal growth",
     "lighthouse keepers": "lighthouse keepers",
+    "lispenard street": "New York",
     "literary": "literary",
+    "literary artistic etc": "literary",
     "literary collections": "literary collections",
-    "literature": null,
+    "literatura norte-americana": "Americans",
     "london": "London",
     "london (england)": "London",
     "london (england) fiction": "London",
     "loneliness": "isolation",
+    "long now manual for civilization": "nonfiction",
     "los angeles calif": "Los Angeles",
     "loss": "loss",
     "love": "love",
     "love in adolescence": "love in adolescence",
-    "lynn": null,
     "m f romance": "male-female romance",
     "m m fantasy": [
         "male-male romance",
@@ -426,20 +524,27 @@
     "m m romance": "male-male romance",
     "magic": "magic",
     "magical realism": "magical realism",
+    "malades en phase terminale": "diseases",
     "male": "male",
     "male friendship": "friendship",
     "male-female romance": "male-female romance",
     "male-male romance": "male-male romance",
+    "man-woman": "male-female romance",
     "man-woman relationship": "male-female romance",
     "man-woman relationships": "male-female romance",
+    "man-woman relationships-fiction": "male-female romance",
     "manga": "manga",
+    "manhattan": "New York",
     "marriage": "marriage",
+    "married people": "marriage",
     "married people fiction": "marriage",
     "married women": [
         "marriage",
         "women"
     ],
+    "media tie-in": "adaptations",
     "memoir": "memoir",
+    "memoria": "memoir",
     "mental": "mental health",
     "mental depression": "mental illness",
     "mental health": "mental health",
@@ -450,17 +555,29 @@
         "middle age"
     ],
     "middle-aged men": "middle age",
+    "military": "soldiers",
+    "minorités sexuelles": "LGBTQIA+",
+    "miłość": "love",
     "monsters": "monsters",
     "morocco": "Morocco",
     "mother-daughter relationship": "mother-daughter relationship",
     "mother-son relationship": "mother-son relationship",
+    "motherless families": "single-parent families",
+    "mothers": [
+        "family",
+        "women"
+    ],
     "mothers and daughters": "mother-daughter relationship",
     "mothers and sons": "mother-son relationship",
+    "mothers-in-law": [
+        "family",
+        "marriage"
+    ],
     "motion picture actors and actresses": "performing arts",
     "motion picture industry": "performing arts",
     "mujeres": "women",
-    "mungo": null,
     "murder": "murder",
+    "museum of modern art": "art",
     "music-halls": "performing arts",
     "mystery": "mystery",
     "mystery thriller": [
@@ -468,6 +585,10 @@
         "thriller"
     ],
     "mythology": "mythology",
+    "mères": [
+        "family",
+        "women"
+    ],
     "n.y": "New York",
     "na": "new adult (NA)",
     "napoleonic war": "war",
@@ -475,21 +596,22 @@
         "war",
         "historical"
     ],
+    "national book": "literary",
     "new adult": "new adult (NA)",
     "new adult (na)": "new adult (NA)",
     "new jersey": "New Jersey",
     "new york": "New York",
     "new york (n.y.)": "New York",
     "new york city": "New York",
+    "new york n.y": "New York",
     "new york times bestseller": "new york times bestseller",
-    "new york times reviewed": null,
-    "nick nelson": null,
+    "nineteen fifties": "20th century",
+    "noires": "Black",
+    "noires américaines": "African American",
     "nonfiction": "nonfiction",
     "novela": "novels",
     "novella": "novels",
     "novels": "novels",
-    "older men": null,
-    "origami in literature": null,
     "overweight teenagers": [
         "teenagers",
         "body image"
@@ -505,39 +627,66 @@
     ],
     "parent and child": "parent-child relationship",
     "parent-child relationship": "parent-child relationship",
+    "parenting": [
+        "family",
+        "parent-child relationship"
+    ],
+    "parents of transgender children": [
+        "transgender children",
+        "parent-child relationship"
+    ],
     "paris": "Paris",
+    "patroclus": "greek mythology",
+    "pen/faulkner": "literary",
     "performing arts": "performing arts",
-    "personnes seules": null,
+    "phthia": "Greece",
     "pickpockets": "crime",
+    "pisarze": "authors",
     "plague": "diseases",
+    "podróże dookoła świata": "travel",
+    "poetry": "poetry",
     "poland": "Poland",
     "poland fiction": "Poland",
     "police": "police",
+    "political": "political intrigue",
     "political intrigue": "political intrigue",
     "prep school": "prep school",
-    "present day": null,
-    "presidents united states fiction": null,
-    "prince henry of wales": null,
+    "presidents united states": "United States",
     "private schools": "school",
     "prostitution": "prostitution",
     "psychological": "psychological fiction",
     "psychological fiction": "psychological fiction",
     "psychology": "mental health",
+    "puerto rican youth": [
+        "Hispanic Americans",
+        "teenagers"
+    ],
+    "punishment": "social commentary",
+    "queens": "New York",
     "queer": "queer",
     "queer lit": "queer",
     "race": "race",
+    "racisme": "discrimination",
     "realistic fiction": "realistic fiction",
     "recreation": "recreation",
     "relaciones hombre-mujer": "male-female romance",
+    "relations entre hommes et femmes": "male-female romance",
     "relations with lesbians": "lesbian",
     "relationships": "relationships",
     "religion": "religion",
     "renaissance art": "renaissance art",
     "retellings": "retellings",
+    "road trip": "travel",
+    "roman américain": "Americans",
+    "roman espagnol": "Spanish literature",
     "romance": "romance",
     "romance contemporary": [
         "romance",
         "contemporary"
+    ],
+    "romance fantasy": [
+        "romance",
+        "fantasy"
     ],
     "romance fiction": "romance",
     "romance historical": [
@@ -553,7 +702,12 @@
         "LGBTQIA+",
         "lesbian"
     ],
-    "romans nouvelles": null,
+    "romance science": [
+        "romance",
+        "science fiction"
+    ],
+    "romans": "novels",
+    "romans en novellen ; vertaald": "translations",
     "rus": "Russia",
     "russia": "Russia",
     "russian fiction": "Russian literature",
@@ -566,7 +720,13 @@
     "san francisco": "San Francisco",
     "san francisco (calif.) fiction": "San Francisco",
     "san francisco calif.": "San Francisco",
-    "scandals": null,
+    "satire": "satire",
+    "savants": "science",
+    "scandals": [
+        "social commentary",
+        "political intrigue"
+    ],
+    "scholars": "school",
     "school": "school",
     "school & education": "school",
     "schools": "school",
@@ -583,8 +743,14 @@
     "science fiction general": "science fiction",
     "scotland": "Scotland",
     "scotland fiction": "Scotland",
-    "secrecy": null,
+    "secrecy": [
+        "mystery",
+        "suspense"
+    ],
     "self-actualization": "personal growth",
+    "sex dolls": "sexuality",
+    "sex workers": "prostitution",
+    "sexual abuse": "abuse",
     "sexual behavior": "sexuality",
     "sexual minorities": "LGBTQIA+",
     "sexual minorities' families": "LGBTQIA+",
@@ -592,16 +758,19 @@
     "sexual reorientation programs": "sexual reorientation programs",
     "sexuality": "sexuality",
     "sexualité": "sexuality",
+    "shakespeare william": "classics",
+    "shakespeare william 1564-1616 adaptations": [
+        "classics",
+        "retellings"
+    ],
     "shapeshifters": "shapeshifters",
     "short stories": "short stories",
     "short stories (single author)": "short stories",
-    "sidney ellwood": null,
-    "single people": null,
-    "single person": null,
-    "single women": null,
+    "single author multi-form": "literary collections",
     "single-parent families": "single-parent families",
     "sisters": "siblings",
     "skönlitteratur": "literary",
+    "slaves": "historical",
     "small cities": "small cities",
     "social class": "social class",
     "social commentary": "social commentary",
@@ -609,9 +778,14 @@
     "social customs": "social commentary",
     "social life and customs": "social commentary",
     "social skills": "personal growth",
+    "soho": "London",
     "soldiers": "soldiers",
     "solitude": "isolation",
+    "songs and music": "performing arts",
+    "southern states": "United States",
     "space opera": "space opera",
+    "spanish": "Spanish literature",
+    "spanish imprints": "Spanish literature",
     "speculative fiction": "speculative fiction",
     "sports": "sports",
     "sports romance": [
@@ -619,12 +793,8 @@
         "romance"
     ],
     "spy stories": "spy stories",
-    "stephen kellner": null,
     "stonewall book awards": "Stonewall Book Awards",
-    "storytelling": null,
-    "strips": null,
     "students": "students",
-    "submarines": null,
     "supernatural": "supernatural",
     "survival": "survival",
     "suspense": "suspense",
@@ -641,28 +811,47 @@
         "girls"
     ],
     "teenagers": "teenagers",
+    "tennessee": "Tennessee",
+    "terminally ill": "diseases",
     "the united states of america": "United States",
-    "the whole of time and space": null,
+    "thetis": "greek mythology",
     "thriller": "thriller",
     "thrillers": "thriller",
     "time travel": "time-traveling",
     "time-traveling": "time-traveling",
+    "to 146 b.c": "historical",
     "transgender": "transgender",
     "transgender children": "transgender children",
     "transgender people": "transgender",
     "transgender women": "transgender",
+    "transgenres": "transgender",
     "translations into english": "translations",
+    "translations into spanish": "translations",
     "transsexuals": "transgender",
     "transvestites": "gender identity",
     "travel": "travel",
+    "trojan war": [
+        "war",
+        "greek mythology"
+    ],
+    "troy": [
+        "Greece",
+        "historical"
+    ],
     "turin italy": "Italy",
+    "turkey": "Turkey",
     "twins": "siblings",
+    "témoins de jéhovah": "religion",
     "underwater exploration": "adventure",
     "united kingdom": "United Kingdom",
     "united states": "United States",
     "united states of american": "United States",
-    "unterschicht": null,
+    "upper east side": "New York",
     "urban fantasy": "urban fantasy",
+    "urban poor": [
+        "social class",
+        "social commentary"
+    ],
     "vampires": "vampires",
     "variety-theaters cabarets etc": "performing arts",
     "venice": "Venice",
@@ -677,18 +866,33 @@
         "violence",
         "gay teenagers"
     ],
-    "virginia woolf": null,
-    "vsesoi︠u︡znai︠a︡ pionerskai︠a︡ organizat︠s︡ii︠a︡ imeni v.i. lenina": null,
+    "violence familiale": [
+        "abuse",
+        "family"
+    ],
+    "voyages and travels": "travel",
+    "vrouwenemancipatie": "feminism",
     "war": "war",
     "war fiction": "war fiction",
     "war stories": "war fiction",
-    "washington d.c.": "Washington D.C.",
+    "washington d.c": "Washington D.C.",
     "weird": "weird",
     "weird fiction": "speculative fiction",
     "westerns": "westerns",
-    "white house": null,
+    "widowers": [
+        "grief",
+        "marriage"
+    ],
+    "william shakespeare": "classics",
+    "winter's tale": [
+        "classics",
+        "retellings"
+    ],
     "witches": "witches",
-    "witnesses": null,
+    "witnesses": [
+        "crime",
+        "mystery"
+    ],
     "wives": [
         "marriage",
         "women"
@@ -722,6 +926,10 @@
     "women marine biologists": [
         "women",
         "science"
+    ],
+    "woolf virginia 1882-1941": [
+        "authors",
+        "classics"
     ],
     "working class families": [
         "family",
@@ -799,6 +1007,11 @@
         "new adult (NA)"
     ],
     "youth": "teenagers",
+    "youths' writings": [
+        "teenagers",
+        "authors"
+    ],
     "ÃƒÂ©tudiantes": "college students",
+    "écrivains": "authors",
     "écrivains noirs": "African American"
 }

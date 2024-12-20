@@ -27,13 +27,9 @@ params:
     - boys
     - contemporary
     - family
-    - family life
-    - family secrets
     - gender identity
     - parent-child relationship
-    - parenting
-    - parents of transgender children
-    - sexuality
     - transgender children
+    - sexuality
 ---
 

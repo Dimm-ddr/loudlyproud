@@ -37,33 +37,20 @@ params:
     - New York
     - Paris
     - San Francisco
-    - arthur less
     - audiobook
     - authors
-    - carlos pelu
     - contemporary
-    - freddy pelu
     - gay
-    - gay novelists
-    - homoseksualizm
     - humor
-    - humorous
-    - humorous general
-    - humour
-    - kryzys wieku średniego
+    - middle age
     - literary
-    - marian brownburn
     - mexico
-    - miłość
+    - love
     - new york times bestseller
     - novels
-    - pisarze
-    - podróże dookoła świata
-    - present
+    - travel
     - queer
-    - robert brownburn
     - romance
     - satire
-    - voyages and travels
 ---
 

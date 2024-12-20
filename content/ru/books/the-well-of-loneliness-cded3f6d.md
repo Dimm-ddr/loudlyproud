@@ -26,19 +26,16 @@ params:
     - Irish literature
     - LGBTQIA+
     - LGBTQIA+ novels before Stonewall
-    - aristocracy
+    - social class
     - authors
     - classics
-    - heroes
+    - adventure
     - historical
-    - héros
     - lesbian
     - queer
     - romance
-    - savants
-    - scholars
-    - social class
+    - science
+    - school
     - social commentary
-    - écrivains
 ---
 

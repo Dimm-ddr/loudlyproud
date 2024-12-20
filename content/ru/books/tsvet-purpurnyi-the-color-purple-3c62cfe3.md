@@ -30,66 +30,36 @@ params:
   russian_translation_status: exists
   short_book_description: Действие романа происходит в сельской местности штата Джорджия в 30-е годы ХХ века. На самой нижней ступени общества - чернокожие женщины…
   tags:
-    - '& literature'
     - Africa
     - African American
     - African American authors
-    - American fiction
+    - Americans
     - LGBTQIA+
     - United States
-    - abused wives
-    - adam
-    - adult child sexual abuse victims
-    - african american & black general
-    - african american general
-    - african american women
-    - african continental ancestry group
-    - albert
-    - alphonso
-    - books that shaped work in america
-    - celie
-    - classics
-    - corrine
-    - domestic
-    - family life general
-    - feminism
-    - fictional works publication type
-    - friendship
-    - georgia
-    - germaine
-    - grady
-    - harpo
-    - historical
-    - imprimés espagnols
-    - language readers
-    - large type books
-    - lesbian
-    - long now manual for civilization
-    - national book award winner
-    - nettie
-    - noires
-    - noires américaines
-    - novels
-    - olivia
-    - queer
-    - racisme
-    - roman espagnol
-    - romans
-    - romans en novellen ; vertaald
-    - samuel
-    - sheriff hodges
-    - shug avery
-    - siblings
+    - abuse
+    - marriage
+    - women
+    - mental health
+    - Black
     - social commentary
-    - sofia
-    - songs and music
-    - southern states
-    - spanish
-    - spanish imprints
-    - squeak
-    - tashi
-    - tennessee
-    - translations into spanish
-    - vrouwenemancipatie
+    - classics
+    - family
+    - feminism
+    - literary
+    - friendship
+    - Georgia
+    - France
+    - historical
+    - translations
+    - accessibility
+    - lesbian
+    - nonfiction
+    - novels
+    - queer
+    - discrimination
+    - Spanish literature
+    - siblings
+    - performing arts
+    - Tennessee
 ---
 

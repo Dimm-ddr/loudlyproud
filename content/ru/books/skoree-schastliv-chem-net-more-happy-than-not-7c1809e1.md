@@ -25,9 +25,9 @@ params:
   tags:
     - LGBTQIA+
     - New York
-    - bronx
     - bullying
-    - children of suicide victims
+    - grief
+    - mental health
     - children's fiction
     - coming out
     - contemporary
@@ -38,16 +38,16 @@ params:
     - juvenile fiction
     - love
     - magic
-    - new york n.y
-    - puerto rican youth
+    - Hispanic Americans
+    - teenagers
     - queer
     - romance
     - science
     - sexuality
     - single-parent families
     - social commentary
-    - urban poor
+    - social class
     - young adult (YA)
-    - youths' writings
+    - authors
 ---
 

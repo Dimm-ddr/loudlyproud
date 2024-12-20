@@ -72,7 +72,8 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
             if not isinstance(tags, list):
                 print(f"Warning: 'tags' in {file_path} is not a list")
                 return []
-            return tags
+            # Filter out None values and ensure all elements are strings
+            return [str(tag) for tag in tags if tag is not None and not isinstance(tag, (dict, list))]
         print(f"Warning: No valid frontmatter found in {file_path}")
         return []
     except Exception as e:

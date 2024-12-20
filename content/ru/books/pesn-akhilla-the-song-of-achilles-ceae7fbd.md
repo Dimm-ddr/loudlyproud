@@ -32,31 +32,18 @@ params:
     - Greece
     - LGBTQIA+
     - Stonewall Book Awards
-    - achilles
-    - amitié masculine
-    - ancient greece
-    - chiron
-    - extinct city
-    - fantasy
-    - friendship
-    - gay
     - greek mythology
-    - greeks
-    - guerre de troie
+    - friendship
     - historical
+    - fantasy
+    - gay
+    - war
     - history
     - love
-    - military
+    - soldiers
     - mythology
     - new york times bestseller
-    - patroclus
-    - phthia
     - romance
-    - thetis
-    - to 146 b.c
-    - trojan war
-    - troy
-    - turkey
-    - war
+    - Turkey
 ---
 

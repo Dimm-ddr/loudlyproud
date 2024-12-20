@@ -68,28 +68,33 @@ class TagNormalizer:
                 if match := re.search(pattern, tag):
                     parts = [tag.replace(match.group(0), "").strip()]
                     parts.extend(g.strip() for g in match.groups())
-                    return [p for p in parts if p]
+                    return [p for p in parts if p and isinstance(p, str)]
             elif "replace" in rule:
                 tag = re.sub(pattern, rule["replace"], tag)
             elif "keep_parts" in rule and rule["keep_parts"]:
                 if pattern in tag:
-                    return [p.strip() for p in tag.split(pattern) if p.strip()]
+                    return [p.strip() for p in tag.split(pattern) if p.strip() and isinstance(p, str)]
         return tag
 
-    def apply_compound_rules(self, tag: str) -> list[str] | str:
+    def apply_compound_rules(self, tag: str) -> list[str] | str | None:
         """Apply compound mapping rules."""
         for rule in self.patterns["compounds"]:
             pattern = rule["pattern"]
             if match := re.match(pattern, tag, re.IGNORECASE):
                 groups = match.groups()
+                # Handle case where rule maps to null
+                if rule.get("map_to") is None:
+                    return None
                 # For patterns like "term1 & term2", return both terms as separate tags
                 if pattern == "^(.+) & (.+)$":
-                    return [g.strip() for g in groups]
+                    return [g.strip() for g in groups if g and isinstance(g, str)]
                 # For other patterns, continue using the existing format mechanism
-                return [
-                    part.format(*(groups)) if "{}" in part else part.strip()
-                    for part in rule["map_to"]
-                ]
+                if isinstance(rule["map_to"], list):
+                    return [
+                        part.format(*(groups)) if "{}" in part else part.strip()
+                        for part in rule["map_to"]
+                        if isinstance(part, str)
+                    ]
         return tag
 
     def normalize(self, tag: str) -> TagValue:
@@ -150,12 +155,12 @@ class TagNormalizer:
                 self.stats.unknown_tags.add(tag)
                 mapped_tags.append(tag)
 
-        # Fix: Handle empty mapped_tags case
+        # Handle empty mapped_tags case
         if not mapped_tags:
             return None
         return mapped_tags if len(mapped_tags) > 1 else mapped_tags[0]
 
-    def normalize_tags(self, tags: Sequence[str]) -> list[str]:
+    def normalize_tags(self, tags: Sequence[str | None]) -> list[str]:
         """
         Normalize a list of tags:
         1. Apply normalization to each tag
@@ -166,6 +171,8 @@ class TagNormalizer:
         seen = set()
 
         for tag in tags:
+            if tag is None:
+                continue
             result = self.normalize(tag)
             if result is None:
                 continue

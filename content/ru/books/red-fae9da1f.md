@@ -6,7 +6,7 @@ type: books
 params:
   book_title: Red
   tags:
-    - American
+    - Americans
     - LGBTQIA+
     - historical
     - queer

@@ -20,14 +20,12 @@ params:
   tags:
     - African American
     - LGBTQIA+
-    - african american gay men
-    - black historical
     - gay
+    - Black
     - historical
     - literary
     - new york times bestseller
     - queer
     - romance
-    - slaves
 ---
 

@@ -24,21 +24,16 @@ params:
     - boys
     - coming of age
     - contemporary
-    - cultural heritage
-    - garçons adolescents
+    - social commentary
+    - teenagers
     - gay
     - gender identity
     - historical
-    - homosexuels masculins
-    - identité sexuelle
-    - jamaicans
-    - jamaïquains
-    - jehovah's witnesses
+    - sexuality
+    - Jamaica
+    - religion
     - literary
-    - minorités sexuelles
     - queer
-    - sex workers
-    - teenagers
-    - témoins de jéhovah
+    - prostitution
 ---
 

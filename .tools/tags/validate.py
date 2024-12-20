@@ -2,13 +2,16 @@
 
 from pathlib import Path
 from typing import TypedDict
-from .common import GENERATED_DATA_DIR, CONTENT_DIR, VALIDATION_FILE, MAPPING_FILE, COLORS_FILE
+from .common import GENERATED_DATA_DIR, CONTENT_DIR, VALIDATION_FILE, MAPPING_FILE, COLORS_FILE, TO_REMOVE_FILE
 from .sorting import sort_strings
 from .file_ops import (
     collect_all_tags,
     load_tags_map,
     load_color_mapping,
+    extract_tags_from_file,
+    load_removable_tags,
 )
+from .normalize import TagNormalizer
 
 
 class ValidationReport(TypedDict):
@@ -34,6 +37,7 @@ def validate_tags(
     content_path: Path = CONTENT_DIR,
     mapping_file: Path = MAPPING_FILE,
     colors_file: Path = COLORS_FILE,
+    to_remove_file: Path = TO_REMOVE_FILE,
 ) -> dict[str, list[str]]:
     """
     Validate tags in book files against mapping and colors.
@@ -43,14 +47,15 @@ def validate_tags(
         content_path: Path to content directory to check
         mapping_file: Path to mapping file
         colors_file: Path to colors file
+        to_remove_file: Path to to_remove file
     """
-    try:
-        mapping = load_tags_map(mapping_file)
-    except Exception as e:
-        print(f"Error loading tags map: {e}")
-        mapping = {}
+    # Initialize normalizer
+    normalizer = TagNormalizer(project_root)
 
-    # Load colors as a set
+    # Load removable tags (already lowercase from file)
+    removable_tags = load_removable_tags(to_remove_file)
+
+    # Load colors as a set of lowercase tags for case-insensitive comparison
     colored_tags = set()
     try:
         colors = load_color_mapping(colors_file)
@@ -58,38 +63,40 @@ def validate_tags(
             # If it's a dict, collect all tag names
             for category in colors.values():
                 if isinstance(category, dict):
-                    colored_tags.update(category.keys())
+                    colored_tags.update(tag.lower() for tag in category.keys())
         else:
-            # If it's already a set, use it directly
-            colored_tags = colors
+            # If it's already a set, convert to lowercase
+            colored_tags = {tag.lower() for tag in colors}
     except Exception as e:
         print(f"Error loading TOML color mapping: {e}")
 
     # Get all book files
     book_files = content_path.glob("**/books/*.md")
 
-    # Extract all tags from books
+    # Extract and normalize all tags from books
     all_tags = set()
     for book_file in book_files:
         tags = extract_tags_from_file(book_file)
-        all_tags.update(tags)
+        # Normalize tags and filter out None values
+        normalized_tags = normalizer.normalize_tags(tags)
+        all_tags.update(normalized_tags)
 
     # Find unmapped and uncolored tags
     unmapped_tags = []
-    uncolored_tags = []
+    uncolored_tags_set = set()
 
     # Check each tag
     for tag in sorted(all_tags):
-        mapped_tag = mapping.get(tag)
-        if mapped_tag is None:
-            unmapped_tags.append(tag)
-        elif mapped_tag and mapped_tag not in colored_tags:
-            # Only check colors for mapped tags
-            uncolored_tags.append(mapped_tag)
+        tag_lower = tag.lower()
+        # Only consider a tag unmapped if it's not in valid_tags AND not in removable_tags
+        if tag_lower not in normalizer.valid_tags and tag_lower not in removable_tags:
+            unmapped_tags.append(tag_lower)  # Store lowercase version for consistency
+        elif tag_lower not in colored_tags:
+            uncolored_tags_set.add(tag)
 
     return {
         "unmapped_tags": unmapped_tags,
-        "uncolored_tags": uncolored_tags,
+        "uncolored_tags": sorted(uncolored_tags_set)
     }
 
 
@@ -126,41 +133,6 @@ def main() -> None:
     content_path = project_root / "content"
     report = validate_tags(project_root, content_path=content_path)
     write_report(report, project_root)
-
-
-def extract_tags_from_file(file_path: Path) -> set[str]:
-    """Extract tags from a markdown file's frontmatter."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Simple frontmatter parsing - find tags section
-        if not content.startswith('---'):
-            return set()
-
-        frontmatter_end = content.find('---', 3)
-        if frontmatter_end == -1:
-            return set()
-
-        frontmatter = content[3:frontmatter_end]
-
-        # Find tags section
-        tags_start = frontmatter.find('tags:')
-        if tags_start == -1:
-            return set()
-
-        # Extract tags (assuming they're in list format with - prefix)
-        tags = set()
-        for line in frontmatter[tags_start:].split('\n'):
-            line = line.strip()
-            if line.startswith('- "') and line.endswith('"'):
-                tag = line[3:-1]  # Remove - " and "
-                tags.add(tag)
-
-        return tags
-    except Exception as e:
-        print(f"Error reading tags from {file_path}: {e}")
-        return set()
 
 
 if __name__ == "__main__":

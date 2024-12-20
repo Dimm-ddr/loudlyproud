@@ -34,28 +34,25 @@ params:
     - LGBTQIA+ novels before Stonewall
     - New York
     - United States
-    - action
     - adventure
     - classics
-    - custody of children
+    - family
+    - parent-child relationship
     - detective
     - divorce
-    - family
     - gay
     - historical
     - lesbian
     - literary
-    - media tie-in
-    - mothers
+    - adaptations
+    - women
     - mystery
-    - nineteen fifties
     - novels
     - psychological fiction
     - queer
-    - road trip
-    - romance
-    - romance fantasy
-    - social commentary
     - travel
+    - romance
+    - fantasy
+    - social commentary
 ---
 

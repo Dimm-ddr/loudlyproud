@@ -20,26 +20,22 @@ params:
   short_book_description: A funny, sexy, profound dramedy about two young people at a crossroads in their relationship and the limits of love.Benson and Mike are two young guys who live together in Houston. Mike is a...
   tags:
     - African American
-    - American
+    - Americans
     - Japanese Americans
     - LGBTQIA+
     - Stonewall Book Awards
-    - américains d'origine japonaise
     - audiobook
-    - belles-mères
+    - family
+    - marriage
     - coming of age
     - contemporary
-    - couples
-    - et fils
+    - relationships
     - father-son relationship
     - fathers
     - gay
     - literary
-    - minorités sexuelles
-    - mothers-in-law
     - novels
     - queer
-    - relationships
     - romance
 ---
 

@@ -1,6 +1,5 @@
 ---
 
-
 draft: false
 slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
 title: Красный, белый и королевский синий
@@ -36,10 +35,9 @@ params:
     - humor
     - new adult (NA)
     - new york times bestseller
-    - presidents united states
     - queer
     - romance
-    - washington d.c
+    - Washington D.C.
     - young adult (YA)
 ---
 

@@ -23,20 +23,17 @@ params:
     - Lambda Literary Awards
     - Stonewall Book Awards
     - Syrian Americans
-    - américains d'origine syrienne
-    - artistes
-    - artists
+    - art
     - contemporary
     - death
-    - ghost
+    - ghosts
     - historical
-    - lambda literary
-    - lgbtq gender identity
+    - gender identity
     - literary
-    - mothers
+    - family
+    - women
     - novels
     - queer
     - transgender
-    - transgenres
 ---
 

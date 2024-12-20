@@ -25,11 +25,9 @@ params:
     - audiobook
     - christian
     - christmas
-    - collected works
+    - literary collections
     - fantasy
     - holidays
-    - holidays)
     - short stories
-    - single author multi-form
 ---
 

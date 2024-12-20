@@ -23,27 +23,20 @@ params:
   russian_translation_status: unknown
   short_book_description: Джазовый пианист и владелец небольшого бара Шеп находит подброшенную к больнице девочку-младенца — вместе с чемоданом денег. Шеп удочерит Пердиту, вырастит как свою и вложит в нее всю душу...
   tags:
-    - 1564-1616
-    - adaptations
+    - retellings
     - adult fiction
     - contemporary
-    - exile
-    - family life
+    - isolation
+    - family
     - fantasy
-    - father and child
-    - father-child relationship
+    - parent-child relationship
     - father-daughter relationship
-    - forgiveness
-    - jealousy
-    - literary
-    - married people
-    - punishment
-    - queer
+    - personal growth
     - relationships
-    - retellings
-    - shakespeare william
-    - shakespeare william 1564-1616 adaptations
-    - william shakespeare
-    - winter's tale
+    - literary
+    - marriage
+    - social commentary
+    - queer
+    - classics
 ---
 
