@@ -1,0 +1,13 @@
+<div class="mb-4">
+    <h2 class="text-xl font-black mb-2 text-primary">
+        <a href="{{ .RelPermalink }}"
+           class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
+            {{ .Params.book_title }}
+        </a>
+    </h2>
+    {{ with .Params.series }}
+    <p class="text-base font-light italic text-gray-500">
+        {{ . }}
+    </p>
+    {{ end }}
+</div>

@@ -26,6 +26,7 @@ audio_version: "Аудиоверсия"
 russian_audio_availability: "Аудиоверсия"
 russian_audio_available: "Аудиоверсия доступна"
 no_audio_version: "Аудиоверсия отсутствует"
+russian_audioversion: "Аудиоверсия"
 
 # External Links
 external_links: "Внешние ссылки"
@@ -80,3 +81,5 @@ telegram_updates: "Новости сайта в Телеграме"
 
 # Feedback
 share_feedback: "Предложить правки"
+
+buy_from: "Купить в"

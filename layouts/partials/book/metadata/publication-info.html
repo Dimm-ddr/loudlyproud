@@ -1,0 +1,17 @@
+<div class="space-y-2">
+    {{ with .page_count }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "page_count" }}:</span> {{ . }}
+    </div>
+    {{ end }}
+    {{ with .publication_year }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "publication_year" }}:</span> {{ . }}
+    </div>
+    {{ end }}
+    {{ with .isbn }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "isbn" }}:</span> {{ . }}
+    </div>
+    {{ end }}
+</div>

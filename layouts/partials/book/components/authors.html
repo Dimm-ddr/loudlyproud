@@ -1,0 +1,13 @@
+<div class="space-y-2">
+    {{ with .authors }}
+    <p class="text-sm font-normal text-primary">
+        {{ delimit . ", " }}
+    </p>
+    {{ end }}
+
+    {{ with .translators }}
+    <p class="text-sm font-light text-primary">
+        <span class="italic">{{ i18n "translators" }}: {{ delimit . ", " }}</span>
+    </p>
+    {{ end }}
+</div> 

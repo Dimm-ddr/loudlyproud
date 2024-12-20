@@ -1,0 +1,98 @@
+<div class="book-metadata mb-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Basic Info -->
+    <div class="space-y-2">
+      {{ with .authors }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "authors" }}:</span> {{ delimit . ", " }}
+      </div>
+      {{ end }}
+
+      {{ with .translators }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "translators" }}:</span> {{ delimit . ", " }}
+      </div>
+      {{ end }}
+
+      {{ with .series }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "series" }}:</span> {{ . }}
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Publication Info -->
+    <div class="space-y-2">
+      {{ with .page_count }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "page_count" }}:</span> {{ . }}
+      </div>
+      {{ end }}
+
+      {{ with .publication_year }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "publication_year" }}:</span> {{ . }}
+      </div>
+      {{ end }}
+
+      {{ with .isbn }}
+      <div class="metadata-item">
+        <span class="font-black">{{ i18n "isbn" }}:</span> {{ . }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Language and Translation Info -->
+  <div class="mt-4 space-y-2">
+    {{ with .languages }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "languages" }}:</span> {{ delimit . ", " }}
+    </div>
+    {{ end }}
+
+    {{ with .russian_translation_status }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "russian_translation" }}:</span>
+      {{ i18n (printf "translation_status_%s" .) }}
+    </div>
+    {{ end }}
+
+    {{ with .russian_audioversion }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "russian_audioversion" }}:</span>
+      {{ i18n (printf "translation_status_%s" .) }}
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- External Links -->
+  <div class="mt-4 space-y-2">
+    {{ with .goodreads_link }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "goodreads_link" }}:</span>
+      <a href="{{ . }}" class="styled-link">{{ . }}</a>
+    </div>
+    {{ end }}
+
+    {{ with .publishers }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "publishers" }}:</span> {{ delimit . ", " }}
+    </div>
+    {{ end }}
+
+    {{ with .where_to_get }}
+    <div class="metadata-item">
+      <span class="font-black">{{ i18n "where_to_get" }}:</span>
+      <ul class="mt-2 space-y-1">
+        {{ range . }}
+        <li>
+          <a href="{{ .link }}" class="styled-link">{{ .store }}</a>
+          {{ with .date }} - {{ . }}{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</div> 

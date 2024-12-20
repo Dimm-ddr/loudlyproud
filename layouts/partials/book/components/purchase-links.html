@@ -1,0 +1,15 @@
+{{ with .where_to_get }}
+<div class="text-sm space-y-1">
+    {{ range . }}
+    <a href="{{ .link }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="text-accent3 hover:underline block">
+       {{ i18n "buy_from" }} {{ .store }}
+       {{ with .date }}
+       <span class="text-gray-500">({{ . }})</span>
+       {{ end }}
+    </a>
+    {{ end }}
+</div>
+{{ end }} 

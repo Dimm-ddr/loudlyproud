@@ -1,0 +1,19 @@
+<div class="book-metadata mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Basic Info -->
+        <div>
+            {{ partial "book/components/authors.html" .Params }}
+            {{ with .Params.series }}
+            <div class="metadata-item mt-2">
+                <span class="font-black">{{ i18n "series" }}:</span> {{ . }}
+            </div>
+            {{ end }}
+        </div>
+        <!-- Publication Info -->
+        {{ partial "book/metadata/publication-info.html" .Params }}
+    </div>
+    <!-- Language Info -->
+    {{ partial "book/metadata/language-info.html" .Params }}
+    <!-- External Links -->
+    {{ partial "book/metadata/external-links.html" .Params }}
+</div>

@@ -1,0 +1,42 @@
+{{ define "getTranslationStatusColor" }}
+    {{- if eq . "completed" -}}text-green-600
+    {{- else if eq . "in_progress" -}}text-yellow-600
+    {{- else if eq . "planned" -}}text-blue-600
+    {{- else -}}text-gray-600
+    {{- end -}}
+{{ end }}
+
+<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col"
+         {{ with .File }}data-slug="{{ .ContentBaseName }}"{{ end }}>
+
+    {{ partial "book/components/cover-image.html" .Params }}
+
+    <div class="p-4 flex flex-col flex-grow">
+        {{ partial "book/components/title-section.html" . }}
+        {{ partial "book/components/authors.html" .Params }}
+
+        {{ with .Params.short_book_description }}
+        <div class="prose prose-sm mb-4">
+            {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        <div class="mt-auto space-y-2">
+            {{ with .Params.tags }}
+            <div class="flex flex-wrap gap-2">
+                {{ range . }}
+                    {{ partial "tag-component.html" (dict "tag" . "clickable" true) }}
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ with .Params.russian_translation_status }}
+            <div class="text-sm font-bold {{ template "getTranslationStatusColor" . }}">
+                {{ i18n (printf "translation_status_%s" .) }}
+            </div>
+            {{ end }}
+
+            {{ partial "book/components/purchase-links.html" .Params }}
+        </div>
+    </div>
+</article>

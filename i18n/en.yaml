@@ -26,6 +26,7 @@ audio_version: "Audio Version"
 russian_audio_availability: "Russian Audio Availability"
 russian_audio_available: "Russian audio version available"
 no_audio_version: "No Audio Version"
+russian_audioversion: "Audio Version"
 
 # External Links
 external_links: "External Links"
@@ -80,3 +81,6 @@ telegram_updates: "Website News in Telegram"
 
 # Feedback
 share_feedback: "Share Feedback"
+
+# Buy from
+buy_from: "Buy from"

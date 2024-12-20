@@ -61,7 +61,7 @@
              data-total-items="{{ len $books }}">
           {{ range $books }}
             <div class="book-item" style="display: none;">
-              {{ partial "book-card.html" . }}
+              {{ partial "book/card.html" . }}
             </div>
           {{ end }}
         </div>
