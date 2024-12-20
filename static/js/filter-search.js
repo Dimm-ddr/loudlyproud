@@ -1,15 +1,30 @@
 // src/js/filter-search.ts
 document.addEventListener("DOMContentLoaded", function() {
+  let fuseInstance = null;
+
+  // Initialize search
+  function initSearch() {
+    // Clean up existing instance if it exists
+    fuseInstance = new window.Fuse(window.books, {
+      keys: ["title", "authors", "tags", "book_description"],
+      threshold: 0.4
+    });
+  }
+
+  // Initialize search on load
+  initSearch();
+
+  // Clean up on page unload
+  window.addEventListener('unload', () => {
+    fuseInstance = null;
+  });
+
   const searchField = document.getElementById(
     "search-field"
   );
   const tagFilters = document.querySelectorAll(".tag-filter");
   const authorFilters = document.querySelectorAll(".author-filter");
   const bookList = document.getElementById("book-gallery");
-  const fuse = new window.Fuse(window.books, {
-    keys: ["title", "authors", "tags", "book_description"],
-    threshold: 0.4
-  });
   function getTagStyle(tag) {
     const normalizedTag = tag.toLowerCase().replace(/\s+/g, "-");
     const colorKey = window.tagMapping[normalizedTag] || "fallback";
@@ -73,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (searchField) {
     searchField.addEventListener("input", (event) => {
       const target = event.target;
-      const results = fuse.search(target.value);
+      const results = fuseInstance.search(target.value);
       const filteredBooks = results.map((result) => result.item);
       renderBooks(filteredBooks);
     });

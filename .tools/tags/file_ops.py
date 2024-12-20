@@ -39,13 +39,17 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
                     yaml.preserve_quotes = True
                     data = yaml.load(frontmatter)
                     if not isinstance(data, dict):
+                        print(f"Warning: Frontmatter is not a dictionary")
                         return None
                     return data, rest[0]
-                except Exception:
+                except Exception as e:
+                    print(f"Warning: Failed to parse YAML frontmatter: {str(e)}")
                     return None
             case _:
+                print(f"Warning: Could not find valid frontmatter delimiters")
                 return None
-    except Exception:
+    except Exception as e:
+        print(f"Warning: Error processing frontmatter: {str(e)}")
         return None
 
 
@@ -53,6 +57,10 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
     """Extract tags from a book's frontmatter."""
     try:
         content = file_path.read_text(encoding="utf-8")
+        if not content.strip():
+            print(f"Warning: File is empty: {file_path}")
+            return []
+
         if result := split_frontmatter(content):
             frontmatter, _ = result
             # Handle missing params or tags
@@ -65,9 +73,10 @@ def extract_tags_from_file(file_path: Path) -> list[str]:
                 print(f"Warning: 'tags' in {file_path} is not a list")
                 return []
             return tags
+        print(f"Warning: No valid frontmatter found in {file_path}")
         return []
     except Exception as e:
-        print(f"Warning: Could not process {file_path}: {e}")
+        print(f"Warning: Could not process {file_path}: {str(e)}")
         return []
 
 

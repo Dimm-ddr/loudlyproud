@@ -126,6 +126,8 @@ class TagNormalizer:
 
         # 5. Apply patterns
         result = self.apply_compound_rules(tag)
+        if result is None:  # Handle case where compound rule maps to null
+            return None
         if isinstance(result, list):
             transformed_tags = result
         else:
@@ -139,8 +141,11 @@ class TagNormalizer:
             if tag in self.mapping_lower:
                 proper_key = self.mapping_lower[tag]
                 mapped = self.mapping[proper_key]
-                if mapped is not None:
-                    mapped_tags.append(mapped)
+                if mapped is not None:  # Only add non-null mapped values
+                    if isinstance(mapped, list):
+                        mapped_tags.extend(mapped)
+                    else:
+                        mapped_tags.append(mapped)
             else:
                 self.stats.unknown_tags.add(tag)
                 mapped_tags.append(tag)
@@ -162,19 +167,21 @@ class TagNormalizer:
 
         for tag in tags:
             result = self.normalize(tag)
+            if result is None:
+                continue
             if isinstance(result, list):
                 for r in result:
-                    if r and r.lower() not in seen:
+                    if r is not None and r.lower() not in seen:
                         normalized.append(r)
                         seen.add(r.lower())
                         self.stats.normalized_tags[r] += 1
-            elif result:
+            else:
                 if result.lower() not in seen:
                     normalized.append(result)
                     seen.add(result.lower())
                     self.stats.normalized_tags[result] += 1
 
-        return sort_strings(normalized)
+        return normalized  # Always return a list, even if empty
 
     def to_dict(self) -> dict:
         """Convert stats to dictionary for JSON output."""

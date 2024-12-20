@@ -1,6 +1,24 @@
 // static/admin/auth-handler.js
 
+// Store interval reference
+let tokenCheckInterval;
+
 window.addEventListener("load", function () {
+  // Clear any existing interval first
+  if (tokenCheckInterval) {
+    clearInterval(tokenCheckInterval);
+  }
+
+  // Set new interval and store reference
+  tokenCheckInterval = setInterval(checkTokenExpiration, 60000);
+
+  // Clear interval on page unload
+  window.addEventListener('unload', () => {
+    if (tokenCheckInterval) {
+      clearInterval(tokenCheckInterval);
+    }
+  });
+
   // Helper to check for unsaved changes
   const hasUnsavedChanges = () => {
     const editor = document.querySelector(".cms-editor-active");

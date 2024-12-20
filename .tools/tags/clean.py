@@ -103,8 +103,16 @@ def process_book_file(file_path: Path, normalizer) -> tuple[bool, list[str]]:
             return False, []
 
         normalized_tags = normalizer.normalize_tags(tags)
-        original_set = {t.lower() for t in tags}
-        normalized_set = {t.lower() for t in normalized_tags}
+        if not normalized_tags:  # Handle case where all tags were removed
+            return False, []
+
+        # Filter out any None values that might have slipped through
+        normalized_tags = [t for t in normalized_tags if t is not None]
+        if not normalized_tags:  # Check again after filtering
+            return False, []
+
+        original_set = {t.lower() for t in tags if t is not None}
+        normalized_set = {t.lower() for t in normalized_tags if t is not None}
 
         if original_set != normalized_set:
             content = file_path.read_text(encoding="utf-8")
@@ -119,7 +127,11 @@ def process_book_file(file_path: Path, normalizer) -> tuple[bool, list[str]]:
             return False, tags
         return False, tags
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        import traceback
+        print(f"\nError processing {file_path}:")
+        print(f"Original error: {str(e)}")
+        print("\nTraceback:")
+        traceback.print_exc()
         return False, []
 
 
