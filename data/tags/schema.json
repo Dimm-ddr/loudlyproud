@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Unified Tags Schema",
+    "description": "Schema for the unified tags data structure",
+    "type": "object",
+    "properties": {
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string"
+                },
+                "last_generated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "source_files": {
+                    "type": "object",
+                    "properties": {
+                        "mapping": {
+                            "type": "string",
+                            "description": "Hash of mapping.json"
+                        },
+                        "colors": {
+                            "type": "string",
+                            "description": "Hash of colors.toml"
+                        },
+                        "normalization": {
+                            "type": "string",
+                            "description": "Hash of tag_normalization.yaml"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "version",
+                "last_generated",
+                "source_files"
+            ]
+        },
+        "tags": {
+            "type": "object",
+            "patternProperties": {
+                "^[a-z-]+$": {
+                    "type": "object",
+                    "properties": {
+                        "internal": {
+                            "type": "string",
+                            "description": "Lowercase, URL-safe internal representation",
+                            "pattern": "^[a-z0-9-]+$"
+                        },
+                        "display": {
+                            "type": "string",
+                            "description": "Human-readable display format"
+                        },
+                        "color": {
+                            "type": "string",
+                            "enum": [
+                                "amber",
+                                "aubergine",
+                                "burgundy",
+                                "deep-blue",
+                                "forest",
+                                "marine",
+                                "plum",
+                                "rust",
+                                "slate"
+                            ]
+                        },
+                        "category": {
+                            "type": "string",
+                            "description": "Tag category for organization"
+                        },
+                        "aliases": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "Alternative forms of the tag"
+                        }
+                    },
+                    "required": [
+                        "internal",
+                        "display",
+                        "color",
+                        "category"
+                    ]
+                }
+            }
+        }
+    },
+    "required": [
+        "metadata",
+        "tags"
+    ],
+    "examples": [
+        {
+            "metadata": {
+                "version": "1.0.0",
+                "last_generated": "2024-01-20T12:00:00Z",
+                "source_files": {
+                    "mapping": "sha256:abc123...",
+                    "colors": "sha256:def456...",
+                    "normalization": "sha256:ghi789..."
+                }
+            },
+            "tags": {
+                "lgbtqia+": {
+                    "internal": "lgbtqia-plus",
+                    "display": "LGBTQIA+",
+                    "color": "rust",
+                    "category": "Identity and Relationships",
+                    "aliases": [
+                        "lgbt+",
+                        "lgbtq+"
+                    ]
+                },
+                "united-states": {
+                    "internal": "united-states",
+                    "display": "United States",
+                    "color": "deep-blue",
+                    "category": "Cultural and Geographic",
+                    "aliases": [
+                        "usa",
+                        "u.s.a",
+                        "u.s"
+                    ]
+                }
+            }
+        }
+    ]
+}

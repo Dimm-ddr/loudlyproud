@@ -128,6 +128,7 @@ def process_book_file(file_path: Path, normalizer) -> tuple[bool, list[str]]:
         return False, tags
     except Exception as e:
         import traceback
+
         print(f"\nError processing {file_path}:")
         print(f"Original error: {str(e)}")
         print("\nTraceback:")

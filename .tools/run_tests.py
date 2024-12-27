@@ -14,7 +14,7 @@ def main():
     result = subprocess.run([
         sys.executable, "-m", "pytest",
         str(tools_dir / "tags" / "tests"),
-        "-v",
+        "-vv",
         "--tb=short",
         "--cov=.tools/tags",
         "--cov-report=term-missing",

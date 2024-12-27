@@ -4,8 +4,18 @@ import pytest
 from pathlib import Path
 from tags.monitor import update_tags_report
 from tags.validate import validate_tags
-from tags.file_ops import write_mapping_file, write_colors_file
-from tags.common import CONTENT_DIR, DATA_DIR, MAPPING_FILENAME, COLORS_FILENAME
+from tags.file_ops import (
+    write_mapping_file,
+    write_colors_file,
+    write_patterns_file,
+    write_removable_tags,
+)
+from tags.common import (
+    MAPPING_FILENAME,
+    COLORS_FILENAME,
+    PATTERNS_FILENAME,
+    TO_REMOVE_FILENAME,
+)
 
 
 @pytest.fixture
@@ -57,6 +67,16 @@ params:
     colors_file = data_dir / COLORS_FILENAME
     write_colors_file(colors_file, colors)
 
+    # Create test patterns file
+    patterns = {"split": {"separators": []}, "compounds": []}
+    patterns_file = data_dir / PATTERNS_FILENAME
+    write_patterns_file(patterns_file, patterns)
+
+    # Create test to_remove file
+    to_remove = []
+    to_remove_file = data_dir / TO_REMOVE_FILENAME
+    write_removable_tags(to_remove_file, to_remove)
+
     # Validate tags in the test content directory
     content_dir = test_project / "content"
     report = validate_tags(
@@ -64,6 +84,7 @@ params:
         content_path=content_dir,
         mapping_file=mapping_file,
         colors_file=colors_file,
+        to_remove_file=to_remove_file,
     )
 
     # Now we should only see our test tags

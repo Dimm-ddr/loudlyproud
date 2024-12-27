@@ -23,14 +23,20 @@
         class="flex flex-wrap gap-2"
     >
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            {{ partial "tag-component.html" (dict
-                "tag" $name
-                "clickable" true
-            ) }}
+            {{ $originalTag := index $taxonomy.Pages 0 }}
+            {{ with $originalTag }}
+                {{ $tagValue := index .Params.tags 0 }}
+                {{ partial "tag-component.html" (dict
+                    "tag" $tagValue
+                    "clickable" true
+                    "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                    "count" $taxonomy.Count
+                ) }}
+            {{ end }}
         {{ end }}
 
         {{ if not .Site.Taxonomies.tags }}
             <p class="text-gray-600 italic">{{ i18n "no_tags_available" }}</p>
         {{ end }}
     </div>
-</div> 
+</div>

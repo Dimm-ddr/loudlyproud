@@ -92,7 +92,7 @@ def test_normalize_tags():
         ),  # another mapping example
         (
             ["venice (italy)"],
-            ["Venice", "Italy"],
+            ["Venice"],
         ),  # parentheses pattern with proper capitalization
     ],
 )

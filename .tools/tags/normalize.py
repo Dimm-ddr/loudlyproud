@@ -16,14 +16,24 @@ class TagNormalizer:
     def __init__(
         self,
         project_root: Path = None,
+        mapping_file: Path = MAPPING_FILE,
+        patterns_file: Path = PATTERNS_FILE,
+        to_remove_file: Path = TO_REMOVE_FILE,
     ) -> None:
-        """Initialize normalizer with patterns and mapping files."""
+        """Initialize normalizer with patterns and mapping files.
+
+        Args:
+            project_root: Root path of the project (optional)
+            mapping_file: Path to mapping file (defaults to MAPPING_FILE from common)
+            patterns_file: Path to patterns file (defaults to PATTERNS_FILE from common)
+            to_remove_file: Path to to_remove file (defaults to TO_REMOVE_FILE from common)
+        """
         self.project_root = project_root or Path.cwd()
 
         # Load patterns and mapping
-        self.patterns = load_patterns(PATTERNS_FILE)
-        self.mapping = load_tags_map(MAPPING_FILE)
-        self.removable_tags = load_removable_tags(TO_REMOVE_FILE)
+        self.patterns = load_patterns(patterns_file)
+        self.mapping = load_tags_map(mapping_file)
+        self.removable_tags = load_removable_tags(to_remove_file)
 
         # Create case-insensitive lookup
         self.mapping_lower = {k.lower(): k for k in self.mapping}
@@ -73,7 +83,11 @@ class TagNormalizer:
                 tag = re.sub(pattern, rule["replace"], tag)
             elif "keep_parts" in rule and rule["keep_parts"]:
                 if pattern in tag:
-                    return [p.strip() for p in tag.split(pattern) if p.strip() and isinstance(p, str)]
+                    return [
+                        p.strip()
+                        for p in tag.split(pattern)
+                        if p.strip() and isinstance(p, str)
+                    ]
         return tag
 
     def apply_compound_rules(self, tag: str) -> list[str] | str | None:
@@ -100,20 +114,20 @@ class TagNormalizer:
     def normalize(self, tag: str) -> TagValue:
         """
         Normalize a single tag in steps:
-        1. Check if tag matches any valid tag (case-insensitive)
+        1. Check if tag is in mapping (case-insensitive)
         2. Clean and transform the tag (trim, remove trailing dots)
         3. Convert to lowercase
         4. Check if tag should be removed
         5. Apply patterns (split/transform)
         6. Apply mapping
         """
-        # 1. Check if tag matches any valid tag
-        if tag.lower() in self.valid_tags:
-            # If tag is in valid tags, only normalize its case via mapping
-            if tag.lower() in self.mapping_lower:
-                proper_key = self.mapping_lower[tag.lower()]
-                return self.mapping[proper_key]
-            return tag
+        # 1. Check if tag is in mapping
+        if tag.lower() in self.mapping_lower:
+            proper_key = self.mapping_lower[tag.lower()]
+            mapped = self.mapping[proper_key]
+            if mapped is not None:
+                return mapped
+            return None
 
         # 2. Clean the tag first
         tag = tag.strip()

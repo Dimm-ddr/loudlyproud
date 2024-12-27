@@ -3,13 +3,19 @@
 {{ $normalizedTag := partial "tag-normalizer.html" (dict "action" "normalize_tag" "tag" $input) | string }}
 {{ $displayTag := partial "tag-normalizer.html" (dict "action" "get_tag_display" "tag" $input) | string }}
 
+<!-- Create lowercase version of the color map -->
+{{ $lowercaseColorMap := dict }}
+{{ range $category, $tags := site.Data.tags.colors }}
+  {{ range $tag, $color := $tags }}
+    {{ $_ := set $lowercaseColorMap ($tag | lower) $color }}
+  {{ end }}
+{{ end }}
+
 <!-- Get color key with fallback -->
 {{ $colorKey := "fallback" }}
-{{ range $category, $tags := site.Data.tags.colors }}
-  {{ with index $tags ($displayTag | htmlUnescape) }}
-    {{ $colorKey = . }}
-    {{ break }}
-  {{ end }}
+{{ $lookupTag := $displayTag | lower }}
+{{ with index $lowercaseColorMap $lookupTag }}
+  {{ $colorKey = . }}
 {{ end }}
 
 {{ $tagStyles := dict

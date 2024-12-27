@@ -6,12 +6,14 @@ from tags.file_ops import (
     extract_tags_from_file,
     write_mapping_file,
     write_colors_file,
+    write_patterns_file,
+    write_removable_tags,
 )
 from tags.common import (
     MAPPING_FILENAME,
     COLORS_FILENAME,
-    DATA_DIR,
-    CONTENT_DIR,
+    PATTERNS_FILENAME,
+    TO_REMOVE_FILENAME,
 )
 
 
@@ -47,6 +49,23 @@ Book content
     colors = {"Genres": {"Romance": "forest"}}
     colors_file = data_dir / COLORS_FILENAME
     write_colors_file(colors_file, colors)
+
+    # Create test patterns file with all required keys
+    patterns = {
+        "split": {"separators": []},
+        "compounds": [],
+        "remove": {"prefixes": [], "exact": []},
+        "normalizations": {},
+        "url_normalizations": {},
+        "display": {},
+    }
+    patterns_file = data_dir / PATTERNS_FILENAME
+    write_patterns_file(patterns_file, patterns)
+
+    # Create test to_remove file
+    to_remove = []
+    to_remove_file = data_dir / TO_REMOVE_FILENAME
+    write_removable_tags(to_remove_file, to_remove)
 
     return tmp_path
 

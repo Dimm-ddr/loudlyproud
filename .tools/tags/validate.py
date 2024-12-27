@@ -2,11 +2,17 @@
 
 from pathlib import Path
 from typing import TypedDict
-from .common import GENERATED_DATA_DIR, CONTENT_DIR, VALIDATION_FILE, MAPPING_FILE, COLORS_FILE, TO_REMOVE_FILE
+from .common import (
+    GENERATED_DATA_DIR,
+    CONTENT_DIR,
+    VALIDATION_FILE,
+    MAPPING_FILE,
+    COLORS_FILE,
+    TO_REMOVE_FILE,
+    PATTERNS_FILENAME,
+)
 from .sorting import sort_strings
 from .file_ops import (
-    collect_all_tags,
-    load_tags_map,
     load_color_mapping,
     extract_tags_from_file,
     load_removable_tags,
@@ -49,8 +55,13 @@ def validate_tags(
         colors_file: Path to colors file
         to_remove_file: Path to to_remove file
     """
-    # Initialize normalizer
-    normalizer = TagNormalizer(project_root)
+    # Initialize normalizer with the provided files
+    normalizer = TagNormalizer(
+        project_root=project_root,
+        mapping_file=mapping_file,
+        patterns_file=project_root / "data/tags" / PATTERNS_FILENAME,
+        to_remove_file=to_remove_file,
+    )
 
     # Load removable tags (already lowercase from file)
     removable_tags = load_removable_tags(to_remove_file)
@@ -88,15 +99,23 @@ def validate_tags(
     # Check each tag
     for tag in sorted(all_tags):
         tag_lower = tag.lower()
-        # Only consider a tag unmapped if it's not in valid_tags AND not in removable_tags
-        if tag_lower not in normalizer.valid_tags and tag_lower not in removable_tags:
+        # Skip tags that should be removed
+        if tag_lower in removable_tags:
+            continue
+        # Check if the tag is mapped by trying to normalize it
+        normalized = normalizer.normalize(tag)
+        if normalized is None or (
+            isinstance(normalized, str)
+            and normalized.lower() not in normalizer.valid_tags
+        ):
             unmapped_tags.append(tag_lower)  # Store lowercase version for consistency
+        # Check for uncolored tags only if they are in valid_tags
         elif tag_lower not in colored_tags:
             uncolored_tags_set.add(tag)
 
     return {
-        "unmapped_tags": unmapped_tags,
-        "uncolored_tags": sorted(uncolored_tags_set)
+        "unmapped_tags": sort_strings(unmapped_tags),
+        "uncolored_tags": sorted(uncolored_tags_set),
     }
 
 

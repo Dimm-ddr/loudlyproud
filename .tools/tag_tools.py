@@ -27,6 +27,7 @@ def cli():
 def validate():
     """Validate tags against mapping and colors."""
     from tags.validate import main
+
     main()
 
 
@@ -34,6 +35,7 @@ def validate():
 def sort():
     """Sort tags mapping and colors files."""
     from tags.sorting import main
+
     main()
 
 
@@ -41,6 +43,15 @@ def sort():
 def monitor():
     """Monitor tag changes in PR."""
     from tags.monitor import main
+
+    main()
+
+
+@click.command()
+def registry():
+    """Generate unified tag registry."""
+    from tags.registry import main
+
     main()
 
 
@@ -83,6 +94,7 @@ def content():
 cli.add_command(validate)
 cli.add_command(sort)
 cli.add_command(monitor)
+cli.add_command(registry)
 cli.add_command(clean)
 
 if __name__ == "__main__":

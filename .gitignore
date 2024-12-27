@@ -43,6 +43,7 @@ content/books/temp/*
 # Logs and local data
 .data
 console-export-*.txt
+.coverage
 
 # Generated files
 static/js/*.js.map
