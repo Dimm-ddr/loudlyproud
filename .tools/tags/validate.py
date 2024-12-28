@@ -9,15 +9,19 @@ from .common import (
     MAPPING_FILE,
     COLORS_FILE,
     TO_REMOVE_FILE,
-    PATTERNS_FILENAME,
+    PATTERNS_FILE,
+    SPECIAL_DISPLAY_NAMES_FILE,
 )
 from .sorting import sort_strings
 from .file_ops import (
-    load_color_mapping,
+    load_tags_map,
+    load_colors_file,
     extract_tags_from_file,
     load_removable_tags,
+    load_special_display_names,
 )
 from .normalize import TagNormalizer
+from .transform import get_internal_name
 
 
 class ValidationReport(TypedDict):
@@ -25,17 +29,63 @@ class ValidationReport(TypedDict):
     uncolored_tags: list[str]  # Tags not in colors (checking mapped values)
 
 
-def get_mapped_values(tags_map: dict) -> set[str]:
-    """Get all normalized tag values from mapping."""
-    values = set()
-    for mapping in tags_map.values():
-        if mapping is None:
-            continue
-        if isinstance(mapping, str):
-            values.add(mapping.lower())
-        elif isinstance(mapping, list):
-            values.update(tag.lower() for tag in mapping)
-    return values
+def validate_mapping_against_colors(
+    mapping_file: Path = MAPPING_FILE,
+    colors_file: Path = COLORS_FILE,
+) -> tuple[set[str], set[str]]:
+    """
+    Validate that all tags in mapping exist in colors and vice versa.
+
+    Args:
+        mapping_file: Path to mapping file
+        colors_file: Path to colors file
+
+    Returns:
+        Tuple of (missing_in_colors, missing_in_mapping) sets
+    """
+    # Load files
+    mapping_data = load_tags_map(mapping_file)
+    colors_data = load_colors_file(colors_file)
+    special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
+
+    # Create reverse mapping for special display names
+    display_to_internal = {v: k for k, v in special_display_names.items()}
+
+    # Get all valid tags from mapping (values, not keys)
+    mapping_tags = set()
+    for value in mapping_data.values():
+        if value is not None:
+            if isinstance(value, list):
+                mapping_tags.update(value)
+            else:
+                mapping_tags.add(value)
+
+    # Get all internal names from colors.toml
+    colors_internal_names = {
+        (
+            get_internal_name(tag)
+            if tag not in display_to_internal
+            else display_to_internal[tag]
+        )
+        for category in colors_data.values()
+        for tag in category
+    }
+
+    # Convert mapping tags to internal names
+    mapping_internal_names = {
+        (
+            get_internal_name(tag)
+            if tag not in display_to_internal
+            else display_to_internal[tag]
+        )
+        for tag in mapping_tags
+    }
+
+    # Find missing tags
+    missing_in_colors = mapping_internal_names - colors_internal_names
+    missing_in_mapping = colors_internal_names - mapping_internal_names
+
+    return missing_in_colors, missing_in_mapping
 
 
 def validate_tags(
@@ -59,27 +109,18 @@ def validate_tags(
     normalizer = TagNormalizer(
         project_root=project_root,
         mapping_file=mapping_file,
-        patterns_file=project_root / "data/tags" / PATTERNS_FILENAME,
+        patterns_file=PATTERNS_FILE,
         to_remove_file=to_remove_file,
     )
 
     # Load removable tags (already lowercase from file)
     removable_tags = load_removable_tags(to_remove_file)
 
-    # Load colors as a set of lowercase tags for case-insensitive comparison
-    colored_tags = set()
-    try:
-        colors = load_color_mapping(colors_file)
-        if isinstance(colors, dict):
-            # If it's a dict, collect all tag names
-            for category in colors.values():
-                if isinstance(category, dict):
-                    colored_tags.update(tag.lower() for tag in category.keys())
-        else:
-            # If it's already a set, convert to lowercase
-            colored_tags = {tag.lower() for tag in colors}
-    except Exception as e:
-        print(f"Error loading TOML color mapping: {e}")
+    # Load colors data
+    colors_data = load_colors_file(colors_file)
+    colored_tags = {
+        get_internal_name(tag) for category in colors_data.values() for tag in category
+    }
 
     # Get all book files
     book_files = content_path.glob("**/books/*.md")
@@ -98,19 +139,15 @@ def validate_tags(
 
     # Check each tag
     for tag in sorted(all_tags):
-        tag_lower = tag.lower()
+        internal = get_internal_name(tag)
         # Skip tags that should be removed
-        if tag_lower in removable_tags:
+        if internal in removable_tags:
             continue
-        # Check if the tag is mapped by trying to normalize it
-        normalized = normalizer.normalize(tag)
-        if normalized is None or (
-            isinstance(normalized, str)
-            and normalized.lower() not in normalizer.valid_tags
-        ):
-            unmapped_tags.append(tag_lower)  # Store lowercase version for consistency
+        # Check if the tag is mapped
+        if internal not in normalizer.valid_tags:
+            unmapped_tags.append(internal)
         # Check for uncolored tags only if they are in valid_tags
-        elif tag_lower not in colored_tags:
+        elif internal not in colored_tags:
             uncolored_tags_set.add(tag)
 
     return {
@@ -150,6 +187,22 @@ def main() -> None:
     """Main function for tag validation."""
     project_root = Path.cwd()
     content_path = project_root / "content"
+
+    # First validate mapping against colors
+    missing_in_colors, missing_in_mapping = validate_mapping_against_colors()
+    if missing_in_colors or missing_in_mapping:
+        error_msg = []
+        if missing_in_colors:
+            error_msg.append(
+                f"Tags missing in colors.toml: {', '.join(sorted(missing_in_colors))}"
+            )
+        if missing_in_mapping:
+            error_msg.append(
+                f"Tags missing in mapping.json: {', '.join(sorted(missing_in_mapping))}"
+            )
+        raise ValueError("\n".join(error_msg))
+
+    # Then validate content tags
     report = validate_tags(project_root, content_path=content_path)
     write_report(report, project_root)
 

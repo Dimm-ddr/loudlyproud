@@ -4,18 +4,23 @@ import json
 import hashlib
 from datetime import datetime
 from pathlib import Path
-from typing import TypedDict, Optional
+from typing import TypedDict
 
 from .common import (
     MAPPING_FILE,
     COLORS_FILE,
-    DATA_DIR,
+    PATTERNS_FILE,
+    TAGS_DIR,
+    SPECIAL_DISPLAY_NAMES_FILE,
 )
 from .file_ops import (
     load_tags_map,
     load_colors_file,
     load_patterns,
+    load_special_display_names,
 )
+from .normalize import TagNormalizer
+from .transform import get_internal_name
 
 
 class TagRegistryEntry(TypedDict):
@@ -25,7 +30,6 @@ class TagRegistryEntry(TypedDict):
     display: str
     color: str
     category: str
-    aliases: Optional[list[str]]
 
 
 class TagRegistry(TypedDict):
@@ -52,58 +56,31 @@ def get_tags_from_colors(colors_data: dict[str, dict[str, str]]) -> set[str]:
     return tags
 
 
-def normalize_tag(tag: str, normalization_rules: dict) -> str:
-    """
-    Normalize a tag using the provided normalization rules.
-
-    Args:
-        tag: The tag to normalize
-        normalization_rules: Dictionary containing normalization patterns
-
-    Returns:
-        The normalized tag
-    """
-    # Convert to lowercase for consistent comparison
-    tag_lower = tag.lower().strip()
-
-    # Check direct normalizations
-    if "normalizations" in normalization_rules:
-        if tag_lower in normalization_rules["normalizations"]:
-            return normalization_rules["normalizations"][tag_lower]
-
-    # Check URL normalizations
-    if "url_normalizations" in normalization_rules:
-        if tag in normalization_rules["url_normalizations"]:
-            return normalization_rules["url_normalizations"][tag]
-
-    # Default normalization: lowercase and replace spaces/special chars with hyphens
-    normalized = tag_lower.replace(" ", "-")
-    # Remove any non-alphanumeric characters (except hyphens)
-    normalized = "".join(c for c in normalized if c.isalnum() or c == "-")
-    # Remove multiple consecutive hyphens and trailing/leading hyphens
-    while "--" in normalized:
-        normalized = normalized.replace("--", "-")
-    return normalized.strip("-")
-
-
-def get_display_name(tag: str, normalization_rules: dict) -> str:
+def get_display_name(tag: str, mapping_data: dict, special_display_names: dict) -> str:
     """
     Get the display name for a tag.
 
     Args:
         tag: The tag to get the display name for
-        normalization_rules: Dictionary containing display name mappings
+        mapping_data: Dictionary containing tag mappings
+        special_display_names: Dictionary of special display name mappings
 
     Returns:
         The display name for the tag
     """
-    # Normalize the tag first
-    normalized = normalize_tag(tag, normalization_rules)
+    # Check special display names first
+    if tag in special_display_names:
+        return special_display_names[tag]
 
-    # Check if there's a display override
-    if "display" in normalization_rules:
-        if normalized in normalization_rules["display"]:
-            return normalization_rules["display"][normalized]
+    # Check if tag is in mapping
+    tag_lower = tag.lower()
+    for src_tag, mapped_tag in mapping_data.items():
+        if src_tag.lower() == tag_lower:
+            if mapped_tag is not None:
+                if isinstance(mapped_tag, list):
+                    return mapped_tag[0]  # Use first mapped tag as display name
+                return mapped_tag
+            break
 
     # Fallback to original tag
     return tag
@@ -132,41 +109,6 @@ def get_tag_color(tag: str, colors_data: dict) -> str:
     return "fallback"
 
 
-def compare_tag_sets(
-    mapping_tags: set[str], colors_tags: set[str], normalization_rules: dict
-) -> tuple[set[str], set[str]]:
-    """
-    Compare two sets of tags after normalization.
-
-    Args:
-        mapping_tags: Set of tags from mapping.json
-        colors_tags: Set of tags from colors.toml
-        normalization_rules: Dictionary containing normalization patterns
-
-    Returns:
-        Tuple of (tags missing in colors, tags missing in mapping)
-    """
-    # Normalize all tags for comparison
-    normalized_mapping = {
-        normalize_tag(tag, normalization_rules) for tag in mapping_tags
-    }
-    normalized_colors = {normalize_tag(tag, normalization_rules) for tag in colors_tags}
-
-    # Find differences
-    missing_in_colors = {
-        tag
-        for tag in mapping_tags
-        if normalize_tag(tag, normalization_rules) not in normalized_colors
-    }
-    missing_in_mapping = {
-        tag
-        for tag in colors_tags
-        if normalize_tag(tag, normalization_rules) not in normalized_mapping
-    }
-
-    return missing_in_colors, missing_in_mapping
-
-
 def generate_registry() -> TagRegistry:
     """
     Generate a unified tag registry from mapping.json and colors.toml.
@@ -175,34 +117,40 @@ def generate_registry() -> TagRegistry:
         Dictionary containing the tag registry
     """
     # Load source files
-    mapping_file = DATA_DIR / "mapping.json"
-    colors_file = DATA_DIR / "colors.toml"
-    patterns_file = DATA_DIR / "tag_normalization.yaml"
-
     mapping_data = load_tags_map(MAPPING_FILE)
     colors_data = load_colors_file(COLORS_FILE)
-    normalization_rules = load_patterns(patterns_file)
+    patterns_data = load_patterns(PATTERNS_FILE)
+    special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
 
-    # Get all tags
-    mapping_tags = set(mapping_data.keys())
-    colors_tags = get_tags_from_colors(colors_data)
+    # Create reverse mapping for special display names
+    display_to_internal = {v: k for k, v in special_display_names.items()}
 
-    # Compare tag sets
-    missing_in_colors, missing_in_mapping = compare_tag_sets(
-        mapping_tags, colors_tags, normalization_rules
+    # Validate mapping against colors
+    from .validate import validate_mapping_against_colors
+
+    missing_in_colors, missing_in_mapping = validate_mapping_against_colors(
+        MAPPING_FILE, COLORS_FILE
     )
-
     if missing_in_colors or missing_in_mapping:
         error_msg = []
         if missing_in_colors:
             error_msg.append(
-                f"Tags missing in colors.toml: {', '.join(missing_in_colors)}"
+                f"Tags missing in colors.toml: {', '.join(sorted(missing_in_colors))}"
             )
         if missing_in_mapping:
             error_msg.append(
-                f"Tags missing in mapping.json: {', '.join(missing_in_mapping)}"
+                f"Tags missing in mapping.json: {', '.join(sorted(missing_in_mapping))}"
             )
         raise ValueError("\n".join(error_msg))
+
+    # Get all valid tags from mapping (values, not keys)
+    mapping_tags = set()
+    for value in mapping_data.values():
+        if value is not None:
+            if isinstance(value, list):
+                mapping_tags.update(value)
+            else:
+                mapping_tags.add(value)
 
     # Generate registry
     registry: TagRegistry = {
@@ -212,38 +160,53 @@ def generate_registry() -> TagRegistry:
             "source_files": {
                 "mapping": calculate_file_hash(MAPPING_FILE),
                 "colors": calculate_file_hash(COLORS_FILE),
-                "normalization": calculate_file_hash(patterns_file),
+                "patterns": calculate_file_hash(PATTERNS_FILE),
+                "special_display_names": calculate_file_hash(
+                    SPECIAL_DISPLAY_NAMES_FILE
+                ),
             },
         },
         "tags": {},
     }
 
-    # Process each tag
+    # Process each tag from mapping.json (source of truth for display names)
     for tag in mapping_tags:
-        normalized = normalize_tag(tag, normalization_rules)
-        display = get_display_name(tag, normalization_rules)
-        color = get_tag_color(display, colors_data)
+        # Get internal name, checking special display names first
+        internal = display_to_internal.get(tag, get_internal_name(tag))
 
-        # Find category
-        category = next(
-            (cat for cat, tags in colors_data.items() if tag in tags), "Uncategorized"
-        )
+        # Get display name (either from special cases or use the mapping tag)
+        display = special_display_names.get(internal, tag)
+
+        # Find category and color from colors.toml
+        try:
+            category = next(
+                cat
+                for cat, tags in colors_data.items()
+                if any(get_internal_name(t) == internal for t in tags)
+            )
+        except StopIteration:
+            raise ValueError(
+                f"Tag '{tag}' (internal: '{internal}') is in mapping.json but not found in any category in colors.toml"
+            )
+
+        try:
+            color = next(
+                color
+                for tags, color in colors_data[category].items()
+                if get_internal_name(tags) == internal
+            )
+        except StopIteration:
+            raise ValueError(
+                f"Tag '{tag}' (internal: '{internal}') is in category '{category}' but has no color assigned"
+            )
 
         # Add to registry
-        registry["tags"][tag] = {
-            "internal": normalized,
+        registry["tags"][internal] = {
+            "internal": internal,
             "display": display,
             "color": color,
             "category": category,
         }
-
-        # Add aliases if any
-        aliases = []
-        for src_tag, norm_tag in normalization_rules["normalizations"].items():
-            if norm_tag == normalized and src_tag != tag.lower():
-                aliases.append(src_tag)
-        if aliases:
-            registry["tags"][tag]["aliases"] = sorted(aliases)
 
     return registry
 
@@ -257,7 +220,7 @@ def write_registry(registry: TagRegistry, registry_path: Path) -> None:
 def main() -> None:
     """Entry point for registry generation."""
     registry = generate_registry()
-    registry_path = DATA_DIR / "tags.registry.json"
+    registry_path = TAGS_DIR / "tags.registry.json"
     write_registry(registry, registry_path)
     print(f"Tags registry generated successfully at {registry_path}")
     print(f"Total tags: {len(registry['tags'])}")

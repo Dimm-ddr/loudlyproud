@@ -118,8 +118,9 @@ class TagNormalizer:
         2. Clean and transform the tag (trim, remove trailing dots)
         3. Convert to lowercase
         4. Check if tag should be removed
-        5. Apply patterns (split/transform)
-        6. Apply mapping
+        5. Apply word replacements
+        6. Apply patterns (split/transform)
+        7. Apply mapping
         """
         # 1. Check if tag is in mapping
         if tag.lower() in self.mapping_lower:
@@ -143,7 +144,13 @@ class TagNormalizer:
         if self.should_remove(tag):
             return None
 
-        # 5. Apply patterns
+        # 5. Apply word replacements
+        word_replacements = self.patterns.get("word_replacements", {})
+        for old, new in word_replacements.items():
+            if old in tag:
+                tag = tag.replace(old, new)
+
+        # 6. Apply patterns
         result = self.apply_compound_rules(tag)
         if result is None:  # Handle case where compound rule maps to null
             return None
@@ -154,7 +161,7 @@ class TagNormalizer:
             result = self.split_tag(tag)
             transformed_tags = result if isinstance(result, list) else [result]
 
-        # 6. Apply mapping and track unknown tags
+        # 7. Apply mapping and track unknown tags
         mapped_tags = []
         for tag in transformed_tags:
             if tag in self.mapping_lower:

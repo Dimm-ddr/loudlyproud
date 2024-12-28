@@ -1,199 +1,26 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "last_generated": "2024-12-27T14:50:46.451641Z",
+    "last_generated": "2024-12-28T17:50:04.519957Z",
     "source_files": {
-      "mapping": "31714f2a061b15011a18fe0fff143d139b5cb599441730f57076e295ae272b31",
-      "colors": "04333839a14392a5e524db2ff9ad76185ee0b01c2779fa08499a6758800a9a97",
-      "normalization": "bc96bb4cddd849e5faa2ac6dc08f979e1fdc899a1b688f4b76cb5f8f7587fc3a"
+      "mapping": "43112d5d6bade4aaf1407344259cf9e14f79e47917929caf670103e23565aca1",
+      "colors": "44c5655267486660a3b9c95976cc106372fc1c6e4ebc8bef658ae75270a56a88",
+      "patterns": "93beecb9902dddcb7f3bd0817301cc6eb5f94daac08043970899ae31c1705abf",
+      "special_display_names": "d87bdb2ac45667d3aa6bff13de20b05edc005c2948b3e8d676c4c57775cc3677"
     }
   },
   "tags": {
-    "19th century": {
-      "internal": "19th-century",
-      "display": "19th century",
-      "color": "deep-blue",
-      "category": "Time and History"
-    },
-    "20th century": {
-      "internal": "20th-century",
-      "display": "20th century",
-      "color": "deep-blue",
-      "category": "Time and History"
-    },
-    "21st century": {
-      "internal": "21st-century",
-      "display": "21st century",
-      "color": "deep-blue",
-      "category": "Time and History"
-    },
-    "abuse": {
-      "internal": "abuse",
-      "display": "abuse",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "accessibility": {
-      "internal": "accessibility",
-      "display": "accessibility",
+    "siblings": {
+      "internal": "siblings",
+      "display": "siblings",
       "color": "amber",
-      "category": "Life Experiences"
+      "category": "Family Dynamics"
     },
-    "adaptations": {
-      "internal": "adaptations",
-      "display": "adaptations",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "adult fiction": {
-      "internal": "adult-fiction",
-      "display": "adult fiction",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "adventure": {
-      "internal": "adventure",
-      "display": "adventure",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "africa": {
-      "internal": "africa",
-      "display": "africa",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "african american": {
-      "internal": "african-american",
-      "display": "African American",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "african american authors": {
-      "internal": "african-american-authors",
-      "display": "african american authors",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "alien cultures": {
-      "internal": "alien-cultures",
-      "display": "alien cultures",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "americans": {
-      "internal": "americans",
-      "display": "americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "animals": {
-      "internal": "animals",
-      "display": "animals",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "anthologies": {
-      "internal": "anthologies",
-      "display": "anthologies",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "arab americans": {
-      "internal": "arab-americans",
-      "display": "arab americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "arkansas": {
-      "internal": "arkansas",
-      "display": "arkansas",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "art": {
-      "internal": "art",
-      "display": "art",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "asian americans": {
-      "internal": "asian-americans",
-      "display": "asian americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "atlantis": {
-      "internal": "atlantis",
-      "display": "atlantis",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "atlas": {
-      "internal": "atlas",
-      "display": "atlas",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "attitude": {
-      "internal": "attitude",
-      "display": "attitude",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "audiobook": {
-      "internal": "audiobook",
-      "display": "audiobook",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "authors": {
-      "internal": "authors",
-      "display": "authors",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "autobiography": {
-      "internal": "autobiography",
-      "display": "autobiography",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "berlin": {
-      "internal": "berlin",
-      "display": "berlin",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "biography": {
-      "internal": "biography",
-      "display": "biography",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "black": {
-      "internal": "black",
-      "display": "black",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "boarding school": {
-      "internal": "boarding-school",
-      "display": "boarding school",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "body image": {
+    "body-image": {
       "internal": "body-image",
       "display": "body image",
       "color": "rust",
       "category": "Identity and Relationships"
-    },
-    "book club": {
-      "internal": "book-club",
-      "display": "book club",
-      "color": "amber",
-      "category": "Life Experiences"
     },
     "boys": {
       "internal": "boys",
@@ -201,141 +28,69 @@
       "color": "amber",
       "category": "Life Experiences"
     },
-    "boys love (bl)": {
-      "internal": "boys-love-bl",
-      "display": "boys love (bl)",
-      "color": "fallback",
-      "category": "Uncategorized"
+    "attitude": {
+      "internal": "attitude",
+      "display": "attitude",
+      "color": "rust",
+      "category": "Identity and Relationships"
     },
-    "british literature": {
-      "internal": "british-literature",
-      "display": "British Literature",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "brooklyn": {
-      "internal": "brooklyn",
-      "display": "brooklyn",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "bullying": {
-      "internal": "bullying",
-      "display": "bullying",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "business": {
-      "internal": "business",
-      "display": "business",
+    "boys-love": {
+      "internal": "boys-love",
+      "display": "boys love (BL)",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "campus": {
-      "internal": "campus",
-      "display": "campus",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "chicago": {
-      "internal": "chicago",
-      "display": "chicago",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "children's fiction": {
-      "internal": "children-s-fiction",
-      "display": "children's fiction",
+    "new-adult": {
+      "internal": "new-adult",
+      "display": "new adult (NA)",
       "color": "burgundy",
       "category": "Formats and Age Groups"
     },
-    "china": {
-      "internal": "china",
-      "display": "china",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "christian": {
-      "internal": "christian",
-      "display": "christian",
+    "autobiography": {
+      "internal": "autobiography",
+      "display": "autobiography",
       "color": "aubergine",
       "category": "Literary Classifications"
     },
-    "christmas": {
-      "internal": "christmas",
-      "display": "christmas",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "classics": {
-      "internal": "classics",
-      "display": "classics",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "college students": {
-      "internal": "college-students",
-      "display": "college students",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "coming of age": {
+    "coming-of-age": {
       "internal": "coming-of-age",
       "display": "coming of age",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "coming out": {
-      "internal": "coming-out",
-      "display": "coming out",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "contemporary": {
-      "internal": "contemporary",
-      "display": "contemporary",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "crime": {
-      "internal": "crime",
-      "display": "crime",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "cross-dressers": {
-      "internal": "cross-dressers",
-      "display": "cross-dressers",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "dark": {
-      "internal": "dark",
-      "display": "dark",
+    "mystery": {
+      "internal": "mystery",
+      "display": "mystery",
       "color": "forest",
       "category": "Genres"
     },
-    "dark fantasy": {
-      "internal": "dark-fantasy",
-      "display": "dark fantasy",
-      "color": "forest",
-      "category": "Genres"
+    "scotland": {
+      "internal": "scotland",
+      "display": "Scotland",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
     },
-    "dating": {
-      "internal": "dating",
-      "display": "dating",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "death": {
-      "internal": "death",
-      "display": "death",
+    "retellings": {
+      "internal": "retellings",
+      "display": "retellings",
       "color": "plum",
       "category": "Themes"
     },
-    "desire": {
-      "internal": "desire",
-      "display": "desire",
+    "religion": {
+      "internal": "religion",
+      "display": "religion",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "marriage": {
+      "internal": "marriage",
+      "display": "marriage",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "teenagers": {
+      "internal": "teenagers",
+      "display": "teenagers",
       "color": "amber",
       "category": "Life Experiences"
     },
@@ -345,357 +100,15 @@
       "color": "marine",
       "category": "Story Elements"
     },
-    "detroit": {
-      "internal": "detroit",
-      "display": "detroit",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "disabilities": {
-      "internal": "disabilities",
-      "display": "disabilities",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "discrimination": {
-      "internal": "discrimination",
-      "display": "discrimination",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "diseases": {
-      "internal": "diseases",
-      "display": "diseases",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "divorce": {
-      "internal": "divorce",
-      "display": "divorce",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "domestic fiction": {
-      "internal": "domestic-fiction",
-      "display": "domestic fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "dragons": {
-      "internal": "dragons",
-      "display": "dragons",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "dysfunctional families": {
-      "internal": "dysfunctional-families",
-      "display": "dysfunctional families",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "dystopia": {
-      "internal": "dystopia",
-      "display": "dystopia",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "england": {
-      "internal": "england",
-      "display": "england",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "english": {
-      "internal": "english",
-      "display": "english",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "english literature": {
-      "internal": "english-literature",
-      "display": "English Literature",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "epic fantasy": {
-      "internal": "epic-fantasy",
-      "display": "epic fantasy",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "epistolary": {
-      "internal": "epistolary",
-      "display": "epistolary",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "erotic literature": {
-      "internal": "erotic-literature",
-      "display": "erotic literature",
-      "color": "burgundy",
-      "category": "Literary Classifications"
-    },
-    "essays": {
-      "internal": "essays",
-      "display": "essays",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "europe": {
-      "internal": "europe",
-      "display": "europe",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "ex-gay movement": {
-      "internal": "ex-gay-movement",
-      "display": "ex-gay movement",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "extortion": {
-      "internal": "extortion",
-      "display": "extortion",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "fae": {
-      "internal": "fae",
-      "display": "fae",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "fairies": {
-      "internal": "fairies",
-      "display": "fairies",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "family": {
-      "internal": "family",
-      "display": "family",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "fantasy": {
-      "internal": "fantasy",
-      "display": "fantasy",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "father-daughter relationship": {
-      "internal": "father-daughter-relationship",
-      "display": "father-daughter relationship",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "father-son relationship": {
-      "internal": "father-son-relationship",
-      "display": "father-son relationship",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "fathers": {
-      "internal": "fathers",
-      "display": "fathers",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "female-female romance": {
-      "internal": "female-female-romance",
-      "display": "female-female romance",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "feminism": {
-      "internal": "feminism",
-      "display": "feminism",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "france": {
-      "internal": "france",
-      "display": "france",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
     "french": {
       "internal": "french",
-      "display": "french",
+      "display": "French",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "friendship": {
-      "internal": "friendship",
-      "display": "friendship",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "gay": {
-      "internal": "gay",
-      "display": "gay",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "gay teenagers": {
-      "internal": "gay-teenagers",
-      "display": "gay teenagers",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "gay's writings": {
-      "internal": "gay-s-writings",
-      "display": "gay's writings",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "gay-parent families": {
-      "internal": "gay-parent-families",
-      "display": "gay-parent families",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "gender identity": {
-      "internal": "gender-identity",
-      "display": "gender identity",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "gender studies": {
-      "internal": "gender-studies",
-      "display": "gender studies",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "genderqueer": {
-      "internal": "genderqueer",
-      "display": "genderqueer",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "georgia": {
-      "internal": "georgia",
-      "display": "georgia",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "german literature": {
-      "internal": "german-literature",
-      "display": "German Literature",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "germany": {
-      "internal": "germany",
-      "display": "germany",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "ghosts": {
-      "internal": "ghosts",
-      "display": "ghosts",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "girls": {
-      "internal": "girls",
-      "display": "girls",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "good and evil": {
-      "internal": "good-and-evil",
-      "display": "good and evil",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "gothic": {
-      "internal": "gothic",
-      "display": "gothic",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "graphic novels & comics": {
-      "internal": "graphic-novels-comics",
-      "display": "graphic novels & comics",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "greece": {
-      "internal": "greece",
-      "display": "greece",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "greek mythology": {
-      "internal": "greek-mythology",
-      "display": "greek mythology",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "grief": {
-      "internal": "grief",
-      "display": "grief",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "haiti": {
-      "internal": "haiti",
-      "display": "haiti",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "high fantasy": {
-      "internal": "high-fantasy",
-      "display": "high fantasy",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "high school": {
-      "internal": "high-school",
-      "display": "high school",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "hispanic americans": {
-      "internal": "hispanic-americans",
-      "display": "hispanic americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "historical": {
-      "internal": "historical",
-      "display": "historical",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "historical fantasy": {
-      "internal": "historical-fantasy",
-      "display": "historical fantasy",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "historical fiction": {
-      "internal": "historical-fiction",
-      "display": "historical fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "history": {
-      "internal": "history",
-      "display": "history",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "holidays": {
-      "internal": "holidays",
-      "display": "holidays",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "hollywood": {
-      "internal": "hollywood",
-      "display": "hollywood",
+    "united-kingdom": {
+      "internal": "united-kingdom",
+      "display": "United Kingdom",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
@@ -705,107 +118,41 @@
       "color": "forest",
       "category": "Genres"
     },
-    "humor": {
-      "internal": "humor",
-      "display": "humor",
+    "essays": {
+      "internal": "essays",
+      "display": "essays",
       "color": "aubergine",
       "category": "Literary Classifications"
     },
-    "identity": {
-      "internal": "identity",
-      "display": "identity",
-      "color": "amber",
-      "category": "Life Experiences"
+    "science-fiction": {
+      "internal": "science-fiction",
+      "display": "science fiction",
+      "color": "forest",
+      "category": "Genres"
     },
-    "india": {
-      "internal": "india",
-      "display": "india",
+    "iranian-american": {
+      "internal": "iranian-american",
+      "display": "Iranian American",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "interviews": {
-      "internal": "interviews",
-      "display": "interviews",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "iran": {
-      "internal": "iran",
-      "display": "iran",
+    "russian-literature": {
+      "internal": "russian-literature",
+      "display": "Russian literature",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "iranian americans": {
-      "internal": "iranian-americans",
-      "display": "iranian americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
+    "thriller": {
+      "internal": "thriller",
+      "display": "thriller",
+      "color": "forest",
+      "category": "Genres"
     },
-    "irish literature": {
-      "internal": "irish-literature",
-      "display": "Irish Literature",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "isolation": {
-      "internal": "isolation",
-      "display": "isolation",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "italy": {
-      "internal": "italy",
-      "display": "italy",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "jamaica": {
-      "internal": "jamaica",
-      "display": "jamaica",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "japan": {
-      "internal": "japan",
-      "display": "japan",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "japanese americans": {
-      "internal": "japanese-americans",
-      "display": "japanese americans",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "journalism": {
-      "internal": "journalism",
-      "display": "journalism",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "juvenile fiction": {
-      "internal": "juvenile-fiction",
-      "display": "juvenile fiction",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "kansas": {
-      "internal": "kansas",
-      "display": "kansas",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "lambda literary awards": {
-      "internal": "lambda-literary-awards",
-      "display": "lambda literary awards",
-      "color": "aubergine",
-      "category": "Awards and Recognition"
-    },
-    "lesbian": {
-      "internal": "lesbian",
-      "display": "lesbian",
-      "color": "rust",
-      "category": "Identity and Relationships"
+    "shapeshifters": {
+      "internal": "shapeshifters",
+      "display": "shapeshifters",
+      "color": "marine",
+      "category": "Story Elements"
     },
     "leukemia": {
       "internal": "leukemia",
@@ -813,163 +160,31 @@
       "color": "amber",
       "category": "Life Experiences"
     },
-    "lgbtqia+": {
-      "internal": "lgbtqia-plus",
-      "display": "LGBTQIA+",
-      "color": "fallback",
-      "category": "Uncategorized"
-    },
-    "lgbtqia+ activists": {
-      "internal": "lgbtqia-activists",
-      "display": "lgbtqia+ activists",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "lgbtqia+ novels before stonewall": {
-      "internal": "lgbtqia-novels-before-stonewall",
-      "display": "lgbtqia+ novels before stonewall",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "lighthouse keepers": {
-      "internal": "lighthouse-keepers",
-      "display": "lighthouse keepers",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "literary": {
-      "internal": "literary",
-      "display": "literary",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "literary collections": {
-      "internal": "literary-collections",
-      "display": "literary collections",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "london": {
-      "internal": "london",
-      "display": "london",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "los angeles": {
-      "internal": "los-angeles",
-      "display": "Los Angeles",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "loss": {
-      "internal": "loss",
-      "display": "loss",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "love": {
-      "internal": "love",
-      "display": "love",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "love in adolescence": {
-      "internal": "love-in-adolescence",
-      "display": "love in adolescence",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "magic": {
-      "internal": "magic",
-      "display": "magic",
+    "world-war-ii": {
+      "internal": "world-war-ii",
+      "display": "world war ii",
       "color": "marine",
       "category": "Story Elements"
     },
-    "magical realism": {
-      "internal": "magical-realism",
-      "display": "magical realism",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "male": {
-      "internal": "male",
-      "display": "male",
+    "personal-growth": {
+      "internal": "personal-growth",
+      "display": "personal growth",
       "color": "rust",
       "category": "Identity and Relationships"
     },
-    "male-female romance": {
-      "internal": "male-female-romance",
-      "display": "male-female romance",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "male-male romance": {
-      "internal": "male-male-romance",
-      "display": "male-male romance",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "manga": {
-      "internal": "manga",
-      "display": "manga",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "marriage": {
-      "internal": "marriage",
-      "display": "marriage",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "memoir": {
-      "internal": "memoir",
-      "display": "memoir",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "mental health": {
-      "internal": "mental-health",
-      "display": "mental health",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "mental illness": {
-      "internal": "mental-illness",
-      "display": "mental illness",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "mexico": {
-      "internal": "mexico",
-      "display": "mexico",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "middle age": {
-      "internal": "middle-age",
-      "display": "middle age",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "monsters": {
-      "internal": "monsters",
-      "display": "monsters",
+    "spy-stories": {
+      "internal": "spy-stories",
+      "display": "spy stories",
       "color": "marine",
       "category": "Story Elements"
     },
-    "morocco": {
-      "internal": "morocco",
-      "display": "morocco",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "mother-daughter relationship": {
-      "internal": "mother-daughter-relationship",
-      "display": "mother-daughter relationship",
+    "school": {
+      "internal": "school",
+      "display": "school",
       "color": "amber",
-      "category": "Family Dynamics"
+      "category": "Life Experiences"
     },
-    "mother-son relationship": {
+    "mother-son-relationship": {
       "internal": "mother-son-relationship",
       "display": "mother-son relationship",
       "color": "amber",
@@ -981,119 +196,65 @@
       "color": "marine",
       "category": "Story Elements"
     },
-    "mystery": {
-      "internal": "mystery",
-      "display": "mystery",
+    "fantasy": {
+      "internal": "fantasy",
+      "display": "fantasy",
       "color": "forest",
       "category": "Genres"
     },
-    "mythology": {
-      "internal": "mythology",
-      "display": "mythology",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "nature": {
-      "internal": "nature",
-      "display": "nature",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "new adult (na)": {
-      "internal": "new-adult-na",
-      "display": "new adult (na)",
-      "color": "fallback",
-      "category": "Uncategorized"
-    },
-    "new jersey": {
-      "internal": "new-jersey",
-      "display": "New Jersey",
+    "african-american-authors": {
+      "internal": "african-american-authors",
+      "display": "African American authors",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "new york": {
-      "internal": "new-york",
-      "display": "New York",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "new york times bestseller": {
-      "internal": "new-york-times-bestseller",
-      "display": "new york times bestseller",
-      "color": "aubergine",
-      "category": "Awards and Recognition"
-    },
-    "nonfiction": {
-      "internal": "nonfiction",
-      "display": "nonfiction",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "novels": {
-      "internal": "novels",
-      "display": "novels",
+    "graphic-novels-and-comics": {
+      "internal": "graphic-novels-and-comics",
+      "display": "graphic novels & comics",
       "color": "burgundy",
       "category": "Formats and Age Groups"
     },
-    "paranormal": {
-      "internal": "paranormal",
-      "display": "paranormal",
+    "dark-fantasy": {
+      "internal": "dark-fantasy",
+      "display": "dark fantasy",
       "color": "forest",
       "category": "Genres"
     },
-    "parent-child relationship": {
-      "internal": "parent-child-relationship",
-      "display": "parent-child relationship",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "paris": {
-      "internal": "paris",
-      "display": "paris",
+    "greece": {
+      "internal": "greece",
+      "display": "Greece",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "performing arts": {
-      "internal": "performing-arts",
-      "display": "performing arts",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "personal growth": {
-      "internal": "personal-growth",
-      "display": "personal growth",
+    "middle-age": {
+      "internal": "middle-age",
+      "display": "middle age",
       "color": "rust",
       "category": "Identity and Relationships"
     },
-    "poetry": {
-      "internal": "poetry",
-      "display": "poetry",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "poland": {
-      "internal": "poland",
-      "display": "poland",
+    "brooklyn": {
+      "internal": "brooklyn",
+      "display": "Brooklyn",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "police": {
-      "internal": "police",
-      "display": "police",
+    "lighthouse-keepers": {
+      "internal": "lighthouse-keepers",
+      "display": "lighthouse keepers",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "political intrigue": {
-      "internal": "political-intrigue",
-      "display": "political intrigue",
+    "college-students": {
+      "internal": "college-students",
+      "display": "college students",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "wizards": {
+      "internal": "wizards",
+      "display": "wizards",
       "color": "marine",
       "category": "Story Elements"
-    },
-    "prep school": {
-      "internal": "prep-school",
-      "display": "prep school",
-      "color": "amber",
-      "category": "Life Experiences"
     },
     "prostitution": {
       "internal": "prostitution",
@@ -1101,184 +262,101 @@
       "color": "amber",
       "category": "Life Experiences"
     },
-    "psychological fiction": {
-      "internal": "psychological-fiction",
-      "display": "psychological fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "queer": {
-      "internal": "queer",
-      "display": "queer",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "race": {
-      "internal": "race",
-      "display": "race",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "realistic fiction": {
-      "internal": "realistic-fiction",
-      "display": "realistic fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "recreation": {
-      "internal": "recreation",
-      "display": "recreation",
+    "business": {
+      "internal": "business",
+      "display": "business",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "relationships": {
-      "internal": "relationships",
-      "display": "relationships",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "religion": {
-      "internal": "religion",
-      "display": "religion",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "religious fiction": {
-      "internal": "religious-fiction",
-      "display": "religious fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "renaissance art": {
-      "internal": "renaissance-art",
-      "display": "renaissance art",
+    "boarding-school": {
+      "internal": "boarding-school",
+      "display": "boarding school",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "retellings": {
-      "internal": "retellings",
-      "display": "retellings",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "romance": {
-      "internal": "romance",
-      "display": "romance",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "russia": {
-      "internal": "russia",
-      "display": "russia",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "russian literature": {
-      "internal": "russian-literature",
-      "display": "Russian Literature",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "sagas": {
-      "internal": "sagas",
-      "display": "sagas",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "san francisco": {
-      "internal": "san-francisco",
-      "display": "San Francisco",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "satire": {
-      "internal": "satire",
-      "display": "satire",
-      "color": "aubergine",
-      "category": "Literary Classifications"
-    },
-    "school": {
-      "internal": "school",
-      "display": "school",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "science": {
-      "internal": "science",
-      "display": "science",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "science fiction": {
-      "internal": "science-fiction",
-      "display": "Science Fiction",
-      "color": "forest",
-      "category": "Genres",
-      "aliases": [
-        "sci fi",
-        "sci-fi",
-        "science & fiction"
-      ]
-    },
-    "scotland": {
-      "internal": "scotland",
-      "display": "scotland",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "sexual reorientation programs": {
-      "internal": "sexual-reorientation-programs",
-      "display": "sexual reorientation programs",
-      "color": "plum",
-      "category": "Themes"
-    },
-    "sexuality": {
-      "internal": "sexuality",
-      "display": "sexuality",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "shapeshifters": {
-      "internal": "shapeshifters",
-      "display": "shapeshifters",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "short stories": {
-      "internal": "short-stories",
-      "display": "short stories",
-      "color": "burgundy",
-      "category": "Formats and Age Groups"
-    },
-    "siblings": {
-      "internal": "siblings",
-      "display": "siblings",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "single-parent families": {
-      "internal": "single-parent-families",
-      "display": "single-parent families",
-      "color": "amber",
-      "category": "Family Dynamics"
-    },
-    "small cities": {
-      "internal": "small-cities",
-      "display": "small cities",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic"
-    },
-    "social class": {
-      "internal": "social-class",
-      "display": "social class",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "social commentary": {
+    "social-commentary": {
       "internal": "social-commentary",
       "display": "social commentary",
       "color": "plum",
       "category": "Themes"
+    },
+    "japanese-american": {
+      "internal": "japanese-american",
+      "display": "Japanese American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "english": {
+      "internal": "english",
+      "display": "English",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "adaptations": {
+      "internal": "adaptations",
+      "display": "adaptations",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "japan": {
+      "internal": "japan",
+      "display": "Japan",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "lgbtqia-plus": {
+      "internal": "lgbtqia-plus",
+      "display": "LGBTQIA+",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "war": {
+      "internal": "war",
+      "display": "war",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "american": {
+      "internal": "american",
+      "display": "American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "performing-arts": {
+      "internal": "performing-arts",
+      "display": "performing arts",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "weird": {
+      "internal": "weird",
+      "display": "weird",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "art": {
+      "internal": "art",
+      "display": "art",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "interviews": {
+      "internal": "interviews",
+      "display": "interviews",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "humor": {
+      "internal": "humor",
+      "display": "humor",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "male": {
+      "internal": "male",
+      "display": "male",
+      "color": "rust",
+      "category": "Identity and Relationships"
     },
     "soldiers": {
       "internal": "soldiers",
@@ -1286,57 +364,279 @@
       "color": "amber",
       "category": "Life Experiences"
     },
-    "space opera": {
-      "internal": "space-opera",
-      "display": "space opera",
-      "color": "forest",
-      "category": "Genres"
+    "holidays": {
+      "internal": "holidays",
+      "display": "holidays",
+      "color": "plum",
+      "category": "Themes"
     },
-    "spanish literature": {
-      "internal": "spanish-literature",
-      "display": "Spanish Literature",
+    "venice": {
+      "internal": "venice",
+      "display": "Venice",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "speculative fiction": {
-      "internal": "speculative-fiction",
-      "display": "speculative fiction",
-      "color": "forest",
-      "category": "Genres"
-    },
-    "sports": {
-      "internal": "sports",
-      "display": "sports",
-      "color": "amber",
-      "category": "Life Experiences"
-    },
-    "spy stories": {
-      "internal": "spy-stories",
-      "display": "spy stories",
-      "color": "marine",
-      "category": "Story Elements"
-    },
-    "stonewall book awards": {
-      "internal": "stonewall-book-awards",
-      "display": "stonewall book awards",
+    "new-york-times-bestseller": {
+      "internal": "new-york-times-bestseller",
+      "display": "new york times bestseller",
       "color": "aubergine",
       "category": "Awards and Recognition"
     },
-    "students": {
-      "internal": "students",
-      "display": "students",
-      "color": "amber",
-      "category": "Life Experiences"
+    "discrimination": {
+      "internal": "discrimination",
+      "display": "discrimination",
+      "color": "rust",
+      "category": "Identity and Relationships"
     },
-    "supernatural": {
-      "internal": "supernatural",
-      "display": "supernatural",
+    "nonfiction": {
+      "internal": "nonfiction",
+      "display": "nonfiction",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "coming-out": {
+      "internal": "coming-out",
+      "display": "coming out",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "new-york": {
+      "internal": "new-york",
+      "display": "New York",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "lambda-literary-awards": {
+      "internal": "lambda-literary-awards",
+      "display": "Lambda Literary Awards",
+      "color": "aubergine",
+      "category": "Awards and Recognition"
+    },
+    "history": {
+      "internal": "history",
+      "display": "history",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "georgia": {
+      "internal": "georgia",
+      "display": "Georgia",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "time-traveling": {
+      "internal": "time-traveling",
+      "display": "time-traveling",
       "color": "marine",
       "category": "Story Elements"
     },
-    "survival": {
-      "internal": "survival",
-      "display": "survival",
+    "good-and-evil": {
+      "internal": "good-and-evil",
+      "display": "good and evil",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "france": {
+      "internal": "france",
+      "display": "France",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "gay": {
+      "internal": "gay",
+      "display": "gay",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "dystopia": {
+      "internal": "dystopia",
+      "display": "dystopia",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "haiti": {
+      "internal": "haiti",
+      "display": "Haiti",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "gender-identity": {
+      "internal": "gender-identity",
+      "display": "gender identity",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "africa": {
+      "internal": "africa",
+      "display": "Africa",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "hispanic-american": {
+      "internal": "hispanic-american",
+      "display": "Hispanic American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "dysfunctional-families": {
+      "internal": "dysfunctional-families",
+      "display": "dysfunctional families",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "satire": {
+      "internal": "satire",
+      "display": "satire",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "campus": {
+      "internal": "campus",
+      "display": "campus",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "irish-literature": {
+      "internal": "irish-literature",
+      "display": "Irish literature",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "crime": {
+      "internal": "crime",
+      "display": "crime",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "romance": {
+      "internal": "romance",
+      "display": "romance",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "isolation": {
+      "internal": "isolation",
+      "display": "isolation",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "young-adult": {
+      "internal": "young-adult",
+      "display": "young adult (YA)",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "accessibility": {
+      "internal": "accessibility",
+      "display": "accessibility",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "political-intrigue": {
+      "internal": "political-intrigue",
+      "display": "political intrigue",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "religious-fiction": {
+      "internal": "religious-fiction",
+      "display": "religious fiction",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "identity": {
+      "internal": "identity",
+      "display": "identity",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "lgbtqia-plus-activists": {
+      "internal": "lgbtqia-plus-activists",
+      "display": "LGBTQIA+ activists",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "iran": {
+      "internal": "iran",
+      "display": "Iran",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "mother-daughter-relationship": {
+      "internal": "mother-daughter-relationship",
+      "display": "mother-daughter relationship",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "nature": {
+      "internal": "nature",
+      "display": "nature",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "realistic-fiction": {
+      "internal": "realistic-fiction",
+      "display": "realistic fiction",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "syrian-american": {
+      "internal": "syrian-american",
+      "display": "Syrian American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "fathers": {
+      "internal": "fathers",
+      "display": "fathers",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "juvenile-fiction": {
+      "internal": "juvenile-fiction",
+      "display": "juvenile fiction",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "violence": {
+      "internal": "violence",
+      "display": "violence",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "feminism": {
+      "internal": "feminism",
+      "display": "feminism",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "gay-teenagers": {
+      "internal": "gay-teenagers",
+      "display": "gay teenagers",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "russia": {
+      "internal": "russia",
+      "display": "Russia",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "china": {
+      "internal": "china",
+      "display": "China",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "london": {
+      "internal": "london",
+      "display": "London",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "sexual-reorientation-programs": {
+      "internal": "sexual-reorientation-programs",
+      "display": "sexual reorientation programs",
       "color": "plum",
       "category": "Themes"
     },
@@ -1346,41 +646,167 @@
       "color": "marine",
       "category": "Story Elements"
     },
-    "syrian americans": {
-      "internal": "syrian-americans",
-      "display": "syrian americans",
+    "grief": {
+      "internal": "grief",
+      "display": "grief",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "india": {
+      "internal": "india",
+      "display": "India",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "technology": {
-      "internal": "technology",
-      "display": "technology",
-      "color": "marine",
-      "category": "Story Elements"
+    "mexico-city": {
+      "internal": "mexico-city",
+      "display": "Mexico City",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
     },
-    "teenagers": {
-      "internal": "teenagers",
-      "display": "teenagers",
+    "parent-child-relationship": {
+      "internal": "parent-child-relationship",
+      "display": "parent-child relationship",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "ex-gay-movement": {
+      "internal": "ex-gay-movement",
+      "display": "ex-gay movement",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "19th-century": {
+      "internal": "19th-century",
+      "display": "19th century",
+      "color": "deep-blue",
+      "category": "Time and History"
+    },
+    "21st-century": {
+      "internal": "21st-century",
+      "display": "21st century",
+      "color": "deep-blue",
+      "category": "Time and History"
+    },
+    "prep-school": {
+      "internal": "prep-school",
+      "display": "prep school",
       "color": "amber",
       "category": "Life Experiences"
     },
-    "tennessee": {
-      "internal": "tennessee",
-      "display": "tennessee",
+    "adventure": {
+      "internal": "adventure",
+      "display": "adventure",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "arab-american": {
+      "internal": "arab-american",
+      "display": "Arab American",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "thriller": {
-      "internal": "thriller",
-      "display": "thriller",
+    "high-fantasy": {
+      "internal": "high-fantasy",
+      "display": "high fantasy",
       "color": "forest",
       "category": "Genres"
     },
-    "time-traveling": {
-      "internal": "time-traveling",
-      "display": "time-traveling",
+    "world-war-i": {
+      "internal": "world-war-i",
+      "display": "world war i",
       "color": "marine",
       "category": "Story Elements"
+    },
+    "lgbtqia-plus-novels-before-stonewall": {
+      "internal": "lgbtqia-plus-novels-before-stonewall",
+      "display": "LGBTQIA+ novels before Stonewall",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "short-stories": {
+      "internal": "short-stories",
+      "display": "short stories",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "male-male-romance": {
+      "internal": "male-male-romance",
+      "display": "male-male romance",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "asian-american": {
+      "internal": "asian-american",
+      "display": "Asian American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "social-class": {
+      "internal": "social-class",
+      "display": "social class",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "small-cities": {
+      "internal": "small-cities",
+      "display": "small cities",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "women": {
+      "internal": "women",
+      "display": "women",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "audiobook": {
+      "internal": "audiobook",
+      "display": "audiobook",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "loss": {
+      "internal": "loss",
+      "display": "loss",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "urban-fantasy": {
+      "internal": "urban-fantasy",
+      "display": "urban fantasy",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "kansas": {
+      "internal": "kansas",
+      "display": "Kansas",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "christian": {
+      "internal": "christian",
+      "display": "christian",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "historical-fantasy": {
+      "internal": "historical-fantasy",
+      "display": "historical fantasy",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "english-literature": {
+      "internal": "english-literature",
+      "display": "English literature",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "police": {
+      "internal": "police",
+      "display": "police",
+      "color": "amber",
+      "category": "Life Experiences"
     },
     "transgender": {
       "internal": "transgender",
@@ -1388,15 +814,9 @@
       "color": "rust",
       "category": "Identity and Relationships"
     },
-    "transgender children": {
-      "internal": "transgender-children",
-      "display": "transgender children",
-      "color": "rust",
-      "category": "Identity and Relationships"
-    },
-    "translations": {
-      "internal": "translations",
-      "display": "translations",
+    "book-club": {
+      "internal": "book-club",
+      "display": "book club",
       "color": "amber",
       "category": "Life Experiences"
     },
@@ -1406,35 +826,221 @@
       "color": "plum",
       "category": "Themes"
     },
-    "turkey": {
-      "internal": "turkey",
-      "display": "turkey",
+    "monsters": {
+      "internal": "monsters",
+      "display": "monsters",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "cross-dressers": {
+      "internal": "cross-dressers",
+      "display": "cross-dressers",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "extortion": {
+      "internal": "extortion",
+      "display": "extortion",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "survival": {
+      "internal": "survival",
+      "display": "survival",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "england": {
+      "internal": "england",
+      "display": "England",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "united kingdom": {
-      "internal": "united-kingdom",
-      "display": "united kingdom",
+    "stonewall-book-awards": {
+      "internal": "stonewall-book-awards",
+      "display": "Stonewall Book Awards",
+      "color": "aubergine",
+      "category": "Awards and Recognition"
+    },
+    "abuse": {
+      "internal": "abuse",
+      "display": "abuse",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "erotic-literature": {
+      "internal": "erotic-literature",
+      "display": "erotic literature",
+      "color": "burgundy",
+      "category": "Literary Classifications"
+    },
+    "transgender-children": {
+      "internal": "transgender-children",
+      "display": "transgender children",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "bullying": {
+      "internal": "bullying",
+      "display": "bullying",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "father-son-relationship": {
+      "internal": "father-son-relationship",
+      "display": "father-son relationship",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "race": {
+      "internal": "race",
+      "display": "race",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "san-francisco": {
+      "internal": "san-francisco",
+      "display": "San Francisco",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "united states": {
-      "internal": "united-states",
-      "display": "United States",
-      "color": "deep-blue",
-      "category": "Cultural and Geographic",
-      "aliases": [
-        "u.s",
-        "u.s.",
-        "u.s.a",
-        "usa"
-      ]
+    "sexuality": {
+      "internal": "sexuality",
+      "display": "sexuality",
+      "color": "rust",
+      "category": "Identity and Relationships"
     },
-    "urban fantasy": {
-      "internal": "urban-fantasy",
-      "display": "urban fantasy",
+    "greek": {
+      "internal": "greek",
+      "display": "greek",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "historical-fiction": {
+      "internal": "historical-fiction",
+      "display": "historical fiction",
       "color": "forest",
       "category": "Genres"
+    },
+    "arkansas": {
+      "internal": "arkansas",
+      "display": "Arkansas",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "turkey": {
+      "internal": "turkey",
+      "display": "Turkey",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "genderqueer": {
+      "internal": "genderqueer",
+      "display": "genderqueer",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "dragons": {
+      "internal": "dragons",
+      "display": "dragons",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "historical": {
+      "internal": "historical",
+      "display": "historical",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "classics": {
+      "internal": "classics",
+      "display": "classics",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "literary-collections": {
+      "internal": "literary-collections",
+      "display": "literary collections",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "jamaica": {
+      "internal": "jamaica",
+      "display": "Jamaica",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "disabilities": {
+      "internal": "disabilities",
+      "display": "disabilities",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "supernatural": {
+      "internal": "supernatural",
+      "display": "supernatural",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "dating": {
+      "internal": "dating",
+      "display": "dating",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "fae": {
+      "internal": "fae",
+      "display": "fae",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "contemporary": {
+      "internal": "contemporary",
+      "display": "contemporary",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "domestic-fiction": {
+      "internal": "domestic-fiction",
+      "display": "domestic fiction",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "gays-writings": {
+      "internal": "gays-writings",
+      "display": "gay's writings",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "mexico": {
+      "internal": "mexico",
+      "display": "Mexico",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "manga": {
+      "internal": "manga",
+      "display": "manga",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "epic-fantasy": {
+      "internal": "epic-fantasy",
+      "display": "epic fantasy",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "fairies": {
+      "internal": "fairies",
+      "display": "fairies",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "queer": {
+      "internal": "queer",
+      "display": "queer",
+      "color": "rust",
+      "category": "Identity and Relationships"
     },
     "vampires": {
       "internal": "vampires",
@@ -1442,47 +1048,137 @@
       "color": "marine",
       "category": "Story Elements"
     },
-    "venice": {
-      "internal": "venice",
-      "display": "venice",
+    "germany": {
+      "internal": "germany",
+      "display": "Germany",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "victorian era": {
+    "victorian-era": {
       "internal": "victorian-era",
-      "display": "victorian era",
-      "color": "fallback",
-      "category": "Uncategorized"
+      "display": "Victorian era",
+      "color": "deep-blue",
+      "category": "Time and History"
     },
-    "violence": {
-      "internal": "violence",
-      "display": "violence",
+    "washington-dc": {
+      "internal": "washington-dc",
+      "display": "Washington D.C.",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "divorce": {
+      "internal": "divorce",
+      "display": "divorce",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "epistolary": {
+      "internal": "epistolary",
+      "display": "epistolary",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "christmas": {
+      "internal": "christmas",
+      "display": "christmas",
       "color": "plum",
       "category": "Themes"
     },
-    "war": {
-      "internal": "war",
-      "display": "war",
-      "color": "marine",
-      "category": "Story Elements"
+    "new-jersey": {
+      "internal": "new-jersey",
+      "display": "New Jersey",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
     },
-    "war fiction": {
+    "mental-health": {
+      "internal": "mental-health",
+      "display": "mental health",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "magical-realism": {
+      "internal": "magical-realism",
+      "display": "magical realism",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "anthologies": {
+      "internal": "anthologies",
+      "display": "anthologies",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "single-parent-families": {
+      "internal": "single-parent-families",
+      "display": "single-parent families",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "poetry": {
+      "internal": "poetry",
+      "display": "poetry",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "mental-illness": {
+      "internal": "mental-illness",
+      "display": "mental illness",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "gay-parent-families": {
+      "internal": "gay-parent-families",
+      "display": "gay-parent families",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "german-literature": {
+      "internal": "german-literature",
+      "display": "German literature",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "war-fiction": {
       "internal": "war-fiction",
       "display": "war fiction",
       "color": "forest",
       "category": "Genres"
     },
-    "washington d.c.": {
-      "internal": "washington-d-c",
-      "display": "washington d.c.",
+    "paris": {
+      "internal": "paris",
+      "display": "Paris",
       "color": "deep-blue",
       "category": "Cultural and Geographic"
     },
-    "weird": {
-      "internal": "weird",
-      "display": "weird",
+    "family": {
+      "internal": "family",
+      "display": "family",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "death": {
+      "internal": "death",
+      "display": "death",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "gothic": {
+      "internal": "gothic",
+      "display": "gothic",
       "color": "forest",
       "category": "Genres"
+    },
+    "speculative-fiction": {
+      "internal": "speculative-fiction",
+      "display": "speculative fiction",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "animals": {
+      "internal": "animals",
+      "display": "animals",
+      "color": "marine",
+      "category": "Story Elements"
     },
     "westerns": {
       "internal": "westerns",
@@ -1490,41 +1186,353 @@
       "color": "marine",
       "category": "Story Elements"
     },
+    "20th-century": {
+      "internal": "20th-century",
+      "display": "20th century",
+      "color": "deep-blue",
+      "category": "Time and History"
+    },
+    "relationships": {
+      "internal": "relationships",
+      "display": "relationships",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "biography": {
+      "internal": "biography",
+      "display": "biography",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "high-school": {
+      "internal": "high-school",
+      "display": "high school",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "authors": {
+      "internal": "authors",
+      "display": "authors",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "childrens-fiction": {
+      "internal": "childrens-fiction",
+      "display": "children's fiction",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "dark": {
+      "internal": "dark",
+      "display": "dark",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "love-in-adolescence": {
+      "internal": "love-in-adolescence",
+      "display": "love in adolescence",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "paranormal": {
+      "internal": "paranormal",
+      "display": "paranormal",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "female-female-romance": {
+      "internal": "female-female-romance",
+      "display": "female-female romance",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "gender-studies": {
+      "internal": "gender-studies",
+      "display": "gender studies",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "tennessee": {
+      "internal": "tennessee",
+      "display": "Tennessee",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "atlantis": {
+      "internal": "atlantis",
+      "display": "Atlantis",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "girls": {
+      "internal": "girls",
+      "display": "girls",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "chicago": {
+      "internal": "chicago",
+      "display": "Chicago",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "memoir": {
+      "internal": "memoir",
+      "display": "memoir",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "translations": {
+      "internal": "translations",
+      "display": "translations",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "hollywood": {
+      "internal": "hollywood",
+      "display": "Hollywood",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "sagas": {
+      "internal": "sagas",
+      "display": "sagas",
+      "color": "aubergine",
+      "category": "Literary Classifications"
+    },
+    "recreation": {
+      "internal": "recreation",
+      "display": "recreation",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "technology": {
+      "internal": "technology",
+      "display": "technology",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "father-daughter-relationship": {
+      "internal": "father-daughter-relationship",
+      "display": "father-daughter relationship",
+      "color": "amber",
+      "category": "Family Dynamics"
+    },
+    "detroit": {
+      "internal": "detroit",
+      "display": "Detroit",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "desire": {
+      "internal": "desire",
+      "display": "desire",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "lesbian": {
+      "internal": "lesbian",
+      "display": "lesbian",
+      "color": "rust",
+      "category": "Identity and Relationships"
+    },
+    "berlin": {
+      "internal": "berlin",
+      "display": "Berlin",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "science": {
+      "internal": "science",
+      "display": "science",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "italy": {
+      "internal": "italy",
+      "display": "Italy",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
     "witches": {
       "internal": "witches",
       "display": "witches",
       "color": "marine",
       "category": "Story Elements"
     },
-    "wizards": {
-      "internal": "wizards",
-      "display": "wizards",
+    "psychological-fiction": {
+      "internal": "psychological-fiction",
+      "display": "psychological fiction",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "sports": {
+      "internal": "sports",
+      "display": "sports",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "jamaican": {
+      "internal": "jamaican",
+      "display": "Jamaican",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "morocco": {
+      "internal": "morocco",
+      "display": "Morocco",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "poland": {
+      "internal": "poland",
+      "display": "Poland",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "space-opera": {
+      "internal": "space-opera",
+      "display": "space opera",
+      "color": "forest",
+      "category": "Genres"
+    },
+    "alien-cultures": {
+      "internal": "alien-cultures",
+      "display": "alien cultures",
       "color": "marine",
       "category": "Story Elements"
     },
-    "women": {
-      "internal": "women",
-      "display": "women",
+    "mythology": {
+      "internal": "mythology",
+      "display": "mythology",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "los-angeles": {
+      "internal": "los-angeles",
+      "display": "Los Angeles",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "african-american": {
+      "internal": "african-american",
+      "display": "African American",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "atlas": {
+      "internal": "atlas",
+      "display": "Atlas",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "adult-fiction": {
+      "internal": "adult-fiction",
+      "display": "adult fiction",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "novels": {
+      "internal": "novels",
+      "display": "novels",
+      "color": "burgundy",
+      "category": "Formats and Age Groups"
+    },
+    "greek-mythology": {
+      "internal": "greek-mythology",
+      "display": "greek mythology",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "united-states": {
+      "internal": "united-states",
+      "display": "United States",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "magic": {
+      "internal": "magic",
+      "display": "magic",
+      "color": "marine",
+      "category": "Story Elements"
+    },
+    "renaissance-art": {
+      "internal": "renaissance-art",
+      "display": "renaissance art",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "diseases": {
+      "internal": "diseases",
+      "display": "diseases",
+      "color": "plum",
+      "category": "Themes"
+    },
+    "spanish-literature": {
+      "internal": "spanish-literature",
+      "display": "Spanish literature",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "journalism": {
+      "internal": "journalism",
+      "display": "journalism",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "male-female-romance": {
+      "internal": "male-female-romance",
+      "display": "male-female romance",
       "color": "rust",
       "category": "Identity and Relationships"
     },
-    "world war i": {
-      "internal": "world-war-i",
-      "display": "World War I",
+    "students": {
+      "internal": "students",
+      "display": "students",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "europe": {
+      "internal": "europe",
+      "display": "Europe",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "british-literature": {
+      "internal": "british-literature",
+      "display": "British literature",
+      "color": "deep-blue",
+      "category": "Cultural and Geographic"
+    },
+    "love": {
+      "internal": "love",
+      "display": "love",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "friendship": {
+      "internal": "friendship",
+      "display": "friendship",
+      "color": "amber",
+      "category": "Life Experiences"
+    },
+    "ghosts": {
+      "internal": "ghosts",
+      "display": "ghosts",
       "color": "marine",
       "category": "Story Elements"
     },
-    "world war ii": {
-      "internal": "world-war-ii",
-      "display": "World War II",
-      "color": "marine",
-      "category": "Story Elements"
+    "literary": {
+      "internal": "literary",
+      "display": "literary",
+      "color": "forest",
+      "category": "Genres"
     },
-    "young adult (ya)": {
-      "internal": "young-adult-ya",
-      "display": "young adult (ya)",
-      "color": "fallback",
-      "category": "Uncategorized"
+    "black": {
+      "internal": "black",
+      "display": "Black",
+      "color": "rust",
+      "category": "Identity and Relationships"
     }
   }
 }

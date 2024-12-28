@@ -177,9 +177,8 @@ def load_colors_file(file_path: Path) -> dict:
 def load_patterns(file_path: Path) -> dict:
     """Load tag patterns configuration."""
     try:
-        yaml = YAML(typ="safe")
-        with open(file_path, "r", encoding="utf-8") as f:
-            return yaml.load(f)
+        with open(file_path, "rb") as f:  # TOML requires binary mode
+            return tomllib.load(f)
     except Exception as e:
         print(f"Error loading patterns: {e}")
         return {}
@@ -243,10 +242,22 @@ def load_removable_tags(file_path: Path) -> set[str]:
 
 
 def write_patterns_file(file_path: Path, patterns: dict) -> None:
-    """Write patterns to YAML file."""
-    yaml = YAML(typ="safe")
-    with open(file_path, "w", encoding="utf-8") as f:
-        yaml.dump(patterns, f)
+    """Write patterns to TOML file."""
+    with open(file_path, "w", encoding="utf-8", newline="\n") as f:
+        for section, items in patterns.items():
+            f.write(f"[{section}]\n")
+            if isinstance(items, dict):
+                for key, value in items.items():
+                    if isinstance(value, str):
+                        f.write(f'"{key}" = "{value}"\n')
+                    else:
+                        f.write(f'"{key}" = {value}\n')
+            elif isinstance(items, list):
+                f.write("values = [\n")
+                for item in items:
+                    f.write(f'  "{item}",\n')
+                f.write("]\n")
+            f.write("\n")
 
 
 def write_removable_tags(file_path: Path, tags: list[str]) -> None:
@@ -257,3 +268,13 @@ def write_removable_tags(file_path: Path, tags: list[str]) -> None:
         for tag in tags:
             f.write(f'    "{tag}",\n')
         f.write("]\n")
+
+
+def load_special_display_names(file_path: Path) -> dict[str, str]:
+    """Load special display names mapping."""
+    try:
+        with open(file_path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Error loading special display names: {e}")
+        return {}

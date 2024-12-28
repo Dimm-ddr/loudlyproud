@@ -1,22 +1,21 @@
-<!-- Absolute minimum tag component -->
+{{/* Absolute minimum tag component */}}
 {{ $input := .tag | string }}
-{{ $normalizedTag := partial "tag-normalizer.html" (dict "action" "normalize_tag" "tag" $input) | string }}
-{{ $displayTag := partial "tag-normalizer.html" (dict "action" "get_tag_display" "tag" $input) | string }}
+{{ $lookupKey := $input | lower }}
 
-<!-- Create lowercase version of the color map -->
-{{ $lowercaseColorMap := dict }}
-{{ range $category, $tags := site.Data.tags.colors }}
-  {{ range $tag, $color := $tags }}
-    {{ $_ := set $lowercaseColorMap ($tag | lower) $color }}
-  {{ end }}
+{{/* Load registry data */}}
+{{ $registryData := getJSON "data/tags/tags.registry.json" }}
+
+{{/* Find tag data by iterating and matching case-insensitively */}}
+{{ $tagData := dict }}
+{{ range $tag, $data := $registryData.tags }}
+    {{ if eq ($tag | lower) $lookupKey }}
+        {{ $tagData = $data }}
+    {{ end }}
 {{ end }}
 
-<!-- Get color key with fallback -->
-{{ $colorKey := "fallback" }}
-{{ $lookupTag := $displayTag | lower }}
-{{ with index $lowercaseColorMap $lookupTag }}
-  {{ $colorKey = . }}
-{{ end }}
+{{ $normalizedTag := $tagData.internal | default ($input | urlize) }}
+{{ $displayTag := $tagData.display | default $input }}
+{{ $colorKey := $tagData.color | default "fallback" }}
 
 {{ $tagStyles := dict
     "amber" "bg-tag-amber-light text-black hover:bg-tag-amber-light-hover dark:bg-tag-amber-dark dark:text-black dark:hover:bg-tag-amber-dark-hover"
@@ -31,8 +30,8 @@
     "fallback" "bg-tag-fallback-light text-black hover:bg-tag-fallback-light-hover dark:bg-tag-fallback-dark dark:text-white dark:hover:bg-tag-fallback-dark-hover"
 }}
 
-<!-- Use normalized tag for both URL and color lookup -->
-{{ $tagURL := path.Join "tags" ($normalizedTag | string) | relLangURL }}
+<!-- Use normalized tag for URL -->
+{{ $tagURL := path.Join "tags" $normalizedTag | relLangURL }}
 
 <a
     href="{{ $tagURL }}"

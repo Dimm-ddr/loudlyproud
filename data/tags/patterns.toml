@@ -1,0 +1,120 @@
+[remove]
+prefixes = [ "nyt:", "collectionID:" ]
+
+[[split.separators]]
+pattern = "--"
+keep_parts = true
+
+[[split.separators]]
+pattern = " /"
+keep_parts = true
+
+[[split.separators]]
+pattern = " \\(([^)]+)\\)"
+extract_groups = true
+
+[[split.separators]]
+pattern = "\\.$"
+replace = ""
+
+[[split.separators]]
+pattern = "\\ -$"
+replace = ""
+
+[[split.separators]]
+pattern = " & "
+keep_parts = true
+
+[[split.separators]]
+pattern = " general$"
+replace = ""
+
+[[split.separators]]
+pattern = " in$"
+replace = ""
+
+[[split.separators]]
+pattern = "^fiction "
+replace = ""
+
+[[split.separators]]
+pattern = " fiction$"
+replace = ""
+
+[[compounds]]
+pattern = "^young adult fiction (.+)"
+map_to = [ "young adult (YA)", "{}" ]
+
+[[compounds]]
+pattern = "^fiction lgbtqia\\+ (.+)"
+map_to = [ "LGBTQIA+", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) mothers$"
+map_to = [ "mothers", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) novelists$"
+map_to = [ "authors", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) couples$"
+map_to = [ "couples", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) relationships$"
+map_to = [ "relationships", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) love story$"
+map_to = [ "romance", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) love$"
+map_to = [ "love", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) romance novel$"
+map_to = [ "romance", "{}" ]
+
+[[compounds]]
+pattern = "^mères (.+)$"
+map_to = [ "mothers", "{}" ]
+
+[[compounds]]
+pattern = "^pères (.+)$"
+map_to = [ "fathers", "{}" ]
+
+[[compounds]]
+pattern = "^(.+) award winner$"
+map_to = [ "{}" ]
+
+[[compounds]]
+pattern = "^the (.+)$"
+map_to = [ "{}" ]
+
+[[compounds]]
+pattern = ".+ (brownburn|pelu|avery|hodges)$"
+map_to = []
+
+[[compounds]]
+pattern = "^(.+) & (.+)$"
+map_to = [ "{0}", "{1}" ]
+
+# Word replacements for common plural/singular forms
+[word_replacements]
+"americans" = "american"
+"asians" = "asian"
+"africans" = "african"
+"europeans" = "european"
+"hispanics" = "hispanic"
+"latinos" = "latino"
+"latinas" = "latino"
+"latina" = "latino"
+"novelists" = "author"
+"authors" = "author"
+"writers" = "author"
+"américains" = "american"
+"greeks" = "greek"
+"jamaicans" = "jamaican"
+"jamaïquains" = "jamaican"
