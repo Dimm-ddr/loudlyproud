@@ -93,8 +93,9 @@ def validate_tags(
     content_path: Path = CONTENT_DIR,
     mapping_file: Path = MAPPING_FILE,
     colors_file: Path = COLORS_FILE,
+    patterns_file: Path = PATTERNS_FILE,
     to_remove_file: Path = TO_REMOVE_FILE,
-) -> dict[str, list[str]]:
+) -> ValidationReport:
     """
     Validate tags in book files against mapping and colors.
 
@@ -103,21 +104,38 @@ def validate_tags(
         content_path: Path to content directory to check
         mapping_file: Path to mapping file
         colors_file: Path to colors file
+        patterns_file: Path to patterns file
         to_remove_file: Path to to_remove file
+
+    Returns:
+        ValidationReport containing unmapped and uncolored tags
     """
     # Initialize normalizer with the provided files
     normalizer = TagNormalizer(
         project_root=project_root,
         mapping_file=mapping_file,
-        patterns_file=PATTERNS_FILE,
+        patterns_file=patterns_file,
         to_remove_file=to_remove_file,
     )
 
     # Load removable tags (already lowercase from file)
     removable_tags = load_removable_tags(to_remove_file)
 
-    # Load colors data
+    # Load colors data and mapping
     colors_data = load_colors_file(colors_file)
+    mapping_data = load_tags_map(mapping_file)
+
+    # Get all valid mapped tags (both keys and values)
+    valid_mapped_tags = set()
+    for key, value in mapping_data.items():
+        if value is not None:
+            if isinstance(value, list):
+                valid_mapped_tags.update(v.lower() for v in value)
+            else:
+                valid_mapped_tags.add(value.lower())
+        valid_mapped_tags.add(key.lower())
+
+    # Get all colored tags
     colored_tags = {
         get_internal_name(tag) for category in colors_data.values() for tag in category
     }
@@ -144,16 +162,17 @@ def validate_tags(
         if internal in removable_tags:
             continue
         # Check if the tag is mapped
-        if internal not in normalizer.valid_tags:
+        if internal not in valid_mapped_tags:
             unmapped_tags.append(internal)
-        # Check for uncolored tags only if they are in valid_tags
+        # Check for uncolored tags only if they are mapped
         elif internal not in colored_tags:
             uncolored_tags_set.add(tag)
 
-    return {
-        "unmapped_tags": sort_strings(unmapped_tags),
-        "uncolored_tags": sorted(uncolored_tags_set),
-    }
+    # Return properly constructed ValidationReport
+    return ValidationReport(
+        unmapped_tags=sort_strings(unmapped_tags),
+        uncolored_tags=sorted(uncolored_tags_set),
+    )
 
 
 def write_report(report: ValidationReport, project_root: Path) -> None:

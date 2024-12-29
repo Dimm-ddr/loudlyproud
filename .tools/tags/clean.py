@@ -12,6 +12,7 @@ from .file_ops import (
     write_frontmatter,
 )
 from .valid_tags import get_valid_tags
+from .common import MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE
 
 
 def get_removable_mapping_keys(
@@ -77,7 +78,13 @@ def get_removable_color_tags(
     return {k: sorted(v) for k, v in removable.items()}
 
 
-def clean_frontmatter(content_dir: Path, normalizer) -> None:
+def clean_frontmatter(
+    content_dir: Path,
+    normalizer,
+    mapping_file: Path = MAPPING_FILE,
+    patterns_file: Path = PATTERNS_FILE,
+    to_remove_file: Path = TO_REMOVE_FILE,
+) -> None:
     """Clean up tags in book files."""
     for locale_dir in content_dir.iterdir():
         if not locale_dir.is_dir():
@@ -95,7 +102,13 @@ def clean_frontmatter(content_dir: Path, normalizer) -> None:
                 print(f"Updated tags in: {book_file.relative_to(content_dir)}")
 
 
-def process_book_file(file_path: Path, normalizer) -> tuple[bool, list[str]]:
+def process_book_file(
+    file_path: Path,
+    normalizer,
+    mapping_file: Path = MAPPING_FILE,
+    patterns_file: Path = PATTERNS_FILE,
+    to_remove_file: Path = TO_REMOVE_FILE,
+) -> tuple[bool, list[str]]:
     """Process a single book file, extracting and normalizing tags."""
     try:
         tags = extract_tags_from_file(file_path)

@@ -1,102 +1,144 @@
 #!/usr/bin/env python3
 
 import pytest
-from tags.validate import validate_tags
+from pathlib import Path
+from tags.validate import validate_tags, ValidationReport
 from tags.file_ops import (
-    extract_tags_from_file,
     write_mapping_file,
     write_colors_file,
     write_patterns_file,
     write_removable_tags,
-)
-from tags.common import (
-    MAPPING_FILENAME,
-    COLORS_FILENAME,
-    PATTERNS_FILENAME,
-    TO_REMOVE_FILENAME,
+    write_frontmatter,
 )
 
 
 @pytest.fixture
-def test_data_dir(tmp_path):
-    """Create test data directory with sample files"""
-    # Create test book file
-    book_content = """---
-params:
-  tags:
-    - "romance"
-    - "unknown-tag"
-    - "uncolored-tag"
----
-Book content
-"""
-    # Create content directory structure
-    book_dir = tmp_path / "content" / "en" / "books"
-    book_dir.mkdir(parents=True)
-    book_file = book_dir / "test-book.md"
-    book_file.write_text(book_content)
-
-    # Create data directory structure
-    data_dir = tmp_path / "data" / "tags"
-    data_dir.mkdir(parents=True)
-
-    # Create test mapping file
-    mapping = {"romance": "Romance", "uncolored-tag": "Uncolored Tag"}
-    mapping_file = data_dir / MAPPING_FILENAME
-    write_mapping_file(mapping_file, mapping)
-
-    # Create test colors file
-    colors = {"Genres": {"Romance": "forest"}}
-    colors_file = data_dir / COLORS_FILENAME
-    write_colors_file(colors_file, colors)
-
-    # Create test patterns file with all required keys
-    patterns = {
-        "split": {"separators": []},
-        "compounds": [],
-        "remove": {"prefixes": [], "exact": []},
-        "normalizations": {},
-        "url_normalizations": {},
-        "display": {},
+def test_book_frontmatter() -> dict:
+    """Return test book frontmatter with tags."""
+    return {
+        "type": "books",
+        "params": {
+            "tags": [
+                "romance",
+                "unknown-tag",
+                "uncolored-tag",
+                "mapped-tag",
+            ],
+        },
     }
-    patterns_file = data_dir / PATTERNS_FILENAME
-    write_patterns_file(patterns_file, patterns)
-
-    # Create test to_remove file
-    to_remove = []
-    to_remove_file = data_dir / TO_REMOVE_FILENAME
-    write_removable_tags(to_remove_file, to_remove)
-
-    return tmp_path
 
 
-def test_extract_tags_from_file(test_data_dir):
-    """Test extracting tags from a book file"""
-    book_file = test_data_dir / "content" / "en" / "books" / "test-book.md"
-    tags = extract_tags_from_file(book_file)
-    assert "romance" in tags
-    assert "unknown-tag" in tags
-    assert "uncolored-tag" in tags
+@pytest.fixture
+def test_mapping() -> dict:
+    """Return test mapping data."""
+    return {
+        "romance": "Romance",
+        "uncolored-tag": "Uncolored Tag",
+        "mapped-tag": "Mapped Tag",
+    }
 
 
-def test_validate_tags(test_data_dir):
-    """Test tag validation"""
-    # Get paths to test files
-    mapping_file = test_data_dir / "data" / "tags" / MAPPING_FILENAME
-    colors_file = test_data_dir / "data" / "tags" / COLORS_FILENAME
-    content_dir = test_data_dir / "content"
+@pytest.fixture
+def test_colors() -> dict:
+    """Return test colors data."""
+    return {
+        "romance": {
+            "color": "#FF0000",
+            "category": "test",
+        }
+    }
 
-    validation = validate_tags(
-        test_data_dir,
+
+@pytest.fixture
+def test_patterns() -> dict:
+    """Return test patterns data."""
+    return {
+        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "compounds": {
+            "values": [
+                {
+                    "pattern": r"^young adult fiction (.+)$",
+                    "map_to": ["young adult (YA)", "{}"],
+                }
+            ]
+        },
+    }
+
+
+@pytest.fixture
+def test_files(
+    test_data_dir: Path,
+    test_mapping: dict,
+    test_colors: dict,
+    test_patterns: dict,
+) -> tuple[Path, Path, Path, Path]:
+    """Create and write all test files."""
+    mapping_file = test_data_dir / "mapping.json"
+    colors_file = test_data_dir / "colors.toml"
+    patterns_file = test_data_dir / "patterns.toml"
+    to_remove_file = test_data_dir / "to_remove.toml"
+
+    write_mapping_file(mapping_file, test_mapping)
+    write_colors_file(colors_file, test_colors)
+    write_patterns_file(patterns_file, test_patterns)
+    write_removable_tags(to_remove_file, [])
+
+    return mapping_file, colors_file, patterns_file, to_remove_file
+
+
+def test_validate_tags_with_unmapped(
+    test_book_file: Path,
+    test_files: tuple[Path, Path, Path, Path],
+    test_book_frontmatter: dict,
+) -> None:
+    """Test validating tags with unmapped tags."""
+    mapping_file, colors_file, patterns_file, to_remove_file = test_files
+    content_dir = (
+        test_book_file.parent.parent
+    )  # Go up one more level to create books dir
+    books_dir = content_dir / "books"
+    books_dir.mkdir(parents=True, exist_ok=True)
+    book_file = books_dir / "test_book.md"
+
+    # Write test book file
+    write_frontmatter(book_file, test_book_frontmatter, "Test book content.\n")
+
+    # Run validation
+    report = validate_tags(
+        content_dir,
         content_path=content_dir,
         mapping_file=mapping_file,
         colors_file=colors_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
     )
 
-    print(f"Got validation: {validation}, from folder: {test_data_dir}")
-    assert (
-        "unknown-tag" in validation["unmapped_tags"]
-    ), f"Got unmapped tags: {validation['unmapped_tags']}"
-    assert "Uncolored Tag" in validation["uncolored_tags"]
-    assert "romance" not in validation["unmapped_tags"]
-    assert "Romance" not in validation["uncolored_tags"]
+    # Verify results with detailed error messages
+    assert "unknown-tag" in report["unmapped_tags"], (
+        f"Expected 'unknown-tag' to be in unmapped_tags.\n"
+        f"Book frontmatter tags: {test_book_frontmatter['params']['tags']}\n"
+        f"Current unmapped_tags: {report['unmapped_tags']}\n"
+        f"Mapping file contents: {mapping_file.read_text()}\n"
+        f"Book file contents: {book_file.read_text()}"
+    )
+
+    assert "Uncolored Tag" in report["uncolored_tags"], (
+        f"Expected 'uncolored-tag' to be in uncolored_tags.\n"
+        f"Book frontmatter tags: {test_book_frontmatter['params']['tags']}\n"
+        f"Current uncolored_tags: {report['uncolored_tags']}\n"
+        f"Colors file contents: {colors_file.read_text()}"
+    )
+
+    assert "Mapped Tag" not in report["unmapped_tags"], (
+        f"'mapped-tag' should not be in unmapped_tags but was found.\n"
+        f"Book frontmatter tags: {test_book_frontmatter['params']['tags']}\n"
+        f"Current unmapped_tags: {report['unmapped_tags']}\n"
+        f"Mapping file contents: {mapping_file.read_text()}"
+    )
+
+    assert "Romance" not in report["unmapped_tags"], (
+        f"'romance' should not be in unmapped_tags but was found.\n"
+        f"Book frontmatter tags: {test_book_frontmatter['params']['tags']}\n"
+        f"Current unmapped_tags: {report['unmapped_tags']}\n"
+        f"Mapping file contents: {mapping_file.read_text()}"
+    )

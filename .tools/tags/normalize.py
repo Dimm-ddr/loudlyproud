@@ -71,9 +71,11 @@ class TagNormalizer:
         """Split tag if it matches any splitting patterns."""
         # Get separators from patterns, default to empty list if not present
         separators = self.patterns.get("split", {}).get("separators", [])
+        if isinstance(separators, dict):
+            separators = [separators]
 
         for rule in separators:
-            pattern = rule["pattern"]
+            pattern = rule.get("pattern", "")
             if "extract_groups" in rule and rule["extract_groups"]:
                 if match := re.search(pattern, tag):
                     parts = [tag.replace(match.group(0), "").strip()]
@@ -88,43 +90,75 @@ class TagNormalizer:
                         for p in tag.split(pattern)
                         if p.strip() and isinstance(p, str)
                     ]
-        return tag
+        return tag  # Return original case
 
     def apply_compound_rules(self, tag: str) -> list[str] | str | None:
         """Apply compound mapping rules."""
-        for rule in self.patterns["compounds"]:
-            pattern = rule["pattern"]
-            if match := re.match(pattern, tag, re.IGNORECASE):
-                groups = match.groups()
-                # Handle case where rule maps to null
-                if rule.get("map_to") is None:
-                    return None
-                # For patterns like "term1 & term2", return both terms as separate tags
-                if pattern == "^(.+) & (.+)$":
-                    return [g.strip() for g in groups if g and isinstance(g, str)]
-                # For other patterns, continue using the existing format mechanism
-                if isinstance(rule["map_to"], list):
-                    return [
-                        part.format(*(groups)) if "{}" in part else part.strip()
-                        for part in rule["map_to"]
-                        if isinstance(part, str)
-                    ]
-        return tag
+        # Get compounds list from patterns, default to empty list if not present
+        compounds = self.patterns.get("compounds", {})
+        if isinstance(compounds, dict):
+            compounds = compounds.get("values", [])
+
+        for pattern in compounds:
+            if not isinstance(pattern, dict):
+                # Handle string patterns
+                try:
+                    if match := re.match(pattern, tag, re.IGNORECASE):
+                        groups = match.groups()
+                        # For patterns like "term1 & term2", return both terms as separate tags
+                        if pattern == "^(.+) & (.+)$":
+                            return [
+                                g.strip() for g in groups if g and isinstance(g, str)
+                            ]
+                        # For other patterns, just return the groups
+                        return [g.strip() for g in groups if g and isinstance(g, str)]
+                except (re.error, TypeError):
+                    continue  # Skip invalid patterns
+            else:
+                # Handle dictionary patterns with map_to field
+                try:
+                    if match := re.match(pattern["pattern"], tag, re.IGNORECASE):
+                        groups = match.groups()
+                        if "map_to" in pattern:
+                            result = []
+                            for mapped in pattern["map_to"]:
+                                if mapped == "{}":
+                                    result.extend(
+                                        g.strip()
+                                        for g in groups
+                                        if g and isinstance(g, str)
+                                    )
+                                elif "{" in mapped and "}" in mapped:
+                                    # Handle format strings like "{0}" and "{1}"
+                                    try:
+                                        formatted = mapped.format(*groups)
+                                        result.append(formatted.strip())
+                                    except (IndexError, KeyError):
+                                        continue
+                                else:
+                                    # Preserve case for fixed strings
+                                    result.append(mapped)
+                            return result if result else None
+                        return None  # If no map_to field, remove the tag
+                except (re.error, TypeError, KeyError):
+                    continue  # Skip invalid patterns
+        return tag.lower()  # Return lowercase version for consistency
 
     def normalize(self, tag: str) -> TagValue:
         """
         Normalize a single tag in steps:
         1. Check if tag is in mapping (case-insensitive)
         2. Clean and transform the tag (trim, remove trailing dots)
-        3. Convert to lowercase
+        3. Convert to lowercase for comparisons
         4. Check if tag should be removed
         5. Apply word replacements
         6. Apply patterns (split/transform)
         7. Apply mapping
         """
         # 1. Check if tag is in mapping
-        if tag.lower() in self.mapping_lower:
-            proper_key = self.mapping_lower[tag.lower()]
+        tag_lower = tag.lower()
+        if tag_lower in self.mapping_lower:
+            proper_key = self.mapping_lower[tag_lower]
             mapped = self.mapping[proper_key]
             if mapped is not None:
                 return mapped
@@ -137,18 +171,19 @@ class TagNormalizer:
             if "replace" in rule:
                 tag = re.sub(rule["pattern"], rule["replace"], tag)
 
-        # 3. Convert to lowercase
-        tag = tag.lower()
+        # 3. Convert to lowercase for comparisons
+        tag_lower = tag.lower()
 
         # 4. Check if should be removed
-        if self.should_remove(tag):
+        if self.should_remove(tag_lower):
             return None
 
         # 5. Apply word replacements
         word_replacements = self.patterns.get("word_replacements", {})
         for old, new in word_replacements.items():
-            if old in tag:
-                tag = tag.replace(old, new)
+            if old.lower() in tag_lower:
+                tag = tag.replace(old.lower(), new)
+                tag_lower = tag.lower()
 
         # 6. Apply patterns
         result = self.apply_compound_rules(tag)
@@ -164,8 +199,9 @@ class TagNormalizer:
         # 7. Apply mapping and track unknown tags
         mapped_tags = []
         for tag in transformed_tags:
-            if tag in self.mapping_lower:
-                proper_key = self.mapping_lower[tag]
+            tag_lower = tag.lower()
+            if tag_lower in self.mapping_lower:
+                proper_key = self.mapping_lower[tag_lower]
                 mapped = self.mapping[proper_key]
                 if mapped is not None:  # Only add non-null mapped values
                     if isinstance(mapped, list):
@@ -173,8 +209,8 @@ class TagNormalizer:
                     else:
                         mapped_tags.append(mapped)
             else:
-                self.stats.unknown_tags.add(tag)
-                mapped_tags.append(tag)
+                self.stats.unknown_tags.add(tag_lower)
+                mapped_tags.append(tag)  # Use original case for unmapped tags
 
         # Handle empty mapped_tags case
         if not mapped_tags:

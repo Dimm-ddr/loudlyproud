@@ -9,100 +9,136 @@ from tags.file_ops import (
     write_colors_file,
     write_patterns_file,
     write_removable_tags,
-)
-from tags.common import (
-    MAPPING_FILENAME,
-    COLORS_FILENAME,
-    PATTERNS_FILENAME,
-    TO_REMOVE_FILENAME,
+    write_frontmatter,
 )
 
 
 @pytest.fixture
-def test_book_file(tmp_path):
-    """Create a test book file with tags."""
-    book_file = tmp_path / "test-book.md"
-    book_file.write_text(
-        """---
-params:
-  tags:
-    - "known tag"
-    - "unknown tag"
----
-Book content
-"""
-    )
-    return book_file
+def test_mapping() -> dict:
+    """Return test mapping data."""
+    return {
+        "mapped-tag": "Mapped Tag",
+    }
 
 
-def test_validate_tags_with_unmapped(test_project: Path):
-    """Test validation report with unmapped tags."""
-    # Create test book files structure
-    books_dir = test_project / "content" / "en" / "books"
-    books_dir.mkdir(parents=True)
-
-    # Create test data directory
-    data_dir = test_project / "data" / "tags"
-    data_dir.mkdir(parents=True)
-
-    # Create a few test book files with known tags
-    book1_content = """---
-params:
-  tags:
-    - "mapped tag"
-    - "unknown tag"
-    - "another unknown"
----
-"""
-    (books_dir / "book1.md").write_text(book1_content)
-
-    # Create test mapping file with only one of the tags
-    mapping = {"mapped tag": "Mapped Tag"}
-    mapping_file = data_dir / MAPPING_FILENAME
-    mapping_file.parent.mkdir(parents=True, exist_ok=True)
-    write_mapping_file(mapping_file, mapping)
-
-    # Create test colors file
-    colors = {"Genres": {"Mapped Tag": "forest"}}
-    colors_file = data_dir / COLORS_FILENAME
-    write_colors_file(colors_file, colors)
-
-    # Create test patterns file
-    patterns = {"split": {"separators": []}, "compounds": []}
-    patterns_file = data_dir / PATTERNS_FILENAME
-    write_patterns_file(patterns_file, patterns)
-
-    # Create test to_remove file
-    to_remove = []
-    to_remove_file = data_dir / TO_REMOVE_FILENAME
-    write_removable_tags(to_remove_file, to_remove)
-
-    # Validate tags in the test content directory
-    content_dir = test_project / "content"
-    report = validate_tags(
-        test_project,
-        content_path=content_dir,
-        mapping_file=mapping_file,
-        colors_file=colors_file,
-        to_remove_file=to_remove_file,
-    )
-
-    # Now we should only see our test tags
-    assert set(report["unmapped_tags"]) == {"unknown tag", "another unknown"}
-    assert "mapped tag" not in report["unmapped_tags"]
+@pytest.fixture
+def test_colors() -> dict:
+    """Return test colors data."""
+    return {
+        "romance": {
+            "color": "#FF0000",
+            "category": "test",
+        }
+    }
 
 
-def test_update_tags_report():
+@pytest.fixture
+def test_patterns() -> dict:
+    """Return test patterns data."""
+    return {
+        "remove": {"prefixes": [], "exact": []},
+        "split": {"separators": []},
+        "compounds": {"values": []},
+    }
+
+
+@pytest.fixture
+def test_files(
+    test_data_dir: Path,
+    test_mapping: dict,
+    test_colors: dict,
+    test_patterns: dict,
+) -> tuple[Path, Path, Path, Path]:
+    """Create and write all test files."""
+    mapping_file = test_data_dir / "mapping.json"
+    colors_file = test_data_dir / "colors.toml"
+    patterns_file = test_data_dir / "patterns.toml"
+    to_remove_file = test_data_dir / "to_remove.toml"
+
+    write_mapping_file(mapping_file, test_mapping)
+    write_colors_file(colors_file, test_colors)
+    write_patterns_file(patterns_file, test_patterns)
+    write_removable_tags(to_remove_file, [])
+
+    return mapping_file, colors_file, patterns_file, to_remove_file
+
+
+@pytest.fixture
+def test_book_frontmatter() -> dict:
+    """Return test book frontmatter with tags."""
+    return {
+        "type": "books",
+        "params": {
+            "tags": [
+                "mapped-tag",
+                "unmapped-tag",
+            ],
+        },
+    }
+
+
+def test_update_tags_report() -> None:
     """Test updating tags report."""
-    new_tags = {"file1.md": ["tag1", "tag2"], "file2.md": ["tag2", "tag3"]}
-    report = {"unprocessed_tags": {}, "processed_tags": {}}
+    # Test data
+    new_tags = {
+        "file1.md": ["tag1", "tag2"],
+        "file2.md": ["tag2", "tag3"],
+    }
+    report = {
+        "unprocessed_tags": {},
+        "processed_tags": {},
+    }
 
+    # Update report
     updated = update_tags_report(new_tags, report)
 
+    # Verify results
     assert "tag1" in updated["unprocessed_tags"]
     assert "tag2" in updated["unprocessed_tags"]
     assert "tag3" in updated["unprocessed_tags"]
 
+    # Check tag2 which appears in multiple files
     tag2_info = updated["unprocessed_tags"]["tag2"]
     assert len(tag2_info["files"]) == 2
     assert tag2_info["occurrences"] == 2
+
+
+def test_validate_tags_with_unmapped(
+    test_book_file: Path,
+    test_files: tuple[Path, Path, Path, Path],
+    test_book_frontmatter: dict,
+) -> None:
+    """Test validating tags with unmapped tags."""
+    mapping_file, colors_file, patterns_file, to_remove_file = test_files
+    content_dir = (
+        test_book_file.parent.parent
+    )  # Go up one more level to create books dir
+    books_dir = content_dir / "books"
+    books_dir.mkdir(parents=True, exist_ok=True)
+    book_file = books_dir / "test_book.md"
+
+    # Write test book file
+    write_frontmatter(book_file, test_book_frontmatter, "Test book content.\n")
+
+    # Run validation
+    report = validate_tags(
+        content_dir,
+        content_path=content_dir,
+        mapping_file=mapping_file,
+        colors_file=colors_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
+    )
+
+    # Verify results
+    assert "unmapped-tag" in report["unmapped_tags"], (
+        f"Expected 'unmapped-tag' to be in unmapped_tags. "
+        f"Current unmapped_tags: {report['unmapped_tags']}, "
+        f"Mapping file contents: {mapping_file.read_text()}"
+    )
+
+    assert "mapped-tag" not in report["unmapped_tags"], (
+        f"'mapped-tag' should not be in unmapped_tags but was found. "
+        f"Current unmapped_tags: {report['unmapped_tags']}, "
+        f"Mapping file contents: {mapping_file.read_text()}"
+    )

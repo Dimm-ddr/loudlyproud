@@ -3,6 +3,7 @@ import pytest
 from pathlib import Path
 import shutil
 from ..common import DATA_DIR, CONTENT_DIR
+from ..file_ops import write_frontmatter
 
 
 class TestAssertContext(NamedTuple):
@@ -34,21 +35,18 @@ def assert_context():
 
 
 @pytest.fixture
-def test_project(tmp_path: Path):
-    """Create a test project structure with real config files."""
+def test_project(tmp_path: Path, monkeypatch):
+    """Create a test project structure with isolated test files."""
     # Create data directory
     test_data_dir = tmp_path / DATA_DIR.name
     test_data_dir.mkdir(parents=True)
 
-    # Copy all files from data/tags to test directory
-    real_data_dir = Path.cwd() / DATA_DIR
-    for file in real_data_dir.glob("*"):
-        if file.is_file():
-            shutil.copy2(file, test_data_dir / file.name)
-
     # Create content directory
     test_content_dir = tmp_path / CONTENT_DIR.name
     test_content_dir.mkdir(parents=True)
+
+    # Patch DATA_DIR to point to our test directory
+    monkeypatch.setattr("tags.common.DATA_DIR", test_data_dir)
 
     return tmp_path
 
@@ -57,6 +55,25 @@ def test_project(tmp_path: Path):
 def test_data_dir(test_project):
     """Alias for test_project for backward compatibility."""
     return test_project
+
+
+@pytest.fixture
+def test_book_file(test_data_dir: Path, test_book_frontmatter: dict) -> Path:
+    """Create a test book file with tags.
+
+    Args:
+        test_data_dir: The test data directory
+        test_book_frontmatter: The frontmatter content for the book file
+
+    Returns:
+        Path to the created book file
+    """
+    content_dir = test_data_dir.parent.parent / "content"
+    book_dir = content_dir / "en" / "books"
+    book_dir.mkdir(parents=True, exist_ok=True)
+    book_file = book_dir / "test-book.md"
+    write_frontmatter(book_file, test_book_frontmatter, "Book content\n")
+    return book_file
 
 
 # Add if any new fixtures are needed for clean.py tests

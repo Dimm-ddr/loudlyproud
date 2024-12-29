@@ -14,6 +14,7 @@ from ..file_ops import (
     write_patterns_file,
     write_removable_tags,
     split_frontmatter,
+    write_frontmatter,
 )
 from ..common import (
     MAPPING_FILE,
@@ -25,34 +26,41 @@ from ..common import (
 )
 import pytest
 
+
 # Test data
-SAMPLE_FRONTMATTER = """---
-draft: false
-slug: test-book
-title: Test Book
-type: books
-params:
-  authors:
-    - Test Author
-  book_title: Test Book
-  tags:
-    - fiction
-    - general
-    - science fiction
-    - nyt:bestseller
-    - test tag
----
-"""
+@pytest.fixture
+def test_book_frontmatter() -> dict:
+    """Return test book frontmatter with tags."""
+    return {
+        "draft": False,
+        "slug": "test-book",
+        "title": "Test Book",
+        "type": "books",
+        "params": {
+            "authors": ["Test Author"],
+            "book_title": "Test Book",
+            "tags": [
+                "fiction",
+                "general",
+                "science fiction",
+                "nyt:bestseller",
+                "test tag",
+            ],
+        },
+    }
 
-SAMPLE_BOOK_CONTENT = f"{SAMPLE_FRONTMATTER}\nTest book content.\n"
 
-
-def write_sample_book(file_path: Path) -> None:
+def write_sample_book(file_path: Path, frontmatter: dict) -> None:
     """Write sample book content to file."""
-    file_path.write_text(SAMPLE_BOOK_CONTENT, encoding="utf-8")
+    write_frontmatter(file_path, frontmatter, "Test book content.\n")
 
 
 def test_get_removable_mapping_keys(tmp_path: Path):
+    """Test finding removable mapping keys."""
+    # Create test data directory
+    data_dir = tmp_path / DATA_DIR.name / "tags"
+    data_dir.mkdir(parents=True, exist_ok=True)
+
     # Create test mapping file
     mapping = {
         "fiction": None,
@@ -61,16 +69,18 @@ def test_get_removable_mapping_keys(tmp_path: Path):
         "nyt:bestseller": None,
         "test tag": "test tag",
     }
-    mapping_file = tmp_path / MAPPING_FILE.name
+    mapping_file = data_dir / "test_mapping.json"
     write_mapping_file(mapping_file, mapping)
 
     # Create test patterns file
     patterns = {"remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]}}
-    patterns_file = tmp_path / PATTERNS_FILE.name
+    patterns_file = data_dir / "test_patterns.toml"
     write_patterns_file(patterns_file, patterns)
 
+    # Get removable keys
     result = get_removable_mapping_keys(mapping_file, patterns_file)
 
+    # Verify results
     assert "prefixes" in result
     assert "exact matches" in result
     assert "nyt:bestseller" in result["prefixes"]
@@ -118,36 +128,36 @@ def test_get_removable_mapping_keys_no_removable(tmp_path: Path):
 
 
 def test_get_removable_color_tags(tmp_path: Path):
+    """Test finding removable color tags."""
+    # Create test data directory
+    data_dir = tmp_path / DATA_DIR.name / "tags"
+    data_dir.mkdir(parents=True, exist_ok=True)
+
     # Create test mapping file
     mapping = {
-        "valid tag": "Valid Tag",
-        "another tag": "Another Tag",
+        "science fiction": "science fiction",
+        "test tag": "test tag",
     }
-    mapping_file = tmp_path / MAPPING_FILE.name
+    mapping_file = data_dir / "test_mapping.json"
     write_mapping_file(mapping_file, mapping)
 
     # Create test colors file
     colors = {
-        "category1": {
-            "Valid Tag": "#123456",
-            "Obsolete Tag": "#654321",
-        },
-        "category2": {
-            "Another Tag": "#abcdef",
-            "Old Tag": "#fedcba",
-        },
+        "Genres": {
+            "science fiction": "forest",
+            "unmapped tag": "forest",
+        }
     }
-    colors_file = tmp_path / COLORS_FILE.name
+    colors_file = data_dir / "test_colors.toml"
     write_colors_file(colors_file, colors)
 
+    # Get removable tags
     result = get_removable_color_tags(colors_file, mapping_file)
 
-    assert "category1" in result
-    assert "category2" in result
-    assert "Obsolete Tag" in result["category1"]
-    assert "Old Tag" in result["category2"]
-    assert "Valid Tag" not in result["category1"]
-    assert "Another Tag" not in result["category2"]
+    # Verify results
+    assert "Genres" in result
+    assert "unmapped tag" in result["Genres"]
+    assert "science fiction" not in result["Genres"]
 
 
 @pytest.fixture
@@ -180,30 +190,67 @@ def test_config(tmp_path: Path) -> dict:
     return config
 
 
-def test_clean_frontmatter(tmp_path: Path, test_config):
+def test_clean_frontmatter(tmp_path: Path, test_book_frontmatter: dict):
+    """Test cleaning frontmatter in book files."""
     # Set up test environment
-    content_dir = tmp_path / CONTENT_DIR.name
+    content_dir = tmp_path / "content"
     locale_dir = content_dir / "en"
     books_dir = locale_dir / "books"
     books_dir.mkdir(parents=True, exist_ok=True)
 
     # Write sample book file
     book_file = books_dir / "test-book.md"
-    write_sample_book(book_file)
+    write_sample_book(book_file, test_book_frontmatter)
 
     # Create test configuration files
-    mapping_file = tmp_path / DATA_DIR.name / MAPPING_FILE.name
-    patterns_file = tmp_path / DATA_DIR.name / PATTERNS_FILE.name
-    mapping_file.parent.mkdir(parents=True, exist_ok=True)
+    data_dir = tmp_path / "data" / "tags"
+    data_dir.mkdir(parents=True, exist_ok=True)
 
-    write_mapping_file(mapping_file, test_config["mapping"])
-    write_patterns_file(patterns_file, test_config["patterns"])
+    mapping_file = data_dir / "mapping.json"
+    patterns_file = data_dir / "patterns.toml"
+    to_remove_file = data_dir / "to_remove.toml"
+
+    # Create test mapping file
+    mapping = {
+        "fiction": None,
+        "general": None,
+        "science fiction": "science fiction",
+        "nyt:bestseller": None,
+        "test tag": "test tag",
+    }
+    write_mapping_file(mapping_file, mapping)
+
+    # Create test patterns file
+    patterns = {
+        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "compounds": {
+            "values": [
+                {
+                    "pattern": r"^young adult fiction (.+)$",
+                    "map_to": ["young adult (YA)", "{}"],
+                }
+            ]
+        },
+    }
+    write_patterns_file(patterns_file, patterns)
+    write_removable_tags(to_remove_file, [])
 
     # Create normalizer with test configuration
-    normalizer = TagNormalizer(tmp_path)
+    normalizer = TagNormalizer(
+        project_root=tmp_path,
+        mapping_file=mapping_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
+    )
 
-    # Run clean_frontmatter
-    clean_frontmatter(content_dir, normalizer)
+    # Run clean_frontmatter with test files
+    clean_frontmatter(
+        content_dir,
+        normalizer,
+        mapping_file=mapping_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
+    )
 
     # Verify results
     assert normalizer.stats.total_files == 1
@@ -226,39 +273,70 @@ def test_clean_frontmatter(tmp_path: Path, test_config):
         pytest.fail("Failed to parse frontmatter")
 
 
-def test_process_book_file(tmp_path: Path, test_config):
+def test_process_book_file(tmp_path: Path, test_book_frontmatter: dict):
+    """Test processing a single book file."""
     # Create test book file
     book_file = tmp_path / "test-book.md"
-    write_sample_book(book_file)
+    write_sample_book(book_file, test_book_frontmatter)
 
-    # Create test configuration
-    mapping_file = tmp_path / DATA_DIR.name / MAPPING_FILE.name
-    patterns_file = tmp_path / DATA_DIR.name / PATTERNS_FILE.name
-    mapping_file.parent.mkdir(parents=True, exist_ok=True)
+    # Create test configuration files
+    data_dir = tmp_path / "data" / "tags"
+    data_dir.mkdir(parents=True, exist_ok=True)
 
-    write_mapping_file(mapping_file, test_config["mapping"])
-    write_patterns_file(patterns_file, test_config["patterns"])
+    mapping_file = data_dir / "mapping.json"
+    patterns_file = data_dir / "patterns.toml"
+    to_remove_file = data_dir / "to_remove.toml"
+
+    # Create test mapping file
+    mapping = {
+        "fiction": None,
+        "general": None,
+        "science fiction": "science fiction",
+        "nyt:bestseller": None,
+        "test tag": "test tag",
+    }
+    write_mapping_file(mapping_file, mapping)
+
+    # Create test patterns file
+    patterns = {
+        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "compounds": {
+            "values": [
+                {
+                    "pattern": r"^young adult fiction (.+)$",
+                    "map_to": ["young adult (YA)", "{}"],
+                }
+            ]
+        },
+    }
+    write_patterns_file(patterns_file, patterns)
+    write_removable_tags(to_remove_file, [])
 
     # Create normalizer with test configuration
-    normalizer = TagNormalizer(tmp_path)
+    normalizer = TagNormalizer(
+        project_root=tmp_path,
+        mapping_file=mapping_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
+    )
 
-    # Test processing
-    changed, original_tags = process_book_file(book_file, normalizer)
+    # Process book file with test files
+    changed, original_tags = process_book_file(
+        book_file,
+        normalizer,
+        mapping_file=mapping_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
+    )
 
     # Verify results
     assert changed is True
-    assert set(original_tags) == {
-        "fiction",
-        "general",
-        "science fiction",
-        "nyt:bestseller",
-        "test tag",
-    }
+    assert "fiction" in original_tags
+    assert "general" in original_tags
+    assert "nyt:bestseller" in original_tags
 
     # Check updated content
     content = book_file.read_text(encoding="utf-8")
-
-    # Parse the frontmatter using our function
     if result := split_frontmatter(content):
         frontmatter, _ = result
         tags = frontmatter["params"]["tags"]

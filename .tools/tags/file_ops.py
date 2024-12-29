@@ -6,6 +6,7 @@ from ruamel.yaml import YAML
 import json
 import tomllib
 from collections import Counter
+import tomli_w
 
 
 class TagReport(TypedDict):
@@ -243,31 +244,17 @@ def load_removable_tags(file_path: Path) -> set[str]:
 
 def write_patterns_file(file_path: Path, patterns: dict) -> None:
     """Write patterns to TOML file."""
-    with open(file_path, "w", encoding="utf-8", newline="\n") as f:
-        for section, items in patterns.items():
-            f.write(f"[{section}]\n")
-            if isinstance(items, dict):
-                for key, value in items.items():
-                    if isinstance(value, str):
-                        f.write(f'"{key}" = "{value}"\n')
-                    else:
-                        f.write(f'"{key}" = {value}\n')
-            elif isinstance(items, list):
-                f.write("values = [\n")
-                for item in items:
-                    f.write(f'  "{item}",\n')
-                f.write("]\n")
-            f.write("\n")
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(file_path, "wb") as f:
+        tomli_w.dump(patterns, f)
 
 
 def write_removable_tags(file_path: Path, tags: list[str]) -> None:
     """Write removable tags to TOML file."""
     file_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write("to_remove = [\n")
-        for tag in tags:
-            f.write(f'    "{tag}",\n')
-        f.write("]\n")
+    data = {"to_remove": tags}
+    with open(file_path, "wb") as f:
+        tomli_w.dump(data, f)
 
 
 def load_special_display_names(file_path: Path) -> dict[str, str]:

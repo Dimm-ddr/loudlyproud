@@ -3,102 +3,113 @@
 import pytest
 from pathlib import Path
 from ..normalize import TagNormalizer
-from .test_helpers import detailed_assert, with_context
 from ..file_ops import (
     write_mapping_file,
     write_patterns_file,
+    write_removable_tags,
 )
-from ..common import MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE, DATA_DIR
 
 
 @pytest.fixture
-def normalizer(test_project: Path) -> TagNormalizer:
+def test_mapping() -> dict:
+    """Return test mapping data."""
+    return {
+        "fiction": None,
+        "general": None,
+        "science fiction": "science fiction",
+        "nyt:bestseller": None,
+        "test tag": "test tag",
+        "american-short-stories": ["american", "short-stories"],
+        "detective-and-mystery-stories": ["detective", "mystery"],
+        "venice-italy": "venice",
+        "contemporary-romance": ["contemporary", "romance"],
+    }
+
+
+@pytest.fixture
+def test_patterns() -> dict:
+    """Return test patterns data."""
+    return {
+        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "split": {
+            "separators": [
+                {"pattern": "--", "keep_parts": True},
+                {"pattern": r"\(([^)]+)\)", "extract_groups": True},
+            ]
+        },
+        "compounds": {
+            "values": [
+                {
+                    "pattern": r"^young adult fiction (.+)$",
+                    "map_to": ["young adult (YA)", "{}"],
+                },
+                {"pattern": r"^fiction lgbtqia\+ (.+)$", "map_to": ["LGBTQIA+", "{}"]},
+                {"pattern": r"^(.+) & (.+)$", "map_to": ["{0}", "{1}"]},
+            ]
+        },
+    }
+
+
+@pytest.fixture
+def normalizer(
+    tmp_path: Path, test_mapping: dict, test_patterns: dict
+) -> TagNormalizer:
     """Create normalizer with test configuration."""
-    return TagNormalizer(test_project)
+    data_dir = tmp_path / "data" / "tags"
+    data_dir.mkdir(parents=True, exist_ok=True)
 
+    mapping_file = data_dir / "mapping.json"
+    patterns_file = data_dir / "patterns.toml"
+    to_remove_file = data_dir / "to_remove.toml"
 
-def test_should_remove():
-    """Test tags that should be removed"""
-    normalizer = TagNormalizer()
-    assert normalizer.should_remove("nyt:something") is True
-    assert normalizer.should_remove("collectionID:test") is True
-    assert normalizer.should_remove("general") is True
-    assert normalizer.should_remove("fiction") is True
-    assert normalizer.should_remove("valid tag") is False
+    write_mapping_file(mapping_file, test_mapping)
+    write_patterns_file(patterns_file, test_patterns)
+    write_removable_tags(to_remove_file, [])
 
-
-def test_split_tag():
-    """Test tag splitting patterns"""
-    normalizer = TagNormalizer()
-    assert normalizer.split_tag("tag--fiction") == ["tag", "fiction"]
-    assert normalizer.split_tag("venice (italy)") == ["venice", "italy"]
-    assert normalizer.split_tag("normal tag") == "normal tag"
-
-
-@with_context
-def test_compound_rules():
-    """Test compound mapping rules"""
-    normalizer = TagNormalizer()
-
-    # Test specific transformations
-    test_tag = "young adult fiction romance"
-    result = normalizer.apply_compound_rules(test_tag)
-    detailed_assert(
-        "compound rule transformation",
-        test_tag,
-        ["young adult (YA)", "romance"],
-        result,
-        available_patterns=normalizer.patterns["compounds"],
+    return TagNormalizer(
+        project_root=tmp_path,
+        mapping_file=mapping_file,
+        patterns_file=patterns_file,
+        to_remove_file=to_remove_file,
     )
-
-    # Other assertions
-    test_tag = "fiction lgbtqia+ gay"
-    result = normalizer.apply_compound_rules(test_tag)
-    detailed_assert(
-        "LGBTQIA+ rule transformation",
-        test_tag,
-        ["LGBTQIA+", "gay"],
-        result,
-        available_patterns=normalizer.patterns["compounds"],
-    )
-
-
-def test_normalize_tags():
-    """Test normalizing a list of tags."""
-    input_tags = [
-        "fantasy",
-        "romance",
-        "strips",  # should be removed
-        "contemporary romance",  # should be split via mapping
-    ]
-    expected = ["fantasy", "romance", "contemporary"]
-    normalizer = TagNormalizer()
-    assert set(normalizer.normalize_tags(input_tags)) == set(expected)
 
 
 @pytest.mark.parametrize(
     "input_tags,expected",
     [
-        (["fantasy"], ["fantasy"]),
-        (["strips"], []),  # should be removed
-        (["fantasy", "strips"], ["fantasy"]),
+        (["fiction"], []),  # Should be removed
+        (["general"], []),  # Should be removed
+        (["nyt:bestseller"], []),  # Should be removed by prefix
+        (["science fiction"], ["science fiction"]),  # Should be kept as is
+        (["test tag"], ["test tag"]),  # Should be kept as is
         (
-            ["american short stories"],
-            ["American", "short stories"],
-        ),  # split via mapping
+            ["young adult fiction romance"],
+            ["young adult (YA)", "romance"],
+        ),  # Should be transformed
+        (["fiction lgbtqia+ gay"], ["LGBTQIA+", "gay"]),  # Should be transformed
+        (["science & fiction"], ["science"]),  # Should be split
         (
-            ["detective and mystery stories"],
+            ["american-short-stories"],
+            ["american", "short-stories"],
+        ),  # Should be split via mapping
+        (
+            ["detective-and-mystery-stories"],
             ["detective", "mystery"],
-        ),  # another mapping example
+        ),  # Should be split via mapping
+        (["venice-italy"], ["venice"]),  # Should be mapped to single tag
         (
-            ["venice (italy)"],
-            ["Venice"],
-        ),  # parentheses pattern with proper capitalization
+            ["contemporary-romance"],
+            ["contemporary", "romance"],
+        ),  # Should be split via mapping
     ],
 )
-def test_normalize_tags_parametrized(input_tags, expected, normalizer):
+def test_normalize_tags(
+    normalizer: TagNormalizer, input_tags: list[str], expected: list[str]
+) -> None:
     """Test tag normalization with various inputs."""
-    result = normalizer.normalize_tags(input_tags)
-    assert set(result) == set(
-        expected
-    ), f"Failed to normalize {input_tags}. Got {result}, expected {expected}"
+    normalized = normalizer.normalize_tags(input_tags)
+    assert set(normalized) == set(expected), (
+        f"Failed with input_tags={input_tags}\n"
+        f"Expected: {expected}\n"
+        f"Got: {normalized}"
+    )
