@@ -220,7 +220,7 @@ def write_registry(registry: TagRegistry, registry_path: Path) -> None:
 def main() -> None:
     """Entry point for registry generation."""
     registry = generate_registry()
-    registry_path = TAGS_DIR / "tags.registry.json"
+    registry_path = TAGS_DIR / "tags_registry.json"
     write_registry(registry, registry_path)
     print(f"Tags registry generated successfully at {registry_path}")
     print(f"Total tags: {len(registry['tags'])}")

@@ -3,13 +3,14 @@
 {{ $lookupKey := $input | lower }}
 
 {{/* Load registry data */}}
-{{ $registryData := getJSON "data/tags/tags.registry.json" }}
+{{ $registryData := site.Data.tags.tags_registry }}
 
-{{/* Find tag data by iterating and matching case-insensitively */}}
+{{/* Find tag data by iterating and matching case-insensitively against both internal and display names */}}
 {{ $tagData := dict }}
 {{ range $tag, $data := $registryData.tags }}
-    {{ if eq ($tag | lower) $lookupKey }}
+    {{ if or (eq ($tag | lower) $lookupKey) (eq ($data.display | lower) $lookupKey) }}
         {{ $tagData = $data }}
+        {{ break }}
     {{ end }}
 {{ end }}
 
@@ -31,7 +32,7 @@
 }}
 
 <!-- Use normalized tag for URL -->
-{{ $tagURL := path.Join "tags" $normalizedTag | relLangURL }}
+{{ $tagURL := path.Join "/tags" $normalizedTag | relLangURL }}
 
 <a
     href="{{ $tagURL }}"
