@@ -15,10 +15,12 @@ params:
   isbn: '9785041605759'
   goodreads_link: https://www.goodreads.com/book/show/59664428
   authors:
-    - Дмитрий Калинский, Фрэнсис Кель
+    - Дмитрий Калинский
+    - Фрэнсис Кель
   publication_year: '2018'
   publishers:
-    - Litres, Эксмо
+    - Litres
+    - Эксмо
   page_count: '416'
   short_book_description: Отец учил Готье тому, что каждый должен знать свое место в этом мире."Чистокровные правят. Полукровки работают.
   russian_translation_status: exists

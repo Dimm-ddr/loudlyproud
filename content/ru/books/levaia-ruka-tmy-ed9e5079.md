@@ -19,7 +19,8 @@ params:
   page_count: '732'
   publication_year: '2018'
   publishers:
-    - Азбука, Интербук
+    - Азбука
+    - Интербук
   russian_audioversion: false
   russian_translation_status: exists
   short_book_description: Дженли Аи, посол от Лиги Миров, отправляется на скованную льдом планету Гетен, чтобы убедить ее правителей войти в растущую межгалактическую цивилизацию. Но местные жители не доверяют Аи…

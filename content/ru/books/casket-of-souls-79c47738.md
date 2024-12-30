@@ -21,7 +21,8 @@ params:
     - Lynn Flewelling, Линн Флевеллинг
   publication_year: '2012'
   publishers:
-    - Random House, Spectra
+    - Random House
+    - Spectra
   page_count: '496'
   short_book_description: Алек и Серегил — больше, чем представители развращённой знати, которыми они хотят казаться — они служат своей королеве и стране. Но когда они обнаруживают заговор, целью которого является...
   russian_translation_status: exists

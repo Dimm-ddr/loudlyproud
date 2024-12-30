@@ -13,7 +13,8 @@ params:
   isbn: '9785001699842'
   goodreads_link: https://www.goodreads.com/book/show/60176962
   authors:
-    - Arina T︠S︡imering, Oksana Bagriĭ, Арина Цимеринг, Оксана Багрий
+    - Arina T︠S︡imering, Арина Цимеринг
+    - Oksana Bagriĭ, Оксана Багрий
   publication_year: '2022'
   page_count: '509'
   short_book_description: Джакарта — для тех, кто отстреливается от полиции, а не прячется от нее, и самый крутой парень здесь — тот, кто может прострелить тебе голову.Когда вся преступная Джакарта охотится за оттисками...

@@ -21,7 +21,11 @@ params:
   page_count: '320'
   publication_year: '2021'
   publishers:
-    - Destino Infantil & Juvenil, Hachette Childrens Group, Hodder Childrens Books, Popcorn books, Scholastic Incorporated
+    - Destino Infantil & Juvenil
+    - Hachette Childrens Group
+    - Hodder Childrens Books
+    - Popcorn books
+    - Scholastic Incorporated
   russian_audioversion: false
   russian_translation_status: exists
   series: Heartstopper

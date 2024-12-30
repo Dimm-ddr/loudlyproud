@@ -17,7 +17,9 @@ params:
   isbn: '9785699351282'
   goodreads_link: https://www.goodreads.com/book/show/34108291
   authors:
-    - Lynn Flewelling, А. Александрова, Линн Флевелинг, Линн Флевеллинг
+    - Lynn Flewelling, Линн Флевелинг, Линн Флевеллинг
+  translators:
+    - А. Александрова
   publication_year: '2009'
   publishers:
     - Эксмо; Домино

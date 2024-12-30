@@ -16,7 +16,9 @@ params:
   page_count: '480'
   publication_year: '2022'
   publishers:
-    - Doherty Associates, Tor.com, Tordotcom
+    - Doherty Associates
+    - Tor.com
+    - Tordotcom
   russian_audioversion: false
   russian_translation_status: unknown
   series: The Locked Tomb

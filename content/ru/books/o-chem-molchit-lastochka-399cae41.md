@@ -16,7 +16,8 @@ params:
   isbn: '9785045045209'
   goodreads_link: https://www.goodreads.com/book/show/60586323
   authors:
-    - Елена Малисова, Катерина Сильванова
+    - Елена Малисова
+    - Катерина Сильванова
   where_to_get:
     - store: "Amazon"
       link: https://www.amazon.com/%D0%9E-%D1%87%D0%B5%D0%BC-%D0%BC%D0%BE%D0%BB%D1%87%D0%B8%D1%82-%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0-Russian-ebook/dp/B0C4F2NRPS

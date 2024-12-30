@@ -17,7 +17,9 @@ params:
   isbn: '9781526619945'
   goodreads_link: https://www.goodreads.com/book/show/60232655
   authors:
-    - Phil Stamper, Андрей Баннов, Фил Стэмпер
+    - Phil Stamper, Фил Стэмпер
+  translators:
+    - Андрей Баннов
   publication_year: '2019'
   page_count: '352'
   short_book_description: Если ты – сын астронавта, всё может перевернуться с ног на голову с космической скоростью. Кэлу пришлось отказаться от своей мечты ради мечты отца и переехать с семьей в Хьюстон.

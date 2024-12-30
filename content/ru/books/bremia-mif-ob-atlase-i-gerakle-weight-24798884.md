@@ -20,7 +20,8 @@ params:
   page_count: '162'
   publication_year: '2005'
   publishers:
-    - Открытый Мир, Эксмо
+    - Открытый Мир
+    - Эксмо
   russian_audioversion: false
   russian_translation_status: exists
   short_book_description: Роман "Бремя" - это рассказ об истории человечества, с момента зарождения мира и до наших дней. Об истории, которая движется со скоростью света и о месте человека в этом бесконечном движении…

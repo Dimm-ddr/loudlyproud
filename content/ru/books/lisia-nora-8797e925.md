@@ -16,7 +16,7 @@ params:
   page_count: '336'
   publication_year: '2020'
   publishers:
-    - Izdatelstvo «Popcorn Books», Popcorn books
+    - Popcorn books
   russian_audioversion: false
   russian_translation_status: exists
   series: All for the Game
