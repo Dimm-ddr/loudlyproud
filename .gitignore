@@ -51,4 +51,14 @@ static/js/*.js.map
 __pycache__/
 
 # Python tools related files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.tools/**/__pycache__/
+.tools/**/*.pyc
 .tools/.venv/
+.tools/venv/
