@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="bg-background min-h-screen">
+<div class="bg-background dark:bg-background-dark min-h-screen">
   <div class="container mx-auto px-4 py-4">
     {{ partial "hero.html" . }}
 
@@ -79,57 +79,76 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageInfo = document.getElementById('page-info');
     const prevButton = document.getElementById('prev-page');
     const nextButton = document.getElementById('next-page');
-
     let currentPage = 1;
-    let itemsPerPage = parseInt(itemsPerPageSelect.value);
+    let itemsPerPage = parseInt(itemsPerPageSelect?.value || 12);
     const totalItems = parseInt(gallery.dataset.totalItems);
 
-    function updateDisplay() {
-        const bookItems = gallery.getElementsByClassName('book-item');
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-
-        // Hide all books
-        Array.from(bookItems).forEach((item, index) => {
-            item.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
-        });
-
-        // Update pagination info
+    function updatePagination() {
         const totalPages = Math.ceil(totalItems / itemsPerPage);
-        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        const start = (currentPage - 1) * itemsPerPage + 1;
+        const end = Math.min(currentPage * itemsPerPage, totalItems);
+
+        // Update page info text
+        if (pageInfo) {
+            pageInfo.textContent = `${start}-${end} of ${totalItems}`;
+        }
 
         // Update button states
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages;
+        if (prevButton) {
+            prevButton.disabled = currentPage === 1;
+        }
+        if (nextButton) {
+            nextButton.disabled = currentPage === totalPages;
+        }
+
+        // Show/hide books based on current page
+        const books = gallery.getElementsByClassName('book-item');
+        Array.from(books).forEach((book, index) => {
+            book.style.display = (index >= start - 1 && index < end) ? 'block' : 'none';
+        });
     }
 
-    // Items per page change handler
-    itemsPerPageSelect.addEventListener('change', function() {
-        itemsPerPage = parseInt(this.value);
-        currentPage = 1; // Reset to first page
-        updateDisplay();
-    });
+    // Initialize pagination
+    updatePagination();
 
-    // Navigation button handlers
-    prevButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (currentPage > 1) {
-            currentPage--;
-            updateDisplay();
-        }
-    });
+    // Event listeners
+    if (itemsPerPageSelect) {
+        itemsPerPageSelect.addEventListener('change', function() {
+            itemsPerPage = parseInt(this.value);
+            currentPage = 1;
+            updatePagination();
+        });
+    }
 
-    nextButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        const totalPages = Math.ceil(totalItems / itemsPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            updateDisplay();
-        }
-    });
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        });
+    }
 
-    // Initial display
-    updateDisplay();
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            if (currentPage < Math.ceil(totalItems / itemsPerPage)) {
+                currentPage++;
+                updatePagination();
+            }
+        });
+    }
+
+    // Listen for tag filtering events
+    window.addEventListener('booksFiltered', function() {
+        const visibleBooks = Array.from(gallery.getElementsByClassName('book-item'))
+            .filter(book => book.style.display !== 'none');
+
+        // Reset pagination when filters change
+        currentPage = 1;
+        itemsPerPage = parseInt(itemsPerPageSelect?.value || 12);
+        gallery.dataset.totalItems = visibleBooks.length;
+        updatePagination();
+    });
 });
 </script>
 {{ end }}

@@ -1,14 +1,14 @@
 {{ define "main" }}
 <div class="container mx-auto px-4 py-8">
   <div class="max-w-2xl mx-auto">
-    <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
-    <p class="text-lg mb-6">{{ .Params.description }}</p>
+    <h1 class="text-3xl font-bold mb-4 text-primary dark:text-primary-dark">{{ .Title }}</h1>
+    <p class="text-lg mb-6 text-text dark:text-text-dark">{{ .Params.description }}</p>
     <a href="{{ .Params.form_link }}"
        target="_blank"
        rel="noopener noreferrer"
-       class="inline-block px-6 py-3 bg-secondary text-gray-900 rounded-lg font-medium hover:bg-secondary-light transition-colors">
+       class="inline-block px-6 py-3 bg-secondary dark:bg-secondary-dark text-primary dark:text-primary-dark rounded-lg font-medium hover:bg-secondary-light dark:hover:bg-secondary-dark/80 transition-colors">
       {{ .Params.button_text }}
     </a>
   </div>
 </div>
-{{ end }} 
+{{ end }}

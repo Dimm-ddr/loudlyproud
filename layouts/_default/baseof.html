@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ .Site.Language.Lang }}"{{ if .Site.Params.darkMode }} x-data :class="{ 'dark': $store.theme.isDark }"{{ end }}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,43 @@
     <!-- Load Alpine.js -->
     <script defer src="/js/alpine.js"></script>
 
-    <!-- Alpine.js setup -->
+    {{ if .Site.Params.darkMode }}
+    <!-- Theme Management -->
     <script>
+      // Check for saved theme preference, otherwise use system preference
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      // Initialize Alpine.js theme store
       document.addEventListener('alpine:init', () => {
+        Alpine.store('theme', {
+          isDark: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+          toggle() {
+            this.isDark = !this.isDark
+            localStorage.theme = this.isDark ? 'dark' : 'light'
+            if (this.isDark) {
+              document.documentElement.classList.add('dark')
+            } else {
+              document.documentElement.classList.remove('dark')
+            }
+          },
+        })
+
+        // Watch for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!('theme' in localStorage)) {
+            Alpine.store('theme').isDark = e.matches
+            if (e.matches) {
+              document.documentElement.classList.add('dark')
+            } else {
+              document.documentElement.classList.remove('dark')
+            }
+          }
+        })
+
         Alpine.store('tagManager', {
           activeTags: [],
 
@@ -50,6 +84,7 @@
         })
       })
     </script>
+    {{ end }}
 
     <!-- Core resources -->
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">

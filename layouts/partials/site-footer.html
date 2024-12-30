@@ -1,12 +1,25 @@
-<footer class="bg-secondary text-gray-700 py-4">
-  <div class="container mx-auto px-4 text-center">
-    <div class="mb-4">
-      <a href="https://t.me/loudlyProud" class="styled-link hover:text-gray-900">
-        {{ i18n "telegram_updates" }}
-      </a>
+<footer class="bg-secondary{{ if .Site.Params.darkMode }} dark:bg-secondary-dark{{ end }} text-gray-700{{ if .Site.Params.darkMode }} dark:text-gray-300{{ end }} py-4">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center space-y-4">
+      <!-- Theme Toggle -->
+      {{ if .Site.Params.darkMode }}
+      <div class="mb-2">
+        {{ partial "theme-toggle.html" . }}
+      </div>
+      {{ end }}
+
+      <!-- Telegram Link -->
+      <div>
+        <a href="https://t.me/loudlyProud"
+           class="styled-link hover:text-gray-900{{ if .Site.Params.darkMode }} dark:hover:text-gray-100{{ end }}">
+          {{ i18n "telegram_updates" }}
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-sm">
+        &copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" }}
+      </p>
     </div>
-    <p class="text-sm">
-      &copy; {{ now.Format "2006" }} {{ .Site.Title }}. {{ i18n "all_rights_reserved" }}
-    </p>
   </div>
 </footer>

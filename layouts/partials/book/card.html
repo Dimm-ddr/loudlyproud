@@ -1,12 +1,12 @@
 {{ define "getTranslationStatusColor" }}
-    {{- if eq . "completed" -}}text-green-600
-    {{- else if eq . "in_progress" -}}text-yellow-600
-    {{- else if eq . "planned" -}}text-blue-600
-    {{- else -}}text-gray-600
+    {{- if eq . "completed" -}}text-green-600 dark:text-green-400
+    {{- else if eq . "in_progress" -}}text-yellow-600 dark:text-yellow-400
+    {{- else if eq . "planned" -}}text-blue-600 dark:text-blue-400
+    {{- else -}}text-gray-600 dark:text-gray-400
     {{- end -}}
 {{ end }}
 
-<article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col"
+<article class="book-card bg-secondary dark:bg-secondary-dark shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col"
          {{ with .File }}data-slug="{{ .ContentBaseName }}"{{ end }}>
 
     {{ partial "book/components/cover-image.html" .Params }}
@@ -16,7 +16,7 @@
         {{ partial "book/components/authors.html" .Params }}
 
         {{ with .Params.short_book_description }}
-        <div class="prose prose-sm mb-4">
+        <div class="prose prose-sm dark:prose-invert mb-4">
             {{ . | markdownify }}
         </div>
         {{ end }}

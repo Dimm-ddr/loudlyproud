@@ -1,1 +1,3 @@
-baseURL = "https://loudlyproud.netlify.app/" 
+baseURL = "https://loudlyproud.netlify.app/"
+[params]
+  darkMode = false
