@@ -3,13 +3,13 @@
   type="button"
   x-data="{ darkMode: $store.theme.isDark }"
   @click="$store.theme.toggle()"
-  class="p-2 rounded-lg hover:bg-light-gray dark:hover:bg-light-gray-dark transition-colors"
+  class="p-2 rounded-lg hover:bg-light-gray{{ if .Site.Params.darkMode }} dark:hover:bg-light-gray-dark{{ end }} transition-colors"
 >
   <span class="sr-only">Toggle theme</span>
   <!-- Sun icon -->
   <svg
     x-show="darkMode"
-    class="w-5 h-5 text-primary dark:text-primary-dark"
+    class="w-5 h-5 text-primary{{ if .Site.Params.darkMode }} dark:text-primary-dark{{ end }}"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -26,7 +26,7 @@
   <!-- Moon icon -->
   <svg
     x-show="!darkMode"
-    class="w-5 h-5 text-primary dark:text-primary-dark"
+    class="w-5 h-5 text-primary{{ if .Site.Params.darkMode }} dark:text-primary-dark{{ end }}"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
