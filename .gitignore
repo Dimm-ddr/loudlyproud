@@ -49,3 +49,16 @@ settings.json
 # Generated files
 static/js/*.js
 static/js/*.js.map
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.tools/**/__pycache__/
+.tools/**/*.pyc
+.tools/.venv/
+.tools/venv/
