@@ -1,0 +1,99 @@
+{{ define "book-metadata" }}
+<div class="book-metadata mb-4">
+  <!-- Authors -->
+  {{ with .Params.authors }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "authors" }}:</span> {{ delimit . ", " }}
+  </div>
+  {{ end }}
+
+  <!-- Translators -->
+  {{ with .Params.translators }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "translators" }}:</span> {{ delimit . ", " }}
+  </div>
+  {{ end }}
+
+  <!-- Series -->
+  {{ with .Params.series }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "series" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- Page Count -->
+  {{ with .Params.page_count }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "page_count" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- Publication Year -->
+  {{ with .Params.publication_year }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "publication_year" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- ISBN -->
+  {{ with .Params.isbn }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "isbn" }}:</span> {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- Russian Translation Status -->
+  {{ with .Params.russian_translation_status }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "russian_translation" }}:</span> {{ i18n (printf "translation_status_%s" .) }}
+  </div>
+  {{ end }}
+
+  <!-- Languages -->
+  {{ with .Params.languages }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "languages" }}:</span> {{ delimit . ", " }}
+  </div>
+  {{ end }}
+
+  <!-- Russian Audioversion -->
+  {{ with .Params.russian_audioversion }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "russian_audioversion" }}:</span> {{ i18n (printf "translation_status_%s" .) }}
+  </div>
+  {{ end }}
+
+  <!-- Buy Link -->
+  {{ with .Params.buy_link }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "buy_link" }}:</span> <a href="{{ . }}" class="styled-link">{{ . }}</a>
+  </div>
+  {{ end }}
+
+  <!-- Goodreads Link -->
+  {{ with .Params.goodreads_link }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "goodreads_link" }}:</span> <a href="{{ . }}" class="styled-link">{{ . }}</a>
+  </div>
+  {{ end }}
+
+  <!-- Publishers -->
+  {{ with .Params.publishers }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "publishers" }}:</span> {{ delimit . ", " }}
+  </div>
+  {{ end }}
+
+  <!-- Where to Get -->
+  {{ with .Params.where_to_get }}
+  <div class="mb-2">
+    <span class="font-black">{{ i18n "where_to_get" }}:</span>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .link }}" class="styled-link">{{ .store }}</a> - {{ .date }}</li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>
+{{ end }} 

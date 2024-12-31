@@ -18,6 +18,44 @@
         {{ partial "tag-manager.html" . }}
       </div>
 
+      <!-- Tag Manager -->
+      <div class="mt-4">
+        {{ partial "tag-manager.html" . }}
+      </div>
+
+      <!-- Tag Filter Section -->
+      <div x-data="{
+        showTagCloud: false,
+        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
+          {{- range $index, $tag := $tags -}}
+            {{- if $index }}, {{ end -}}
+            `{{- $tag.Page.Title -}}`
+          {{- end -}}]
+      }" class="mb-6">
+        <button @click="showTagCloud = !showTagCloud"
+                class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
+          <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
+          <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
+        </button>
+
+        <div x-show="showTagCloud"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 transform -translate-y-2"
+             x-transition:enter-end="opacity-100 transform translate-y-0"
+             class="mt-4">
+          <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
+          <div class="flex flex-wrap gap-2">
+            {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+              {{ partial "tag-component.html" (dict
+                "tag" .Page.Title
+                "clickable" true
+                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                "count" .Count
+              ) }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
       <!-- Tag Filter Section -->
       <div x-data="{
         showTagCloud: false,
@@ -72,10 +110,13 @@
 </div>
 
 <!-- Add pagination initialization script -->
+<!-- Add pagination initialization script -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.getElementById('book-gallery');
     const itemsPerPageSelect = document.getElementById('items-per-page');
+    const pageInfo = document.getElementById('page-info');
     const pageInfo = document.getElementById('page-info');
     const prevButton = document.getElementById('prev-page');
     const nextButton = document.getElementById('next-page');
