@@ -5,38 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Content Manager</title>
-
-    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Admin Styles -->
-    <link rel="stylesheet" href="/admin/admin.css">
   </head>
   <body>
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
-
-    <!-- Custom widgets -->
-    <script src="/admin/widgets/book-widgets.js"></script>
-
     <script>
-      // Wait for CMS to be ready
-      window.addEventListener('load', function() {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-
-        // Initialize preview styles if needed
-        if (window.CMSPreviewStyles && typeof window.CMSPreviewStyles.init === 'function') {
-          window.CMSPreviewStyles.init();
-        }
-      });
+      // Initialize Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
     </script>
+    <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
+    <script src="auth-handler.js"></script>
+    <script src="preview.js"></script>
   </body>
 </html>

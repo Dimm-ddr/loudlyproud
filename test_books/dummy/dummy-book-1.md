@@ -35,7 +35,7 @@ params:
     - family
     - murder
     - "urban fantasy"
-    - "LGBTQ+ activists"
+    - "LGBTQIA+ activists"
     - autobiography
     - boys
     - teenage
@@ -96,7 +96,7 @@ params:
     - "juvenile fiction"
     - "high fantasy"
     - identity
-    - "LGBTQ+"
+    - "LGBTQIA+"
     - "college students"
     - Russia
     - adventure
@@ -112,7 +112,7 @@ params:
     - anthologies
     - Iran
     - isolation
-    - "LGBTQ+ novels before Stonewall"
+    - "LGBTQIA+ novels before Stonewall"
     - novels
     - dragons
     - Detroit

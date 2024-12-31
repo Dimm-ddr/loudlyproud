@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
               <img class="w-full h-full object-contain transition-opacity duration-300"
                    src="${book.cover || "/images/placeholder.jpg"}"
                    onerror="this.onerror=null; this.src='/images/placeholder.jpg'"
-                   alt="${book.bookTitle}"
+                   alt="${book.book_title}"
                    loading="lazy">
             </a>
           </div>
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="p-4 flex flex-col flex-grow">
             <h2 class="text-xl font-black mb-2 text-primary">
               <a href="${book.buy_link || "#"}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
-                ${book.bookTitle}
+                ${book.book_title}
               </a>
             </h2>
             <!-- Tags -->

@@ -1,0 +1,47 @@
+[flake8]
+# Target the .tools directory specifically
+filename = .tools/**/*.py
+
+max-line-length = 80
+
+# Exclude common directories that shouldn't be checked
+exclude =
+    .git,
+    __pycache__,
+    .tools/.venv,
+    .tools/build,
+    .tools/dist
+
+# Select specific error codes to enable, including bugbear's checks
+select = C,E,F,W,B,B9,B950
+
+# Ignore some errors that are too strict or commonly accepted to ignore
+ignore =
+    # Line break before binary operator
+    W503,
+    # Line break after binary operator
+    W504,
+    # Module level import not at top of file - sometimes needed for conditional imports
+    E402,
+    # Do not assign a lambda expression, use a def
+    E731,
+    # Too many leading '#' for block comment
+    E266,
+    # Disable E501 in favor of B950 (soft line length checking)
+    E501,
+    # Whitespace before ':' - conflicts with Black
+    E203
+
+# Bugbear specific settings
+# Maximum McCabe complexity allowed for functions
+max-complexity = 15
+
+# Additional bugbear options
+[flake8:local-plugins]
+extension =
+    B9 = flake8_bugbear:BugBearChecker
+
+# Specific bugbear settings
+[flake8-bugbear]
+# Enforce string formatting with f-strings
+extend-immutable-calls = pathlib.Path, Path

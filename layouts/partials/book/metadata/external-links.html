@@ -1,0 +1,26 @@
+<div class="space-y-2">
+    {{ with .goodreads_link }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "goodreads_link" }}:</span>
+        <a href="{{ . }}" class="styled-link">{{ . }}</a>
+    </div>
+    {{ end }}
+    {{ with .publishers }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "publishers" }}:</span> {{ delimit . ", " }}
+    </div>
+    {{ end }}
+    {{ with .where_to_get }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "where_to_get" }}:</span>
+        <ul class="mt-2 space-y-1">
+            {{ range . }}
+            <li>
+                <a href="{{ .link }}" class="styled-link">{{ .store }}</a>
+                {{ with .date }} - {{ . }}{{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</div>

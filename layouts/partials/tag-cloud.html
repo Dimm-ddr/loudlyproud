@@ -1,5 +1,9 @@
+{{ $minCount := 1 }}  {{/* Minimum number of occurrences to show in cloud */}}
+{{ $maxTags := 8 }} {{/* Maximum number of tags to show */}}
+
 <div x-data="{ isOpen: false }" class="mb-8">
     <button
+        type="button"
         @click="isOpen = !isOpen"
         class="flex items-center space-x-2 text-2xl font-bold mb-4 hover:text-accent1"
     >
@@ -22,15 +26,42 @@
         x-transition:enter-end="opacity-100 transform translate-y-0"
         class="flex flex-wrap gap-2"
     >
-        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            {{ partial "tag-component.html" (dict
-                "tag" $name
-                "clickable" true
-            ) }}
+        {{ $tagCounts := slice }}
+        {{ range $taxonomyTerm, $taxonomy := .Site.Taxonomies.tags }}
+            {{ $count := $taxonomy.Count }}
+            {{ if ge $count $minCount }}
+                {{ $tagCounts = $tagCounts | append (dict "term" $taxonomyTerm "count" $count) }}
+            {{ end }}
+        {{ end }}
+
+        {{ $sortedTags := sort $tagCounts "count" "desc" }}
+        {{ $limitedTags := first $maxTags $sortedTags }}
+
+        {{ range $tagInfo := $limitedTags }}
+            {{ $taxonomyTerm := $tagInfo.term }}
+            {{ $count := $tagInfo.count }}
+
+            {{/* Look up the tag in the registry using the taxonomy term */}}
+            {{ $registryTag := "" }}
+            {{ range $tag, $data := site.Data.tags.tags }}
+                {{ if eq $tag (replace $taxonomyTerm "-" " ") }}
+                    {{ $registryTag = $tag }}
+                    {{ break }}
+                {{ end }}
+            {{ end }}
+
+            {{ if $registryTag }}
+                {{ partial "tag-component.html" (dict
+                    "tag" $registryTag
+                    "clickable" true
+                    "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+                    "count" $count
+                ) }}
+            {{ end }}
         {{ end }}
 
         {{ if not .Site.Taxonomies.tags }}
             <p class="text-gray-600 italic">{{ i18n "no_tags_available" }}</p>
         {{ end }}
     </div>
-</div> 
+</div>

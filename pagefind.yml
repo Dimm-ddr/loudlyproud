@@ -1,0 +1,10 @@
+site: public
+output_subdir: search
+include_paths:
+  - tags
+  - books
+excludes:
+  - _*
+  - assets/*
+  - static/*
+

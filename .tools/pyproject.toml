@@ -1,0 +1,12 @@
+[tool.pytest]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+omit = [
+    "*/tests/*",
+    "*/__init__.py",
+    "*/test_*.py",
+    "*/conftest.py"
+]
+[tool.coverage.paths]
+source = ["tags"]

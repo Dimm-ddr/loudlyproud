@@ -17,7 +17,7 @@
 <section id="book-gallery"
          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {{ range .books }}
-        {{ partial "book-card.html" . }}
+        {{ partial "book/card.html" . }}
     {{ end }}
 </section>
 
@@ -62,4 +62,4 @@
 
         new Pagination(elements, config);
     });
-</script> 
+</script>

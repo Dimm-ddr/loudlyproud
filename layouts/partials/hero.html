@@ -1,20 +1,20 @@
 {{ $heroContent := .Site.GetPage "hero" }}
 
 <section class="hero relative bg-cover bg-center" style="background-image: url('{{ "images/hero_image.jpg" | relURL }}'); height: 234px;">
-  <div class="absolute inset-0 bg-[#31393c] opacity-80"></div>
+  <div class="absolute inset-0 bg-[#31393c] dark:bg-[#1a1a1a] opacity-80"></div>
   <div class="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
     <div class="max-w-xl mx-auto text-center">
-      <h1 class="text-4xl font-black text-secondary mb-1">
+      <h1 class="text-4xl font-black text-secondary dark:text-secondary-dark mb-1">
         {{ $heroContent.Params.title }}
       </h1>
-      <div class="text-xl font-semibold text-white mb-2">
+      <div class="text-xl font-semibold text-white dark:text-gray-200 mb-2">
         {{ $heroContent.Params.subtitle }}
       </div>
-      <p class="text-lg text-[#E5E7EB] font-normal mb-6">
+      <p class="text-lg text-[#E5E7EB] dark:text-gray-300 font-normal mb-6">
         {{ $heroContent.Params.description }}
       </p>
       <a href="{{ "feedback" | relLangURL }}"
-         class="inline-block px-6 py-2 bg-secondary text-gray-900 rounded-lg font-medium hover:bg-secondary-light transition-colors">
+         class="inline-block px-6 py-2 bg-secondary dark:bg-secondary-dark text-primary dark:text-primary-dark rounded-lg font-medium hover:bg-secondary-light dark:hover:bg-secondary-dark/80 transition-colors">
         {{ i18n "share_feedback" }}
       </a>
     </div>

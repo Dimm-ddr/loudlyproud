@@ -9,11 +9,11 @@ const SlugGeneratorWidget = createClass({
 
   componentDidMount() {
     if (!this.props.value) {
-      const bookTitle = document.querySelector(
-        '[data-field-name="Params.bookTitle "]',
+      const book_title = document.querySelector(
+        '[data-field-name="Params.book_title "]',
       )?.value;
-      if (bookTitle) {
-        const newSlug = this.generateSlug(bookTitle);
+      if (book_title) {
+        const newSlug = this.generateSlug(book_title);
         this.setState({ value: newSlug });
         this.props.onChange(newSlug);
       }
@@ -102,10 +102,10 @@ const SlugGeneratorWidget = createClass({
             type: "button",
             className: "regenerate-button",
             onClick: () => {
-              const bookTitle = document.querySelector(
-                '[data-field-name="Params.bookTitle "]',
+              const book_title = document.querySelector(
+                '[data-field-name="Params.book_title "]',
               )?.value;
-              const newSlug = this.generateSlug(bookTitle);
+              const newSlug = this.generateSlug(book_title);
               this.setState({ value: newSlug });
               this.props.onChange(newSlug);
             },
@@ -116,7 +116,7 @@ const SlugGeneratorWidget = createClass({
   },
 });
 
-const BookTitleWidget = createClass({
+const book_titleWidget = createClass({
   handleChange(e) {
     const value = e.target.value;
     this.props.onChange(value);
@@ -148,4 +148,4 @@ const BookTitleWidget = createClass({
 });
 
 CMS.registerWidget("slug-generator", SlugGeneratorWidget);
-CMS.registerWidget("book-title", BookTitleWidget);
+CMS.registerWidget("book-title", book_titleWidget);

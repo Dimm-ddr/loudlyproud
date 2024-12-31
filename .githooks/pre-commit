@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Check if any tag-related files are being committed
+tag_files_changed=$(git diff --cached --name-only | grep -E "data/tags/(mapping\.json|colors\.toml|tag_normalization\.yaml)")
+
+if [ -n "$tag_files_changed" ]; then
+    echo "Tag-related files have changed. Checking if unified tags need updating..."
+    python3 .tools/tags/check_unified.py
+    if [ $? -ne 0 ]; then
+        echo "ERROR: Unified tags file needs to be regenerated!"
+        echo "Please run: python3 .tools/tags/generate_unified.py"
+        exit 1
+    fi
+fi
+
+exit 0
