@@ -13,7 +13,7 @@ from .file_ops import (
     load_special_display_names,
 )
 from .valid_tags import get_valid_tags
-from .transform import get_internal_name
+from .transform import get_internal_name, get_display_name
 from .common import (
     MAPPING_FILE,
     PATTERNS_FILE,
@@ -102,6 +102,9 @@ def clean_frontmatter(
     to_remove_file: Path = TO_REMOVE_FILE,
 ) -> None:
     """Clean up tags in book files."""
+    total_files = 0
+    changed_files = 0
+
     for locale_dir in content_dir.iterdir():
         if not locale_dir.is_dir():
             continue
@@ -111,11 +114,16 @@ def clean_frontmatter(
             continue
 
         for book_file in books_dir.glob("*.md"):
-            normalizer.stats.total_files += 1
+            total_files += 1
             changed, original_tags = process_book_file(book_file, normalizer)
             if changed:
-                normalizer.stats.files_with_changes += 1
+                changed_files += 1
                 print(f"Updated tags in: {book_file.relative_to(content_dir)}")
+
+    if changed_files == 0:
+        print("\nNo changes were needed in any files.")
+    else:
+        print(f"\nUpdated {changed_files} out of {total_files} files.")
 
 
 def process_book_file(
@@ -140,6 +148,9 @@ def process_book_file(
         if not normalized_tags:  # Check again after filtering
             return False, []
 
+        # Convert normalized tags to their display form
+        display_tags = [get_display_name(tag, mapping_file) for tag in normalized_tags]
+
         original_set = {t.lower() for t in tags if t is not None}
         normalized_set = {t.lower() for t in normalized_tags if t is not None}
 
@@ -150,7 +161,7 @@ def process_book_file(
                 return False, []
 
             frontmatter, body = result
-            frontmatter["params"]["tags"] = normalized_tags
+            frontmatter["params"]["tags"] = display_tags
             if write_frontmatter(file_path, frontmatter, body):
                 return True, tags
             return False, tags
