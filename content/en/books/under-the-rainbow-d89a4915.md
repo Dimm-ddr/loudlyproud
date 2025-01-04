@@ -19,7 +19,7 @@ params:
   russian_translation_status: unknown
   short_book_description: When a group of social activists arrive in a small town, the lives and beliefs of residents and outsiders alike are upended, in this wry, embracing novel. Big Burr, Kansas, is the kind of place where everyone seems to know everyone, and everyone shares the same values-or keeps their opinions to themselves...
   tags:
-    - Americans
+    - american
     - Kansas
     - LGBTQIA+
     - adult fiction
@@ -36,4 +36,3 @@ params:
     - small cities
     - teenagers
 ---
-

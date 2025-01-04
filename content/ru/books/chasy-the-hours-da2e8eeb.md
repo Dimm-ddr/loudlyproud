@@ -41,7 +41,7 @@ params:
     - accessibility
     - diseases
     - literary
-    - Americans
+    - american
     - male-female romance
     - novels
     - psychological fiction

@@ -35,7 +35,7 @@ params:
     - Africa
     - African American
     - African American authors
-    - Americans
+    - american
     - LGBTQIA+
     - United States
     - abuse

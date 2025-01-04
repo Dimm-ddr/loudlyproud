@@ -30,7 +30,7 @@ params:
   russian_translation_status: exists
   short_book_description: Американская писательница Ханья Янагихара создала необычный роман, где и о страшном, и о радостном говорится без лишнего надрыва и сентиментальности. Четверо друзей - талантливый архитектор...
   tags:
-    - Americans
+    - american
     - Brooklyn
     - LGBTQIA+
     - New York
@@ -56,4 +56,3 @@ params:
     - queer
     - London
 ---
-

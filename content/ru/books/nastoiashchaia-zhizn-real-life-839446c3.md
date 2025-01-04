@@ -31,7 +31,7 @@ params:
   short_book_description: Держать людей на расстоянии уже давно вошло у Уолласа в привычку. Нет, он не социофоб. Просто так безопасней. Он — первый за несколько десятков лет черный студент на факультете биохимии в Университете Среднего Запада...
   tags:
     - African American
-    - Americans
+    - american
     - LGBTQIA+
     - gay
     - audiobook
@@ -45,4 +45,3 @@ params:
     - race
     - relationships
 ---
-
