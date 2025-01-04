@@ -22,7 +22,7 @@ params:
   short_book_description: On a beach in the Dominican Republic, a doomed relationship flounders. In the heat of a hospital laundry room in New Jersey, a woman does her lover’s washing and thinks about his wife.
   tags:
     - american
-    - Hispanic Americans
+    - Hispanic American
     - adult fiction
     - contemporary
     - accessibility

@@ -28,9 +28,9 @@ params:
   series: Darius the Great
   short_book_description: В отличие от своего тезки-царя Дарий вовсе не Великий. Он наполовину перс, но всю жизнь прожил в Портленде.
   tags:
-    - Asian Americans
+    - Asian American
     - Iran
-    - Iranian Americans
+    - Iranian American
     - LGBTQIA+
     - audiobook
     - children's fiction
@@ -44,4 +44,3 @@ params:
     - realistic fiction
     - young adult (YA)
 ---
-

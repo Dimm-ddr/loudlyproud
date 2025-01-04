@@ -32,7 +32,7 @@ params:
     - death
     - friendship
     - gay
-    - Hispanic Americans
+    - Hispanic American
     - juvenile fiction
     - LGBTQIA+
     - love
@@ -42,4 +42,3 @@ params:
     - romance
     - young adult (YA)
 ---
-

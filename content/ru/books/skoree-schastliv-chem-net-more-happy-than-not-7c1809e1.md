@@ -38,7 +38,7 @@ params:
     - juvenile fiction
     - love
     - magic
-    - Hispanic Americans
+    - Hispanic American
     - teenagers
     - queer
     - romance
@@ -50,4 +50,3 @@ params:
     - young adult (YA)
     - authors
 ---
-

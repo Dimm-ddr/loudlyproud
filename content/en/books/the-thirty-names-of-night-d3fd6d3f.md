@@ -22,7 +22,7 @@ params:
     - LGBTQIA+
     - Lambda Literary Awards
     - Stonewall Book Awards
-    - Syrian Americans
+    - Syrian American
     - art
     - contemporary
     - death
@@ -36,4 +36,3 @@ params:
     - queer
     - transgender
 ---
-

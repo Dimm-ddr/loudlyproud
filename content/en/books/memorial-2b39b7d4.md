@@ -21,7 +21,7 @@ params:
   tags:
     - African American
     - american
-    - Japanese Americans
+    - Japanese American
     - LGBTQIA+
     - Stonewall Book Awards
     - audiobook

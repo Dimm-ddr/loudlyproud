@@ -38,7 +38,7 @@ params:
     - British literature
     - school
     - abuse
-    - Asian Americans
+    - Asian American
     - social commentary
     - coming of age
     - contemporary
