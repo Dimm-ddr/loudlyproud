@@ -10,9 +10,16 @@ from .file_ops import (
     extract_tags_from_file,
     split_frontmatter,
     write_frontmatter,
+    load_special_display_names,
 )
 from .valid_tags import get_valid_tags
-from .common import MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE
+from .transform import get_internal_name
+from .common import (
+    MAPPING_FILE,
+    PATTERNS_FILE,
+    TO_REMOVE_FILE,
+    SPECIAL_DISPLAY_NAMES_FILE,
+)
 
 
 def get_removable_mapping_keys(
@@ -65,13 +72,22 @@ def get_removable_color_tags(
     # Load files
     colors = load_colors_file(colors_file)
     valid_tags = get_valid_tags(mapping_file)
+    special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
+    display_to_internal = {v: k for k, v in special_display_names.items()}
 
     # Find removable tags by category
     removable = defaultdict(list)
 
     for category, tags in colors.items():
         for tag in tags:
-            if tag.lower() not in valid_tags:
+            # Get internal name for the tag
+            if tag in display_to_internal:
+                internal = display_to_internal[tag]
+            else:
+                internal = get_internal_name(tag)
+
+            # Check if internal form exists in valid tags
+            if internal not in valid_tags:
                 removable[category].append(tag)
 
     # Sort lists within each category

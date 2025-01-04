@@ -22,6 +22,7 @@ from .file_ops import (
 )
 from .normalize import TagNormalizer
 from .transform import get_internal_name
+from .valid_tags import get_valid_tags
 
 
 class ValidationReport(TypedDict):
@@ -44,21 +45,12 @@ def validate_mapping_against_colors(
         Tuple of (missing_in_colors, missing_in_mapping) sets
     """
     # Load files
-    mapping_data = load_tags_map(mapping_file)
     colors_data = load_colors_file(colors_file)
     special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
-
-    # Create reverse mapping for special display names
     display_to_internal = {v: k for k, v in special_display_names.items()}
 
-    # Get all valid tags from mapping (values, not keys)
-    mapping_tags = set()
-    for value in mapping_data.values():
-        if value is not None:
-            if isinstance(value, list):
-                mapping_tags.update(value)
-            else:
-                mapping_tags.add(value)
+    # Get valid tags from mapping values
+    valid_tags = get_valid_tags(mapping_file)
 
     # Get all internal names from colors.toml
     colors_internal_names = set()
@@ -70,18 +62,9 @@ def validate_mapping_against_colors(
             else:
                 colors_internal_names.add(get_internal_name(tag))
 
-    # Convert mapping tags to internal names
-    mapping_internal_names = set()
-    for tag in mapping_tags:
-        # Check if tag has a special internal name
-        if tag in display_to_internal:
-            mapping_internal_names.add(display_to_internal[tag])
-        else:
-            mapping_internal_names.add(get_internal_name(tag))
-
     # Find missing tags
-    missing_in_colors = mapping_internal_names - colors_internal_names
-    missing_in_mapping = colors_internal_names - mapping_internal_names
+    missing_in_colors = valid_tags - colors_internal_names
+    missing_in_mapping = colors_internal_names - valid_tags
 
     return missing_in_colors, missing_in_mapping
 
@@ -121,29 +104,9 @@ def validate_tags(
     special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
     display_to_internal = {v: k for k, v in special_display_names.items()}
 
-    # Load colors data and mapping
+    # Load colors data and get valid tags
     colors_data = load_colors_file(colors_file)
-    mapping_data = load_tags_map(mapping_file)
-
-    # Get all valid mapped tags (both keys and values)
-    valid_mapped_tags = set()
-    for key, value in mapping_data.items():
-        if value is not None:
-            if isinstance(value, list):
-                for v in value:
-                    if v in display_to_internal:
-                        valid_mapped_tags.add(display_to_internal[v])
-                    else:
-                        valid_mapped_tags.add(get_internal_name(v))
-            else:
-                if value in display_to_internal:
-                    valid_mapped_tags.add(display_to_internal[value])
-                else:
-                    valid_mapped_tags.add(get_internal_name(value))
-        if key in display_to_internal:
-            valid_mapped_tags.add(display_to_internal[key])
-        else:
-            valid_mapped_tags.add(get_internal_name(key))
+    valid_tags = get_valid_tags(mapping_file)
 
     # Get all colored tags
     colored_tags = set()
@@ -181,7 +144,7 @@ def validate_tags(
         if internal in removable_tags:
             continue
         # Check if the tag is mapped
-        if internal not in valid_mapped_tags:
+        if internal not in valid_tags:
             unmapped_tags.append(internal)
         # Check for uncolored tags only if they are mapped
         elif internal not in colored_tags:
