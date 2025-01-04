@@ -32,7 +32,7 @@ params:
     - Greece
     - LGBTQIA+
     - Stonewall Book Awards
-    - greek mythology
+    - Greek mythology
     - friendship
     - historical
     - fantasy

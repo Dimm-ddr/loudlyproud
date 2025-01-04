@@ -29,7 +29,7 @@ params:
     - Atlas
     - Greece
     - fantasy
-    - greek mythology
+    - Greek mythology
     - literary
     - mental health
     - psychological fiction

@@ -41,10 +41,11 @@ params:
     - accessibility
     - diseases
     - literary
-    - american
+    - American
     - male-female romance
     - novels
     - psychological fiction
     - relationships
     - romance
 ---
+

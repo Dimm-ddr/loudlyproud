@@ -151,10 +151,17 @@ def process_book_file(
         # Convert normalized tags to their display form
         display_tags = [get_display_name(tag, mapping_file) for tag in normalized_tags]
 
+        # Compare both the normalized form (for actual tag changes) and display form (for capitalization)
         original_set = {t.lower() for t in tags if t is not None}
         normalized_set = {t.lower() for t in normalized_tags if t is not None}
+        needs_normalization = original_set != normalized_set
 
-        if original_set != normalized_set:
+        # Check if any tags need display name updates
+        original_tags_set = set(t for t in tags if t is not None)
+        display_tags_set = set(display_tags)
+        needs_display_update = original_tags_set != display_tags_set
+
+        if needs_normalization or needs_display_update:
             content = file_path.read_text(encoding="utf-8")
             if not (result := split_frontmatter(content)):
                 print(f"Failed to parse frontmatter in {file_path}")
