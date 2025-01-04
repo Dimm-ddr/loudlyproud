@@ -1,7 +1,7 @@
 ["Awards and Recognition"]
 "lambda-literary-awards" = "aubergine"
-"stonewall-book-awards" = "aubergine"
 "new-york-times-bestseller" = "aubergine"
+"stonewall-book-awards" = "aubergine"
 
 ["Cultural and Geographic"]
 "africa" = "deep-blue"
@@ -28,9 +28,9 @@
 "georgia" = "deep-blue"
 "german-literature" = "deep-blue"
 "germany" = "deep-blue"
+"greece" = "deep-blue"
 "greek" = "deep-blue"
 "greek-mythology" = "deep-blue"
-"greece" = "deep-blue"
 "haiti" = "deep-blue"
 "hispanic-american" = "deep-blue"
 "hollywood" = "deep-blue"
@@ -57,6 +57,7 @@
 "russian-literature" = "deep-blue"
 "san-francisco" = "deep-blue"
 "scotland" = "deep-blue"
+"small-cities" = "deep-blue"
 "spanish-literature" = "deep-blue"
 "syrian-american" = "deep-blue"
 "tennessee" = "deep-blue"
@@ -65,7 +66,6 @@
 "united-states" = "deep-blue"
 "venice" = "deep-blue"
 "washington-dc" = "deep-blue"
-"small-cities" = "deep-blue"
 
 ["Family Dynamics"]
 "dysfunctional-families" = "amber"
@@ -120,11 +120,8 @@
 "weird" = "forest"
 
 ["Identity and Relationships"]
-"black" = "rust"
-"lgbtqia-plus" = "rust"
-"lgbtqia-plus-activists" = "rust"
-"lgbtqia-plus-novels-before-stonewall" = "rust"
 "attitude" = "rust"
+"black" = "rust"
 "body-image" = "rust"
 "coming-out" = "rust"
 "cross-dressers" = "rust"
@@ -134,14 +131,17 @@
 "female-female-romance" = "rust"
 "feminism" = "rust"
 "gay" = "rust"
+"gay-parent-families" = "rust"
 "gay-teenagers" = "rust"
 "gays-writings" = "rust"
-"gay-parent-families" = "rust"
 "gender-identity" = "rust"
 "gender-studies" = "rust"
 "genderqueer" = "rust"
 "girls" = "rust"
 "lesbian" = "rust"
+"lgbtqia-plus" = "rust"
+"lgbtqia-plus-activists" = "rust"
+"lgbtqia-plus-novels-before-stonewall" = "rust"
 "male" = "rust"
 "male-female-romance" = "rust"
 "male-male-romance" = "rust"

@@ -61,25 +61,23 @@ def validate_mapping_against_colors(
                 mapping_tags.add(value)
 
     # Get all internal names from colors.toml
-    colors_internal_names = {
-        (
-            get_internal_name(tag)
-            if tag not in display_to_internal
-            else display_to_internal[tag]
-        )
-        for category in colors_data.values()
-        for tag in category
-    }
+    colors_internal_names = set()
+    for category in colors_data.values():
+        for tag in category:
+            # Check if tag has a special internal name
+            if tag in display_to_internal:
+                colors_internal_names.add(display_to_internal[tag])
+            else:
+                colors_internal_names.add(get_internal_name(tag))
 
     # Convert mapping tags to internal names
-    mapping_internal_names = {
-        (
-            get_internal_name(tag)
-            if tag not in display_to_internal
-            else display_to_internal[tag]
-        )
-        for tag in mapping_tags
-    }
+    mapping_internal_names = set()
+    for tag in mapping_tags:
+        # Check if tag has a special internal name
+        if tag in display_to_internal:
+            mapping_internal_names.add(display_to_internal[tag])
+        else:
+            mapping_internal_names.add(get_internal_name(tag))
 
     # Find missing tags
     missing_in_colors = mapping_internal_names - colors_internal_names
@@ -120,6 +118,8 @@ def validate_tags(
 
     # Load removable tags (already lowercase from file)
     removable_tags = load_removable_tags(to_remove_file)
+    special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
+    display_to_internal = {v: k for k, v in special_display_names.items()}
 
     # Load colors data and mapping
     colors_data = load_colors_file(colors_file)
@@ -130,15 +130,29 @@ def validate_tags(
     for key, value in mapping_data.items():
         if value is not None:
             if isinstance(value, list):
-                valid_mapped_tags.update(v.lower() for v in value)
+                for v in value:
+                    if v in display_to_internal:
+                        valid_mapped_tags.add(display_to_internal[v])
+                    else:
+                        valid_mapped_tags.add(get_internal_name(v))
             else:
-                valid_mapped_tags.add(value.lower())
-        valid_mapped_tags.add(key.lower())
+                if value in display_to_internal:
+                    valid_mapped_tags.add(display_to_internal[value])
+                else:
+                    valid_mapped_tags.add(get_internal_name(value))
+        if key in display_to_internal:
+            valid_mapped_tags.add(display_to_internal[key])
+        else:
+            valid_mapped_tags.add(get_internal_name(key))
 
     # Get all colored tags
-    colored_tags = {
-        get_internal_name(tag) for category in colors_data.values() for tag in category
-    }
+    colored_tags = set()
+    for category in colors_data.values():
+        for tag in category:
+            if tag in display_to_internal:
+                colored_tags.add(display_to_internal[tag])
+            else:
+                colored_tags.add(get_internal_name(tag))
 
     # Get all book files
     book_files = content_path.glob("**/books/*.md")
@@ -157,7 +171,12 @@ def validate_tags(
 
     # Check each tag
     for tag in sorted(all_tags):
-        internal = get_internal_name(tag)
+        # Check if tag has a special internal name
+        if tag in display_to_internal:
+            internal = display_to_internal[tag]
+        else:
+            internal = get_internal_name(tag)
+
         # Skip tags that should be removed
         if internal in removable_tags:
             continue
@@ -209,20 +228,17 @@ def main() -> None:
 
     # First validate mapping against colors
     missing_in_colors, missing_in_mapping = validate_mapping_against_colors()
-    if missing_in_colors or missing_in_mapping:
-        error_msg = []
-        if missing_in_colors:
-            error_msg.append(
-                f"Tags missing in colors.toml: {', '.join(sorted(missing_in_colors))}"
-            )
-        if missing_in_mapping:
-            error_msg.append(
-                f"Tags missing in mapping.json: {', '.join(sorted(missing_in_mapping))}"
-            )
-        raise ValueError("\n".join(error_msg))
 
-    # Then validate content tags
+    # Create validation report
     report = validate_tags(project_root, content_path=content_path)
+
+    # Add mapping vs colors validation results to the report
+    if missing_in_colors:
+        report["unmapped_tags"].extend(sorted(missing_in_colors))
+    if missing_in_mapping:
+        report["uncolored_tags"].extend(sorted(missing_in_mapping))
+
+    # Write the complete report
     write_report(report, project_root)
 
 

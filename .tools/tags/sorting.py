@@ -8,7 +8,7 @@ from .file_ops import (
     write_mapping_file,
     write_colors_file,
 )
-from .common import DATA_DIR, MAPPING_FILE, COLORS_FILE
+from .common import MAPPING_FILE, COLORS_FILE
 
 T = TypeVar("T", str, Path)
 
@@ -30,7 +30,7 @@ def sort_dict_values_by_keys(d: dict) -> dict:
         if isinstance(d[section], dict):
             sorted_dict[section] = sort_dict_by_keys(d[section])
         else:
-            sorted_dict[section] = d[section]
+            sorted_dict[section] = sort_strings(d[section])
     return sorted_dict
 
 
@@ -44,7 +44,7 @@ def sort_stats_dict(stats: dict) -> dict:
     }
 
 
-def sort_mapping_file(mapping_file: Path) -> None:
+def sort_mapping_file(mapping_file: Path = MAPPING_FILE) -> None:
     """Sort mapping file alphabetically by keys."""
     # Read mapping using file_ops
     mapping = load_tags_map(mapping_file)
@@ -56,7 +56,7 @@ def sort_mapping_file(mapping_file: Path) -> None:
     write_mapping_file(mapping_file, sorted_mapping)
 
 
-def sort_colors_file(colors_file: Path) -> None:
+def sort_colors_file(colors_file: Path = COLORS_FILE) -> None:
     """Sort colors file by sections and tags."""
     # Read colors using file_ops
     colors = load_colors_file(colors_file)
@@ -70,15 +70,12 @@ def sort_colors_file(colors_file: Path) -> None:
 
 def main() -> None:
     """Main function for sorting tag files."""
-    project_root = Path.cwd()
-    mapping_file = DATA_DIR / MAPPING_FILE.name
-    colors_file = DATA_DIR / COLORS_FILE.name
+    # Sort both files using their default paths from common
+    sort_mapping_file()
+    print(f"Sorted mapping file: {MAPPING_FILE}")
 
-    sort_mapping_file(mapping_file)
-    print(f"Sorted mapping file: {mapping_file}")
-
-    sort_colors_file(colors_file)
-    print(f"Sorted colors file: {colors_file}")
+    sort_colors_file()
+    print(f"Sorted colors file: {COLORS_FILE}")
 
 
 if __name__ == "__main__":
