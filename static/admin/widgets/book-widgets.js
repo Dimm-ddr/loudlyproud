@@ -3,6 +3,7 @@ const SlugGeneratorWidget = createClass({
   getInitialState() {
     return {
       value: this.props.value || "",
+      error: null,
     };
   },
 
@@ -10,7 +11,8 @@ const SlugGeneratorWidget = createClass({
     // Get title from the book title field
     const titleField = document.querySelector('input[id^="book_title-field"]');
     if (!titleField?.value) {
-      console.log("No title found"); // Debug log
+      this.setState({ error: "Please fill in the Book Title field first" });
+      setTimeout(() => this.setState({ error: null }), 3000); // Clear error after 3 seconds
       return;
     }
 
@@ -78,7 +80,7 @@ const SlugGeneratorWidget = createClass({
 
     // Combine everything into final slug
     const newSlug = `${baseSlug}-${uniqueHash}${randomPart}`;
-    this.setState({ value: newSlug });
+    this.setState({ value: newSlug, error: null });
     this.props.onChange(newSlug);
   },
 
@@ -150,6 +152,19 @@ const SlugGeneratorWidget = createClass({
             ),
           ],
         ),
+        this.state.error &&
+          h(
+            "small",
+            {
+              key: "error",
+              style: {
+                marginTop: "0.5em",
+                color: "#dc2626",
+                alignSelf: "flex-start",
+              },
+            },
+            this.state.error,
+          ),
         h(
           "small",
           {
@@ -160,7 +175,7 @@ const SlugGeneratorWidget = createClass({
               alignSelf: "flex-start",
             },
           },
-          "The hash at the end ensures unique URLs for books with identical titles",
+          "Fill in the Book Title field first, then click the button to generate a URL-friendly slug. The hash at the end ensures unique URLs for books with identical titles.",
         ),
       ],
     );
