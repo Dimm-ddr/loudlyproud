@@ -33,7 +33,7 @@ collections:
               label: "Book Title",
               name: "book_title",
               widget: "string",
-              required: true
+              required: true,
             }
           - {
               label: "Authors",
@@ -43,57 +43,59 @@ collections:
               required: true,
               allow_add: true,
               collapsed: false,
+              hint: "Add each author separately, including translations if available",
             }
           - {
               label: "Book Description",
               name: "book_description",
-              widget: "text",
+              widget: "markdown",
               required: false,
+              hint: "Full description of the book, can include multiple paragraphs",
             }
           - {
               label: "Short Book Description",
               name: "short_book_description",
               widget: "text",
               required: false,
+              hint: "Brief summary of the book",
             }
           - {
               label: "Cover",
               name: "cover",
               widget: "string",
               pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+              required: false,
             }
           - {
               label: "Cover Alt Text",
               name: "cover_alt",
               widget: "string",
+              required: false,
               hint: "Alternative text description for the cover image(s)",
             }
           - {
               label: "ISBN",
               name: "isbn",
               widget: "string",
-              pattern: ['^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$', "Must be a valid ISBN-10 or ISBN-13"],
+              required: false,
               hint: "ISBN-10 or ISBN-13, can include hyphens",
             }
           - {
               label: "Additional ISBNs",
               name: "additional_isbns",
               widget: "list",
-              field: {
-                label: "ISBN",
-                name: "isbn",
-                widget: "string",
-                pattern: ['^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$', "Must be a valid ISBN-10 or ISBN-13"],
-              },
+              field: { label: "ISBN", name: "isbn", widget: "string" },
               required: false,
               allow_add: true,
               collapsed: false,
+              hint: "Additional ISBNs for other editions",
             }
           - {
               label: "Languages",
               name: "languages",
               widget: "list",
               field: { label: "Language", name: "language", widget: "string" },
+              required: false,
               allow_add: true,
               collapsed: false,
             }
@@ -101,12 +103,14 @@ collections:
               label: "Page Count",
               name: "page_count",
               widget: "string",
+              required: false,
               hint: "Can use approximate format like '~300'",
             }
           - {
               label: "Publication Year",
               name: "publication_year",
               widget: "string",
+              required: false,
               hint: "Can use approximate dates",
             }
           - {
@@ -114,13 +118,20 @@ collections:
               name: "goodreads_link",
               widget: "string",
               pattern: ['^https?:\/\/.*', "Must be a valid URL"],
+              required: false,
             }
-          - { label: "Series", name: "series", widget: "string", required: false }
+          - {
+              label: "Series",
+              name: "series",
+              widget: "string",
+              required: false,
+            }
           - {
               label: "Translators",
               name: "translators",
               widget: "list",
-              field: { label: "Translator", name: "translator", widget: "string" },
+              field:
+                { label: "Translator", name: "translator", widget: "string" },
               required: false,
               allow_add: true,
               collapsed: false,
@@ -129,7 +140,9 @@ collections:
               label: "Publishers",
               name: "publishers",
               widget: "list",
-              field: { label: "Publisher", name: "publisher", widget: "string" },
+              field:
+                { label: "Publisher", name: "publisher", widget: "string" },
+              required: false,
               allow_add: true,
               collapsed: false,
             }
@@ -137,18 +150,22 @@ collections:
               label: "Russian Translation Status",
               name: "russian_translation_status",
               widget: "select",
-              options: [
-                "unknown",
-                "might_exist",
-                "unlikely_to_exist",
-                "does_not_exist",
-                "exists",
-              ],
+              options:
+                [
+                  { label: "Unknown", value: "unknown" },
+                  { label: "Might Exist", value: "might_exist" },
+                  { label: "Unlikely to Exist", value: "unlikely_to_exist" },
+                  { label: "Does Not Exist", value: "does_not_exist" },
+                  { label: "Exists", value: "exists" },
+                ],
+              required: false,
             }
           - {
               label: "Russian Audioversion",
               name: "russian_audioversion",
               widget: "boolean",
+              required: false,
+              default: false,
             }
           - {
               label: "Tags",
@@ -171,4 +188,10 @@ collections:
                   widget: "string",
                   pattern: ['^https?:\/\/.*', "Must be a valid URL"],
                 }
-              - { label: "Date", name: "date", widget: "date" }
+              - {
+                  label: "Date",
+                  name: "date",
+                  widget: "datetime",
+                  date_format: "YYYY-MM-DD",
+                  time_format: false,
+                }
