@@ -8,11 +8,20 @@ backend:
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  structure: multiple_folders
+  # Required - same as your Hugo config
+  locales: [ru, en]
+  # Optional, defaults to the first item in locales.
+  default_locale: ru
+
 collections:
   - name: "books"
     label: "Books"
-    folder: "content/ru/books"
+    folder: "content/{{locale}}/books"
     create: true
+    i18n: true
     fields:
       - {
           label: "Draft",
