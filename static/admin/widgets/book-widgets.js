@@ -8,11 +8,26 @@ const SlugGeneratorWidget = createClass({
 
   generateAndSetSlug() {
     console.log("Generate button clicked"); // Debug log
-    const titleInput = document.querySelector(
-      '[data-field-name="params.book_title"]',
-    );
-    console.log("Title input:", titleInput); // Debug log
-    const title = titleInput?.value;
+
+    // Get the current entry from CMS
+    const entry = this.props.entry;
+    console.log("Entry:", entry); // Debug log
+
+    // Get book title from the entry data
+    const title = entry.getIn(["data", "params", "book_title"]);
+    console.log("Title from entry:", title); // Debug log
+
+    if (!title) {
+      // Fallback to trying to get value directly from DOM
+      const titleInput = document.querySelector(
+        'input[id^="params.book_title-field"]',
+      );
+      console.log("Trying DOM input:", titleInput); // Debug log
+      if (titleInput) {
+        title = titleInput.value;
+      }
+    }
+
     if (!title) {
       console.log("No title found"); // Debug log
       return;
@@ -102,43 +117,55 @@ const SlugGeneratorWidget = createClass({
       "div",
       {
         className: "slug-generator-wrapper",
-        style: { display: "flex", alignItems: "center" },
+        style: {
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        },
       },
       [
-        h("input", {
-          key: "input",
-          type: "text",
-          id: forID,
-          className: classNameWrapper,
-          value: this.state.value || "",
-          onFocus: setActiveStyle,
-          onBlur: setInactiveStyle,
-          readOnly: true,
-          required: true,
-          style: { flexGrow: 1 },
-        }),
         h(
-          "button",
+          "div",
           {
-            key: "button",
-            type: "button",
-            style: buttonStyle,
-            onClick: () => {
-              console.log("Button clicked"); // Debug log
-              this.generateAndSetSlug();
-            },
+            key: "input-row",
+            style: { display: "flex", width: "100%", alignItems: "center" },
           },
-          this.state.value ? "Regenerate Slug" : "Generate Slug",
+          [
+            h("input", {
+              key: "input",
+              type: "text",
+              id: forID,
+              className: classNameWrapper,
+              value: this.state.value || "",
+              onFocus: setActiveStyle,
+              onBlur: setInactiveStyle,
+              readOnly: true,
+              required: true,
+              style: { flexGrow: 1 },
+            }),
+            h(
+              "button",
+              {
+                key: "button",
+                type: "button",
+                style: buttonStyle,
+                onClick: () => {
+                  console.log("Button clicked"); // Debug log
+                  this.generateAndSetSlug();
+                },
+              },
+              this.state.value ? "Regenerate Slug" : "Generate Slug",
+            ),
+          ],
         ),
         h(
           "small",
           {
             key: "helper",
             style: {
-              display: "block",
               marginTop: "0.5em",
               opacity: "0.7",
-              width: "100%",
+              alignSelf: "flex-start",
             },
           },
           "The hash at the end ensures unique URLs for books with identical titles",
