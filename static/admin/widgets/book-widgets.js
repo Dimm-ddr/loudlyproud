@@ -9,24 +9,31 @@ const SlugGeneratorWidget = createClass({
   generateAndSetSlug() {
     console.log("Generate button clicked"); // Debug log
 
-    // Get the current entry from CMS
-    const entry = this.props.entry;
-    console.log("Entry:", entry); // Debug log
+    // Get form data from CMS
+    const formData = this.props.entry.get("data");
+    console.log("Form data:", formData && formData.toJS()); // Debug log
 
-    // Get book title from the entry data
-    const title = entry.getIn(["data", "params", "book_title"]);
-    console.log("Title from entry:", title); // Debug log
-
-    if (!title) {
-      // Fallback to trying to get value directly from DOM
-      const titleInput = document.querySelector(
-        'input[id^="params.book_title-field"]',
-      );
-      console.log("Trying DOM input:", titleInput); // Debug log
-      if (titleInput) {
-        title = titleInput.value;
+    // Try to get book title from form data
+    let title = "";
+    if (formData) {
+      const params = formData.get("params");
+      if (params) {
+        title = params.get("book_title");
       }
     }
+
+    // If no title in form data, try to get it from the DOM
+    if (!title) {
+      const titleField = document.querySelector(
+        'input[id^="book_title-field"]',
+      );
+      console.log("Title field from DOM:", titleField); // Debug log
+      if (titleField) {
+        title = titleField.value;
+      }
+    }
+
+    console.log("Found title:", title); // Debug log
 
     if (!title) {
       console.log("No title found"); // Debug log
@@ -149,10 +156,7 @@ const SlugGeneratorWidget = createClass({
                 key: "button",
                 type: "button",
                 style: buttonStyle,
-                onClick: () => {
-                  console.log("Button clicked"); // Debug log
-                  this.generateAndSetSlug();
-                },
+                onClick: () => this.generateAndSetSlug(),
               },
               this.state.value ? "Regenerate Slug" : "Generate Slug",
             ),
