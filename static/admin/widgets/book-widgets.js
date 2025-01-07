@@ -7,38 +7,14 @@ const SlugGeneratorWidget = createClass({
   },
 
   generateAndSetSlug() {
-    console.log("Generate button clicked"); // Debug log
-
-    // Get form data from CMS
-    const formData = this.props.entry.get("data");
-    console.log("Form data:", formData && formData.toJS()); // Debug log
-
-    // Try to get book title from form data
-    let title = "";
-    if (formData) {
-      const params = formData.get("params");
-      if (params) {
-        title = params.get("book_title");
-      }
-    }
-
-    // If no title in form data, try to get it from the DOM
-    if (!title) {
-      const titleField = document.querySelector(
-        'input[id^="book_title-field"]',
-      );
-      console.log("Title field from DOM:", titleField); // Debug log
-      if (titleField) {
-        title = titleField.value;
-      }
-    }
-
-    console.log("Found title:", title); // Debug log
-
-    if (!title) {
+    // Get title from the book title field
+    const titleField = document.querySelector('input[id^="book_title-field"]');
+    if (!titleField?.value) {
       console.log("No title found"); // Debug log
       return;
     }
+
+    const title = titleField.value;
 
     // Transliterate Cyrillic to Latin characters
     const translitMap = {
@@ -102,7 +78,6 @@ const SlugGeneratorWidget = createClass({
 
     // Combine everything into final slug
     const newSlug = `${baseSlug}-${uniqueHash}${randomPart}`;
-    console.log("Generated slug:", newSlug); // Debug log
     this.setState({ value: newSlug });
     this.props.onChange(newSlug);
   },
@@ -112,12 +87,19 @@ const SlugGeneratorWidget = createClass({
       this.props;
     const buttonStyle = {
       marginLeft: "10px",
-      padding: "4px 10px",
-      backgroundColor: "#798291",
+      padding: "0 12px",
+      height: "36px",
+      backgroundColor: "#3b82f6", // Bright blue color
       color: "white",
       border: "none",
-      borderRadius: "3px",
+      borderRadius: "4px",
       cursor: "pointer",
+      fontSize: "14px",
+      fontWeight: "500",
+      transition: "background-color 0.2s ease",
+      ":hover": {
+        backgroundColor: "#2563eb", // Darker blue on hover
+      },
     };
 
     return h(
@@ -156,6 +138,12 @@ const SlugGeneratorWidget = createClass({
                 key: "button",
                 type: "button",
                 style: buttonStyle,
+                onMouseOver: (e) => {
+                  e.target.style.backgroundColor = "#2563eb";
+                },
+                onMouseOut: (e) => {
+                  e.target.style.backgroundColor = "#3b82f6";
+                },
                 onClick: () => this.generateAndSetSlug(),
               },
               this.state.value ? "Regenerate Slug" : "Generate Slug",
