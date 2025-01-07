@@ -22,7 +22,12 @@ collections:
           required: true,
         }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "slug-generator",
+          required: true,
+        }
       - { label: "Type", name: "type", widget: "hidden", default: "books" }
       - label: "Params"
         name: "params"
@@ -32,7 +37,7 @@ collections:
           - {
               label: "Book Title",
               name: "book_title",
-              widget: "string",
+              widget: "book-title",
               required: true,
             }
           - {
