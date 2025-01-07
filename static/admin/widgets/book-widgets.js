@@ -3,26 +3,15 @@ const SlugGeneratorWidget = createClass({
   getInitialState() {
     return {
       value: this.props.value || "",
-      regenerateButton: false,
     };
   },
 
-  componentDidMount() {
-    if (!this.props.value) {
-      const book_title = document.querySelector(
-        '[data-field-name="Params.book_title "]',
-      )?.value;
-      if (book_title) {
-        const newSlug = this.generateSlug(book_title);
-        this.setState({ value: newSlug });
-        this.props.onChange(newSlug);
-      }
-    }
-    this.setState({ regenerateButton: Boolean(this.props.value) });
-  },
-
-  generateSlug(title) {
-    if (!title) return Math.random().toString(36).substring(2, 10);
+  generateAndSetSlug() {
+    const titleInput = document.querySelector(
+      '[data-field-name="Params.book_title"]',
+    );
+    const title = titleInput?.value;
+    if (!title) return;
 
     // Transliterate Cyrillic to Latin characters
     const translitMap = {
@@ -69,14 +58,25 @@ const SlugGeneratorWidget = createClass({
         .join("");
     };
 
+    // Generate base slug from title
     const baseSlug = transliterate(title)
       .toLowerCase()
-      .replace(/[^\w\s-]/g, "")
-      .replace(/\s+/g, "-")
-      .replace(/-+/g, "-")
-      .trim();
+      .replace(/[^\w\s-]/g, "") // Remove non-word chars except spaces and dashes
+      .replace(/\s+/g, "-") // Replace spaces with dashes
+      .replace(/-+/g, "-") // Replace multiple dashes with single dash
+      .trim(); // Trim dashes from start and end
 
-    return `${baseSlug}-${Math.random().toString(36).substring(2, 8)}`;
+    // Generate a hash using title and random component
+    const titleHash = title.split("").reduce((acc, char) => {
+      return ((acc << 5) - acc + char.charCodeAt(0)) | 0;
+    }, 0);
+    const uniqueHash = Math.abs(titleHash).toString(36).substring(0, 4);
+    const randomPart = Math.random().toString(36).substring(2, 4);
+
+    // Combine everything into final slug
+    const newSlug = `${baseSlug}-${uniqueHash}${randomPart}`;
+    this.setState({ value: newSlug });
+    this.props.onChange(newSlug);
   },
 
   render() {
@@ -94,24 +94,28 @@ const SlugGeneratorWidget = createClass({
         onFocus: setActiveStyle,
         onBlur: setInactiveStyle,
         readOnly: true,
+        required: true,
       }),
-      this.state.regenerateButton &&
-        h(
-          "button",
-          {
-            type: "button",
-            className: "regenerate-button",
-            onClick: () => {
-              const book_title = document.querySelector(
-                '[data-field-name="Params.book_title "]',
-              )?.value;
-              const newSlug = this.generateSlug(book_title);
-              this.setState({ value: newSlug });
-              this.props.onChange(newSlug);
-            },
+      h(
+        "button",
+        {
+          type: "button",
+          className: "regenerate-button",
+          onClick: () => this.generateAndSetSlug(),
+        },
+        this.state.value ? "Regenerate Slug" : "Generate Slug",
+      ),
+      h(
+        "small",
+        {
+          style: {
+            display: "block",
+            marginTop: "0.5em",
+            opacity: "0.7",
           },
-          "Regenerate Slug",
-        ),
+        },
+        "The hash at the end ensures unique URLs for books with identical titles",
+      ),
     );
   },
 });
