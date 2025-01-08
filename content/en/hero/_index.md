@@ -1,5 +1,5 @@
 ---
 title: "Loudly Proud"
 subtitle: "LGBTQIA+ Literature Catalog"
-description: "Welcome to our shared LGBTQIA+ literature library."
+description: "This section features LGBTQ+ books that deserve to be translated into Russian or might already have translations we haven't found yet. Know of an existing translation or a book that should be here? Let us know – together we can make this catalog better."
 ---
