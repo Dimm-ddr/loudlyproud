@@ -17,7 +17,7 @@ collections:
   - name: "books"
     label: "Books"
     folder: "content"
-    path: "{{locale}}/books/{{slug}}"
+    path: "{{locale}}/books"
     create: true
     i18n: true
     fields:
