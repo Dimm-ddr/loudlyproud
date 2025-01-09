@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="h-64 overflow-hidden relative">
             <a href="${book.buy_link || "#"}" class="block w-full h-full">
               <img class="w-full h-full object-contain transition-opacity duration-300"
-                   src="${book.cover || "/images/placeholder.jpg"}"
-                   onerror="this.onerror=null; this.src='/images/placeholder.jpg'"
+                   src="${book.cover || "/images/placeholder.webp"}"
+                   onerror="this.onerror=null; this.src='/images/placeholder.webp'"
                    alt="${book.book_title}"
                    loading="lazy">
             </a>

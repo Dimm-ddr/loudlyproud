@@ -10,7 +10,7 @@
         <!-- Book Cover -->
         <figure class="book-cover w-full md:w-1/3 flex-shrink-0">
           <img class="w-full h-auto object-contain rounded-lg shadow-md"
-               src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.jpg" | relURL }}{{ end }}"
+               src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}{{ "images/placeholder.webp" | relURL }}{{ end }}"
                alt="Cover of {{ .Params.book_title }}" loading="lazy">
         </figure>
 
