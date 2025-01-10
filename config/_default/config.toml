@@ -1,5 +1,5 @@
 # Base configuration used across all environments
-baseURL = "/"
+baseURL = "https://loudlyproud.netlify.app"
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "ru"

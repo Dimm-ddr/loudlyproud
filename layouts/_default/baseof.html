@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html
-  lang="{{ .Site.Language.Lang }}"
-  {{- if .Site.Params.darkMode }}
-  x-cloak
-  x-data
-  x-bind:class="{ 'dark': $store.theme.isDark }"
-  {{- end -}}
->
+<html lang="{{ .Site.Language.Lang }}"
+      {{ if .Site.Params.darkMode }}
+      x-cloak
+      x-data
+      x-bind:class="{ 'dark': $store.theme.isDark }"
+      {{ end }}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +14,7 @@
 
     <!-- Alpine.js setup -->
     <style>[x-cloak] { display: none !important; }</style>
-    <script defer src="{{ "js/alpine.js" | relURL }}"></script>
+    <script defer src='{{ "js/alpine.js" | relURL }}'></script>
 
     <!-- Initialize Alpine.js stores -->
     <script>
