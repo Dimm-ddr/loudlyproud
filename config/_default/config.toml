@@ -1,5 +1,5 @@
 # Base configuration used across all environments
-baseURL = "/"
+baseURL = "https://loudlyproud.netlify.app"
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "ru"
@@ -32,3 +32,12 @@ tags = "/tags/:slug/"
 [outputs]
   taxonomy = ["HTML"]
   term = ["HTML"]
+
+[params]
+  description = "A bilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in Russian and English."
+  darkMode = true
+  images = ["/images/og-default.jpg"]  # Default social sharing image
+
+[params.features]
+  search = true
+  multilingual = true

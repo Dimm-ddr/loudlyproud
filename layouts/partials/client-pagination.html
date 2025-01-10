@@ -1,18 +1,3 @@
-<!-- Items per page selector -->
-<div class="mb-8 flex justify-end">
-    <div class="flex items-center space-x-2">
-        <label for="items-per-page" class="text-text font-normal whitespace-nowrap">
-            {{ i18n "items_per_page" }}
-        </label>
-        <select id="items-per-page"
-                class="border border-light-gray rounded px-2 py-1 font-normal text-text">
-            <option value="12" selected>12</option>
-            <option value="24">24</option>
-            <option value="36">36</option>
-        </select>
-    </div>
-</div>
-
 <!-- Book Gallery -->
 <section id="book-gallery"
          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -44,22 +29,16 @@
     import { Pagination } from '/js/pagination.js';
 
     document.addEventListener("DOMContentLoaded", function() {
-        const elements = {
-            gallery: document.getElementById('book-gallery'),
-            itemsPerPageSelect: document.getElementById('items-per-page'),
-            prevButton: document.getElementById('prev-page'),
-            nextButton: document.getElementById('next-page'),
-            pageInfo: document.getElementById('page-info'),
-            noResults: document.getElementById('no-results'),
-            pagination: document.getElementById('pagination')
-        };
-
-        const config = {
-            itemsPerPage: parseInt(elements.itemsPerPageSelect.value),
-            currentPage: 1,
-            totalItems: elements.gallery.children.length
-        };
-
-        new Pagination(elements, config);
+        new Pagination({
+            selectors: {
+                gallery: '#book-gallery',
+                itemsPerPageSelect: '#items-per-page',
+                prevButton: '#prev-page',
+                nextButton: '#next-page',
+                pageInfo: '#page-info',
+                noResults: '#no-results',
+                pagination: '#pagination'
+            }
+        });
     });
 </script>
