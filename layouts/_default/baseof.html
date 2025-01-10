@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}"{{ if .Site.Params.darkMode }} x-data :class="{ 'dark': $store.theme.isDark }"{{ end }}>
+<html
+  lang="{{ .Site.Language.Lang }}"
+  {{- if .Site.Params.darkMode }}
+  x-cloak
+  x-data
+  x-bind:class="{ 'dark': $store.theme.isDark }"
+  {{- end -}}
+>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-    <!-- Load Alpine.js -->
+    <!-- Alpine.js setup -->
+    <style>[x-cloak] { display: none !important; }</style>
     <script defer src="/js/alpine.js"></script>
 
-    {{ if .Site.Params.darkMode }}
-    <!-- Theme Management -->
+    <!-- Initialize Alpine.js stores -->
     <script>
-      // Check for saved theme preference, otherwise use system preference
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-
-      // Initialize Alpine.js theme store
       document.addEventListener('alpine:init', () => {
+        // Theme store
         Alpine.store('theme', {
           isDark: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
           toggle() {
@@ -31,25 +30,13 @@
               document.documentElement.classList.remove('dark')
             }
           },
-        })
+        });
 
-        // Watch for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-          if (!('theme' in localStorage)) {
-            Alpine.store('theme').isDark = e.matches
-            if (e.matches) {
-              document.documentElement.classList.add('dark')
-            } else {
-              document.documentElement.classList.remove('dark')
-            }
-          }
-        })
-
+        // Tag manager store
         Alpine.store('tagManager', {
           activeTags: [],
 
           init() {
-            // Initialize with empty tags array
             this.activeTags = []
           },
 
@@ -81,10 +68,29 @@
 
             window.dispatchEvent(new CustomEvent('booksFiltered'))
           }
-        })
-      })
+        });
+      });
+
+      // Set initial theme
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      // Watch for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!('theme' in localStorage)) {
+          if (e.matches) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+        }
+      });
     </script>
-    {{ end }}
+
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
 
     <!-- Core resources -->
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
