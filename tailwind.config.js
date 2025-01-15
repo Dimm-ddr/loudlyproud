@@ -8,6 +8,7 @@ module.exports = {
     "./static/**/*.css",
     "./themes/**/*.html",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
