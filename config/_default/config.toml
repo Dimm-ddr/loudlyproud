@@ -35,8 +35,6 @@ tags = "/tags/:slug/"
 
 [params]
   description = "A bilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in Russian and English."
-  darkMode = true
-  images = ["/images/og-default.jpg"]  # Default social sharing image
 
 [params.features]
   search = true

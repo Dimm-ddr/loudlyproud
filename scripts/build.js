@@ -21,20 +21,30 @@ async function getEntryPoints() {
 
 async function build() {
   const entryPoints = await getEntryPoints();
+  const isProd = process.env.NODE_ENV === "production";
 
   const buildOptions = {
     entryPoints,
     bundle: true,
     outdir: "static/js",
     format: "esm",
-    sourcemap: process.env.NODE_ENV !== "production",
+    sourcemap: !isProd,
     target: ["es2020"],
-    minify: process.env.NODE_ENV === "production",
-    minifyIdentifiers: process.env.NODE_ENV === "production",
-    minifySyntax: process.env.NODE_ENV === "production",
-    minifyWhitespace: process.env.NODE_ENV === "production",
+    minify: isProd,
+    minifyIdentifiers: isProd,
+    minifySyntax: isProd,
+    minifyWhitespace: isProd,
     treeShaking: true,
-    drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
+    drop: isProd ? ["console", "debugger"] : [],
+    splitting: true,
+    chunkNames: "chunks/[name]-[hash]",
+    metafile: isProd,
+    legalComments: "none",
+    define: {
+      "process.env.NODE_ENV": JSON.stringify(
+        process.env.NODE_ENV || "development",
+      ),
+    },
   };
 
   try {
@@ -45,7 +55,15 @@ async function build() {
       console.log("Watching for changes...");
     } else {
       await copyAlpineJs();
-      await esbuild.build(buildOptions);
+      const result = await esbuild.build(buildOptions);
+
+      if (isProd && result.metafile) {
+        // Log bundle size analysis
+        const analysis = await esbuild.analyzeMetafile(result.metafile);
+        console.log("Bundle size analysis:");
+        console.log(analysis);
+      }
+
       console.log("Build complete");
     }
   } catch (err) {
