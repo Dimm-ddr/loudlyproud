@@ -5,10 +5,12 @@ import { glob } from "glob";
 
 // Copy Alpine.js to static directory
 async function copyAlpineJs() {
-  const source = path.resolve("node_modules/alpinejs/dist/cdn.js");
+  const isProd = process.env.NODE_ENV === "production";
+  const sourceFile = isProd ? "cdn.min.js" : "cdn.js";
+  const source = path.resolve(`node_modules/alpinejs/dist/${sourceFile}`);
   const destination = path.resolve("static/js/alpine.js");
   await copy(source, destination);
-  console.log("Alpine.js copied to static/js/");
+  console.log(`Copied Alpine.js (${sourceFile}) to static/js/alpine.js`);
 }
 
 // Get all TypeScript files from src/js
