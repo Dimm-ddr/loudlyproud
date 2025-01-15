@@ -16,6 +16,88 @@
     <style>[x-cloak] { display: none !important; }</style>
     <script defer src='{{ "js/alpine.js" | relURL }}'></script>
 
+    <!-- Pagefind resources -->
+    <link href="/search/pagefind-ui.css" rel="stylesheet">
+    <script src="/search/pagefind-ui.js"></script>
+
+    <!-- Pagefind styles -->
+    <style>
+      .pagefind-ui {
+        width: 100%;
+        font-family: inherit;
+      }
+
+      .pagefind-ui__search-input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        background-color: white;
+        color: #111827;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .dark .pagefind-ui__search-input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: white;
+      }
+
+      .pagefind-ui__search-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+      }
+
+      .pagefind-ui__message {
+        color: #4b5563;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+      }
+
+      .dark .pagefind-ui__message {
+        color: #9ca3af;
+      }
+
+      .pagefind-ui__results-container {
+        margin-top: 1rem;
+      }
+
+      .pagefind-ui__result {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .dark .pagefind-ui__result {
+        background-color: #1f2937;
+      }
+
+      .pagefind-ui__result-title {
+        color: #111827;
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .dark .pagefind-ui__result-title {
+        color: white;
+      }
+
+      .pagefind-ui__result-excerpt {
+        color: #4b5563;
+        font-size: 0.875rem;
+      }
+
+      .dark .pagefind-ui__result-excerpt {
+        color: #9ca3af;
+      }
+    </style>
+
     <!-- Initialize Alpine.js stores -->
     <script type="module">
       document.addEventListener('alpine:init', () => {
@@ -52,29 +134,17 @@
         });
       });
 
-      // Lazy load PageFind
-      const loadPagefind = async () => {
-        try {
-          const [cssModule, scriptModule] = await Promise.all([
-            import('/search/pagefind-ui.css', { assert: { type: 'css' } }),
-            import('/search/pagefind-ui.js')
-          ]);
-          document.adoptedStyleSheets.push(cssModule.default);
-          if (window.PagefindUI) {
-            new PagefindUI({
-              element: "#search",
-              showImages: false
-            });
-          }
-        } catch (error) {
-          console.log('PageFind resources not available yet');
+      // Initialize Pagefind
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('search')) {
+          new PagefindUI({
+            element: "#search",
+            showImages: false,
+            showSubResults: true,
+            resetStyles: false
+          });
         }
-      };
-
-      // Load PageFind when needed
-      if (document.getElementById('search')) {
-        loadPagefind();
-      }
+      });
 
       // Load accessibility enhancements only when online
       if ('onLine' in navigator && navigator.onLine) {
@@ -98,7 +168,7 @@
 
     <footer>
         {{ block "footer" . }}
-            {{ partial "site-footer.html" . }}
+        {{ partial "site-footer.html" . }}
         {{ end }}
     </footer>
 </body>
