@@ -19,27 +19,26 @@
               {{ $imageUrl = $placeholderImage }}
               {{ $directUrl = $placeholderImage }}
           {{ end }}
-          <a href="{{ .RelPermalink }}" class="block relative w-full">
+          <div class="relative aspect-[2/3] rounded-lg shadow-md">
               <!-- Placeholder shown while loading -->
-              <img class="w-full h-auto object-contain rounded-lg shadow-md absolute inset-0 transition-opacity duration-300"
+              <img class="absolute inset-0 w-full h-full object-contain rounded-lg transition-opacity duration-300"
                    src="{{ $placeholderImage }}"
                    alt="Loading..."
-                   aria-hidden="true"
-                   data-placeholder-for="cover">
+                   aria-hidden="true">
               <!-- Main image loaded on top -->
-              <img class="w-full h-auto object-contain rounded-lg shadow-md absolute inset-0 transition-opacity duration-300 opacity-0"
+              <img class="absolute inset-0 w-full h-full object-contain rounded-lg transition-opacity duration-300 opacity-0"
                    src="{{ $imageUrl }}"
                    data-direct-url="{{ $directUrl }}"
                    data-placeholder="{{ $placeholderImage }}"
                    alt="Cover of {{ .Params.book_title }}"
                    loading="lazy"
-                   onload="this.classList.remove('opacity-0'); this.previousElementSibling.classList.add('opacity-0'); this.parentElement.style.paddingBottom = (this.height / this.width * 100) + '%';"
+                   onload="this.classList.remove('opacity-0'); this.previousElementSibling.classList.add('opacity-0');"
                    onerror="if(this.src !== this.dataset.directUrl) {
                              this.src = this.dataset.directUrl;
                            } else if(this.src !== this.dataset.placeholder) {
                              this.src = this.dataset.placeholder;
                            }">
-          </a>
+          </div>
         </figure>
 
         <div class="w-full md:w-2/3">

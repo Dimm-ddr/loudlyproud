@@ -1,45 +1,26 @@
-{{/* Absolute minimum tag component */}}
+{{/* Cache tag registry lookup */}}
 {{ $input := .tag | string }}
 {{ $lookupKey := $input | lower }}
 
-{{/* Load registry data */}}
+{{/* Use cached registry data */}}
 {{ $registryData := site.Data.tags.tags_registry }}
-
-{{/* Find tag data by iterating and matching case-insensitively against both internal and display names */}}
-{{ $tagData := dict }}
-{{ range $tag, $data := $registryData.tags }}
-    {{ if or (eq ($tag | lower) $lookupKey) (eq ($data.display | lower) $lookupKey) }}
-        {{ $tagData = $data }}
-        {{ break }}
-    {{ end }}
-{{ end }}
+{{ $tagData := index $registryData.tags $lookupKey | default dict }}
 
 {{ $normalizedTag := $tagData.internal | default ($input | urlize) }}
 {{ $displayTag := $tagData.display | default $input }}
 {{ $colorKey := $tagData.color | default "fallback" }}
-
-{{ $tagStyles := dict
-    "amber" "bg-tag-amber-light text-black hover:bg-tag-amber-light-hover dark:bg-tag-amber-dark dark:text-black dark:hover:bg-tag-amber-dark-hover"
-    "aubergine" "bg-tag-aubergine-light text-white hover:bg-tag-aubergine-light-hover dark:bg-tag-aubergine-dark dark:text-black dark:hover:bg-tag-aubergine-dark-hover"
-    "burgundy" "bg-tag-burgundy-light text-white hover:bg-tag-burgundy-light-hover dark:bg-tag-burgundy-dark dark:text-black dark:hover:bg-tag-burgundy-dark-hover"
-    "deep-blue" "bg-tag-deep-blue-light text-white hover:bg-tag-deep-blue-light-hover dark:bg-tag-deep-blue-dark dark:text-black dark:hover:bg-tag-deep-blue-dark-hover"
-    "forest" "bg-tag-forest-light text-white hover:bg-tag-forest-light-hover dark:bg-tag-forest-dark dark:text-black dark:hover:bg-tag-forest-dark-hover"
-    "marine" "bg-tag-marine-light text-white hover:bg-tag-marine-light-hover dark:bg-tag-marine-dark dark:text-black dark:hover:bg-tag-marine-dark-hover"
-    "plum" "bg-tag-plum-light text-white hover:bg-tag-plum-light-hover dark:bg-tag-plum-dark dark:text-black dark:hover:bg-tag-plum-dark-hover"
-    "rust" "bg-tag-rust-light text-white hover:bg-tag-rust-light-hover dark:bg-tag-rust-dark dark:text-black dark:hover:bg-tag-rust-dark-hover"
-    "slate" "bg-tag-slate-light text-white hover:bg-tag-slate-light-hover dark:bg-tag-slate-dark dark:text-black dark:hover:bg-tag-slate-dark-hover"
-    "fallback" "bg-tag-fallback-light text-black hover:bg-tag-fallback-light-hover dark:bg-tag-fallback-dark dark:text-white dark:hover:bg-tag-fallback-dark-hover"
-}}
 
 <!-- Use normalized tag for URL -->
 {{ $tagURL := path.Join "/tags" $normalizedTag | relLangURL }}
 
 <a
     href="{{ $tagURL }}"
-    class="inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200
-           {{ index $tagStyles $colorKey }}"
+    class="inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200"
     data-tag="{{ $normalizedTag }}"
     data-color="{{ $colorKey }}"
+    x-data="{ colorKey: '{{ $colorKey }}' }"
+    x-cloak
+    :class="$store.tagStyles[colorKey]"
 >
     {{ $displayTag | safeHTML }}
 </a>

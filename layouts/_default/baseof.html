@@ -8,9 +8,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
 
     <!-- SEO and Meta Tags -->
     {{ partial "meta.html" . }}
+
+    <!-- Core resources -->
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
 
     <!-- Alpine.js setup -->
     <style>[x-cloak] { display: none !important; }</style>
@@ -91,12 +96,6 @@
       });
     </script>
 
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-
-    <!-- Core resources -->
-    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
-    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
-
     <!-- Search functionality -->
     <script>
       window.addEventListener('DOMContentLoaded', (event) => {
@@ -143,44 +142,22 @@
       }
     </script>
 
-    <script>
-      window.tagMapping = {
-        {{- range $tag, $color := site.Data.tags.colors.tag_colors }}
-          "{{ $tag }}": "{{ $color }}",
-        {{- end }}
-      };
+    <!-- Tag styles -->
+    {{ partial "tag-styles.html" . }}
+</head>
 
-      window.tagStyles = {
-        {{- range $colorKey, $colorValues := site.Data.colors.colors }}
-          "{{ $colorKey }}": {
-            bg: "{{ $colorValues.DEFAULT | safeJS }}",
-            text: "{{ $colorValues.text | safeJS }}",
-            darkBg: "{{ $colorValues.dark.DEFAULT | safeJS }}",
-            darkText: "{{ $colorValues.dark.text | safeJS }}"
-          },
-        {{- end }}
-      };
-    </script>
-  </head>
-
-  <body class="flex flex-col min-h-screen bg-background text-text">
-    <!-- Skip link for accessibility -->
-    <a href="#main-content"
-       class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black">
-      Skip to main content
-    </a>
-
+<body class="flex flex-col min-h-screen bg-background text-text">
     {{ partial "custom-functions.html" . }}
     {{ partial "site-header.html" . }}
 
     <main id="main-content" class="flex-grow">
-      {{ block "main" . }}{{ end }}
+        {{ block "main" . }}{{ end }}
     </main>
 
     <footer>
-      {{ block "footer" . }}
-        {{ partial "site-footer.html" . }}
-      {{ end }}
+        {{ block "footer" . }}
+            {{ partial "site-footer.html" . }}
+        {{ end }}
     </footer>
-  </body>
+</body>
 </html>
