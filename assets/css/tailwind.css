@@ -148,3 +148,49 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
 }
+
+@layer components {
+  .tag-base {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200;
+  }
+
+  .tag-amber {
+    @apply bg-tag-amber-light text-black hover:bg-tag-amber-light-hover dark:bg-tag-amber-dark dark:text-black dark:hover:bg-tag-amber-dark-hover;
+  }
+
+  .tag-aubergine {
+    @apply bg-tag-aubergine-light text-white hover:bg-tag-aubergine-light-hover dark:bg-tag-aubergine-dark dark:text-black dark:hover:bg-tag-aubergine-dark-hover;
+  }
+
+  .tag-burgundy {
+    @apply bg-tag-burgundy-light text-white hover:bg-tag-burgundy-light-hover dark:bg-tag-burgundy-dark dark:text-black dark:hover:bg-tag-burgundy-dark-hover;
+  }
+
+  .tag-deep-blue {
+    @apply bg-tag-deep-blue-light text-white hover:bg-tag-deep-blue-light-hover dark:bg-tag-deep-blue-dark dark:text-black dark:hover:bg-tag-deep-blue-dark-hover;
+  }
+
+  .tag-forest {
+    @apply bg-tag-forest-light text-white hover:bg-tag-forest-light-hover dark:bg-tag-forest-dark dark:text-black dark:hover:bg-tag-forest-dark-hover;
+  }
+
+  .tag-marine {
+    @apply bg-tag-marine-light text-white hover:bg-tag-marine-light-hover dark:bg-tag-marine-dark dark:text-black dark:hover:bg-tag-marine-dark-hover;
+  }
+
+  .tag-plum {
+    @apply bg-tag-plum-light text-white hover:bg-tag-plum-light-hover dark:bg-tag-plum-dark dark:text-black dark:hover:bg-tag-plum-dark-hover;
+  }
+
+  .tag-rust {
+    @apply bg-tag-rust-light text-white hover:bg-tag-rust-light-hover dark:bg-tag-rust-dark dark:text-black dark:hover:bg-tag-rust-dark-hover;
+  }
+
+  .tag-slate {
+    @apply bg-tag-slate-light text-white hover:bg-tag-slate-light-hover dark:bg-tag-slate-dark dark:text-black dark:hover:bg-tag-slate-dark-hover;
+  }
+
+  .tag-fallback {
+    @apply bg-tag-fallback-light text-black hover:bg-tag-fallback-light-hover dark:bg-tag-fallback-dark dark:text-white dark:hover:bg-tag-fallback-dark-hover;
+  }
+}
