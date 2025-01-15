@@ -1,10 +1,35 @@
 {{ $placeholderImage := "images/placeholder.webp" | relURL }}
 <div class="h-64 overflow-hidden relative">
-    <a href="{{ .RelPermalink }}" class="block w-full h-full">
-        <img class="w-full h-full object-contain transition-opacity duration-300"
-             src="{{ if .cover }}{{ .cover }}{{ else }}{{ $placeholderImage }}{{ end }}"
-             onerror="this.onerror=null; this.src='{{ $placeholderImage }}'"
-             alt="{{ .book_title }}"
-             loading="lazy">
+    <a href="{{ .permalink }}" class="block w-full h-full">
+        {{ $imageUrl := "" }}
+        {{ $directUrl := "" }}
+        {{ if .cover }}
+            {{ $directUrl = .cover }}
+            {{ $imageUrl = printf "https://images.weserv.nl/?url=%s&amp;w=400&amp;h=600&amp;fit=inside&amp;output=webp&amp;q=85" (.cover | urlquery) }}
+        {{ else }}
+            {{ $imageUrl = $placeholderImage }}
+            {{ $directUrl = $placeholderImage }}
+        {{ end }}
+        <div class="relative w-full h-full">
+            <!-- Placeholder shown while loading -->
+            <img class="w-full h-full object-contain absolute inset-0 transition-opacity duration-300"
+                 src="{{ $placeholderImage }}"
+                 alt="Loading..."
+                 aria-hidden="true"
+                 data-placeholder-for="cover">
+            <!-- Main image loaded on top -->
+            <img class="w-full h-full object-contain absolute inset-0 transition-opacity duration-300 opacity-0"
+                 src="{{ $imageUrl }}"
+                 data-direct-url="{{ $directUrl }}"
+                 data-placeholder="{{ $placeholderImage }}"
+                 alt="{{ .book_title }}"
+                 loading="lazy"
+                 onload="this.classList.remove('opacity-0'); this.previousElementSibling.classList.add('opacity-0');"
+                 onerror="if(this.src !== this.dataset.directUrl) {
+                           this.src = this.dataset.directUrl;
+                         } else if(this.src !== this.dataset.placeholder) {
+                           this.src = this.dataset.placeholder;
+                         }">
+        </div>
     </a>
 </div>
