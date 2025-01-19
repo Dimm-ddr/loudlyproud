@@ -23,8 +23,13 @@ config = "postcss.config.js"
 title = "Books"
 type = "books"
 
+[section.feedback]
+title = "Feedback"
+type = "feedback"
+
 [permalinks]
 books = "/books/:slugorfilename/"
+feedback = "/feedback/"
 # Define how taxonomy term URLs should be structured
 tags = "/tags/:slug/"
 

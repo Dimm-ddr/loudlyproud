@@ -20,6 +20,10 @@ module.exports = {
           DEFAULT: "#eee7dc",
           dark: "#2d2d2d",
         },
+        tertiary: {
+          DEFAULT: "#d3ccb8",
+          dark: "#443e36",
+        },
         accent1: {
           DEFAULT: "#E74C3C",
           dark: "#ff6b5d",

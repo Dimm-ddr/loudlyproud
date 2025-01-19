@@ -5,16 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
+    <!-- Alpine.js setup -->
+    <script defer src='{{ "js/alpine.js" | relURL }}'></script>
+    <script defer>
+      // Initialize Alpine store
+      document.addEventListener('alpine:init', () => {
+        Alpine.store('tagManager', {
+          activeTags: [],
+          init() {
+            this.activeTags = [];
+          },
+          addTag(tag) {
+            if (!this.activeTags.includes(tag)) {
+              this.activeTags.push(tag);
+              this.filterBooks();
+            }
+          },
+          removeTag(tag) {
+            this.activeTags = this.activeTags.filter(t => t !== tag);
+            this.filterBooks();
+          },
+          hasTag(tag) {
+            return this.activeTags.includes(tag);
+          },
+          filterBooks() {
+            const books = document.querySelectorAll('#book-gallery > div');
+            books.forEach(book => {
+              const bookTags = Array.from(book.querySelectorAll('.tag'))
+                .map(tag => tag.textContent.trim());
+              const shouldShow = this.activeTags.length === 0 ||
+                               this.activeTags.every(tag => bookTags.includes(tag));
+              book.style.display = shouldShow ? 'block' : 'none';
+            });
+            window.dispatchEvent(new CustomEvent('booksFiltered'));
+          }
+        });
+      });
+    </script>
+    <style>[x-cloak] { display: none !important; }</style>
+
     <!-- SEO and Meta Tags -->
     {{ partial "meta.html" . }}
 
     <!-- Core resources -->
     <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
-
-    <!-- Alpine.js setup -->
-    <style>[x-cloak] { display: none !important; }</style>
-    <script defer src='{{ "js/alpine.js" | relURL }}'></script>
 
     <!-- Pagefind resources -->
     <link href="/search/pagefind-ui.css" rel="stylesheet">
@@ -98,42 +133,29 @@
       }
     </style>
 
-    <!-- Initialize Alpine.js stores -->
-    <script type="module">
-      document.addEventListener('alpine:init', () => {
-        // Tag manager store
-        Alpine.store('tagManager', {
-          activeTags: [],
-          init() {
-            this.activeTags = [];
-          },
-          addTag(tag) {
-            if (!this.activeTags.includes(tag)) {
-              this.activeTags.push(tag);
-              this.filterBooks();
-            }
-          },
-          removeTag(tag) {
-            this.activeTags = this.activeTags.filter(t => t !== tag);
-            this.filterBooks();
-          },
-          hasTag(tag) {
-            return this.activeTags.includes(tag);
-          },
-          filterBooks() {
-            const books = document.querySelectorAll('#book-gallery > div');
-            books.forEach(book => {
-              const bookTags = Array.from(book.querySelectorAll('.tag'))
-                .map(tag => tag.textContent.trim());
-              const shouldShow = this.activeTags.length === 0 ||
-                               this.activeTags.every(tag => bookTags.includes(tag));
-              book.style.display = shouldShow ? 'block' : 'none';
-            });
-            window.dispatchEvent(new CustomEvent('booksFiltered'));
-          }
-        });
-      });
+    <!-- Initialize other features -->
+    {{ partial "tag-styles.html" . }}
 
+    <!-- Additional head content -->
+    {{ block "head" . }}{{ end }}
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-background text-text">
+    {{ partial "custom-functions.html" . }}
+    {{ partial "site-header.html" . }}
+
+    <main id="main-content" class="flex-grow">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+      {{ block "footer" . }}
+      {{ partial "site-footer.html" . }}
+      {{ end }}
+    </footer>
+
+    <!-- Initialize features that should run after DOM is loaded -->
+    <script>
       // Initialize Pagefind
       document.addEventListener('DOMContentLoaded', function() {
         if (document.getElementById('search')) {
@@ -153,23 +175,5 @@
         );
       }
     </script>
-
-    <!-- Tag styles -->
-    {{ partial "tag-styles.html" . }}
-</head>
-
-<body class="flex flex-col min-h-screen bg-background text-text">
-    {{ partial "custom-functions.html" . }}
-    {{ partial "site-header.html" . }}
-
-    <main id="main-content" class="flex-grow">
-        {{ block "main" . }}{{ end }}
-    </main>
-
-    <footer>
-        {{ block "footer" . }}
-        {{ partial "site-footer.html" . }}
-        {{ end }}
-    </footer>
-</body>
+  </body>
 </html>
