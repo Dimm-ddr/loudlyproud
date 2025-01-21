@@ -8,19 +8,31 @@ backend:
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# Define common fields as an anchor
-book_fields: &book_fields
-  - {
-      label: "Draft",
-      name: "draft",
-      widget: "boolean",
-      default: false,
-      required: true,
-    }
-  - { label: "Title", name: "title", widget: "string", required: true }
-  - { label: "Slug", name: "slug", widget: "slug-generator", required: true }
-  - { label: "Type", name: "type", widget: "hidden", default: "books" }
-  - label: "Params"
+# Common book fields
+common_fields: &common_fields
+  draft:
+    label: "Draft"
+    name: "draft"
+    widget: "boolean"
+    default: false
+    required: true
+  title:
+    label: "Title"
+    name: "title"
+    widget: "string"
+    required: true
+  slug:
+    label: "Slug"
+    name: "slug"
+    widget: "slug-generator"
+    required: true
+  type:
+    label: "Type"
+    name: "type"
+    widget: "hidden"
+    default: "books"
+  params:
+    label: "Params"
     name: "params"
     widget: "object"
     required: true
@@ -213,74 +225,129 @@ book_fields: &book_fields
               time_format: false,
             }
 
-# Define language-specific fields
-english_fields: &english_fields
-  - label: "Russian Translation Needed"
-    name: "russian_translation_needed"
-    widget: "boolean"
-    required: false
-    default: false
-  - label: "Farsi Translation Needed"
-    name: "farsi_translation_needed"
-    widget: "boolean"
-    required: false
-    default: false
-  - label: "Kurdish Translation Needed"
-    name: "kurdish_translation_needed"
-    widget: "boolean"
-    required: false
-    default: false
-
-russian_fields: &russian_fields
-  - label: "Original Language"
-    name: "original_language"
-    widget: "boolean"
-    required: false
-    default: false
-
-farsi_fields: &farsi_fields
-  - label: "Original Language"
-    name: "original_language"
-    widget: "boolean"
-    required: false
-    default: false
-
-kurdish_fields: &kurdish_fields
-  - label: "Original Language"
-    name: "original_language"
-    widget: "boolean"
-    required: false
-    default: false
-
 collections:
   - name: "books_ru"
     label: "Books (Russian)"
     folder: "content/ru/books"
     create: true
     fields:
-      - *book_fields
-      - *russian_fields
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "slug-generator"
+        required: true
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "books"
+      - label: "Original Language"
+        name: "original_language"
+        widget: "boolean"
+        required: false
+        default: false
+      - <<: *common_fields
 
   - name: "books_en"
     label: "Books (English)"
     folder: "content/en/books"
     create: true
     fields:
-      - *book_fields
-      - *english_fields
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "slug-generator"
+        required: true
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "books"
+      - label: "Russian Translation Needed"
+        name: "russian_translation_needed"
+        widget: "boolean"
+        required: false
+        default: false
+      - label: "Farsi Translation Needed"
+        name: "farsi_translation_needed"
+        widget: "boolean"
+        required: false
+        default: false
+      - label: "Kurdish Translation Needed"
+        name: "kurdish_translation_needed"
+        widget: "boolean"
+        required: false
+        default: false
+      - <<: *common_fields
 
   - name: "books_fa"
     label: "Books (Farsi)"
     folder: "content/fa/books"
     create: true
     fields:
-      - *book_fields
-      - *farsi_fields
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "slug-generator"
+        required: true
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "books"
+      - label: "Original Language"
+        name: "original_language"
+        widget: "boolean"
+        required: false
+        default: false
+      - <<: *common_fields
 
   - name: "books_ku"
     label: "Books (Kurdish)"
     folder: "content/ku/books"
     create: true
     fields:
-      - *book_fields
-      - *kurdish_fields
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "slug-generator"
+        required: true
+      - label: "Type"
+        name: "type"
+        widget: "hidden"
+        default: "books"
+      - label: "Original Language"
+        name: "original_language"
+        widget: "boolean"
+        required: false
+        default: false
+      - <<: *common_fields

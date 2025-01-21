@@ -8,6 +8,10 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
+    <!-- Load the config.js file before loading the CMS -->
+    <script src="config.js"></script>
+    <!-- Load Decap CMS -->
+    <script src="https://unpkg.com/@staticcms/core@%5E3.4.5/dist/static-cms-core.js"></script>
     <script>
       // Initialize Netlify Identity
       if (window.netlifyIdentity) {
@@ -19,8 +23,9 @@
           }
         });
       }
+      // Initialize the CMS with our configuration
+      window.CMS.init({ config: window.CMS_CONFIGURATION });
     </script>
-    <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
     <script src="auth-handler.js"></script>
     <script src="preview.js"></script>
     <script src="widgets/book-widgets.js"></script>
