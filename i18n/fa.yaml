@@ -1,0 +1,94 @@
+# Book Details
+title: "عنوان"
+authors: "نویسندگان"
+translators: "مترجمان"
+book_description: "توضیحات"
+short_book_description: "توضیحات کوتاه"
+tags: "برچسب‌ها"
+page_count: "تعداد صفحات"
+isbn: "شابک"
+additional_isbns: "شابک‌های اضافی"
+languages: "زبان‌ها"
+publication_year: "سال انتشار"
+publishers: "ناشران"
+series: "مجموعه"
+
+# Translation Status
+russian_translation: "وضعیت ترجمه روسی"
+translation_status_exists: "ترجمه روسی موجود است"
+translation_status_unknown: "وضعیت ترجمه نامشخص"
+translation_status_might_exist: "ممکن است ترجمه روسی موجود باشد"
+translation_status_unlikely_to_exist: "ترجمه روسی بعید است"
+translation_status_does_not_exist: "ترجمه روسی موجود نیست"
+
+# Audio Version
+audio_version: "نسخه صوتی"
+russian_audio_availability: "دسترسی به نسخه صوتی روسی"
+russian_audio_available: "نسخه صوتی روسی موجود است"
+no_audio_version: "نسخه صوتی موجود نیست"
+russian_audioversion: "نسخه صوتی روسی"
+
+# External Links
+external_links: "پیوندهای خارجی"
+goodreads: "لینک گودریدز"
+goodreads_link: "لینک گودریدز"
+buy_link: "خرید"
+where_to_get: "کجا می‌توان خرید"
+openlibrary_link: "کتابخانه باز"
+other_resource: "منابع دیگر"
+
+# UI Elements
+book_catalogue: "فهرست کتاب‌ها"
+catalogue_description: "توضیحات فهرست"
+book_details: "جزئیات کتاب"
+no_books_found: "کتابی یافت نشد"
+load_more: "بیشتر"
+give_feedback: "ارسال بازخورد"
+checked_at: "بررسی شده در"
+all_rights_reserved: "همه حقوق محفوظ است"
+
+# Pagination
+page_info: "صفحه %d از %d"
+previous: "قبلی"
+next: "بعدی"
+items_per_page: "تعداد در هر صفحه"
+
+# Language Switcher
+switch_language_tooltip: "تغییر زبان"
+language_switcher_label: "انتخاب زبان"
+language_tooltip: "رفتن به صفحه اصلی فارسی"
+
+# Filters and Tags
+show_filters: "نمایش فیلترها"
+hide_filters: "پنهان کردن فیلترها"
+prevalent_tags: "برچسب‌های رایج"
+active_filters: "فیلترهای فعال"
+clear_filters: "پاک کردن همه"
+no_active_filters: "فیلتر فعالی وجود ندارد"
+books_with_tag: "کتاب‌های دارای برچسب"
+showing_books_with_tag: "نمایش همه کتاب‌های دارای برچسب"
+books: "کتاب‌ها"
+show_more: "نمایش همه برچسب‌ها"
+show_less: "نمایش کمتر"
+back_to_all_books: "بازگشت به همه کتاب‌ها"
+all_tags: "همه برچسب‌ها"
+explore_tags: "برچسب‌ها"
+no_tags_available: "برچسبی موجود نیست"
+books_tagged_with: "کتاب‌های دارای برچسب"
+
+# Telegram Updates
+telegram_updates: "اخبار وبسایت در تلگرام"
+
+# Feedback
+share_feedback: "اشتراک‌گذاری بازخورد"
+
+# Buy from
+buy_from: "خرید از"
+
+# Offline Feedback
+feedback_offline_title: "فرم بازخورد (آفلاین)"
+feedback_offline_description: "شما در حال حاضر آفلاین هستید. لطفاً این URL را ذخیره کنید و هنگامی که به اینترنت متصل شدید، برای ارسال بازخورد خود به آن مراجعه کنید:"
+
+# Copy Functionality
+copy_to_clipboard: "کپی در کلیپ‌بورد"
+copied_to_clipboard: "در کلیپ‌بورد کپی شد!"

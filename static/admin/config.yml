@@ -150,6 +150,34 @@ book_fields: &book_fields
           required: false,
         }
       - {
+          label: "Farsi Translation Status",
+          name: "farsi_translation_status",
+          widget: "select",
+          options:
+            [
+              { label: "Unknown", value: "unknown" },
+              { label: "Might Exist", value: "might_exist" },
+              { label: "Unlikely to Exist", value: "unlikely_to_exist" },
+              { label: "Does Not Exist", value: "does_not_exist" },
+              { label: "Exists", value: "exists" },
+            ],
+          required: false,
+        }
+      - {
+          label: "Kurdish Translation Status",
+          name: "kurdish_translation_status",
+          widget: "select",
+          options:
+            [
+              { label: "Unknown", value: "unknown" },
+              { label: "Might Exist", value: "might_exist" },
+              { label: "Unlikely to Exist", value: "unlikely_to_exist" },
+              { label: "Does Not Exist", value: "does_not_exist" },
+              { label: "Exists", value: "exists" },
+            ],
+          required: false,
+        }
+      - {
           label: "Russian Audioversion",
           name: "russian_audioversion",
           widget: "boolean",
@@ -195,5 +223,39 @@ collections:
   - name: "books_en"
     label: "Books (English)"
     folder: "content/en/books"
+    create: true
+    fields:
+      - *book_fields
+      - {
+          label: "Russian Translation Needed",
+          name: "russian_translation_needed",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+      - {
+          label: "Farsi Translation Needed",
+          name: "farsi_translation_needed",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+      - {
+          label: "Kurdish Translation Needed",
+          name: "kurdish_translation_needed",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+
+  - name: "books_fa"
+    label: "Books (Farsi)"
+    folder: "content/fa/books"
+    create: true
+    fields: *book_fields
+
+  - name: "books_ku"
+    label: "Books (Kurdish)"
+    folder: "content/ku/books"
     create: true
     fields: *book_fields

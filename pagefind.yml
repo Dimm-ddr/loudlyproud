@@ -3,8 +3,12 @@ output_subdir: search
 include_paths:
   - tags
   - books
+  - en
+  - ru
+  - fa
+  - ku
 excludes:
   - _*
   - assets/*
   - static/*
-
+  - search/*

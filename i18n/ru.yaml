@@ -21,6 +21,22 @@ translation_status_might_exist: "Возможно, есть перевод"
 translation_status_unlikely_to_exist: "Перевод маловероятен"
 translation_status_does_not_exist: "Русской версии нет"
 
+# Farsi Translation Status
+farsi_translation: "Статус перевода на фарси"
+farsi_translation_exists: "Перевод на фарси существует"
+farsi_translation_unknown: "Статус перевода на фарси неизвестен"
+farsi_translation_might_exist: "Возможно, есть перевод на фарси"
+farsi_translation_unlikely_to_exist: "Перевод на фарси маловероятен"
+farsi_translation_does_not_exist: "Перевода на фарси нет"
+
+# Kurdish Translation Status
+kurdish_translation: "Статус перевода на курдский"
+kurdish_translation_exists: "Перевод на курдский существует"
+kurdish_translation_unknown: "Статус перевода на курдский неизвестен"
+kurdish_translation_might_exist: "Возможно, есть перевод на курдский"
+kurdish_translation_unlikely_to_exist: "Перевод на курдский маловероятен"
+kurdish_translation_does_not_exist: "Перевода на курдский нет"
+
 # Audio Version
 audio_version: "Аудиоверсия"
 russian_audio_availability: "Аудиоверсия"

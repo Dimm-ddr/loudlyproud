@@ -1,10 +1,10 @@
 {{ define "main" }}
+{{ $feedbackUrl := "https://forms.gle/YHhojq3Ts2LsDF6G8" }}
 <!-- JavaScript redirection -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const feedbackUrl = document.querySelector("code")?.textContent?.trim();
-    if (navigator.onLine && feedbackUrl) {
-      window.location.replace(feedbackUrl);
+    if (navigator.onLine) {
+      window.location.replace("{{ $feedbackUrl }}");
     }
   });
 </script>
@@ -21,10 +21,10 @@
       </p>
       <div class="relative bg-tertiary dark:bg-tertiary-dark p-4 rounded-md border border-text/20 dark:border-text-dark/20">
         <code class="block text-primary dark:text-primary-dark font-mono break-all pr-12">
-          {{ .Site.Params.heroFeedbackLink }}
+          {{ $feedbackUrl }}
         </code>
         <button
-          onclick="navigator.clipboard.writeText('{{ .Site.Params.heroFeedbackLink }}')"
+          onclick="navigator.clipboard.writeText('{{ $feedbackUrl }}')"
           class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-text dark:text-text-dark hover:text-accent1 dark:hover:text-accent1 transition-colors"
           title="{{ i18n "copy_to_clipboard" }}"
         >
@@ -33,6 +33,15 @@
           </svg>
         </button>
       </div>
+      {{ if eq .Site.Language.Lang "ru" }}
+        {{ partial "feedback/ru.html" . }}
+      {{ else if eq .Site.Language.Lang "en" }}
+        {{ partial "feedback/en.html" . }}
+      {{ else if eq .Site.Language.Lang "fa" }}
+        {{ partial "feedback/fa.html" . }}
+      {{ else if eq .Site.Language.Lang "ku" }}
+        {{ partial "feedback/ku.html" . }}
+      {{ end }}
     </div>
   </div>
 </div>

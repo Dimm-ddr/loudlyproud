@@ -2,7 +2,7 @@
 baseURL = "https://loudlyproud.netlify.app"
 title = 'Loudly Proud'
 contentDir = "content"
-defaultContentLanguage = "ru"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 ignoreFiles = ['content/books/temp/.*']
 i18nDir = "i18n"
@@ -39,7 +39,7 @@ tags = "/tags/:slug/"
   term = ["HTML"]
 
 [params]
-  description = "A bilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in Russian and English."
+  description = "A multilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in multiple languages."
 
 [params.features]
   search = true
