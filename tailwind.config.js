@@ -8,66 +8,46 @@ module.exports = {
     "./static/**/*.css",
     "./themes/**/*.html",
   ],
-  darkMode: process.env.HUGO_DARK_MODE === "true" ? "class" : false,
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primary:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#000000",
-                dark: "#ffffff",
-              }
-            : "#000000",
-        secondary:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#eee7dc",
-                dark: "#2d2d2d",
-              }
-            : "#eee7dc",
-        accent1:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#E74C3C",
-                dark: "#ff6b5d",
-              }
-            : "#E74C3C",
-        accent2:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#2ECC71",
-                dark: "#4fdd91",
-              }
-            : "#2ECC71",
-        accent3:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#3498DB",
-                dark: "#5dafec",
-              }
-            : "#3498DB",
-        background:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#b7b0a7",
-                dark: "#1a1a1a",
-              }
-            : "#b7b0a7",
-        text:
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#333333",
-                dark: "#e5e5e5",
-              }
-            : "#333333",
-        "light-gray":
-          process.env.HUGO_DARK_MODE === "true"
-            ? {
-                DEFAULT: "#eaeaea",
-                dark: "#404040",
-              }
-            : "#eaeaea",
+        primary: {
+          DEFAULT: "#000000",
+          dark: "#ffffff",
+        },
+        secondary: {
+          DEFAULT: "#eee7dc",
+          dark: "#2d2d2d",
+        },
+        tertiary: {
+          DEFAULT: "#d3ccb8",
+          dark: "#443e36",
+        },
+        accent1: {
+          DEFAULT: "#E74C3C",
+          dark: "#ff6b5d",
+        },
+        accent2: {
+          DEFAULT: "#2ECC71",
+          dark: "#4fdd91",
+        },
+        accent3: {
+          DEFAULT: "#3498DB",
+          dark: "#5dafec",
+        },
+        background: {
+          DEFAULT: "#b7b0a7",
+          dark: "#1a1a1a",
+        },
+        text: {
+          DEFAULT: "#333333",
+          dark: "#e5e5e5",
+        },
+        "light-gray": {
+          DEFAULT: "#eaeaea",
+          dark: "#404040",
+        },
         // Tag colors - using Tailwind's default color values for consistency
         tag: {
           amber: {

@@ -1,0 +1,18 @@
+{{ $tagStyles := dict
+    "amber" "bg-tag-amber-light text-black hover:bg-tag-amber-light-hover dark:bg-tag-amber-dark dark:text-black dark:hover:bg-tag-amber-dark-hover"
+    "aubergine" "bg-tag-aubergine-light text-white hover:bg-tag-aubergine-light-hover dark:bg-tag-aubergine-dark dark:text-black dark:hover:bg-tag-aubergine-dark-hover"
+    "burgundy" "bg-tag-burgundy-light text-white hover:bg-tag-burgundy-light-hover dark:bg-tag-burgundy-dark dark:text-black dark:hover:bg-tag-burgundy-dark-hover"
+    "deep-blue" "bg-tag-deep-blue-light text-white hover:bg-tag-deep-blue-light-hover dark:bg-tag-deep-blue-dark dark:text-black dark:hover:bg-tag-deep-blue-dark-hover"
+    "forest" "bg-tag-forest-light text-white hover:bg-tag-forest-light-hover dark:bg-tag-forest-dark dark:text-black dark:hover:bg-tag-forest-dark-hover"
+    "marine" "bg-tag-marine-light text-white hover:bg-tag-marine-light-hover dark:bg-tag-marine-dark dark:text-black dark:hover:bg-tag-marine-dark-hover"
+    "plum" "bg-tag-plum-light text-white hover:bg-tag-plum-light-hover dark:bg-tag-plum-dark dark:text-black dark:hover:bg-tag-plum-dark-hover"
+    "rust" "bg-tag-rust-light text-white hover:bg-tag-rust-light-hover dark:bg-tag-rust-dark dark:text-black dark:hover:bg-tag-rust-dark-hover"
+    "slate" "bg-tag-slate-light text-white hover:bg-tag-slate-light-hover dark:bg-tag-slate-dark dark:text-black dark:hover:bg-tag-slate-dark-hover"
+    "fallback" "bg-tag-fallback-light text-black hover:bg-tag-fallback-light-hover dark:bg-tag-fallback-dark dark:text-white dark:hover:bg-tag-fallback-dark-hover"
+}}
+
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.store('tagStyles', {{ $tagStyles | jsonify | safeJS }});
+});
+</script>

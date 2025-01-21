@@ -84,3 +84,11 @@ share_feedback: "Share Feedback"
 
 # Buy from
 buy_from: "Buy from"
+
+# Offline Feedback
+feedback_offline_title: "Feedback Form (Offline)"
+feedback_offline_description: "You are currently offline. Please save this URL and visit it when you have an internet connection to submit your feedback:"
+
+# Copy Functionality
+copy_to_clipboard: "Copy to clipboard"
+copied_to_clipboard: "Copied to clipboard!"

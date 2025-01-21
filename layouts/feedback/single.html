@@ -1,14 +1,39 @@
 {{ define "main" }}
-<div class="container mx-auto px-4 py-8">
-  <div class="max-w-2xl mx-auto">
-    <h1 class="text-3xl font-bold mb-4 text-primary dark:text-primary-dark">{{ .Title }}</h1>
-    <p class="text-lg mb-6 text-text dark:text-text-dark">{{ .Params.description }}</p>
-    <a href="{{ .Params.form_link }}"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="inline-block px-6 py-3 bg-secondary dark:bg-secondary-dark text-primary dark:text-primary-dark rounded-lg font-medium hover:bg-secondary-light dark:hover:bg-secondary-dark/80 transition-colors">
-      {{ .Params.button_text }}
-    </a>
+<!-- JavaScript redirection -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const feedbackUrl = document.querySelector("code")?.textContent?.trim();
+    if (navigator.onLine && feedbackUrl) {
+      window.location.replace(feedbackUrl);
+    }
+  });
+</script>
+
+<!-- Fallback content for when JavaScript is disabled or offline -->
+<div class="min-h-screen bg-background dark:bg-background-dark">
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl mx-auto bg-secondary dark:bg-secondary-dark rounded-lg shadow-lg p-8">
+      <h1 class="text-3xl font-black text-primary dark:text-primary-dark mb-6">
+        {{ i18n "feedback_offline_title" }}
+      </h1>
+      <p class="text-lg text-text dark:text-text-dark mb-8">
+        {{ i18n "feedback_offline_description" }}
+      </p>
+      <div class="relative bg-tertiary dark:bg-tertiary-dark p-4 rounded-md border border-text/20 dark:border-text-dark/20">
+        <code class="block text-primary dark:text-primary-dark font-mono break-all pr-12">
+          {{ .Site.Params.heroFeedbackLink }}
+        </code>
+        <button
+          onclick="navigator.clipboard.writeText('{{ .Site.Params.heroFeedbackLink }}')"
+          class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-text dark:text-text-dark hover:text-accent1 dark:hover:text-accent1 transition-colors"
+          title="{{ i18n "copy_to_clipboard" }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 {{ end }}
