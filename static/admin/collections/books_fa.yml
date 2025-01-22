@@ -1,0 +1,8 @@
+name: "books_fa"
+label: "Farsi Books"
+label_singular: "Farsi Book"
+folder: "content/fa/books"
+create: true
+description: "Books in Farsi language"
+fields:
+  - *book_fields

@@ -1,0 +1,8 @@
+name: "books_ku"
+label: "Kurdish Books"
+label_singular: "Kurdish Book"
+folder: "content/ku/books"
+create: true
+description: "Books in Kurdish language"
+fields:
+  - *book_fields
