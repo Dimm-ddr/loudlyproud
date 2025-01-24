@@ -5,7 +5,6 @@ folder: "content/en/books"
 create: true
 description: "Books in English language"
 fields:
-  - *book_fields
   - label: "Params"
     name: "params"
     widget: "object"
