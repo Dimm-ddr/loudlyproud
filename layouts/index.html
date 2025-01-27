@@ -44,6 +44,19 @@
                 rgba(134, 0, 125, 0.05) 100%
             );
         }
+
+        /* Smooth focus styles */
+        .language-card {
+            outline: none !important; /* Remove default browser outline */
+            transition: all 0.2s ease-in-out;
+        }
+        .language-card:focus-visible {
+            box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 4px var(--ring-color);
+        }
+        .language-card:active {
+            transform: translateY(1px);
+            transition: transform 0.1s;
+        }
     </style>
 </head>
 <body class="bg-background dark:bg-background-dark min-h-screen flex items-center justify-center">
@@ -51,10 +64,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <!-- Russian Card -->
             <a href="/ru/main/"
-               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
-                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
-                      transition-all duration-200 focus:outline-none focus:ring-2
-                      focus:ring-tag-plum-light dark:focus:ring-tag-plum-dark-DEFAULT focus:ring-offset-2"
+               class="language-card language-card-ltr group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
                aria-label="Переключиться на русский язык">
                 <div class="text-center font-latin">
                     <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">Русский</h2>
@@ -64,10 +76,9 @@
 
             <!-- Farsi Card -->
             <a href="/fa/main/" lang="fa" dir="rtl"
-               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
-                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
-                      transition-all duration-200 focus:outline-none focus:ring-2
-                      focus:ring-tag-marine-light dark:focus:ring-tag-marine-dark-DEFAULT focus:ring-offset-2"
+               class="language-card language-card-rtl group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
                aria-label="تغییر به زبان فارسی">
                 <div class="text-center font-arabic">
                     <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">فارسی</h2>
@@ -77,10 +88,9 @@
 
             <!-- Kurdish Card -->
             <a href="/ku/main/" lang="ku" dir="rtl"
-               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
-                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
-                      transition-all duration-200 focus:outline-none focus:ring-2
-                      focus:ring-tag-amber-light dark:focus:ring-tag-amber-dark-DEFAULT focus:ring-offset-2"
+               class="language-card language-card-rtl group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
                aria-label="گۆڕینی زمان بۆ کوردی">
                 <div class="text-center font-arabic">
                     <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">کوردی</h2>
@@ -90,10 +100,9 @@
 
             <!-- English Card -->
             <a href="/en/main/"
-               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
-                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
-                      transition-all duration-200 focus:outline-none focus:ring-2
-                      focus:ring-tag-burgundy-light dark:focus:ring-tag-burgundy-dark-DEFAULT focus:ring-offset-2"
+               class="language-card language-card-ltr group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
                aria-label="Switch to English">
                 <div class="text-center font-latin">
                     <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">English</h2>

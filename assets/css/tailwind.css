@@ -205,4 +205,89 @@
   .tag-fallback {
     @apply bg-tag-fallback-light text-black hover:bg-tag-fallback-light-hover dark:bg-tag-fallback-dark dark:text-white dark:hover:bg-tag-fallback-dark-hover;
   }
+
+  /* Language card styles */
+  .language-card {
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Focus styles for LTR and RTL cards */
+  .language-card-ltr:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
+      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+  }
+
+  .language-card-rtl:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
+      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+  }
+
+  .dark .language-card-ltr:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
+      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+  }
+
+  .dark .language-card-rtl:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
+      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+  }
+
+  .language-card:active {
+    transform: translateY(1px);
+    transition: transform 0.1s;
+  }
+
+  /* Rainbow background gradients */
+  .rainbow-bg {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 0, 24, 0.1) 0%,
+      rgba(255, 165, 44, 0.1) 20%,
+      rgba(255, 255, 65, 0.1) 40%,
+      rgba(0, 128, 24, 0.1) 60%,
+      rgba(0, 0, 249, 0.1) 80%,
+      rgba(134, 0, 125, 0.1) 100%
+    );
+  }
+
+  .rainbow-bg[dir="rtl"] {
+    background: linear-gradient(
+      225deg,
+      rgba(255, 0, 24, 0.1) 0%,
+      rgba(255, 165, 44, 0.1) 20%,
+      rgba(255, 255, 65, 0.1) 40%,
+      rgba(0, 128, 24, 0.1) 60%,
+      rgba(0, 0, 249, 0.1) 80%,
+      rgba(134, 0, 125, 0.1) 100%
+    );
+  }
+
+  .dark .rainbow-bg {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 0, 24, 0.05) 0%,
+      rgba(255, 165, 44, 0.05) 20%,
+      rgba(255, 255, 65, 0.05) 40%,
+      rgba(0, 128, 24, 0.05) 60%,
+      rgba(0, 0, 249, 0.05) 80%,
+      rgba(134, 0, 125, 0.05) 100%
+    );
+  }
+
+  .dark .rainbow-bg[dir="rtl"] {
+    background: linear-gradient(
+      225deg,
+      rgba(255, 0, 24, 0.05) 0%,
+      rgba(255, 165, 44, 0.05) 20%,
+      rgba(255, 255, 65, 0.05) 40%,
+      rgba(0, 128, 24, 0.05) 60%,
+      rgba(0, 0, 249, 0.05) 80%,
+      rgba(134, 0, 125, 0.05) 100%
+    );
+  }
 }
