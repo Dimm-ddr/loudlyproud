@@ -21,6 +21,22 @@ translation_status_might_exist: "Russian translation might exist"
 translation_status_unlikely_to_exist: "Russian translation unlikely to exist"
 translation_status_does_not_exist: "No Russian translation"
 
+# Farsi Translation Status
+farsi_translation: "Farsi Translation Status"
+farsi_translation_exists: "Farsi translation exists"
+farsi_translation_unknown: "Farsi translation status unknown"
+farsi_translation_might_exist: "Farsi translation might exist"
+farsi_translation_unlikely_to_exist: "Farsi translation unlikely to exist"
+farsi_translation_does_not_exist: "No Farsi translation"
+
+# Kurdish Translation Status
+kurdish_translation: "Kurdish Translation Status"
+kurdish_translation_exists: "Kurdish translation exists"
+kurdish_translation_unknown: "Kurdish translation status unknown"
+kurdish_translation_might_exist: "Kurdish translation might exist"
+kurdish_translation_unlikely_to_exist: "Kurdish translation unlikely to exist"
+kurdish_translation_does_not_exist: "No Kurdish translation"
+
 # Audio Version
 audio_version: "Audio Version"
 russian_audio_availability: "Russian Audio Availability"
@@ -92,3 +108,11 @@ feedback_offline_description: "You are currently offline. Please save this URL a
 # Copy Functionality
 copy_to_clipboard: "Copy to clipboard"
 copied_to_clipboard: "Copied to clipboard!"
+
+# 404 Page
+pageNotFound: "Page Not Found"
+pageNotFoundDesc: "Oops! It seems this page has wandered off into the unknown."
+explorePages: "Here are a few places you might want to explore:"
+homePage: "Home Page"
+search: "Search"
+randomSuggestions: "Or check out some random items from our collection:"

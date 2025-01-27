@@ -42,40 +42,78 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderBooks(filteredBooks: Book[]): void {
-    bookList.innerHTML = "";
-    filteredBooks.forEach((book) => {
-      // Generate Tag HTML using the `renderTags` function
-      const tagsHTML = renderTags(book.tags);
+    // Clear existing content
+    while (bookList.firstChild) {
+      bookList.removeChild(bookList.firstChild);
+    }
 
-      // Construct Book Card HTML
-      const bookHTML = `
-        <article class="book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col">
-          <!-- Image Container -->
-          <div class="h-64 overflow-hidden relative">
-            <a href="${book.buy_link || "#"}" class="block w-full h-full">
-              <img class="w-full h-full object-contain transition-opacity duration-300"
-                   src="${book.cover || "/images/placeholder.webp"}"
-                   onerror="this.onerror=null; this.src='/images/placeholder.webp'"
-                   alt="${book.book_title}"
-                   loading="lazy">
-            </a>
-          </div>
-          <!-- Content -->
-          <div class="p-4 flex flex-col flex-grow">
-            <h2 class="text-xl font-black mb-2 text-primary">
-              <a href="${book.buy_link || "#"}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
-                ${book.book_title}
-              </a>
-            </h2>
-            <!-- Tags -->
-            <div class="flex flex-wrap gap-2">
-              ${tagsHTML}
-            </div>
-          </div>
-        </article>
-      `;
-      bookList.innerHTML += bookHTML;
+    // Create document fragment for batch DOM updates
+    const fragment = document.createDocumentFragment();
+
+    filteredBooks.forEach((book) => {
+      const article = document.createElement("article");
+      article.className =
+        "book-card bg-secondary shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col";
+
+      // Image Container
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "h-64 overflow-hidden relative";
+
+      const link = document.createElement("a");
+      link.href = book.buy_link || "#";
+      link.className = "block w-full h-full";
+
+      const img = document.createElement("img");
+      img.className =
+        "w-full h-full object-contain transition-opacity duration-300";
+      img.src = book.cover || "/images/placeholder.webp";
+      img.onerror = () => {
+        img.src = "/images/placeholder.webp";
+      };
+      img.alt = book.book_title;
+      img.loading = "lazy";
+
+      link.appendChild(img);
+      imageContainer.appendChild(link);
+
+      // Content Container
+      const content = document.createElement("div");
+      content.className = "p-4 flex flex-col flex-grow";
+
+      const title = document.createElement("h2");
+      title.className = "text-xl font-black mb-2 text-primary";
+
+      const titleLink = document.createElement("a");
+      titleLink.href = book.buy_link || "#";
+      titleLink.className =
+        "hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded";
+      titleLink.textContent = book.book_title;
+
+      title.appendChild(titleLink);
+
+      // Tags Container
+      const tagsContainer = document.createElement("div");
+      tagsContainer.className = "flex flex-wrap gap-2";
+
+      // Add tags
+      book.tags.forEach((tag) => {
+        const style = getTagStyle(tag);
+        const tagSpan = document.createElement("span");
+        tagSpan.className = `tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}`;
+        tagSpan.textContent = tag;
+        tagsContainer.appendChild(tagSpan);
+      });
+
+      // Assemble the components
+      content.appendChild(title);
+      content.appendChild(tagsContainer);
+      article.appendChild(imageContainer);
+      article.appendChild(content);
+      fragment.appendChild(article);
     });
+
+    // Single DOM update
+    bookList.appendChild(fragment);
   }
 
   function applyFilters(): void {

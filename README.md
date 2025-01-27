@@ -35,11 +35,19 @@ The site implements a sophisticated tagging system with:
 
 ### Multilingual Support
 
-The site is primarily bilingual (Russian/English) with:
+The site supports multiple languages:
+
+- Russian (primary)
+- English
+- Farsi (فارسی)
+- Kurdish (کوردی)
+
+Features include:
 
 - Dedicated content directories for each language
 - Language-specific navigation and UI elements
-- Default language set to Russian with English as secondary
+- Default language set to Russian
+- Complete translation of UI elements and content
 
 ### Content Management
 

@@ -1,10 +1,16 @@
 <!-- layouts/partials/head-additions.html -->
-<!-- Additional meta tags -->
+<!-- Basic meta tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 
-<!-- Local Lato font -->
+<!-- Core resources -->
+<link rel="stylesheet" href='{{ "css/tailwind.css" | relURL }}'>
+<link rel="icon" type="image/x-icon" href='{{ "favicon.ico" | relURL }}'>
+
+<!-- Local fonts -->
 <style>
+  /* Lato font */
   @font-face {
     font-family: 'Lato';
     font-style: normal;
@@ -74,5 +80,70 @@
     font-weight: 900;
     font-display: swap;
     src: url('{{ "fonts/Lato-BlackItalic.woff2" | relURL }}') format('woff2');
+  }
+
+  /* Noto Sans Arabic font */
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Thin.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-ExtraLight.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Light.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Regular.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Medium.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-SemiBold.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Bold.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-ExtraBold.woff2" | relURL }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('{{ "fonts/NotoSansArabic-Black.woff2" | relURL }}') format('woff2');
   }
 </style>

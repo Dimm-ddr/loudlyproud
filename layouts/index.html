@@ -1,154 +1,115 @@
-{{ define "main" }}
-<div class="bg-background dark:bg-background-dark min-h-screen">
-  <div class="container mx-auto px-4 py-4">
-    {{ partial "hero.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    {{ partial "head-additions.html" . }}
+    <title>{{ .Site.Title }}</title>
+    <style>
+        .rainbow-bg {
+            background: linear-gradient(135deg, /* top-left to bottom-right for LTR */
+                rgba(255, 0, 24, 0.1) 0%,
+                rgba(255, 165, 44, 0.1) 20%,
+                rgba(255, 255, 65, 0.1) 40%,
+                rgba(0, 128, 24, 0.1) 60%,
+                rgba(0, 0, 249, 0.1) 80%,
+                rgba(134, 0, 125, 0.1) 100%
+            );
+        }
+        .rainbow-bg[dir="rtl"] {
+            background: linear-gradient(225deg, /* top-right to bottom-left for RTL */
+                rgba(255, 0, 24, 0.1) 0%,
+                rgba(255, 165, 44, 0.1) 20%,
+                rgba(255, 255, 65, 0.1) 40%,
+                rgba(0, 128, 24, 0.1) 60%,
+                rgba(0, 0, 249, 0.1) 80%,
+                rgba(134, 0, 125, 0.1) 100%
+            );
+        }
+        .dark .rainbow-bg {
+            background: linear-gradient(135deg,
+                rgba(255, 0, 24, 0.05) 0%,
+                rgba(255, 165, 44, 0.05) 20%,
+                rgba(255, 255, 65, 0.05) 40%,
+                rgba(0, 128, 24, 0.05) 60%,
+                rgba(0, 0, 249, 0.05) 80%,
+                rgba(134, 0, 125, 0.05) 100%
+            );
+        }
+        .dark .rainbow-bg[dir="rtl"] {
+            background: linear-gradient(225deg,
+                rgba(255, 0, 24, 0.05) 0%,
+                rgba(255, 165, 44, 0.05) 20%,
+                rgba(255, 255, 65, 0.05) 40%,
+                rgba(0, 128, 24, 0.05) 60%,
+                rgba(0, 0, 249, 0.05) 80%,
+                rgba(134, 0, 125, 0.05) 100%
+            );
+        }
 
-    <!-- Search, Tags, and Books section -->
-    <div class="mt-2 mb-6">
-      <!-- Search and Pagination row -->
-      <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
-        {{ partial "search.html" . }}
-        <div class="w-full lg:w-auto">
-          {{ partial "items-per-page.html" . }}
+        /* Smooth focus styles */
+        .language-card {
+            outline: none !important; /* Remove default browser outline */
+            transition: all 0.2s ease-in-out;
+        }
+        .language-card:focus-visible {
+            box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 4px var(--ring-color);
+        }
+        .language-card:active {
+            transform: translateY(1px);
+            transition: transform 0.1s;
+        }
+    </style>
+</head>
+<body class="bg-background dark:bg-background-dark min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <!-- Russian Card -->
+            <a href="/ru/main/"
+               class="language-card language-card-ltr group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
+               aria-label="Переключиться на русский язык">
+                <div class="text-center font-latin">
+                    <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">Русский</h2>
+                    <p class="text-sm text-text dark:text-text-dark">Каталог квир-литературы на русском языке</p>
+                </div>
+            </a>
+
+            <!-- Farsi Card -->
+            <a href="/fa/main/" lang="fa" dir="rtl"
+               class="language-card language-card-rtl group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
+               aria-label="تغییر به زبان فارسی">
+                <div class="text-center font-arabic">
+                    <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">فارسی</h2>
+                    <p class="text-sm text-text dark:text-text-dark">کتابخانه ادبیات کوئیر به زبان فارسی</p>
+                </div>
+            </a>
+
+            <!-- Kurdish Card -->
+            <a href="/ku/main/" lang="ku" dir="rtl"
+               class="language-card language-card-rtl group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
+               aria-label="گۆڕینی زمان بۆ کوردی">
+                <div class="text-center font-arabic">
+                    <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">کوردی</h2>
+                    <p class="text-sm text-text dark:text-text-dark">کتێبخانەی ئەدەبیاتی کویر بە زمانی کوردی</p>
+                </div>
+            </a>
+
+            <!-- English Card -->
+            <a href="/en/main/"
+               class="language-card language-card-ltr group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark rainbow-bg
+                      hover:shadow-lg transform hover:-translate-y-1
+                      transition-all duration-200"
+               aria-label="Switch to English">
+                <div class="text-center font-latin">
+                    <h2 class="text-3xl font-bold text-primary dark:text-primary-dark mb-2">English</h2>
+                    <p class="text-sm text-text dark:text-text-dark">Discover LGBTQIA+ books seeking translation</p>
+                </div>
+            </a>
         </div>
-      </div>
-
-      <!-- Tag Manager -->
-      <div class="mt-4">
-        {{ partial "tag-manager.html" . }}
-      </div>
-
-      <!-- Tag Filter Section -->
-      <div x-data="{
-        showTagCloud: false,
-        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
-          {{- range $index, $tag := $tags -}}
-            {{- if $index }}, {{ end -}}
-            `{{- $tag.Page.Title -}}`
-          {{- end -}}]
-      }" class="mb-6">
-        <button @click="showTagCloud = !showTagCloud"
-                class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
-          <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
-          <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
-        </button>
-
-        <div x-show="showTagCloud"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 transform -translate-y-2"
-             x-transition:enter-end="opacity-100 transform translate-y-0"
-             class="mt-4">
-          <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
-          <div class="flex flex-wrap gap-2">
-            {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-              {{ partial "tag-component.html" (dict
-                "tag" .Page.Title
-                "clickable" true
-                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
-                "count" .Count
-              ) }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
-
-      <!-- Books Grid with Pagination -->
-      <div class="mt-4">
-        {{ $books := where (where .Site.Pages "Type" "books") "Kind" "page" }}
-        {{ $itemsPerPage := 12 }} <!-- Default items per page -->
-        {{ $paginatedBooks := first $itemsPerPage $books }}
-        <div id="book-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-             data-total-items="{{ len $books }}">
-          {{ range $books }}
-            <div class="book-item" style="display: none;">
-              {{ partial "book/card.html" . }}
-            </div>
-          {{ end }}
-        </div>
-        {{ partial "pagination-controls.html" (dict "books" $books "itemsPerPage" $itemsPerPage) }}
-      </div>
     </div>
-  </div>
-</div>
-
-<!-- Add pagination initialization script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const gallery = document.getElementById('book-gallery');
-    const itemsPerPageSelect = document.getElementById('items-per-page');
-    const pageInfo = document.getElementById('page-info');
-    const prevButton = document.getElementById('prev-page');
-    const nextButton = document.getElementById('next-page');
-    let currentPage = 1;
-    let itemsPerPage = parseInt(itemsPerPageSelect?.value || 12);
-    const totalItems = parseInt(gallery.dataset.totalItems);
-
-    function updatePagination() {
-        const totalPages = Math.ceil(totalItems / itemsPerPage);
-        const start = (currentPage - 1) * itemsPerPage + 1;
-        const end = Math.min(currentPage * itemsPerPage, totalItems);
-
-        // Update page info text
-        if (pageInfo) {
-            pageInfo.textContent = `${start}-${end} of ${totalItems}`;
-        }
-
-        // Update button states
-        if (prevButton) {
-            prevButton.disabled = currentPage === 1;
-        }
-        if (nextButton) {
-            nextButton.disabled = currentPage === totalPages;
-        }
-
-        // Show/hide books based on current page
-        const books = gallery.getElementsByClassName('book-item');
-        Array.from(books).forEach((book, index) => {
-            book.style.display = (index >= start - 1 && index < end) ? 'block' : 'none';
-        });
-    }
-
-    // Initialize pagination
-    updatePagination();
-
-    // Event listeners
-    if (itemsPerPageSelect) {
-        itemsPerPageSelect.addEventListener('change', function() {
-            itemsPerPage = parseInt(this.value);
-            currentPage = 1;
-            updatePagination();
-        });
-    }
-
-    if (prevButton) {
-        prevButton.addEventListener('click', function() {
-            if (currentPage > 1) {
-                currentPage--;
-                updatePagination();
-            }
-        });
-    }
-
-    if (nextButton) {
-        nextButton.addEventListener('click', function() {
-            if (currentPage < Math.ceil(totalItems / itemsPerPage)) {
-                currentPage++;
-                updatePagination();
-            }
-        });
-    }
-
-    // Listen for tag filtering events
-    window.addEventListener('booksFiltered', function() {
-        const visibleBooks = Array.from(gallery.getElementsByClassName('book-item'))
-            .filter(book => book.style.display !== 'none');
-
-        // Reset pagination when filters change
-        currentPage = 1;
-        itemsPerPage = parseInt(itemsPerPageSelect?.value || 12);
-        gallery.dataset.totalItems = visibleBooks.length;
-        updatePagination();
-    });
-});
-</script>
-{{ end }}
+</body>
+</html>

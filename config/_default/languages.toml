@@ -1,3 +1,10 @@
+[ru]
+languageName = "Русский"
+weight = 1
+languageCode = "ru"
+contentDir = "content/ru"
+disabled = false
+
 [en]
 languageName = "English"
 weight = 2
@@ -5,9 +12,16 @@ languageCode = "en"
 contentDir = "content/en"
 disabled = false
 
-[ru]
-languageName = "Русский"
-weight = 1
-languageCode = "ru"
-contentDir = "content/ru"
-disabled = false 
+[fa]
+languageName = "فارسی"
+weight = 3
+languageCode = "fa"
+contentDir = "content/fa"
+disabled = false
+
+[ku]
+languageName = "کوردی"
+weight = 4
+languageCode = "ku"
+contentDir = "content/ku"
+disabled = false

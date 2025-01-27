@@ -9,6 +9,16 @@
         <span class="font-black">{{ i18n "russian_translation" }}:</span> {{ i18n (printf "translation_status_%s" .) }}
     </div>
     {{ end }}
+    {{ with .farsi_translation_status }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "farsi_translation" }}:</span> {{ i18n (printf "translation_status_%s" .) }}
+    </div>
+    {{ end }}
+    {{ with .kurdish_translation_status }}
+    <div class="metadata-item">
+        <span class="font-black">{{ i18n "kurdish_translation" }}:</span> {{ i18n (printf "translation_status_%s" .) }}
+    </div>
+    {{ end }}
     {{ with .russian_audioversion }}
     <div class="metadata-item">
         <span class="font-black">{{ i18n "russian_audioversion" }}:</span>

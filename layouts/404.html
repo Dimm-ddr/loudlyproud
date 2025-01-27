@@ -1,76 +1,150 @@
-{{ define "main" }}
-<div class="container mx-auto px-4 py-16 text-center">
-    <div class="max-w-2xl mx-auto">
-        <!-- Fun but not media-specific illustration -->
-        <div class="mb-8 text-6xl">
-            🔍
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head-additions.html" . }}
+    <title>404 - {{ .Site.Title }}</title>
+    <script>
+        // Function to detect language from URL and redirect
+        function detectLanguageAndInit() {
+            const path = window.location.pathname;
+            const langMatch = path.match(/^\/(en|ru|fa|ku)\//);
+            let lang = langMatch ? langMatch[1] : 'en'; // Default to English if no match
 
-        <h1 class="text-4xl font-bold mb-4">
-            Page Not Found
-        </h1>
+            // Set RTL for Farsi and Kurdish
+            if (lang === 'fa' || lang === 'ku') {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = lang;
+            } else {
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = lang;
+            }
 
-        <p class="text-xl text-gray-600 mb-8">
-            Oops! It seems this page has wandered off into the unknown.
-        </p>
+            // Set font class based on language
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                if (lang === 'fa' || lang === 'ku') {
+                    mainContent.classList.add('font-arabic');
+                } else {
+                    mainContent.classList.add('font-latin');
+                }
+            }
 
-        <div class="space-y-4">
-            <p class="text-gray-600">
-                Here are a few places you might want to explore:
+            // Update content based on language
+            updateContent(lang);
+        }
+
+        // Function to update content based on language
+        function updateContent(lang) {
+            const translations = {
+                en: {
+                    title: "Page Not Found",
+                    desc: "Oops! It seems this page has wandered off into the unknown.",
+                    explore: "Here are a few places you might want to explore:",
+                    home: "Home Page",
+                    search: "Search",
+                    random: "Or check out some random items from our collection:"
+                },
+                ru: {
+                    title: "Страница не найдена",
+                    desc: "Упс! Кажется, эта страница затерялась в неизвестности.",
+                    explore: "Вот несколько мест, которые вы можете посетить:",
+                    home: "Главная страница",
+                    search: "Поиск",
+                    random: "Или посмотрите случайные материалы из нашей коллекции:"
+                },
+                fa: {
+                    title: "صفحه پیدا نشد",
+                    desc: "اوه! به نظر می‌رسد این صفحه به مکانی ناشناخته رفته است.",
+                    explore: "چند مکان که می‌توانید بازدید کنید:",
+                    home: "صفحه اصلی",
+                    search: "جستجو",
+                    random: "یا نگاهی به موارد تصادفی از مجموعه ما بیندازید:"
+                },
+                ku: {
+                    title: "پەڕە نەدۆزرایەوە",
+                    desc: "ئۆپس! وا دیارە ئەم پەڕەیە بۆ شوێنێکی نەناسراو ڕۆیشتووە.",
+                    explore: "چەند شوێنێک کە دەتوانی سەردانی بکەیت:",
+                    home: "پەڕەی سەرەکی",
+                    search: "گەڕان",
+                    random: "یان سەیری هەندێک بابەتی هەڕەمەکی لە کۆکراوەکەمان بکە:"
+                }
+            };
+
+            const t = translations[lang];
+
+            document.getElementById('page-title').textContent = t.title;
+            document.getElementById('page-desc').textContent = t.desc;
+            document.getElementById('explore-text').textContent = t.explore;
+            document.getElementById('home-link').textContent = t.home;
+            document.getElementById('home-link').href = `/${lang}/main/`;
+            if (document.getElementById('search-link')) {
+                document.getElementById('search-link').textContent = t.search;
+            }
+            if (document.getElementById('random-text')) {
+                document.getElementById('random-text').textContent = t.random;
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', detectLanguageAndInit);
+    </script>
+</head>
+<body class="bg-background dark:bg-background-dark min-h-screen flex items-center justify-center">
+    <div id="main-content" class="container mx-auto px-4 py-16">
+        <div class="max-w-2xl mx-auto text-center">
+            <!-- Fun but not media-specific illustration -->
+            <div class="mb-8 text-8xl">
+                🔍
+            </div>
+
+            <h1 id="page-title" class="text-4xl font-bold mb-4 text-primary dark:text-primary-dark">
+                Page Not Found
+            </h1>
+
+            <p id="page-desc" class="text-xl text-text dark:text-text-dark mb-8">
+                Oops! It seems this page has wandered off into the unknown.
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/"
-                   class="inline-flex items-center justify-center px-6 py-3
-                          border border-transparent rounded-md shadow-sm
-                          text-base font-medium text-white
-                          bg-blue-600 hover:bg-blue-700
-                          transition-colors duration-200">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                    Home Page
-                </a>
+            <div class="space-y-4">
+                <p id="explore-text" class="text-text dark:text-text-dark">
+                    Here are a few places you might want to explore:
+                </p>
 
-                {{ if .Site.Params.searchEnabled }}
-                <a href="/search/"
-                   class="inline-flex items-center justify-center px-6 py-3
-                          border border-gray-300 rounded-md shadow-sm
-                          text-base font-medium text-gray-700
-                          bg-white hover:bg-gray-50
-                          transition-colors duration-200">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    Search
-                </a>
-                {{ end }}
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a id="home-link" href="/en/main/"
+                       class="inline-flex items-center justify-center px-6 py-3
+                              rounded-lg shadow-md
+                              text-base font-medium
+                              bg-secondary dark:bg-secondary-dark
+                              text-primary dark:text-primary-dark
+                              hover:bg-accent1 dark:hover:bg-accent1-dark
+                              hover:text-white dark:hover:text-white
+                              transition-all duration-200">
+                        <svg class="w-5 h-5 rtl:ml-2 ltr:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        Home Page
+                    </a>
+
+                    <a id="search-link" href="/search/"
+                       class="inline-flex items-center justify-center px-6 py-3
+                              rounded-lg shadow-md
+                              text-base font-medium
+                              bg-secondary dark:bg-secondary-dark
+                              text-primary dark:text-primary-dark
+                              hover:bg-accent2 dark:hover:bg-accent2-dark
+                              hover:text-white dark:hover:text-white
+                              transition-all duration-200">
+                        <svg class="w-5 h-5 rtl:ml-2 ltr:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Search
+                    </a>
+                </div>
             </div>
         </div>
-
-        <!-- Optional: Random suggestions -->
-        {{ $randomPages := first 3 (shuffle .Site.RegularPages) }}
-        {{ if $randomPages }}
-        <div class="mt-16">
-            <p class="text-gray-600 mb-4">
-                Or check out some random items from our collection:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {{ range $randomPages }}
-                <a href="{{ .RelPermalink }}"
-                   class="p-4 rounded-lg border border-gray-200
-                          hover:border-blue-500 hover:shadow-md
-                          transition-all duration-200">
-                    <h3 class="font-medium text-gray-900 hover:text-blue-600">
-                        {{ .Title }}
-                    </h3>
-                </a>
-                {{ end }}
-            </div>
-        </div>
-        {{ end }}
     </div>
-</div>
-{{ end }} 
+</body>
+</html>
