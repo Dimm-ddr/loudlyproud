@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <!-- Add common head elements -->
+    {{ partial "head-additions.html" . }}
 
     <!-- Alpine.js setup -->
     <script defer src='{{ "js/alpine.js" | relURL }}'></script>
@@ -47,14 +48,10 @@
     <!-- SEO and Meta Tags -->
     {{ partial "meta.html" . }}
 
-    <!-- Core resources -->
-    <link rel="stylesheet" href="{{ "css/tailwind.css" | relURL }}">
-    <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
-
     <!-- Pagefind resources -->
-    <link href="{{ "search/pagefind-ui.css" | relURL }}" rel="stylesheet">
-    <script src="{{ "search/pagefind-ui.js" | relURL }}"></script>
-    <script src="{{ "search/pagefind.js" | relURL }}"></script>
+    <link href='{{ "search/pagefind-ui.css" | relURL }}' rel="stylesheet">
+    <script src='{{ "search/pagefind-ui.js" | relURL }}'></script>
+    <script src='{{ "search/pagefind.js" | relURL }}'></script>
 
     <!-- Pagefind styles -->
     <style>
