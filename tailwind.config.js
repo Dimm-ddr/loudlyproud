@@ -72,12 +72,12 @@ module.exports = {
           },
           burgundy: {
             light: {
-              DEFAULT: "#991b1b", // red-800
-              hover: "#b91c1c", // red-700
+              DEFAULT: "#7e1d5f", // custom purple-red
+              hover: "#9d2975", // lighter purple-red
             },
             dark: {
-              DEFAULT: "#f87171", // red-400
-              hover: "#fca5a5", // red-300
+              DEFAULT: "#e391c3", // light purple-pink
+              hover: "#edb3d5", // lighter purple-pink
             },
           },
           "deep-blue": {
