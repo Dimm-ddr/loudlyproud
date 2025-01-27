@@ -122,19 +122,24 @@
 
 /* Typography utility classes */
 .text-heading {
-  @apply font-black text-gray-900;
+  @apply font-black text-gray-900 dark:text-gray-50;
 }
 
 .text-subheading {
-  @apply font-bold text-gray-700;
+  @apply font-bold text-gray-800 dark:text-gray-100;
 }
 
 .text-body {
-  @apply font-normal text-gray-600;
+  @apply font-normal text-gray-700 dark:text-gray-200;
 }
 
 .text-caption {
-  @apply font-light text-gray-500;
+  @apply font-normal text-gray-600 dark:text-gray-300;
+}
+
+/* Special case for italic captions to compensate for thinner appearance */
+.text-caption.italic {
+  @apply font-medium;
 }
 
 /* Scrollbar Styles */

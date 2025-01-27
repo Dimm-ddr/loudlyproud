@@ -8,11 +8,15 @@
       </div>
       {{ end }}
 
-      <!-- Telegram Link -->
-      <div>
+      <!-- Telegram Link and Netlify Badge -->
+      <div class="flex items-center space-x-4">
         <a href="https://t.me/loudlyProud"
            class="styled-link hover:text-gray-900{{ if .Site.Params.darkMode }} dark:hover:text-gray-100{{ end }}">
           {{ i18n "telegram_updates" }}
+        </a>
+        <span class="text-gray-400">•</span>
+        <a href="https://www.netlify.com" class="opacity-70 hover:opacity-100 transition-opacity">
+          <img src="https://www.netlify.com/v3/img/components/netlify-light.svg" alt="Deploys by Netlify" class="h-5">
         </a>
       </div>
 
