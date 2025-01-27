@@ -1,50 +1,76 @@
-{{ define "main" }}
-<div class="bg-background dark:bg-background-dark min-h-screen">
-  <div class="container mx-auto px-4 py-4">
-    {{ partial "hero.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    {{ partial "head-additions.html" . }}
+    <title>{{ .Site.Title }}</title>
+</head>
+<body class="bg-background dark:bg-background-dark min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <!-- English Card -->
+            <a href="/en/main/"
+               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark
+                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
+                      transition-all duration-200 focus:outline-none focus:ring-2
+                      focus:ring-accent1 dark:focus:ring-accent1-dark focus:ring-offset-2"
+               aria-label="Switch to English">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-4xl font-black text-accent1 dark:text-accent1-dark">En</span>
+                </div>
+                <div class="text-center font-latin">
+                    <h2 class="text-2xl font-bold text-primary dark:text-primary-dark mb-1">English</h2>
+                    <p class="text-sm text-text dark:text-text-dark">Discover LGBTQIA+ books seeking translation</p>
+                </div>
+            </a>
 
-    <!-- Search, Tags, and Books section -->
-    <div class="mt-2 mb-6">
-      <!-- Search and Pagination row -->
-      <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
-        {{ partial "search.html" . }}
-        <div class="w-full lg:w-auto">
-          {{ partial "items-per-page.html" . }}
+            <!-- Russian Card -->
+            <a href="/ru/main/"
+               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark
+                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
+                      transition-all duration-200 focus:outline-none focus:ring-2
+                      focus:ring-accent3 dark:focus:ring-accent3-dark focus:ring-offset-2"
+               aria-label="Переключиться на русский язык">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-4xl font-black text-accent3 dark:text-accent3-dark">Ru</span>
+                </div>
+                <div class="text-center font-latin">
+                    <h2 class="text-2xl font-bold text-primary dark:text-primary-dark mb-1">Русский</h2>
+                    <p class="text-sm text-text dark:text-text-dark">Каталог квир-литературы на русском языке</p>
+                </div>
+            </a>
+
+            <!-- Farsi Card -->
+            <a href="/fa/main/" lang="fa" dir="rtl"
+               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark
+                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
+                      transition-all duration-200 focus:outline-none focus:ring-2
+                      focus:ring-accent2 dark:focus:ring-accent2-dark focus:ring-offset-2"
+               aria-label="تغییر به زبان فارسی">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-4xl font-black text-accent2 dark:text-accent2-dark">فا</span>
+                </div>
+                <div class="text-center font-arabic">
+                    <h2 class="text-2xl font-bold text-primary dark:text-primary-dark mb-1">فارسی</h2>
+                    <p class="text-sm text-text dark:text-text-dark">کتابخانه ادبیات کوئیر به زبان فارسی</p>
+                </div>
+            </a>
+
+            <!-- Kurdish Card -->
+            <a href="/ku/main/" lang="ku" dir="rtl"
+               class="group block p-6 rounded-lg shadow-md bg-secondary dark:bg-secondary-dark
+                      hover:shadow-lg focus:shadow-lg transform hover:-translate-y-1 focus:-translate-y-1
+                      transition-all duration-200 focus:outline-none focus:ring-2
+                      focus:ring-accent2 dark:focus:ring-accent2-dark focus:ring-offset-2"
+               aria-label="گۆڕینی زمان بۆ کوردی">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-4xl font-black text-accent2 dark:text-accent2-dark">کو</span>
+                </div>
+                <div class="text-center font-arabic">
+                    <h2 class="text-2xl font-bold text-primary dark:text-primary-dark mb-1">کوردی</h2>
+                    <p class="text-sm text-text dark:text-text-dark">کتێبخانەی ئەدەبیاتی کویر بە زمانی کوردی</p>
+                </div>
+            </a>
         </div>
-      </div>
-
-      <!-- Tag Manager -->
-      <div class="mt-4">
-        {{ partial "tag-manager.html" . }}
-      </div>
-
-      <!-- Tag Filter Section -->
-      <div x-data="{
-        showTagCloud: false,
-        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
-          {{- range $index, $tag := $tags -}}
-            {{- if $index }}, {{ end -}}
-            `{{- $tag.Page.Title -}}`
-          {{- end -}}]
-      }" class="mb-6">
-        <button @click="showTagCloud = !showTagCloud"
-                class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
-          <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
-          <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
-        </button>
-
-        <!-- Tag Cloud -->
-        <div x-show="showTagCloud" x-cloak class="mt-4">
-          {{ partial "tag-cloud.html" . }}
-        </div>
-      </div>
-
-      <!-- Books Grid with Pagination -->
-      <div class="mt-4">
-        {{ $books := where (where .Site.Pages "Type" "books") "Kind" "page" }}
-        {{ partial "client-pagination.html" (dict "books" $books) }}
-      </div>
     </div>
-  </div>
-</div>
-{{ end }}
+</body>
+</html>

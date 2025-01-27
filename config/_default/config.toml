@@ -3,9 +3,27 @@ baseURL = "https://loudlyproud.netlify.app"
 title = 'Loudly Proud'
 contentDir = "content"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = true  # Forces all languages into their own directory
 ignoreFiles = ['content/books/temp/.*']
 i18nDir = "i18n"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content/en"
+  [languages.ru]
+    languageName = "Русский"
+    weight = 2
+    contentDir = "content/ru"
+  [languages.fa]
+    languageName = "فارسی"
+    weight = 3
+    contentDir = "content/fa"
+  [languages.ku]
+    languageName = "کوردی"
+    weight = 4
+    contentDir = "content/ku"
 
 [build]
   writeStats = true
@@ -37,6 +55,7 @@ tags = "/tags/:slug/"
 [outputs]
   taxonomy = ["HTML"]
   term = ["HTML"]
+  home = ["HTML"]
 
 [params]
   description = "A multilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in multiple languages."
