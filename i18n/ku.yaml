@@ -92,3 +92,11 @@ feedback_offline_description: "ئێستا ئۆفلاینیت. تکایە ئەم 
 # Copy Functionality
 copy_to_clipboard: "کۆپی بۆ کلیپبۆرد"
 copied_to_clipboard: "کۆپی کرا بۆ کلیپبۆرد!"
+
+# 404 Page
+pageNotFound: "پەڕە نەدۆزرایەوە"
+pageNotFoundDesc: "ئۆپس! وا دیارە ئەم پەڕەیە بۆ شوێنێکی نەناسراو ڕۆیشتووە."
+explorePages: "چەند شوێنێک کە دەتوانی سەردانی بکەیت:"
+homePage: "پەڕەی سەرەکی"
+search: "گەڕان"
+randomSuggestions: "یان سەیری هەندێک بابەتی هەڕەمەکی لە کۆکراوەکەمان بکە:"

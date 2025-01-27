@@ -108,3 +108,11 @@ feedback_offline_description: "You are currently offline. Please save this URL a
 # Copy Functionality
 copy_to_clipboard: "Copy to clipboard"
 copied_to_clipboard: "Copied to clipboard!"
+
+# 404 Page
+pageNotFound: "Page Not Found"
+pageNotFoundDesc: "Oops! It seems this page has wandered off into the unknown."
+explorePages: "Here are a few places you might want to explore:"
+homePage: "Home Page"
+search: "Search"
+randomSuggestions: "Or check out some random items from our collection:"

@@ -92,3 +92,11 @@ feedback_offline_description: "شما در حال حاضر آفلاین هستی
 # Copy Functionality
 copy_to_clipboard: "کپی در کلیپ‌بورد"
 copied_to_clipboard: "در کلیپ‌بورد کپی شد!"
+
+# 404 Page
+pageNotFound: "صفحه پیدا نشد"
+pageNotFoundDesc: "اوه! به نظر می‌رسد این صفحه به مکانی ناشناخته رفته است."
+explorePages: "چند مکان که می‌توانید بازدید کنید:"
+homePage: "صفحه اصلی"
+search: "جستجو"
+randomSuggestions: "یا نگاهی به موارد تصادفی از مجموعه ما بیندازید:"
