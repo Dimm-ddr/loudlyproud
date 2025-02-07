@@ -12,6 +12,7 @@ params:
     - Kaveh Akbar
   publication_year: "2024"
   isbn: "9780593537619"
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683818219i/139400713.jpg
   goodreads_link: https://www.goodreads.com/book/show/139400713-martyr?ac=1&from_search=true&qid=qjE0JAsq5N&rank=5
   languages:
     - English
