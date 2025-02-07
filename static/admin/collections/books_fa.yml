@@ -4,6 +4,7 @@ label_singular: "Farsi Book"
 folder: "content/fa/books"
 create: true
 description: "Books in Farsi language"
+slug: "{{fields.slug}}"
 fields:
   - label: "Params"
     name: "params"
