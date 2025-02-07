@@ -18,8 +18,9 @@ const SlugGeneratorWidget = createClass({
 
     const title = titleField.value;
 
-    // Transliterate Cyrillic to Latin characters
+    // Transliterate Cyrillic, Farsi, Kurdish, and Arabic characters to Latin
     const translitMap = {
+      // Existing Cyrillic mappings
       а: "a",
       б: "b",
       в: "v",
@@ -53,6 +54,78 @@ const SlugGeneratorWidget = createClass({
       э: "e",
       ю: "yu",
       я: "ya",
+
+      // Farsi characters
+      ا: "a",
+      آ: "a",
+      ب: "b",
+      پ: "p",
+      ت: "t",
+      ث: "s",
+      ج: "j",
+      چ: "ch",
+      ح: "h",
+      خ: "kh",
+      د: "d",
+      ذ: "z",
+      ر: "r",
+      ز: "z",
+      ژ: "zh",
+      س: "s",
+      ش: "sh",
+      ص: "s",
+      ض: "z",
+      ط: "t",
+      ظ: "z",
+      ع: "a",
+      غ: "gh",
+      ف: "f",
+      ق: "gh",
+      ک: "k",
+      گ: "g",
+      ل: "l",
+      م: "m",
+      ن: "n",
+      و: "v",
+      ه: "h",
+      ی: "y",
+
+      // Kurdish specific characters (in addition to shared Arabic/Farsi ones)
+      ڕ: "r",
+      ڵ: "l",
+      ێ: "e",
+      ە: "a",
+      ۆ: "o",
+      ێ: "e",
+      ھ: "h",
+      ڤ: "v",
+      ۊ: "u",
+      ٶ: "o",
+      ئ: "a",
+
+      // Additional Arabic characters
+      ء: "a",
+      أ: "a",
+      إ: "i",
+      ؤ: "u",
+      ئ: "i",
+      ة: "h",
+      ى: "a",
+      ي: "y",
+      ٱ: "a",
+
+      // Diacritics (remove them)
+      "ً": "",
+      "ٌ": "",
+      "ٍ": "",
+      "َ": "",
+      "ُ": "",
+      "ِ": "",
+      "ّ": "",
+      "ْ": "",
+      "ٔ": "",
+      "ٕ": "",
+      "ٓ": "",
     };
 
     const transliterate = (str) => {
@@ -60,7 +133,9 @@ const SlugGeneratorWidget = createClass({
         .toLowerCase()
         .split("")
         .map((char) => translitMap[char] || char)
-        .join("");
+        .join("")
+        .normalize("NFD") // Decompose combined characters
+        .replace(/[\u0300-\u036f]/g, ""); // Remove any remaining diacritics
     };
 
     // Generate base slug from title
