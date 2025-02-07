@@ -4,8 +4,7 @@ label_singular: "Russian Book"
 folder: "content/ru/books"
 create: true
 description: "Books in Russian language"
-slug_field: "slug"
-filename_template: "{{slug}}"
+slug: "{{fields.slug}}"
 fields:
   - label: "Params"
     name: "params"
