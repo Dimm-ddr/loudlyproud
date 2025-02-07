@@ -4,6 +4,8 @@ label_singular: "Kurdish Book"
 folder: "content/ku/books"
 create: true
 description: "Books in Kurdish language"
+slug_field: "slug"
+filename_template: "{{slug}}"
 fields:
   - label: "Params"
     name: "params"

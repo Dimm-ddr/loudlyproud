@@ -4,6 +4,8 @@ label_singular: "English Book"
 folder: "content/en/books"
 create: true
 description: "Books in English language"
+slug_field: "slug"
+filename_template: "{{slug}}"
 fields:
   - label: "Params"
     name: "params"
