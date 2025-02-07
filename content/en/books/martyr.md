@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Martyr!
 slug: martyr-tm6j7p
 type: books
