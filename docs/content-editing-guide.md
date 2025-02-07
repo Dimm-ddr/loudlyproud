@@ -8,6 +8,15 @@ This guide will help you understand how to add and edit content using Decap CMS 
 2. Log in using your credentials
 3. You'll see the main dashboard with different collections for each language
 
+## Preview and Publishing Process
+
+When you add new books or make changes to the website content:
+
+1. Your changes will first appear on the preview version of the website at [preview--loudlyproud.netlify.app](https://preview--loudlyproud.netlify.app)
+2. This preview allows you to verify your changes before they go live
+3. Changes will only appear on the main website [loudlyproud.netlify.app](https://loudlyproud.netlify.app) after the Pull Request is merged into the main branch
+4. This process ensures quality control and allows for review before content goes live
+
 ## Common Fields for All Books
 
 Every book entry, regardless of language, has the following fields:
