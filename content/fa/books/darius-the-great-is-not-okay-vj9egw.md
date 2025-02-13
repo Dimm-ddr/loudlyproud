@@ -21,6 +21,11 @@ params:
     Sohrab calls him Darioush—the original Persian version of his name—and Darius has never felt more like himself than he does now that he's Darioush to Sohrab. When it's time to go home to America, he'll have to find a way to be Darioush on his own.
   authors:
     - Adib Khorram
+  short_book_description: Darius Kellner speaks better Klingon than Farsi, and he
+    knows more about Hobbit social cues than Persian ones. He's about to take
+    his first-ever trip to Iran, and it's pretty overwhelming—especially when
+    he's also dealing with clinical depression, a disapproving dad, and a
+    chronically anemic social life.
   publication_year: "2018"
   isbn: "9780525552963"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1520460519i/37506437.jpg
