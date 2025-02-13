@@ -24,6 +24,10 @@ params:
     Set against the backdrop of Tehran and Los Angeles, this tale of intergenerational trauma and love is an ode to the fragile bonds of family, the hidden secrets of history, and all the beautiful moments that make us who we are today.
   authors:
     - Abdi Nazemian
+  short_book_description: From the Stonewall Honor–winning author of Like a Love
+    Story comes a sweeping story of three generations of boys in the same
+    Iranian family. Perfect for fans of Last Night at the Telegraph Club and
+    Darius the Great Is Not Okay.
   publication_year: "2023"
   isbn: "9780063039377"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1665839481i/61941000.jpg
