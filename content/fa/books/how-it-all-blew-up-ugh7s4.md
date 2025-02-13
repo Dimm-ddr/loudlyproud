@@ -5,8 +5,6 @@ slug: how-it-all-blew-up-ugh7s4
 type: books
 params:
   book_title: How It All Blew Up
-  authors:
-    - Arvin Ahmadi
   book_description: >-
     Simon vs. the Homo Sapiens Agenda goes to Italy in Arvin Ahmadi's newest
     incisive look at identity and what it means to find yourself by running
@@ -20,10 +18,15 @@ params:
 
 
     At turns uplifting and devastating, How It All Blew Up is Arvin Ahmadi's most powerful novel yet, a celebration of how life's most painful moments can live alongside the riotous, life-changing joys of discovering who you are.
+  authors:
+    - Arvin Ahmadi
+  short_book_description: Simon vs. the Homo Sapiens Agenda goes to Italy in Arvin
+    Ahmadi's newest incisive look at identity and what it means to find yourself
+    by running away.
+  publication_year: "2020"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1590134042i/48810915.jpg
+  goodreads_link: https://www.goodreads.com/book/show/48810915-how-it-all-blew-up
   languages:
     - English
   page_count: "288"
-  publication_year: "2020"
-  goodreads_link: https://www.goodreads.com/book/show/48810915-how-it-all-blew-up
 ---
