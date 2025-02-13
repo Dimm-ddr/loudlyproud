@@ -19,6 +19,11 @@ params:
     Electrifying, funny, wholly original, and profound, Martyr! heralds the arrival of a blazing and essential new voice in contemporary fiction.
   authors:
     - Kaveh Akbar
+  short_book_description: Kaveh Akbar’s Martyr! is a paean to how we spend our
+    lives seeking meaning—in faith, art, ourselves, others—in which a newly
+    sober, orphaned son of Iranian immigrants, guided by the voices of artists,
+    poets, and kings, embarks on a search that leads him to a terminally ill
+    painter living out her final days in the Brooklyn Museum.
   publication_year: "2024"
   isbn: "9780593537619"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683818219i/139400713.jpg
