@@ -20,6 +20,10 @@ params:
     Darius thought he knew exactly who he was and what he wanted, but maybe he was wrong. Maybe he deserves better.
   authors:
     - Adib Khorram
+  short_book_description: "In this companion to the award-winning Darius the Great
+    Is Not Okay, Darius suddenly has it all: a boyfriend, an internship, a spot
+    on the soccer team. It’s everything he’s ever wanted–but what if he deserves
+    better?"
   publication_year: "2020"
   isbn: "9780593108239"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1576517046i/49025767.jpg
