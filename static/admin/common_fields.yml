@@ -87,3 +87,11 @@ book_fields:
         name: "goodreads_link"
         widget: "string"
         pattern: ['^https?:\/\/.*', "Must be a valid URL"]
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+        required: false
+        allow_add: true
+        collapsed: false
+        hint: "Add relevant tags to categorize the book"
