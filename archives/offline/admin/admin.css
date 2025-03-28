@@ -1,0 +1,168 @@
+/* static/admin/admin.css */
+
+/* Font definitions */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Lato-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Lato-Bold.woff2') format('woff2');
+}
+
+/* Debug Panel Styles */
+.debug-panel {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #f0f0f0;
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  max-width: 50%;
+  max-height: 50vh;
+  overflow: auto;
+  border-top-left-radius: 0.5rem;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.debug-panel--visible {
+  display: block;
+}
+
+.debug-panel div {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  word-break: break-word;
+}
+
+.debug-panel div:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Loading Indicator Styles */
+.cms-loading-indicator {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+body.cms-loading .cms-loading-indicator {
+  display: block;
+}
+
+/* Preview styles */
+.book-preview {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Lato', system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.book-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.book-authors {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.book-series {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.book-authors .author:not(:last-child):after {
+  content: ", ";
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-cover-container {
+  width: 300px;
+  max-width: 100%;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.book-details {
+  width: 100%;
+}
+
+.book-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.metadata-group {
+  margin-bottom: 1.5rem;
+}
+
+.metadata-item {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.metadata-label {
+  font-weight: 700;
+  color: #555;
+}
+
+.book-tags {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.book-tags .tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.status {
+  text-transform: capitalize;
+}

@@ -1,0 +1,21 @@
+name: "books_ru"
+label: "Russian Books"
+label_singular: "Russian Book"
+folder: "content/ru/books"
+create: true
+description: "Books in Russian language"
+slug: "{{fields.slug}}"
+fields:
+  - label: "Params"
+    name: "params"
+    widget: "object"
+    required: true
+    fields:
+      - label: "Russian Publisher"
+        name: "russian_publisher"
+        widget: "string"
+        required: false
+      - label: "Russian Edition Notes"
+        name: "russian_edition_notes"
+        widget: "text"
+        required: false

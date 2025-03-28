@@ -1,0 +1,21 @@
+name: "books_ku"
+label: "Kurdish Books"
+label_singular: "Kurdish Book"
+folder: "content/ku/books"
+create: true
+description: "Books in Kurdish language"
+slug: "{{fields.slug}}"
+fields:
+  - label: "Params"
+    name: "params"
+    widget: "object"
+    required: true
+    fields:
+      - label: "Kurdish Publisher"
+        name: "kurdish_publisher"
+        widget: "string"
+        required: false
+      - label: "Kurdish Edition Notes"
+        name: "kurdish_edition_notes"
+        widget: "text"
+        required: false

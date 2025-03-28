@@ -1,0 +1,25 @@
+# Offline configuration for Hugo
+# These settings override the default config for offline use
+baseURL = "./"
+canonifyURLs = false
+relativeURLs = true
+uglyURLs = true
+disableAliases = true  # Prevents redirect files
+
+
+# Ensure proper file paths for offline browsing
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+# Add a custom output format for offline use
+[outputFormats]
+  [outputFormats.HTML]
+    mediaType = "text/html"
+    isHTML = true
+    permalinkable = true

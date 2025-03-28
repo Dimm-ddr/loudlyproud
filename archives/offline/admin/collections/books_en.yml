@@ -1,0 +1,20 @@
+name: "books_en"
+label: "English Books"
+label_singular: "English Book"
+folder: "content/en/books"
+create: true
+description: "Books in English language"
+slug: "{{fields.slug}}"
+fields:
+  - label: "Params"
+    name: "params"
+    widget: "object"
+    required: true
+    fields:
+      - label: "Target Translation Languages"
+        name: "target_translation_languages"
+        widget: "list"
+        field: { label: "Language", name: "language", widget: "string" }
+        required: true
+        allow_add: true
+        collapsed: false

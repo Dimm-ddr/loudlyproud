@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/tag-helpers.ts"],
+  "sourcesContent": ["export interface TagHelpers {\n  formatTagClass: (tag: string) => string;\n  getTagClasses: (tag: string) => string;\n  hasCustomStyle: (tag: string) => boolean;\n}\n\nexport const tagHelpers: TagHelpers = {\n  formatTagClass: (tag: string): string => {\n    return 'tag-' + tag.toLowerCase().replace(/\\s+/g, '-');\n  },\n\n  getTagClasses: (tag: string): string => {\n    const baseClass = 'tag';\n    const specificClass = tagHelpers.formatTagClass(tag);\n    return `${baseClass} ${specificClass}`;\n  },\n\n  hasCustomStyle: (tag: string): boolean => {\n    const style = getComputedStyle(document.documentElement);\n    const className = tagHelpers.formatTagClass(tag);\n    return style.getPropertyValue(`--${className}-bg`) !== '';\n  }\n};\n"],
+  "mappings": ";AAMO,IAAM,aAAyB;AAAA,EACpC,gBAAgB,CAAC,QAAwB;AACvC,WAAO,SAAS,IAAI,YAAY,EAAE,QAAQ,QAAQ,GAAG;AAAA,EACvD;AAAA,EAEA,eAAe,CAAC,QAAwB;AACtC,UAAM,YAAY;AAClB,UAAM,gBAAgB,WAAW,eAAe,GAAG;AACnD,WAAO,GAAG,SAAS,IAAI,aAAa;AAAA,EACtC;AAAA,EAEA,gBAAgB,CAAC,QAAyB;AACxC,UAAM,QAAQ,iBAAiB,SAAS,eAAe;AACvD,UAAM,YAAY,WAAW,eAAe,GAAG;AAC/C,WAAO,MAAM,iBAAiB,KAAK,SAAS,KAAK,MAAM;AAAA,EACzD;AACF;",
+  "names": []
+}

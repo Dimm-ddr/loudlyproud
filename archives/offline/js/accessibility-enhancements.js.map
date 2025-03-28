@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/accessibility-enhancements.ts"],
+  "sourcesContent": ["interface Window {\n  announceChange: (message: string) => void;\n}\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  // Add aria-live region for dynamic content\n  const liveRegion = document.createElement('div');\n  liveRegion.setAttribute('aria-live', 'polite');\n  liveRegion.setAttribute('aria-atomic', 'true');\n  liveRegion.classList.add('sr-only');\n  document.body.appendChild(liveRegion);\n\n  // Export function for announcing changes\n  window.announceChange = (message: string): void => {\n    liveRegion.textContent = message;\n  };\n}); "],
+  "mappings": ";AAIA,SAAS,iBAAiB,oBAAoB,MAAM;AAElD,QAAM,aAAa,SAAS,cAAc,KAAK;AAC/C,aAAW,aAAa,aAAa,QAAQ;AAC7C,aAAW,aAAa,eAAe,MAAM;AAC7C,aAAW,UAAU,IAAI,SAAS;AAClC,WAAS,KAAK,YAAY,UAAU;AAGpC,SAAO,iBAAiB,CAAC,YAA0B;AACjD,eAAW,cAAc;AAAA,EAC3B;AACF,CAAC;",
+  "names": []
+}

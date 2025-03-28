@@ -1,0 +1,21 @@
+name: "books_fa"
+label: "Farsi Books"
+label_singular: "Farsi Book"
+folder: "content/fa/books"
+create: true
+description: "Books in Farsi language"
+slug: "{{fields.slug}}"
+fields:
+  - label: "Params"
+    name: "params"
+    widget: "object"
+    required: true
+    fields:
+      - label: "Farsi Publisher"
+        name: "farsi_publisher"
+        widget: "string"
+        required: false
+      - label: "Farsi Edition Notes"
+        name: "farsi_edition_notes"
+        widget: "text"
+        required: false
