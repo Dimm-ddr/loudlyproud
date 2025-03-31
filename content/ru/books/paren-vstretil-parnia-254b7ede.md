@@ -12,7 +12,7 @@ params:
   isbn: '9785604785997'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/62246585
   page_count: '205'
   publication_year: '2003'

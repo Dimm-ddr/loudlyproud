@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1559650366i/46144132.jpg
   isbn: '9785604262740'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/46144132
   page_count: '384'
   publication_year: '2019'

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575794976i/44089423.jpg
   languages:
     - Chinese
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/44089423-kaleidoscope-of-death
   page_count: '1900'
   russian_audioversion: false

@@ -17,7 +17,7 @@ params:
   isbn: '9785041605094'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/61182011
   page_count: '480'
   publication_year: '2021'

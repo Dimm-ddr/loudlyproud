@@ -17,10 +17,10 @@ params:
     - Spanish
     - Italian
     - Chinese
-    - Немецкий
-    - Словенский
-    - Французский
-    - Русский
+    - German
+    - Slovenian
+    - French
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/139569.Stone_Butch_Blues
   page_count: '446'
   publication_year: '1993'

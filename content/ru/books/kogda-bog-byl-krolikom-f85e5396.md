@@ -12,7 +12,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1350327463i/16089119.jpg
   isbn: '9785389034747'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/16089119
   page_count: '352'
   publication_year: '2012'

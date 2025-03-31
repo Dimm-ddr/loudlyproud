@@ -14,7 +14,7 @@ params:
     - English
     - Spanish
     - Italian
-    - Нидерландский
+    - Dutch
   goodreads_link: https://www.goodreads.com/book/show/29502605-christmas-days
   page_count: '304'
   publication_year: '2016'

@@ -18,7 +18,7 @@ params:
   languages:
     - English
     - Spanish
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/2138520._
   page_count: '845'
   publication_year: '2002'

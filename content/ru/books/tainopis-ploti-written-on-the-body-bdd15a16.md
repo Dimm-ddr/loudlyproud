@@ -17,10 +17,10 @@ params:
     - English
     - Spanish
     - Italian
-    - Немецкий
-    - Нидерландский
-    - Русский
-    - Турецкий
+    - German
+    - Dutch
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/2524211
   page_count: '288'
   publication_year: '1992'

@@ -19,8 +19,8 @@ params:
     - Italian
     - Chinese
     - Korean
-    - Немецкий
-    - Русский
+    - German
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/53341254
   page_count: '336'
   publication_year: '1952'

@@ -15,9 +15,9 @@ params:
     - English
     - Spanish
     - Italian
-    - Немецкий
-    - Нидерландский
-    - Русский
+    - German
+    - Dutch
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/51073243
   page_count: '224'
   publication_year: '1985'

@@ -16,8 +16,8 @@ params:
     - English
     - Spanish
     - Italian
-    - Русский
-    - Японский
+    - Russian
+    - Japanese
   goodreads_link: https://www.goodreads.com/book/show/54766327-1
   page_count: '144'
   publication_year: '2016'

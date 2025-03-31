@@ -19,11 +19,11 @@ params:
     - English
     - Spanish
     - Catalan
-    - Немецкий
-    - Нидерландский
-    - Русский
-    - Турецкий
-    - Французский
+    - German
+    - Dutch
+    - Russian
+    - Turkish
+    - French
   goodreads_link: https://www.goodreads.com/book/show/15047.The_Passion
   page_count: '176'
   publication_year: '1987'

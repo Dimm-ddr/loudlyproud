@@ -17,12 +17,12 @@ params:
     - Spanish
     - Italian
     - Korean
-    - Немецкий
-    - Нидерландский
-    - Польский
-    - Португальский
-    - Русский
-    - Финский
+    - German
+    - Dutch
+    - Polish
+    - Portuguese
+    - Russian
+    - Finnish
   goodreads_link: https://www.goodreads.com/book/show/32944167
   page_count: '760'
   publication_year: '2015'

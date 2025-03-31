@@ -14,8 +14,8 @@ params:
   languages:
     - English
     - Spanish
-    - Португальский
-    - Русский
+    - Portuguese
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/53937364
   page_count: '400'
   publication_year: '2017'

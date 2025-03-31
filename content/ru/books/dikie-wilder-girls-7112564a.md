@@ -13,7 +13,7 @@ params:
   isbn: '9785604360606'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/52421855
   page_count: '352'
   publication_year: '2019'

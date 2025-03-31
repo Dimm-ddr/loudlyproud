@@ -15,11 +15,11 @@ params:
     - English
     - Spanish
     - Italian
-    - Немецкий
-    - Польский
-    - Португальский
-    - Русский
-    - Турецкий
+    - German
+    - Polish
+    - Portuguese
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/52732634
   page_count: '384'
   publication_year: '2011'

@@ -15,8 +15,8 @@ params:
   languages:
     - English
     - Spanish
-    - Немецкий
-    - Русский
+    - German
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/41150487-red-white-royal-blue
   page_count: '462'
   publication_year: '2019'

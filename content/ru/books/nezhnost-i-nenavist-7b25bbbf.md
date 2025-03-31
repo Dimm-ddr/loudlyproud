@@ -15,7 +15,7 @@ params:
   isbn: '9781735589824'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/56779833-the-awakening
   page_count: '400'
   publication_year: '2021'

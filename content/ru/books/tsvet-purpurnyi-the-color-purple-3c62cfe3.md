@@ -17,12 +17,12 @@ params:
     - English
     - Vietnamese
     - Spanish
-    - Немецкий
-    - Нидерландский
-    - Португальский
-    - Русский
-    - Французский
-    - Японский
+    - German
+    - Dutch
+    - Portuguese
+    - Russian
+    - French
+    - Japanese
   goodreads_link: https://www.goodreads.com/book/show/22023345
   page_count: '227'
   publication_year: '1976'

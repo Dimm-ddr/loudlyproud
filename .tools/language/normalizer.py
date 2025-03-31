@@ -34,9 +34,6 @@ def create_language_map() -> Dict[str, str]:
                 if not data:
                     continue
                 
-                # Get the language code from filename (e.g., 'en' from 'en.yaml')
-                lang_code = lang_file.stem
-                
                 # Process each language key
                 for key, value in data.items():
                     if not key.startswith('language_') or key in ui_keys:
@@ -46,11 +43,10 @@ def create_language_map() -> Dict[str, str]:
                     uniform_name = key[9:].lower()
                     
                     # Map the translated value to the uniform name
-                    # Use the English translation as the canonical form
-                    if lang_code == 'en':
-                        language_map[value.lower()] = uniform_name.capitalize()
-                    else:
-                        language_map[value.lower()] = uniform_name.capitalize()
+                    # Store everything in lowercase in the map
+                    value_lower = value.lower()
+                    if value_lower not in language_map:
+                        language_map[value_lower] = uniform_name
         except Exception as e:
             print(f"Warning: Could not process {lang_file}: {e}")
     
@@ -61,82 +57,169 @@ def normalize_languages_in_file(file_path: Path, language_map: Dict[str, str]) -
     
     Args:
         file_path: Path to the markdown file
-        language_map: Mapping from translated names to uniform names
+        language_map: Mapping from translated names to uniform names (all lowercase)
         
     Returns:
         True if changes were made, False otherwise
     """
     try:
+        # Read the entire file as text
         with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+            lines = f.readlines()
         
-        # Extract frontmatter
-        if not content.startswith('---'):
+        # Locate the frontmatter boundaries
+        if not lines or not lines[0].strip() == '---':
+            print("No frontmatter found")
             return False
-            
-        _, frontmatter, content = content.split('---', 2)
         
-        # Parse frontmatter
-        yaml = YAML(typ='safe')
-        data = yaml.load(frontmatter)
+        frontmatter_end = -1
+        for i in range(1, len(lines)):
+            if lines[i].strip() == '---':
+                frontmatter_end = i
+                break
         
-        if not data or 'language' not in data:
+        if frontmatter_end == -1:
+            print("Incomplete frontmatter")
             return False
+        
+        # Find the params section and languages subsection within the frontmatter
+        params_section_start = -1
+        language_section_start = -1
+        language_lines = []
+        in_params_section = False
+        in_languages_section = False
+        
+        for i in range(1, frontmatter_end):
+            line = lines[i]
+            stripped = line.strip()
             
-        # Normalize languages
-        languages = data['language']
-        if isinstance(languages, str):
-            languages = [languages]
-            
-        normalized_languages = []
+            # Check if this line contains the params field
+            if not in_params_section and stripped == "params:":
+                params_section_start = i
+                in_params_section = True
+                continue
+                
+            # Look for languages field inside params section
+            if in_params_section:
+                # Check if we've left the params section (unindented line)
+                if stripped and not line.startswith((' ', '\t')):
+                    in_params_section = False
+                    continue
+                
+                # Check for languages field within params
+                if not in_languages_section and "languages:" in stripped and stripped.endswith("languages:"):
+                    language_section_start = i
+                    in_languages_section = True
+                    continue
+                
+                # Collect language lines
+                if in_languages_section:
+                    # Check if we're still in the languages section (indented list items)
+                    if stripped.startswith('-'):
+                        language_lines.append(i)
+                    # Check if we've left the languages section (new field at same indent level as languages)
+                    elif stripped and not stripped.startswith('-'):
+                        indent_level = len(line) - len(line.lstrip())
+                        languages_indent = len(lines[language_section_start]) - len(lines[language_section_start].lstrip())
+                        
+                        if indent_level <= languages_indent:
+                            in_languages_section = False
+        
+        if language_section_start == -1 or not language_lines:
+            print("No languages section found")
+            return False
+        
+        print(f"Found languages section at line {language_section_start+1}, with {len(language_lines)} languages")
+        
+        # Process each language line and replace if needed
         changed = False
-        
-        for lang in languages:
-            lang_lower = lang.lower()
+        for line_idx in language_lines:
+            line = lines[line_idx]
+            # Extract just the language name (after the dash and whitespace)
+            dash_pos = line.find('-')
+            if dash_pos == -1:
+                continue
+                
+            # Skip whitespace after the dash
+            name_start = dash_pos + 1
+            while name_start < len(line) and line[name_start].isspace():
+                name_start += 1
+            
+            # Extract the language name
+            lang_name = line[name_start:].strip()
+            lang_lower = lang_name.lower()
+            
+            print(f"Processing language: {lang_name} (lowercase: {lang_lower})", end=' ')
+            
+            # Check if we need to normalize this language
             if lang_lower in language_map:
-                normalized = language_map[lang_lower]
-                if normalized != lang:
+                normalized = language_map[lang_lower].capitalize()
+                print(f"-> {normalized}")
+                
+                if normalized != lang_name:
+                    # Replace just the language name part, keeping whitespace/formatting
+                    new_line = line[:name_start] + normalized + '\n'
+                    lines[line_idx] = new_line
                     changed = True
-                normalized_languages.append(normalized)
+                else:
+                    print("(already normalized)")
             else:
-                normalized_languages.append(lang)
+                print("(not found in language map)")
         
         if not changed:
+            print("No changes needed")
             return False
-            
-        # Update frontmatter
-        data['language'] = normalized_languages
-        yaml.dump(data, frontmatter)
         
-        # Write back to file
+        # Write the modified content back to the file
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('---\n')
-            f.write(frontmatter)
-            f.write('---\n')
-            f.write(content)
-            
+            f.writelines(lines)
+        
         return True
         
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 def normalize_directory(directory: Path) -> tuple[int, int]:
-    """Normalize language names in all markdown files in a directory.
+    """Normalize language names in all markdown files in a directory or a single file.
     
     Args:
-        directory: Path to the directory to process
+        directory: Path to the directory or file to process
         
     Returns:
         Tuple of (files changed, total files processed)
     """
     language_map = create_language_map()
+    print(f"Created language map with {len(language_map)} entries")
     changed = 0
     total = 0
     
+    if directory.is_file():
+        print(f"Processing single file: {directory}")
+        total = 1
+        try:
+            if normalize_languages_in_file(directory, language_map):
+                changed = 1
+                print(f"✓ Changed language names in {directory}")
+            else:
+                print(f"✗ No changes applied to {directory}")
+        except Exception as e:
+            print(f"✗ Error processing {directory}: {e}")
+        return changed, total
+    
+    print(f"Processing directory: {directory}")
     for file_path in directory.rglob('*.md'):
         total += 1
-        if normalize_languages_in_file(file_path, language_map):
-            changed += 1
+        print(f"Processing {file_path}...", end=' ')
+        try:
+            if normalize_languages_in_file(file_path, language_map):
+                changed += 1
+                print("✓ Changed")
+            else:
+                print("✗ No changes")
+        except Exception as e:
+            print(f"✗ Error: {e}")
             
     return changed, total 

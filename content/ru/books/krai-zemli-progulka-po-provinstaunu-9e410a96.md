@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1599303070i/55236655.jpg
   isbn: '9785171207229'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/55236655
   page_count: '224'
   publication_year: '2021'

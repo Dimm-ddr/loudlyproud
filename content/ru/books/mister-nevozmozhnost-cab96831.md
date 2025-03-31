@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1648387805i/60699534.jpg
   isbn: '9785041126674'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/60699534
   page_count: '416'
   publication_year: '2022'

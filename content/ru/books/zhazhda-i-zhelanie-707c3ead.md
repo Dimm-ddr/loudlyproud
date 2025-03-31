@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653760638i/61182048.jpg
   isbn: '9785041679194'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/61182048
   page_count: '416'
   publishers:

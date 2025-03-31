@@ -16,7 +16,7 @@ params:
   languages:
     - English
     - Spanish
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/60020842-heartstopper-2
   page_count: '320'
   publication_year: '2021'

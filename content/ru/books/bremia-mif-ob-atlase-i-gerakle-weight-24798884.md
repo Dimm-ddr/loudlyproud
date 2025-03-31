@@ -14,8 +14,8 @@ params:
   languages:
     - English
     - Spanish
-    - Русский
-    - Турецкий
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/15046.Weight
   page_count: '162'
   publication_year: '2005'

@@ -15,9 +15,9 @@ params:
     - English
     - Spanish
     - Italian
-    - Нидерландский
-    - Русский
-    - Турецкий
+    - Dutch
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/2524212
   page_count: '320'
   publication_year: '2004'

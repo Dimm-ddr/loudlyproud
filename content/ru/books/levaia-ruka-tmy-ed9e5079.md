@@ -14,7 +14,7 @@ params:
   isbn: '9785389099531'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/18661678
   page_count: '732'
   publication_year: '2018'

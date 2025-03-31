@@ -13,7 +13,7 @@ params:
   isbn: '9785171385712'
   languages:
     - English
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58188308
   page_count: '480'
   publication_year: '2020'

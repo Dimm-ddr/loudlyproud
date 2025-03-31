@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1603873546i/842304.jpg
   isbn: '9785942784089'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/842304._
   page_count: '750'
   publication_year: '2003'

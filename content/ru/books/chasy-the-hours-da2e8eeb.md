@@ -15,11 +15,11 @@ params:
     - English
     - Spanish
     - Chinese
-    - Немецкий
-    - Польский
-    - Русский
-    - Французский
-    - Хорватский
+    - German
+    - Polish
+    - Russian
+    - French
+    - Croatian
   goodreads_link: https://www.goodreads.com/book/show/13180707
   page_count: '230'
   publication_year: '1998'

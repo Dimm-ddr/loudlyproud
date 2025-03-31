@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1601720515i/55544043.jpg
   isbn: '9785041118440'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/55544043
   page_count: '512'
   publication_year: '2020'

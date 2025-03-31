@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347004586i/11720400.jpg
   isbn: '9785941453207'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/11720400
   page_count: '494'
   publication_year: '2005'

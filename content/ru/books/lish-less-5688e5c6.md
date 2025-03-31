@@ -13,10 +13,10 @@ params:
   isbn: '9785604360552'
   languages:
     - English
-    - Немецкий
-    - Польский
-    - Русский
-    - Французский
+    - German
+    - Polish
+    - Russian
+    - French
   goodreads_link: https://www.goodreads.com/book/show/49049215
   page_count: '328'
   publication_year: '2017'

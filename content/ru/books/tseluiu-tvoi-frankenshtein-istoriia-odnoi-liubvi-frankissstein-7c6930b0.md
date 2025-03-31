@@ -16,7 +16,7 @@ params:
   languages:
     - English
     - Spanish
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/42123790-frankissstein
   page_count: '260'
   publication_year: '2019'

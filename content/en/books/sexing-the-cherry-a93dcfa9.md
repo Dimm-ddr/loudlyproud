@@ -13,9 +13,9 @@ params:
   languages:
     - English
     - Spanish
-    - Немецкий
-    - Нидерландский
-    - Турецкий
+    - German
+    - Dutch
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/15050.Sexing_the_Cherry
   page_count: '167'
   publication_year: '1989'

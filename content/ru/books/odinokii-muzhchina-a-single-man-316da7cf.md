@@ -15,7 +15,7 @@ params:
   languages:
     - English
     - Spanish
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/52179977
   page_count: '224'
   publication_year: '1964'

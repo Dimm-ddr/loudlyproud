@@ -15,7 +15,7 @@ params:
     - English
     - Spanish
     - Chinese
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/44171782
   page_count: '576'
   publication_year: '1999'

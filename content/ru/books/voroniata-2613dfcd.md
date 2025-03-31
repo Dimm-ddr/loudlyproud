@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1534421987i/41180718.jpg
   isbn: '9785040975150'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/41180718
   note: '**примечание:** квир персонажи появляются в серии позже, в первой книге их нет.'
   page_count: '480'
