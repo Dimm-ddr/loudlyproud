@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1264628990i/7641360.jpg
   isbn: '1615813810'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/7641360-the-guardian
   page_count: '220'
   publication_year: '2010'

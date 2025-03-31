@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1542893481i/42929289.jpg
   isbn: '9785604072196'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/42929289
   page_count: '244'
   publication_year: '2018'

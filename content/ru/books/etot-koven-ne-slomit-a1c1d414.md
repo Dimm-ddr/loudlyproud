@@ -14,7 +14,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653726033i/61179885.jpg
   isbn: '9785171453510'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/61179885
   page_count: '352'
   publishers:

@@ -14,15 +14,15 @@ params:
   editions count: '385'
   isbn: '5824306028'
   languages:
-    - Английский
-    - Вьетнамский
-    - Испанский
-    - Немецкий
-    - Нидерландский
-    - Португальский
-    - Русский
-    - Французский
-    - Японский
+    - English
+    - Vietnamese
+    - Spanish
+    - German
+    - Dutch
+    - Portuguese
+    - Russian
+    - French
+    - Japanese
   goodreads_link: https://www.goodreads.com/book/show/22023345
   page_count: '227'
   publication_year: '1976'

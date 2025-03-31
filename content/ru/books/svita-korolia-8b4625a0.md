@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622834527i/58260738.jpg
   isbn: '9785604588970'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58260738
   page_count: '560'
   publishers:

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1535376988i/41540351.jpg
   isbn: '9785389112674'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/41540351
   page_count: '576'
   publication_year: '2018'

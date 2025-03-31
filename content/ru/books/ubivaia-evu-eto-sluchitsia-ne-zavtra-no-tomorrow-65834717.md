@@ -14,8 +14,8 @@ params:
   editions count: '23'
   isbn: '9785171186258'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58266040
   page_count: '240'
   publication_year: '2018'

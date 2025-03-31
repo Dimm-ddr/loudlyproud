@@ -14,9 +14,9 @@ params:
   editions count: '7'
   isbn: '9785604653067'
   languages:
-    - Английский
-    - Испанский
-    - Русский
+    - English
+    - Spanish
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/60020842-heartstopper-2
   page_count: '320'
   publication_year: '2021'

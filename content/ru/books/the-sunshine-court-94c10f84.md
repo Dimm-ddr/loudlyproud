@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1715708397i/212253549.jpg
   isbn: '9798323194506'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/212253549-the-sunshine-court
   page_count: '330'
   publication_year: '2024'

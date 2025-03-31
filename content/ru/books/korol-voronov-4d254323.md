@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1603031459i/55710360.jpg
   isbn: '9785604458136'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/55710360
   page_count: '432'
   publication_year: '2020'

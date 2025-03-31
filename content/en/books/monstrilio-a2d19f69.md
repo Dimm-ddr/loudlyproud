@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664985853i/62888191.jpg
   isbn: '1638931607'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/62888191-monstrilio
   page_count: '336'
   publication_year: '2023'

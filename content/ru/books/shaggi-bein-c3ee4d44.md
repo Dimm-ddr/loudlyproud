@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641196468i/60015692.jpg
   isbn: '9785041220372'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/60015692
   page_count: '544'
   publishers:

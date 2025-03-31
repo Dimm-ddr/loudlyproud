@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1568015427l/52906109.jpg
   isbn: '9785171145477'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/52906109
   page_count: '384'
   russian_audioversion: false

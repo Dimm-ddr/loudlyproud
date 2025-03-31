@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1464726568i/30326167.jpg
   isbn: '9785699479320'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/30326167
   page_count: '475'
   publication_year: '2011'

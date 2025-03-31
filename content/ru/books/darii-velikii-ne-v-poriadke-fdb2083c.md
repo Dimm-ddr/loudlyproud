@@ -12,8 +12,8 @@ params:
   editions count: '6'
   isbn: '9785604262757'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/49531567
   page_count: '432'
   publication_year: '2019'

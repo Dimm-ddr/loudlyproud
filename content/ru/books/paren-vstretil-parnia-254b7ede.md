@@ -11,8 +11,8 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323555i/62246585.jpg
   isbn: '9785604785997'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/62246585
   page_count: '205'
   publication_year: '2003'

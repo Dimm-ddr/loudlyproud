@@ -12,8 +12,8 @@ params:
   editions count: '32'
   isbn: '9785041204099'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58352656
   page_count: '336'
   publication_year: '2020'

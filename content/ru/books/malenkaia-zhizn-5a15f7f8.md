@@ -13,16 +13,16 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1478876919i/32944167.jpg
   isbn: '9788952776389'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Корейский
-    - Немецкий
-    - Нидерландский
-    - Польский
-    - Португальский
-    - Русский
-    - Финский
+    - English
+    - Spanish
+    - Italian
+    - Korean
+    - German
+    - Dutch
+    - Polish
+    - Portuguese
+    - Russian
+    - Finnish
   goodreads_link: https://www.goodreads.com/book/show/32944167
   page_count: '760'
   publication_year: '2015'

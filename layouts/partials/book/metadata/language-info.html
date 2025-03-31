@@ -1,7 +1,12 @@
 <div class="space-y-2">
     {{ with .languages }}
     <div class="metadata-item">
-        <span class="font-black">{{ i18n "languages" }}:</span> {{ delimit . ", " }}
+        <span class="font-black">{{ i18n "languages" }}:</span>
+        {{ $translatedLanguages := slice }}
+        {{ range . }}
+            {{ $translatedLanguages = $translatedLanguages | append (i18n (printf "language_%s" (. | lower))) }}
+        {{ end }}
+        {{ delimit $translatedLanguages ", " }}
     </div>
     {{ end }}
     {{ with .russian_translation_status }}

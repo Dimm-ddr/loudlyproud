@@ -12,8 +12,8 @@ params:
   editions count: '43'
   isbn: '9785171131623'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/46031432
   page_count: '256'
   publication_year: '2018'

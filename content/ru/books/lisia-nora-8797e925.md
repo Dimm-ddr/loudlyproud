@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1580491701i/50731490.jpg
   isbn: '9785604360613'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/50731490
   page_count: '336'
   publication_year: '2020'

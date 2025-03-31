@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1667852289i/62039259.jpg
   isbn: '9780374609870'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/62039259-open-throat
   page_count: '176'
   publication_year: '2023'

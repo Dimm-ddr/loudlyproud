@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659400213i/61827532.jpg
   isbn: '9780593499559'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/61827532-the-skin-and-its-girl
   page_count: '352'
   publication_year: '2023'

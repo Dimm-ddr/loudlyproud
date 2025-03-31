@@ -14,7 +14,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1639553262i/59827974.jpg
   isbn: '9785041627126'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/59827974
   page_count: '385'
   publication_year: '2021'

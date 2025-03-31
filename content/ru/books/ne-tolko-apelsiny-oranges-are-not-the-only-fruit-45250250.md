@@ -12,12 +12,12 @@ params:
   editions count: '130'
   isbn: '9785171143'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Немецкий
-    - Нидерландский
-    - Русский
+    - English
+    - Spanish
+    - Italian
+    - German
+    - Dutch
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/51073243
   page_count: '224'
   publication_year: '1985'

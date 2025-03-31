@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637231775i/59463974.jpg
   isbn: '9785171379896'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/59463974
   page_count: '352'
   publication_year: '2022'

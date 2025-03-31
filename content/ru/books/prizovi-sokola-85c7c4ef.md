@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1571079982l/52895800.jpg
   isbn: '9785041054151'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/52895800
   page_count: '544'
   publication_year: '2018'

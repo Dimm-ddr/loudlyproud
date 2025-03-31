@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680389125i/124937355.jpg
   isbn: '9785041755003'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/124937355
   page_count: '416'
   publication_year: '2020'

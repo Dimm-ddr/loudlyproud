@@ -12,14 +12,14 @@ params:
   editions count: '243'
   isbn: '9785389000667'
   languages:
-    - Английский
-    - Испанский
-    - Китайский
-    - Немецкий
-    - Польский
-    - Русский
-    - Французский
-    - Хорватский
+    - English
+    - Spanish
+    - Chinese
+    - German
+    - Polish
+    - Russian
+    - French
+    - Croatian
   goodreads_link: https://www.goodreads.com/book/show/13180707
   page_count: '230'
   publication_year: '1998'

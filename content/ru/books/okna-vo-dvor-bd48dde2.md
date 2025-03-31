@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672867734i/63370040.jpg
   isbn: '9785604785966'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/63370040
   page_count: '688'
   russian_audioversion: false

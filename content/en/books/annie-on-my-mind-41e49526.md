@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388360021i/595375.jpg
   isbn: '9780606291507'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/595375.Annie_on_My_Mind
   page_count: '233'
   publication_year: '1982'

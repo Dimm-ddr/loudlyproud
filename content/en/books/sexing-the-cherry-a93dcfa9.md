@@ -11,11 +11,11 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328824090i/15050.jpg
   isbn: '0802135781'
   languages:
-    - Английский
-    - Испанский
-    - Немецкий
-    - Нидерландский
-    - Турецкий
+    - English
+    - Spanish
+    - German
+    - Dutch
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/15050.Sexing_the_Cherry
   page_count: '167'
   publication_year: '1989'
