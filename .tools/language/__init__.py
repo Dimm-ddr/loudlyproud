@@ -6,6 +6,5 @@ from .analyzer import (
     load_translation_tables,
     check_translation_consistency,
     analyze_translation_tables,
-    analyze_file,
-    analyze_directory,
+    analyze_content,
 ) 

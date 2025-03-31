@@ -124,8 +124,6 @@ def get_languages_from_frontmatter(frontmatter: dict) -> set[str]:
 
 def validate_languages(languages: set[str], valid_languages: set[str]) -> tuple[set[str], set[str]]:
     """Validate languages against the valid set and return valid and invalid languages."""
-    # Convert all languages to lowercase for case-insensitive comparison
-    languages_lower = {lang.lower() for lang in languages}
     valid_langs = {lang for lang in languages if lang.lower() in valid_languages}
     invalid_langs = languages - valid_langs
     return valid_langs, invalid_langs
