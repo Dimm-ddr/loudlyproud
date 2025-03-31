@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1681933345i/134160403.jpg
   isbn: '9780993820236'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/134160403
   page_count: '134'
   publication_year: '2023'

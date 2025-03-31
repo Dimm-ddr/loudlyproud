@@ -15,7 +15,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554146186i/44740441.jpg
   isbn: '9785000834886'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/44740441
   page_count: '432'
   publication_year: '2018'

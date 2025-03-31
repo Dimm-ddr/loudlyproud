@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1576849390i/49564515.jpg
   isbn: '9785604262856'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/49564515--
   page_count: '360'
   publication_year: '2020'

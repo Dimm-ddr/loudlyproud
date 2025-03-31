@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1696973052i/198563681.jpg
   isbn: '0385550642'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/198563681-blessings
   page_count: '288'
   publication_year: '2024'

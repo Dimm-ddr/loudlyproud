@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628534108i/58735038.jpg
   isbn: '9780593329672'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/58735038-we-do-what-we-do-in-the-dark
   page_count: '224'
   publication_year: '2022'

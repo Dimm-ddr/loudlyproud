@@ -12,8 +12,8 @@ params:
   editions count: '39'
   isbn: '9785604360583'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/56468783
   page_count: '336'
   publication_year: '2016'

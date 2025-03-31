@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629708223i/58834146.jpg
   isbn: '9785604629055'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58834146
   page_count: '416'
   publication_year: '2021'

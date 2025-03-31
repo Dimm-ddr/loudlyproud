@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638035447i/59710325.jpg
   isbn: '9785604629'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/59710325
   page_count: '288'
   publishers:

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598340545i/55114378.jpg
   isbn: '9785604458020'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/55114378
   page_count: '2020'
   publication_year: '2020'

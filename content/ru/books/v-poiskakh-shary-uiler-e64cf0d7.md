@@ -15,7 +15,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1666993988i/63121406.jpg
   isbn: '9785171474423'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/63121406
   page_count: '416'
   publishers:

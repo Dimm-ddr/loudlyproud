@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1581854704i/52764801.jpg
   isbn: '1982121491'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/52764801-the-thirty-names-of-night
   page_count: '304'
   publication_year: '2020'

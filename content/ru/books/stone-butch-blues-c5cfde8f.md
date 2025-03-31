@@ -11,16 +11,16 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328758827i/139569.jpg
   isbn: '2956719408'
   languages:
-    - Английский
-    - Баскский
-    - Иврит
-    - Испанский
-    - Итальянский
-    - Китайский
-    - Немецкий
-    - Словенский
-    - Французский
-    - Русский
+    - English
+    - Basque
+    - Hebrew
+    - Spanish
+    - Italian
+    - Chinese
+    - German
+    - Slovenian
+    - French
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/139569.Stone_Butch_Blues
   page_count: '446'
   publication_year: '1993'

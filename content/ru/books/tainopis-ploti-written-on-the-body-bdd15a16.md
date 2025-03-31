@@ -14,13 +14,13 @@ params:
   editions count: '75'
   isbn: '9785699012848'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Немецкий
-    - Нидерландский
-    - Русский
-    - Турецкий
+    - English
+    - Spanish
+    - Italian
+    - German
+    - Dutch
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/2524211
   page_count: '288'
   publication_year: '1992'

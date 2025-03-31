@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1679162570i/57001545.jpg
   isbn: '0593330757'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/57001545-still-life
   page_count: '580'
   publication_year: '2021'

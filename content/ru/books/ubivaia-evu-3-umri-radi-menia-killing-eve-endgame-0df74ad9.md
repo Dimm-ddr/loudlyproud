@@ -14,8 +14,8 @@ params:
   editions count: '18'
   isbn: '9785171271633'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58889837-3
   page_count: '256'
   publication_year: '2020'

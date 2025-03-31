@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1607100802i/56160395.jpg
   isbn: '1472156498'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/56160395-with-teeth
   page_count: '304'
   publication_year: '2021'

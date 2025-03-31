@@ -12,10 +12,10 @@ params:
   editions count: '110'
   isbn: '9785604219669'
   languages:
-    - Английский
-    - Испанский
-    - Португальский
-    - Русский
+    - English
+    - Spanish
+    - Portuguese
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/53937364
   page_count: '400'
   publication_year: '2017'

@@ -13,7 +13,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1203799865i/2885253.jpg
   isbn: '9785699038220'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/2885253
   page_count: '336'
   publication_year: '2003'

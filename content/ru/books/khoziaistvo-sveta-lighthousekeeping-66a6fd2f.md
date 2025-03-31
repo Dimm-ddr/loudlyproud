@@ -12,12 +12,12 @@ params:
   editions count: '75'
   isbn: '9785699186587'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Нидерландский
-    - Русский
-    - Турецкий
+    - English
+    - Spanish
+    - Italian
+    - Dutch
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/2524212
   page_count: '320'
   publication_year: '2004'

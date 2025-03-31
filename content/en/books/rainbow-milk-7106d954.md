@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1602561987i/55573130.jpg
   isbn: '9780349700588'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/55573130-rainbow-milk
   page_count: '368'
   publication_year: '2020'

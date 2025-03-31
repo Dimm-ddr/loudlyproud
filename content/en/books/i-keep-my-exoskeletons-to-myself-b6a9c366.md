@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1648063139i/60679392.jpg
   isbn: '9781646222063'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/60679392-i-keep-my-exoskeletons-to-myself
   page_count: '353'
   publication_year: '2023'

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685348830i/123033397.jpg
   isbn: '0399591346'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/123033397-day
   page_count: '289'
   publication_year: '2023'

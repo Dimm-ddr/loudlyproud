@@ -12,11 +12,11 @@ params:
   editions count: '84'
   isbn: '9785604360552'
   languages:
-    - Английский
-    - Немецкий
-    - Польский
-    - Русский
-    - Французский
+    - English
+    - German
+    - Polish
+    - Russian
+    - French
   goodreads_link: https://www.goodreads.com/book/show/49049215
   page_count: '328'
   publication_year: '2017'

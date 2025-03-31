@@ -12,14 +12,14 @@ params:
   editions count: '221'
   isbn: '9785171087654'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Немецкий
-    - Польский
-    - Португальский
-    - Русский
-    - Турецкий
+    - English
+    - Spanish
+    - Italian
+    - German
+    - Polish
+    - Portuguese
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/52732634
   page_count: '384'
   publication_year: '2011'

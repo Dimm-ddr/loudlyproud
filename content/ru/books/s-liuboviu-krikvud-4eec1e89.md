@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1628167646i/58706203.jpg
   isbn: '9785604611913'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/58706203
   page_count: '112'
   publishers:

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1564079712l/51846014.jpg
   isbn: '0525536167 '
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/51846014-under-the-rainbow
   page_count: '288'
   publication_year: '2020'

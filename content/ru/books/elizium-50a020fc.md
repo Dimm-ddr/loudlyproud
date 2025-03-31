@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640333788i/59921504.jpg
   isbn: '9785604718117'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/59921504
   page_count: '304'
   publishers:

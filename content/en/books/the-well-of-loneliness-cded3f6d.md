@@ -12,8 +12,8 @@ params:
   editions count: '288'
   isbn: '9781840224559'
   languages:
-    - Английский
-    - Иврит
+    - English
+    - Hebrew
   goodreads_link: https://www.goodreads.com/book/show/129223.The_Well_of_Loneliness
   page_count: '467'
   publication_year: '1928'

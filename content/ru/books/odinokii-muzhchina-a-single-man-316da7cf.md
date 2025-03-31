@@ -13,9 +13,9 @@ params:
   editions count: '122'
   isbn: '9785171140052'
   languages:
-    - Английский
-    - Испанский
-    - Русский
+    - English
+    - Spanish
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/52179977
   page_count: '224'
   publication_year: '1964'

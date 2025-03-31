@@ -11,8 +11,8 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528314257i/40409102.jpg
   isbn: '1472241614'
   languages:
-    - Английский
-    - Русский
+    - English
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/40409102-this-is-how-it-always-is
   page_count: '336'
   publication_year: '2017'

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1643298298i/58662507.jpg
   isbn: '9781250854117'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/58662507-nona-the-ninth
   page_count: '480'
   publication_year: '2022'

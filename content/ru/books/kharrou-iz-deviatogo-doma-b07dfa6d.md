@@ -16,7 +16,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633080101i/59124751.jpg
   isbn: '9785041556969'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/59124751
   page_count: '576'
   publication_year: '2019'

@@ -18,7 +18,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638989184i/59776151.jpg
   isbn: '9785171392383'
   languages:
-    - Русский
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/59776151
   page_count: '384'
   publication_year: '2022'

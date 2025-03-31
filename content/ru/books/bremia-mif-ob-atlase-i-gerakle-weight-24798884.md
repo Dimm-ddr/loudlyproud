@@ -12,10 +12,10 @@ params:
   editions count: '80'
   isbn: '9785974300127'
   languages:
-    - Английский
-    - Испанский
-    - Русский
-    - Турецкий
+    - English
+    - Spanish
+    - Russian
+    - Turkish
   goodreads_link: https://www.goodreads.com/book/show/15046.Weight
   page_count: '162'
   publication_year: '2005'

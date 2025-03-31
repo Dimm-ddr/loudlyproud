@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334035355i/13594866.jpg
   isbn: '9781613725009'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/13594866-acrobat
   page_count: '250'
   publication_year: '2012'
