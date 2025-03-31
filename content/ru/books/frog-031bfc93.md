@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1332881683i/13563087.jpg
   isbn: '9781613724699'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/13563087-frog
   page_count: '178'
   publication_year: '2012'

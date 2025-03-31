@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606246904l/48902303.jpg
   isbn: '8433981188'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/48902303-memorial
   page_count: '344'
   publication_year: '2020'

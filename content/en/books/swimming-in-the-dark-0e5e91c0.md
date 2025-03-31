@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582771710i/45169231.jpg
   isbn: '9781526604989'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/45169231-swimming-in-the-dark
   page_count: '176'
   publication_year: '2020'

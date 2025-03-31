@@ -12,9 +12,9 @@ params:
   editions count: '243'
   isbn: '9785389000667'
   languages:
-    - Английский
-    - Испанский
-    - Китайский
+    - English
+    - Spanish
+    - Chinese
     - Немецкий
     - Польский
     - Русский

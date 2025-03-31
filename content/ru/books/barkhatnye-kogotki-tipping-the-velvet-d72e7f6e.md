@@ -12,9 +12,9 @@ params:
   editions count: '97'
   isbn: '9785389161740'
   languages:
-    - Английский
-    - Испанский
-    - Китайский
+    - English
+    - Spanish
+    - Chinese
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/44171782
   page_count: '576'

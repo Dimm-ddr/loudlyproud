@@ -12,9 +12,9 @@ params:
   editions count: '75'
   isbn: '9785699186587'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Нидерландский
     - Русский
     - Турецкий

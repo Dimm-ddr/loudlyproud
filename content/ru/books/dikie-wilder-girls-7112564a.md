@@ -12,7 +12,7 @@ params:
   editions count: '48'
   isbn: '9785604360606'
   languages:
-    - Английский
+    - English
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/52421855
   page_count: '352'

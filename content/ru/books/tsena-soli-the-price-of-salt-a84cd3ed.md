@@ -14,11 +14,11 @@ params:
   editions count: '228'
   isbn: '9785171216429'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Китайский
-    - Корейский
+    - English
+    - Spanish
+    - Italian
+    - Chinese
+    - Korean
     - Немецкий
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/53341254

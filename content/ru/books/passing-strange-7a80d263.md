@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1474584923i/31372178.jpg
   isbn: '9780765389510'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/31372178-passing-strange
   page_count: '222'
   publication_year: '2017'

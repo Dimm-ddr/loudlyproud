@@ -14,7 +14,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629853935i/56779833.jpg
   isbn: '9781735589824'
   languages:
-    - Английский
+    - English
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/56779833-the-awakening
   page_count: '400'

@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629306912i/58802411.jpg
   isbn: '9781662601040'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/58802411-the-town-of-babylon
   page_count: '322'
   publication_year: '2022'

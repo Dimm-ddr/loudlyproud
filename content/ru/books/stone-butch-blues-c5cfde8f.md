@@ -11,12 +11,12 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328758827i/139569.jpg
   isbn: '2956719408'
   languages:
-    - Английский
-    - Баскский
-    - Иврит
-    - Испанский
-    - Итальянский
-    - Китайский
+    - English
+    - Basque
+    - Hebrew
+    - Spanish
+    - Italian
+    - Chinese
     - Немецкий
     - Словенский
     - Французский

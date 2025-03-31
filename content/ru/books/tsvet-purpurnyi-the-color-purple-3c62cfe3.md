@@ -14,9 +14,9 @@ params:
   editions count: '385'
   isbn: '5824306028'
   languages:
-    - Английский
-    - Вьетнамский
-    - Испанский
+    - English
+    - Vietnamese
+    - Spanish
     - Немецкий
     - Нидерландский
     - Португальский

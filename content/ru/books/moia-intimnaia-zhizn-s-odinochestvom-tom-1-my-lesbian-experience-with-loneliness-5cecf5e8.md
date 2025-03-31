@@ -13,9 +13,9 @@ params:
   editions count: '23'
   isbn: '9785758404263'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Русский
     - Японский
   goodreads_link: https://www.goodreads.com/book/show/54766327-1

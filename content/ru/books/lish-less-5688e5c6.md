@@ -12,7 +12,7 @@ params:
   editions count: '84'
   isbn: '9785604360552'
   languages:
-    - Английский
+    - English
     - Немецкий
     - Польский
     - Русский

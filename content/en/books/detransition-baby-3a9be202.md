@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1587480347i/48890225.jpg
   isbn: '9781788167222'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/48890225-detransition-baby
   page_count: '352'
   publication_year: '2021'

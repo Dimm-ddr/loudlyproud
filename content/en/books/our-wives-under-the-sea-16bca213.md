@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1636047905i/58724816.jpg
   isbn: '1529017254'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/58724816-our-wives-under-the-sea
   page_count: '208'
   publication_year: '2022'

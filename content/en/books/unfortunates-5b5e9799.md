@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641777650i/58312003.jpg
   isbn: '9780358623410'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/58312003-the-unfortunates
   page_count: '256'
   publication_year: '2022'

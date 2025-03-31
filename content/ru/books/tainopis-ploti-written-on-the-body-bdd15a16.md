@@ -14,9 +14,9 @@ params:
   editions count: '75'
   isbn: '9785699012848'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Немецкий
     - Нидерландский
     - Русский

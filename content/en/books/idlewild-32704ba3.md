@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1676128100i/98653925.jpg
   isbn: '9781419769146'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/98653925-idlewild
   page_count: '389'
   publication_year: '2023'

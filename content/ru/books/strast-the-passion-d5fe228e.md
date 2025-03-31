@@ -16,9 +16,9 @@ params:
   editions count: '125'
   isbn: '9785699018765'
   languages:
-    - Английский
-    - Испанский
-    - Каталанский
+    - English
+    - Spanish
+    - Catalan
     - Немецкий
     - Нидерландский
     - Русский

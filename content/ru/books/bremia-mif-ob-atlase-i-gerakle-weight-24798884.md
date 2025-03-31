@@ -12,8 +12,8 @@ params:
   editions count: '80'
   isbn: '9785974300127'
   languages:
-    - Английский
-    - Испанский
+    - English
+    - Spanish
     - Русский
     - Турецкий
   goodreads_link: https://www.goodreads.com/book/show/15046.Weight

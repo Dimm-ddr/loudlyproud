@@ -12,7 +12,7 @@ params:
   editions count: '45'
   isbn: '9785171385712'
   languages:
-    - Английский
+    - English
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/58188308
   page_count: '480'

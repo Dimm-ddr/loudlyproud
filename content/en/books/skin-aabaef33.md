@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1297222257i/219588.jpg
   isbn: '0440211158'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/219588.Skin
   page_count: '310'
   publication_year: '1993'

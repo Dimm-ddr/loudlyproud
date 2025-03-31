@@ -11,8 +11,8 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328824090i/15050.jpg
   isbn: '0802135781'
   languages:
-    - Английский
-    - Испанский
+    - English
+    - Spanish
     - Немецкий
     - Нидерландский
     - Турецкий

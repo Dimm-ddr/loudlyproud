@@ -11,9 +11,9 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1342596676i/13503109.jpg
   isbn: '1594487367'
   languages:
-    - Английский
-    - Испанский
-    - Китайский
+    - English
+    - Spanish
+    - Chinese
   goodreads_link: https://www.goodreads.com/book/show/13503109-this-is-how-you-lose-her
   page_count: '240'
   publication_year: '2012'

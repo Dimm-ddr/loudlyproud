@@ -14,8 +14,8 @@ params:
   editions count: '51'
   isbn: '9785171216412'
   languages:
-    - Английский
-    - Испанский
+    - English
+    - Spanish
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/42123790-frankissstein
   page_count: '260'

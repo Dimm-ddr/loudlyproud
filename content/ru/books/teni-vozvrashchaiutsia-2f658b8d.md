@@ -26,7 +26,7 @@ params:
   russian_translation_status: exists
   series: Nightrunner
   languages:
-    - Английский
+    - English
     - Русский
   book_description: Четвертая книга Линн Флевелинг — продолжение знаменитой трилогии про Ночных скитальцев. Алек и Серегил снова вместе. Идут навстречу своей судьбе, предсказаниям Оракула Сарикали и новым испытаниям. Это любительский перевод , выполненный Джу Лай(http://zhurnal.lib.ru/d/dzhu_l/). На русском языке роман не издавался
   russian_audioversion: false

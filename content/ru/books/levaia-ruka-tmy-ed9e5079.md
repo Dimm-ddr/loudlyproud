@@ -13,7 +13,7 @@ params:
   editions count: '264'
   isbn: '9785389099531'
   languages:
-    - Английский
+    - English
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/18661678
   page_count: '732'

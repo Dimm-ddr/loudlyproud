@@ -12,8 +12,8 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1403179771i/15049.jpg
   isbn: '9780375702365'
   languages:
-    - Английский
-    - Испанский
+    - English
+    - Spanish
     - Нидерландский
   goodreads_link: https://www.goodreads.com/book/show/15049.The_World_and_Other_Places
   note: 'существует перевод, но только одного из рассказов сборника: "Весь мир и другие страны" от Джанет Уинтерсон из журнала "Англия" от 1992 года.'

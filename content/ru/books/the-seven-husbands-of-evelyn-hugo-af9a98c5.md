@@ -17,8 +17,8 @@ params:
   editions count: '154'
   isbn: '9785041594565'
   languages:
-    - Английский
-    - Испанский
+    - English
+    - Spanish
     - Немецкий
     - Русский
   goodreads_link: https://www.goodreads.com/book/show/61177447

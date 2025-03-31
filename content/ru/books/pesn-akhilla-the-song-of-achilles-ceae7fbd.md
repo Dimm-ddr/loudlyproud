@@ -12,9 +12,9 @@ params:
   editions count: '221'
   isbn: '9785171087654'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Немецкий
     - Польский
     - Португальский

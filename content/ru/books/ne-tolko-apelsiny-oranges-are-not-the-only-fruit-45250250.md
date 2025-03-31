@@ -12,9 +12,9 @@ params:
   editions count: '130'
   isbn: '9785171143'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Немецкий
     - Нидерландский
     - Русский

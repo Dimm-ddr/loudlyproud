@@ -13,10 +13,10 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1478876919i/32944167.jpg
   isbn: '9788952776389'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
-    - Корейский
+    - English
+    - Spanish
+    - Italian
+    - Korean
     - Немецкий
     - Нидерландский
     - Польский

@@ -11,9 +11,9 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1475304381i/29502605.jpg
   isbn: '9788426404466'
   languages:
-    - Английский
-    - Испанский
-    - Итальянский
+    - English
+    - Spanish
+    - Italian
     - Нидерландский
   goodreads_link: https://www.goodreads.com/book/show/29502605-christmas-days
   page_count: '304'

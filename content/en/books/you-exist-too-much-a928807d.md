@@ -11,7 +11,7 @@ params:
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1570133456i/41720140.jpg
   isbn: '1948226502'
   languages:
-    - Английский
+    - English
   goodreads_link: https://www.goodreads.com/book/show/41720140-you-exist-too-much
   page_count: '268'
   publication_year: '2020'
