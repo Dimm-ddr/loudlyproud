@@ -21,7 +21,7 @@ params:
     روزمره زندگی نویسنده و همکاران وی در ایران را با تحقیقی جامع گره می زند و آن
     را در یک بستر تئوریک عرضه می کند.
   publication_year: "2016"
-  isbn: 9783944191959 
+  isbn: "9783944191959"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1496171449i/35150652.jpg
   goodreads_link: https://www.goodreads.com/book/show/35150652
   languages:
