@@ -28,7 +28,7 @@ params:
   goodreads_link: https://www.goodreads.com/book/show/3742893
   languages:
     - Russian
-    - " English"
+    - English
   page_count: "432"
 ---
 

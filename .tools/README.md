@@ -72,6 +72,26 @@ Usage:
 python tag_tools.py [command] [options]
 ```
 
+### Language Management
+
+#### `language.py`
+CLI tool for analyzing and normalizing language entries in Hugo frontmatter.
+
+Available commands:
+- `content [path]`: Analyze content files for language entries
+  - `-o, --output`: Specify output file for results
+- `translations`: Analyze translation tables for consistency
+  - `-o, --output`: Specify output file for results
+- `normalize [path]`: Normalize language names in frontmatter files
+  - Creates mapping from translated language names to uniform names
+  - Processes all markdown files in the given directory or single file
+  - Updates language entries to use uniform names
+
+Usage:
+```bash
+python language.py [command] [options]
+```
+
 ### Testing
 
 #### `run_tests.py`
@@ -89,6 +109,7 @@ python run_tests.py
 ├── check_content.py      # Content validation tool
 ├── fix_content.py        # Content fixing tool
 ├── tag_tools.py         # Tag management CLI
+├── language.py          # Language management CLI
 ├── book_schema.py       # Schema definitions
 ├── run_tests.py         # Test runner
 ├── requirements.txt     # Python dependencies
