@@ -43,6 +43,8 @@
         "american",
         "short stories"
     ],
+    "american south": "American south",
+    "american-south": "American south",
     "amitié masculine": "friendship",
     "américains d'origine japonaise": "Japanese American",
     "américains d'origine syrienne": "Syrian American",
@@ -146,6 +148,8 @@
         "England"
     ],
     "chicago": "Chicago",
+    "chick lit": "chick-lit",
+    "chick-lit": "chick-lit",
     "child abuse": "abuse",
     "child custody": "family",
     "childhood and youth": [
@@ -307,6 +311,8 @@
     "fiction thrillers espionage": "spy stories",
     "fiction thrillers general": "thriller",
     "fictional works publication type": "literary",
+    "finnish literature": "Finnish literature",
+    "finnish-literature": "Finnish literature",
     "first loves": "love in adolescence",
     "flora": "nature",
     "forgiveness": "personal growth",
@@ -784,6 +790,7 @@
     "soldiers": "soldiers",
     "solitude": "isolation",
     "songs and music": "performing arts",
+    "southern": "American south",
     "southern states": "United States",
     "space opera": "space opera",
     "spanish": "Spanish literature",

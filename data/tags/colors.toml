@@ -8,6 +8,7 @@
 "african-american" = "deep-blue"
 "african-american-authors" = "deep-blue"
 "american" = "deep-blue"
+"american-south" = "deep-blue"
 "arab-american" = "deep-blue"
 "arkansas" = "deep-blue"
 "asian-american" = "deep-blue"
@@ -23,6 +24,7 @@
 "english" = "deep-blue"
 "english-literature" = "deep-blue"
 "europe" = "deep-blue"
+"finnish-literature" = "deep-blue"
 "france" = "deep-blue"
 "french" = "deep-blue"
 "georgia" = "deep-blue"
@@ -91,6 +93,7 @@
 "young-adult" = "burgundy"
 
 ["Genres"]
+"chick-lit" = "forest"
 "dark" = "forest"
 "dark-fantasy" = "forest"
 "domestic-fiction" = "forest"
