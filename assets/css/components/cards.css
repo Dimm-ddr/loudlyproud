@@ -1,0 +1,58 @@
+/* Cards
+   ===============================
+   A collection of card styles
+*/
+
+@layer components {
+  /* Base card style */
+  .card {
+    @apply bg-white dark:bg-secondary rounded-lg shadow-md overflow-hidden transition-shadow duration-200;
+  }
+  
+  .card:hover {
+    @apply shadow-lg;
+  }
+  
+  /* Book card specific styles */
+  .book-card {
+    @apply overflow-visible !important;
+  }
+  
+  .book-card > a {
+    @apply overflow-hidden rounded-lg;
+  }
+  
+  /* Language card styles */
+  .language-card {
+    @apply outline-none transition-all duration-200;
+  }
+  
+  /* Focus styles for LTR and RTL cards */
+  .language-card-ltr:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary, #eee7dc),
+      0 0 0 4px var(--ring-color, #3498DB);
+  }
+  
+  .language-card-rtl:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary, #eee7dc),
+      0 0 0 4px var(--ring-color, #3498DB);
+  }
+  
+  .dark .language-card-ltr:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary-dark, #2d2d2d),
+      0 0 0 4px var(--ring-color, #5dafec);
+  }
+  
+  .dark .language-card-rtl:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--bg-secondary-dark, #2d2d2d),
+      0 0 0 4px var(--ring-color, #5dafec);
+  }
+  
+  .language-card:active {
+    @apply translate-y-[1px] transition-transform duration-100;
+  }
+} 

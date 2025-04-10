@@ -1,14 +1,23 @@
 {{ define "main" }}
 <div class="bg-background min-h-screen">
   <div class="container mx-auto px-4 py-8">
-    <!-- Search and Pagination row -->
+    <!-- Search and Controls Row -->
     <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center mb-8">
-      {{ partial "search.html" . }}
-      <div class="w-full lg:w-auto">
+      <div class="flex-grow">
+        {{ partial "search.html" . }}
+      </div>
+      
+      <!-- Sort Control - Prominently Displayed -->
+      <div class="flex items-center">
+        {{ partial "sort-control.html" . }}
+      </div>
+      
+      <div>
         {{ partial "items-per-page.html" . }}
       </div>
     </div>
 
+    <!-- Page Title -->
     <h1 class="text-2xl font-bold mb-6">
       {{ i18n "books_tagged_with" }} "{{ .Title }}"
     </h1>

@@ -1,0 +1,43 @@
+/* Form Controls
+   ===============================
+   A collection of reusable form control styles
+*/
+
+@layer components {
+  /* Selects */
+  .select-control {
+    @apply block w-auto px-3 py-2 text-sm font-bold text-white 
+          bg-accent3 hover:bg-accent3/90 rounded-md border-0 shadow-md 
+          focus:ring-2 focus:ring-accent3 transition-colors duration-200;
+  }
+  
+  /* Inputs */
+  .input-control {
+    @apply block w-full px-3 py-2 text-sm font-normal text-text dark:text-text-dark
+          bg-white dark:bg-secondary border border-light-gray dark:border-light-gray-dark rounded-md shadow-sm
+          focus:ring-2 focus:ring-accent3 focus:border-accent3 transition-colors duration-200;
+  }
+  
+  /* Checkboxes */
+  .checkbox-control {
+    @apply w-4 h-4 text-accent3 bg-white dark:bg-secondary 
+          border border-light-gray dark:border-light-gray-dark rounded
+          focus:ring-2 focus:ring-accent3;
+  }
+  
+  /* Radio buttons */
+  .radio-control {
+    @apply w-4 h-4 text-accent3 bg-white dark:bg-secondary 
+          border border-light-gray dark:border-light-gray-dark
+          focus:ring-2 focus:ring-accent3;
+  }
+  
+  /* Labels */
+  .form-label {
+    @apply block mb-1 text-sm font-bold text-text dark:text-text-dark;
+  }
+  
+  .form-label-inline {
+    @apply text-sm font-bold text-text dark:text-text-dark whitespace-nowrap;
+  }
+} 

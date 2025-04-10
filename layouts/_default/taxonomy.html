@@ -15,6 +15,30 @@
       </div>
     </div>
 
+    <!-- Title and Sort Control -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+      <h1 class="text-2xl font-bold">
+        {{ i18n "books_tagged_with" }} "{{ .Title }}"
+      </h1>
+      
+      <!-- Sort Control -->
+      <div class="sort-control mt-2 sm:mt-0">
+        <label for="sort-select" class="text-sm font-medium text-text dark:text-text-dark mr-2">{{ i18n "sort_by" }}:</label>
+        <select id="sort-select" 
+                class="bg-secondary dark:bg-secondary-dark border border-tertiary dark:border-tertiary-dark rounded py-1 px-2 text-sm focus:outline-none focus:ring-accent1 focus:border-accent1">
+            <option value="title_asc">{{ i18n "sort_title_asc" }}</option>
+            <option value="title_desc">{{ i18n "sort_title_desc" }}</option>
+            <option value="author_asc">{{ i18n "sort_author_asc" }}</option>
+            <option value="author_desc">{{ i18n "sort_author_desc" }}</option>
+            <option value="year_asc">{{ i18n "sort_year_asc" }}</option>
+            <option value="year_desc">{{ i18n "sort_year_desc" }}</option>
+        </select>
+      </div>
+    </div>
+
+    {{ $books := .Pages }}
+    {{ partial "client-pagination.html" (dict "books" $books) }}
+
     <!-- Content Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {{ range .Pages }}

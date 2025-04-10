@@ -1,8 +1,20 @@
 <!-- layouts/partials/button.html -->
 
-<a href="{{ .url }}"
-   id="{{ .id }}"
-   class="button bg-gray-600 {{ if not .disabled }}hover:bg-gray-700{{ end }} text-white font-black py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 {{ with .extraClasses }}{{ . }}{{ end }}"
-   {{ if .disabled }}aria-disabled="true" tabindex="-1"{{ end }}>
-  {{ .text }}
-</a>
+{{ $class := .class | default "btn-primary" }}
+{{ $size := .size | default "" }}
+{{ $disabled := .disabled | default false }}
+{{ $type := .type | default "button" }}
+{{ $id := .id | default "" }}
+{{ $dataAttrs := .data | default dict }}
+
+<button
+    {{ if $id }}id="{{ $id }}"{{ end }}
+    type="{{ $type }}"
+    {{ if $disabled }}disabled aria-disabled="true"{{ end }}
+    class="{{ $class }} {{ $size }} {{ if $disabled }}btn-disabled{{ end }} {{ .classes | default "" }}"
+    {{ range $key, $value := $dataAttrs }}
+    data-{{ $key }}="{{ $value }}"
+    {{ end }}
+>
+    {{ .content | safeHTML }}
+</button>

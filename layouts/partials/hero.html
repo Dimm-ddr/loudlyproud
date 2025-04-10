@@ -1,26 +1,23 @@
 {{ $heroContent := .Site.GetPage "hero" }}
 
 <section class="hero relative bg-cover bg-center" style="background-image: url('{{ "images/hero_image.webp" | relURL }}'); height: 234px;">
-  <div class="absolute inset-0 bg-[#31393c] dark:bg-[#1a1a1a] opacity-80"></div>
+  <div class="absolute inset-0 bg-background dark:bg-background-dark opacity-40"></div>
   <div class="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
     <div class="max-w-xl mx-auto text-center relative">
-      <h1 class="text-4xl font-black text-secondary dark:text-secondary-dark mb-1">
-        {{ $heroContent.Params.title }}
-      </h1>
-      <div class="text-xl font-semibold text-white dark:text-gray-200 mb-2">
+      <h1 class="heading-1 mb-3 text-white dark:text-white">
         {{ $heroContent.Params.subtitle }}
-      </div>
+      </h1>
       <div class="relative">
         <div class="scroll-container relative">
-          <div class="max-h-[80px] overflow-y-auto text-lg text-[#E5E7EB] dark:text-gray-300 font-normal mb-6 pr-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent" id="hero-description">
+          <div class="max-h-[80px] overflow-y-auto text-lg text-white dark:text-white font-normal mb-6 pr-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent" id="hero-description">
             {{ $heroContent.Params.description }}
           </div>
-          <div class="fade-top absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-[#31393c]/80 dark:from-[#1a1a1a]/80 to-transparent pointer-events-none opacity-0 transition-opacity duration-200"></div>
-          <div class="fade-bottom absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#31393c]/80 dark:from-[#1a1a1a]/80 to-transparent pointer-events-none opacity-0 transition-opacity duration-200"></div>
+          <div class="fade-top absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-background/80 dark:from-background-dark/80 to-transparent pointer-events-none opacity-0 transition-opacity duration-200"></div>
+          <div class="fade-bottom absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-background/80 dark:from-background-dark/80 to-transparent pointer-events-none opacity-0 transition-opacity duration-200"></div>
         </div>
       </div>
       <a href="{{ "feedback" | relLangURL }}"
-         class="inline-block px-6 py-2 bg-secondary dark:bg-secondary-dark text-primary dark:text-primary-dark rounded-lg font-medium hover:bg-secondary-light dark:hover:bg-secondary-dark/80 transition-colors">
+         class="btn-primary">
         {{ i18n "share_feedback" }}
       </a>
     </div>

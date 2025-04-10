@@ -2,22 +2,24 @@
 {{ $maxTags := 8 }} {{/* Maximum number of tags to show */}}
 
 <div x-data="{ isOpen: false }" class="mb-8">
-    <button
-        type="button"
-        @click="isOpen = !isOpen"
-        class="flex items-center space-x-2 text-2xl font-bold mb-4 hover:text-accent1"
-    >
-        <span>{{ i18n "explore_tags" }}</span>
-        <svg
-            class="w-6 h-6 transition-transform"
-            :class="{ 'rotate-180': isOpen }"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+    <div class="flex justify-between items-center mb-4">
+        <button
+            type="button"
+            @click="isOpen = !isOpen"
+            class="flex items-center space-x-2 text-2xl font-bold hover:text-accent1"
         >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-    </button>
+            <span>{{ i18n "explore_tags" }}</span>
+            <svg
+                class="w-6 h-6 transition-transform"
+                :class="{ 'rotate-180': isOpen }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+    </div>
 
     <div
         x-show="isOpen"
