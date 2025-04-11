@@ -6,9 +6,9 @@
 @layer components {
   /* Selects */
   .select-control {
-    @apply block w-auto px-3 py-2 text-sm font-bold text-white 
-          bg-accent3 hover:bg-accent3/90 rounded-md border-0 shadow-md 
-          focus:ring-2 focus:ring-accent3 transition-colors duration-200;
+    @apply bg-secondary dark:bg-secondary-dark border border-tertiary dark:border-tertiary-dark 
+           rounded py-1 px-2 text-sm focus:outline-none focus:ring-accent1 focus:border-accent1
+           transition-colors duration-200;
   }
   
   /* Inputs */

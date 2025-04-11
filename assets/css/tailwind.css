@@ -1,50 +1,28 @@
 /* assets/css/tailwind.css */
-
-/* CSS Variables matching Tailwind theme */
-:root {
-  /* Light mode colors */
-  --color-primary: #000000;
-  --color-secondary: #eee7dc;
-  --color-tertiary: #d3ccb8;
-  --color-accent1: #E74C3C;
-  --color-accent2: #2ECC71;
-  --color-accent3: #3498DB;
-  --color-background: #b7b0a7;
-  --color-text: #333333;
-  --color-light-gray: #eaeaea;
-  
-  /* For component references */
-  --bg-secondary: var(--color-secondary);
-  --ring-color: var(--color-accent3);
-}
-
-/* Dark mode colors */
-.dark {
-  --color-primary: #ffffff;
-  --color-secondary: #2d2d2d;
-  --color-tertiary: #443e36;
-  --color-accent1: #ff6b5d;
-  --color-accent2: #4fdd91;
-  --color-accent3: #5dafec;
-  --color-background: #1a1a1a;
-  --color-text: #e5e5e5;
-  --color-light-gray: #404040;
-  
-  /* For component references */
-  --bg-secondary-dark: var(--color-secondary);
-  --ring-color: var(--color-accent3);
-}
-
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-/* Import component styles */
 @import "./components/typography.css";
 @import "./components/buttons.css";
 @import "./components/form-controls.css";
 @import "./components/tags.css";
 @import "./components/cards.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* CSS Variables for special cases that need access to theme colors */
+:root {
+  /* For component references - these reference the Tailwind theme colors */
+  --bg-secondary: theme('colors.secondary.DEFAULT');
+  --ring-color: theme('colors.accent3.DEFAULT');
+}
+
+/* Dark mode variables */
+.dark {
+  --bg-secondary: theme('colors.secondary.dark');
+  --ring-color: theme('colors.accent3.dark');
+}
+
+/* Import component styles */
 
 /* Base font settings */
 @layer base {
@@ -236,26 +214,26 @@
   /* Focus styles for LTR and RTL cards */
   .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
-      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
-      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .dark .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
-      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .dark .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
-      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .language-card:active {

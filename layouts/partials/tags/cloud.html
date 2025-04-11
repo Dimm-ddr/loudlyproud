@@ -1,69 +1,48 @@
-{{ $minCount := 1 }}  {{/* Minimum number of occurrences to show in cloud */}}
-{{ $maxTags := 8 }} {{/* Maximum number of tags to show */}}
-
-<div x-data="{ isOpen: false }" class="mb-8">
-    <div class="flex justify-between items-center mb-4">
-        <button
-            type="button"
-            @click="isOpen = !isOpen"
-            class="flex items-center space-x-2 text-2xl font-bold hover:text-accent1"
-        >
-            <span>{{ i18n "explore_tags" }}</span>
-            <svg
-                class="w-6 h-6 transition-transform"
-                :class="{ 'rotate-180': isOpen }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-        </button>
+<!-- Tag Filter Section with Sort Control -->
+<div x-data="{
+  showTagCloud: false,
+  popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
+    {{- range $index, $tag := $tags -}}
+      {{- if $index }}, {{ end -}}
+      `{{- $tag.Page.Title -}}`
+    {{- end -}}]
+}" class="mb-6">
+  <div class="flex justify-between items-center">
+    <button type="button" @click="showTagCloud = !showTagCloud"
+            class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
+      <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
+      <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
+    </button>
+    
+    <!-- Sort Control -->
+    <div class="sort-control">
+      <label for="sort-select" class="form-label-inline">{{ i18n "sort_by" }}:</label>
+      <select id="sort-select" class="select-control">
+          <option value="title_asc">{{ i18n "sort_title_asc" }}</option>
+          <option value="title_desc">{{ i18n "sort_title_desc" }}</option>
+          <option value="author_asc">{{ i18n "sort_author_asc" }}</option>
+          <option value="author_desc">{{ i18n "sort_author_desc" }}</option>
+          <option value="year_asc">{{ i18n "sort_year_asc" }}</option>
+          <option value="year_desc">{{ i18n "sort_year_desc" }}</option>
+      </select>
     </div>
+  </div>
 
-    <div
-        x-show="isOpen"
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 transform -translate-y-2"
-        x-transition:enter-end="opacity-100 transform translate-y-0"
-        class="flex flex-wrap gap-2"
-    >
-        {{ $tagCounts := slice }}
-        {{ range $taxonomyTerm, $taxonomy := .Site.Taxonomies.tags }}
-            {{ $count := $taxonomy.Count }}
-            {{ if ge $count $minCount }}
-                {{ $tagCounts = $tagCounts | append (dict "term" $taxonomyTerm "count" $count) }}
-            {{ end }}
-        {{ end }}
-
-        {{ $sortedTags := sort $tagCounts "count" "desc" }}
-        {{ $limitedTags := first $maxTags $sortedTags }}
-
-        {{ range $tagInfo := $limitedTags }}
-            {{ $taxonomyTerm := $tagInfo.term }}
-            {{ $count := $tagInfo.count }}
-
-            {{/* Look up the tag in the registry using the taxonomy term */}}
-            {{ $registryTag := "" }}
-            {{ range $tag, $data := site.Data.tags.tags }}
-                {{ if eq $tag (replace $taxonomyTerm "-" " ") }}
-                    {{ $registryTag = $tag }}
-                    {{ break }}
-                {{ end }}
-            {{ end }}
-
-            {{ if $registryTag }}
-                {{ partial "tags/component.html" (dict
-                    "tag" $registryTag
-                    "clickable" true
-                    "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
-                    "count" $count
-                ) }}
-            {{ end }}
-        {{ end }}
-
-        {{ if not .Site.Taxonomies.tags }}
-            <p class="text-gray-600 italic">{{ i18n "no_tags_available" }}</p>
-        {{ end }}
+  <div x-show="showTagCloud"
+       x-transition:enter="transition ease-out duration-200"
+       x-transition:enter-start="opacity-0 transform -translate-y-2"
+       x-transition:enter-end="opacity-100 transform translate-y-0"
+       class="mt-4">
+    <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
+    <div class="flex flex-wrap gap-2">
+      {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+        {{ partial "tags/component.html" (dict
+          "tag" .Page.Title
+          "clickable" true
+          "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
+          "count" .Count
+        ) }}
+      {{ end }}
     </div>
+  </div>
 </div>

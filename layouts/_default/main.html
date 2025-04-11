@@ -19,54 +19,7 @@
       </div>
 
       <!-- Tag Filter Section with Sort Control -->
-      <div x-data="{
-        showTagCloud: false,
-        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
-          {{- range $index, $tag := $tags -}}
-            {{- if $index }}, {{ end -}}
-            `{{- $tag.Page.Title -}}`
-          {{- end -}}]
-      }" class="mb-6">
-        <div class="flex justify-between items-center">
-          <button type="button" @click="showTagCloud = !showTagCloud"
-                  class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
-            <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
-            <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
-          </button>
-          
-          <!-- Sort Control -->
-          <div class="sort-control">
-            <label for="sort-select" class="text-sm font-medium text-text dark:text-text-dark mr-2">{{ i18n "sort_by" }}:</label>
-            <select id="sort-select" 
-                    class="bg-secondary dark:bg-secondary-dark border border-tertiary dark:border-tertiary-dark rounded py-1 px-2 text-sm focus:outline-none focus:ring-accent1 focus:border-accent1">
-                <option value="title_asc">{{ i18n "sort_title_asc" }}</option>
-                <option value="title_desc">{{ i18n "sort_title_desc" }}</option>
-                <option value="author_asc">{{ i18n "sort_author_asc" }}</option>
-                <option value="author_desc">{{ i18n "sort_author_desc" }}</option>
-                <option value="year_asc">{{ i18n "sort_year_asc" }}</option>
-                <option value="year_desc">{{ i18n "sort_year_desc" }}</option>
-            </select>
-          </div>
-        </div>
-
-        <div x-show="showTagCloud"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 transform -translate-y-2"
-             x-transition:enter-end="opacity-100 transform translate-y-0"
-             class="mt-4">
-          <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
-          <div class="flex flex-wrap gap-2">
-            {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-              {{ partial "tags/component.html" (dict
-                "tag" .Page.Title
-                "clickable" true
-                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
-                "count" .Count
-              ) }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
+      {{ partial "tags/cloud.html" . }}
 
       <!-- Book Gallery -->
       <section id="book-gallery"
@@ -89,30 +42,27 @@
       <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
         <button
           id="prev-page"
-          class="pagination-button"
+          class="btn-primary"
           aria-label="{{ i18n "previous" }}"
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
+          {{ i18n "previous" }}
         </button>
         <span id="page-info" class="text-sm text-gray-600 dark:text-gray-400"></span>
         <button
           id="next-page"
-          class="pagination-button"
+          class="btn-primary"
           aria-label="{{ i18n "next" }}"
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {{ i18n "next" }}
+          <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
     </div>
   </div>
-</div>
-
-<!-- Tag Cloud Section -->
-<div class="container mx-auto px-4 py-8">
-  {{ partial "tags/cloud.html" . }}
 </div>
 {{ end }}

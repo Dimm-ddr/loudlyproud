@@ -11,6 +11,7 @@ collections:
     folder: content/en/books
     create: true
     description: Books in English language
+    slug: '{{fields.slug}}'
     fields:
       - label: Draft
         name: draft
@@ -113,14 +114,17 @@ collections:
             pattern:
               - ^https?:\/\/.*
               - Must be a valid URL
-          - label: English Publisher
-            name: english_publisher
-            widget: string
+          - label: Tags
+            name: tags
+            widget: list
+            field:
+              label: Tag
+              name: tag
+              widget: string
             required: false
-          - label: English Edition Notes
-            name: english_edition_notes
-            widget: text
-            required: false
+            allow_add: true
+            collapsed: false
+            hint: Add relevant tags to categorize the book
           - label: Target Translation Languages
             name: target_translation_languages
             widget: list
@@ -137,6 +141,7 @@ collections:
     folder: content/ru/books
     create: true
     description: Books in Russian language
+    slug: '{{fields.slug}}'
     fields:
       - label: Draft
         name: draft
@@ -239,6 +244,17 @@ collections:
             pattern:
               - ^https?:\/\/.*
               - Must be a valid URL
+          - label: Tags
+            name: tags
+            widget: list
+            field:
+              label: Tag
+              name: tag
+              widget: string
+            required: false
+            allow_add: true
+            collapsed: false
+            hint: Add relevant tags to categorize the book
           - label: Russian Publisher
             name: russian_publisher
             widget: string
@@ -253,6 +269,7 @@ collections:
     folder: content/fa/books
     create: true
     description: Books in Farsi language
+    slug: '{{fields.slug}}'
     fields:
       - label: Draft
         name: draft
@@ -355,6 +372,17 @@ collections:
             pattern:
               - ^https?:\/\/.*
               - Must be a valid URL
+          - label: Tags
+            name: tags
+            widget: list
+            field:
+              label: Tag
+              name: tag
+              widget: string
+            required: false
+            allow_add: true
+            collapsed: false
+            hint: Add relevant tags to categorize the book
           - label: Farsi Publisher
             name: farsi_publisher
             widget: string
@@ -369,6 +397,7 @@ collections:
     folder: content/ku/books
     create: true
     description: Books in Kurdish language
+    slug: '{{fields.slug}}'
     fields:
       - label: Draft
         name: draft
@@ -471,6 +500,17 @@ collections:
             pattern:
               - ^https?:\/\/.*
               - Must be a valid URL
+          - label: Tags
+            name: tags
+            widget: list
+            field:
+              label: Tag
+              name: tag
+              widget: string
+            required: false
+            allow_add: true
+            collapsed: false
+            hint: Add relevant tags to categorize the book
           - label: Kurdish Publisher
             name: kurdish_publisher
             widget: string

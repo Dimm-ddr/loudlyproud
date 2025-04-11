@@ -30,26 +30,26 @@
   /* Focus styles for LTR and RTL cards */
   .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, #eee7dc),
-      0 0 0 4px var(--ring-color, #3498DB);
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
   
   .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, #eee7dc),
-      0 0 0 4px var(--ring-color, #3498DB);
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
   
   .dark .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, #2d2d2d),
-      0 0 0 4px var(--ring-color, #5dafec);
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
   
   .dark .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, #2d2d2d),
-      0 0 0 4px var(--ring-color, #5dafec);
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
   
   .language-card:active {
