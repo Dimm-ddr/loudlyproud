@@ -111,6 +111,12 @@ var Pagination = class {
       this.updateDisplay();
     }
   }
+  // Public method to reset pagination to first page
+  resetToFirstPage() {
+    this.config.currentPage = 1;
+    this.config.totalItems = this.elements.gallery.children.length;
+    this.updateDisplay();
+  }
 };
 export {
   Pagination

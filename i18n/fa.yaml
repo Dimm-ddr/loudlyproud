@@ -128,3 +128,12 @@ explorePages: "چند مکان که می‌توانید بازدید کنید:"
 homePage: "صفحه اصلی"
 search: "جستجو"
 randomSuggestions: "یا نگاهی به موارد تصادفی از مجموعه ما بیندازید:"
+
+# Sorting
+sort_by: "مرتب سازی بر اساس"
+sort_title_asc: "عنوان (آ-ی)"
+sort_title_desc: "عنوان (ی-آ)"
+sort_author_asc: "نویسنده (آ-ی)"
+sort_author_desc: "نویسنده (ی-آ)"
+sort_year_asc: "سال (قدیمی‌ترین)"
+sort_year_desc: "سال (جدیدترین)"

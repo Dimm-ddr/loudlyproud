@@ -1,12 +1,12 @@
 site: public
 output_subdir: search
 include_paths:
-  - tags
   - books
-  - en
+  - tags
   - ru
   - fa
   - ku
+  - en
 excludes:
   - _*
   - assets/*

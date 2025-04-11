@@ -6,8 +6,16 @@
     <!-- Add common head elements -->
     {{ partial "head-additions.html" . }}
 
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Tag Styles -->
+    {{ partial "tags/styles.html" . }}
+    
+    <!-- Pagefind -->
+    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+
     <!-- Alpine.js setup -->
-    <script defer src='{{ "js/alpine.js" | relURL }}'></script>
     <script defer>
       // Initialize Alpine store
       document.addEventListener('alpine:init', () => {
@@ -46,7 +54,19 @@
     <style>[x-cloak] { display: none !important; }</style>
 
     <!-- SEO and Meta Tags -->
-    {{ partial "meta.html" . }}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink | absURL }}">
+
+    <!-- Language alternates -->
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink | absURL }}">
+      {{ end }}
+    {{ end }}
 
     <!-- Pagefind resources -->
     <link href='{{ "search/pagefind-ui.css" | relURL }}' rel="stylesheet">
@@ -132,14 +152,14 @@
     </style>
 
     <!-- Initialize other features -->
-    {{ partial "tag-styles.html" . }}
+    {{ partial "tags/styles.html" . }}
 
     <!-- Additional head content -->
     {{ block "head" . }}{{ end }}
   </head>
 
   <body class="flex flex-col min-h-screen bg-background text-text">
-    {{ partial "custom-functions.html" . }}
+    <div class="hidden select-control"></div>
     {{ partial "site-header.html" . }}
 
     <main id="main-content" class="flex-grow">
@@ -172,6 +192,69 @@
           console.log('Accessibility enhancements unavailable')
         );
       }
+    </script>
+
+    <!-- Load pagination and sorting scripts -->
+    <script type="module">
+      import { Pagination } from '/js/pagination.js';
+      import { Sorting } from '/js/sorting.js';
+
+      document.addEventListener("DOMContentLoaded", function() {
+        // Initialize pagination if the gallery exists
+        const gallery = document.getElementById('book-gallery');
+        if (gallery) {
+          const pagination = new Pagination({
+            selectors: {
+              gallery: '#book-gallery',
+              itemsPerPageSelect: '#items-per-page',
+              prevButton: '#prev-page',
+              nextButton: '#next-page',
+              pageInfo: '#page-info',
+              noResults: '#no-results',
+              pagination: '#pagination'
+            }
+          });
+
+          // Initialize sorting with robust error handling
+          try {
+            // Wait a bit for the injected sort control to be available
+            setTimeout(() => {
+              const sortSelect = document.getElementById('sort-select');
+              
+              if (!sortSelect) {
+                console.error('Sort select element not found - sorting disabled');
+                return;
+              }
+              
+              // Check if a Sorting instance is already attached to the element
+              if (sortSelect._sortingInitialized) {
+                console.log('Sorting already initialized for this element');
+                return;
+              }
+              
+              console.log('Initializing sorting with element:', sortSelect);
+              
+              const sorting = new Sorting({
+                selectors: {
+                  gallery: '#book-gallery',
+                  sortSelect: '#sort-select'
+                },
+                onSort: () => {
+                  // Reset pagination to first page after sorting
+                  pagination.resetToFirstPage();
+                }
+              });
+              
+              // Mark the element as initialized to prevent duplicate initialization
+              sortSelect._sortingInitialized = true;
+              
+              console.log('Sorting initialized successfully');
+            }, 500); // Reduced delay to ensure our element is there
+          } catch (error) {
+            console.error('Error initializing sorting:', error);
+          }
+        }
+      });
     </script>
   </body>
 </html>

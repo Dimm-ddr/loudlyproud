@@ -17,19 +17,33 @@
 
 <!-- Pagination Controls -->
 <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
-    {{ partial "button.html" (dict "url" "#" "text" (i18n "previous") "id" "prev-page" "disabled" true) }}
+    <button
+        id="prev-page"
+        disabled
+        aria-disabled="true"
+        class="btn-primary btn-disabled"
+    >
+        {{ i18n "previous" }}
+    </button>
     <span id="page-info" class="text-text font-normal">
         {{ printf (i18n "page_info") 1 1 }}
     </span>
-    {{ partial "button.html" (dict "url" "#" "text" (i18n "next") "id" "next-page") }}
+    <button
+        id="next-page"
+        class="btn-primary"
+    >
+        {{ i18n "next" }}
+    </button>
 </div>
 
-<!-- Pagination Script -->
+<!-- Pagination and Sorting Script -->
 <script type="module">
     import { Pagination } from '/js/pagination.js';
+    import { Sorting } from '/js/sorting.js';
 
     document.addEventListener("DOMContentLoaded", function() {
-        new Pagination({
+        // Initialize pagination
+        const pagination = new Pagination({
             selectors: {
                 gallery: '#book-gallery',
                 itemsPerPageSelect: '#items-per-page',
@@ -40,5 +54,44 @@
                 pagination: '#pagination'
             }
         });
+
+        // Initialize sorting with robust error handling
+        try {
+            // Wait a bit for the injected sort control to be available
+            setTimeout(() => {
+                const sortSelect = document.getElementById('sort-select');
+                
+                if (!sortSelect) {
+                    console.error('Sort select element not found - sorting disabled');
+                    return;
+                }
+                
+                // Check if a Sorting instance is already attached to the element
+                if (sortSelect._sortingInitialized) {
+                    console.log('Sorting already initialized for this element');
+                    return;
+                }
+                
+                console.log('Initializing sorting with element:', sortSelect);
+                
+                const sorting = new Sorting({
+                    selectors: {
+                        gallery: '#book-gallery',
+                        sortSelect: '#sort-select'
+                    },
+                    onSort: () => {
+                        // Reset pagination to first page after sorting
+                        pagination.resetToFirstPage();
+                    }
+                });
+                
+                // Mark the element as initialized to prevent duplicate initialization
+                sortSelect._sortingInitialized = true;
+                
+                console.log('Sorting initialized successfully');
+            }, 1500); // Delay to ensure our injected element is there
+        } catch (error) {
+            console.error('Error initializing sorting:', error);
+        }
     });
 </script>

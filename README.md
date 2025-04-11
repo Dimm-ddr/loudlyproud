@@ -33,6 +33,27 @@ The site implements a sophisticated tagging system with:
 - Tag normalization and validation
 - Automated tag monitoring for pull requests
 
+### Component System & Style Guide
+
+The project implements a comprehensive component system for consistent UI:
+
+- **Component CSS**: Organized in `assets/css/components/` directory
+- **Style Categories**:
+  - Typography (`typography.css`)
+  - Buttons (`buttons.css`)
+  - Form Controls (`form-controls.css`)
+  - Tags (`tags.css`)
+  - Cards (`cards.css`)
+- **Hugo Partials**: Reusable template partials that implement these components
+- **Color System**: Consistent color palette with light/dark mode variations
+- **Documentation**: A style guide is available at `/style-guide`
+
+Benefits of this approach:
+- Consistent interface across the site
+- Easy maintenance and updates
+- Clear standards for contributors
+- Responsive and accessible components out-of-the-box
+
 ### Multilingual Support
 
 The site supports multiple languages:
@@ -73,5 +94,6 @@ The site includes:
 5. Responsive design with dark mode support
 6. Static search functionality
 7. Automated build and deployment pipeline
+8. Component system for UI consistency
 
 The project is community-oriented, with features that encourage user contributions while maintaining content quality through automated validation systems. The extensive tagging system makes books easily discoverable through various cultural, thematic, and identity-based classifications.

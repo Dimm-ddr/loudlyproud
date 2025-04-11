@@ -15,12 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const colorKey = window.tagMapping[normalizedTag] || "fallback";
     return window.tagStyles[colorKey] || window.tagStyles["fallback"];
   }
-  function renderTags(tags) {
-    return tags.map((tag) => {
-      const style = getTagStyle(tag);
-      return `<span class="tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}">${tag}</span>`;
-    }).join("");
-  }
   function renderBooks(filteredBooks) {
     while (bookList.firstChild) {
       bookList.removeChild(bookList.firstChild);
@@ -58,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
       book.tags.forEach((tag) => {
         const style = getTagStyle(tag);
         const tagSpan = document.createElement("span");
-        tagSpan.className = `tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}`;
+        tagSpan.className = `tag ${style}`;
         tagSpan.textContent = tag;
         tagsContainer.appendChild(tagSpan);
       });

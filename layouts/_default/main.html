@@ -7,55 +7,60 @@
     <div class="mt-2 mb-6">
       <!-- Search and Pagination row -->
       <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
-        {{ partial "search.html" . }}
+        {{ partial "components/search.html" . }}
         <div class="w-full lg:w-auto">
-          {{ partial "items-per-page.html" . }}
+          {{ partial "components/items-per-page.html" . }}
         </div>
       </div>
 
-      <!-- Tag Manager -->
-      <div class="mt-4">
-        {{ partial "tag-manager.html" . }}
+      <!-- Tags Section -->
+      <div class="mb-8">
+        {{ partial "tags/manager.html" . }}
       </div>
 
-      <!-- Tag Filter Section -->
-      <div x-data="{
-        showTagCloud: false,
-        popularTags: [{{ $tags := first 10 .Site.Taxonomies.tags.ByCount }}
-          {{- range $index, $tag := $tags -}}
-            {{- if $index }}, {{ end -}}
-            `{{- $tag.Page.Title -}}`
-          {{- end -}}]
-      }" class="mb-6">
-        <button type="button" @click="showTagCloud = !showTagCloud"
-                class="text-text hover:text-accent1 font-normal flex items-center space-x-2">
-          <span x-text="showTagCloud ? '{{ i18n "hide_filters" }}' : '{{ i18n "show_filters" }}'"></span>
-          <span x-text="showTagCloud ? '▼' : '▶'" class="text-sm"></span>
+      <!-- Tag Filter Section with Sort Control -->
+      {{ partial "tags/cloud.html" . }}
+
+      <!-- Book Gallery -->
+      <section id="book-gallery"
+               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {{ range where .Site.RegularPages "Section" "books" }}
+          {{ partial "book/card.html" . }}
+        {{ end }}
+      </section>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center py-8 flex-col items-center">
+        <svg class="w-12 h-12 text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z" />
+        </svg>
+        <p class="text-xl font-bold text-gray-600">{{ i18n "no_books_found" }}</p>
+      </div>
+
+      <!-- Pagination Controls -->
+      <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
+        <button
+          id="prev-page"
+          class="btn-primary"
+          aria-label="{{ i18n "previous" }}"
+        >
+          <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          {{ i18n "previous" }}
         </button>
-
-        <div x-show="showTagCloud"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 transform -translate-y-2"
-             x-transition:enter-end="opacity-100 transform translate-y-0"
-             class="mt-4">
-          <h3 class="text-lg font-bold text-text mb-2">{{ i18n "prevalent_tags" }}</h3>
-          <div class="flex flex-wrap gap-2">
-            {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-              {{ partial "tag-component.html" (dict
-                "tag" .Page.Title
-                "clickable" true
-                "extraClasses" "hover:bg-accent1 hover:text-white transition-colors duration-200"
-                "count" .Count
-              ) }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
-
-      <!-- Books Grid with Pagination -->
-      <div class="mt-4">
-        {{ $books := where (where .Site.Pages "Type" "books") "Kind" "page" }}
-        {{ partial "client-pagination.html" (dict "books" $books) }}
+        <span id="page-info" class="text-sm text-gray-600 dark:text-gray-400"></span>
+        <button
+          id="next-page"
+          class="btn-primary"
+          aria-label="{{ i18n "next" }}"
+        >
+          {{ i18n "next" }}
+          <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>

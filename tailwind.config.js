@@ -8,6 +8,14 @@ module.exports = {
     "./static/**/*.css",
     "./themes/**/*.html",
   ],
+  safelist: [
+    'select-control',
+    'input-control',
+    'checkbox-control',
+    'radio-control',
+    'form-label',
+    'form-label-inline'
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -19,6 +27,7 @@ module.exports = {
         secondary: {
           DEFAULT: "#eee7dc",
           dark: "#2d2d2d",
+          light: "#f5f1ea",
         },
         tertiary: {
           DEFAULT: "#d3ccb8",
@@ -151,8 +160,23 @@ module.exports = {
             },
           },
         },
+        textShadow: {
+          DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.5)',
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-none': {
+          textShadow: 'none',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 };

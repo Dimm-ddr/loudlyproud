@@ -1,0 +1,45 @@
+/* Buttons
+   ===============================
+   A collection of reusable button styles
+*/
+
+@layer components {
+  /* Primary button */
+  .btn-primary {
+    @apply bg-accent3 hover:bg-accent3/90 dark:bg-accent3-dark dark:hover:bg-accent3-dark/90
+           text-white font-bold py-2 px-4 
+           rounded shadow transition duration-200 
+           focus:outline-none focus:ring-2 focus:ring-accent3 focus:ring-opacity-50;
+  }
+  
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-white dark:bg-secondary hover:bg-light-gray dark:hover:bg-tertiary 
+           text-text dark:text-text-dark font-bold py-2 px-4 
+           rounded border border-light-gray dark:border-light-gray-dark shadow-sm transition duration-200
+           focus:outline-none focus:ring-2 focus:ring-accent3 focus:ring-opacity-50;
+  }
+  
+  /* Tertiary button (text button) */
+  .btn-tertiary {
+    @apply bg-transparent hover:bg-light-gray/50 dark:hover:bg-tertiary/50
+           text-accent3 dark:text-accent3-dark font-bold py-2 px-4
+           rounded transition duration-200
+           focus:outline-none focus:ring-2 focus:ring-accent3 focus:ring-opacity-50;
+  }
+  
+  /* Small button variant */
+  .btn-sm {
+    @apply py-1 px-3 text-sm;
+  }
+  
+  /* Large button variant */
+  .btn-lg {
+    @apply py-3 px-6 text-lg;
+  }
+  
+  /* Disabled state */
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+} 

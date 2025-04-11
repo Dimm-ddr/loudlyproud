@@ -144,3 +144,12 @@ explorePages: "Here are a few places you might want to explore:"
 homePage: "Home Page"
 search: "Search"
 randomSuggestions: "Or check out some random items from our collection:"
+
+# Sorting
+sort_by: "Sort by"
+sort_title_asc: "Title (A-Z)"
+sort_title_desc: "Title (Z-A)"
+sort_author_asc: "Author (A-Z)"
+sort_author_desc: "Author (Z-A)"
+sort_year_asc: "Year (Oldest first)"
+sort_year_desc: "Year (Newest first)"

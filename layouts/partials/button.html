@@ -1,8 +1,0 @@
-<!-- layouts/partials/button.html -->
-
-<a href="{{ .url }}"
-   id="{{ .id }}"
-   class="button bg-gray-600 {{ if not .disabled }}hover:bg-gray-700{{ end }} text-white font-black py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 {{ with .extraClasses }}{{ . }}{{ end }}"
-   {{ if .disabled }}aria-disabled="true" tabindex="-1"{{ end }}>
-  {{ .text }}
-</a>

@@ -7,7 +7,8 @@
 {{ end }}
 
 <article class="book-card bg-secondary dark:bg-secondary-dark shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:shadow-xl flex flex-col"
-         {{ with .File }}data-slug="{{ .ContentBaseName }}"{{ end }}>
+         {{ with .File }}data-slug="{{ .ContentBaseName }}"{{ end }}
+         {{ with .Params.publication_year }}data-publication-year="{{ . }}"{{ end }}>
 
     {{ partial "book/components/cover-image.html" (dict
         "cover" .Params.cover
@@ -15,8 +16,17 @@
         "permalink" .RelPermalink) }}
 
     <div class="p-4 flex flex-col flex-grow">
-        {{ partial "book/components/title-section.html" . }}
-        {{ partial "book/components/authors.html" .Params }}
+        <h2 class="text-xl font-black mb-2 text-primary dark:text-primary-dark">
+            <a href="{{ .RelPermalink }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-accent1 rounded">
+                {{ .Params.book_title }}
+            </a>
+        </h2>
+        
+        <div class="book-authors text-sm text-text dark:text-text-dark mb-2">
+            {{ with .Params.authors }}
+                {{ delimit . ", " }}
+            {{ end }}
+        </div>
 
         {{ with .Params.short_book_description }}
         <div class="prose prose-sm dark:prose-invert mb-4">
@@ -28,7 +38,7 @@
             {{ with .Params.tags }}
             <div class="flex flex-wrap gap-2">
                 {{ range . }}
-                    {{ partial "tag-component.html" (dict "tag" . "clickable" true) }}
+                    {{ partial "tags/component.html" (dict "tag" . "clickable" true) }}
                 {{ end }}
             </div>
             {{ end }}

@@ -128,3 +128,12 @@ explorePages: "چەند شوێنێک کە دەتوانی سەردانی بکەی
 homePage: "پەڕەی سەرەکی"
 search: "گەڕان"
 randomSuggestions: "یان سەیری هەندێک بابەتی هەڕەمەکی لە کۆکراوەکەمان بکە:"
+
+# Sorting
+sort_by: "ڕێکخستن بەپێی"
+sort_title_asc: "ناونیشان (ا-ی)"
+sort_title_desc: "ناونیشان (ی-ا)"
+sort_author_asc: "نووسەر (ا-ی)"
+sort_author_desc: "نووسەر (ی-ا)"
+sort_year_asc: "ساڵ (کۆنترین یەکەم)"
+sort_year_desc: "ساڵ (نوێترین یەکەم)"

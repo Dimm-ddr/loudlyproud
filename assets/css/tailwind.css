@@ -1,8 +1,28 @@
-/* assets/tailwind.css */
+/* assets/css/tailwind.css */
+@import "./components/typography.css";
+@import "./components/buttons.css";
+@import "./components/form-controls.css";
+@import "./components/tags.css";
+@import "./components/cards.css";
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* CSS Variables for special cases that need access to theme colors */
+:root {
+  /* For component references - these reference the Tailwind theme colors */
+  --bg-secondary: theme('colors.secondary.DEFAULT');
+  --ring-color: theme('colors.accent3.DEFAULT');
+}
+
+/* Dark mode variables */
+.dark {
+  --bg-secondary: theme('colors.secondary.dark');
+  --ring-color: theme('colors.accent3.dark');
+}
+
+/* Import component styles */
 
 /* Base font settings */
 @layer base {
@@ -115,33 +135,6 @@
   @apply bg-gray-600;
 }
 
-/* Reusable Button Styles */
-.btn {
-  @apply bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded shadow transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
-}
-
-/* Typography utility classes */
-.text-heading {
-  @apply font-black text-gray-900 dark:text-gray-50;
-}
-
-.text-subheading {
-  @apply font-bold text-gray-800 dark:text-gray-100;
-}
-
-.text-body {
-  @apply font-normal text-gray-700 dark:text-gray-200;
-}
-
-.text-caption {
-  @apply font-normal text-gray-600 dark:text-gray-300;
-}
-
-/* Special case for italic captions to compensate for thinner appearance */
-.text-caption.italic {
-  @apply font-medium;
-}
-
 /* Scrollbar Styles */
 .scrollbar-thin::-webkit-scrollbar {
   width: 4px;
@@ -167,6 +160,7 @@
 }
 
 @layer components {
+  /* Tag styles */
   .tag-base {
     @apply inline-block px-3 py-1 rounded-full text-sm font-bold transition-colors duration-200;
   }
@@ -220,26 +214,26 @@
   /* Focus styles for LTR and RTL cards */
   .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
-      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary, rgb(45, 45, 45)),
-      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .dark .language-card-ltr:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
-      0 0 0 4px var(--ring-color, rgb(86, 19, 87));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .dark .language-card-rtl:focus-visible {
     box-shadow:
-      0 0 0 2px var(--bg-secondary-dark, rgb(26, 26, 26)),
-      0 0 0 4px var(--ring-color, rgb(21, 94, 117));
+      0 0 0 2px var(--bg-secondary),
+      0 0 0 4px var(--ring-color);
   }
 
   .language-card:active {

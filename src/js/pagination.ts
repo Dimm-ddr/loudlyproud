@@ -171,4 +171,12 @@ export class Pagination {
       this.updateDisplay();
     }
   }
+  
+  // Public method to reset pagination to first page
+  public resetToFirstPage(): void {
+    this.config.currentPage = 1;
+    // Update totalItems in case elements have been added or removed
+    this.config.totalItems = this.elements.gallery.children.length;
+    this.updateDisplay();
+  }
 }
