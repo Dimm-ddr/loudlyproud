@@ -17,11 +17,23 @@
 
 <!-- Pagination Controls -->
 <div id="pagination" class="mt-8 flex justify-center items-center space-x-2">
-    {{ partial "button.html" (dict "url" "#" "text" (i18n "previous") "id" "prev-page" "disabled" true) }}
+    <button
+        id="prev-page"
+        disabled
+        aria-disabled="true"
+        class="btn-primary btn-disabled"
+    >
+        {{ i18n "previous" }}
+    </button>
     <span id="page-info" class="text-text font-normal">
         {{ printf (i18n "page_info") 1 1 }}
     </span>
-    {{ partial "button.html" (dict "url" "#" "text" (i18n "next") "id" "next-page") }}
+    <button
+        id="next-page"
+        class="btn-primary"
+    >
+        {{ i18n "next" }}
+    </button>
 </div>
 
 <!-- Pagination and Sorting Script -->

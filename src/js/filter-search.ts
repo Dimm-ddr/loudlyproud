@@ -4,6 +4,8 @@ declare global {
   interface Window {
     books: Book[];
     Fuse: any; // Consider installing @types/fuse.js for better typing
+    tagMapping: { [key: string]: string };
+    tagStyles: { [key: string]: string };
   }
 }
 
@@ -21,24 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.4,
   });
 
-  function getTagStyle(tag: string): {
-    bg: string;
-    text: string;
-    darkBg: string;
-    darkText: string;
-  } {
+  function getTagStyle(tag: string): string {
     const normalizedTag = tag.toLowerCase().replace(/\s+/g, "-"); // Assuming urlize replaces spaces with hyphens
     const colorKey = window.tagMapping[normalizedTag] || "fallback";
     return window.tagStyles[colorKey] || window.tagStyles["fallback"];
-  }
-
-  function renderTags(tags: string[]): string {
-    return tags
-      .map((tag) => {
-        const style = getTagStyle(tag);
-        return `<span class="tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}">${tag}</span>`;
-      })
-      .join("");
   }
 
   function renderBooks(filteredBooks: Book[]): void {
@@ -99,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       book.tags.forEach((tag) => {
         const style = getTagStyle(tag);
         const tagSpan = document.createElement("span");
-        tagSpan.className = `tag ${style.bg} ${style.text} dark:${style.darkBg} dark:${style.darkText}`;
+        tagSpan.className = `tag ${style}`;
         tagSpan.textContent = tag;
         tagsContainer.appendChild(tagSpan);
       });
