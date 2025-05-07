@@ -2,44 +2,23 @@
 
 from pathlib import Path
 from datetime import datetime
-from urllib.parse import urlparse
-from typing import Any
+import json
 from dataclasses import dataclass, field
 from collections import Counter
-from ruamel.yaml import YAML
-from book_schema import SCHEMA, is_valid_isbn
-import json
 
-
-def is_valid_url(url: str) -> bool:
-    """Check if string is a valid URL."""
-    try:
-        result = urlparse(url)
-        return all([result.scheme, result.netloc])
-    except:
-        return False
-
-
-def is_valid_date(date_str: str) -> bool:
-    """Check if string is a valid date in YYYY-MM-DD format."""
-    try:
-        datetime.strptime(date_str, "%Y-%m-%d")
-        return True
-    except:
-        return False
-
+from frontmatter import parse_frontmatter, validate_value
+from book_schema import SCHEMA
 
 @dataclass
 class ContentIssue:
     """Represents a content validation issue."""
-
     file_path: str
     issue_type: str
     message: str
     field: str | None = None
     auto_fixable: bool = False
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> dict:
         return {
             "file_path": self.file_path,
             "issue_type": self.issue_type,
@@ -48,14 +27,12 @@ class ContentIssue:
             "auto_fixable": self.auto_fixable,
         }
 
-
 @dataclass
 class ValidationStats:
     total_files: int = 0
     files_with_issues: int = 0
     issue_types: Counter = field(default_factory=Counter)
     field_issues: Counter = field(default_factory=Counter)
-
 
 def print_stats(stats: ValidationStats) -> None:
     """Print validation statistics."""
@@ -74,108 +51,22 @@ def print_stats(stats: ValidationStats) -> None:
         for field, count in stats.field_issues.most_common():
             print(f"  {field}: {count}")
 
-
-def validate_value(value: Any, field_type: str, field_def: dict) -> str | None:
-    """Validate a single value against its type definition."""
-    match field_type:
-        case "string":
-            if not isinstance(value, str):
-                if field_def.get("format") == "isbn":
-                    return "Must be a string (currently a number)"
-                return "Must be a string"
-            # Check format if specified
-            match field_def.get("format"):
-                case "url" if not is_valid_url(value):
-                    return "Must be a valid URL"
-                case "date" if not is_valid_date(value):
-                    return "Must be a valid date in YYYY-MM-DD format"
-                case "isbn" if not is_valid_isbn(value):
-                    return "Must be a valid ISBN-10 or ISBN-13"
-        case "boolean":
-            if not isinstance(value, bool):
-                return "Must be a boolean"
-        case "array":
-            if not isinstance(value, list):
-                return "Must be a list"
-            if item_type := field_def.get("item_type"):
-                for item in value:
-                    if error := validate_value(item, item_type, {}):
-                        return f"List item error: {error}"
-        case "object":
-            if not isinstance(value, dict):
-                return "Must be an object"
-
-    if enum_values := field_def.get("enum"):
-        if value not in enum_values:
-            return f"Must be one of: {', '.join(str(v) for v in enum_values)}"
-
-    return None
-
-
 class ContentChecker:
     def __init__(self) -> None:
         self.schema = SCHEMA
         self.project_root = Path(__file__).parent.parent
 
-    def parse_frontmatter(
-        self, content: str, relative_path: str
-    ) -> tuple[dict | None, list[ContentIssue]]:
-        """Parse frontmatter and return data and any parsing issues."""
-        issues = []
-
-        match content.split("---", 2):
-            case ["", frontmatter, *rest] if rest:
-                try:
-                    yaml = YAML()
-                    yaml.preserve_quotes = True
-                    data = yaml.load(frontmatter)
-                    if not isinstance(data, dict):
-                        issues.append(
-                            ContentIssue(
-                                relative_path,
-                                "format_error",
-                                "Content must be a YAML mapping",
-                                auto_fixable=False,
-                            )
-                        )
-                        return None, issues
-                    return data, issues
-                except Exception as e:
-                    error_msg = str(e)
-                    msg = (
-                        "YAML structure error: Check for proper indentation and quoting in all fields"
-                        if "while parsing a block mapping" in error_msg
-                        else f"YAML parsing error: {error_msg}"
-                    )
-                    issues.append(
-                        ContentIssue(
-                            relative_path, "yaml_error", msg, auto_fixable=False
-                        )
-                    )
-            case _:
-                issues.append(
-                    ContentIssue(
-                        relative_path,
-                        "format_error",
-                        "Invalid markdown frontmatter format",
-                        auto_fixable=False,
-                    )
-                )
-        return None, issues
-
-    def validate_required_fields(
-        self, data: dict, relative_path: str
-    ) -> list[ContentIssue]:
+    def validate_required_fields(self, data: dict, relative_path: str) -> list[ContentIssue]:
         """Validate required fields in data."""
         issues = []
-        for field in self.schema["required_fields"]:
-            if field not in data:
+        for required_field in self.schema["required_fields"]:
+            if required_field not in data:
                 issues.append(
                     ContentIssue(
                         relative_path,
                         "missing_field",
-                        f"Missing required field: {field}",
-                        field=field,
+                        f"Missing required field: {required_field}",
+                        field=required_field,
                     )
                 )
         return issues
@@ -190,28 +81,28 @@ class ContentChecker:
         params_schema = self.schema["params"]
 
         # Required params fields
-        for field in params_schema["required_fields"]:
-            if field not in params:
+        for required_field in params_schema["required_fields"]:
+            if required_field not in params:
                 issues.append(
                     ContentIssue(
                         relative_path,
                         "missing_field",
-                        f"Missing required params field: {field}",
-                        field=f"params.{field}",
+                        f"Missing required params field: {required_field}",
+                        field=f"params.{required_field}",
                     )
                 )
 
         # Field validation
-        for field, value in params.items():
-            if field_def := params_schema["field_types"].get(field):
+        for required_field, value in params.items():
+            if field_def := params_schema["field_types"].get(required_field):
                 if field_type := field_def.get("type"):
                     if error := validate_value(value, field_type, field_def):
                         issues.append(
                             ContentIssue(
                                 relative_path,
                                 "validation_error",
-                                f"Field 'params.{field}': {error}",
-                                field=f"params.{field}",
+                                f"Field 'params.{required_field}': {error}",
+                                field=f"params.{required_field}",
                                 auto_fixable=field_def.get("format") == "isbn",
                             )
                         )
@@ -270,18 +161,122 @@ class ContentChecker:
                 )
             )
 
-        # Parse and validate frontmatter
-        data, parse_issues = self.parse_frontmatter(content, relative_path)
-        issues.extend(parse_issues)
+        # Parse frontmatter using our new utilities
+        data, parse_errors, is_fixable = parse_frontmatter(content)
+        
+        # If parsing failed, add issues and return
+        if parse_errors:
+            for error in parse_errors:
+                issues.append(
+                    ContentIssue(
+                        relative_path,
+                        "yaml_error",
+                        error,
+                        auto_fixable=is_fixable,
+                    )
+                )
+            return issues
+        
+        # If we couldn't parse the frontmatter, return early
+        if data is None:
+            return issues
 
-        if data:
-            # Validate required fields
-            issues.extend(self.validate_required_fields(data, relative_path))
-            # Validate params
-            issues.extend(self.validate_params(data, relative_path))
+        # Validate required fields
+        issues.extend(self.validate_required_fields(data, relative_path))
+        # Validate params
+        issues.extend(self.validate_params(data, relative_path))
+
+        # Check for malformed YAML with extra newlines
+        parts = content.split("---", 2)
+        if len(parts) < 3:
+            issues.append(
+                ContentIssue(
+                    file_path=relative_path,
+                    field="frontmatter",
+                    message="Invalid frontmatter format",
+                    auto_fixable=False,
+                    issue_type="format",
+                )
+            )
+            return issues
+
+        # Check for extra newlines in YAML
+        yaml_content = parts[1]
+        lines = yaml_content.split("\n")
+        in_multiline = False
+        multiline_indent = 0
+        current_field = None
+
+        for i, line in enumerate(lines, start=1):
+            stripped = line.strip()
+            indent = len(line) - len(line.lstrip())
+            
+            # Check if we're starting a multiline string
+            if ":" in line and not line.strip().startswith("#"):
+                field_indent = len(line) - len(line.lstrip())
+                if field_indent == 2:  # This is a top-level field
+                    field_name = line.split(":", 1)[0].strip()
+                    value_part = line.split(":", 1)[1].strip()
+                    
+                    # Check if this is a multiline string start
+                    if value_part == "|" or value_part == "|-":
+                        in_multiline = True
+                        multiline_indent = indent + 2
+                        current_field = field_name
+                        continue
+            
+            # If we're in a multiline string, check for its end
+            if in_multiline:
+                if indent < multiline_indent and stripped:  # Less indentation and non-empty
+                    in_multiline = False
+                    current_field = None
+                else:
+                    continue  # Skip newline checks while in multiline string
+            
+            # Check for extra newlines only outside of multiline strings
+            if not in_multiline and stripped == "" and i > 1 and i < len(lines):
+                prev_line = lines[i-2].strip()
+                next_line = lines[i+1].strip()
+                if prev_line and next_line:
+                    # Only flag if neither line is part of a multiline string
+                    prev_indent = len(lines[i-2]) - len(lines[i-2].lstrip())
+                    next_indent = len(lines[i+1]) - len(lines[i+1].lstrip())
+                    if prev_indent == 2 and next_indent == 2:  # Both are top-level fields
+                        context = f"around line {i}:\n  {prev_line}\n  {line}\n  {next_line}"
+                        issues.append(
+                            ContentIssue(
+                                file_path=relative_path,
+                                field="frontmatter",
+                                message=f"Found extra newline in YAML frontmatter {context}",
+                                auto_fixable=True,
+                                issue_type="format",
+                            )
+                        )
+
+        # Check for HTML line breaks in text fields
+        text_fields = ["book_description", "short_book_description"]
+        if isinstance(data.get("params"), dict):
+            for field in text_fields:
+                if field in data["params"]:
+                    value = data["params"][field]
+                    if isinstance(value, str) and "<br" in value:
+                        # Find the line number where this field is defined
+                        field_lines = yaml_content.split("\n")
+                        for i, line in enumerate(field_lines, start=1):
+                            if line.strip().startswith(f"{field}:"):
+                                context = f"in {field} at line {i}:\n  {line}"
+                                issues.append(
+                                    ContentIssue(
+                                        file_path=relative_path,
+                                        field=field,
+                                        message=f"Found HTML line breaks that should be converted to YAML multiline {context}",
+                                        auto_fixable=True,
+                                        issue_type="format",
+                                    )
+                                )
+                                break
 
         return issues
-
 
 def main() -> None:
     project_root = Path(__file__).parent.parent
@@ -329,7 +324,6 @@ def main() -> None:
         print("\nNo issues found!")
         if issues_file.exists():
             issues_file.unlink()
-
 
 if __name__ == "__main__":
     main()

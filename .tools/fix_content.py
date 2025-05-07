@@ -3,13 +3,14 @@
 import sys
 import json
 from pathlib import Path
-from ruamel.yaml import YAML
-from ruamel.yaml.error import YAMLError
 
-from fixers.text_fixes import apply_text_fixes
-from fixers.yaml_fixes import apply_yaml_fixes
-from fixers.format_fixes import reorder_frontmatter
-
+from frontmatter import (
+    parse_frontmatter,
+    reconstruct_content, 
+    apply_all_text_fixers,
+    apply_all_data_fixers,
+    reorder_frontmatter,
+)
 
 def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
     """Fix issues in a single file."""
@@ -19,38 +20,38 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
         return
 
     try:
-        # First, handle text-based fixes
+        # Read the file
         content = full_path.read_text(encoding="utf-8")
-        content, text_fixes = apply_text_fixes(content)
+        all_fixes = []
+        
+        # Apply text-based fixes
+        content, text_fixes = apply_all_text_fixers(content)
         modified = bool(text_fixes)
-        all_fixes = text_fixes
+        all_fixes.extend(text_fixes)
 
         if modified:
             # Write back the text fixes
             with full_path.open("w", encoding="utf-8") as f:
                 f.write(content)
 
-        # Then handle YAML-based fixes
+        # Split content to get parts
         parts = content.split("---", 2)
         if len(parts) < 3:
             print(f"❌ Invalid frontmatter format in {file_path}")
             return
 
-        # Configure YAML
-        yaml = YAML()
-        yaml.preserve_quotes = True
-        yaml.width = 4096
-        yaml.indent(mapping=2, sequence=4, offset=2)
-        yaml.default_flow_style = False
-
-        try:
-            data = yaml.load(parts[1])
-        except YAMLError as e:
-            print(f"❌ YAML error in {file_path}: {e}")
+        # Parse YAML frontmatter
+        data, parse_errors, _ = parse_frontmatter(content)
+        if parse_errors:
+            print(f"❌ YAML errors in {file_path}: {', '.join(parse_errors)}")
+            return
+        
+        if data is None:
+            print(f"❌ Empty YAML data in {file_path}")
             return
 
         # Apply YAML-based fixes
-        yaml_modified, yaml_fixes, data = apply_yaml_fixes(data)
+        yaml_modified, yaml_fixes, data = apply_all_data_fixers(data)
         if yaml_modified:
             modified = True
             all_fixes.extend(yaml_fixes)
@@ -67,14 +68,13 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
 
             # Write back with proper formatting
             with full_path.open("w", encoding="utf-8") as f:
-                f.write("---\n")
-                yaml.dump(data, f)
-                f.write("---")
-                if parts[2]:
-                    f.write(parts[2])
+                f.write(reconstruct_content(data, parts[2]))
 
     except Exception as e:
         print(f"❌ Error fixing {file_path}: {str(e)}")
+        # Print the full traceback for debugging
+        import traceback
+        traceback.print_exc()
 
 
 def main() -> None:

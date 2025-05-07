@@ -1,8 +1,4 @@
 ---
-
-
-
-
 draft: false
 slug: v-poiskakh-shary-uiler-e64cf0d7
 title: В Поисках Шары Уилер
