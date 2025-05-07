@@ -2,7 +2,7 @@
 
 from .file_ops import load_tags_map, load_special_display_names
 from .common import MAPPING_FILE, SPECIAL_DISPLAY_NAMES_FILE
-
+from pathlib import Path
 
 def get_internal_name(tag: str) -> str:
     """
@@ -36,7 +36,7 @@ def get_internal_name(tag: str) -> str:
     return internal
 
 
-def get_display_name(tag: str, mapping_file: str = MAPPING_FILE) -> str:
+def get_display_name(tag: str, mapping_file: Path = MAPPING_FILE) -> str:
     """
     Convert an internal tag name to its display form using mapping and special display names.
 

@@ -4,7 +4,7 @@ import json
 import hashlib
 from datetime import datetime
 from pathlib import Path
-from typing import TypedDict
+from typing import TypedDict, Any
 
 from .common import (
     MAPPING_FILE,
@@ -35,7 +35,7 @@ class TagRegistryEntry(TypedDict):
 class TagRegistry(TypedDict):
     """Type for complete registry."""
 
-    metadata: dict[str, any]
+    metadata: dict[str, Any]
     tags: dict[str, TagRegistryEntry]
 
 

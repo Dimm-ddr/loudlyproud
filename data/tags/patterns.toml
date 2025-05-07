@@ -6,7 +6,7 @@ pattern = "--"
 keep_parts = true
 
 [[split.separators]]
-pattern = " /"
+pattern = "/"
 keep_parts = true
 
 [[split.separators]]
@@ -22,7 +22,7 @@ pattern = "\\ -$"
 replace = ""
 
 [[split.separators]]
-pattern = " & "
+pattern = "&"
 keep_parts = true
 
 [[split.separators]]
