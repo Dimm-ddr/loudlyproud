@@ -151,7 +151,7 @@ def process_book_file(
             return False, []
 
         # Convert normalized tags to their display form
-        display_tags = [get_display_name(tag, str(mapping_file)) for tag in normalized_tags]
+        display_tags = [get_display_name(tag, mapping_file) for tag in normalized_tags]
 
         # Compare both the normalized form (for actual tag changes) and display form (for capitalization)
         original_set = {t.lower() for t in tags if t is not None}

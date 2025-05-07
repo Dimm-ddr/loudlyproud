@@ -9,12 +9,13 @@ from .file_ops import (
     extract_tags_from_file,
     load_tags_report,
     write_tags_report,
+    TagsReport,
 )
 from .git_ops import get_changed_book_files
 from .validate import validate_tags
 
 
-def update_tags_report(new_tags: dict[str, list], report: dict) -> dict:
+def update_tags_report(new_tags: dict[str, list], report: TagsReport) -> TagsReport:
     """Update the tags report with newly found tags."""
     current_time = datetime.now().isoformat()
 

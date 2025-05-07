@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 
-def get_changed_files(base_ref: str = None) -> list[str]:
+def get_changed_files(base_ref: str | None = None) -> list[str]:
     """Get list of changed files compared to base ref."""
     if base_ref is None:
         base_ref = os.environ.get("GITHUB_BASE_REF", "main")
@@ -13,7 +13,7 @@ def get_changed_files(base_ref: str = None) -> list[str]:
     return os.popen(diff_command).read().splitlines()
 
 
-def get_changed_book_files(content_dir: Path, base_ref: str = None) -> list[str]:
+def get_changed_book_files(content_dir: Path, base_ref: str | None = None) -> list[str]:
     """Get list of changed book files."""
     changed_files = get_changed_files(base_ref)
     return [

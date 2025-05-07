@@ -17,7 +17,8 @@
     "build:pagefind": "pagefind --site public --output-subdir search",
     "build:config": "node scripts/build-config.js",
     "clean": "rimraf public && rimraf \"static/css/tailwind.css\" && rimraf \"static/js\"",
-    "cms": "decap-server"
+    "cms": "decap-server",
+    "tools": "poetry --directory .tools"
   },
   "dependencies": {
     "alpinejs": "^3.14.9",

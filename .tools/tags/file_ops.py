@@ -197,7 +197,7 @@ def load_tags_report(project_root: Path) -> TagsReport:
     return {"unprocessed_tags": {}, "processed_tags": {}}
 
 
-def write_tags_report(project_root: Path, report: dict, new_tags: dict) -> None:
+def write_tags_report(project_root: Path, report: TagsReport, new_tags: dict) -> None:
     """Write tags report to files."""
     data_dir = project_root.joinpath(".data/tags")
     data_dir.mkdir(parents=True, exist_ok=True)

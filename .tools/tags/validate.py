@@ -14,7 +14,6 @@ from .common import (
 )
 from .sorting import sort_strings
 from .file_ops import (
-    load_tags_map,
     load_colors_file,
     extract_tags_from_file,
     load_removable_tags,
@@ -47,7 +46,7 @@ def validate_mapping_against_colors(
     # Load files
     colors_data = load_colors_file(colors_file)
     special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
-    display_to_internal = {v: k for k, v in special_display_names.items()}
+    display_to_internal = {v.lower(): k for k, v in special_display_names.items()}
 
     # Get valid tags from mapping values
     valid_tags = get_valid_tags(mapping_file)
@@ -57,10 +56,10 @@ def validate_mapping_against_colors(
     for category in colors_data.values():
         for tag in category:
             # Check if tag has a special internal name
-            if tag in display_to_internal:
-                colors_internal_names.add(display_to_internal[tag])
+            if tag.lower() in display_to_internal:
+                colors_internal_names.add(display_to_internal[tag.lower()])
             else:
-                colors_internal_names.add(get_internal_name(tag))
+                colors_internal_names.add(get_internal_name(tag.lower()))
 
     # Find missing tags
     missing_in_colors = valid_tags - colors_internal_names
@@ -102,7 +101,7 @@ def validate_tags(
     # Load removable tags (already lowercase from file)
     removable_tags = load_removable_tags(to_remove_file)
     special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
-    display_to_internal = {v: k for k, v in special_display_names.items()}
+    display_to_internal = {v.lower(): k for k, v in special_display_names.items()}
 
     # Load colors data and get valid tags
     colors_data = load_colors_file(colors_file)
@@ -112,10 +111,10 @@ def validate_tags(
     colored_tags = set()
     for category in colors_data.values():
         for tag in category:
-            if tag in display_to_internal:
-                colored_tags.add(display_to_internal[tag])
+            if tag.lower() in display_to_internal:
+                colored_tags.add(display_to_internal[tag.lower()])
             else:
-                colored_tags.add(get_internal_name(tag))
+                colored_tags.add(get_internal_name(tag.lower()))
 
     # Get all book files
     book_files = content_path.glob("**/books/*.md")
@@ -134,15 +133,19 @@ def validate_tags(
 
     # Check each tag
     for tag in sorted(all_tags):
+        # Convert to lowercase for comparison
+        tag_lower = tag.lower()
+        
         # Check if tag has a special internal name
-        if tag in display_to_internal:
-            internal = display_to_internal[tag]
+        if tag_lower in display_to_internal:
+            internal = display_to_internal[tag_lower]
         else:
-            internal = get_internal_name(tag)
+            internal = get_internal_name(tag_lower)
 
         # Skip tags that should be removed
         if internal in removable_tags:
             continue
+            
         # Check if the tag is mapped
         if internal not in valid_tags:
             unmapped_tags.append(internal)
@@ -197,11 +200,11 @@ def main() -> None:
 
     # Add mapping vs colors validation results to the report
     if missing_in_colors:
-        report["unmapped_tags"].extend(sorted(missing_in_colors))
+        report["uncolored_tags"].extend(sorted(missing_in_colors))
     if missing_in_mapping:
-        report["uncolored_tags"].extend(sorted(missing_in_mapping))
+        report["unmapped_tags"].extend(sorted(missing_in_mapping))
 
-    # Write the complete report
+    # Write the report
     write_report(report, project_root)
 
 
