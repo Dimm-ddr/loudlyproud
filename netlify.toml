@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "corepack enable && corepack prepare pnpm@10.10.0 --activate && pnpm install && pnpm run build"
+command = "corepack enable && pnpm install && pnpm run build"
 
 [build.environment]
 NODE_VERSION = "20"
