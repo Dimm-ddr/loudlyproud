@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Development tools for LoudlyProud project"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
-packages = [{include = "tags"}, {include = "language"}, {include = "fixers"}]
+packages = [{include = "tags"}, {include = "language"}, {include = "frontmatter"}]
 
 [tool.poetry.dependencies]
 python = "^3.13"

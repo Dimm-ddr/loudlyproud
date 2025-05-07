@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
 title: Красный, белый и королевский синий

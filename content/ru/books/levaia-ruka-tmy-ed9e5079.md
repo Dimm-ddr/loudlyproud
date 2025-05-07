@@ -1,5 +1,4 @@
 ---
-
 draft: false
 slug: levaia-ruka-tmy-ed9e5079
 title: Левая Рука Тьмы
