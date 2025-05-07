@@ -20,6 +20,16 @@ def fix_text_content(content: str, field_name: str) -> tuple[str, list[str]]:
     field_content = content[start:next_field]
     new_content = field_content
 
+    # Fix HTML line breaks
+    if "<br" in new_content:
+        # Replace <br> and <br/> with double newlines
+        temp = new_content.replace("<br />", "\x00")
+        temp = temp.replace("<br/>", "\x00")
+        temp = temp.replace("<br>", "\x00")
+        new_content = temp.replace("\x00", "\n\n  ")
+        modified = True
+        fixes.append(f"Converted HTML line breaks to markdown in {field_name}")
+
     # Fix \n symbols
     if "\\n" in new_content:
         temp = new_content.replace("\\n\\n", "\x00")

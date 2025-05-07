@@ -4,6 +4,7 @@ import sys
 import json
 from pathlib import Path
 from ruamel.yaml import YAML
+from ruamel.yaml.error import YAMLError
 
 from fixers.text_fixes import apply_text_fixes
 from fixers.yaml_fixes import apply_yaml_fixes
@@ -44,7 +45,7 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
 
         try:
             data = yaml.load(parts[1])
-        except yaml.YAMLError as e:
+        except YAMLError as e:
             print(f"❌ YAML error in {file_path}: {e}")
             return
 

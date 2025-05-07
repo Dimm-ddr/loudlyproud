@@ -115,6 +115,7 @@ def validate_value(value: Any, field_type: str, field_def: dict) -> str | None:
 class ContentChecker:
     def __init__(self) -> None:
         self.schema = SCHEMA
+        self.project_root = Path(__file__).parent.parent
 
     def parse_frontmatter(
         self, content: str, relative_path: str
@@ -253,22 +254,33 @@ class ContentChecker:
         return issues
 
     def check_file(self, file_path: Path) -> list[ContentIssue]:
-        """Validate a single file and return list of issues."""
-        relative_path = str(file_path)
-        try:
-            content = file_path.read_text(encoding="utf-8")
-            data, issues = self.parse_frontmatter(content, relative_path)
-            if not data:
-                return issues
+        """Check a single file for issues."""
+        issues = []
+        relative_path = str(file_path.relative_to(self.project_root))
+        content = file_path.read_text(encoding="utf-8")
 
+        # Check for HTML line breaks
+        if "<br" in content:
+            issues.append(
+                ContentIssue(
+                    relative_path,
+                    "html_line_break",
+                    "Found HTML line break tags. These should be converted to markdown line breaks.",
+                    auto_fixable=True,
+                )
+            )
+
+        # Parse and validate frontmatter
+        data, parse_issues = self.parse_frontmatter(content, relative_path)
+        issues.extend(parse_issues)
+
+        if data:
+            # Validate required fields
             issues.extend(self.validate_required_fields(data, relative_path))
+            # Validate params
             issues.extend(self.validate_params(data, relative_path))
 
-            return issues
-        except Exception as e:
-            return [
-                ContentIssue(relative_path, "error", f"Error processing file: {str(e)}")
-            ]
+        return issues
 
 
 def main() -> None:

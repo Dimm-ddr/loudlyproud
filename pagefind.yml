@@ -12,3 +12,135 @@ excludes:
   - assets/*
   - static/*
   - search/*
+
+# Improve search result weighting
+weighting:
+  # Give higher weight to book titles and author names
+  title: 2.0
+  h1: 1.5
+  h2: 1.2
+  h3: 1.0
+  # Lower weight for content in tag pages
+  content: 0.5
+
+# Language-specific settings
+languages:
+  - code: ru
+    # Enable Russian language support
+    stemming: true
+    # Custom Russian stopwords
+    stopwords:
+      - "и"
+      - "в"
+      - "с"
+      - "по"
+      - "для"
+      - "на"
+      - "от"
+      - "до"
+      - "не"
+      - "что"
+      - "это"
+      - "как"
+      - "так"
+      - "но"
+      - "а"
+      - "или"
+      - "быть"
+      - "был"
+      - "была"
+      - "были"
+      - "было"
+      - "есть"
+      - "бы"
+      - "же"
+      - "ли"
+      - "то"
+      - "этот"
+      - "эта"
+      - "эти"
+      - "это"
+      - "такой"
+      - "такая"
+      - "такие"
+      - "такое"
+      - "та"
+      - "те"
+      - "тот"
+      - "та"
+      - "те"
+      - "мой"
+      - "моя"
+      - "мои"
+      - "мое"
+      - "твой"
+      - "твоя"
+      - "твои"
+      - "твое"
+      - "наш"
+      - "наша"
+      - "наши"
+      - "наше"
+      - "ваш"
+      - "ваша"
+      - "ваши"
+      - "ваше"
+      - "их"
+      - "его"
+      - "ее"
+      - "их"
+      - "который"
+      - "которая"
+      - "которые"
+      - "которое"
+      - "кто"
+      - "что"
+      - "какой"
+      - "какая"
+      - "какие"
+      - "какое"
+      - "где"
+      - "когда"
+      - "куда"
+      - "откуда"
+      - "почему"
+      - "зачем"
+      - "как"
+      - "сколько"
+      - "чей"
+      - "чья"
+      - "чьи"
+      - "чье"
+      - "который"
+      - "которая"
+      - "которые"
+      - "которое"
+      - "кто"
+      - "что"
+      - "какой"
+      - "какая"
+      - "какие"
+      - "какое"
+      - "где"
+      - "когда"
+      - "куда"
+      - "откуда"
+      - "почему"
+      - "зачем"
+      - "как"
+      - "сколько"
+      - "чей"
+      - "чья"
+      - "чьи"
+      - "чье"
+
+# Improve search result ranking
+ranking:
+  # Prioritize exact matches
+  exact_match: 2.0
+  # Prioritize matches in titles and headings
+  title_match: 1.5
+  # Lower priority for matches in content
+  content_match: 0.5
+  # Lower priority for matches in tag pages
+  tag_page_match: 0.3
