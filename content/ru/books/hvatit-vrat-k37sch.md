@@ -36,7 +36,6 @@ params:
     - coming of age
     - gay teenagers
     - novels
-    - french fiction
     - 21st century
   goodreads_link: https://www.goodreads.com/book/show/56813320
   languages:

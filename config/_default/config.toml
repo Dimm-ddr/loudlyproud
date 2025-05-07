@@ -33,6 +33,30 @@ i18nDir = "i18n"
 enable = true
 config = "postcss.config.js"
 
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = false  # Disable raw HTML for security
+hardWraps = true  # Convert line breaks to <br>
+xhtml = true  # Use XHTML-style tags
+[markup.goldmark.parser]
+autoHeadingAnchor = true
+wrapStandAloneImageWithinParagraph = true
+attribute = true  # Enable HTML attributes in markdown
+[markup.goldmark.extensions]
+table = true
+strikethrough = true
+linkify = true
+taskList = true
+typographer = true
+footnote = true  # Enable footnotes
+definitionList = true  # Enable definition lists
+[markup.highlight]
+style = "monokai"  # Syntax highlighting style
+lineNos = true  # Show line numbers
+lineNumbersInTable = true  # Better line number formatting
+noClasses = false  # Use CSS classes for styling
+guessSyntax = true  # Auto-detect language if not specified
+
 [taxonomies]
   tag = "tags"
 
@@ -46,7 +70,7 @@ title = "Feedback"
 type = "feedback"
 
 [permalinks]
-books = "/books/:slugorfilename/"
+books = "/books/:slugorcontentbasename/"
 feedback = "/feedback/"
 # Define how taxonomy term URLs should be structured
 tags = "/tags/:slug/"
