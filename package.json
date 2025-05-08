@@ -7,7 +7,7 @@
     "dev": "npm-run-all -s clean -p watch:*",
     "watch:css": "tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch",
     "watch:ts": "node scripts/build.js --watch",
-    "watch:hugo": "hugo server --environment development --disableFastRender --cleanDestinationDir --printI18nWarnings",
+    "watch:hugo": "hugo server --environment development --disableFastRender --cleanDestinationDir --printI18nWarnings --printPathWarnings --printUnusedTemplates --templateMetrics",
     "watch:pagefind": "wait-on --timeout 30000 http://localhost:1313 && nodemon --watch public --ignore 'public/search/**' --exec \"pnpm dlx pagefind --site public --output-subdir search\" --ext html --delay 1000",
     "build": "npm-run-all -s clean build:config build:assets build:hugo build:pagefind",
     "build:assets": "npm-run-all -p build:css build:ts",
