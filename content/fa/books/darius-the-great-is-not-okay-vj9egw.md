@@ -1,9 +1,9 @@
 ---
-  draft: false
-  title: Darius the Great Is Not Okay
-  slug: darius-the-great-is-not-okay-vj9egw
-  type: books
-  params:
+draft: false
+title: Darius the Great Is Not Okay
+slug: darius-the-great-is-not-okay-vj9egw
+type: books
+params:
   book_title: Darius the Great Is Not Okay
   book_description: >-
     Darius Kellner speaks better Klingon than Farsi, and he knows more about Hobbit social cues than Persian ones. He's about to take his first-ever trip to Iran, and it's pretty overwhelming—especially when he's also dealing with clinical depression, a disapproving dad, and a chronically anemic social life. In Iran, he gets to know his ailing but still formidable grandfather, his loving grandmother, and the rest of his mom's family for the first time. And he meets Sohrab, the boy next door who changes everything.

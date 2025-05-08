@@ -1,9 +1,9 @@
 ---
-  draft: false
-  title: How It All Blew Up
-  slug: how-it-all-blew-up-ugh7s4
-  type: books
-  params:
+draft: false
+title: How It All Blew Up
+slug: how-it-all-blew-up-ugh7s4
+type: books
+params:
   book_title: How It All Blew Up
   book_description: >-
     Simon vs. the Homo Sapiens Agenda goes to Italy in Arvin Ahmadi's newest incisive look at identity and what it means to find yourself by running away.
