@@ -1,22 +1,4 @@
 """Schema definition for book content validation."""
-
-
-def is_valid_isbn(isbn: str) -> bool:
-    """Validate ISBN format."""
-    # Remove any hyphens or spaces
-    cleaned = isbn.replace("-", "").replace(" ", "")
-
-    # Check if it's a valid ISBN-10 or ISBN-13
-    if len(cleaned) == 10:
-        return cleaned.isdigit() or (
-            cleaned[:-1].isdigit() and cleaned[-1] in "0123456789X"
-        )
-    elif len(cleaned) == 13:
-        return cleaned.isdigit()
-
-    return False
-
-
 SCHEMA = {
     "required_fields": ["draft", "slug", "title", "type", "params"],
     "field_types": {

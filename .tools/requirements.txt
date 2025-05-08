@@ -1,7 +1,0 @@
-ruamel.yaml>=0.17.0
-flake8
-flake8-bugbear
-pytest
-pytest-cov
-click
-tomli-w

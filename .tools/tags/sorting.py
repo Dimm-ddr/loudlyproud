@@ -26,7 +26,7 @@ def sort_dict_by_keys(d: dict) -> dict:
 def sort_dict_values_by_keys(d: dict) -> dict:
     """Sort dictionary values that are dictionaries by their keys."""
     sorted_dict = {}
-    for section in sort_strings(d.keys()):
+    for section in sort_strings(list(d.keys())):
         if isinstance(d[section], dict):
             sorted_dict[section] = sort_dict_by_keys(d[section])
         else:
