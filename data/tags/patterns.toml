@@ -33,13 +33,14 @@ replace = ""
 pattern = " in$"
 replace = ""
 
-[[split.separators]]
-pattern = "^fiction "
-replace = ""
+# Handle compound tags with 'fiction' using compounds
+[[compounds]]
+pattern = "^fiction (.+)$"
+map_to = [ "fiction", "{}" ]
 
-[[split.separators]]
-pattern = " fiction$"
-replace = ""
+[[compounds]]
+pattern = "^(.+) fiction$"
+map_to = [ "fiction", "{}" ]
 
 [[compounds]]
 pattern = "^young adult fiction (.+)"

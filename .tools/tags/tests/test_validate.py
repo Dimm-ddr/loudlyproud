@@ -53,7 +53,7 @@ def test_colors() -> dict:
 def test_patterns() -> dict:
     """Return test patterns data."""
     return {
-        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "remove": {"prefixes": ["nyt:"]},
         "compounds": {
             "values": [
                 {

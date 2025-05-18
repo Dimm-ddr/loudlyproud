@@ -17,10 +17,8 @@ def test_config() -> dict:
     """Return test configuration."""
     return {
         "mapping": {
-            "fiction": None,
-            "general": None,
+            "fiction": "fiction",
             "science fiction": "science fiction",
-            "nyt:bestseller": None,
             "test tag": "test tag",
             "american-short-stories": ["american", "short-stories"],
             "detective-and-mystery-stories": ["detective", "mystery"],
@@ -28,7 +26,7 @@ def test_config() -> dict:
             "contemporary-romance": ["contemporary", "romance"],
         },
         "patterns": {
-            "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+            "remove": {"prefixes": ["nyt:"]},
             "split": {
                 "separators": [
                     {"pattern": "--", "keep_parts": True},
@@ -43,10 +41,12 @@ def test_config() -> dict:
                     },
                     {"pattern": r"^fiction lgbtqia\+ (.+)$", "map_to": ["LGBTQIA+", "{}"]},
                     {"pattern": r"^(.+) & (.+)$", "map_to": ["{0}", "{1}"]},
+                    {"pattern": r"^fiction (.+)$", "map_to": ["fiction", "{}"]},
+                    {"pattern": r"^(.+) fiction$", "map_to": ["fiction", "{}"]},
                 ]
             },
         },
-        "to_remove": ["fiction", "general"],
+        "to_remove": ["general"],
     }
 
 
@@ -84,7 +84,7 @@ def normalizer(tmp_path: Path, test_config: dict, real_to_remove_file: Path) -> 
 @pytest.mark.parametrize(
     "input_tags,expected",
     [
-        (["fiction"], []),  # Should be removed
+        (["fiction"], ["fiction"]),  # Should be kept as a standalone tag
         (["general"], []),  # Should be removed
         (["nyt:bestseller"], []),  # Should be removed by prefix
         (["science fiction"], ["science fiction"]),  # Should be kept as is
@@ -94,7 +94,7 @@ def normalizer(tmp_path: Path, test_config: dict, real_to_remove_file: Path) -> 
             ["young adult (YA)", "romance"],
         ),  # Should be transformed
         (["fiction lgbtqia+ gay"], ["LGBTQIA+", "gay"]),  # Should be transformed
-        (["science & fiction"], ["science"]),  # Should be split and remove "fiction"
+        (["science & fiction"], ["science", "fiction"]),  # Should be split and keep both
         (
             ["american-short-stories"],
             ["american", "short-stories"],

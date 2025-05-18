@@ -44,19 +44,10 @@ def get_removable_mapping_keys(
             continue
 
         # Check prefixes
-        matched = False
         for prefix in patterns.get("remove", {}).get("prefixes", []):
             if key_lower.startswith(prefix.lower()):
                 removable["prefixes"].append(key)
-                matched = True
                 break
-
-        if not matched:
-            # Check exact matches
-            for exact in patterns.get("remove", {}).get("exact", []):
-                if key_lower == exact.lower():
-                    removable["exact matches"].append(key)
-                    break
 
     # Sort lists within each category
     return {k: sorted(v) for k, v in removable.items()}

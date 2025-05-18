@@ -46,7 +46,7 @@ def test_files(mock_data_dir: Path) -> tuple[Path, Path, Path]:
     patterns = {
         "split": {"separators": []},
         "compounds": {"values": []},
-        "remove": {"prefixes": [], "exact": []},
+        "remove": {"prefixes": []},
         "normalizations": {
             "ya": "young-adult",
             "lgbtqia+": "lgbtqia-plus",

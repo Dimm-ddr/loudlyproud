@@ -8,7 +8,7 @@ from .common import TagStats, MAPPING_FILE, PATTERNS_FILE, TO_REMOVE_FILE
 from .file_ops import load_patterns, load_tags_map, load_removable_tags
 
 # Type aliases
-TagValue: TypeAlias = str | list[str] | None
+TagValue: TypeAlias = str | list[str]
 
 
 class TagNormalizer:
@@ -41,11 +41,10 @@ class TagNormalizer:
         # Build set of valid tags from mapping values
         self.valid_tags: set[str] = set()
         for value in self.mapping.values():
-            if value is not None:
-                if isinstance(value, str):
-                    self.valid_tags.add(value.lower())
-                elif isinstance(value, list):
-                    self.valid_tags.update(tag.lower() for tag in value)
+            if isinstance(value, str):
+                self.valid_tags.add(value.lower())
+            elif isinstance(value, list):
+                self.valid_tags.update(tag.lower() for tag in value)
 
         # Initialize stats
         self.stats = TagStats()
@@ -160,50 +159,41 @@ class TagNormalizer:
                 tag = tag.replace(old.lower(), new)
         return tag
 
-    def apply_mapping(self, tag: str) -> TagValue:
+    def apply_mapping(self, tag: str) -> TagValue | None:
         """Apply mapping rules to a tag, returning the mapped value or None."""
         tag_lower = tag.lower()
         if tag_lower in self.mapping_lower:
             proper_key = self.mapping_lower[tag_lower]
-            mapped = self.mapping[proper_key]
-            if mapped is not None:
-                return mapped
+            return self.mapping[proper_key]
         return None
 
-    def process_tag_part(self, part: str) -> list[str] | None:
-        """
-        Process a single part of a split tag through the normalization pipeline.
+    def _check_direct_mapping(self, tag: str) -> list[str] | None:
+        """Check if tag has a direct mapping in the mapping dictionary."""
+        tag_lower = tag.lower()
+        if tag_lower in self.mapping_lower:
+            proper_key = self.mapping_lower[tag_lower]
+            mapped = self.mapping[proper_key]
+            return [mapped] if isinstance(mapped, str) else mapped
+        return None
+
+    def _process_tag_part(self, part: str) -> set[str]:
+        """Process a single tag part through the normalization pipeline."""
+        normalized: set[str] = set()
         
-        Steps:
-        1. Convert to lowercase for consistent comparisons
-        2. Check if tag should be removed based on:
-           - Exact matches in removable tags
-           - Prefix matches in removal patterns
-        3. Apply word replacements for common variations:
-           - Plural to singular forms
-           - Regional spelling variations
-        4. Apply compound rules to handle:
-           - Special tag combinations
-           - Tag transformations
-           - Multi-part tag mappings
-        5. Process each resulting compound part:
-           - Apply mapping rules
-           - Track unknown tags
-           - Preserve original case for unmapped tags
+        # First check if this tag has a direct mapping
+        tag_lower = part.lower()
+        if tag_lower in self.mapping_lower:
+            proper_key = self.mapping_lower[tag_lower]
+            mapped = self.mapping[proper_key]
+            if isinstance(mapped, list):
+                normalized.update(mapped)
+            else:
+                normalized.add(mapped)
+            return normalized
 
-        Args:
-            part: A single tag part to process
-
-        Returns:
-            - None if the part should be removed
-            - A list of normalized tags resulting from this part
-        """
-        # Convert to lowercase for comparisons
-        part_lower = part.lower()
-
-        # Check if should be removed
-        if self.should_remove(part_lower):
-            return None
+        # If no direct mapping, proceed with normalization pipeline
+        if self.should_remove(tag_lower):
+            return normalized
 
         # Apply word replacements
         part = self.apply_word_replacements(part)
@@ -211,115 +201,62 @@ class TagNormalizer:
         # Apply compound rules
         result = self.apply_compound_rules(part)
         if result is None:
-            return None
+            return normalized
 
         # Convert result to list
         compound_parts = result if isinstance(result, list) else [result]
 
         # Process each compound part
-        mapped_tags = []
         for compound_part in compound_parts:
             # Try to map the tag
             mapped = self.apply_mapping(compound_part)
             if mapped is not None:
                 if isinstance(mapped, list):
-                    mapped_tags.extend(mapped)
+                    normalized.update(mapped)
                 else:
-                    mapped_tags.append(mapped)
+                    normalized.add(mapped)
             else:
                 # Track unknown tags
                 self.stats.unknown_tags.add(compound_part.lower())
-                mapped_tags.append(compound_part)
+                normalized.add(compound_part)
 
-        return mapped_tags if mapped_tags else None
+        return normalized
 
-    def normalize(self, tag: str) -> TagValue:
+    def normalize(self, tag: str) -> list[str] | None:
         """
         Normalize a single tag through the following steps:
-        0. Check if the full tag has a direct mapping
-        1. Clean and transform the tag:
-           - Trim whitespace
-           - Remove trailing dots
-           - Apply cleanup patterns
-        2. Split the tag if it matches any splitting patterns:
-           - Check for separators like "/", "--", etc.
-           - Split into parts while preserving meaningful components
-        3. Process each part:
-           a. Convert to lowercase for comparisons
-           b. Check if tag should be removed (based on removable tags and patterns)
-           c. Apply word replacements (e.g., plurals to singular)
-           d. Apply compound rules (e.g., "young adult fiction" -> ["young adult", "fiction"])
-           e. Apply mapping to get canonical forms
-        4. Combine results:
-           - Collect all valid normalized tags
-           - Return as list if multiple tags, single tag otherwise
-           - Return None if no valid tags remain
+        1. Clean and transform the tag
+        2. Split the tag if it matches splitting patterns
+        3. Process each part through the normalization pipeline
+        4. Return list of normalized tags or None if no valid tags remain
 
         Args:
             tag: The tag string to normalize
 
         Returns:
             - None if the tag should be removed
-            - A single string if one normalized tag results
-            - A list of strings if multiple normalized tags result
+            - A list of normalized tags (empty list if no valid tags)
         """
-        # Check for direct mapping first
-        tag_lower = tag.lower()
-        if tag_lower in self.mapping_lower:
-            proper_key = self.mapping_lower[tag_lower]
-            mapped = self.mapping[proper_key]
-            if mapped is not None:
-                return mapped
-            return None
-
-        # Clean the tag
+        # Clean the tag first
         tag = self.clean_tag(tag)
-
-        # Check if the full tag should be removed
-        if self.should_remove(tag_lower):
-            return None
 
         # Split the tag
         result = self.split_tag(tag)
         parts = result if isinstance(result, list) else [result]
 
         # Process each part
-        all_tags = []
+        normalized: set[str] = set()
         for part in parts:
-            # Check if part should be removed before processing
-            if self.should_remove(part.lower()):
-                continue
-                
-            processed = self.process_tag_part(part)
-            if processed:
-                all_tags.extend(processed)
+            normalized.update(self._process_tag_part(part))
 
-        # Return results
-        if not all_tags:
-            return None
-        return all_tags if len(all_tags) > 1 else all_tags[0]
+        return list(normalized) if normalized else None
 
     def normalize_tags(self, tags: Sequence[str | None]) -> list[str]:
         """
-        Normalize a list of tags:
-        1. Apply normalization to each tag
-        2. Flatten the results
-        3. Remove duplicates (case-sensitive since mapping was already applied)
+        Normalize a list of tags by applying normalization to each tag and removing duplicates.
+        Returns a list of unique normalized tags.
         """
-        normalized: set[str] = set()
-
-        for tag in tags:
-            if tag is None:
-                continue
-            result = self.normalize(tag)
-            if result is None:
-                continue
-                
-            # Handle both single tags and lists of tags
-            results = [result] if isinstance(result, str) else result
-            normalized.update(r for r in results if r is not None)
-
-        return list(normalized)  # Convert set to list for return
+        return list({tag for t in tags if t is not None and (result := self.normalize(t)) is not None for tag in result})
 
     def to_dict(self) -> dict:
         """Convert stats to dictionary for JSON output."""

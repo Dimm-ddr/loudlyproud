@@ -37,7 +37,6 @@
     "african continental ancestry group": "African American",
     "alien cultures": "alien cultures",
     "american": "American",
-    "american fiction": "American",
     "american literature": "American",
     "american short stories": [
         "american",
@@ -75,7 +74,6 @@
     "attitude": "attitude",
     "audiobook": "audiobook",
     "authors": "authors",
-    "authors fiction": "authors",
     "authorship": "authors",
     "autobiography": "autobiography",
     "autobiographical": "autobiography",
@@ -124,7 +122,7 @@
     "boys": "boys",
     "boys love": "boys love (BL)",
     "boys love (bl)": "boys love (BL)",
-    "british and irish fiction": [
+    "british and irish": [
         "English literature",
         "Irish literature"
     ],
@@ -229,15 +227,13 @@
     "divorce": "divorce",
     "domestic fiction": "domestic fiction",
     "dominican american": "Hispanic American",
-    "dominican american fiction": "Hispanic American",
     "dragons": "dragons",
     "dysfunctional families": "dysfunctional families",
     "dystopia": "dystopia",
     "england": "England",
-    "england fiction": "England",
     "english": "English",
     "english drama": "English literature",
-    "english fantasy fiction": "fantasy",
+    "english fantasy": "fantasy",
     "english literature": "English literature",
     "epic fantasy": "epic fantasy",
     "epistolary": "epistolary",
@@ -269,7 +265,6 @@
         "family"
     ],
     "fantasy": "fantasy",
-    "fantasy fiction": "fantasy",
     "fantasy historical": "historical fantasy",
     "father and child": "parent-child relationship",
     "father-child relationship": "parent-child relationship",
@@ -278,39 +273,30 @@
     "fathers": "fathers",
     "fathers and daughters": "father-daughter relationship",
     "fathers and sons": "father-son relationship",
-    "female assassins": null,
     "female homosexuality": "lesbian",
     "female impersonators": "gender identity",
     "feminism": "feminism",
     "femmes": "women",
-    "fiction christian short stories": [
+    "fiction": "fiction",
+    "ficción": "fiction",
+    "christian short stories": [
         "christian",
         "short stories"
     ],
-    "fiction espionage": "spy stories",
-    "fiction fantasy epic": "epic fantasy",
-    "fiction fantasy general": "fantasy",
-    "fiction gay": "gay",
-    "fiction humorous": "humor",
-    "fiction humorous general": "humor",
-    "fiction lesbian": "lesbian",
-    "fiction lgbtqia+ gay": "gay",
-    "fiction lgbtqia+ lesbian": "lesbian",
-    "fiction psychological": "psychological fiction",
-    "fiction religious": "religious fiction",
-    "fiction romance contemporary": [
-        "contemporary",
-        "romance"
-    ],
-    "fiction romance general": "romance",
-    "fiction science fiction space opera": [
+    "espionage": "spy stories",
+    "fantasy epic": "epic fantasy",
+    "fantasy general": "fantasy",
+    "humorous general": "humor",
+    "lgbtqia+ gay": "gay",
+    "lgbtqia+ lesbian": "lesbian",
+    "religious": "religious fiction",
+    "romance general": "romance",
+    "science fiction space opera": [
         "science fiction",
         "space opera"
     ],
-    "fiction short stories (single author)": "short stories",
-    "fiction suspense": "suspense",
-    "fiction thrillers espionage": "spy stories",
-    "fiction thrillers general": "thriller",
+    "thrillers espionage": "spy stories",
+    "thrillers general": "thriller",
     "fictional works publication type": "literary",
     "finnish literature": "Finnish literature",
     "finnish-literature": "Finnish literature",
@@ -318,11 +304,9 @@
     "flora": "nature",
     "forgiveness": "personal growth",
     "france": "France",
-    "france fiction": "France",
     "frau": "women",
     "french": "French",
     "friendship": "friendship",
-    "friendship fiction": "friendship",
     "friendship in youth": "friendship",
     "garçons adolescents": [
         "boys",
@@ -338,7 +322,6 @@
         "gay",
         "biography"
     ],
-    "gay men fiction": "gay",
     "gay men's writings russian": "gay's writings",
     "gay teachers": [
         "gay",
@@ -365,7 +348,6 @@
     "glasgow": "Scotland",
     "good and evil": "good and evil",
     "gothic": "gothic",
-    "gothic fiction": "gothic",
     "graduate students": [
         "college students",
         "school"
@@ -377,7 +359,6 @@
     "great britain": "United Kingdom",
     "great britain in": "United Kingdom",
     "greece": "Greece",
-    "greece fiction": "Greece",
     "greek": "Greek",
     "greek deity": "Greek mythology",
     "greek mythology": "Greek mythology",
@@ -426,7 +407,6 @@
     "irish literature": "Irish literature",
     "isolation": "isolation",
     "italy": "Italy",
-    "italy fiction": "Italy",
     "jamaica": "Jamaica",
     "jamaican": "Jamaican",
     "japan": "Japan",
@@ -515,7 +495,6 @@
     "literatura norte-americana": "American",
     "london": "London",
     "london (england)": "London",
-    "london (england) fiction": "London",
     "loneliness": "isolation",
     "long now manual for civilization": "nonfiction",
     "los angeles": "Los Angeles",
@@ -544,7 +523,6 @@
     "manhattan": "New York",
     "marriage": "marriage",
     "married people": "marriage",
-    "married people fiction": "marriage",
     "married women": [
         "marriage",
         "women"
@@ -654,7 +632,6 @@
     "podróże dookoła świata": "travel",
     "poetry": "poetry",
     "poland": "Poland",
-    "poland fiction": "Poland",
     "police": "police",
     "political": "political intrigue",
     "political intrigue": "political intrigue",
@@ -697,7 +674,6 @@
         "romance",
         "fantasy"
     ],
-    "romance fiction": "romance",
     "romance historical": [
         "romance",
         "historical"
@@ -719,7 +695,7 @@
     "romans en novellen ; vertaald": "translations",
     "rus": "Russia",
     "russia": "Russia",
-    "russian fiction": "Russian literature",
+    "russian": "Russian literature",
     "russian literature": "Russian literature",
     "sagas": "sagas",
     "same-sex marriage": [
@@ -751,7 +727,6 @@
     ],
     "science fiction general": "science fiction",
     "scotland": "Scotland",
-    "scotland fiction": "Scotland",
     "secrecy": [
         "mystery",
         "suspense"
@@ -959,21 +934,6 @@
         "young adult (YA)",
         "fantasy"
     ],
-    "young adult fiction": "young adult (YA)",
-    "young adult fiction / comics & graphic novels / general": [
-        "young adult (YA)",
-        "graphic novels & comics"
-    ],
-    "young adult fiction / comics & graphic novels / lgbt": [
-        "young adult (YA)",
-        "graphic novels & comics",
-        "LGBTQIA+"
-    ],
-    "young adult fiction / comics & graphic novels / romance": [
-        "young adult (YA)",
-        "graphic novels & comics",
-        "romance"
-    ],
     "young adult fiction action & adventure survival stories": [
         "young adult (YA)",
         "adventure",
@@ -995,10 +955,6 @@
         "young adult (YA)",
         "paranormal",
         "supernatural"
-    ],
-    "young adult fiction school & education boarding school & prep school": [
-        "young adult (YA)",
-        "boarding school"
     ],
     "young adult fiction science fiction general": [
         "young adult (YA)",

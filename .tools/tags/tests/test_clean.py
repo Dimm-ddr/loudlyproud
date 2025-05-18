@@ -61,17 +61,16 @@ def test_get_removable_mapping_keys(tmp_path: Path):
 
     # Create test mapping file
     mapping = {
-        "fiction": None,
-        "general": None,
+        "fiction": "fiction",
         "science fiction": "science fiction",
-        "nyt:bestseller": None,
         "test tag": "test tag",
+        "nyt:bestseller": "bestseller"
     }
     mapping_file = data_dir / "test_mapping.json"
     write_mapping_file(mapping_file, mapping)
 
     # Create test patterns file
-    patterns = {"remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]}}
+    patterns = {"remove": {"prefixes": ["nyt:"]}}
     patterns_file = data_dir / "test_patterns.toml"
     write_patterns_file(patterns_file, patterns)
 
@@ -80,12 +79,10 @@ def test_get_removable_mapping_keys(tmp_path: Path):
 
     # Verify results
     assert "prefixes" in result
-    assert "exact matches" in result
     assert "nyt:bestseller" in result["prefixes"]
-    assert "fiction" in result["exact matches"]
-    assert "general" in result["exact matches"]
-    assert "science fiction" not in result["exact matches"]
-    assert "test tag" not in result["exact matches"]
+    assert "fiction" not in result["prefixes"]
+    assert "science fiction" not in result["prefixes"]
+    assert "test tag" not in result["prefixes"]
 
 
 def test_get_removable_mapping_keys_empty_files(tmp_path: Path):
@@ -100,7 +97,7 @@ def test_get_removable_mapping_keys_empty_files(tmp_path: Path):
     assert not result  # Should return empty dict
 
     # Empty patterns file
-    mapping = {"test": None}
+    mapping = {"test": "test"}
     write_mapping_file(mapping_file, mapping)
     write_patterns_file(patterns_file, {})
 
@@ -163,21 +160,25 @@ def test_config(tmp_path: Path) -> dict:
     """Return test configuration."""
     config = {
         "mapping": {
-            "fiction": None,
-            "general": None,
+            "fiction": "fiction",
             "science fiction": "science fiction",
-            "nyt:bestseller": None,
             "test tag": "test tag",
         },
         "patterns": {
             "remove": {"prefixes": ["nyt:"]},
             "split": {"separators": []},
-            "compounds": [],
+            "compounds": {
+                "values": [
+                    {
+                        "pattern": r"^young adult fiction (.+)$",
+                        "map_to": ["young adult (YA)", "{}"],
+                    },
+                    {"pattern": r"^fiction (.+)$", "map_to": ["fiction", "{}"]},
+                    {"pattern": r"^(.+) fiction$", "map_to": ["fiction", "{}"]},
+                ]
+            },
         },
-        "to_remove": [
-            "fiction",
-            "general",
-        ],
+        "to_remove": ["general"],
     }
 
     # Write to_remove.toml file
@@ -210,17 +211,15 @@ def test_clean_frontmatter(tmp_path: Path, test_book_frontmatter: dict):
 
     # Create test mapping file
     mapping = {
-        "fiction": None,
-        "general": None,
+        "fiction": "fiction",
         "science fiction": "science fiction",
-        "nyt:bestseller": None,
         "test tag": "test tag",
     }
     write_mapping_file(mapping_file, mapping)
 
     # Create test patterns file
     patterns = {
-        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "remove": {"prefixes": ["nyt:"]},
         "compounds": {
             "values": [
                 {
@@ -231,7 +230,7 @@ def test_clean_frontmatter(tmp_path: Path, test_book_frontmatter: dict):
         },
     }
     write_patterns_file(patterns_file, patterns)
-    write_removable_tags(to_remove_file, [])
+    write_removable_tags(to_remove_file, ["general"])
 
     # Create normalizer with test configuration
     normalizer = TagNormalizer(
@@ -262,7 +261,7 @@ def test_clean_frontmatter(tmp_path: Path, test_book_frontmatter: dict):
         frontmatter, _ = result
         tags = frontmatter["params"]["tags"]
 
-        assert "fiction" not in tags
+        assert "fiction" in tags  # Should be kept
         assert "general" not in tags
         assert "nyt:bestseller" not in tags
         assert "science fiction" in tags
@@ -287,17 +286,15 @@ def test_process_book_file(tmp_path: Path, test_book_frontmatter: dict):
 
     # Create test mapping file
     mapping = {
-        "fiction": None,
-        "general": None,
+        "fiction": "fiction",
         "science fiction": "science fiction",
-        "nyt:bestseller": None,
         "test tag": "test tag",
     }
     write_mapping_file(mapping_file, mapping)
 
     # Create test patterns file
     patterns = {
-        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+        "remove": {"prefixes": ["nyt:"]},
         "compounds": {
             "values": [
                 {
@@ -308,7 +305,7 @@ def test_process_book_file(tmp_path: Path, test_book_frontmatter: dict):
         },
     }
     write_patterns_file(patterns_file, patterns)
-    write_removable_tags(to_remove_file, [])
+    write_removable_tags(to_remove_file, ["general"])
 
     # Create normalizer with test configuration
     normalizer = TagNormalizer(
@@ -339,7 +336,7 @@ def test_process_book_file(tmp_path: Path, test_book_frontmatter: dict):
         frontmatter, _ = result
         tags = frontmatter["params"]["tags"]
 
-        assert "fiction" not in tags
+        assert "fiction" in tags  # Should be kept
         assert "general" not in tags
         assert "nyt:bestseller" not in tags
         assert "science fiction" in tags
