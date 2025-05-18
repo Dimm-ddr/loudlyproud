@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import pytest
+import shutil
 from pathlib import Path
 from ..normalize import TagNormalizer
 from ..file_ops import (
@@ -8,52 +9,58 @@ from ..file_ops import (
     write_patterns_file,
     write_removable_tags,
 )
+from ..common import TO_REMOVE_FILE
 
 
 @pytest.fixture
-def test_mapping() -> dict:
-    """Return test mapping data."""
+def test_config() -> dict:
+    """Return test configuration."""
     return {
-        "fiction": None,
-        "general": None,
-        "science fiction": "science fiction",
-        "nyt:bestseller": None,
-        "test tag": "test tag",
-        "american-short-stories": ["american", "short-stories"],
-        "detective-and-mystery-stories": ["detective", "mystery"],
-        "venice-italy": "venice",
-        "contemporary-romance": ["contemporary", "romance"],
+        "mapping": {
+            "fiction": None,
+            "general": None,
+            "science fiction": "science fiction",
+            "nyt:bestseller": None,
+            "test tag": "test tag",
+            "american-short-stories": ["american", "short-stories"],
+            "detective-and-mystery-stories": ["detective", "mystery"],
+            "venice-italy": "venice",
+            "contemporary-romance": ["contemporary", "romance"],
+        },
+        "patterns": {
+            "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
+            "split": {
+                "separators": [
+                    {"pattern": "--", "keep_parts": True},
+                    {"pattern": r"\(([^)]+)\)", "extract_groups": True},
+                ]
+            },
+            "compounds": {
+                "values": [
+                    {
+                        "pattern": r"^young adult fiction (.+)$",
+                        "map_to": ["young adult (YA)", "{}"],
+                    },
+                    {"pattern": r"^fiction lgbtqia\+ (.+)$", "map_to": ["LGBTQIA+", "{}"]},
+                    {"pattern": r"^(.+) & (.+)$", "map_to": ["{0}", "{1}"]},
+                ]
+            },
+        },
+        "to_remove": ["fiction", "general"],
     }
 
 
 @pytest.fixture
-def test_patterns() -> dict:
-    """Return test patterns data."""
-    return {
-        "remove": {"prefixes": ["nyt:"], "exact": ["fiction", "general"]},
-        "split": {
-            "separators": [
-                {"pattern": "--", "keep_parts": True},
-                {"pattern": r"\(([^)]+)\)", "extract_groups": True},
-            ]
-        },
-        "compounds": {
-            "values": [
-                {
-                    "pattern": r"^young adult fiction (.+)$",
-                    "map_to": ["young adult (YA)", "{}"],
-                },
-                {"pattern": r"^fiction lgbtqia\+ (.+)$", "map_to": ["LGBTQIA+", "{}"]},
-                {"pattern": r"^(.+) & (.+)$", "map_to": ["{0}", "{1}"]},
-            ]
-        },
-    }
+def real_to_remove_file(tmp_path: Path) -> Path:
+    """Copy the real to_remove.toml file to the test's temporary directory."""
+    test_to_remove_file = tmp_path / "data" / "tags" / "to_remove.toml"
+    test_to_remove_file.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(TO_REMOVE_FILE, test_to_remove_file)
+    return test_to_remove_file
 
 
 @pytest.fixture
-def normalizer(
-    tmp_path: Path, test_mapping: dict, test_patterns: dict
-) -> TagNormalizer:
+def normalizer(tmp_path: Path, test_config: dict, real_to_remove_file: Path) -> TagNormalizer:
     """Create normalizer with test configuration."""
     data_dir = tmp_path / "data" / "tags"
     data_dir.mkdir(parents=True, exist_ok=True)
@@ -62,9 +69,9 @@ def normalizer(
     patterns_file = data_dir / "patterns.toml"
     to_remove_file = data_dir / "to_remove.toml"
 
-    write_mapping_file(mapping_file, test_mapping)
-    write_patterns_file(patterns_file, test_patterns)
-    write_removable_tags(to_remove_file, [])
+    write_mapping_file(mapping_file, test_config["mapping"])
+    write_patterns_file(patterns_file, test_config["patterns"])
+    write_removable_tags(to_remove_file, test_config["to_remove"])
 
     return TagNormalizer(
         project_root=tmp_path,
@@ -87,7 +94,7 @@ def normalizer(
             ["young adult (YA)", "romance"],
         ),  # Should be transformed
         (["fiction lgbtqia+ gay"], ["LGBTQIA+", "gay"]),  # Should be transformed
-        (["science & fiction"], ["science"]),  # Should be split
+        (["science & fiction"], ["science"]),  # Should be split and remove "fiction"
         (
             ["american-short-stories"],
             ["american", "short-stories"],

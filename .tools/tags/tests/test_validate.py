@@ -2,7 +2,7 @@
 
 import pytest
 from pathlib import Path
-from tags.validate import validate_tags, ValidationReport
+from tags.validate import validate_tags
 from tags.file_ops import (
     write_mapping_file,
     write_colors_file,

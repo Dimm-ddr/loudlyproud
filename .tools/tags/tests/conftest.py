@@ -1,7 +1,6 @@
 from typing import Any, NamedTuple
 import pytest
 from pathlib import Path
-import shutil
 from ..common import DATA_DIR, CONTENT_DIR
 from ..file_ops import write_frontmatter
 

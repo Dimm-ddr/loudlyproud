@@ -275,6 +275,10 @@ class TagNormalizer:
         # Clean the tag
         tag = self.clean_tag(tag)
 
+        # Check if the full tag should be removed
+        if self.should_remove(tag_lower):
+            return None
+
         # Split the tag
         result = self.split_tag(tag)
         parts = result if isinstance(result, list) else [result]
@@ -282,6 +286,10 @@ class TagNormalizer:
         # Process each part
         all_tags = []
         for part in parts:
+            # Check if part should be removed before processing
+            if self.should_remove(part.lower()):
+                continue
+                
             processed = self.process_tag_part(part)
             if processed:
                 all_tags.extend(processed)
@@ -298,8 +306,7 @@ class TagNormalizer:
         2. Flatten the results
         3. Remove duplicates (case-sensitive since mapping was already applied)
         """
-        normalized = []
-        seen = set()
+        normalized: set[str] = set()
 
         for tag in tags:
             if tag is None:
@@ -307,19 +314,12 @@ class TagNormalizer:
             result = self.normalize(tag)
             if result is None:
                 continue
-            if isinstance(result, list):
-                for r in result:
-                    if r is not None and r.lower() not in seen:
-                        normalized.append(r)
-                        seen.add(r.lower())
-                        self.stats.normalized_tags[r] += 1
-            else:
-                if result.lower() not in seen:
-                    normalized.append(result)
-                    seen.add(result.lower())
-                    self.stats.normalized_tags[result] += 1
+                
+            # Handle both single tags and lists of tags
+            results = [result] if isinstance(result, str) else result
+            normalized.update(r for r in results if r is not None)
 
-        return normalized  # Always return a list, even if empty
+        return list(normalized)  # Convert set to list for return
 
     def to_dict(self) -> dict:
         """Convert stats to dictionary for JSON output."""

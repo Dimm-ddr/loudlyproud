@@ -19,10 +19,8 @@ from ..file_ops import (
 from ..common import (
     MAPPING_FILE,
     PATTERNS_FILE,
-    COLORS_FILE,
     TO_REMOVE_FILE,
     DATA_DIR,
-    CONTENT_DIR,
 )
 import pytest
 

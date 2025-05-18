@@ -2,19 +2,12 @@
 
 import pytest
 from pathlib import Path
-from ..registry import (
-    get_display_name,
-    get_tag_color,
-    generate_registry,
-)
 from ..validate import validate_mapping_against_colors
 from ..transform import get_internal_name
 from ..file_ops import (
     write_mapping_file,
     write_colors_file,
     write_patterns_file,
-    load_patterns,
-    load_colors_file,
 )
 
 
@@ -75,9 +68,6 @@ def test_files(mock_data_dir: Path) -> tuple[Path, Path, Path]:
 
 def test_compare_tag_sets(test_files: tuple[Path, Path, Path]):
     """Test comparing tag sets with normalization."""
-    # Test data
-    mapping_tags = {"science fiction", "ya", "lgbtqia+"}
-    colors_tags = {"Science Fiction", "Young Adult", "LGBTQIA+"}
 
     # Compare sets
     missing_in_colors, missing_in_mapping = validate_mapping_against_colors(

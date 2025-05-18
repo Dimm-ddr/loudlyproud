@@ -10,6 +10,7 @@ from tags.file_ops import (
     write_patterns_file,
     write_removable_tags,
     write_frontmatter,
+    TagsReport,
 )
 
 
@@ -84,7 +85,7 @@ def test_update_tags_report() -> None:
         "file1.md": ["tag1", "tag2"],
         "file2.md": ["tag2", "tag3"],
     }
-    report = {
+    report: TagsReport = {
         "unprocessed_tags": {},
         "processed_tags": {},
     }
