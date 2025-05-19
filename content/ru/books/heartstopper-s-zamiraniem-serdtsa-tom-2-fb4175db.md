@@ -1,35 +1,32 @@
 ---
 draft: false
-slug: heartstopper-s-zamiraniem-serdtsa-tom-2-fb4175db
 title: Heartstopper. С Замиранием Сердца. Том 2
+slug: heartstopper-s-zamiraniem-serdtsa-tom-2-fb4175db
 type: books
 params:
+  book_title: Heartstopper. С Замиранием Сердца. Том 2
+  editions count: "7"
+  book_description: "Ник и Чарли — лучшие друзья. После того, что случилось на
+    вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга
+    навсегда.Однако Ника ждет много открытий: не только о его друзьях и родных…
+    но и о себе."
   authors:
     - Alice Oseman, Элис Осман
-  translators:
-    - Марина Давыдова
-  book_title: Heartstopper. С Замиранием Сердца. Том 2
-  book_description: 'Ник и Чарли — лучшие друзья. После того, что случилось на вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга навсегда.Однако Ника ждет много открытий: не только о его друзьях и родных… но и о себе.'
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1648591387i/60020842.jpg
-  editions count: '7'
-  isbn: '9785604653067'
-  languages:
-    - English
-    - Spanish
-    - Russian
-  goodreads_link: https://www.goodreads.com/book/show/60020842-heartstopper-2
-  page_count: '320'
-  publication_year: '2021'
+  short_book_description: "Ник и Чарли — лучшие друзья. После того, что случилось
+    на вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга
+    навсегда.Однако Ника ждет много открытий: не только о его друзьях..."
+  russian_translation_status: exists
+  russian_audioversion: false
+  publication_year: "2021"
+  isbn: "9785604653067"
   publishers:
     - Destino Infantil & Juvenil
     - Hachette Childrens Group
     - Hodder Childrens Books
     - Popcorn books
     - Scholastic Incorporated
-  russian_audioversion: false
-  russian_translation_status: exists
   series: Heartstopper
-  short_book_description: 'Ник и Чарли — лучшие друзья. После того, что случилось на вечеринке, Чарли боится, что Ник отвернется от него, и он потеряет друга навсегда.Однако Ника ждет много открытий: не только о его друзьях...'
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1648591387i/60020842.jpg
   tags:
     - LGBTQIA+
     - boys
@@ -45,5 +42,13 @@ params:
     - romance
     - teenagers
     - young adult (YA)
+    - fiction
+  translators:
+    - Марина Давыдова
+  goodreads_link: https://www.goodreads.com/book/show/60020842-heartstopper-2
+  languages:
+    - English
+    - Spanish
+    - Russian
+  page_count: "320"
 ---
-
