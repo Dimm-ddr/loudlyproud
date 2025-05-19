@@ -6,21 +6,13 @@ type: books
 params:
   book_title: История Одного Супружества
   editions count: "1"
-  book_description: We think we know the ones we love. So Pearlie Cook begins her
-    indirect, and devastating exploration of the mystery at the heart of every
-    relationship -- how we can ever truly know another person. It is 1953 and
-    Pearlie, a dutiful young housewife, finds herself living in the Sunset
-    District in San Francisco, caring not only for her husband's fragile health,
-    but also for her son, who is afflicted with polio. Then, one Saturday
-    morning, a stranger appears on her doorstep, and everything changes.
-    Lyrical, and surprising, The Story of a Marriage is, in the words of Khaled
-    Housseini, a book about love, and it is a marvel to watch Greer probe the
-    mysteries of love to such devastating effect.
+  book_description: >-
+    
+    «Мы думаем, что знаем тех, кого любим». С этих слов Перли Кук начинает непростой рассказ о тайнах своего супружества на фоне послевоенной Америки 50-х годов. Перли — молодая домохозяйка, жена бывшего военного со слабым сердцем и мама малыша, вскоре после рождения заболевшего полиомиелитом. Однажды на пороге ее дома появляется незнакомец, который переворачивает ее жизнь с ног на голову. Крепкий, казалось бы, брак Перли рушится у нее на глазах — она не способна поверить в то, что никогда до конца не знала собственного мужа. Сможет ли Перли смириться с неожиданным прошлым своего возлюбленного и будет ли готова бороться за его сердце и душу?
   authors:
     - Andrew Sean Greer, Эндрю Шон Грир
-  short_book_description: We think we know the ones we love. So Pearlie Cook
-    begins her indirect, and devastating exploration of the mystery at the heart
-    of every relationship...
+  short_book_description: «Мы думаем, что знаем тех, кого любим». С этих слов
+    Перли Кук начинает непростой рассказ о тайнах своего супружества...
   russian_translation_status: exists
   russian_audioversion: false
   publication_year: "2022"
