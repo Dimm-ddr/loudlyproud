@@ -46,7 +46,6 @@ params:
     - teenagers
     - translations
     - women
-    - fiction
   goodreads_link: https://www.goodreads.com/book/show/54766327-1
   languages:
     - English
