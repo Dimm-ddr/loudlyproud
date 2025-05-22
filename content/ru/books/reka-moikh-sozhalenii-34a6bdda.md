@@ -25,5 +25,7 @@ params:
   tags:
     - fiction
   goodreads_link: https://www.goodreads.com/book/show/52394893
+  languages:
+    - Russian
   page_count: "304"
 ---
