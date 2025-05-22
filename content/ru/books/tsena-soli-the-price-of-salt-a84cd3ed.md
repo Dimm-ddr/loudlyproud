@@ -52,6 +52,7 @@ params:
     - romance
     - fantasy
     - social commentary
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/53341254
   languages:
     - English
