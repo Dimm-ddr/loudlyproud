@@ -4,7 +4,7 @@ title: Casket Of Souls
 slug: casket-of-souls-79c47738
 type: books
 params:
-  book_title: Casket Of Souls
+  book_title: Ларец душ (Casket Of Souls)
   editions count: "1"
   book_description: "Алек и Серегил — больше, чем представители развращённой
     знати, которыми они хотят казаться — они служат своей королеве и стране. Но
