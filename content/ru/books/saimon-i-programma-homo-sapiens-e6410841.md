@@ -1,24 +1,26 @@
 ---
 draft: false
-slug: saimon-i-programma-homo-sapiens-e6410841
 title: Саймон И Программа Homo Sapiens
+slug: saimon-i-programma-homo-sapiens-e6410841
 type: books
 params:
+  book_title: Саймон И Программа Homo Sapiens
+  book_description: У Саймона есть большой секрет, который он доверил только Блю,
+    своему интернет-другу. Но однажды их переписку прочитал одноклассник Мартин.
+    Как оказалось, Мартину нравится подруга Саймона, и он решил, что шантаж —
+    отличный шанс с ней сблизиться. На что пойдет Саймон, чтобы сохранить свой
+    секрет?
   authors:
     - Becky Albertalli, Бекки Алберталли
-  book_title: Саймон И Программа Homo Sapiens
-  book_description: У Саймона есть большой секрет, который он доверил только Блю, своему интернет-другу. Но однажды их переписку прочитал одноклассник Мартин. Как оказалось, Мартину нравится подруга Саймона, и он решил, что шантаж — отличный шанс с ней сблизиться. На что пойдет Саймон, чтобы сохранить свой секрет?
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1530553734i/40694429.jpg
-  isbn: '9785990886162'
-  languages:
-    - Russian
-  goodreads_link: https://www.goodreads.com/book/show/40694429-homo-sapiens
-  page_count: '366'
-  publication_year: '2018'
-  russian_audioversion: false
+  short_book_description: У Саймона есть большой секрет, который он доверил только
+    Блю, своему интернет-другу. Но однажды их переписку прочитал одноклассник
+    Мартин.
   russian_translation_status: exists
+  russian_audioversion: false
+  publication_year: "2018"
+  isbn: "9785990886162"
   series: Creekwood
-  short_book_description: У Саймона есть большой секрет, который он доверил только Блю, своему интернет-другу. Но однажды их переписку прочитал одноклассник Мартин.
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1530553734i/40694429.jpg
   tags:
     - LGBTQIA+
     - contemporary
@@ -27,5 +29,9 @@ params:
     - realistic fiction
     - romance
     - young adult (YA)
+    - fiction
+  goodreads_link: https://www.goodreads.com/book/show/40694429-homo-sapiens
+  languages:
+    - Russian
+  page_count: "366"
 ---
-
