@@ -2,7 +2,6 @@
 name = "loudlyproud-tools"
 version = "0.1.0"
 description = "Development tools for LoudlyProud project"
-authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 packages = [{include = "tags"}, {include = "language"}, {include = "frontmatter"}]
 
@@ -19,8 +18,7 @@ pytest = "^7.0.0"
 pytest-cov = "^4.0.0"
 
 [tool.poetry.scripts]
-check-content = "check_content:main"
-fix-content = "fix_content:main"
+verify-content = "frontmatter.cli:main"
 tag-tools = "tag_tools:cli"
 language-tools = "language:cli"
 
