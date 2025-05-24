@@ -1,8 +1,8 @@
 from typing import Any, NamedTuple
 import pytest
 from pathlib import Path
-from ..common import DATA_DIR, CONTENT_DIR
-from ..file_ops import write_frontmatter
+from tags.common import DATA_DIR, CONTENT_DIR
+from tags.file_ops import write_frontmatter
 
 
 class TestAssertContext(NamedTuple):

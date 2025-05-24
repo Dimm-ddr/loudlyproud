@@ -2,9 +2,9 @@
 
 import pytest
 from pathlib import Path
-from ..validate import validate_mapping_against_colors
-from ..transform import get_internal_name
-from ..file_ops import (
+from tags.validate import validate_mapping_against_colors
+from tags.transform import get_internal_name
+from tags.file_ops import (
     write_mapping_file,
     write_colors_file,
     write_patterns_file,

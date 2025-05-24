@@ -16,10 +16,8 @@ from .common import (
 from .file_ops import (
     load_tags_map,
     load_colors_file,
-    load_patterns,
     load_special_display_names,
 )
-from .normalize import TagNormalizer
 from .transform import get_internal_name
 
 
@@ -119,7 +117,6 @@ def generate_registry() -> TagRegistry:
     # Load source files
     mapping_data = load_tags_map(MAPPING_FILE)
     colors_data = load_colors_file(COLORS_FILE)
-    patterns_data = load_patterns(PATTERNS_FILE)
     special_display_names = load_special_display_names(SPECIAL_DISPLAY_NAMES_FILE)
 
     # Create reverse mapping for special display names

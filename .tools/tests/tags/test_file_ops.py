@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-from ..file_ops import (
+from tags.file_ops import (
     load_patterns,
     write_frontmatter,
 )
