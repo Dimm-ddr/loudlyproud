@@ -163,7 +163,7 @@ def validate_tags(
 def write_report(report: ValidationReport, project_root: Path) -> None:
     """Write validation report to file and print summary."""
     # Print summary
-    print(f"\nValidation Summary:")
+    print("\nValidation Summary:")
     print(f"Tags not in mapping keys: {len(report['unmapped_tags'])}")
     print(f"Tags without colors (values and unmapped): {len(report['uncolored_tags'])}")
 

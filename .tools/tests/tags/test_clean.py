@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-from ..clean import (
+from tags.clean import (
     get_removable_mapping_keys,
     get_removable_color_tags,
     clean_frontmatter,
     process_book_file,
 )
-from ..normalize import TagNormalizer
-from ..file_ops import (
+from tags.normalize import TagNormalizer
+from tags.file_ops import (
     write_mapping_file,
     write_colors_file,
     write_patterns_file,
@@ -16,7 +16,7 @@ from ..file_ops import (
     split_frontmatter,
     write_frontmatter,
 )
-from ..common import (
+from tags.common import (
     MAPPING_FILE,
     PATTERNS_FILE,
     TO_REMOVE_FILE,

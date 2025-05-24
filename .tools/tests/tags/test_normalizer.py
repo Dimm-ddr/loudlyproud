@@ -3,13 +3,13 @@
 import pytest
 import shutil
 from pathlib import Path
-from ..normalize import TagNormalizer
-from ..file_ops import (
+from tags.normalize import TagNormalizer
+from tags.file_ops import (
     write_mapping_file,
     write_patterns_file,
     write_removable_tags,
 )
-from ..common import TO_REMOVE_FILE
+from tags.common import TO_REMOVE_FILE
 
 
 @pytest.fixture

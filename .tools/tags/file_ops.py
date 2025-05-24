@@ -40,14 +40,14 @@ def split_frontmatter(content: str) -> tuple[dict, str] | None:
                     yaml.preserve_quotes = True
                     data = yaml.load(frontmatter)
                     if not isinstance(data, dict):
-                        print(f"Warning: Frontmatter is not a dictionary")
+                        print("Warning: Frontmatter is not a dictionary")
                         return None
                     return data, rest[0]
                 except Exception as e:
                     print(f"Warning: Failed to parse YAML frontmatter: {str(e)}")
                     return None
             case _:
-                print(f"Warning: Could not find valid frontmatter delimiters")
+                print("Warning: Could not find valid frontmatter delimiters")
                 return None
     except Exception as e:
         print(f"Warning: Error processing frontmatter: {str(e)}")
