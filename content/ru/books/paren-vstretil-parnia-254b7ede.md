@@ -5,42 +5,38 @@ slug: paren-vstretil-parnia-254b7ede
 type: books
 params:
   book_title: Парень встретил парня
-  book_description: Пол — душа компании. У него много друзей, которые принимают
-    его таким, какой он есть. Однажды в книжном магазине Пол знакомится с Ноем,
-    который совсем недавно переехал в город. Вскоре они проводят все свободное
-    время вместе — пока Пол не совершает ошибку. А тут еще его лучшая подруга
-    Джони отдаляется и не отвечает на звонки, а друг Тони страдает из-за плохих
-    отношений с родителями. И кстати, подготовка к выпускному тоже идет не по
-    плану. Но Пол не готов сдаваться — и сделает все, что можно, ради своих
-    друзей.
   authors:
-    - David Levithan, Дэвид Левитан
-  short_book_description: Пол — душа компании. У него много друзей, которые
-    принимают его таким, какой он есть.
+  - David Levithan, Дэвид Левитан
   russian_translation_status: exists
   russian_audioversion: false
   publication_year: "2003"
   isbn: "9785604785997"
   publishers:
-    - Popcorn books
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323555i/62246585.jpg
+  - Popcorn books
+  cover: 
+    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662323555i/62246585.jpg
   tags:
-    - LGBTQIA+
-    - Lambda Literary Awards
-    - boys
-    - children's fiction
-    - contemporary
-    - friendship
-    - gay teenagers
-    - juvenile fiction
-    - queer
-    - romance
-    - teenagers
-    - young adult (YA)
-    - fiction
+  - LGBTQIA+
+  - Lambda Literary Awards
+  - boys
+  - children's fiction
+  - contemporary
+  - friendship
+  - gay teenagers
+  - juvenile fiction
+  - queer
+  - romance
+  - teenagers
+  - young adult (YA)
+  - fiction
   goodreads_link: https://www.goodreads.com/book/show/62246585
   languages:
-    - English
-    - Russian
+  - English
+  - Russian
   page_count: "205"
 ---
+Пол — душа компании. У него много друзей, которые принимают его таким, какой он есть.
+
+<!--more-->
+
+Пол — душа компании. У него много друзей, которые принимают его таким, какой он есть. Однажды в книжном магазине Пол знакомится с Ноем, который совсем недавно переехал в город. Вскоре они проводят все свободное время вместе — пока Пол не совершает ошибку. А тут еще его лучшая подруга Джони отдаляется и не отвечает на звонки, а друг Тони страдает из-за плохих отношений с родителями. И кстати, подготовка к выпускному тоже идет не по плану. Но Пол не готов сдаваться — и сделает все, что можно, ради своих друзей.
