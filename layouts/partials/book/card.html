@@ -28,11 +28,9 @@
             {{ end }}
         </div>
 
-        {{ with .Params.short_book_description }}
         <div class="prose prose-sm dark:prose-invert mb-4">
-            {{ . | markdownify }}
+            {{ .Summary }}
         </div>
-        {{ end }}
 
         <div class="mt-auto space-y-2">
             {{ with .Params.tags }}
