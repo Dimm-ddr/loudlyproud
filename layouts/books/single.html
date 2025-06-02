@@ -108,10 +108,19 @@
       <section class="mt-8 border-t border-gray-200 pt-8">
         <h2 class="text-2xl font-bold mb-4 text-primary">{{ i18n "book_description" }}</h2>
         <!-- Summary (short description) -->
-        <div class="prose max-w-none font-normal mb-6 text-lg">{{ .Summary }}</div>
-        <!-- Full content (everything after <!--more-->) -->
-                <div class="prose max-w-none font-normal mt-6 pt-6 border-t border-gray-200">{{ replace .Content .Summary "" 1 }}</div>
-
+        {{ $hasMore := findRE "<!--more-->" .RawContent }}
+        <div class="prose max-w-none font-normal mb-6 text-lg">
+          {{ if $hasMore }}
+            {{ .Summary }}
+          {{ else }}
+            {{ .Content }}
+          {{ end }}
+        </div>
+        {{ if $hasMore }}
+          <div class="prose max-w-none font-normal mt-6 pt-6 border-t border-gray-200">
+            {{ replace .Content .Summary "" 1 }}
+          </div>
+        {{ end }}
       </section>
 
       <!-- Book Details Grid -->
