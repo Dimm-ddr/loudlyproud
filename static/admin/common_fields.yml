@@ -34,15 +34,10 @@ book_fields:
         collapsed: false
         hint: "Add each author separately, including translations if available"
       - label: "Book Description"
-        name: "book_description"
+        name: "body"
         widget: "markdown"
         required: false
         hint: "Full description of the book, can include multiple paragraphs"
-      - label: "Short Book Description"
-        name: "short_book_description"
-        widget: "text"
-        required: false
-        hint: "Brief summary of the book"
       - label: "Cover"
         name: "cover"
         widget: "string"
