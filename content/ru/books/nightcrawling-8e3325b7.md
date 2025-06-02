@@ -20,6 +20,9 @@ params:
   authors:
     - Christopher Isherwood
     - Кристофер Ишервуд
+  short_book_description: Роман "Одинокий мужчина", впервые опубликованный в 1964
+    году и экранизированный в 2009-м Томом Фордом (с Колином Фертом в главной
+    роли), - одно из самых известных произведений Ишервуда.
   russian_publisher: АСТ
   publication_year: "1964"
   cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1569950915l/52179977.jpg
