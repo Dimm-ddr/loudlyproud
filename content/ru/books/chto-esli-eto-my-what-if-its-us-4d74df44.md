@@ -6,44 +6,40 @@ type: books
 params:
   book_title: Что, если это мы (What If It's Us)
   editions count: "61"
-  book_description: "Для Артура все только начинается: он приехал в Нью-Йорк на
-    летнюю стажировку и мечтает попасть на все свои любимые бродвейские шоу.У
-    Бена каникулы не задались: он недавно пережил расставание и, вместо того
-    чтобы писать свою книгу, вынужден ходить на дополнительные занятия.Однако
-    мимолетная встреча в почтовом отделении переворачивает их жизни с ног на
-    голову. Что, если они никогда не найдут друг друга в огромном мегаполисе? А
-    что, если найдут... но все пойдет не так, как в великих мюзиклах о любви?"
   authors:
-    - Adam Silvera, Адам Сильвера
-    - Becky Albertalli, Бекки Алберталли
-  short_book_description: "Для Артура все только начинается: он приехал в Нью-Йорк
-    на летнюю стажировку и мечтает попасть на все свои любимые бродвейские
-    шоу..."
+  - Adam Silvera, Адам Сильвера
+  - Becky Albertalli, Бекки Алберталли
   russian_translation_status: exists
   russian_audioversion: false
   publication_year: "2018"
   isbn: "9785045041126"
   publishers:
-    - Popcorn books
+  - Popcorn books
   series: What If It's Us
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
+  cover: 
+    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   tags:
-    - LGBTQIA+
-    - New York
-    - audiobook
-    - children's fiction
-    - contemporary
-    - dating
-    - gay
-    - new york times bestseller
-    - queer
-    - romance
-    - social commentary
-    - young adult (YA)
-    - fiction
+  - LGBTQIA+
+  - New York
+  - audiobook
+  - children's fiction
+  - contemporary
+  - dating
+  - gay
+  - new york times bestseller
+  - queer
+  - romance
+  - social commentary
+  - young adult (YA)
+  - fiction
   goodreads_link: https://www.goodreads.com/book/show/36341204-what-if-it-s-us
   languages:
-    - English
-    - Russian
+  - English
+  - Russian
   page_count: "443"
 ---
+Для Артура все только начинается: он приехал в Нью-Йорк на летнюю стажировку и мечтает попасть на все свои любимые бродвейские шоу...
+
+<!--more-->
+
+Для Артура все только начинается: он приехал в Нью-Йорк на летнюю стажировку и мечтает попасть на все свои любимые бродвейские шоу.У Бена каникулы не задались: он недавно пережил расставание и, вместо того чтобы писать свою книгу, вынужден ходить на дополнительные занятия.Однако мимолетная встреча в почтовом отделении переворачивает их жизни с ног на голову. Что, если они никогда не найдут друг друга в огромном мегаполисе? А что, если найдут... но все пойдет не так, как в великих мюзиклах о любви?
