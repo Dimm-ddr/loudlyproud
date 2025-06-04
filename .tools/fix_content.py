@@ -12,12 +12,15 @@ from frontmatter import (
     reorder_frontmatter,
 )
 
-def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
-    """Fix issues in a single file."""
+def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> list[str]:
+    """Fix issues in a single file.
+
+    Returns a list of fix descriptions that were applied.
+    """
     full_path = project_root / file_path
     if not full_path.exists():
         print(f"❌ File not found: {file_path}")
-        return
+        return []
 
     try:
         # Read the file
@@ -38,17 +41,17 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
         parts = content.split("---", 2)
         if len(parts) < 3:
             print(f"❌ Invalid frontmatter format in {file_path}")
-            return
+            return []
 
         # Parse YAML frontmatter
         data, parse_errors, _ = parse_frontmatter(content)
         if parse_errors:
             print(f"❌ YAML errors in {file_path}: {', '.join(parse_errors)}")
-            return
+            return []
         
         if data is None:
             print(f"❌ Empty YAML data in {file_path}")
-            return
+            return []
 
         # Apply YAML-based fixes
         yaml_modified, yaml_fixes, data = apply_all_data_fixers(data)
@@ -75,11 +78,14 @@ def fix_file(project_root: Path, file_path: str, reorder: bool = False) -> None:
         # Print the full traceback for debugging
         import traceback
         traceback.print_exc()
+        return []
 
+    return all_fixes
 
 def main() -> None:
     project_root = Path(__file__).parent.parent
     issues_file = project_root / ".data" / "content_issues.json"
+    log_file = project_root / ".data" / "fix_log.json"
 
     # Process arguments
     reorder = "--reorder" in sys.argv
@@ -106,9 +112,19 @@ def main() -> None:
         # Group issues by file
         files_to_fix = set(issue["file_path"] for issue in fixable_issues)
         print(f"\nProcessing {len(files_to_fix)} files:")
+        fix_log: dict[str, list[str]] = {}
         for file_path in files_to_fix:
             print(f"\nChecking {file_path}")
-            fix_file(project_root, file_path, reorder)
+            fixes = fix_file(project_root, file_path, reorder)
+            if fixes:
+                fix_log[file_path] = fixes
+
+        if fix_log:
+            log_file.parent.mkdir(exist_ok=True)
+            with log_file.open("w", encoding="utf-8") as f:
+                json.dump(fix_log, f, indent=2, ensure_ascii=False)
+        elif log_file.exists():
+            log_file.unlink()
 
         # Remove issues file after fixing
         issues_file.unlink()

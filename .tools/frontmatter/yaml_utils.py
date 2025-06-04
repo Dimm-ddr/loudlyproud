@@ -7,7 +7,10 @@ def create_yaml_parser() -> YAML:
     yaml = YAML()
     yaml.preserve_quotes = True
     yaml.width = 4096
-    yaml.indent(mapping=2, sequence=4, offset=2)
+    # Use conventional indentation for list items
+    # Sequence indentation of 2 with an offset of 2 results in
+    # list items being indented two spaces under their field name.
+    yaml.indent(mapping=2, sequence=2, offset=2)
     yaml.default_flow_style = False
     return yaml
 
