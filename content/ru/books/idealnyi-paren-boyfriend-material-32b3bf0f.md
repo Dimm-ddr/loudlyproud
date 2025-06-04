@@ -5,36 +5,36 @@ slug: idealnyi-paren-boyfriend-material-32b3bf0f
 type: books
 params:
   book_title: Идеальный парень (Boyfriend Material)
-  editions count: "45"
   authors:
-  - Alexis  Hall, Алексис Холл
+    - Alexis  Hall, Алексис Холл
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2020"
-  isbn: "9785171385712"
+  publication_year: '2020'
+  isbn: '9785171385712'
   publishers:
-  - АСТ
+    - АСТ
   series: London Calling
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622231375i/58188308.jpg
   tags:
-  - English literature
-  - LGBTQIA+
-  - adult fiction
-  - audiobook
-  - contemporary
-  - gay
-  - humor
-  - male-male romance
-  - novels
-  - queer
-  - fiction
+    - English literature
+    - LGBTQIA+
+    - adult fiction
+    - audiobook
+    - contemporary
+    - gay
+    - humor
+    - male-male romance
+    - novels
+    - queer
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/58188308
   languages:
-  - English
-  - Russian
-  page_count: "480"
+    - English
+    - Russian
+  page_count: '480'
 ---
+
 ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный...
 
 <!--more-->

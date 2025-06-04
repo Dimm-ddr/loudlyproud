@@ -5,39 +5,39 @@ slug: nastoiashchaia-zhizn-real-life-839446c3
 type: books
 params:
   book_title: Настоящая жизнь (Real Life)
-  editions count: "32"
   authors:
-  - Brandon Taylor, Брендон Тейлор
+    - Brandon Taylor, Брендон Тейлор
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2020"
-  isbn: "9785041204099"
+  publication_year: '2020'
+  isbn: '9785041204099'
   publishers:
-  - Эксмо
+    - Эксмо
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1623839538i/58352656.jpg
   tags:
-  - African American
-  - American
-  - LGBTQIA+
-  - gay
-  - audiobook
-  - Black
-  - contemporary
-  - friendship
-  - college students
-  - school
-  - literary
-  - queer
-  - race
-  - relationships
-  - fiction
+    - African American
+    - American
+    - LGBTQIA+
+    - gay
+    - audiobook
+    - Black
+    - contemporary
+    - friendship
+    - college students
+    - school
+    - literary
+    - queer
+    - race
+    - relationships
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/58352656
   languages:
-  - English
-  - Russian
-  page_count: "336"
+    - English
+    - Russian
+  page_count: '336'
 ---
+
 Держать людей на расстоянии уже давно вошло у Уолласа в привычку. Нет, он не социофоб. Просто так безопасней. Он — первый за несколько десятков лет черный студент на факультете биохимии в Университете Среднего Запада...
 
 <!--more-->

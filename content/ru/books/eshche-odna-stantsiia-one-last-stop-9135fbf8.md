@@ -5,34 +5,34 @@ slug: eshche-odna-stantsiia-one-last-stop-9135fbf8
 type: books
 params:
   book_title: Еще одна станция (One Last Stop)
-  editions count: "55"
   authors:
-  - Casey McQuiston, Кейси Маккуистон
+    - Casey McQuiston, Кейси Маккуистон
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2021"
-  isbn: "9785171375386"
+  publication_year: '2021'
+  isbn: '9785171375386'
   publishers:
-  - АСТ
+    - АСТ
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1632060023i/58904780.jpg
   tags:
-  - adult fiction
-  - audiobook
-  - contemporary
-  - lesbian
-  - LGBTQIA+
-  - New York
-  - new york times bestseller
-  - queer
-  - romance
-  - fiction
+    - adult fiction
+    - audiobook
+    - contemporary
+    - lesbian
+    - LGBTQIA+
+    - New York
+    - new york times bestseller
+    - queer
+    - romance
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/58904780
   languages:
-  - English
-  - Russian
-  page_count: "512"
+    - English
+    - Russian
+  page_count: '512'
 ---
+
 Огаст двадцать три, и она не верит ни в магию, ни в настоящую любовь. Переехав в Нью-Йорк, она понимает, что предоставлена сама себе. И этого не изменят ни посетители круглосуточной закусочной, где она работает, ни странные соседи. Ежедневная дорога на работу быстро превратилась в рутину...
 
 <!--more-->

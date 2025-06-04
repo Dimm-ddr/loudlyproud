@@ -5,34 +5,34 @@ slug: casket-of-souls-79c47738
 type: books
 params:
   book_title: Ларец душ (Casket Of Souls)
-  editions count: "1"
   authors:
-  - Lynn Flewelling, Линн Флевеллинг
+    - Lynn Flewelling, Линн Флевеллинг
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2012"
+  publication_year: '2012'
   publishers:
-  - Random House
-  - Spectra
+    - Random House
+    - Spectra
   series: Nightrunner
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388342261i/10184855.jpg
   tags:
-  - LGBTQIA+
-  - adventure
-  - diseases
-  - gay
-  - high fantasy
-  - magic
-  - male-male romance
-  - queer
-  - fiction
+    - LGBTQIA+
+    - adventure
+    - diseases
+    - gay
+    - high fantasy
+    - magic
+    - male-male romance
+    - queer
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/10184855-casket-of-souls
   languages:
-  - English
-  - Russian
-  page_count: "496"
+    - English
+    - Russian
+  page_count: '496'
 ---
+
 Алек и Серегил — больше, чем представители развращённой знати, которыми они хотят казаться — они служат своей королеве и стране. Но когда они обнаруживают заговор, целью которого является...
 
 <!--more-->

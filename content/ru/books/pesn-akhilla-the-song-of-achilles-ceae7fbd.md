@@ -5,47 +5,47 @@ slug: pesn-akhilla-the-song-of-achilles-ceae7fbd
 type: books
 params:
   book_title: Песнь Ахилла (The Song Of Achilles)
-  editions count: "221"
   authors:
-  - Madeline Miller, Мадлен Миллер
+    - Madeline Miller, Мадлен Миллер
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2011"
-  isbn: "9785171087654"
+  publication_year: '2011'
+  isbn: '9785171087654'
   publishers:
-  - Corpus
+    - Corpus
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1570891752l/52732634.jpg
   tags:
-  - Greece
-  - LGBTQIA+
-  - Stonewall Book Awards
-  - Greek mythology
-  - friendship
-  - historical
-  - fantasy
-  - gay
-  - war
-  - history
-  - love
-  - soldiers
-  - mythology
-  - new york times bestseller
-  - romance
-  - Turkey
-  - fiction
+    - Greece
+    - LGBTQIA+
+    - Stonewall Book Awards
+    - Greek mythology
+    - friendship
+    - historical
+    - fantasy
+    - gay
+    - war
+    - history
+    - love
+    - soldiers
+    - mythology
+    - new york times bestseller
+    - romance
+    - Turkey
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/52732634
   languages:
-  - English
-  - Spanish
-  - Italian
-  - German
-  - Polish
-  - Portuguese
-  - Russian
-  - Turkish
-  page_count: "384"
+    - English
+    - Spanish
+    - Italian
+    - German
+    - Polish
+    - Portuguese
+    - Russian
+    - Turkish
+  page_count: '384'
 ---
+
 Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил и робок, так еще и нечаянно убивает сверстника..
 
 <!--more-->

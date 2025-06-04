@@ -5,33 +5,33 @@ slug: vozvrashchenie-korolevy-9d4ad0cf
 type: books
 params:
   book_title: Возвращение Королевы
-  editions count: "19"
   authors:
-  - Линн Флевеллинг (Lynn Flewelling)
+    - Линн Флевеллинг (Lynn Flewelling)
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2006"
-  isbn: "9785699383672"
+  publication_year: '2006'
+  isbn: '9785699383672'
   publishers:
-  - Spectra
-  - Эксмо
+    - Spectra
+    - Эксмо
   series: Tamír Triad
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615970260i/57439304.jpg
   tags:
-  - LGBTQIA+
-  - adult fiction
-  - dark fantasy
-  - epic fantasy
-  - high fantasy
-  - magic
-  - queer
-  - science fiction
-  - fiction
+    - LGBTQIA+
+    - adult fiction
+    - dark fantasy
+    - epic fantasy
+    - high fantasy
+    - magic
+    - queer
+    - science fiction
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/57439304
   languages:
-  - Russian
+    - Russian
 ---
+
 Принцесса Тамир - единственная наследница трона, спасенная при помощи черной магии и призванная оракулом спасти и возродить скаланское королевство. Чтобы отстоять права на престол, перерожденной в...
 
 <!--more-->

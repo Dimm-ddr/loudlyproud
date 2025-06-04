@@ -7,13 +7,21 @@ from pathlib import Path
 from .controller import Controller
 
 
+def get_project_root() -> Path:
+    """Get the absolute path to the project root directory."""
+    # Since we're in .tools/frontmatter/cli.py, go up two levels to get to project root
+    return Path(__file__).parent.parent.parent
+
+
 def main() -> None:
     """Main entry point for the CLI."""
-    # Hardcoded output path in .data folder
-    output_path = Path(".data/frontmatter_validation_report.json")
+    project_root = get_project_root()
+    
+    # Output path relative to project root
+    output_path = project_root / "frontmatter_validation_report.json"
     
     # Always run in verbose mode
-    controller = Controller(verbose=True)
+    controller = Controller(verbose=True, project_root=project_root)
     
     # Run validation, fixing, and reporting in one go
     results = controller.validate_and_fix()

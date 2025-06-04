@@ -5,56 +5,56 @@ slug: tsena-soli-the-price-of-salt-a84cd3ed
 type: books
 params:
   book_title: Цена соли (The Price Of Salt)
-  editions count: "228"
   authors:
-  - Claire  Morgan, Patricia Highsmith, Патриция Хайсмит
+    - Claire  Morgan, Patricia Highsmith, Патриция Хайсмит
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "1952"
-  isbn: "9785171216429"
+  publication_year: '1952'
+  isbn: '9785171216429'
   publishers:
-  - АСТ
+    - АСТ
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588791366i/53341254.jpg
   tags:
-  - 20th century
-  - Chicago
-  - LGBTQIA+
-  - LGBTQIA+ novels before Stonewall
-  - New York
-  - United States
-  - adventure
-  - classics
-  - family
-  - parent-child relationship
-  - detective
-  - divorce
-  - gay
-  - historical
-  - lesbian
-  - literary
-  - retellings
-  - women
-  - mystery
-  - novels
-  - psychological fiction
-  - queer
-  - travel
-  - romance
-  - fantasy
-  - social commentary
-  - fiction
+    - 20th century
+    - Chicago
+    - LGBTQIA+
+    - LGBTQIA+ novels before Stonewall
+    - New York
+    - United States
+    - adventure
+    - classics
+    - family
+    - parent-child relationship
+    - detective
+    - divorce
+    - gay
+    - historical
+    - lesbian
+    - literary
+    - retellings
+    - women
+    - mystery
+    - novels
+    - psychological fiction
+    - queer
+    - travel
+    - romance
+    - fantasy
+    - social commentary
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/53341254
   languages:
-  - English
-  - Spanish
-  - Italian
-  - Chinese
-  - Korean
-  - German
-  - Russian
-  page_count: "336"
+    - English
+    - Spanish
+    - Italian
+    - Chinese
+    - Korean
+    - German
+    - Russian
+  page_count: '336'
 ---
+
 "Цена соли" - культовый роман, новаторский для американской литературы 1950-х годов и актуальный поныне…
 
 <!--more-->

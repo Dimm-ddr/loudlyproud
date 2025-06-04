@@ -5,24 +5,24 @@ slug: gorod-iz-vody-i-peska-c16bd66a
 type: books
 params:
   book_title: Город Из Воды И Песка
-  editions count: "1"
   authors:
-  - Мелина Дивайн
+    - Мелина Дивайн
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2022"
-  isbn: "5171512167"
+  publication_year: '2022'
+  isbn: '5171512167'
   publishers:
-  - АСТ
+    - АСТ
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1697756049i/106735318.jpg
   tags:
-  - fiction
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/68756880
   languages:
-  - Russian
-  page_count: "352"
+    - Russian
+  page_count: '352'
 ---
+
 Встретились как-то русский, татарин и немец, и… Трое мужчин на грани нервного срыва и один юноша, которого никто никак не может увидеть. Общее одно – они одиноки.
 
 <!--more-->

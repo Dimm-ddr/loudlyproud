@@ -5,32 +5,32 @@ slug: teni-vozvrashchaiutsia-2f658b8d
 type: books
 params:
   book_title: Тени Возвращаются
-  editions count: "2"
   authors:
-  - Lynn Flewelling, Линн Флевеллинг
+    - Lynn Flewelling, Линн Флевеллинг
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2008"
+  publication_year: '2008'
   publishers:
-  - Bantam Spectra, Random House Publishing Group, Spectra
+    - Bantam Spectra, Random House Publishing Group, Spectra
   series: Nightrunner
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320504721i/2065091.jpg
   tags:
-  - LGBTQIA+
-  - adventure
-  - gay
-  - high fantasy
-  - magic
-  - male-male romance
-  - queer
-  - fiction
+    - LGBTQIA+
+    - adventure
+    - gay
+    - high fantasy
+    - magic
+    - male-male romance
+    - queer
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/2065091.Shadows_Return
   languages:
-  - English
-  - Russian
-  page_count: "522"
+    - English
+    - Russian
+  page_count: '522'
 ---
+
 Четвертая книга Линн Флевелинг — продолжение знаменитой трилогии про Ночных скитальцев. Алек и Серегил снова вместе.
 
 <!--more-->

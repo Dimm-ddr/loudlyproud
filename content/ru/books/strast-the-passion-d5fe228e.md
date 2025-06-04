@@ -5,52 +5,52 @@ slug: strast-the-passion-d5fe228e
 type: books
 params:
   book_title: Страсть (The Passion)
-  editions count: "125"
   authors:
-  - Jeanette Winterson
+    - Jeanette Winterson
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "1987"
-  isbn: "9785699018765"
+  publication_year: '1987'
+  isbn: '9785699018765'
   publishers:
-  - Эксмо
+    - Эксмо
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1203799610i/2885232.jpg
   tags:
-  - 19th century
-  - English literature
-  - Europe
-  - fantasy
-  - France
-  - French
-  - historical
-  - history
-  - Italy
-  - LGBTQIA+
-  - magical realism
-  - male-female romance
-  - marriage
-  - queer
-  - romance
-  - Russia
-  - social commentary
-  - soldiers
-  - Venice
-  - war
-  - women
-  - fiction
+    - 19th century
+    - English literature
+    - Europe
+    - fantasy
+    - France
+    - French
+    - historical
+    - history
+    - Italy
+    - LGBTQIA+
+    - magical realism
+    - male-female romance
+    - marriage
+    - queer
+    - romance
+    - Russia
+    - social commentary
+    - soldiers
+    - Venice
+    - war
+    - women
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/15047.The_Passion
   languages:
-  - English
-  - Spanish
-  - Catalan
-  - German
-  - Dutch
-  - Russian
-  - Turkish
-  - French
-  page_count: "176"
+    - English
+    - Spanish
+    - Catalan
+    - German
+    - Dutch
+    - Russian
+    - Turkish
+    - French
+  page_count: '176'
 ---
+
 "Страсть: страданье, муки, маета, мученье, телесная боль, душевная скорбь, тоска; подвиг, сознательно принятые на себя тяготы, мученичество". Так нам говорит словарь Даля. Но роман Дженет Уинтерсон - бесспорной звезды британской литературы конца XX века - не только об этом...
 
 <!--more-->

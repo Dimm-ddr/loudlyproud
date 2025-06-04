@@ -5,39 +5,39 @@ title: Целую, твой Франкенштейн. История одной 
 type: books
 params:
   authors:
-  - Jeanette Winterson, Дженет Уинтерсон
+    - Jeanette Winterson, Дженет Уинтерсон
   book_title: Целую, твой Франкенштейн. История одной любви (Frankissstein)
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606717068i/56096639.jpg
-  editions count: '51'
   isbn: '9785171216412'
   languages:
-  - English
-  - Spanish
-  - Russian
+    - English
+    - Spanish
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/42123790-frankissstein
   page_count: '260'
   publication_year: '2019'
   publishers:
-  - АСТ
+    - АСТ
   russian_audioversion: false
   russian_translation_status: exists
   tags:
-  - LGBTQIA+
-  - technology
-  - contemporary
-  - science
-  - gothic
-  - historical
-  - literary
-  - political intrigue
-  - queer
-  - romance
-  - science fiction
-  - sexuality
-  - transgender
-  - women
+    - LGBTQIA+
+    - technology
+    - contemporary
+    - science
+    - gothic
+    - historical
+    - literary
+    - political intrigue
+    - queer
+    - romance
+    - science fiction
+    - sexuality
+    - transgender
+    - women
 ---
+
 Лето 1816 года, Швейцария.
 
 <!--more-->

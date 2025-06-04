@@ -5,35 +5,34 @@ title: Край Земли. Прогулка По Провинстауну
 type: books
 params:
   authors:
-  - Maikl Kanningem, Michael Cunningham
-  tranlsators:
-  - Сергей Кумыш
+    - Maikl Kanningem, Michael Cunningham
   book_title: Край Земли. Прогулка По Провинстауну
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1599303070i/55236655.jpg
   isbn: '9785171207229'
   languages:
-  - Russian
+    - Russian
   goodreads_link: https://www.goodreads.com/book/show/55236655
   page_count: '224'
   publication_year: '2021'
   publishers:
-  - Corpus
+    - Corpus
   russian_audioversion: false
   russian_translation_status: exists
   series: Crown Journeys Series
   tags:
-  - LGBTQIA+
-  - audiobook
-  - essays
-  - gay
-  - history
-  - memoir
-  - nonfiction
-  - recreation
-  - sports
-  - travel
+    - LGBTQIA+
+    - audiobook
+    - essays
+    - gay
+    - history
+    - memoir
+    - nonfiction
+    - recreation
+    - sports
+    - travel
 ---
+
 “Край земли” — единственная документальная книга американского писателя Майкла Каннингема. Она посвящена Провинстауну, городу на полуострове Кейп-Код, ставшему в середине XX века богемным и...
 
 <!--more-->

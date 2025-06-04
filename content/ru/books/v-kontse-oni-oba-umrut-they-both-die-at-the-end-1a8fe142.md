@@ -5,43 +5,43 @@ slug: v-kontse-oni-oba-umrut-they-both-die-at-the-end-1a8fe142
 type: books
 params:
   book_title: В конце они оба умрут (They Both Die At The End)
-  editions count: "110"
   authors:
-  - Адам Сильвера (Adam Silvera)
+    - Адам Сильвера (Adam Silvera)
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2017"
-  isbn: "9785604219669"
+  publication_year: '2017'
+  isbn: '9785604219669'
   publishers:
-  - Popcorn books
+    - Popcorn books
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1494333138i/33385229.jpg
   tags:
-  - adventure
-  - audiobook
-  - children's fiction
-  - contemporary
-  - death
-  - friendship
-  - gay
-  - Hispanic American
-  - juvenile fiction
-  - LGBTQIA+
-  - love
-  - New York
-  - new york times bestseller
-  - queer
-  - romance
-  - young adult (YA)
-  - fiction
+    - adventure
+    - audiobook
+    - children's fiction
+    - contemporary
+    - death
+    - friendship
+    - gay
+    - Hispanic American
+    - juvenile fiction
+    - LGBTQIA+
+    - love
+    - New York
+    - new york times bestseller
+    - queer
+    - romance
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/53937364
   languages:
-  - English
-  - Spanish
-  - Portuguese
-  - Russian
-  page_count: "400"
+    - English
+    - Spanish
+    - Portuguese
+    - Russian
+  page_count: '400'
 ---
+
 «С прискорбием сообщаем вам, что в последующие двадцать четыре часа вас постигнет безвременная смерть. Приносим глубочайшие соболезнования вашим родным и близким…»
 
 <!--more-->

@@ -5,32 +5,32 @@ slug: ta-chto-stala-solntsem-she-who-became-the-sun-76feb455
 type: books
 params:
   book_title: Та, что стала солнцем (She Who Became The Sun)
-  editions count: "58"
   authors:
-  - Shelley Parker-Chan, Шелли Паркер-Чан
+    - Shelley Parker-Chan, Шелли Паркер-Чан
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2021"
-  isbn: "9785041605094"
+  publication_year: '2021'
+  isbn: '9785041605094'
   publishers:
-  - Эксмо
+    - Эксмо
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625048838i/48727813.jpg
   tags:
-  - English literature
-  - LGBTQIA+
-  - fantasy
-  - historical
-  - history
-  - lesbian
-  - queer
-  - fiction
+    - English literature
+    - LGBTQIA+
+    - fantasy
+    - historical
+    - history
+    - lesbian
+    - queer
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/61182011
   languages:
-  - English
-  - Russian
-  page_count: "480"
+    - English
+    - Russian
+  page_count: '480'
 ---
+
 Небеса предсказали девушке, что рождена во время войны и голода — смерть, а ее брату — великое будущее. Но что, если тот, кому небо предписало быть великим, выбирает смерть?
 
 <!--more-->

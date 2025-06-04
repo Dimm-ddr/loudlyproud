@@ -5,38 +5,38 @@ slug: dikie-wilder-girls-7112564a
 type: books
 params:
   book_title: Дикие (Wilder Girls)
-  editions count: "48"
   authors:
-  - Rory Power
+    - Rory Power
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2019"
-  isbn: "9785604360606"
+  publication_year: '2019'
+  isbn: '9785604360606'
   publishers:
-  - Popcorn books
+    - Popcorn books
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1544204706i/42505366.jpg
   tags:
-  - adventure
-  - boarding school
-  - diseases
-  - horror
-  - LGBTQIA+
-  - mystery
-  - new york times bestseller
-  - queer
-  - science
-  - survival
-  - suspense
-  - thriller
-  - young adult (YA)
-  - fiction
+    - adventure
+    - boarding school
+    - diseases
+    - horror
+    - LGBTQIA+
+    - mystery
+    - new york times bestseller
+    - queer
+    - science
+    - survival
+    - suspense
+    - thriller
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/52421855
   languages:
-  - English
-  - Russian
-  page_count: "352"
+    - English
+    - Russian
+  page_count: '352'
 ---
+
 Уже больше года школа-пансион для девочек на острове Ракстер находится в карантине. Из-за неизвестного вируса почти все учителя погибли, а тела Гетти и ее одноклассниц мутировали…
 
 <!--more-->

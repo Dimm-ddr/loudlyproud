@@ -1,31 +1,31 @@
 ---
 draft: false
-language: "en"
 slug: yerba-buena-188458ef
 title: Yerba Buena
 type: books
 params:
   authors:
-  - Nina LaCour
+    - Nina LaCour
   book_title: Yerba Buena
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1621454145i/57693648.jpg
   isbn: '9781250837820'
   languages:
-  - English
+    - English
   goodreads_link: https://www.goodreads.com/book/show/57693648-yerba-buena
   page_count: '304'
   publication_year: '2022'
   russian_audioversion: false
   russian_translation_status: does_not_exist
   tags:
-  - LGBTQIA+
-  - audiobook
-  - contemporary
-  - lesbian
-  - queer
-  - romance
+    - LGBTQIA+
+    - audiobook
+    - contemporary
+    - lesbian
+    - queer
+    - romance
 ---
+
 The debut adult novel by the bestselling and award-winning YA author Nina LaCour,following two women on a star-crossed journey toward each otherWhen Sara Foster runs away from home at sixteen, she...
 
 <!--more-->

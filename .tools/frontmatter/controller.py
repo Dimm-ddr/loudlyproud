@@ -14,14 +14,16 @@ from .validator import validate_frontmatter
 class Controller:
     """Controller for orchestrating the validation workflow."""
     
-    def __init__(self, verbose: bool = False):
+    def __init__(self, verbose: bool = False, project_root: Path | None = None):
         """
         Initialize the controller.
         
         Args:
             verbose: Whether to include verbose output
+            project_root: Path to the project root directory
         """
         self.verbose = verbose
+        self.project_root = project_root or Path.cwd()
         self.reporter = Reporter()
         
     def validate_and_fix(self) -> list[ValidationResult]:
@@ -31,7 +33,7 @@ class Controller:
         Returns:
             List of ValidationResult objects after validation and fixing
         """
-        files = get_all_markdown_files()
+        files = get_all_markdown_files(self.project_root)
         results = []
         fixed_count = 0
         

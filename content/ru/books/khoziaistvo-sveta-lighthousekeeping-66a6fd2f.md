@@ -5,44 +5,44 @@ slug: khoziaistvo-sveta-lighthousekeeping-66a6fd2f
 type: books
 params:
   book_title: Хозяйство света (Lighthousekeeping)
-  editions count: "75"
   authors:
-  - Jeanette Winterson, Дженет Уинтерсон
+    - Jeanette Winterson, Дженет Уинтерсон
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2004"
-  isbn: "9785699186587"
+  publication_year: '2004'
+  isbn: '9785699186587'
   publishers:
-  - АСТ
-  - Эксмо
+    - АСТ
+    - Эксмо
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1229468907i/2524212.jpg
   tags:
-  - LGBTQIA+
-  - Scotland
-  - contemporary
-  - disabilities
-  - historical
-  - lesbian
-  - literary
-  - magical realism
-  - new adult (NA)
-  - psychological fiction
-  - queer
-  - religion
-  - romance
-  - women
-  - fiction
+    - LGBTQIA+
+    - Scotland
+    - contemporary
+    - disabilities
+    - historical
+    - lesbian
+    - literary
+    - magical realism
+    - new adult (NA)
+    - psychological fiction
+    - queer
+    - religion
+    - romance
+    - women
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/2524212
   languages:
-  - English
-  - Spanish
-  - Italian
-  - Dutch
-  - Russian
-  - Turkish
-  page_count: "320"
+    - English
+    - Spanish
+    - Italian
+    - Dutch
+    - Russian
+    - Turkish
+  page_count: '320'
 ---
+
 После того, как маму юной Сильвер буквально сдувает с лица земли, девочка попадает к слепому и мудрому хранителю маяка Пью, который учит ее, что не дать свету угаснуть - это научиться рассказывать истории…
 
 <!--more-->
