@@ -19,7 +19,7 @@ def validate_frontmatter(file_content: FileContent) -> ValidationResult:
     Returns:
         ValidationResult with any errors or warnings found
     """
-    result = ValidationResult(path=file_content.path)
+    result = ValidationResult(path=file_content.path, is_valid=True)
     frontmatter = file_content.frontmatter
     
     # Validate required root fields
@@ -79,6 +79,9 @@ def validate_frontmatter(file_content: FileContent) -> ValidationResult:
     # If params field exists and is a dict, validate its contents
     if "params" in frontmatter and isinstance(frontmatter["params"], dict):
         validate_params(frontmatter["params"], result)
+    
+    if result.errors:
+        result.is_valid = False
     
     return result
 

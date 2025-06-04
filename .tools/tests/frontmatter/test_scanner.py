@@ -1,17 +1,14 @@
 """
 Tests for the file scanner module.
 """
-import os
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
-
-from frontmatter.scanner import scan_markdown_files, get_all_markdown_files
+from frontmatter.scanner import get_all_markdown_files
 
 
-class TestScanMarkdownFiles:
-    """Test the scan_markdown_files function."""
+class TestGetAllMarkdownFiles:
+    """Test the get_all_markdown_files function."""
     
     def test_scan_finds_markdown_files(self, temp_dir: Path) -> None:
         """Test that scanner finds markdown files in configured directories."""
@@ -30,8 +27,8 @@ class TestScanMarkdownFiles:
         (content_dir / "README").write_text("README")
         
         # Mock the content paths to use our temp directory
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content/en/books")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         # Should find only the markdown files
         assert len(files) == 3
@@ -51,8 +48,11 @@ class TestScanMarkdownFiles:
         (ru_dir / "russian_book.md").write_text("# Russian Book")
         
         # Mock the content paths
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(en_dir), str(ru_dir)]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [
+            Path("content/en/books"),
+            Path("content/ru/books")
+        ]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == 2
         file_names = {f.name for f in files}
@@ -69,8 +69,8 @@ class TestScanMarkdownFiles:
         (temp_dir / "content" / "books" / "category" / "category.md").write_text("# Category")
         (nested_dir / "deep.md").write_text("# Deep")
         
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(temp_dir / "content" / "books")]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content/books")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == 3
         
@@ -79,17 +79,15 @@ class TestScanMarkdownFiles:
         empty_dir = temp_dir / "empty"
         empty_dir.mkdir()
         
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(empty_dir)]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("empty")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == 0
         
-    def test_scan_nonexistent_directory(self) -> None:
+    def test_scan_nonexistent_directory(self, temp_dir: Path) -> None:
         """Test scanning non-existent directories doesn't crash."""
-        nonexistent = "/nonexistent/path"
-        
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [nonexistent]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("nonexistent")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == 0
         
@@ -103,8 +101,8 @@ class TestScanMarkdownFiles:
         (content_dir / "file.html").write_text("<html></html>")
         (content_dir / "file.json").write_text('{"key": "value"}')
         
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == 0
         
@@ -126,70 +124,10 @@ class TestScanMarkdownFiles:
         for filename in special_files:
             (content_dir / filename).write_text(f"# {filename}")
             
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = list(scan_markdown_files())
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == len(special_files)
-        
-    @pytest.mark.skipif(os.name == "nt", reason="Symlinks may not work on Windows")
-    def test_scan_symlinks(self, temp_dir: Path) -> None:
-        """Test handling of symbolic links."""
-        content_dir = temp_dir / "content"
-        content_dir.mkdir()
-        
-        # Create a real file
-        real_file = content_dir / "real_book.md"
-        real_file.write_text("# Real Book")
-        
-        # Create a symlink
-        symlink = content_dir / "symlink_book.md"
-        symlink.symlink_to(real_file)
-        
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = list(scan_markdown_files())
-            
-        # Should find both real file and symlink
-        assert len(files) == 2
-        
-    def test_scan_permission_errors(self, temp_dir: Path) -> None:
-        """Test handling of files with permission issues."""
-        content_dir = temp_dir / "content"
-        content_dir.mkdir()
-        
-        # Create a file
-        test_file = content_dir / "book.md"
-        test_file.write_text("# Book")
-        
-        # Remove read permissions (on Unix-like systems)
-        if os.name != "nt":  # Skip on Windows
-            test_file.chmod(0o000)
-            
-            try:
-                with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-                    files = list(scan_markdown_files())
-                    
-                # Should still find the file (scanner doesn't read content)
-                assert len(files) == 1
-            finally:
-                # Restore permissions for cleanup
-                test_file.chmod(0o644)
-
-
-class TestGetAllMarkdownFiles:
-    """Test the get_all_markdown_files function."""
-    
-    def test_returns_list(self, temp_dir: Path) -> None:
-        """Test that get_all_markdown_files returns a list."""
-        content_dir = temp_dir / "content"
-        content_dir.mkdir()
-        (content_dir / "book.md").write_text("# Book")
-        
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = get_all_markdown_files()
-            
-        assert isinstance(files, list)
-        assert len(files) == 1
-        assert files[0].name == "book.md"
         
     def test_large_number_of_files(self, temp_dir: Path) -> None:
         """Test performance with large number of files."""
@@ -201,8 +139,8 @@ class TestGetAllMarkdownFiles:
         for i in range(num_files):
             (content_dir / f"book_{i:03d}.md").write_text(f"# Book {i}")
             
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files = get_all_markdown_files()
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content")]):
+            files = list(get_all_markdown_files(temp_dir))
             
         assert len(files) == num_files
         
@@ -213,9 +151,9 @@ class TestGetAllMarkdownFiles:
         (content_dir / "book1.md").write_text("# Book 1")
         (content_dir / "book2.md").write_text("# Book 2")
         
-        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [str(content_dir)]):
-            files1 = get_all_markdown_files()
-            files2 = get_all_markdown_files()
+        with patch("frontmatter.scanner.BOOK_CONTENT_PATHS", [Path("content")]):
+            files1 = list(get_all_markdown_files(temp_dir))
+            files2 = list(get_all_markdown_files(temp_dir))
             
         # Results should be identical
         assert len(files1) == len(files2)

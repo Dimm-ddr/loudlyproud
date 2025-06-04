@@ -116,7 +116,7 @@ def write_frontmatter(file_content: FileContent) -> None:
     # Use ruamel.yaml to preserve formatting and comments
     yaml = YAML()
     yaml.preserve_quotes = True
-    yaml.indent(mapping=2, sequence=4, offset=2)
+    yaml.indent(mapping=2, sequence=4, offset=2)  # List items indented 4 spaces (2 more than parent key)
     
     # Convert frontmatter to YAML string
     yaml_str = io.StringIO()

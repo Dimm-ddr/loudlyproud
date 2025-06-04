@@ -27,13 +27,10 @@ class ValidationError:
 class ValidationResult:
     """Result of validating a single file."""
     path: Path
+    is_valid: bool
     errors: list[ValidationError] = field(default_factory=list)
     warnings: list[ValidationError] = field(default_factory=list)
-    
-    @property
-    def is_valid(self) -> bool:
-        """Return True if there are no errors."""
-        return len(self.errors) == 0
+    changes: dict[str, list[str]] = field(default_factory=dict)  # Track changes made during validation
     
     @property
     def has_fixable_errors(self) -> bool:
