@@ -180,5 +180,5 @@ def validation_result_factory():
             errors = []
         if warnings is None:
             warnings = []
-        return ValidationResult(path=path, errors=errors, warnings=warnings)
+        return ValidationResult(path=path, is_valid=len(errors) == 0, errors=errors, warnings=warnings)
     return _create_result 
