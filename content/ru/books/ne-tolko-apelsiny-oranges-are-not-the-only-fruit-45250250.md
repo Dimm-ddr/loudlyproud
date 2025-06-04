@@ -5,46 +5,46 @@ slug: ne-tolko-apelsiny-oranges-are-not-the-only-fruit-45250250
 type: books
 params:
   book_title: Не только апельсины (Oranges Are Not The Only Fruit)
-  editions count: "130"
   authors:
-  - Jeanette Winterson, Дженет Уинтерсон
+    - Jeanette Winterson, Дженет Уинтерсон
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "1985"
-  isbn: "9785171143"
+  publication_year: '1985'
+  isbn: '9785171143'
   publishers:
-  - АСТ
+    - АСТ
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1561805620l/51073243.jpg
   tags:
-  - England
-  - LGBTQIA+
-  - United Kingdom
-  - christian
-  - classics
-  - coming of age
-  - contemporary
-  - English
-  - family
-  - girls
-  - lesbian
-  - mother-daughter relationship
-  - queer
-  - religion
-  - romance
-  - sexuality
-  - teenagers
-  - fiction
+    - England
+    - LGBTQIA+
+    - United Kingdom
+    - christian
+    - classics
+    - coming of age
+    - contemporary
+    - English
+    - family
+    - girls
+    - lesbian
+    - mother-daughter relationship
+    - queer
+    - religion
+    - romance
+    - sexuality
+    - teenagers
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/51073243
   languages:
-  - English
-  - Spanish
-  - Italian
-  - German
-  - Dutch
-  - Russian
-  page_count: "224"
+    - English
+    - Spanish
+    - Italian
+    - German
+    - Dutch
+    - Russian
+  page_count: '224'
 ---
+
 Роман молодой писательницы, в котором она откровенно рассказала о своем детстве и трагической первой любви, вызвал жаркие дискуссии и стал одним из главных культурных событий восьмидесятых.
 
 <!--more-->

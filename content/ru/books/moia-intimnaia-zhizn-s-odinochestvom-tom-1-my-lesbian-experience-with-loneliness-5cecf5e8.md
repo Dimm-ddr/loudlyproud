@@ -7,47 +7,47 @@ type: books
 params:
   book_title: Моя интимная жизнь с одиночеством. Том 1 (My Lesbian Experience With
     Loneliness)
-  editions count: "23"
   authors:
-  - Jocelyne Allen
-  - Kabi Nagata, Nagata Kabi
+    - Jocelyne Allen
+    - Kabi Nagata, Nagata Kabi
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2016"
-  isbn: "9785758404263"
+  publication_year: '2016'
+  isbn: '9785758404263'
   publishers:
-  - Фабрика комиксов
+    - Фабрика комиксов
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1530989553i/33113683.jpg
   tags:
-  - Japan
-  - LGBTQIA+
-  - art
-  - biography
-  - graphic novels & comics
-  - isolation
-  - lesbian
-  - manga
-  - memoir
-  - mental health
-  - mental illness
-  - nonfiction
-  - personal growth
-  - prostitution
-  - queer
-  - sexuality
-  - teenagers
-  - translations
-  - women
+    - Japan
+    - LGBTQIA+
+    - art
+    - biography
+    - graphic novels & comics
+    - isolation
+    - lesbian
+    - manga
+    - memoir
+    - mental health
+    - mental illness
+    - nonfiction
+    - personal growth
+    - prostitution
+    - queer
+    - sexuality
+    - teenagers
+    - translations
+    - women
   goodreads_link: https://www.goodreads.com/book/show/54766327-1
   languages:
-  - English
-  - Spanish
-  - Italian
-  - Russian
-  - Japanese
-  page_count: "144"
+    - English
+    - Spanish
+    - Italian
+    - Russian
+    - Japanese
+  page_count: '144'
 ---
+
 Как покончить с бессмысленным существованием, начавшимся после окончания старшей школы? Как преодолеть муки одиночества, длившиеся целых десять лет?..
 
 <!--more-->

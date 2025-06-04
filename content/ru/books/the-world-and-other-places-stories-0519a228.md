@@ -5,35 +5,34 @@ title: 'The World And Other Places: Stories'
 type: books
 params:
   authors:
-  - Jeanette Winterson
+    - Jeanette Winterson
   book_title: 'The World And Other Places: Stories'
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1403179771i/15049.jpg
   isbn: '9780375702365'
   languages:
-  - English
-  - Spanish
-  - Dutch
+    - English
+    - Spanish
+    - Dutch
   goodreads_link: https://www.goodreads.com/book/show/15049.The_World_and_Other_Places
-  note: 'существует перевод, но только одного из рассказов сборника: "Весь мир и другие
-    страны" от Джанет Уинтерсон из журнала "Англия" от 1992 года.'
   page_count: '240'
   publication_year: '2000'
   publishers:
-  - Alfred A. Knopf, Contact, Distributed by Random House, Jonathan Cape, Knopf, Knopf
-    Doubleday Publishing Group, Lumen, Penguin Random House, Vintage
+    - Alfred A. Knopf, Contact, Distributed by Random House, Jonathan Cape, Knopf,
+      Knopf Doubleday Publishing Group, Lumen, Penguin Random House, Vintage
   russian_audioversion: false
   russian_translation_status: unknown
   tags:
-  - LGBTQIA+
-  - adult fiction
-  - contemporary
-  - fantasy
-  - literary
-  - magical realism
-  - queer
-  - short stories
+    - LGBTQIA+
+    - adult fiction
+    - contemporary
+    - fantasy
+    - literary
+    - magical realism
+    - queer
+    - short stories
 ---
+
 Her first short story collection exhibits the multitude of talents that have made English novelist Jeanette Winterson not just admired but beloved by her many fans. There are the surprising, fresh...
 
 <!--more-->

@@ -6,29 +6,29 @@ type: books
 params:
   book_title: Жареные зеленые помидоры
   authors:
-  - Fannie Flagg
-  russian_publisher: Текст
-  publication_year: "2007"
-  isbn: "5751606175"
+    - Fannie Flagg
+  publication_year: '2007'
+  isbn: '5751606175'
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1218410084i/3742893.jpg
   tags:
-  - historical fiction
-  - classics
-  - LGBTQIA+
-  - queer
-  - book club
-  - historical
-  - chick-lit
-  - American south
-  - humor
-  - fiction
+    - historical fiction
+    - classics
+    - LGBTQIA+
+    - queer
+    - book club
+    - historical
+    - chick-lit
+    - American south
+    - humor
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/3742893
   languages:
-  - Russian
-  - English
-  page_count: "432"
+    - Russian
+    - English
+  page_count: '432'
 ---
+
 Знаменитый роман известной американской писательницы Ф.Флэгг рассказывает о дружбе женщин, живших в первой половине нынешнего столетия и в наше время.
 
 <!--more-->

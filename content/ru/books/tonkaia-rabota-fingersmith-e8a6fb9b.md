@@ -5,41 +5,41 @@ slug: tonkaia-rabota-fingersmith-e8a6fb9b
 type: books
 params:
   book_title: Тонкая работа (Fingersmith)
-  editions count: "133"
   authors:
-  - Sarah Waters, Сара Уотерс
+    - Sarah Waters, Сара Уотерс
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2002"
-  isbn: "9785353017509"
+  publication_year: '2002'
+  isbn: '9785353017509'
   publishers:
-  - Azbuka, Rosman Press, Иностранка, Эксмо
+    - Azbuka, Rosman Press, Иностранка, Эксмо
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377028250i/2138520.jpg
   tags:
-  - 19th century
-  - England
-  - LGBTQIA+
-  - Lambda Literary Awards
-  - London
-  - Stonewall Book Awards
-  - crime
-  - extortion
-  - historical
-  - lesbian
-  - mystery
-  - queer
-  - romance
-  - social commentary
-  - young adult (YA)
-  - fiction
+    - 19th century
+    - England
+    - LGBTQIA+
+    - Lambda Literary Awards
+    - London
+    - Stonewall Book Awards
+    - crime
+    - extortion
+    - historical
+    - lesbian
+    - mystery
+    - queer
+    - romance
+    - social commentary
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/2138520._
   languages:
-  - English
-  - Spanish
-  - Russian
-  page_count: "845"
+    - English
+    - Spanish
+    - Russian
+  page_count: '845'
 ---
+
 Лондонский бедный квартал, вторая половина XIX века. Сью Триндер, сирота, выросшая среди воров и мошенников, не знает, что судьба странными узами соединила ее жизнь с юной наследницей богатого имения, живущего замкнуто и уединенно…
 
 <!--more-->

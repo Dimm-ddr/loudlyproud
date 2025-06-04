@@ -5,38 +5,38 @@ title: The Well Of Loneliness
 type: books
 params:
   authors:
-  - Radclyffe Hall
+    - Radclyffe Hall
   book_title: The Well Of Loneliness
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415588651i/129223.jpg
-  editions count: '288'
   isbn: '9781840224559'
   languages:
-  - English
-  - Hebrew
+    - English
+    - Hebrew
   goodreads_link: https://www.goodreads.com/book/show/129223.The_Well_of_Loneliness
   page_count: '467'
   publication_year: '1928'
   russian_audioversion: false
   russian_translation_status: exists
   tags:
-  - England
-  - English literature
-  - Irish literature
-  - LGBTQIA+
-  - LGBTQIA+ novels before Stonewall
-  - social class
-  - authors
-  - classics
-  - adventure
-  - historical
-  - lesbian
-  - queer
-  - romance
-  - science
-  - school
-  - social commentary
+    - England
+    - English literature
+    - Irish literature
+    - LGBTQIA+
+    - LGBTQIA+ novels before Stonewall
+    - social class
+    - authors
+    - classics
+    - adventure
+    - historical
+    - lesbian
+    - queer
+    - romance
+    - science
+    - school
+    - social commentary
 ---
+
 Stephen is an ideal child of aristocratic parents—a fencer, a horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling writer and a loyal, protective lover.
 
 <!--more-->

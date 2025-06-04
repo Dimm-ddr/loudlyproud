@@ -5,33 +5,33 @@ slug: ziggi-stardast-i-ia-10a2bb97
 type: books
 params:
   book_title: Зигги Стардаст и я
-  editions count: "10"
   authors:
-  - Джеймс Брендон (James Brandon)
+    - Джеймс Брендон (James Brandon)
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2019"
-  isbn: "9785041155568"
+  publication_year: '2019'
+  isbn: '9785041155568'
   publishers:
-  - БОМБОРА
+    - БОМБОРА
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1600167420i/55342910.jpg
   tags:
-  - LGBTQIA+
-  - contemporary
-  - gay
-  - historical fiction
-  - mental health
-  - performing arts
-  - queer
-  - romance
-  - fiction
+    - LGBTQIA+
+    - contemporary
+    - gay
+    - historical fiction
+    - mental health
+    - performing arts
+    - queer
+    - romance
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/55342910
   languages:
-  - Russian
-  - English
-  page_count: "416"
+    - Russian
+    - English
+  page_count: '416'
 ---
+
 На дворе 1973 год, во Вьетнаме свирепствует война. В США гомосексуальность преследуется законом.Жизнь Джонатана напоминает кромешный ад - над ним издеваются в школе, дядю держат в психбольнице, а...
 
 <!--more-->

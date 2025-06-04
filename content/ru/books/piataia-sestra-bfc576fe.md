@@ -5,22 +5,22 @@ slug: piataia-sestra-bfc576fe
 type: books
 params:
   book_title: Пятая Сестра
-  openlibrary_link: https://openlibrary.org/books/OL46543156M/Pyataya_sestra
   authors:
-  - Медина Мирай, Мирай Медина
+    - Медина Мирай, Мирай Медина
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2022"
-  isbn: "9785171273835"
+  publication_year: '2022'
+  isbn: '9785171273835'
   publishers:
-  - АСТ
+    - АСТ
   cover: https://covers.openlibrary.org/b/id/13296584-L.jpg
   tags:
-  - fiction
+    - fiction
   languages:
-  - Russian
-  page_count: "291"
+    - Russian
+  page_count: '291'
 ---
+
 Когда в Лесу Мерцаний рождается новое древо, четыре сестры-стихии празднуют его рождение, поднося плоды древ, из которых сами родились. Но что, если однажды одно из новых древ выпустит на свет ещё...
 
 <!--more-->

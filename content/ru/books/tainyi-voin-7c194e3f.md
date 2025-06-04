@@ -5,33 +5,33 @@ slug: tainyi-voin-7c194e3f
 type: books
 params:
   book_title: Тайный Воин
-  editions count: "3"
   authors:
-  - Lynn Flewelling, Линн Флевеллинг
+    - Lynn Flewelling, Линн Флевеллинг
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2003"
+  publication_year: '2003'
   publishers:
-  - Эксмо
+    - Эксмо
   series: Tamír Triad
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347866367i/74274.jpg
   tags:
-  - LGBTQIA+
-  - adult fiction
-  - epic fantasy
-  - genderqueer
-  - high fantasy
-  - magic
-  - queer
-  - science fiction
-  - fiction
+    - LGBTQIA+
+    - adult fiction
+    - epic fantasy
+    - genderqueer
+    - high fantasy
+    - magic
+    - queer
+    - science fiction
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/74274.Hidden_Warrior
   languages:
-  - English
-  - Russian
-  page_count: "576"
+    - English
+    - Russian
+  page_count: '576'
 ---
+
 «До тех пор, пока дочь, наследница Фелатимоса, сражается и побеждает, Скала никогда не будет покорена» - гласит древнее пророчество оракула. Благоденствие Скалы действительно длилось до восшествия...
 
 <!--more-->

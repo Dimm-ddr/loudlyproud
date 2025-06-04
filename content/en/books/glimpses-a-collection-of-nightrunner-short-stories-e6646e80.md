@@ -6,30 +6,30 @@ type: books
 params:
   book_title: 'Glimpses: A Collection Of Nightrunner Short Stories'
   tags:
-  - LGBTQIA+
-  - anthologies
-  - gay
-  - high fantasy
-  - male-male romance
-  - queer
-  - short stories
+    - LGBTQIA+
+    - anthologies
+    - gay
+    - high fantasy
+    - male-male romance
+    - queer
+    - short stories
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387173663i/9368252.jpg
-  editions count: '1'
   isbn: '9781453624913'
   goodreads_link: https://www.goodreads.com/book/show/9368252-glimpses
   authors:
-  - Lynn Flewelling
+    - Lynn Flewelling
   publication_year: '2010'
   publishers:
-  - Createspace Independent Publishing Platform
+    - Createspace Independent Publishing Platform
   page_count: '130'
   russian_translation_status: unknown
   series: Nightrunner
   languages:
-  - English
+    - English
   russian_audioversion: false
 ---
+
 Lynn Flewelling's Glimpses explores "lost" moments from her popular Nightrunner Series, events alluded to or passed over - Alec's parents and childhood, Seregil's early liaisons in Skala, Seregil...
 
 <!--more-->

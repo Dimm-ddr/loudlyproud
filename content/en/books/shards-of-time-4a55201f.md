@@ -6,36 +6,36 @@ type: books
 params:
   book_title: Shards Of Time
   tags:
-  - adventure
-  - crime
-  - gay
-  - high fantasy
-  - LGBTQIA+
-  - magic
-  - male-male romance
-  - murder
-  - queer
-  - spy stories
-  - suspense
-  - thriller
+    - adventure
+    - crime
+    - gay
+    - high fantasy
+    - LGBTQIA+
+    - magic
+    - male-male romance
+    - murder
+    - queer
+    - spy stories
+    - suspense
+    - thriller
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377657570i/18006456.jpg
-  editions count: '3'
   isbn: '9780345522313'
   goodreads_link: https://www.goodreads.com/book/show/18006456-shards-of-time
   authors:
-  - Lynn Flewelling
+    - Lynn Flewelling
   publication_year: '2014'
   publishers:
-  - Audible Studios on Brilliance, Audible Studios on Brilliance Audio, Del Rey, National
-    Geographic Books, Random House Publishing Group
+    - Audible Studios on Brilliance, Audible Studios on Brilliance Audio, Del Rey,
+      National Geographic Books, Random House Publishing Group
   page_count: '409'
   russian_translation_status: unknown
   series: Nightrunner
   languages:
-  - English
+    - English
   russian_audioversion: false
 ---
+
 Acclaimed author Lynn Flewelling brings her beloved Nightrunners series to a close—at least for now—with a thrilling novel of murder, mystery, and magic. The governor of the sacred island of...
 
 <!--more-->

@@ -1,12 +1,14 @@
 """
 Constants for the frontmatter validator.
 """
+from pathlib import Path
+
 # Folders to scan for book markdown files
-BOOK_CONTENT_PATHS: list[str] = [
-    "content/ru/books",
-    "content/en/books",
-    "content/fa/books",
-    "content/ku/books",
+BOOK_CONTENT_PATHS: list[Path] = [
+    Path("content/ru/books"),
+    Path("content/en/books"),
+    Path("content/fa/books"),
+    Path("content/ku/books"),
 ]
 
 # File extension for markdown files

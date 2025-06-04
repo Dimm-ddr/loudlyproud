@@ -5,40 +5,40 @@ slug: krasnyi-belyi-i-korolevskii-sinii-2cb2cf5f
 type: books
 params:
   book_title: Красный, белый и королевский синий
-  editions count: "119"
   authors:
-  - Casey McQuiston
+    - Casey McQuiston
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2019"
-  isbn: "1250316782"
+  publication_year: '2019'
+  isbn: '1250316782'
   publishers:
-  - Астрель
+    - Астрель
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566742512i/41150487.jpg
   tags:
-  - LGBTQIA+
-  - London
-  - United Kingdom
-  - United States
-  - contemporary
-  - gay
-  - humor
-  - new adult (NA)
-  - new york times bestseller
-  - queer
-  - romance
-  - Washington D.C.
-  - young adult (YA)
-  - fiction
+    - LGBTQIA+
+    - London
+    - United Kingdom
+    - United States
+    - contemporary
+    - gay
+    - humor
+    - new adult (NA)
+    - new york times bestseller
+    - queer
+    - romance
+    - Washington D.C.
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/41150487-red-white-royal-blue
   languages:
-  - English
-  - Spanish
-  - German
-  - Russian
-  page_count: "462"
+    - English
+    - Spanish
+    - German
+    - Russian
+  page_count: '462'
 ---
+
 После того как мать Алекса избрали президентом, парня стали воспринимать кем-то вроде небожителя.
 
 <!--more-->

@@ -5,38 +5,38 @@ slug: kak-proigrat-v-voine-vremion-this-is-how-you-lose-the-time-war-f67f0fff
 type: books
 params:
   book_title: Как проиграть в войне времён (This Is How You Lose The Time War)
-  editions count: "42"
   authors:
-  - Amal El-Mohtar, Амаль Эль-Мохтар
-  - Max Gladstone, Макс Гладстон
+    - Amal El-Mohtar, Амаль Эль-Мохтар
+    - Max Gladstone, Макс Гладстон
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2019"
-  isbn: "9785171354374"
+  publication_year: '2019'
+  isbn: '9785171354374'
   publishers:
-  - АСТ
+    - АСТ
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
   tags:
-  - Atlantis
-  - English literature
-  - LGBTQIA+
-  - London
-  - epistolary
-  - fantasy
-  - new york times bestseller
-  - queer
-  - romance
-  - science fiction
-  - time-traveling
-  - fiction
+    - Atlantis
+    - English literature
+    - LGBTQIA+
+    - London
+    - epistolary
+    - fantasy
+    - new york times bestseller
+    - queer
+    - romance
+    - science fiction
+    - time-traveling
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/60416703
   languages:
-  - English
-  - German
-  - Russian
-  page_count: "208"
+    - English
+    - German
+    - Russian
+  page_count: '208'
 ---
+
 Две враждующие организации отправляют девушек-спецагентов в прошлое. Их миссия - откорректировать его и создать такую версию будущего, где именно их компания процветает...
 
 <!--more-->

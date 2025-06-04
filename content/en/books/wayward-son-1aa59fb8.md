@@ -5,42 +5,42 @@ title: Wayward Son
 type: books
 params:
   authors:
-  - Rainbow Rowell
+    - Rainbow Rowell
   book_title: Wayward Son
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552666477i/44017627.jpg
-  editions count: '6'
   isbn: '9781250146076'
   languages:
-  - English
+    - English
   goodreads_link: https://www.goodreads.com/book/show/44017627-wayward-son
   page_count: '356'
   publication_year: '2019'
   publishers:
-  - MacMillan Audio
-  - MacMillan Childrens Books
-  - Macmillan Young Listeners
-  - Wednesday Books
+    - MacMillan Audio
+    - MacMillan Childrens Books
+    - Macmillan Young Listeners
+    - Wednesday Books
   russian_audioversion: false
   russian_translation_status: unknown
   series: Simon Snow
   tags:
-  - LGBTQIA+
-  - audiobook
-  - children's fiction
-  - contemporary
-  - dragons
-  - fantasy
-  - friendship
-  - magic
-  - monsters
-  - new york times bestseller
-  - paranormal
-  - queer
-  - romance
-  - vampires
-  - young adult (YA)
+    - LGBTQIA+
+    - audiobook
+    - children's fiction
+    - contemporary
+    - dragons
+    - fantasy
+    - friendship
+    - magic
+    - monsters
+    - new york times bestseller
+    - paranormal
+    - queer
+    - romance
+    - vampires
+    - young adult (YA)
 ---
+
 The story is supposed to be over. Simon Snow did everything he was supposed to do...
 
 <!--more-->

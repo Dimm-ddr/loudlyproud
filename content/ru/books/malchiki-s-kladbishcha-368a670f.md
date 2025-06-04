@@ -5,30 +5,30 @@ slug: malchiki-s-kladbishcha-368a670f
 type: books
 params:
   book_title: Мальчики с кладбища
-  editions count: "52"
   authors:
-  - Aiden Thomas, Эйден Томас
+    - Aiden Thomas, Эйден Томас
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2008"
-  isbn: "9785041573485"
+  publication_year: '2008'
+  isbn: '9785041573485'
   publishers:
-  - Like Book
+    - Like Book
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640457315i/59931036.jpg
   tags:
-  - LGBTQIA+
-  - fantasy
-  - paranormal
-  - queer
-  - romance
-  - young adult (YA)
-  - fiction
+    - LGBTQIA+
+    - fantasy
+    - paranormal
+    - queer
+    - romance
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/59931036
   languages:
-  - Russian
-  page_count: "539"
+    - Russian
+  page_count: '539'
 ---
+
 Ядриэль наделен особым даром: он умеет вызывать духов. Но он не может по-настоящему пользоваться магией, пока не пройдет обряд посвящения.Чтобы показать своей семье, на что способен и кто он на...
 
 <!--more-->

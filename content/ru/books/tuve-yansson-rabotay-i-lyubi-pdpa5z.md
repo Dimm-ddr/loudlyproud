@@ -1,39 +1,39 @@
 ---
 draft: false
-title: "Туве Янссон: работай и люби"
+title: 'Туве Янссон: работай и люби'
 slug: tuve-yansson-rabotay-i-lyubi-pdpa5z
 type: books
 params:
-  book_title: "Туве Янссон: работай и люби"
+  book_title: 'Туве Янссон: работай и люби'
   authors:
-  - Tuula Karjalainen
-  russian_publisher: АСТ
-  publication_year: "2017"
-  isbn: "9785170864935"
+    - Tuula Karjalainen
+  publication_year: '2017'
+  isbn: '9785170864935'
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1508603414i/36452392.jpg
   tags:
-  - nonfiction
-  - biography
-  - art
-  - Finnish literature
-  - memoir
-  - LGBTQIA+
-  - history
-  - queer
-  - audiobook
+    - nonfiction
+    - biography
+    - art
+    - Finnish literature
+    - memoir
+    - LGBTQIA+
+    - history
+    - queer
+    - audiobook
   goodreads_link: https://www.goodreads.com/book/show/36452392
   languages:
-  - Russian
-  - Finnish
-  - English
-  - Swedish
-  - Norwegian
-  - German
-  - Danish
-  - Chinese
-  page_count: "376"
+    - Russian
+    - Finnish
+    - English
+    - Swedish
+    - Norwegian
+    - German
+    - Danish
+    - Chinese
+  page_count: '376'
 ---
+
 Туула Карьялайнен провела огромную исследовательскую работу и написала удивительную, прекрасно иллюстрированную биографию, в которой длинная и яркая жизнь Туве Янссон вплетена в историю XX века.
 
 <!--more-->

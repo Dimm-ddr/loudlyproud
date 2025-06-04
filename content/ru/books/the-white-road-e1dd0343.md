@@ -5,33 +5,33 @@ slug: the-white-road-e1dd0343
 type: books
 params:
   book_title: The White Road
-  editions count: "1"
   authors:
-  - Lynn Flewelling, Линн Флевеллинг
+    - Lynn Flewelling, Линн Флевеллинг
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2010"
+  publication_year: '2010'
   publishers:
-  - National Geographic Books, Spectra
+    - National Geographic Books, Spectra
   series: Nightrunner
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1437305130i/6290240.jpg
   tags:
-  - LGBTQIA+
-  - adventure
-  - epic fantasy
-  - good and evil
-  - high fantasy
-  - magic
-  - male-male romance
-  - queer
-  - fiction
+    - LGBTQIA+
+    - adventure
+    - epic fantasy
+    - good and evil
+    - high fantasy
+    - magic
+    - male-male romance
+    - queer
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/6290240-the-white-road
   languages:
-  - English
-  - Russian
-  page_count: "402"
+    - English
+    - Russian
+  page_count: '402'
 ---
+
 Избежав смерти и рабства в Пленимаре, Алек и Серегил хотят вернуться к жизни ночных странников. Вместо этого, они оказываются обременены странным существом созданным алхимией — Себранном.
 
 <!--more-->

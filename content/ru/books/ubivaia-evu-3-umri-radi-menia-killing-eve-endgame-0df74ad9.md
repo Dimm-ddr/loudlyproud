@@ -5,32 +5,32 @@ slug: ubivaia-evu-3-umri-radi-menia-killing-eve-endgame-0df74ad9
 type: books
 params:
   book_title: 'Убивая Еву 3: "Умри ради меня (Killing Eve : Endgame)"'
-  editions count: "18"
   authors:
-  - Luke Jennings, Люк Дженнингс
+    - Luke Jennings, Люк Дженнингс
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2020"
-  isbn: "9785171271633"
+  publication_year: '2020'
+  isbn: '9785171271633'
   publishers:
-  - АСТ
+    - АСТ
   series: Killing Eve
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630322494i/58889837.jpg
   tags:
-  - English literature
-  - LGBTQIA+
-  - crime
-  - mystery
-  - queer
-  - thriller
-  - fiction
+    - English literature
+    - LGBTQIA+
+    - crime
+    - mystery
+    - queer
+    - thriller
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/58889837-3
   languages:
-  - English
-  - Russian
-  page_count: "256"
+    - English
+    - Russian
+  page_count: '256'
 ---
+
 Противостояние наемной убийцы Вилланель и агента службы безопасности Евы Поластри продолжается. Действие разворачивается на фоне Лондона и Санкт-Петербурга...
 
 <!--more-->

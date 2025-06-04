@@ -5,39 +5,39 @@ slug: chto-esli-eto-my-what-if-its-us-4d74df44
 type: books
 params:
   book_title: Что, если это мы (What If It's Us)
-  editions count: "61"
   authors:
-  - Adam Silvera, Адам Сильвера
-  - Becky Albertalli, Бекки Алберталли
+    - Adam Silvera, Адам Сильвера
+    - Becky Albertalli, Бекки Алберталли
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2018"
-  isbn: "9785045041126"
+  publication_year: '2018'
+  isbn: '9785045041126'
   publishers:
-  - Popcorn books
+    - Popcorn books
   series: What If It's Us
   cover: 
     https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526557760i/36341204.jpg
   tags:
-  - LGBTQIA+
-  - New York
-  - audiobook
-  - children's fiction
-  - contemporary
-  - dating
-  - gay
-  - new york times bestseller
-  - queer
-  - romance
-  - social commentary
-  - young adult (YA)
-  - fiction
+    - LGBTQIA+
+    - New York
+    - audiobook
+    - children's fiction
+    - contemporary
+    - dating
+    - gay
+    - new york times bestseller
+    - queer
+    - romance
+    - social commentary
+    - young adult (YA)
+    - fiction
   goodreads_link: https://www.goodreads.com/book/show/36341204-what-if-it-s-us
   languages:
-  - English
-  - Russian
-  page_count: "443"
+    - English
+    - Russian
+  page_count: '443'
 ---
+
 Для Артура все только начинается: он приехал в Нью-Йорк на летнюю стажировку и мечтает попасть на все свои любимые бродвейские шоу...
 
 <!--more-->
