@@ -144,3 +144,8 @@ ranking:
   content_match: 0.5
   # Lower priority for matches in tag pages
   tag_page_match: 0.3
+
+# Ensure proper MIME types
+mime_types:
+  js: application/javascript
+  css: text/css

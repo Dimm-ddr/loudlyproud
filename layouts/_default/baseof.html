@@ -13,7 +13,9 @@
     {{ partial "tags/styles.html" . }}
     
     <!-- Pagefind -->
-    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <link href='{{ "search/pagefind-ui.css" | relURL }}' rel="stylesheet">
+    <script src='{{ "search/pagefind-ui.js" | relURL }}' type="module"></script>
+    <script src='{{ "search/pagefind.js" | relURL }}' type="module"></script>
 
     <!-- Alpine.js setup -->
     <script defer>
@@ -67,11 +69,6 @@
         <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink | absURL }}">
       {{ end }}
     {{ end }}
-
-    <!-- Pagefind resources -->
-    <link href='{{ "search/pagefind-ui.css" | relURL }}' rel="stylesheet">
-    <script src='{{ "search/pagefind-ui.js" | relURL }}'></script>
-    <script src='{{ "search/pagefind.js" | relURL }}'></script>
 
     <!-- Pagefind styles -->
     <style>

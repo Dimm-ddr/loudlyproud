@@ -1,30 +1,22 @@
 ---
+
 draft: false
 title: Как проиграть в войне времён (This Is How You Lose The Time War)
 slug: kak-proigrat-v-voine-vremion-this-is-how-you-lose-the-time-war-f67f0fff
 type: books
 params:
   book_title: Как проиграть в войне времён (This Is How You Lose The Time War)
-  editions count: "42"
-  book_description: Две враждующие организации отправляют девушек-спецагентов в
-    прошлое. Их миссия - откорректировать его и создать такую версию будущего,
-    где именно их компания процветает. Девушки начинают обмен ироничными и
-    едкими письмами, которые оставляют друг другу по очереди в самых неожиданных
-    местах и временах во время заданий. Постепенно они становятся все ближе друг
-    другу, но война продолжается, и кто-то должен в ней победить.
   authors:
     - Amal El-Mohtar, Амаль Эль-Мохтар
     - Max Gladstone, Макс Гладстон
-  short_book_description: Две враждующие организации отправляют
-    девушек-спецагентов в прошлое. Их миссия - откорректировать его и создать
-    такую версию будущего, где именно их компания процветает...
   russian_translation_status: exists
   russian_audioversion: false
-  publication_year: "2019"
-  isbn: "9785171354374"
+  publication_year: '2019'
+  isbn: '9785171354374'
   publishers:
     - АСТ
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
+  cover: 
+    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644860614i/60416703.jpg
   tags:
     - Atlantis
     - English literature
@@ -43,5 +35,6 @@ params:
     - English
     - German
     - Russian
-  page_count: "208"
+  page_count: '208'
 ---
+Две враждующие организации отправляют девушек-спецагентов в прошлое. Их миссия - откорректировать его и создать такую версию будущего, где именно их компания процветает. Девушки начинают обмен ироничными и едкими письмами, которые оставляют друг другу по очереди в самых неожиданных местах и временах во время заданий. Постепенно они становятся все ближе друг другу, но война продолжается, и кто-то должен в ней победить.
