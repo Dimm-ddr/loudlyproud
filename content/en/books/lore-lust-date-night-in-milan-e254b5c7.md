@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: lore-lust-date-night-in-milan-e254b5c7
 title: 'Lore & Lust: Date Night In Milan'
@@ -30,8 +31,4 @@ params:
   - queer
   - vampires
 ---
-This story takes place between Chapters 31 and 32 of Lore and Lust Book One
-
-<!--more-->
-
 This story takes place between Chapters 31 and 32 of Lore and Lust Book One

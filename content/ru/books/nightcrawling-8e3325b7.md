@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: nightcrawling-8e3325b7
 title: Nightcrawling
@@ -31,8 +32,4 @@ params:
   - race
   - siblings
 ---
-Kiara and her brother, Marcus, are scraping by in an East Oakland apartment complex optimistically called the Regal-Hi. Both have dropped out of high school, their family fractured by death and...
-
-<!--more-->
-
 Kiara and her brother, Marcus, are scraping by in an East Oakland apartment complex optimistically called the Regal-Hi. Both have dropped out of high school, their family fractured by death and prison. But while Marcus clings to his dream of rap stardom, Kiara hunts for work to pay their rent--which has more than doubled--and to keep the nine-year-old boy next door, abandoned by his mother, safe and fed.One night, what begins as a drunken misunderstanding with a stranger turns into the job Kiara never imagined wanting but now desperately needs: nightcrawling. Her world breaks open even further when her name surfaces in an investigation that exposes her as a key witness in a massive scandal within the Oakland Police Department.

@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: the-well-of-loneliness-cded3f6d
 title: The Well Of Loneliness
@@ -36,9 +37,4 @@ params:
     - school
     - social commentary
 ---
-
-Stephen is an ideal child of aristocratic parents—a fencer, a horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling writer and a loyal, protective lover.
-
-<!--more-->
-
 Stephen is an ideal child of aristocratic parents—a fencer, a horse rider and a keen scholar. Stephen grows to be a war hero, a bestselling writer and a loyal, protective lover. But Stephen is a woman, and her lovers are women. As her ambitions drive her, and society confines her, Stephen is forced into desperate actions.The Well of Lonelinesswas banned for obscenity when published in 1928. It became an international bestseller, and for decades was the single most famous lesbian novel. It has influenced how love between women is understood, for the twentieth century and beyond.

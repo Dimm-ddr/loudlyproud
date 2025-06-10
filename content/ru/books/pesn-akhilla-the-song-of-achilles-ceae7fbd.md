@@ -1,4 +1,5 @@
 ---
+
 draft: false
 title: Песнь Ахилла (The Song Of Achilles)
 slug: pesn-akhilla-the-song-of-achilles-ceae7fbd
@@ -45,9 +46,4 @@ params:
     - Turkish
   page_count: '384'
 ---
-
-Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил и робок, так еще и нечаянно убивает сверстника..
-
-<!--more-->
-
 Дебютный роман американки Мадлен Миллер. Специалиста по античной культуре. Очаровал не только читателей и критиков, но и коллег-писателей. Юный Патрокл — сплошное разочарование для своего отца: мало того что слишком хил и робок, так еще и нечаянно убивает сверстника. В ссылке при дворе царя Пелея он встречает неотразимого Ахилла, и вместе они вступают на трудный путь в легенду — путь дружбы, любви и жестоких испытаний. A thrilling, profoundly moving, and utterly unique retelling of the legend of Achilles and the Trojan War from the bestselling author of Circe. A tale of gods, kings, immortal fame, and the human heart, The Song of Achillesis a dazzling literary feat that brilliantly reimagines Homer’s enduring masterwork, The Iliad. An action-packed adventure, an epic love story, a marvelously conceived and executed page-turner, Miller’s monumental debut novel has already earned resounding acclaim from some of contemporary fiction’s brightest lights—and fans of Mary Renault, Bernard Cornwell, Steven Pressfield, and Colleen McCullough’s Masters of Rome series will delight in this unforgettable journey back to ancient Greece in the Age of Heroes.

@@ -1,4 +1,5 @@
 ---
+
 draft: false
 title: Идеальный парень (Boyfriend Material)
 slug: idealnyi-paren-boyfriend-material-32b3bf0f
@@ -34,11 +35,6 @@ params:
     - Russian
   page_count: '480'
 ---
-
-ТРЕБУЕТСЯ: Один (фальшивый) парень. Желательно идеальный...
-
-<!--more-->
-
 ТРЕБУЕТСЯ:
 
 Один (фальшивый) парень. Желательно идеальный.

@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: annie-on-my-mind-41e49526
 title: Annie On My Mind
@@ -37,8 +38,4 @@ params:
   - teenagers
   - young adult (YA)
 ---
-This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be...
-
-<!--more-->
-
 This groundbreaking book is the story of two teenage girls whose friendship blossoms into love and who, despite pressures from family and school that threaten their relationship, promise to be true to each other and their feelings. The book has been banned from many school libraries and publicly burned in Kansas City.Of the author and the book, the Margaret A. Edwards Award committee said, “Using a fluid, readable style, Garden opens a window through which readers can find courage to be true to themselves.”

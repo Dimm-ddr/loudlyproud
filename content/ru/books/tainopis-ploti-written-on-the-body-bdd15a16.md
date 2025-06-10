@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: tainopis-ploti-written-on-the-body-bdd15a16
 title: Тайнопись плоти. (Written On The Body)
@@ -38,9 +39,4 @@ params:
     - romance
     - women
 ---
-
-Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине…
-
-<!--more-->
-
 Провокационный роман Дженет Уинтерсон сделал автора одним из самых популярных и противоречивых писателей Англии. У рассказчика нет ни имени, ни пола — есть лишь романтическая страсть к замужней женщине. «Тайнопись плоти» — один из самых оригинальных романов XX века — впервые публикуется на русском языке. Written on the Body is a secret code only visible in certain lights: the accumulation of a lifetime gather there. In places the palimpsest is so heavily worked that the letters feel like braille. I like to keep my body rolled away from prying eyes, never unfold too much, tell the whole story. I didn’t know that Louise would have reading hands. She has translated me into her own book.

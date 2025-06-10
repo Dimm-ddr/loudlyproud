@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: skin-aabaef33
 title: Skin
@@ -25,8 +26,4 @@ params:
   - thriller
   - weird
 ---
-Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.
-
-<!--more-->
-
 Tess, a sculptor, and Bibi, a dancer, come together to create a new underground art form of metal and flesh, but their new art drives them deeper and deeper into a realm of obsession. Reprint.

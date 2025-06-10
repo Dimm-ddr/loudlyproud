@@ -36,7 +36,7 @@ config = "postcss.config.js"
 
 [markup.goldmark]
 [markup.goldmark.renderer]
-unsafe = false  # Disable raw HTML for security
+unsafe = true  # Allow raw HTML in markdown content
 hardWraps = true  # Convert line breaks to <br>
 xhtml = true  # Use XHTML-style tags
 [markup.goldmark.parser]
