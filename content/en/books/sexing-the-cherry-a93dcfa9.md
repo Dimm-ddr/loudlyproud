@@ -1,4 +1,5 @@
 ---
+
 draft: false
 slug: sexing-the-cherry-a93dcfa9
 title: Sexing The Cherry
@@ -37,8 +38,4 @@ params:
   - queer
   - United Kingdom
 ---
-In a fantastic world that is and is not seventeenth-century England, a baby is found floating in the Thames. The child, Jordan, is rescued by Dog Woman and grows up to travel the world like...
-
-<!--more-->
-
 In a fantastic world that is and is not seventeenth-century England, a baby is found floating in the Thames. The child, Jordan, is rescued by Dog Woman and grows up to travel the world like Gulliver, though he finds that the world’s most curious oddities come from his own mind. Winterson leads the reader from discussions on the nature of time to Jordan’s fascination with journeys concealed within other journeys, all with a dizzying speed that shoots the reader from epiphany to shimmering epiphany.
