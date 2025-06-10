@@ -7,6 +7,7 @@ defaultContentLanguageInSubdir = true  # Forces all languages into their own dir
 ignoreFiles = ['content/books/temp/.*']
 i18nDir = "i18n"
 bookCardSummaryLength = 110
+disableKinds = ["section"]  # Disable section pages as they're not used
 
 [languages]
   [languages.en]
@@ -60,15 +61,6 @@ guessSyntax = true  # Auto-detect language if not specified
 
 [taxonomies]
   tag = "tags"
-
-[section]
-[section.books]
-title = "Books"
-type = "books"
-
-[section.feedback]
-title = "Feedback"
-type = "feedback"
 
 [permalinks]
 books = "/books/:slugorcontentbasename/"

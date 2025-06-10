@@ -1,99 +1,137 @@
-# Loudly Proud - LGBTQIA+ Literature Catalog
 
-This is a bilingual (Russian/English) static website built with Hugo that serves as a comprehensive catalog of LGBTQIA+ literature. The project is open-source and hosted on Netlify.
 
-## Core Purpose
+# 🌈 Loudly Proud — A Multilingual LGBTQIA+ Literature Catalog
 
-The site functions as a curated library catalog focusing on queer literature, allowing users to:
+**Loudly Proud** is a multilingual catalog of LGBTQIA+ literature, designed to improve discoverability, accessibility, and representation of queer books across languages and cultures. The project is open-source and deployed as a static website using [Hugo](https://gohugo.io/).
 
-- Browse books with detailed metadata
-- Search through the collection
-- Filter books by various tags
-- Submit feedback and book suggestions
+It is maintained by and for readers who want a curated space to explore queer narratives — especially those not easily found in mainstream platforms or limited to one language.
 
-## Technical Implementation
+---
 
-### Key Technologies
+## 🌟 Project Goals
 
-- **Static Site Generator**: Hugo
-- **Frontend**:
-  - TailwindCSS for styling
-  - AlpineJS for interactive components
-  - TypeScript for enhanced functionality
-- **CMS**: Decap CMS (formerly Netlify CMS) for content management
-- **Search**: Pagefind for static search functionality
-- **Deployment**: Netlify
+- 📚 **Curate** a growing library of LGBTQIA+ books with rich metadata
+- 🌍 **Support** multilingual access to queer literature  
+  _Currently supported: Russian 🇷🇺, English 🇬🇧, Farsi 🇮🇷, Kurdish 🇹🇯_
+- 🧭 **Enable** exploration via an advanced tag system (themes, identities, genres)
+- ✍️ **Invite** community feedback and contributions
+- 🖥️ **Maintain** a lightweight, fast, and accessible static site
 
-### Content Organization
+---
 
-The site implements a sophisticated tagging system with:
+## 🔎 Key Features
 
-- Hierarchical tag categories (as seen in the tags registry)
-- Color-coded tags for visual organization
-- Tag normalization and validation
+- ✅ Searchable and filterable book catalog
+- 🏷️ Tag-based browsing with hierarchy and color-coded visual markers
+- 🌐 Multilingual structure with language-specific navigation
+- 💬 Feedback and book suggestion system
+- 🌙 Responsive layout with dark mode support
+- ♿ Built-in accessibility enhancements
+- ⚙️ Automated content validation and tag monitoring (CI-powered)
+
+---
+
+## 🛠 Tech Stack Overview
+
+> While the site is reader-facing, here's a brief tech summary:
+
+- **Static Generator**: Hugo  
+- **Styling**: TailwindCSS  
+- **Interactivity**: Alpine.js + TypeScript  
+- **Content Management**: Decap CMS (Netlify CMS fork)  
+- **Search**: Pagefind (static, client-side)  
+- **Deployment**: Netlify  
+- **CI/CD**: GitHub Actions  
+- **Linting & formatting**: Prettier, flake8, custom style guide
+
+Docs and tools are organized under:
+- `.tools/`: scripts for tag management, content validation, and CI
+- `docs/`: contributor guides and editing conventions
+
+### 🏗️ Architecture & Implementation Details
+
+**Component System**: The project implements a comprehensive component system for consistent UI:
+- Component CSS organized in `assets/css/components/` directory
+- Reusable Hugo partials that implement these components
+- Style categories: Typography, Buttons, Form Controls, Tags, Cards
+- Style guide available at `/style-guide` for development reference
+
+**Tag System**: Advanced hierarchical tagging with:
+- Tag normalization and validation processes
+- Color-coded visual organization
 - Automated tag monitoring for pull requests
+- Registry-based tag management
 
-### Component System & Style Guide
+**Content Management**: 
+- Structured validation for book entries
+- Automated workflows via GitHub Actions
+- Content stored in language-specific directories
 
-The project implements a comprehensive component system for consistent UI:
+---
 
-- **Component CSS**: Organized in `assets/css/components/` directory
-- **Style Categories**:
-  - Typography (`typography.css`)
-  - Buttons (`buttons.css`)
-  - Form Controls (`form-controls.css`)
-  - Tags (`tags.css`)
-  - Cards (`cards.css`)
-- **Hugo Partials**: Reusable template partials that implement these components
-- **Color System**: Consistent color palette with light/dark mode variations
-- **Documentation**: A style guide is available at `/style-guide`
+## 🧑‍💻 Development & Build
 
-Benefits of this approach:
-- Consistent interface across the site
-- Easy maintenance and updates
-- Clear standards for contributors
-- Responsive and accessible components out-of-the-box
+### Prerequisites
 
-### Multilingual Support
+To run the project locally, you'll need:
 
-The site supports multiple languages:
+- [Hugo (extended)](https://gohugo.io/getting-started/installing/) ≥ v0.111
+- [pnpm](https://pnpm.io/) or npm
+- Node.js ≥ 18
 
-- Russian (primary)
-- English
-- Farsi (فارسی)
-- Kurdish (کوردی)
+### Setup Instructions
 
-Features include:
+```bash
+# Install frontend dependencies
+pnpm install
 
-- Dedicated content directories for each language
-- Language-specific navigation and UI elements
-- Default language set to Russian
-- Complete translation of UI elements and content
+# Start local Hugo server with drafts and multilingual support
+pnpm run dev
+```
 
-### Content Management
+This will start the site at `http://localhost:1313` with auto-reload and full multilingual content.
 
-- Automated workflows for content validation
-- GitHub Actions for monitoring new tags in pull requests
-- Structured content validation for book entries
+### Build the Production Site
 
-### Accessibility
+```bash
+pnpm run build
+```
 
-The site includes:
+The final output will be placed in the `public/` directory.
 
-- Enhanced accessibility features
-- Responsive design
-- Dynamic loading of accessibility enhancements
-- Dark mode support
+> 🧩 The `build-config.js` script ensures that the correct environment-specific configuration is applied. You normally don't need to touch this unless you're debugging config overrides.
 
-### Notable Features
+---
 
-1. Advanced tag management system
-2. Bilingual content structure
-3. Automated content validation
-4. Community contribution support through feedback forms
-5. Responsive design with dark mode support
-6. Static search functionality
-7. Automated build and deployment pipeline
-8. Component system for UI consistency
+### ✅ Dev Tips
 
-The project is community-oriented, with features that encourage user contributions while maintaining content quality through automated validation systems. The extensive tagging system makes books easily discoverable through various cultural, thematic, and identity-based classifications.
+* The Tailwind and TypeScript setup is minimal but structured; feel free to add your own components under `assets/` and `src/`.
+* Content for books is stored in language-specific Markdown files under `content/`.
+* Use `pnpm run format` to auto-format code and markdown before committing.
+* Tag logic is in `.tools/tags/`; run tag-related checks with `pnpm run check:tags`.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from anyone who wants to help grow and improve this catalog — especially book suggestions, metadata fixes, or translations.
+
+* Submit feedback and book ideas via the site
+* Fork the repo and open pull requests
+* See [`docs/content-editing-guide.md`](docs/content-editing-guide.md) for content formatting help
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — you are free to use, copy, and adapt it, including for commercial purposes, as long as attribution is given.
+See the [LICENSE](LICENSE) file for the full legal text.
+
+---
+
+## 🌐 Live Site
+
+Explore the catalog here:
+🔗 **[https://loudlyproud.netlify.app](https://loudlyproud.netlify.app)**
+
+
