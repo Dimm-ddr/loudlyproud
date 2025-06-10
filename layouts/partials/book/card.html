@@ -28,11 +28,14 @@
             {{ end }}
         </div>
 
-        {{ with .Params.short_book_description }}
+        {{ $summaryLength := .Site.Params.bookCardSummaryLength | default 110 }}
         <div class="prose prose-sm dark:prose-invert mb-4">
-            {{ . | markdownify }}
+            {{ if .Summary }}
+                {{ .Summary | truncate $summaryLength "…" }}
+            {{ else }}
+                {{ .Plain | truncate $summaryLength "…" }}
+            {{ end }}
         </div>
-        {{ end }}
 
         <div class="mt-auto space-y-2">
             {{ with .Params.tags }}

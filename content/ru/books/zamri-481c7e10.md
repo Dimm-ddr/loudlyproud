@@ -1,36 +1,31 @@
 ---
+
 draft: false
 title: Замри
 slug: zamri-481c7e10
 type: books
 params:
   book_title: Замри
-  book_description: После смерти своей лучшей подруги Ингрид Кейтлин растеряна и
-    не представляет, как пережить боль утраты. Она отгородилась от родных и
-    друзей и с трудом понимает, как ей возвращаться в школу в новом учебном
-    году. Но однажды Кейтлин находит под своей кроватью тайный дневник Ингрид, в
-    котором та делилась переживаниями и чувствами в борьбе с тяжелой депрессией.
   authors:
-    - Нина Лакур (Nina LaCour, Nina Lakur)
-  short_book_description: После смерти своей лучшей подруги Ингрид Кейтлин
-    растеряна и не представляет, как пережить боль утраты. Она отгородилась от
-    родных и друзей и с трудом понимает, как ей возвращаться в школу в новом...
+  - Нина Лакур (Nina LaCour, Nina Lakur)
   russian_translation_status: exists
   russian_audioversion: false
   publication_year: "2021"
   isbn: "9785604629017"
-  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625861151i/58523381.jpg
+  cover: 
+    https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625861151i/58523381.jpg
   tags:
-    - LGBTQIA+
-    - contemporary
-    - mental health
-    - realistic fiction
-    - romance
-    - young adult (YA)
-    - fiction
+  - LGBTQIA+
+  - contemporary
+  - mental health
+  - realistic fiction
+  - romance
+  - young adult (YA)
+  - fiction
   goodreads_link: https://www.goodreads.com/book/show/58523381
   languages:
-    - Russian
-    - English
+  - Russian
+  - English
   page_count: "288"
 ---
+После смерти своей лучшей подруги Ингрид Кейтлин растеряна и не представляет, как пережить боль утраты. Она отгородилась от родных и друзей и с трудом понимает, как ей возвращаться в школу в новом учебном году. Но однажды Кейтлин находит под своей кроватью тайный дневник Ингрид, в котором та делилась переживаниями и чувствами в борьбе с тяжелой депрессией.

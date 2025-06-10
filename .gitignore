@@ -64,4 +64,5 @@ htmlcov/
 .tools/**/*.pyc
 .tools/.venv/
 .tools/venv/
-**/frontmatter_validation*
+.tools/frontmatter_validation_report.json
+frontmatter_validation_report.json

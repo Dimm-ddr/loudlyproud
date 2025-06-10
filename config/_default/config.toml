@@ -6,6 +6,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true  # Forces all languages into their own directory
 ignoreFiles = ['content/books/temp/.*']
 i18nDir = "i18n"
+bookCardSummaryLength = 110
 
 [languages]
   [languages.en]
@@ -35,7 +36,7 @@ config = "postcss.config.js"
 
 [markup.goldmark]
 [markup.goldmark.renderer]
-unsafe = false  # Disable raw HTML for security
+unsafe = true  # Allow raw HTML in markdown content
 hardWraps = true  # Convert line breaks to <br>
 xhtml = true  # Use XHTML-style tags
 [markup.goldmark.parser]
@@ -83,6 +84,7 @@ tags = "/tags/:slug/"
 
 [params]
   description = "A multilingual catalog of LGBTQIA+ literature featuring curated books, comprehensive tagging, and community contributions. Browse, search, and discover queer literature in multiple languages."
+  defaultBookSort = "title_asc"
 
 [params.features]
   search = true
