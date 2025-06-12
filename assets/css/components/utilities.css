@@ -1,0 +1,11 @@
+/* Utility Classes
+   ===============================
+   Miscellaneous utility classes for specific functionality
+*/
+
+@layer utilities {
+  /* Alpine.js x-cloak directive - hide elements until Alpine loads */
+  [x-cloak] {
+    display: none !important;
+  }
+} 

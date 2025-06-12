@@ -24,4 +24,4 @@ languageName = "کوردی"
 weight = 4
 languageCode = "ku"
 contentDir = "content/ku"
-disabled = false
+disabled = true

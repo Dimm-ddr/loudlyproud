@@ -1,9 +1,13 @@
 /* assets/css/tailwind.css */
+@import "./components/fonts.css";
 @import "./components/typography.css";
 @import "./components/buttons.css";
 @import "./components/form-controls.css";
 @import "./components/tags.css";
 @import "./components/cards.css";
+@import "./components/search.css";
+@import "./components/hero.css";
+@import "./components/utilities.css";
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -100,15 +104,6 @@
 .book-card > a {
   overflow: hidden;
   border-radius: 0.5rem;
-}
-
-/* Search Results Styling */
-.pagefind-ui__results-container {
-  @apply mb-8 font-normal;
-}
-
-.pagefind-ui__result {
-  @apply mb-4;
 }
 
 /* Logo Styling */
@@ -243,50 +238,51 @@
 
   /* Rainbow background gradients */
   .rainbow-bg {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 0, 24, 0.1) 0%,
-      rgba(255, 165, 44, 0.1) 20%,
-      rgba(255, 255, 65, 0.1) 40%,
-      rgba(0, 128, 24, 0.1) 60%,
-      rgba(0, 0, 249, 0.1) 80%,
-      rgba(134, 0, 125, 0.1) 100%
+    background: linear-gradient(135deg, /* top-left to bottom-right for LTR */
+        rgba(255, 0, 24, 0.08) 0%,
+        rgba(255, 165, 44, 0.08) 20%,
+        rgba(255, 255, 65, 0.08) 40%,
+        rgba(0, 128, 24, 0.08) 60%,
+        rgba(0, 0, 249, 0.08) 80%,
+        rgba(134, 0, 125, 0.08) 100%
     );
   }
 
-  .rainbow-bg[dir="rtl"] {
-    background: linear-gradient(
-      225deg,
-      rgba(255, 0, 24, 0.1) 0%,
-      rgba(255, 165, 44, 0.1) 20%,
-      rgba(255, 255, 65, 0.1) 40%,
-      rgba(0, 128, 24, 0.1) 60%,
-      rgba(0, 0, 249, 0.1) 80%,
-      rgba(134, 0, 125, 0.1) 100%
-    );
+  /* RTL version - reversed gradient direction */
+  [dir="rtl"] .rainbow-bg {
+    background: linear-gradient(225deg, /* top-right to bottom-left for RTL */
+        rgba(255, 0, 24, 0.08) 0%,
+        rgba(255, 165, 44, 0.08) 20%,
+        rgba(255, 255, 65, 0.08) 40%,
+        rgba(0, 128, 24, 0.08) 60%,
+        rgba(0, 0, 249, 0.08) 80%,
+        rgba(134, 0, 125, 0.08) 100%
+    ) !important;
   }
 
+  /* Dark mode variants */
   .dark .rainbow-bg {
     background: linear-gradient(
       135deg,
-      rgba(255, 0, 24, 0.05) 0%,
-      rgba(255, 165, 44, 0.05) 20%,
-      rgba(255, 255, 65, 0.05) 40%,
-      rgba(0, 128, 24, 0.05) 60%,
-      rgba(0, 0, 249, 0.05) 80%,
-      rgba(134, 0, 125, 0.05) 100%
-    );
+      rgba(255, 0, 24, 0.06) 0%,
+      rgba(255, 165, 44, 0.06) 20%,
+      rgba(255, 255, 65, 0.06) 40%,
+      rgba(0, 128, 24, 0.06) 60%,
+      rgba(0, 0, 249, 0.06) 80%,
+      rgba(134, 0, 125, 0.06) 100%
+    ) !important;
   }
 
-  .dark .rainbow-bg[dir="rtl"] {
+  /* Dark mode RTL version - reversed gradient direction */
+  .dark [dir="rtl"] .rainbow-bg {
     background: linear-gradient(
       225deg,
-      rgba(255, 0, 24, 0.05) 0%,
-      rgba(255, 165, 44, 0.05) 20%,
-      rgba(255, 255, 65, 0.05) 40%,
-      rgba(0, 128, 24, 0.05) 60%,
-      rgba(0, 0, 249, 0.05) 80%,
-      rgba(134, 0, 125, 0.05) 100%
-    );
+      rgba(255, 0, 24, 0.06) 0%,
+      rgba(255, 165, 44, 0.06) 20%,
+      rgba(255, 255, 65, 0.06) 40%,
+      rgba(0, 128, 24, 0.06) 60%,
+      rgba(0, 0, 249, 0.06) 80%,
+      rgba(134, 0, 125, 0.06) 100%
+    ) !important;
   }
 }

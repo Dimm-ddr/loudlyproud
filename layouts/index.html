@@ -3,61 +3,6 @@
 <head>
     {{ partial "head-additions.html" . }}
     <title>{{ .Site.Title }}</title>
-    <style>
-        .rainbow-bg {
-            background: linear-gradient(135deg, /* top-left to bottom-right for LTR */
-                rgba(255, 0, 24, 0.1) 0%,
-                rgba(255, 165, 44, 0.1) 20%,
-                rgba(255, 255, 65, 0.1) 40%,
-                rgba(0, 128, 24, 0.1) 60%,
-                rgba(0, 0, 249, 0.1) 80%,
-                rgba(134, 0, 125, 0.1) 100%
-            );
-        }
-        .rainbow-bg[dir="rtl"] {
-            background: linear-gradient(225deg, /* top-right to bottom-left for RTL */
-                rgba(255, 0, 24, 0.1) 0%,
-                rgba(255, 165, 44, 0.1) 20%,
-                rgba(255, 255, 65, 0.1) 40%,
-                rgba(0, 128, 24, 0.1) 60%,
-                rgba(0, 0, 249, 0.1) 80%,
-                rgba(134, 0, 125, 0.1) 100%
-            );
-        }
-        .dark .rainbow-bg {
-            background: linear-gradient(135deg,
-                rgba(255, 0, 24, 0.05) 0%,
-                rgba(255, 165, 44, 0.05) 20%,
-                rgba(255, 255, 65, 0.05) 40%,
-                rgba(0, 128, 24, 0.05) 60%,
-                rgba(0, 0, 249, 0.05) 80%,
-                rgba(134, 0, 125, 0.05) 100%
-            );
-        }
-        .dark .rainbow-bg[dir="rtl"] {
-            background: linear-gradient(225deg,
-                rgba(255, 0, 24, 0.05) 0%,
-                rgba(255, 165, 44, 0.05) 20%,
-                rgba(255, 255, 65, 0.05) 40%,
-                rgba(0, 128, 24, 0.05) 60%,
-                rgba(0, 0, 249, 0.05) 80%,
-                rgba(134, 0, 125, 0.05) 100%
-            );
-        }
-
-        /* Smooth focus styles */
-        .language-card {
-            outline: none !important; /* Remove default browser outline */
-            transition: all 0.2s ease-in-out;
-        }
-        .language-card:focus-visible {
-            box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 4px var(--ring-color);
-        }
-        .language-card:active {
-            transform: translateY(1px);
-            transition: transform 0.1s;
-        }
-    </style>
 </head>
 <body class="bg-background dark:bg-background-dark min-h-screen flex items-center justify-center">
     <div class="container mx-auto px-4 py-8">

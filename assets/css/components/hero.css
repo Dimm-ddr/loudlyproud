@@ -1,0 +1,12 @@
+/* Hero Components
+   ===============================
+   Styles for hero section layouts
+*/
+
+@layer components {
+  /* Main hero section with background image */
+  .hero-bg {
+    background-image: url('/images/hero_image.webp');
+    height: 234px;
+  }
+} 
