@@ -237,8 +237,8 @@
   }
 
   /* Rainbow background gradients */
-  .rainbow-bg {
-    background: linear-gradient(135deg, /* top-left to bottom-right for LTR */
+  .rainbow-bg-flow-left {
+    background: linear-gradient(135deg, /* flows from top-left to bottom-right */
         rgba(255, 0, 24, 0.08) 0%,
         rgba(255, 165, 44, 0.08) 20%,
         rgba(255, 255, 65, 0.08) 40%,
@@ -248,41 +248,37 @@
     );
   }
 
-  /* RTL version - reversed gradient direction */
-  [dir="rtl"] .rainbow-bg {
-    background: linear-gradient(225deg, /* top-right to bottom-left for RTL */
+  .rainbow-bg-flow-right {
+    background: linear-gradient(225deg, /* flows from top-right to bottom-left */
         rgba(255, 0, 24, 0.08) 0%,
         rgba(255, 165, 44, 0.08) 20%,
         rgba(255, 255, 65, 0.08) 40%,
         rgba(0, 128, 24, 0.08) 60%,
         rgba(0, 0, 249, 0.08) 80%,
         rgba(134, 0, 125, 0.08) 100%
-    ) !important;
+    );
   }
 
   /* Dark mode variants */
-  .dark .rainbow-bg {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 0, 24, 0.06) 0%,
-      rgba(255, 165, 44, 0.06) 20%,
-      rgba(255, 255, 65, 0.06) 40%,
-      rgba(0, 128, 24, 0.06) 60%,
-      rgba(0, 0, 249, 0.06) 80%,
-      rgba(134, 0, 125, 0.06) 100%
-    ) !important;
+  .dark .rainbow-bg-flow-left {
+    background: linear-gradient(135deg,
+        rgba(255, 0, 24, 0.06) 0%,
+        rgba(255, 165, 44, 0.06) 20%,
+        rgba(255, 255, 65, 0.06) 40%,
+        rgba(0, 128, 24, 0.06) 60%,
+        rgba(0, 0, 249, 0.06) 80%,
+        rgba(134, 0, 125, 0.06) 100%
+    );
   }
 
-  /* Dark mode RTL version - reversed gradient direction */
-  .dark [dir="rtl"] .rainbow-bg {
-    background: linear-gradient(
-      225deg,
-      rgba(255, 0, 24, 0.06) 0%,
-      rgba(255, 165, 44, 0.06) 20%,
-      rgba(255, 255, 65, 0.06) 40%,
-      rgba(0, 128, 24, 0.06) 60%,
-      rgba(0, 0, 249, 0.06) 80%,
-      rgba(134, 0, 125, 0.06) 100%
-    ) !important;
+  .dark .rainbow-bg-flow-right {
+    background: linear-gradient(225deg,
+        rgba(255, 0, 24, 0.06) 0%,
+        rgba(255, 165, 44, 0.06) 20%,
+        rgba(255, 255, 65, 0.06) 40%,
+        rgba(0, 128, 24, 0.06) 60%,
+        rgba(0, 0, 249, 0.06) 80%,
+        rgba(134, 0, 125, 0.06) 100%
+    );
   }
 }

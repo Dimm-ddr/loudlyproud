@@ -20,6 +20,14 @@
     <div class="flex items-center space-x-4">
 
       <!-- Language Switcher -->
+      {{ $enabledLanguages := slice }}
+      {{ range .Site.Languages }}
+          {{ if not .Disabled }}
+              {{ $enabledLanguages = $enabledLanguages | append . }}
+          {{ end }}
+      {{ end }}
+      
+      {{ if gt (len $enabledLanguages) 1 }}
       <div x-data="{ open: false }" class="relative">
         <button
           @click="open = !open"
@@ -30,15 +38,7 @@
         >
           <!-- Current Language -->
           <span class="font-medium">
-            {{ if eq .Site.Language.Lang "ru" }}
-              Русский
-            {{ else if eq .Site.Language.Lang "fa" }}
-              فارسی
-            {{ else if eq .Site.Language.Lang "ku" }}
-              کوردی
-            {{ else }}
-              English
-            {{ end }}
+            {{ .Site.Language.LanguageName }}
           </span>
           <!-- Dropdown Arrow Icon -->
           <svg class="ml-1 w-4 h-4 transition-transform duration-200"
@@ -63,30 +63,19 @@
           aria-label="Language selection"
         >
           <div class="py-1" role="none">
-            <a href="/ru/main/"
-               class="block px-4 py-2 text-primary dark:text-primary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark transition-colors duration-200 {{ if eq .Site.Language.Lang "ru" }}bg-tertiary dark:bg-tertiary-dark font-medium{{ end }}"
-               role="menuitem">
-              Русский
-            </a>
-            <a href="/fa/main/"
-               class="block px-4 py-2 text-primary dark:text-primary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark transition-colors duration-200 {{ if eq .Site.Language.Lang "fa" }}bg-tertiary dark:bg-tertiary-dark font-medium{{ end }}"
-               role="menuitem">
-              فارسی
-            </a>
-            <a href="/ku/main/"
-               class="block px-4 py-2 text-primary dark:text-primary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark transition-colors duration-200 {{ if eq .Site.Language.Lang "ku" }}bg-tertiary dark:bg-tertiary-dark font-medium{{ end }}"
-               role="menuitem">
-              کوردی
-            </a>
-            <div class="border-t border-tertiary dark:border-tertiary-dark my-1"></div>
-            <a href="/en/main/"
-               class="block px-4 py-2 text-primary dark:text-primary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark transition-colors duration-200 {{ if eq .Site.Language.Lang "en" }}bg-tertiary dark:bg-tertiary-dark font-medium{{ end }}"
-               role="menuitem">
-              English
-            </a>
+            {{ $currentLang := .Site.Language.Lang }}
+            {{ range $enabledLanguages }}
+              {{ $isActive := eq .Lang $currentLang }}
+              <a href="/{{ .Lang }}/main/"
+                 class="block px-4 py-2 text-primary dark:text-primary-dark hover:bg-tertiary dark:hover:bg-tertiary-dark transition-colors duration-200 {{ if $isActive }}bg-tertiary dark:bg-tertiary-dark font-medium{{ end }}"
+                 role="menuitem">
+                {{ .LanguageName }}
+              </a>
+            {{ end }}
           </div>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </header>
