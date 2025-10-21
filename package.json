@@ -14,7 +14,20 @@
     "build:config": "node scripts/build-config.js",
     "clean": "rimraf public && rimraf \"static/js\"",
     "cms": "decap-server",
-    "tools": "poetry --directory .tools"
+    "tools": "poetry --directory .tools",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:unit": "vitest run --config vitest.config.unit.ts",
+    "test:integration": "vitest run --config vitest.config.integration.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:a11y": "pa11y-ci",
+    "test:links": "linkinator public --recurse --skip 'fonts|.css|.js' --verbosity error",
+    "test:all": "pnpm run test:unit && pnpm run build && pnpm run test:integration && pnpm run test:e2e && pnpm run test:links",
+    "playwright:install": "playwright install --with-deps chromium",
+    "validate:tests": "node scripts/validate-tests.js"
   },
   "dependencies": {
     "alpinejs": "^3.15.0",
@@ -39,7 +52,19 @@
     "pretty-error": "^4.0.0",
     "rimraf": "^5.0.10",
     "typescript": "^5.9.2",
-    "wait-on": "^8.0.5"
+    "wait-on": "^8.0.5",
+    "vitest": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "jsdom": "^23.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "@playwright/test": "^1.40.0",
+    "@axe-core/playwright": "^4.8.0",
+    "happy-dom": "^12.10.0",
+    "@testing-library/dom": "^9.3.3",
+    "linkinator": "^6.0.0",
+    "pa11y-ci": "^3.0.0",
+    "glob": "^10.3.0",
+    "@types/glob": "^8.1.0"
   },
   "engines": {
     "node": ">=20.0.0"

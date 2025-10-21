@@ -1,0 +1,13 @@
+{
+  "path": "public",
+  "recurse": true,
+  "skip": [
+    "fonts",
+    ".css$",
+    ".js$",
+    ".woff2$",
+    "admin/*"
+  ],
+  "silent": false,
+  "verbosity": "error"
+}
