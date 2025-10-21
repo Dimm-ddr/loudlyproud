@@ -25,7 +25,8 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'npx http-server public -p 4173 --silent',
+    command:
+      'hugo server --port 4173 --baseURL http://localhost:4173 --environment production --disableLiveReload --disableFastRender --bind 127.0.0.1',
     port: 4173,
     timeout: 120000,
     reuseExistingServer: !process.env.CI,
