@@ -35,8 +35,9 @@ const BookPreview = createClass({
           })
         ),
         h('div', {className: "book-details"},
-          getValue(['book_description']) && h('div', {className: "book-description"},
-            getValue(['book_description'])
+          // Render the Markdown body similar to {{ .Content }} using Decap's renderer
+          h('div', {className: "book-description prose max-w-none"},
+            this.props.widgetFor && this.props.widgetFor('body')
           ),
           h('div', {className: "book-metadata"},
             h('div', {className: "metadata-group"},
@@ -77,8 +78,15 @@ const BookPreview = createClass({
   }
 });
 
-// Register the preview template
-CMS.registerPreviewTemplate("books", BookPreview);
+// Register the preview template for all book collections
+;["books_en", "books_ru", "books_fa", "books_ku", "books"].forEach((name) => {
+  try { CMS.registerPreviewTemplate(name, BookPreview); } catch (e) { /* no-op */ }
+});
 
-// Register the preview styles
+// Register the preview styles (site styles + admin overrides)
+// Tailwind bundle (generated into /css) for parity with live site
+CMS.registerPreviewStyle("/css/tailwind.css");
+// Optional additional site CSS if used
+try { CMS.registerPreviewStyle("/css/main.css"); } catch (e) { /* optional */ }
+// Admin-specific tweaks
 CMS.registerPreviewStyle("/admin/admin.css");

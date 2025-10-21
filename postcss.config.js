@@ -1,6 +1,6 @@
-module.exports = {
+export default {
   plugins: {
-    "postcss-import": {},
+    "postcss-import": { path: ["assets/css"] },
     tailwindcss: {},
     autoprefixer: {},
   },

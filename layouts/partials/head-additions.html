@@ -4,8 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
 
-<!-- Core resources -->
-<link rel="stylesheet" href='{{ "css/tailwind.css" | relURL }}'>
+<!-- Core resources via Hugo Pipes (Tailwind/PostCSS) -->
+{{ $cssBuilt := resources.Get "css/tailwind.css" | postCSS (dict "config" "postcss.config.js") | minify }}
+{{ $css := $cssBuilt | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{/* Also emit a stable copy for Decap preview at /css/tailwind.css */}}
+{{ $cssCopy := $cssBuilt | resources.Copy "css/tailwind.css" }}
 <link rel="icon" type="image/x-icon" href='{{ "favicon.ico" | relURL }}'>
 
 <!-- Export translation strings as meta tags for JS use -->

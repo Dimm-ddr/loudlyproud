@@ -10,7 +10,7 @@
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url('/fonts/Lato-Thin.woff2') format('woff2');
+    src: url('/fonts/Lato-Hairline.woff2') format('woff2');
   }
   
   @font-face {
@@ -18,7 +18,7 @@
     font-style: italic;
     font-weight: 100;
     font-display: swap;
-    src: url('/fonts/Lato-ThinItalic.woff2') format('woff2');
+    src: url('/fonts/Lato-HairlineItalic.woff2') format('woff2');
   }
   
   @font-face {

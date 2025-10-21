@@ -32,7 +32,6 @@ export class Pagination {
   };
 
   constructor(config: PaginationConfig) {
-    // Get elements using provided selectors
     const elements = {
       gallery: document.querySelector(config.selectors.gallery),
       itemsPerPageSelect: document.querySelector(
@@ -45,7 +44,6 @@ export class Pagination {
       pagination: document.querySelector(config.selectors.pagination),
     };
 
-    // Validate that all required elements exist
     Object.entries(elements).forEach(([key, element]) => {
       if (!element) {
         throw new Error(
@@ -54,7 +52,6 @@ export class Pagination {
       }
     });
 
-    // Type assertion after validation
     this.elements = elements as {
       gallery: HTMLElement;
       itemsPerPageSelect: HTMLSelectElement;
@@ -172,11 +169,11 @@ export class Pagination {
     }
   }
   
-  // Public method to reset pagination to first page
   public resetToFirstPage(): void {
     this.config.currentPage = 1;
-    // Update totalItems in case elements have been added or removed
     this.config.totalItems = this.elements.gallery.children.length;
     this.updateDisplay();
   }
 }
+
+

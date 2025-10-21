@@ -95,38 +95,25 @@
 
     <!-- Initialize features that should run after DOM is loaded -->
     <script>
-      // Initialize Pagefind
       function initializePagefind() {
         if (document.getElementById('search')) {
-          new PagefindUI({
-            element: "#search",
-            showImages: false,
-            showSubResults: true,
-            resetStyles: false
-          });
+          new PagefindUI({ element: "#search", showImages: false, showSubResults: true, resetStyles: false });
         }
       }
-
-      // Handle both cases: DOM not ready yet, or already ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializePagefind);
-      } else {
-        initializePagefind();
-      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initializePagefind); } else { initializePagefind(); }
     </script>
 
-      // Load accessibility enhancements only when online
-      if ('onLine' in navigator && navigator.onLine) {
-        import('/js/accessibility-enhancements.js').catch(() =>
-          console.log('Accessibility enhancements unavailable')
-        );
-      }
-    </script>
+    <!-- Build and load JS via Hugo Pipes -->
+    {{ $jsOpts := dict "target" "es2020" "minify" true }}
+    {{ $pagination := resources.Get "js/pagination.ts" | js.Build $jsOpts | fingerprint }}
+    {{ $sorting := resources.Get "js/sorting.ts" | js.Build $jsOpts | fingerprint }}
+    {{ $access := resources.Get "js/accessibility-enhancements.ts" | js.Build $jsOpts | fingerprint }}
 
-    <!-- Load pagination and sorting scripts -->
+    <script type="module" src="{{ $access.RelPermalink }}" integrity="{{ $access.Data.Integrity }}"></script>
+
     <script type="module">
-      import { Pagination } from '/js/pagination.js';
-      import { Sorting } from '/js/sorting.js';
+      import { Pagination } from '{{ $pagination.RelPermalink }}'
+      import { Sorting } from '{{ $sorting.RelPermalink }}'
 
       document.addEventListener("DOMContentLoaded", function() {
         // Initialize pagination if the gallery exists

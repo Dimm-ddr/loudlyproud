@@ -38,12 +38,12 @@
 
 <!-- Pagination and Sorting Script -->
 <script type="module">
-    import { Pagination } from '/js/pagination.js';
-    import { Sorting } from '/js/sorting.js';
+    const paginationModule = await import('{{ (resources.Get "js/pagination.ts" | js.Build (dict "target" "es2020" "minify" true)).RelPermalink }}');
+    const sortingModule = await import('{{ (resources.Get "js/sorting.ts" | js.Build (dict "target" "es2020" "minify" true)).RelPermalink }}');
 
     document.addEventListener("DOMContentLoaded", function() {
         // Initialize pagination
-        const pagination = new Pagination({
+        const pagination = new paginationModule.Pagination({
             selectors: {
                 gallery: '#book-gallery',
                 itemsPerPageSelect: '#items-per-page',
@@ -74,7 +74,7 @@
                 
                 console.log('Initializing sorting with element:', sortSelect);
                 
-                const sorting = new Sorting({
+                const sorting = new sortingModule.Sorting({
                     selectors: {
                         gallery: '#book-gallery',
                         sortSelect: '#sort-select'
