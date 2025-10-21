@@ -1,12 +1,16 @@
 # Task 6: Documentation & Validation
 
-**Estimated Time**: 20-25 minutes  
-**Prerequisites**: Tasks 1-5 completed (all tests and CI working)  
+**Estimated Time**: 15-20 minutes  
+**Prerequisites**: Tasks 1-5 completed (all files created)  
 **Context**: Read `docs/testing-context.md` first
 
 ## Objective
 
-Create comprehensive documentation for the testing system and a validation script to verify all components are in place. This is the final task that completes the testing implementation.
+Create testing documentation and a validation script. This is the final task that completes the testing implementation. This task only creates files.
+
+## Important Note
+
+⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm install` or `pnpm run validate:tests`. Only create documentation files and the validation script.
 
 ## What You'll Create
 
@@ -368,133 +372,54 @@ mkdir -p scripts
 
 ## Verification
 
-Run these commands to verify everything:
+After completing all steps, verify files were created:
 
 ```bash
-# 1. Run validation script
-pnpm run validate:tests
-
-# 2. Check all test commands exist
-pnpm run test:unit --help
-pnpm run test:integration --help
-pnpm run test:e2e --help
-
-# 3. Verify documentation exists
-cat docs/testing-guide.md
-
-# 4. Check README was updated
+# Verify files exist
+ls docs/testing-guide.md
+ls scripts/validate-tests.js
 grep -A 5 "## 🧪 Testing" README.md
+
+# Check scripts directory was created
+ls scripts/
 ```
 
 ## Success Criteria
 
 ✅ `docs/testing-guide.md` created with complete documentation  
-✅ `scripts/validate-tests.js` created and executable  
-✅ `README.md` updated with testing section  
-✅ Validation script runs successfully  
-✅ All validation checks pass  
+✅ `scripts/validate-tests.js` created with validation logic  
+✅ `README.md` updated with testing section (around line 104)  
+✅ Scripts directory exists  
 ✅ Documentation is clear and accurate  
 
-## Expected Output
+## Important Notes
 
-When you run `pnpm run validate:tests`, you should see:
+⚠️ **Do NOT run these commands** (they won't work in isolated VM):
+- ❌ `pnpm install`
+- ❌ `pnpm run validate:tests`
+- ❌ `node scripts/validate-tests.js`
 
-```
-Validating test setup...
-
-✓ vitest.config.unit.ts
-✓ vitest.config.integration.ts
-✓ playwright.config.ts
-✓ .pa11yci.json
-✓ .linkinator.config.json
-✓ tests/setup/unit.setup.ts
-✓ tests/setup/integration.setup.ts
-✓ tests/helpers/test-utils.ts
-✓ tests/unit/pagination.test.ts
-✓ tests/unit/sorting.test.ts
-✓ tests/unit/dom-guards.test.ts
-✓ tests/integration/home-page.test.ts
-✓ tests/integration/gallery-page.test.ts
-✓ tests/integration/book-page.test.ts
-✓ tests/integration/dom-interactions.test.ts
-✓ tests/e2e/language-navigation.spec.ts
-✓ tests/e2e/gallery-interactions.spec.ts
-✓ tests/e2e/search.spec.ts
-✓ tests/e2e/accessibility.spec.ts
-✓ .github/workflows/test.yml
-✓ .github/workflows/accessibility.yml
-✓ docs/testing-guide.md
-
-✓ All test files present
-
-Checking package.json scripts:
-✓ test
-✓ test:unit
-✓ test:integration
-✓ test:e2e
-✓ test:a11y
-✓ test:links
-✓ validate:tests
-
-Checking devDependencies:
-✓ vitest
-✓ @playwright/test
-✓ jsdom
-✓ cheerio
-✓ @axe-core/playwright
-✓ linkinator
-✓ pa11y-ci
-
-✅ All validation checks passed
-```
+✅ **Only verify files were created** using `ls` and `grep` commands shown above.
 
 ## Troubleshooting
 
-**Validation script fails to run**:
-- Ensure Node.js is installed
-- Check file permissions: `chmod +x scripts/validate-tests.js`
-- Run directly: `node scripts/validate-tests.js`
+**Cannot run validation script**:
+- That's expected - script will be run after all tasks complete
+- Focus on creating the file with correct content
 
-**Missing files reported**:
-- Review previous tasks
-- Check file paths are correct
-- Verify all files were created
+**Worried about README merge**:
+- READ existing README.md content first
+- Find the "Development & Build" section
+- Add testing section AFTER it, around line 104
+- Do NOT remove or modify existing content
 
-**README merge conflicts**:
-- Read existing README first
-- Find appropriate location for testing section
-- Don't remove existing content
-- Add testing section after "Development & Build"
-
-## Final Verification
-
-After completing this task, run the full verification:
-
-```bash
-# 1. Validate test setup
-pnpm run validate:tests
-
-# 2. Run all tests
-pnpm run test:unit
-pnpm run build
-pnpm run test:integration
-pnpm run test:e2e
-
-# 3. Check documentation
-cat docs/testing-guide.md
-grep "Testing" README.md
-```
+**Scripts directory doesn't exist**:
+- Create it: `mkdir -p scripts`
+- Then add the validation script file
 
 ## Completion
 
-This is the final task! After completing this:
-
-1. All test infrastructure is in place
-2. All tests are documented
-3. CI/CD is configured
-4. Validation script confirms everything
-
-You can now commit all changes with the final commit message below.
+🎉 **This is the FINAL task!** After completing this, all 22+ test files are created.
 
 ## Commit Message
 
@@ -510,37 +435,119 @@ feat(testing): add documentation and validation
 Part 6/6 of testing implementation - COMPLETE
 ```
 
-## Summary of Complete Implementation
+## Summary of Files Created (All 6 Tasks)
 
-After all 6 tasks, you should have:
+After all 6 tasks complete, you should have created:
 
 **Configuration** (Task 1):
-- 5 config files
-- 13 new npm scripts
-- 10+ dependencies installed
+- 5 config files (vitest x2, playwright, pa11y, linkinator)
+- Updated package.json (13 scripts, 12 dependencies)
 
-**Unit Tests** (Task 2):
-- 3 unit test files
+**Test Files** (Tasks 2-4):
 - 2 setup files
 - 1 helpers file
-- ~35 unit tests
-
-**Integration Tests** (Task 3):
-- 4 integration test files
-- ~27 integration tests
-
-**E2E Tests** (Task 4):
-- 4 E2E test files
-- ~15 end-to-end tests
+- 3 unit test files (~35 tests)
+- 4 integration test files (~27 tests)
+- 4 E2E test files (~15 tests)
 
 **CI/CD** (Task 5):
-- 2 GitHub Actions workflows
-- Automated testing on push/PR
+- 2 GitHub Actions workflow files
 
 **Documentation** (Task 6):
 - Testing guide
 - Validation script
 - Updated README
 
-**Total**: 22+ new files, comprehensive test coverage, full CI/CD integration!
+**Total**: 22+ new files created!
+
+---
+
+## 🚀 NEXT STEPS FOR HUMAN (After All 6 Tasks)
+
+After all tasks are committed to the repository, a human must run these commands to actually install dependencies and run tests:
+
+```bash
+# 1. Pull all committed changes
+git pull
+
+# 2. Install all testing dependencies
+pnpm install
+
+# 3. Validate test setup
+pnpm run validate:tests
+
+# 4. Install Playwright browsers
+pnpm run playwright:install
+
+# 5. Run unit tests (fast, no build needed)
+pnpm run test:unit
+
+# 6. Build the Hugo site
+pnpm run build
+
+# 7. Run integration tests (requires build)
+pnpm run test:integration
+
+# 8. Run E2E tests (requires build)
+pnpm run test:e2e
+
+# 9. Optional: Run all tests together
+pnpm run test:all
+```
+
+### Expected Results
+
+**Validation** (`pnpm run validate:tests`):
+- All 22+ files should show ✓
+- All package.json scripts should show ✓
+- All devDependencies should show ✓
+
+**Unit Tests** (`pnpm run test:unit`):
+- ~35 tests should pass
+- Should complete in <5 seconds
+
+**Integration Tests** (`pnpm run test:integration`):
+- ~27 tests should pass
+- Requires `public/` directory from build
+
+**E2E Tests** (`pnpm run test:e2e`):
+- ~15 tests should execute
+- Browser should launch and navigate pages
+- May take 30-60 seconds
+
+**GitHub Actions**:
+- After pushing to GitHub, check Actions tab
+- Workflows should run automatically
+- All steps should complete successfully
+
+---
+
+## 🐛 If Tests Fail
+
+**Unit test failures**:
+- Check TypeScript compilation: `pnpm exec tsc --noEmit`
+- Verify all imports resolve correctly
+- Review test logic against actual code
+
+**Integration test failures**:
+- Ensure site built: `ls public/en/main/index.html`
+- Check Hugo build had no errors
+- Verify selectors match actual HTML structure
+
+**E2E test failures**:
+- Check site structure matches expectations
+- Verify selectors in tests match actual elements
+- Use `pnpm run test:e2e:ui` to debug visually
+- Check browser console for errors
+
+**CI workflow failures**:
+- Review GitHub Actions logs
+- Check all scripts exist in package.json
+- Verify branch names match workflow triggers
+
+---
+
+## 📝 Implementation Complete
+
+All 6 tasks are now done! The testing infrastructure is fully implemented and ready to use once dependencies are installed and tests are run by a human.
 

@@ -1,12 +1,16 @@
-# Task 2: Unit Tests
+# Task 2: Test Setup & Unit Tests
 
-**Estimated Time**: 30-40 minutes  
-**Prerequisites**: Task 1 completed (dependencies and configs installed)  
+**Estimated Time**: 20-30 minutes  
+**Prerequisites**: Task 1 completed (config files created)  
 **Context**: Read `docs/testing-context.md` first
 
 ## Objective
 
-Create unit tests for pagination logic, sorting logic, and DOM guard clauses. These are fast, isolated tests that don't require building the Hugo site.
+Create test setup files, helper utilities, and unit test files for pagination, sorting, and DOM guards. This task only creates files - no test execution.
+
+## Important Note
+
+⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm install` or `pnpm run test:unit`. Only create files. Tests will be run later during verification.
 
 ## What You'll Create
 
@@ -604,39 +608,37 @@ describe('DOM Element Guard Clauses', () => {
 
 ## Verification
 
-Run these commands:
+After completing all steps, verify files were created:
 
 ```bash
-# Run unit tests
-pnpm run test:unit
-
-# Check test structure
+# Check directory structure
 ls -R tests/
 
-# Verify TypeScript compilation
-pnpm exec tsc --noEmit
+# Verify all files exist
+ls tests/setup/unit.setup.ts
+ls tests/setup/integration.setup.ts
+ls tests/helpers/test-utils.ts
+ls tests/unit/pagination.test.ts
+ls tests/unit/sorting.test.ts
+ls tests/unit/dom-guards.test.ts
 ```
 
 ## Success Criteria
 
 ✅ All 6 files created in correct locations  
-✅ Unit tests run successfully with `pnpm run test:unit`  
-✅ All tests pass (or show meaningful results)  
-✅ No TypeScript compilation errors  
-✅ Tests are independent (can run in any order)  
+✅ Directory structure is correct (setup/, helpers/, unit/)  
+✅ Files contain complete test code as specified  
+✅ TypeScript syntax is valid (no obvious syntax errors)  
+✅ Tests use proper Vitest imports and structure  
 
-## Expected Output
+## Important Notes
 
-When you run `pnpm run test:unit`, you should see:
+⚠️ **Do NOT run these commands** (they won't work in isolated VM):
+- ❌ `pnpm install`
+- ❌ `pnpm run test:unit`
+- ❌ `pnpm exec tsc`
 
-```
-✓ tests/unit/pagination.test.ts (15 tests)
-✓ tests/unit/sorting.test.ts (12 tests)
-✓ tests/unit/dom-guards.test.ts (8 tests)
-
-Test Files  3 passed (3)
-Tests  35 passed (35)
-```
+✅ **Only verify files were created** using `ls` commands shown above.
 
 ## Next Task
 

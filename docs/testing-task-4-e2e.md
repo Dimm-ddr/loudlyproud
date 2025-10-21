@@ -1,12 +1,12 @@
 # Task 4: End-to-End (E2E) Tests
 
-**Estimated Time**: 30-40 minutes  
-**Prerequisites**: Task 1-3 completed, Playwright installed, site built  
+**Estimated Time**: 20-25 minutes  
+**Prerequisites**: Tasks 1-3 completed (config and test files created)  
 **Context**: Read `docs/testing-context.md` first
 
 ## Objective
 
-Create end-to-end tests that simulate real user interactions in a browser. These tests verify critical workflows like language navigation, gallery interactions, search, and accessibility.
+Create E2E test files that will simulate real user interactions in a browser. This task only creates files - no browser installation or test execution.
 
 ## What You'll Create
 
@@ -14,17 +14,9 @@ Create end-to-end tests that simulate real user interactions in a browser. These
 - Tests for language nav, gallery, search, and accessibility
 - Total: 4 new files in `tests/e2e/`
 
-## Prerequisites
+## Important Note
 
-**Install Playwright browsers**:
-
-```bash
-# Install Playwright and browser binaries
-pnpm run playwright:install
-
-# Build the site
-pnpm run build
-```
+⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm run playwright:install` or `pnpm run test:e2e`. Only create test files. Browser installation and test execution happen later.
 
 ## Step 1: Create E2E Directory
 
@@ -314,70 +306,50 @@ test.describe('Accessibility Checks', () => {
 
 ## Verification
 
-Run these commands:
+After completing all steps, verify files were created:
 
 ```bash
-# Ensure browsers are installed
-pnpm run playwright:install
+# Check directory structure
+ls tests/e2e/
 
-# Build the site
-pnpm run build
-
-# Run E2E tests
-pnpm run test:e2e
-
-# Run with UI (for debugging)
-pnpm run test:e2e:ui
-
-# Run in debug mode
-pnpm run test:e2e:debug
+# Verify all files exist
+ls tests/e2e/language-navigation.spec.ts
+ls tests/e2e/gallery-interactions.spec.ts
+ls tests/e2e/search.spec.ts
+ls tests/e2e/accessibility.spec.ts
 ```
 
 ## Success Criteria
 
 ✅ All 4 E2E test files created  
-✅ Playwright browsers installed successfully  
-✅ Site is built (`public/` exists)  
-✅ E2E tests launch browser and execute  
-✅ Tests navigate through pages successfully  
-✅ No TypeScript compilation errors  
+✅ Files are in `tests/e2e/` directory  
+✅ Files use `.spec.ts` extension (E2E convention)  
+✅ Tests use Playwright test API correctly  
+✅ Accessibility tests import AxeBuilder correctly  
 
-## Expected Output
+## Important Notes
 
-When you run `pnpm run test:e2e`, you should see:
+⚠️ **Do NOT run these commands** (they won't work in isolated VM):
+- ❌ `pnpm install`
+- ❌ `pnpm run playwright:install`
+- ❌ `pnpm run build`
+- ❌ `pnpm run test:e2e`
 
-```
-Running 15 tests using 1 worker
-
-✓ tests/e2e/language-navigation.spec.ts:4:3 › switches to English content
-✓ tests/e2e/language-navigation.spec.ts:12:3 › switches to Russian content
-✓ tests/e2e/language-navigation.spec.ts:20:3 › switches to Farsi content with RTL
-✓ tests/e2e/gallery-interactions.spec.ts:8:3 › displays book cards on page load
-...
-
-15 passed (30s)
-```
+✅ **Only verify files were created** using `ls` commands shown above.
 
 ## Troubleshooting
 
-**"Executable doesn't exist" error**:
-- Run: `pnpm run playwright:install`
-- Or: `npx playwright install --with-deps chromium`
+**Worried about browser installation**:
+- That's expected - Playwright browsers will be installed later
+- The config file (from Task 1) handles browser setup
 
-**"Target closed" or connection errors**:
-- Check port 4173 is available
-- Try manually: `npx http-server public -p 4173`
-- Check `public/` directory exists and has content
+**Concerned about site not being built**:
+- Site building happens during final verification
+- Tests are designed to wait for the webServer to start
 
-**Tests timeout**:
-- Increase timeout in playwright.config.ts
-- Check if site builds correctly
-- Verify browser can access localhost:4173
-
-**"Cannot find element" errors**:
-- Verify selectors match actual HTML
-- Check that Hugo templates generate expected structure
-- Use `pnpm run test:e2e:ui` to inspect page
+**Import errors for @axe-core/playwright**:
+- Imports will be validated when dependencies are installed later
+- Focus on creating files with exact content specified
 
 ## Next Task
 

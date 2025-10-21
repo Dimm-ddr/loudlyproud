@@ -1,12 +1,16 @@
 # Task 5: CI/CD Workflows
 
-**Estimated Time**: 15-20 minutes  
-**Prerequisites**: Tasks 1-4 completed (all tests working locally)  
+**Estimated Time**: 10-15 minutes  
+**Prerequisites**: Tasks 1-4 completed (all test files created)  
 **Context**: Read `docs/testing-context.md` first
 
 ## Objective
 
-Create GitHub Actions workflows to automatically run tests on every push and pull request. This ensures tests run in CI and catch regressions before they reach production.
+Create GitHub Actions workflow files to automatically run tests on every push and pull request. This task only creates files - workflows will run automatically when pushed to GitHub.
+
+## Important Note
+
+⚠️ **This task runs in an isolated VM environment**. Only create workflow files. No local testing is possible - workflows activate when code is pushed to GitHub.
 
 ## What You'll Create
 
@@ -170,18 +174,18 @@ jobs:
 
 ## Verification
 
-After creating the workflows, verify:
+After creating the workflows, verify files were created:
 
 ```bash
-# Check YAML syntax is valid
-cat .github/workflows/test.yml
-cat .github/workflows/accessibility.yml
-
 # Verify files exist
 ls -la .github/workflows/
 
-# Optional: Use yamllint if available
-# yamllint .github/workflows/test.yml
+# Check files exist
+ls .github/workflows/test.yml
+ls .github/workflows/accessibility.yml
+
+# Verify YAML content is present
+cat .github/workflows/test.yml | head -20
 ```
 
 ## Understanding the Workflows
@@ -234,51 +238,45 @@ ls -la .github/workflows/
 
 ✅ Both workflow files created in `.github/workflows/`  
 ✅ YAML syntax is valid (no tabs, correct indentation)  
-✅ All referenced scripts exist in package.json  
-✅ Workflows will trigger on correct branches  
-✅ Proper caching configured  
+✅ Files use spaces for indentation (not tabs)  
+✅ Workflows reference correct branches  
+✅ All workflow steps are properly formatted  
 
-## Testing CI Workflows
+## Important Notes
 
-**Local validation**:
-```bash
-# Check YAML is valid
-python -c "import yaml; yaml.safe_load(open('.github/workflows/test.yml'))"
+⚠️ **Do NOT run these commands** (workflows only run in GitHub):
+- ❌ Local workflow testing
+- ❌ YAML validation with Python/yamllint (may not be installed)
 
-# Verify referenced scripts exist
-grep -E "(test:unit|test:integration|test:e2e|test:links|test:a11y)" package.json
-```
+✅ **Only verify files were created** using `ls` and `cat` commands shown above.
 
-**After pushing to GitHub**:
+✅ **Workflows will be tested** when code is pushed to GitHub and Actions run automatically.
+
+## Understanding How Workflows Activate
+
+**After all 6 tasks complete and code is pushed to GitHub**:
 1. Go to your repository on GitHub
 2. Click "Actions" tab
-3. You should see workflows running
+3. Workflows will appear and run automatically
 4. Click on a workflow run to see details
-5. Verify all steps complete successfully
+5. All steps should complete successfully (after `pnpm install` runs in CI)
 
 ## Troubleshooting
 
-**YAML syntax errors**:
-- Use spaces, not tabs for indentation
-- Check all colons have space after them
-- Verify nested structure is correct
-- Use online YAML validator if needed
+**YAML indentation concerns**:
+- Use 2 spaces for each indentation level
+- No tabs allowed in YAML
+- Colons must have space after them
+- Focus on exact content match from this document
 
-**Workflow doesn't trigger**:
-- Check branch names match your repository
-- Verify `.github/workflows/` path is correct
-- Ensure files are committed and pushed
+**Worried about workflow failures**:
+- Workflows install dependencies themselves in CI
+- They have access to `node_modules/` in GitHub Actions
+- First run might take longer while caching builds up
 
-**Steps fail in CI but work locally**:
-- Check Node.js version matches (18)
-- Verify all dependencies are in package.json
-- Check environment differences (CI uses Ubuntu)
-- Look at failed step logs in Actions tab
-
-**Playwright fails in CI**:
-- Workflow includes `--with-deps` flag (installs system dependencies)
-- Uses `chromium` only (faster than all browsers)
-- Runs on Ubuntu (has required libraries)
+**Branch name concerns**:
+- Workflow uses `main`, `preview`, `develop` branches
+- Adjust branch names if your repo uses different names
 
 ## Next Task
 

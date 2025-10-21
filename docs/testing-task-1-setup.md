@@ -1,42 +1,28 @@
-# Task 1: Testing Setup & Configuration
+# Task 1: Configuration Files
 
-**Estimated Time**: 20-30 minutes  
+**Estimated Time**: 15-20 minutes  
 **Prerequisites**: None  
 **Context**: Read `docs/testing-context.md` first
 
 ## Objective
 
-Install all testing dependencies and create configuration files for Vitest, Playwright, Pa11y, and Linkinator. No test code will be written in this task.
+Create all configuration files and update package.json with test scripts and dependencies. This task only creates/modifies files - no installation or test execution.
 
 ## What You'll Create
 
-- Install 10+ npm packages
+- Update `package.json` (add scripts and devDependencies)
 - Create 5 configuration files
-- Update `package.json` with test scripts
-- Verify TypeScript compilation works
+- Total: 6 files created/modified
 
-## Step 1: Install Dependencies
+## Important Note
 
-Run this single command:
+⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm install`, `pnpm build`, or any test commands. Only create/modify files. Dependencies will be installed later during verification.
 
-```bash
-pnpm add -D vitest@^1.0.0 @vitest/ui@^1.0.0 jsdom@^23.0.0 cheerio@^1.0.0-rc.12 @playwright/test@^1.40.0 @axe-core/playwright@^4.8.0 happy-dom@^12.10.0 @testing-library/dom@^9.3.3 linkinator@^6.0.0 pa11y-ci@^3.0.0 glob@^10.3.0 @types/glob@^8.1.0
-```
+## Step 1: Update package.json Scripts AND Dependencies
 
-**What each package does**:
-- `vitest` + `@vitest/ui`: Test runner with UI
-- `jsdom`: DOM simulation for Node
-- `cheerio`: HTML parsing
-- `@playwright/test`: E2E browser testing
-- `@axe-core/playwright`: Accessibility testing
-- `linkinator`, `pa11y-ci`: Site quality checks
-- `glob`: File pattern matching
+**CRITICAL**: Read existing `package.json` first, then MERGE these additions. Do NOT replace existing content.
 
-## Step 2: Update package.json Scripts
-
-**CRITICAL**: Read existing `package.json` first, then MERGE these scripts with existing ones. Do NOT replace existing scripts.
-
-Add these to the `scripts` section:
+**Add to `scripts` section:**
 
 ```json
 {
@@ -56,7 +42,35 @@ Add these to the `scripts` section:
 }
 ```
 
-## Step 3: Create Vitest Unit Config
+**Add to `devDependencies` section:**
+
+```json
+{
+  "vitest": "^1.0.0",
+  "@vitest/ui": "^1.0.0",
+  "jsdom": "^23.0.0",
+  "cheerio": "^1.0.0-rc.12",
+  "@playwright/test": "^1.40.0",
+  "@axe-core/playwright": "^4.8.0",
+  "happy-dom": "^12.10.0",
+  "@testing-library/dom": "^9.3.3",
+  "linkinator": "^6.0.0",
+  "pa11y-ci": "^3.0.0",
+  "glob": "^10.3.0",
+  "@types/glob": "^8.1.0"
+}
+```
+
+**What each package does**:
+- `vitest` + `@vitest/ui`: Test runner with UI
+- `jsdom`: DOM simulation for Node
+- `cheerio`: HTML parsing
+- `@playwright/test`: E2E browser testing
+- `@axe-core/playwright`: Accessibility testing
+- `linkinator`, `pa11y-ci`: Site quality checks
+- `glob`: File pattern matching
+
+## Step 2: Create Vitest Unit Config
 
 **File**: `vitest.config.unit.ts`
 
@@ -90,7 +104,7 @@ export default defineConfig({
 });
 ```
 
-## Step 4: Create Vitest Integration Config
+## Step 3: Create Vitest Integration Config
 
 **File**: `vitest.config.integration.ts`
 
@@ -117,7 +131,7 @@ export default defineConfig({
 });
 ```
 
-## Step 5: Create Playwright Config
+## Step 4: Create Playwright Config
 
 **File**: `playwright.config.ts`
 
@@ -157,7 +171,7 @@ export default defineConfig({
 });
 ```
 
-## Step 6: Create Pa11y Config
+## Step 5: Create Pa11y Config
 
 **File**: `.pa11yci.json`
 
@@ -181,7 +195,7 @@ export default defineConfig({
 }
 ```
 
-## Step 7: Create Linkinator Config
+## Step 6: Create Linkinator Config
 
 **File**: `.linkinator.config.json`
 
@@ -203,41 +217,43 @@ export default defineConfig({
 
 ## Verification
 
-After completing all steps, run:
+After completing all steps, verify files were created:
 
 ```bash
-# 1. Verify dependencies installed
-pnpm list vitest playwright
-
-# 2. Check TypeScript compilation
-pnpm exec tsc --noEmit
-
-# 3. Verify config files exist
+# Check all files exist
 ls -la vitest.config.unit.ts vitest.config.integration.ts playwright.config.ts .pa11yci.json .linkinator.config.json
+
+# Verify package.json was updated
+grep "test:" package.json
+grep "vitest" package.json
 ```
 
 ## Success Criteria
 
-✅ All dependencies installed without errors  
-✅ package.json has all new test scripts  
-✅ All 5 config files created  
-✅ TypeScript compilation succeeds (no errors)  
-✅ No existing scripts in package.json were removed or modified  
+✅ package.json has all new test scripts in `scripts` section  
+✅ package.json has all new dependencies in `devDependencies` section  
+✅ All 5 config files created with correct content  
+✅ No existing scripts or dependencies in package.json were removed  
+✅ Files are valid TypeScript/JSON syntax  
+
+## Important Notes
+
+⚠️ **Do NOT run these commands** (they won't work in isolated VM):
+- ❌ `pnpm install`
+- ❌ `pnpm run test:unit`
+- ❌ `pnpm exec tsc`
+
+✅ **Only verify files were created** using `ls` and `grep` commands shown above.
 
 ## Troubleshooting
 
-**pnpm install fails**:
-- Check Node.js version: `node --version` (need ≥18)
-- Try: `pnpm install --shamefully-hoist`
+**Cannot verify syntax without installing**:
+- That's correct - syntax will be verified when dependencies are installed later
+- For now, just ensure files are created with the exact content shown
 
-**TypeScript errors in configs**:
-- Verify vitest is installed: `pnpm list vitest`
-- Check path aliases match tsconfig.json
-- Ensure @playwright/test is installed
-
-**Path alias errors**:
-- Read tsconfig.json to see existing aliases
-- Update vitest configs to match
+**Worried about TypeScript errors**:
+- TypeScript compilation will be verified after all tasks complete
+- Focus on creating files with correct content
 
 ## Next Task
 
@@ -246,14 +262,14 @@ After this task completes successfully, proceed to **Task 2: Unit Tests** (`docs
 ## Commit Message
 
 ```
-feat(testing): add testing infrastructure configuration
+feat(testing): add testing configuration files
 
-- Install Vitest, Playwright, Pa11y, Linkinator
-- Add test scripts to package.json
+- Add testing dependencies to package.json devDependencies
+- Add test scripts to package.json (unit, integration, e2e, a11y, links)
 - Create Vitest configs for unit and integration tests
 - Create Playwright config for E2E tests
 - Add Pa11y and Linkinator configs
-- Configure test environments and aliases
+- Configure test environments and path aliases
 
 Part 1/6 of testing implementation
 ```

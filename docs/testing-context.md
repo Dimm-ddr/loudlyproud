@@ -121,20 +121,36 @@ tests/
 
 ### Task Breakdown Philosophy
 
-The testing implementation is split into **6 independent tasks**:
+The testing implementation is split into **6 independent file-creation tasks**:
 
-1. **Setup & Configuration** - Install dependencies, create config files
-2. **Unit Tests** - Pagination, sorting, DOM guards
-3. **Integration Tests** - HTML structure validation
-4. **E2E Tests** - User workflow tests
-5. **CI/CD Workflows** - GitHub Actions automation
+1. **Configuration Files** - Config files and package.json scripts
+2. **Test Setup & Unit Tests** - Setup files and unit test files
+3. **Integration Tests** - HTML structure validation test files
+4. **E2E Tests** - User workflow test files
+5. **CI/CD Workflows** - GitHub Actions workflow files
 6. **Documentation & Validation** - Testing guide and validation script
 
-Each task:
-- Can be completed independently
-- Has clear success criteria
-- Builds on previous tasks minimally
-- Takes ~30-60 minutes to complete
+**Important**: Each task runs in a fresh VM environment:
+- ✅ Repository files from previous tasks persist (committed)
+- ❌ `node_modules/` does NOT persist
+- ❌ Installed packages do NOT persist
+- ❌ Built site (`public/`) does NOT persist
+
+Therefore, each task:
+- **Only creates/modifies files** (no npm install, no running tests, no building)
+- Can be completed independently in a fresh environment
+- Commits files at the end
+- Takes ~15-30 minutes to complete
+
+**Verification**: After all 6 tasks complete, a human runs:
+```bash
+pnpm install
+pnpm run validate:tests
+pnpm run test:unit
+pnpm run build
+pnpm run test:integration
+pnpm run test:e2e
+```
 
 ### Common Verification Commands
 
