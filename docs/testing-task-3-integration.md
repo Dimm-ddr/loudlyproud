@@ -6,17 +6,13 @@
 
 ## Objective
 
-Create integration test files that will validate Hugo-generated HTML structure. This task only creates files - no building or test execution.
+Create integration test files that validate Hugo-generated HTML structure. These tests parse the built `public/` directory to verify pages have required elements.
 
 ## What You'll Create
 
 - 4 integration test files
 - Tests for home page, gallery pages, book pages, and DOM interactions
 - Total: 4 new files in `tests/integration/`
-
-## Important Note
-
-⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm build` or `pnpm run test:integration`. Only create test files. Site building and test execution happen later.
 
 ## Step 1: Create Integration Directory
 
@@ -318,9 +314,12 @@ describe('Client-side Script Integration', () => {
 
 ## Verification
 
-After completing all steps, verify files were created:
+After completing all steps, run:
 
 ```bash
+# Ensure site is built
+pnpm run build
+
 # Check directory structure
 ls tests/integration/
 
@@ -329,34 +328,51 @@ ls tests/integration/home-page.test.ts
 ls tests/integration/gallery-page.test.ts
 ls tests/integration/book-page.test.ts
 ls tests/integration/dom-interactions.test.ts
+
+# Run integration tests
+pnpm run test:integration
+
+# Optional: Check TypeScript compilation
+pnpm exec tsc --noEmit
 ```
 
 ## Success Criteria
 
 ✅ All 4 integration test files created  
-✅ Files are in `tests/integration/` directory  
-✅ Files contain complete test code as specified  
-✅ Tests use Cheerio and jsdom correctly  
-✅ Tests reference `readBuiltPage` from setup file  
+✅ Site builds successfully (`public/` directory exists)  
+✅ Integration tests run with `pnpm run test:integration`  
+✅ Tests find expected HTML elements  
+✅ No TypeScript compilation errors  
 
-## Important Notes
+## Expected Output
 
-⚠️ **Do NOT run these commands** (they won't work in isolated VM):
-- ❌ `pnpm install`
-- ❌ `pnpm run build`
-- ❌ `pnpm run test:integration`
+When you run `pnpm run test:integration`, you should see:
 
-✅ **Only verify files were created** using `ls` commands shown above.
+```
+✓ tests/integration/home-page.test.ts (4 tests)
+✓ tests/integration/gallery-page.test.ts (18 tests)
+✓ tests/integration/book-page.test.ts (3 tests)
+✓ tests/integration/dom-interactions.test.ts (2 tests)
+
+Test Files  4 passed (4)
+Tests  27 passed (27)
+```
 
 ## Troubleshooting
 
-**Worried about public/ directory**:
-- That's expected - the site will be built later during final verification
-- Tests are designed to fail gracefully if public/ doesn't exist
+**"public/ directory not found" error**:
+- Run: `pnpm run build`
+- Verify: `ls public/en/main/index.html`
 
-**Concerned about import errors**:
-- Imports will be validated when dependencies are installed later
-- Focus on creating files with exact content specified
+**"Test file not found" errors**:
+- Check that Hugo built successfully
+- Verify file paths are correct (case-sensitive)
+- Check language directories exist: `en/`, `ru/`, `fa/`
+
+**No book pages found**:
+- Verify content exists in `content/en/books/`
+- Check Hugo build completed without errors
+- Some tests will skip gracefully if no books exist
 
 ## Next Task
 

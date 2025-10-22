@@ -14,9 +14,6 @@ Create all configuration files and update package.json with test scripts and dep
 - Create 5 configuration files
 - Total: 6 files created/modified
 
-## Important Note
-
-⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm install`, `pnpm build`, or any test commands. Only create/modify files. Dependencies will be installed later during verification.
 
 ## Step 1: Update package.json Scripts AND Dependencies
 
@@ -217,7 +214,7 @@ export default defineConfig({
 
 ## Verification
 
-After completing all steps, verify files were created:
+After completing all steps, run:
 
 ```bash
 # Check all files exist
@@ -226,6 +223,10 @@ ls -la vitest.config.unit.ts vitest.config.integration.ts playwright.config.ts .
 # Verify package.json was updated
 grep "test:" package.json
 grep "vitest" package.json
+
+# Optional: Install dependencies and verify TypeScript
+pnpm install
+pnpm exec tsc --noEmit
 ```
 
 ## Success Criteria
@@ -234,26 +235,22 @@ grep "vitest" package.json
 ✅ package.json has all new dependencies in `devDependencies` section  
 ✅ All 5 config files created with correct content  
 ✅ No existing scripts or dependencies in package.json were removed  
-✅ Files are valid TypeScript/JSON syntax  
-
-## Important Notes
-
-⚠️ **Do NOT run these commands** (they won't work in isolated VM):
-- ❌ `pnpm install`
-- ❌ `pnpm run test:unit`
-- ❌ `pnpm exec tsc`
-
-✅ **Only verify files were created** using `ls` and `grep` commands shown above.
+✅ TypeScript compilation succeeds (no errors)  
 
 ## Troubleshooting
 
-**Cannot verify syntax without installing**:
-- That's correct - syntax will be verified when dependencies are installed later
-- For now, just ensure files are created with the exact content shown
+**pnpm install fails**:
+- Check Node.js version: `node --version` (need ≥18)
+- Try: `pnpm install --shamefully-hoist`
 
-**Worried about TypeScript errors**:
-- TypeScript compilation will be verified after all tasks complete
-- Focus on creating files with correct content
+**TypeScript errors in configs**:
+- Verify vitest is installed: `pnpm list vitest`
+- Check path aliases match tsconfig.json
+- Ensure @playwright/test is installed
+
+**Path alias errors**:
+- Read tsconfig.json to see existing aliases
+- Update vitest configs to match
 
 ## Next Task
 

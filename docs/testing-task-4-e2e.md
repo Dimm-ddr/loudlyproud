@@ -6,17 +6,13 @@
 
 ## Objective
 
-Create E2E test files that will simulate real user interactions in a browser. This task only creates files - no browser installation or test execution.
+Create E2E tests that simulate real user interactions in a browser. These tests verify critical workflows like language navigation, gallery interactions, search, and accessibility.
 
 ## What You'll Create
 
 - 4 E2E test files using Playwright
 - Tests for language nav, gallery, search, and accessibility
 - Total: 4 new files in `tests/e2e/`
-
-## Important Note
-
-⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm run playwright:install` or `pnpm run test:e2e`. Only create test files. Browser installation and test execution happen later.
 
 ## Step 1: Create E2E Directory
 
@@ -306,9 +302,15 @@ test.describe('Accessibility Checks', () => {
 
 ## Verification
 
-After completing all steps, verify files were created:
+After completing all steps, run:
 
 ```bash
+# Ensure browsers are installed
+pnpm run playwright:install
+
+# Build the site
+pnpm run build
+
 # Check directory structure
 ls tests/e2e/
 
@@ -317,39 +319,59 @@ ls tests/e2e/language-navigation.spec.ts
 ls tests/e2e/gallery-interactions.spec.ts
 ls tests/e2e/search.spec.ts
 ls tests/e2e/accessibility.spec.ts
+
+# Run E2E tests
+pnpm run test:e2e
+
+# Optional: Run with UI (for debugging)
+pnpm run test:e2e:ui
 ```
 
 ## Success Criteria
 
 ✅ All 4 E2E test files created  
-✅ Files are in `tests/e2e/` directory  
-✅ Files use `.spec.ts` extension (E2E convention)  
-✅ Tests use Playwright test API correctly  
-✅ Accessibility tests import AxeBuilder correctly  
+✅ Playwright browsers installed successfully  
+✅ Site is built (`public/` exists)  
+✅ E2E tests launch browser and execute  
+✅ Tests navigate through pages successfully  
+✅ No TypeScript compilation errors  
 
-## Important Notes
+## Expected Output
 
-⚠️ **Do NOT run these commands** (they won't work in isolated VM):
-- ❌ `pnpm install`
-- ❌ `pnpm run playwright:install`
-- ❌ `pnpm run build`
-- ❌ `pnpm run test:e2e`
+When you run `pnpm run test:e2e`, you should see:
 
-✅ **Only verify files were created** using `ls` commands shown above.
+```
+Running 15 tests using 1 worker
+
+✓ tests/e2e/language-navigation.spec.ts:4:3 › switches to English content
+✓ tests/e2e/language-navigation.spec.ts:12:3 › switches to Russian content
+✓ tests/e2e/language-navigation.spec.ts:20:3 › switches to Farsi content with RTL
+✓ tests/e2e/gallery-interactions.spec.ts:8:3 › displays book cards on page load
+...
+
+15 passed (30s)
+```
 
 ## Troubleshooting
 
-**Worried about browser installation**:
-- That's expected - Playwright browsers will be installed later
-- The config file (from Task 1) handles browser setup
+**"Executable doesn't exist" error**:
+- Run: `pnpm run playwright:install`
+- Or: `npx playwright install --with-deps chromium`
 
-**Concerned about site not being built**:
-- Site building happens during final verification
-- Tests are designed to wait for the webServer to start
+**"Target closed" or connection errors**:
+- Check port 4173 is available
+- Try manually: `npx http-server public -p 4173`
+- Check `public/` directory exists and has content
 
-**Import errors for @axe-core/playwright**:
-- Imports will be validated when dependencies are installed later
-- Focus on creating files with exact content specified
+**Tests timeout**:
+- Increase timeout in playwright.config.ts
+- Check if site builds correctly
+- Verify browser can access localhost:4173
+
+**"Cannot find element" errors**:
+- Verify selectors match actual HTML
+- Check that Hugo templates generate expected structure
+- Use `pnpm run test:e2e:ui` to inspect page
 
 ## Next Task
 

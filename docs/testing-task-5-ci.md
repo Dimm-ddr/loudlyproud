@@ -6,11 +6,7 @@
 
 ## Objective
 
-Create GitHub Actions workflow files to automatically run tests on every push and pull request. This task only creates files - workflows will run automatically when pushed to GitHub.
-
-## Important Note
-
-⚠️ **This task runs in an isolated VM environment**. Only create workflow files. No local testing is possible - workflows activate when code is pushed to GitHub.
+Create GitHub Actions workflows to automatically run tests on every push and pull request. This ensures tests run in CI and catch regressions before they reach production.
 
 ## What You'll Create
 
@@ -242,41 +238,47 @@ cat .github/workflows/test.yml | head -20
 ✅ Workflows reference correct branches  
 ✅ All workflow steps are properly formatted  
 
-## Important Notes
+## Testing CI Workflows
 
-⚠️ **Do NOT run these commands** (workflows only run in GitHub):
-- ❌ Local workflow testing
-- ❌ YAML validation with Python/yamllint (may not be installed)
+**Local validation**:
+```bash
+# Check YAML is valid (optional)
+python -c "import yaml; yaml.safe_load(open('.github/workflows/test.yml'))"
 
-✅ **Only verify files were created** using `ls` and `cat` commands shown above.
+# Verify referenced scripts exist
+grep -E "(test:unit|test:integration|test:e2e|test:links|test:a11y)" package.json
+```
 
-✅ **Workflows will be tested** when code is pushed to GitHub and Actions run automatically.
-
-## Understanding How Workflows Activate
-
-**After all 6 tasks complete and code is pushed to GitHub**:
+**After pushing to GitHub**:
 1. Go to your repository on GitHub
 2. Click "Actions" tab
-3. Workflows will appear and run automatically
+3. You should see workflows running
 4. Click on a workflow run to see details
-5. All steps should complete successfully (after `pnpm install` runs in CI)
+5. Verify all steps complete successfully
 
 ## Troubleshooting
 
-**YAML indentation concerns**:
-- Use 2 spaces for each indentation level
-- No tabs allowed in YAML
-- Colons must have space after them
-- Focus on exact content match from this document
+**YAML syntax errors**:
+- Use spaces, not tabs for indentation
+- Check all colons have space after them
+- Verify nested structure is correct
+- Use online YAML validator if needed
 
-**Worried about workflow failures**:
-- Workflows install dependencies themselves in CI
-- They have access to `node_modules/` in GitHub Actions
-- First run might take longer while caching builds up
+**Workflow doesn't trigger**:
+- Check branch names match your repository
+- Verify `.github/workflows/` path is correct
+- Ensure files are committed and pushed
 
-**Branch name concerns**:
-- Workflow uses `main`, `preview`, `develop` branches
-- Adjust branch names if your repo uses different names
+**Steps fail in CI but work locally**:
+- Check Node.js version matches (18)
+- Verify all dependencies are in package.json
+- Check environment differences (CI uses Ubuntu)
+- Look at failed step logs in Actions tab
+
+**Playwright fails in CI**:
+- Workflow includes `--with-deps` flag (installs system dependencies)
+- Uses `chromium` only (faster than all browsers)
+- Runs on Ubuntu (has required libraries)
 
 ## Next Task
 

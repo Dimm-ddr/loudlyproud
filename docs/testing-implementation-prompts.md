@@ -16,8 +16,6 @@ Task: Configuration Files (Part 1/6)
 Read and implement: docs/testing-task-1-setup.md
 Context: docs/testing-context.md
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Do NOT run pnpm install, pnpm build, or any test commands.
-
 Objective: Create configuration files and update package.json with test scripts and dependencies.
 
 What to do:
@@ -60,8 +58,6 @@ Read and implement: docs/testing-task-2-unit.md
 Context: docs/testing-context.md
 Prerequisites: Task 1 completed (config files created)
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Do NOT run pnpm install or pnpm run test:unit.
-
 Objective: Create test setup files, helper utilities, and unit test files.
 
 What to do:
@@ -76,15 +72,16 @@ What to do:
 Success criteria:
 - All 6 files created in correct locations
 - Directory structure is correct
-- Files contain complete test code as specified
-- TypeScript syntax is valid (no obvious syntax errors)
-- Tests use proper Vitest imports and structure
+- Unit tests run successfully: pnpm run test:unit
+- All tests pass or show meaningful results
+- No TypeScript compilation errors
 
-Verification commands (files only):
+Verification commands:
 ls -R tests/
-ls tests/setup/unit.setup.ts tests/setup/integration.setup.ts
-ls tests/helpers/test-utils.ts
-ls tests/unit/pagination.test.ts tests/unit/sorting.test.ts tests/unit/dom-guards.test.ts
+pnpm run test:unit
+pnpm exec tsc --noEmit
+
+Expected: ~35 unit tests pass
 
 After completion, commit with message from the task document.
 ```
@@ -100,11 +97,11 @@ Task: Integration Tests (Part 3/6)
 
 Read and implement: docs/testing-task-3-integration.md
 Context: docs/testing-context.md
-Prerequisites: Tasks 1-2 completed (config and unit test files created)
+Prerequisites: Tasks 1-2 completed
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Do NOT run pnpm build or pnpm run test:integration.
+Objective: Create integration tests that validate Hugo-generated HTML structure.
 
-Objective: Create integration test files that validate Hugo-generated HTML structure.
+IMPORTANT: Before running tests, execute: pnpm run build
 
 What to do:
 1. Create tests/integration/ directory
@@ -116,19 +113,21 @@ What to do:
 
 Success criteria:
 - All 4 integration test files created
-- Files are in tests/integration/ directory
-- Files contain complete test code as specified
-- Tests use Cheerio and jsdom correctly
-- Tests reference readBuiltPage from setup file
+- Site builds successfully (public/ directory exists)
+- Integration tests run: pnpm run test:integration
+- Tests find expected HTML elements
+- No TypeScript compilation errors
 
-Verification commands (files only):
+Verification commands:
+pnpm run build
+pnpm run test:integration
 ls tests/integration/
-ls tests/integration/home-page.test.ts tests/integration/gallery-page.test.ts
-ls tests/integration/book-page.test.ts tests/integration/dom-interactions.test.ts
+
+Expected: ~27 integration tests pass
 
 After completion, commit with message from the task document.
 
-Note: Tests will be executed later after site is built. Focus on creating files with correct content.
+Note: Integration tests require public/ directory. If tests fail with "file not found", run pnpm run build first.
 ```
 
 ---
@@ -142,35 +141,40 @@ Task: End-to-End Tests (Part 4/6)
 
 Read and implement: docs/testing-task-4-e2e.md
 Context: docs/testing-context.md
-Prerequisites: Tasks 1-3 completed (config and test files created)
+Prerequisites: Tasks 1-3 completed
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Do NOT run pnpm run playwright:install or pnpm run test:e2e.
+Objective: Create E2E tests that simulate real user interactions in a browser.
 
-Objective: Create E2E test files that will simulate real user interactions in a browser.
+IMPORTANT: Before running tests:
+pnpm run playwright:install
+pnpm run build
 
 What to do:
 1. Create tests/e2e/ directory
 2. Create 4 E2E test files:
-   - language-navigation.spec.ts (~4 tests)
-   - gallery-interactions.spec.ts (~5 tests)
-   - search.spec.ts (~3 tests)
-   - accessibility.spec.ts (~4 tests)
+   - language-navigation.spec.ts (4 tests)
+   - gallery-interactions.spec.ts (5 tests)
+   - search.spec.ts (3 tests)
+   - accessibility.spec.ts (4 tests)
 
 Success criteria:
 - All 4 E2E test files created
-- Files are in tests/e2e/ directory
-- Files use .spec.ts extension (E2E convention)
-- Tests use Playwright test API correctly
-- Accessibility tests import AxeBuilder correctly
+- Playwright browsers installed successfully
+- Site is built (public/ exists)
+- E2E tests launch browser and execute: pnpm run test:e2e
+- Tests navigate through pages successfully
+- No TypeScript compilation errors
 
-Verification commands (files only):
-ls tests/e2e/
-ls tests/e2e/language-navigation.spec.ts tests/e2e/gallery-interactions.spec.ts
-ls tests/e2e/search.spec.ts tests/e2e/accessibility.spec.ts
+Verification commands:
+pnpm run playwright:install
+pnpm run build
+pnpm run test:e2e
+
+Expected: ~15 E2E tests execute (browser opens and tests run)
 
 After completion, commit with message from the task document.
 
-Note: Browser installation and test execution happen later. Focus on creating files with correct content.
+Note: Tests use real Chromium browser. First run may be slower while browsers download.
 ```
 
 ---
@@ -184,11 +188,9 @@ Task: CI/CD Workflows (Part 5/6)
 
 Read and implement: docs/testing-task-5-ci.md
 Context: docs/testing-context.md
-Prerequisites: Tasks 1-4 completed (all test files created)
+Prerequisites: Tasks 1-4 completed (all tests working locally)
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Workflows will run automatically when pushed to GitHub.
-
-Objective: Create GitHub Actions workflow files to automate testing.
+Objective: Create GitHub Actions workflows to automatically run tests on every push and PR.
 
 What to do:
 1. Create .github/workflows/ directory
@@ -198,19 +200,20 @@ What to do:
 
 Success criteria:
 - Both workflow files created in .github/workflows/
-- YAML syntax is valid (no tabs, 2 spaces for indentation)
-- Files use spaces for indentation (not tabs)
-- Workflows reference correct branches
-- All workflow steps are properly formatted
+- YAML syntax is valid (no tabs, correct indentation)
+- All referenced scripts exist in package.json
+- Workflows will trigger on correct branches
+- Proper caching configured
 
-Verification commands (files only):
+Verification commands:
+cat .github/workflows/test.yml
+cat .github/workflows/accessibility.yml
 ls -la .github/workflows/
-ls .github/workflows/test.yml .github/workflows/accessibility.yml
-cat .github/workflows/test.yml | head -20
+grep -E "(test:unit|test:integration|test:e2e)" package.json
 
 After completion, commit with message from the task document.
 
-Note: Workflows will be tested when code is pushed to GitHub. Use spaces for YAML indentation (2 spaces per level), never tabs.
+Note: Workflows will run automatically when pushed to GitHub. Use spaces for YAML indentation, not tabs.
 ```
 
 ---
@@ -224,45 +227,42 @@ Task: Documentation & Validation (Part 6/6 - FINAL)
 
 Read and implement: docs/testing-task-6-docs.md
 Context: docs/testing-context.md
-Prerequisites: Tasks 1-5 completed (all files created)
+Prerequisites: Tasks 1-5 completed
 
-⚠️ IMPORTANT: This task runs in an isolated VM. Only CREATE FILES. Do NOT run pnpm install or pnpm run validate:tests.
-
-Objective: Create testing documentation and validation script. This completes file creation for testing implementation.
+Objective: Create comprehensive documentation and validation script. This completes the testing implementation.
 
 What to do:
 1. Create docs/testing-guide.md (comprehensive testing documentation)
-2. Create scripts/ directory (if needed)
-3. Create scripts/validate-tests.js (validation script)
-4. Update README.md with testing section (MERGE, don't replace existing content)
+2. Create scripts/validate-tests.js (validation script)
+3. Update README.md with testing section (MERGE, don't replace existing content)
 
 Success criteria:
 - docs/testing-guide.md created with complete documentation
-- scripts/validate-tests.js created with validation logic
+- scripts/validate-tests.js created
 - README.md updated with testing section (around line 104)
-- scripts/ directory exists
+- Validation script runs: pnpm run validate:tests
+- All validation checks pass
 - Documentation is clear and accurate
 
-Verification commands (files only):
-ls docs/testing-guide.md
-ls scripts/validate-tests.js
-grep -A 5 "## 🧪 Testing" README.md
-ls scripts/
+Verification commands:
+pnpm run validate:tests
+cat docs/testing-guide.md
+grep -A 5 "Testing" README.md
+
+Expected validation output: All checks show ✓ (green checkmarks)
 
 After completion, commit with message from the task document.
 
-🎉 This is the FINAL task! After this, all 22+ files are created.
+This is the FINAL task. After completion, the entire testing implementation is done!
 
-IMPORTANT: After all 6 tasks complete and are committed, a HUMAN must run:
-1. pnpm install
-2. pnpm run validate:tests
-3. pnpm run playwright:install
-4. pnpm run test:unit
-5. pnpm run build
-6. pnpm run test:integration
-7. pnpm run test:e2e
+Final verification:
+pnpm run validate:tests
+pnpm run test:unit
+pnpm run build
+pnpm run test:integration
+pnpm run test:e2e
 
-See Task 6 document for complete post-implementation instructions.
+All commands should work successfully.
 ```
 
 ---
@@ -284,102 +284,88 @@ See Task 6 document for complete post-implementation instructions.
 ## 🎯 Quick Reference
 
 ### Order of Execution
-1. Task 1 → Config files & package.json updates
-2. Task 2 → Test setup & unit test files
-3. Task 3 → Integration test files
-4. Task 4 → E2E test files
-5. Task 5 → CI/CD workflow files
-6. Task 6 → Documentation files (final)
+1. Task 1 → Install deps & create config files
+2. Task 2 → Create test setup & unit tests
+3. Task 3 → Create integration tests (requires build)
+4. Task 4 → Create E2E tests (requires Playwright install)
+5. Task 5 → Create CI/CD workflows
+6. Task 6 → Create documentation (final)
 
 ### Critical Points for AI Agent
 
-⚠️ **EACH TASK RUNS IN ISOLATED VM** - Only create files, no installations or test runs!
-
-- **Task 1**: MERGE package.json (add scripts AND devDependencies), don't replace
-- **Task 2**: Create test files with proper structure and imports
-- **Task 3**: Create integration test files (site will be built later)
-- **Task 4**: Create E2E test files (browsers installed later)
+- **Task 1**: MERGE package.json (add scripts AND devDependencies), don't replace existing
+- **Task 2**: Tests must be independent, no shared state
+- **Task 3**: Must run `pnpm run build` before running integration tests
+- **Task 4**: Must run `pnpm run playwright:install` before running E2E tests
 - **Task 5**: Use 2 spaces for YAML indentation, never tabs
 - **Task 6**: MERGE README.md, don't replace content
-
-### After All Tasks Complete
-
-A **human** must run (in this order):
-```bash
-pnpm install                    # Install all dependencies
-pnpm run validate:tests         # Verify all files created
-pnpm run playwright:install     # Install browsers
-pnpm run test:unit             # Run unit tests
-pnpm run build                  # Build Hugo site
-pnpm run test:integration      # Run integration tests
-pnpm run test:e2e              # Run E2E tests
-```
 
 ### Between Tasks
 
 After each task:
-1. Verify files were created (using ls/grep commands)
+1. Run verification commands from task document
 2. Commit with provided message
-3. Proceed to next task
+3. Proceed to next task if all checks pass
 
 ### Final Success (After Task 6)
 
-You should have created:
-- ✅ 5 configuration files
-- ✅ package.json updated (scripts + devDependencies)
-- ✅ 11 test files (setup, helpers, unit, integration, E2E)
-- ✅ 2 CI/CD workflow files
-- ✅ 3 documentation files
-- ✅ **Total: 22+ files ready for testing**
-
-Tests will be validated and run by a human after all files are committed.
+You should have:
+- ✅ All dependencies installed
+- ✅ 22+ files created
+- ✅ 3 test tiers (unit, integration, E2E)
+- ✅ CI/CD workflows
+- ✅ Complete documentation
+- ✅ Validation passing
 
 ---
 
 ## 🚨 Important Reminders for AI Agents
 
-1. **Isolated VM environment**: Each task runs in fresh VM - only CREATE FILES
-2. **No installations**: Do NOT run pnpm install, pnpm build, or any test commands
-3. **Read context first**: Always start by reading `docs/testing-context.md`
-4. **Follow task order**: Tasks build on each other - do them sequentially
-5. **Read task files**: Each task has complete code and detailed instructions
-6. **Merge, don't replace**: When editing package.json or README.md, READ FIRST then MERGE
-7. **File creation only**: Verify files were created using ls/grep, not by running them
-8. **Commit after each task**: Use exact commit messages from task documents
+1. **Read context first**: Always start by reading `docs/testing-context.md`
+2. **Follow task order**: Tasks build on each other - do them sequentially
+3. **Read task files**: Each task has detailed instructions and complete code
+4. **Merge, don't replace**: When editing package.json or README.md, READ FIRST then MERGE
+5. **Run verification**: Use verification commands in each task to ensure correctness
+6. **Independent tests**: Each test must run in isolation
+7. **Commit after each task**: Use exact commit messages from task documents
 
 ---
 
 ## 📝 Usage Example
 
-```
-Step 1: Send Task 1 prompt to AI agent (Codex)
-Step 2: Agent creates 5 config files + updates package.json
-Step 3: Agent commits changes
-Step 4: Verify files exist: ls vitest.config.unit.ts (etc.)
+```bash
+# Send Task 1 prompt to AI agent
+# Wait for completion
+# Verify with: pnpm run test:unit --help
 
-Step 5: Send Task 2 prompt to AI agent
-Step 6: Agent creates 6 test files
-Step 7: Agent commits changes
-Step 8: Verify files exist: ls tests/unit/pagination.test.ts (etc.)
+# Send Task 2 prompt to AI agent
+# Wait for completion
+# Verify with: pnpm run test:unit
 
-... Continue through Task 6 ...
+# Send Task 3 prompt to AI agent
+# Wait for completion (after pnpm run build)
+# Verify with: pnpm run test:integration
 
-Step Final: After all 6 tasks committed:
-- Human runs: pnpm install
-- Human runs: pnpm run validate:tests
-- Human runs: pnpm run test:unit
-- Human runs: pnpm run build
-- Human runs: pnpm run test:integration
-- Human runs: pnpm run test:e2e
+# Send Task 4 prompt to AI agent
+# Wait for completion (after pnpm run playwright:install)
+# Verify with: pnpm run test:e2e
 
-All tests should now work! ✅
+# Send Task 5 prompt to AI agent
+# Wait for completion
+# Verify: cat .github/workflows/test.yml
+
+# Send Task 6 prompt to AI agent
+# Wait for completion
+# Verify with: pnpm run validate:tests
+
+All tests and workflows should now be working! ✅
 ```
 
 ---
 
 ## 🎉 Ready to Start!
 
-Copy the prompts above (Tasks 1-6) and send them to your AI agent one at a time. After all tasks complete, follow the human verification steps in Task 6 documentation.
+Copy the prompts above (Tasks 1-6) and send them to your AI agent one at a time. Each task includes verification commands to ensure correctness before moving to the next task.
 
 Good luck! 🚀
 

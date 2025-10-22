@@ -6,11 +6,7 @@
 
 ## Objective
 
-Create test setup files, helper utilities, and unit test files for pagination, sorting, and DOM guards. This task only creates files - no test execution.
-
-## Important Note
-
-⚠️ **This task runs in an isolated VM environment**. Do NOT run `pnpm install` or `pnpm run test:unit`. Only create files. Tests will be run later during verification.
+Create test setup files, helper utilities, and unit test files for pagination, sorting, and DOM guards.
 
 ## What You'll Create
 
@@ -608,7 +604,7 @@ describe('DOM Element Guard Clauses', () => {
 
 ## Verification
 
-After completing all steps, verify files were created:
+After completing all steps, run:
 
 ```bash
 # Check directory structure
@@ -621,6 +617,12 @@ ls tests/helpers/test-utils.ts
 ls tests/unit/pagination.test.ts
 ls tests/unit/sorting.test.ts
 ls tests/unit/dom-guards.test.ts
+
+# Run unit tests
+pnpm run test:unit
+
+# Optional: Check TypeScript compilation
+pnpm exec tsc --noEmit
 ```
 
 ## Success Criteria
@@ -628,17 +630,22 @@ ls tests/unit/dom-guards.test.ts
 ✅ All 6 files created in correct locations  
 ✅ Directory structure is correct (setup/, helpers/, unit/)  
 ✅ Files contain complete test code as specified  
-✅ TypeScript syntax is valid (no obvious syntax errors)  
-✅ Tests use proper Vitest imports and structure  
+✅ Unit tests run successfully with `pnpm run test:unit`  
+✅ All tests pass (or show meaningful results)  
+✅ No TypeScript compilation errors  
 
-## Important Notes
+## Expected Output
 
-⚠️ **Do NOT run these commands** (they won't work in isolated VM):
-- ❌ `pnpm install`
-- ❌ `pnpm run test:unit`
-- ❌ `pnpm exec tsc`
+When you run `pnpm run test:unit`, you should see:
 
-✅ **Only verify files were created** using `ls` commands shown above.
+```
+✓ tests/unit/pagination.test.ts (15 tests)
+✓ tests/unit/sorting.test.ts (12 tests)
+✓ tests/unit/dom-guards.test.ts (8 tests)
+
+Test Files  3 passed (3)
+Tests  35 passed (35)
+```
 
 ## Next Task
 
